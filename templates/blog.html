@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
+
+{% block content %}
+<section class="blog-list">
+  <header class="dashboard-header">
+    <p class="breadcrumb"><a href="{{ get_url(path='/') | safe }}">Dashboard</a> / Reports</p>
+    <h2>{{ section.title }}</h2>
+    {% if section.content %}
+    <div class="dashboard-intro">{{ section.content | safe }}</div>
+    {% endif %}
+  </header>
+
+  <div class="table-panel">
+    <ul class="blog-entries">
+      {% for page in section.pages %}
+      <li class="blog-entry">
+        <a class="blog-entry-link" href="{{ page.permalink | safe }}">
+          <span class="blog-entry-title">{{ page.title }}</span>
+          {% if page.extra.status %}
+          <span class="status-badge status-{{ page.extra.status | lower | replace(from=' ', to='-') }}">{{ page.extra.status }}</span>
+          {% endif %}
+        </a>
+        {% if page.extra.uptime_pct %}
+        <p class="blog-entry-meta">{{ page.extra.uptime_pct }}% uptime · last check {{ page.extra.last_check }}</p>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}
