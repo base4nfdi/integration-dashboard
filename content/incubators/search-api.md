@@ -1,5 +1,5 @@
 +++
-title = "Search API"
+title = "Text plus Search API"
 date = 2026-07-06
 [extra]
 status = "Finished"

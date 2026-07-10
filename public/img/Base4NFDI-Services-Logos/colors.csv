@@ -1,6 +1,0 @@
-name,hex,r,g,b,rgb,role,used_in
-NFDI Green,#a2c617,162,198,23,"rgb(162, 198, 23)",Primary accent / branding bar,All Base4NFDI logos (long + top variants)
-NFDI Cyan,#0bbbef,11,187,239,"rgb(11, 187, 239)",Primary brand color / service icons,All Base4NFDI logos and symbol icons
-NFDI Dark Slate,#45556a,69,85,106,"rgb(69, 85, 106)",Typography and dark UI elements,All Base4NFDI logos; IAM dark-blue symbol variant
-White,#ffffff,255,255,255,"rgb(255, 255, 255)",Light backgrounds and negative (on-dark) logos,Positive logo variants; all *_neg symbol icons
-RDM Training Orange,#ed6c1f,237,108,31,"rgb(237, 108, 31)",RDMT-specific accent stroke,_RDMT-top.svg only
