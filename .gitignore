@@ -1,1 +1,15 @@
-/public
+# Zola build output (default output_dir)
+public/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+node_modules/
+.env
+# .env.*
