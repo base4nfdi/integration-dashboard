@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
+
+{% block content %}
+<section class="dashboard">
+  <header class="dashboard-header">
+    <h2>{{ section.title }}</h2>
+    {% if section.content %}
+    <div class="dashboard-intro">{{ section.content | safe }}</div>
+    {% endif %}
+  </header>
+
+  <div class="summary-cards" id="summary-cards" aria-live="polite"></div>
+
+  <div class="table-panel">
+    <div class="table-panel-header">
+      <h3>Incubators</h3>
+      <p class="table-meta" id="table-meta">Loading data…</p>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table" id="data-table">
+        <thead id="table-head"></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  const csvUrl = "{{ get_url(path='data.csv') | safe }}";
+  const incubatorBaseUrl = "{{ get_url(path='@/incubators/_index.md') | safe }}";
+  const hiddenColumns = ["blog_slug", "logo_width_px"];
+  const columnLabels = {
+    logo: "Collaborator",
+    project: "Project",
+    status: "Status",
+    uptime_pct: "Uptime",
+    requests_24h: "Requests (24h)",
+    response_time_ms: "Response time",
+    last_check: "Last check",
+  };
+
+  function parseCsv(text) {
+    const rows = [];
+    let row = [];
+    let field = "";
+    let inQuotes = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      const next = text[i + 1];
+
+      if (inQuotes) {
+        if (char === '"' && next === '"') {
+          field += '"';
+          i++;
+        } else if (char === '"') {
+          inQuotes = false;
+        } else {
+          field += char;
+        }
+        continue;
+      }
+
+      if (char === '"') {
+        inQuotes = true;
+      } else if (char === ",") {
+        row.push(field.trim());
+        field = "";
+      } else if (char === "\n" || (char === "\r" && next === "\n")) {
+        if (char === "\r") i++;
+        row.push(field.trim());
+        field = "";
+        if (row.some((cell) => cell.length > 0)) rows.push(row);
+        row = [];
+      } else {
+        field += char;
+      }
+    }
+
+    if (field.length > 0 || row.length > 0) {
+      row.push(field.trim());
+      if (row.some((cell) => cell.length > 0)) rows.push(row);
+    }
+
+    return rows;
+  }
+
+  function formatHeader(name) {
+    return name
+      .replace(/_/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  function displayHeader(name) {
+    if (Object.prototype.hasOwnProperty.call(columnLabels, name)) {
+      return columnLabels[name];
+    }
+    return formatHeader(name);
+  }
+
+  function statusClass(status) {
+    return "status-" + status.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  }
+
+  function renderSummary(headers, dataRows) {
+    const statusIndex = headers.indexOf("status");
+    const uptimeIndex = headers.indexOf("uptime_pct");
+    const requestsIndex = headers.indexOf("requests_24h");
+
+    const total = dataRows.length;
+    const Finished = statusIndex >= 0
+      ? dataRows.filter((row) => row[statusIndex] === "Finished").length
+      : 0;
+    const degraded = statusIndex >= 0
+      ? dataRows.filter((row) => ["degraded", "maintenance"].includes(row[statusIndex])).length
+      : 0;
+
+    let avgUptime = "—";
+    if (uptimeIndex >= 0) {
+      const values = dataRows
+        .map((row) => parseFloat(row[uptimeIndex]))
+        .filter((value) => !Number.isNaN(value));
+      if (values.length > 0) {
+        avgUptime = (values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(2) + "%";
+      }
+    }
+
+    let totalRequests = "—";
+    if (requestsIndex >= 0) {
+      const values = dataRows
+        .map((row) => parseInt(row[requestsIndex], 10))
+        .filter((value) => !Number.isNaN(value));
+      if (values.length > 0) {
+        totalRequests = values.reduce((sum, value) => sum + value, 0).toLocaleString();
+      }
+    }
+
+    const cards = [
+      { label: "Total incubators", value: total },
+      { label: "Finished", value: Finished },
+      { label: "Running", value: degraded },
+      { label: "Avg. uptime", value: avgUptime },
+      { label: "Requests (24h)", value: totalRequests },
+    ];
+
+    document.getElementById("summary-cards").innerHTML = cards
+      .map((card) => `
+        <article class="summary-card">
+          <p class="summary-label">${card.label}</p>
+          <p class="summary-value">${card.value}</p>
+        </article>
+      `)
+      .join("");
+  }
+
+  function incubatorUrl(slug) {
+    const base = incubatorBaseUrl.endsWith("/") ? incubatorBaseUrl : incubatorBaseUrl + "/";
+    return base + slug + "/";
+  }
+
+  function renderTable(headers, dataRows) {
+    const head = document.getElementById("table-head");
+    const body = document.getElementById("table-body");
+    const slugIndex = headers.indexOf("blog_slug");
+    const logoWidthIndex = headers.indexOf("logo_width_px");
+    const visibleHeaders = headers.filter((header) => !hiddenColumns.includes(header));
+
+    head.innerHTML = `
+      <tr>${visibleHeaders.map((header) => `<th scope="col">${displayHeader(header)}</th>`).join("")}</tr>
+    `;
+
+    body.innerHTML = dataRows
+      .map((row) => {
+        const slug = slugIndex >= 0 ? row[slugIndex] : "";
+        const cells = visibleHeaders
+          .map((header) => {
+            const index = headers.indexOf(header);
+            const value = row[index] ?? "";
+            if (header === "logo" && value) {
+              const width = logoWidthIndex >= 0 ? row[logoWidthIndex] || "50" : "50";
+              return `<td class="row-logo"><img src="${value}" alt="" width="${width}" loading="lazy" decoding="async"></td>`;
+            }
+            if (header === "project" && slug) {
+              return `<td><a href="${incubatorUrl(slug)}">${value}</a></td>`;
+            }
+            if (header === "status") {
+              return `<td><span class="status-badge ${statusClass(value)}">${value}</span></td>`;
+            }
+            if (header === "uptime_pct" && value && value !== "—") {
+              return `<td>${value}%</td>`;
+            }
+            if (header === "requests_24h" && value && !Number.isNaN(Number(value))) {
+              return `<td>${Number(value).toLocaleString()}</td>`;
+            }
+            if (header === "response_time_ms" && value && value !== "—") {
+              return `<td>${value} ms</td>`;
+            }
+            return `<td>${value}</td>`;
+          })
+          .join("");
+        return `<tr>${cells}</tr>`;
+      })
+      .join("");
+
+    document.getElementById("table-meta").textContent =
+      `${dataRows.length} row${dataRows.length === 1 ? "" : "s"} from data.csv`;
+  }
+
+  async function loadDashboard() {
+    try {
+      const response = await fetch(csvUrl);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const text = await response.text();
+      const rows = parseCsv(text.trim());
+      if (rows.length < 2) throw new Error("CSV has no data rows");
+
+      const headers = rows[0];
+      const dataRows = rows.slice(1);
+
+      renderSummary(headers, dataRows);
+      renderTable(headers, dataRows);
+    } catch (error) {
+      document.getElementById("table-meta").textContent = "Failed to load data.csv";
+      document.getElementById("table-body").innerHTML = `
+        <tr><td colspan="7">Could not load dashboard data: ${error.message}</td></tr>
+      `;
+    }
+  }
+
+  loadDashboard();
+})();
+</script>
+{% endblock %}

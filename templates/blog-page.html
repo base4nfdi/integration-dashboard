@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+  <header class="blog-post-header">
+    <p class="breadcrumb">
+      <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
+      <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
+      {{ page.title }}
+    </p>
+    <h2>{{ page.title }}</h2>
+    {% if page.extra.status %}
+    <p class="blog-post-status">
+      <span class="status-badge status-{{ page.extra.status | lower | replace(from=' ', to='-') }}">{{ page.extra.status }}</span>
+      {% if page.extra.last_check %}
+      <span class="blog-post-checked">Last check: {{ page.extra.last_check }}</span>
+      {% endif %}
+    </p>
+    {% endif %}
+  </header>
+
+  <div class="summary-cards blog-metrics">
+    {% if page.extra.uptime_pct %}
+    <article class="summary-card">
+      <p class="summary-label">Uptime</p>
+      <p class="summary-value">{{ page.extra.uptime_pct }}%</p>
+    </article>
+    {% endif %}
+    {% if page.extra.requests_24h %}
+    <article class="summary-card">
+      <p class="summary-label">Requests (24h)</p>
+      <p class="summary-value">{{ page.extra.requests_24h }}</p>
+    </article>
+    {% endif %}
+    {% if page.extra.response_time_ms and page.extra.response_time_ms != "—" %}
+    <article class="summary-card">
+      <p class="summary-label">Response time</p>
+      <p class="summary-value">{{ page.extra.response_time_ms }} ms</p>
+    </article>
+    {% endif %}
+    {% if page.extra.blog_slug %}
+    <article class="summary-card">
+      <p class="summary-label">CSV slug</p>
+      <p class="summary-value summary-value-sm">{{ page.extra.blog_slug }}</p>
+    </article>
+    {% endif %}
+  </div>
+
+  <div class="blog-post-body table-panel">
+    <div class="blog-post-content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</article>
+{% endblock %}

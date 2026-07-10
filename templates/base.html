@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title | default(value="Dashboard") }}{% endblock %}</title>
+  <script>
+    (function () {
+      var stored = localStorage.getItem("base4nfdi-theme");
+      var theme = stored === "light" || stored === "dark"
+        ? stored
+        : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="{{ get_url(path='/') | safe }}">
+        <img
+          class="site-logo"
+          src="{{ get_url(path='img/Logo_base4NFDI_kurz_neg_rgb.png') | safe }}"
+          alt="Base4NFDI — Basic Services for NFDI"
+          width="320"
+          height="80"
+        >
+      </a>
+      <div class="site-heading">
+        <h1 class="site-title">{{ config.title | default(value="Dashboard") }}</h1>
+        {% if config.description %}
+        <p class="site-description">{{ config.description }}</p>
+        {% endif %}
+        <nav class="site-nav" aria-label="Main">
+          <a href="{{ get_url(path='/') | safe }}">Dashboard</a>
+          <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a>
+        </nav>
+      </div>
+      <button
+        type="button"
+        class="theme-toggle"
+        id="theme-toggle"
+        aria-pressed="true"
+        aria-label="Switch to light mode"
+        title="Switch to light mode"
+      >
+        <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀</span>
+        <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">☽</span>
+        <span class="theme-toggle-label">Theme</span>
+      </button>
+    </div>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Built with <a href="https://www.getzola.org/">Zola</a></p>
+    </div>
+  </footer>
+  <script src="{{ get_url(path='theme.js') | safe }}"></script>
+</body>
+</html>
