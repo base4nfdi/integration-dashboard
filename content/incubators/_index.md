@@ -5,4 +5,4 @@ template = "blog.html"
 page_template = "blog-page.html"
 +++
 
-Operational reports for each incubator project. Each entry corresponds to one row in `data.csv`.
+Operational reports for each incubator project. Each entry corresponds to one row in the NocoDB dashboard table.

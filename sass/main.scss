@@ -361,6 +361,16 @@ main {
   background: var(--maintenance);
 }
 
+.status-running {
+  color: #0c4a6e;
+  background: #bae6fd;
+}
+
+.status-in-preparation {
+  color: #3d1600;
+  background: #fed7aa;
+}
+
 .site-footer {
   padding: 1.5rem 0 2rem;
   border-top: 1px solid var(--border);

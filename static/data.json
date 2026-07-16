@@ -1,0 +1,135 @@
+{
+  "source": "nocodb",
+  "fetched_at": "2026-07-15T15:36:31.067Z",
+  "records": [
+    {
+      "id": 1,
+      "inc_name": "RADAR",
+      "basic_service": "TS",
+      "related_institutions": "",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/radar.svg",
+      "logo_consortia": "",
+      "key_article": "ts-radar",
+      "inc_start": "2025-02-21",
+      "inc_end": "2025-09-23",
+      "inc_cycle": 1,
+      "inc_status": "Finished",
+      "partners": [
+        "NFDI4Chem",
+        "NFDI4Culture",
+        "NFDI4Memory"
+      ],
+      "entities": [
+        "FIZ Karlsruhe"
+      ]
+    },
+    {
+      "id": 2,
+      "inc_name": "WDCC",
+      "basic_service": "TS",
+      "related_institutions": "",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/wdcc.png",
+      "logo_consortia": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
+      "key_article": "ts-wdcc",
+      "inc_start": "2025-02-26",
+      "inc_end": "2025-10-31",
+      "inc_cycle": 1,
+      "inc_status": "Finished",
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": [
+        "German Climate Computing Centre"
+      ]
+    },
+    {
+      "id": 3,
+      "inc_name": "AIMS",
+      "basic_service": "TS",
+      "related_institutions": "ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png",
+      "logo_consortia": "",
+      "key_article": "ts-aims",
+      "inc_start": "2026-03-01",
+      "inc_end": "",
+      "inc_cycle": 3,
+      "inc_status": "Running",
+      "partners": [
+        "NFDI4Ing"
+      ],
+      "entities": [
+        "Technical University and State Library Darmstadt"
+      ]
+    },
+    {
+      "id": 4,
+      "inc_name": "NFDI AAI for the NFDI4ING Jupyter Service",
+      "basic_service": "IAM",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
+      "key_article": "iam-nfdi4ing",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": 5,
+      "inc_status": "Running",
+      "partners": [
+        "NFDI4Ing"
+      ],
+      "entities": []
+    },
+    {
+      "id": 5,
+      "inc_name": "DMP template for engineering sciences",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
+      "key_article": "dmp-nfdi4ing",
+      "inc_start": "2026-07-01",
+      "inc_end": "",
+      "inc_cycle": 2,
+      "inc_status": "Running",
+      "partners": [
+        "NFDI4Ing"
+      ],
+      "entities": []
+    },
+    {
+      "id": 6,
+      "inc_name": "Operational RDMO for the Earth System Science community",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
+      "key_article": "dmp-nfdi4earth",
+      "inc_start": "2026-01-01",
+      "inc_end": "2026-06-30",
+      "inc_cycle": 1,
+      "inc_status": "Finished",
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": []
+    },
+    {
+      "id": 8,
+      "inc_name": "SensorCV",
+      "basic_service": "TS",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "",
+      "inc_start": "2026-07-15",
+      "inc_end": "",
+      "inc_cycle": 4,
+      "inc_status": "In preparation",
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": [
+        "Helmholtz Association"
+      ]
+    }
+  ]
+}
