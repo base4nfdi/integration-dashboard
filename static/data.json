@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-07-15T15:36:31.067Z",
+  "fetched_at": "2026-07-16T12:28:04.750Z",
   "records": [
     {
       "id": 1,
@@ -14,6 +14,12 @@
       "inc_end": "2025-09-23",
       "inc_cycle": 1,
       "inc_status": "Finished",
+      "inc_descr": "RADAR is a multidisciplinary research data repository operated by FIZ Karlsruhe, offering institutions a secure and user-friendly platform to archive, manage, let peer review and publish research data. With the cost-free and low-threshold publication services RADAR4Chem (for chemistry) and RADAR4Culture (for cultural heritage and humanities), FIZ Karlsruhe provides tailored solutions for discipline-specific research needs based on RADAR and developed in the framework of the NFDI.",
+      "inc_goals": "- Expand metadata editor: Implement a type-ahead selection in the keyword field for standardized term suggestions via the TS4NFDI Gateway API\n- Enhance landing page: Link keywords directly to their respective standard terms via the TS4NFDI widgets\n- Improve data discoverability: Enable \"Keyword\" as additional filter option in the data publication list",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 3,
+      "linked_entities": 1,
       "partners": [
         "NFDI4Chem",
         "NFDI4Culture",
@@ -35,6 +41,12 @@
       "inc_end": "2025-10-31",
       "inc_cycle": 1,
       "inc_status": "Finished",
+      "inc_descr": "The WDCC has the mission to archive, disseminate and publish Earth System model data and related data products to support the international climate research community. The WDCC is a discipline specific repository providing active preservation for research only. Therefore WDCC is using common metadata standards and is recommending the usage of community data standards like the Climate Forecast (CF) Conventions. The WDCC is certified by Core Trust Seal (CTS) and an accredited regular member of the World Data System. WDCC is following the FAIR principles - all metadata is openly accessible, the access to the data is free of charge. The WDCC is hosted by the German Climate Computing Center (Deutsches Klimarechenzentrum - DKRZ) in Hamburg.",
+      "inc_goals": "- Integration of the NERC Vocabulary Service to the API Gateway",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 1,
       "partners": [
         "NFDI4Earth"
       ],
@@ -54,6 +66,12 @@
       "inc_end": "",
       "inc_cycle": 3,
       "inc_status": "Running",
+      "inc_descr": "AIMS (Applying Interoperable Metadata Standards) is developing a platform for creating, sharing, and reusing interoperable and machine-readable metadata profiles based on SHACL shapes. The project addresses key challenges in research data management by enabling researchers to model semantic metadata schemas in a modular and hierarchical fashion using elements from established controlled terminologies. AIMS provides a central web-UI for managing profiles, backed by repositories for storing validated metadata sets and integrating with electronic lab notebooks (ELNs) like eLabFTW and openBIS. The project consortium includes ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg.",
+      "inc_goals": "- Replace current terminology providers with TS4NFDI API Gateway as unified terminology service\n- Integrate TS4NFDI Service Suite widgets to AIMS",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 1,
       "partners": [
         "NFDI4Ing"
       ],
@@ -73,6 +91,12 @@
       "inc_end": "",
       "inc_cycle": 5,
       "inc_status": "Running",
+      "inc_descr": "The jupyter service is actually connected via SAML to the EDUGAIN federation. We use apache_mod_shib to provide the necessary attribute to our login application. We want to understand the architecture of NFDI AAI, the meaning of community AAIs, infrastructure proxies and virtual organisations to be able to plan and implement the necessary steps to connect our service to the NFDI AAI infrastructure. So far, we are not able to configure our service using the existing documentation. We hope to get the knowledge we need within this incubator project, learn form experiences from others and also help to ease this process for other services. In order to do so, we have to perform the following steps: - Clarification of requirements and necessary steps to connect a service to NFDI AAI (AAI4NFDI team together with project team) - Selection of the community AAI (project team) - Clarification of the process how and where to define user groups (like engineers) (AAI4NFDI team together with project team) - Implementation of integration of NFDI AAI (project team with support of NFDI4AAI team) - Plan how to migrate existing users (project team with support of NFDI4AAI team)",
+      "inc_goals": "- Ease the onboarding of new institutions/user groups to our service\n- Allow users outside academia (EDUGAIN) to login into our service (like federal research organisations)\n- Allow to confine the access to the service to selected user group",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Ing"
       ],
@@ -90,6 +114,12 @@
       "inc_end": "",
       "inc_cycle": 2,
       "inc_status": "Running",
+      "inc_descr": "",
+      "inc_goals": "The Incubator Project aims to optimise the DMP template for engineering sciences. The goal is to significantly enhance the practical applicability of the template within the RDMO tool for engineering research. To this end, feedback gathered during live operation from the community is being incorporated into the revision process. The technical and content-related development involves aligning the questionnaire with the NFDI DMP Template Framework to ensure NFDI-wide standards. To enable the exchange of metadata between RDMO and Coscine, the Coscine query is also being adjusted.",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Ing"
       ],
@@ -107,6 +137,12 @@
       "inc_end": "2026-06-30",
       "inc_cycle": 1,
       "inc_status": "Finished",
+      "inc_descr": "",
+      "inc_goals": "Provision of an operational RDMO for the Earth System Science community to create DMPs for sensor-heavy research projects as well as for monitoring activities. The RDMO will be linked to existing sensor- and data management systems such as SMS, O2A. This will allow the direct and seamless integration of sensor metadata in RDMO-based data management plans, ensuring metadata consistency between the linked systems. During the incubator project, a productive client will be set up and evaluated by the community in a user workshop.",
+      "inc_results": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Earth"
       ],
@@ -124,6 +160,12 @@
       "inc_end": "",
       "inc_cycle": 4,
       "inc_status": "In preparation",
+      "inc_descr": "The Sensor Management System (SMS) serves as a central infrastructure for collecting and managing sensor metadata for scientific projects across four Helmholtz Centers (GFZ, UFZ, FZJ, and KIT). To ensure metadata consistency across different SMS-instances, an independent but central Controlled Vocabulary (CV) Service provides curated terms for attributes such as device types, units, and measured quantities. The project aims to modernize the SMS-CV architecture by transforming it from an SMS-specific solution into an integrated component within the NFDI ecosystem, especially useful within the Earth System Science community (NFDI4Earth) and beyond.",
+      "inc_goals": "",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": 1,
       "partners": [
         "NFDI4Earth"
       ],

@@ -53,6 +53,12 @@ function asStringList(value) {
   return value.filter((item) => item != null && String(item).length > 0).map(String);
 }
 
+function asNumber(value) {
+  if (value == null || value === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
 /** Map raw NocoDB record to the dashboard JSON shape. */
 function normalizeRecord(raw) {
   return {
@@ -67,6 +73,12 @@ function normalizeRecord(raw) {
     inc_end: asString(raw.inc_end),
     inc_cycle: raw.inc_cycle ?? null,
     inc_status: asString(raw.inc_status),
+    inc_descr: asString(raw.inc_descr),
+    inc_goals: asString(raw.inc_goals),
+    inc_results: asString(raw.inc_results),
+    inc_partner_publications: asNumber(raw.inc_partner_publications) ?? 0,
+    linked_partners: asNumber(raw.linked_partners),
+    linked_entities: asNumber(raw.linked_entities),
     partners: asStringList(raw[PARTNERS_FIELD]),
     entities: asStringList(raw[ENTITIES_FIELD]),
   };

@@ -8,6 +8,9 @@ status = "Running"
 inc_start = "2026-07-01"
 inc_end = ""
 inc_cycle = 2
+inc_partner_publications = 0
+linked_partners = 1
+linked_entities = 0
 partners = ["NFDI4Ing"]
 logo_consortia = "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
 +++
@@ -24,9 +27,14 @@ DMP template for engineering sciences is an incubator project within the **Data 
 - **End:** —
 - **Cycle:** 2
 
+## Goals
+
+The Incubator Project aims to optimise the DMP template for engineering sciences. The goal is to significantly enhance the practical applicability of the template within the RDMO tool for engineering research. To this end, feedback gathered during live operation from the community is being incorporated into the revision process. The technical and content-related development involves aligning the questionnaire with the NFDI DMP Template Framework to ensure NFDI-wide standards. To enable the exchange of metadata between RDMO and Coscine, the Coscine query is also being adjusted.
+
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4Ing (1 linked)
+- **Partner publications:** 0
 
 ## Notes
 

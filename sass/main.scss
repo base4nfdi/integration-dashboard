@@ -337,6 +337,45 @@ main {
   }
 }
 
+.data-table .cell-markdown {
+  max-width: 22rem;
+  vertical-align: top;
+  white-space: normal;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.data-table .cell-markdown .md-content {
+  max-height: 12rem;
+  overflow: auto;
+}
+
+.data-table .cell-markdown p,
+.data-table .cell-markdown ul {
+  margin: 0 0 0.55em;
+}
+
+.data-table .cell-markdown p:last-child,
+.data-table .cell-markdown ul:last-child {
+  margin-bottom: 0;
+}
+
+.data-table .cell-markdown ul {
+  padding-left: 1.15rem;
+}
+
+.data-table .cell-markdown li + li {
+  margin-top: 0.25em;
+}
+
+.data-table .cell-markdown code {
+  font-size: 0.85em;
+  padding: 0.05em 0.3em;
+  border-radius: 4px;
+  background: var(--surface-raised);
+}
+
 .status-badge {
   display: inline-block;
   padding: 0.2rem 0.55rem;
