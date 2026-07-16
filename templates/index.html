@@ -29,121 +29,66 @@
 
 <script>
 (function () {
-  const csvUrl = "{{ get_url(path='data.csv') | safe }}";
+  const dataUrl = "{{ get_url(path='data.json') | safe }}";
   const incubatorBaseUrl = "{{ get_url(path='@/incubators/_index.md') | safe }}";
-  const hiddenColumns = ["blog_slug", "logo_width_px"];
-  const columnLabels = {
-    logo: "Collaborator",
-    project: "Project",
-    status: "Status",
-    uptime_pct: "Uptime",
-    requests_24h: "Requests (24h)",
-    response_time_ms: "Response time",
-    last_check: "Last check",
-  };
 
-  function parseCsv(text) {
-    const rows = [];
-    let row = [];
-    let field = "";
-    let inQuotes = false;
+  const columns = [
+    { key: "logo_consortia", label: "Consortia", type: "logo" },
+    { key: "logo_project", label: "Project logo", type: "logo" },
+    { key: "inc_name", label: "Incubator", type: "name" },
+    { key: "basic_service", label: "Basic service" },
+    { key: "inc_status", label: "Status", type: "status" },
+    { key: "inc_start", label: "Start", type: "date" },
+    { key: "inc_end", label: "End", type: "date" },
+    { key: "inc_cycle", label: "Cycle" },
+    { key: "partners", label: "Partners", type: "list" },
+    { key: "entities", label: "Entities", type: "list" },
+    { key: "related_institutions", label: "Institutions" },
+  ];
 
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-      const next = text[i + 1];
-
-      if (inQuotes) {
-        if (char === '"' && next === '"') {
-          field += '"';
-          i++;
-        } else if (char === '"') {
-          inQuotes = false;
-        } else {
-          field += char;
-        }
-        continue;
-      }
-
-      if (char === '"') {
-        inQuotes = true;
-      } else if (char === ",") {
-        row.push(field.trim());
-        field = "";
-      } else if (char === "\n" || (char === "\r" && next === "\n")) {
-        if (char === "\r") i++;
-        row.push(field.trim());
-        field = "";
-        if (row.some((cell) => cell.length > 0)) rows.push(row);
-        row = [];
-      } else {
-        field += char;
-      }
-    }
-
-    if (field.length > 0 || row.length > 0) {
-      row.push(field.trim());
-      if (row.some((cell) => cell.length > 0)) rows.push(row);
-    }
-
-    return rows;
-  }
-
-  function formatHeader(name) {
-    return name
-      .replace(/_/g, " ")
-      .replace(/\b\w/g, (c) => c.toUpperCase());
-  }
-
-  function displayHeader(name) {
-    if (Object.prototype.hasOwnProperty.call(columnLabels, name)) {
-      return columnLabels[name];
-    }
-    return formatHeader(name);
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
   }
 
   function statusClass(status) {
     return "status-" + status.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   }
 
-  function renderSummary(headers, dataRows) {
-    const statusIndex = headers.indexOf("status");
-    const uptimeIndex = headers.indexOf("uptime_pct");
-    const requestsIndex = headers.indexOf("requests_24h");
+  function formatDate(value) {
+    if (!value) return "—";
+    const date = new Date(value + "T00:00:00");
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  }
 
-    const total = dataRows.length;
-    const Finished = statusIndex >= 0
-      ? dataRows.filter((row) => row[statusIndex] === "Finished").length
-      : 0;
-    const degraded = statusIndex >= 0
-      ? dataRows.filter((row) => ["degraded", "maintenance"].includes(row[statusIndex])).length
-      : 0;
+  function formatList(items) {
+    if (!Array.isArray(items) || items.length === 0) return "—";
+    return items.map(escapeHtml).join(", ");
+  }
 
-    let avgUptime = "—";
-    if (uptimeIndex >= 0) {
-      const values = dataRows
-        .map((row) => parseFloat(row[uptimeIndex]))
-        .filter((value) => !Number.isNaN(value));
-      if (values.length > 0) {
-        avgUptime = (values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(2) + "%";
-      }
-    }
-
-    let totalRequests = "—";
-    if (requestsIndex >= 0) {
-      const values = dataRows
-        .map((row) => parseInt(row[requestsIndex], 10))
-        .filter((value) => !Number.isNaN(value));
-      if (values.length > 0) {
-        totalRequests = values.reduce((sum, value) => sum + value, 0).toLocaleString();
-      }
-    }
+  function renderSummary(records) {
+    const total = records.length;
+    const finished = records.filter((row) => row.inc_status === "Finished").length;
+    const running = records.filter((row) => row.inc_status === "Running").length;
+    const preparing = records.filter((row) => row.inc_status === "In preparation").length;
+    const services = new Set(
+      records.map((row) => row.basic_service).filter((value) => value)
+    ).size;
 
     const cards = [
       { label: "Total incubators", value: total },
-      { label: "Finished", value: Finished },
-      { label: "Running", value: degraded },
-      { label: "Avg. uptime", value: avgUptime },
-      { label: "Requests (24h)", value: totalRequests },
+      { label: "Finished", value: finished },
+      { label: "Running", value: running },
+      { label: "In preparation", value: preparing },
+      { label: "Basic services", value: services },
     ];
 
     document.getElementById("summary-cards").innerHTML = cards
@@ -161,71 +106,73 @@
     return base + slug + "/";
   }
 
-  function renderTable(headers, dataRows) {
+  function renderCell(column, record) {
+    const value = record[column.key];
+
+    if (column.type === "logo") {
+      if (!value) return `<td class="row-logo">—</td>`;
+      return `<td class="row-logo"><img src="${escapeHtml(value)}" alt="" width="90" loading="lazy" decoding="async"></td>`;
+    }
+
+    if (column.type === "name") {
+      const text = escapeHtml(value || "—");
+      if (record.key_article) {
+        return `<td><a href="${incubatorUrl(record.key_article)}">${text}</a></td>`;
+      }
+      return `<td>${text}</td>`;
+    }
+
+    if (column.type === "status") {
+      const text = value || "—";
+      return `<td><span class="status-badge ${statusClass(text)}">${escapeHtml(text)}</span></td>`;
+    }
+
+    if (column.type === "date") {
+      return `<td>${formatDate(value)}</td>`;
+    }
+
+    if (column.type === "list") {
+      return `<td>${formatList(value)}</td>`;
+    }
+
+    if (value == null || value === "") return "<td>—</td>";
+    return `<td>${escapeHtml(value)}</td>`;
+  }
+
+  function renderTable(records, meta) {
     const head = document.getElementById("table-head");
     const body = document.getElementById("table-body");
-    const slugIndex = headers.indexOf("blog_slug");
-    const logoWidthIndex = headers.indexOf("logo_width_px");
-    const visibleHeaders = headers.filter((header) => !hiddenColumns.includes(header));
 
     head.innerHTML = `
-      <tr>${visibleHeaders.map((header) => `<th scope="col">${displayHeader(header)}</th>`).join("")}</tr>
+      <tr>${columns.map((column) => `<th scope="col">${column.label}</th>`).join("")}</tr>
     `;
 
-    body.innerHTML = dataRows
-      .map((row) => {
-        const slug = slugIndex >= 0 ? row[slugIndex] : "";
-        const cells = visibleHeaders
-          .map((header) => {
-            const index = headers.indexOf(header);
-            const value = row[index] ?? "";
-            if (header === "logo" && value) {
-              const width = logoWidthIndex >= 0 ? row[logoWidthIndex] || "50" : "50";
-              return `<td class="row-logo"><img src="${value}" alt="" width="${width}" loading="lazy" decoding="async"></td>`;
-            }
-            if (header === "project" && slug) {
-              return `<td><a href="${incubatorUrl(slug)}">${value}</a></td>`;
-            }
-            if (header === "status") {
-              return `<td><span class="status-badge ${statusClass(value)}">${value}</span></td>`;
-            }
-            if (header === "uptime_pct" && value && value !== "—") {
-              return `<td>${value}%</td>`;
-            }
-            if (header === "requests_24h" && value && !Number.isNaN(Number(value))) {
-              return `<td>${Number(value).toLocaleString()}</td>`;
-            }
-            if (header === "response_time_ms" && value && value !== "—") {
-              return `<td>${value} ms</td>`;
-            }
-            return `<td>${value}</td>`;
-          })
-          .join("");
-        return `<tr>${cells}</tr>`;
-      })
+    body.innerHTML = records
+      .map((record) => `<tr>${columns.map((column) => renderCell(column, record)).join("")}</tr>`)
       .join("");
 
+    const source = meta?.source === "nocodb" ? "NocoDB" : "dashboard data";
+    const fetched = meta?.fetched_at
+      ? ` · updated ${new Date(meta.fetched_at).toLocaleString()}`
+      : "";
     document.getElementById("table-meta").textContent =
-      `${dataRows.length} row${dataRows.length === 1 ? "" : "s"} from data.csv`;
+      `${records.length} row${records.length === 1 ? "" : "s"} from ${source}${fetched}`;
   }
 
   async function loadDashboard() {
     try {
-      const response = await fetch(csvUrl);
+      const response = await fetch(dataUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const text = await response.text();
-      const rows = parseCsv(text.trim());
-      if (rows.length < 2) throw new Error("CSV has no data rows");
+      const payload = await response.json();
+      const records = Array.isArray(payload?.records) ? payload.records : [];
+      if (records.length === 0) throw new Error("No incubator records found");
 
-      const headers = rows[0];
-      const dataRows = rows.slice(1);
-
-      renderSummary(headers, dataRows);
-      renderTable(headers, dataRows);
+      renderSummary(records);
+      renderTable(records, payload);
     } catch (error) {
-      document.getElementById("table-meta").textContent = "Failed to load data.csv";
+      document.getElementById("table-meta").textContent = "Failed to load dashboard data";
       document.getElementById("table-body").innerHTML = `
-        <tr><td colspan="7">Could not load dashboard data: ${error.message}</td></tr>
+        <tr><td colspan="${columns.length}">Could not load dashboard data: ${escapeHtml(error.message)}</td></tr>
       `;
     }
   }

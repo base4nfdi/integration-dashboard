@@ -1,9 +1,0 @@
-logo,logo_width_px,project,status,uptime_pct,requests_24h,response_time_ms,last_check,blog_slug
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Identity Provider,Finished,99.98,12450,42,2026-07-06T14:00:00Z,identity-provider
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Metadata Registry,Finished,99.91,8320,68,2026-07-06T14:00:00Z,metadata-registry
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,120,Object Storage,degraded,97.40,45210,210,2026-07-06T14:00:00Z,object-storage
-https://zenodo.org/api/communities/0d5c411f-f540-41e0-b8d9-c1e11f2a67aa/logo,110,Search API,Finished,99.87,18930,55,2026-07-06T14:00:00Z,search-api
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Workflow Engine,Finished,99.95,6210,89,2026-07-06T14:00:00Z,workflow-engine
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Documentation Portal,Finished,99.99,3410,31,2026-07-06T14:00:00Z,documentation-portal
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Monitoring Stack,Finished,99.92,980,24,2026-07-06T14:00:00Z,monitoring-stack
-https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo,90,Backup Service,maintenance,—,0,—,2026-07-06T14:00:00Z,backup-service
