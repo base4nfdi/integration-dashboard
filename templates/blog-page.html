@@ -10,7 +10,31 @@
       <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
       {{ page.title }}
     </p>
-    <h2>{{ page.title }}</h2>
+    <div class="blog-post-title-row">
+      <h2>{{ page.title }}</h2>
+      {% if page.extra.logo_project or page.extra.logo_consortia %}
+      <div class="blog-post-logos" aria-label="Dataset logos">
+        {% if page.extra.logo_project %}
+        <img
+          class="blog-post-logo blog-post-logo-project"
+          src="{{ page.extra.logo_project }}"
+          alt="{{ page.title }} project logo"
+          loading="lazy"
+          decoding="async"
+        >
+        {% endif %}
+        {% if page.extra.logo_consortia %}
+        <img
+          class="blog-post-logo blog-post-logo-consortia"
+          src="{{ page.extra.logo_consortia }}"
+          alt="Consortia logo"
+          loading="lazy"
+          decoding="async"
+        >
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
     {% if page.extra.status %}
     <p class="blog-post-status">
       <span class="status-badge status-{{ page.extra.status | lower | replace(from=' ', to='-') }}">{{ page.extra.status }}</span>
