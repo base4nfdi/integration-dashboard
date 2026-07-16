@@ -41,8 +41,14 @@
     { key: "inc_start", label: "Start", type: "date" },
     { key: "inc_end", label: "End", type: "date" },
     { key: "inc_cycle", label: "Cycle" },
+    { key: "inc_descr", label: "Description", type: "markdown" },
+    { key: "inc_goals", label: "Goals", type: "markdown" },
+    { key: "inc_results", label: "Results", type: "markdown" },
+    { key: "inc_partner_publications", label: "Partner pubs" },
     { key: "partners", label: "Partners", type: "list" },
+    { key: "linked_partners", label: "# Partners" },
     { key: "entities", label: "Entities", type: "list" },
+    { key: "linked_entities", label: "# Entities" },
     { key: "related_institutions", label: "Institutions" },
   ];
 
@@ -72,6 +78,67 @@
   function formatList(items) {
     if (!Array.isArray(items) || items.length === 0) return "—";
     return items.map(escapeHtml).join(", ");
+  }
+
+  function renderInlineMarkdown(text) {
+    let html = escapeHtml(text);
+    html = html.replace(
+      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+    html = html.replace(
+      /(^|[\s>(])(https?:\/\/[^\s<]+)/g,
+      '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>'
+    );
+    html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/(^|[^*])\*([^*]+)\*(?!\*)/g, "$1<em>$2</em>");
+    html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
+    return html;
+  }
+
+  /** Minimal Markdown → HTML for NocoDB text fields (lists, links, emphasis). */
+  function renderMarkdown(source) {
+    const raw = String(source || "").replace(/\r\n/g, "\n").trim();
+    if (!raw) return "";
+
+    const blocks = [];
+    let listItems = [];
+    let paragraph = [];
+
+    function flushList() {
+      if (listItems.length === 0) return;
+      blocks.push(
+        "<ul>" +
+          listItems.map((item) => `<li>${renderInlineMarkdown(item)}</li>`).join("") +
+          "</ul>"
+      );
+      listItems = [];
+    }
+
+    function flushParagraph() {
+      if (paragraph.length === 0) return;
+      blocks.push(`<p>${renderInlineMarkdown(paragraph.join(" "))}</p>`);
+      paragraph = [];
+    }
+
+    for (const line of raw.split("\n")) {
+      const listMatch = line.match(/^\s*[-*]\s+(.+)$/);
+      if (listMatch) {
+        flushParagraph();
+        listItems.push(listMatch[1]);
+        continue;
+      }
+      if (!line.trim()) {
+        flushList();
+        flushParagraph();
+        continue;
+      }
+      flushList();
+      paragraph.push(line.trim());
+    }
+    flushList();
+    flushParagraph();
+    return blocks.join("");
   }
 
   function renderSummary(records) {
@@ -133,6 +200,12 @@
 
     if (column.type === "list") {
       return `<td>${formatList(value)}</td>`;
+    }
+
+    if (column.type === "markdown") {
+      const html = renderMarkdown(value);
+      if (!html) return "<td>—</td>";
+      return `<td class="cell-markdown"><div class="md-content">${html}</div></td>`;
     }
 
     if (value == null || value === "") return "<td>—</td>";
