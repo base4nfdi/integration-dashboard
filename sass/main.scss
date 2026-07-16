@@ -428,6 +428,7 @@ main.container:has(.dashboard) {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .status-finished {
