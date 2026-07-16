@@ -1,0 +1,14 @@
+.git
+.gitignore
+public
+.env
+.env.*
+!.env.example
+node_modules
+*.pdf
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+README*

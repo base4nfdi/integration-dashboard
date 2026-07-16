@@ -1,0 +1,16 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        BASE_URL: ${BASE_URL:-http://localhost:8080}
+        NOCODB_API_TOKEN: ${NOCODB_API_TOKEN:-}
+        NOCODB_BASE_URL: ${NOCODB_BASE_URL:-}
+        NOCODB_TABLE_ID: ${NOCODB_TABLE_ID:-}
+        NOCODB_VIEW_ID: ${NOCODB_VIEW_ID:-}
+        NOCODB_PAGE_SIZE: ${NOCODB_PAGE_SIZE:-}
+    image: base4nfdi-dashboard:latest
+    ports:
+      - "${PORT:-8080}:80"
+    restart: unless-stopped
