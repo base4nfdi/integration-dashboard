@@ -9,6 +9,7 @@
   --maintenance: #a78bfa;
   --danger: #e74c3c;
   --radius: 12px;
+  --font-sans: "Fira Sans", system-ui, -apple-system, sans-serif;
 }
 
 [data-theme="dark"] {
@@ -56,7 +57,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
   background:
     radial-gradient(circle at top left, var(--gradient-cyan), transparent 28%),
     radial-gradient(circle at bottom right, var(--gradient-green), transparent 24%),
@@ -68,6 +69,14 @@ body {
 
 a {
   color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--nfdi-anthrazit);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .container {
@@ -98,7 +107,7 @@ a {
 
 .site-logo {
   display: block;
-  width: min(280px, 72vw);
+  width: min(100px, 72vw);
   height: auto;
 }
 
@@ -225,6 +234,12 @@ main {
   padding: 2rem 0 3rem;
 }
 
+/* Dashboard uses nearly full viewport width (small side padding only). */
+main.container:has(.dashboard) {
+  width: calc(100% - 3.5rem);
+  max-width: none;
+}
+
 .dashboard-header h2 {
   margin: 0 0 0.5rem;
   font-size: 1.75rem;
@@ -297,12 +312,29 @@ main {
 }
 
 .table-wrap {
-  overflow-x: auto;
+  overflow: auto;
+  max-height: min(70vh, calc(100vh - 16rem));
+  background-color: var(--surface);
+  /* Cover gradients scroll with content; edge shadows stay fixed → appear when overflow scrolls. */
+  background-image:
+    linear-gradient(var(--surface) 30%, transparent),
+    linear-gradient(transparent, var(--surface) 70%),
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.22), transparent),
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.22), transparent);
+  background-position: center top, center bottom, center top, center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2.5rem, 100% 2.5rem, 100% 0.85rem, 100% 0.85rem;
+  background-attachment: local, local, scroll, scroll;
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 4px 14px rgba(0, 0, 0, 0.1);
 }
 
 .data-table {
   width: 100%;
-  border-collapse: collapse;
+  /* separate required for sticky thead in most browsers */
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 0.95rem;
 }
 
@@ -314,27 +346,40 @@ main {
 }
 
 .data-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface);
   color: var(--text-muted);
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.12);
 }
 
 .data-table tbody tr:hover {
   background: var(--row-hover);
 }
 
-.data-table .row-logo {
+.data-table .row-logos {
   width: 1%;
-  padding-right: 0.75rem;
+  white-space: nowrap;
   vertical-align: middle;
+}
 
-  img {
-    display: block;
-    height: auto;
-    object-fit: contain;
-  }
+.data-table .logo-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.data-table .logo-img {
+  display: block;
+  height: 2.25rem;
+  width: auto;
+  max-width: 5.5rem;
+  object-fit: contain;
 }
 
 .data-table .cell-markdown {
@@ -411,7 +456,7 @@ main {
 }
 
 .site-footer {
-  padding: 1.5rem 0 2rem;
+  padding: 0.5rem 0 0.75rem;
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;

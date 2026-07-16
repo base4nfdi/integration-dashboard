@@ -33,23 +33,22 @@
   const incubatorBaseUrl = "{{ get_url(path='@/incubators/_index.md') | safe }}";
 
   const columns = [
-    { key: "logo_consortia", label: "Consortia", type: "logo" },
-    { key: "logo_project", label: "Project logo", type: "logo" },
     { key: "inc_name", label: "Incubator", type: "name" },
     { key: "basic_service", label: "Basic service" },
+    { key: "logos", label: "Logos", type: "logos" },
     { key: "inc_status", label: "Status", type: "status" },
-    { key: "inc_start", label: "Start", type: "date" },
-    { key: "inc_end", label: "End", type: "date" },
+    // { key: "inc_start", label: "Start", type: "date" },
+    // { key: "inc_end", label: "End", type: "date" },
     { key: "inc_cycle", label: "Cycle" },
-    { key: "inc_descr", label: "Description", type: "markdown" },
-    { key: "inc_goals", label: "Goals", type: "markdown" },
-    { key: "inc_results", label: "Results", type: "markdown" },
-    { key: "inc_partner_publications", label: "Partner pubs" },
-    { key: "partners", label: "Partners", type: "list" },
-    { key: "linked_partners", label: "# Partners" },
-    { key: "entities", label: "Entities", type: "list" },
-    { key: "linked_entities", label: "# Entities" },
-    { key: "related_institutions", label: "Institutions" },
+    // { key: "inc_descr", label: "Description", type: "markdown" },
+    // { key: "inc_goals", label: "Goals", type: "markdown" },
+    // { key: "inc_results", label: "Results", type: "markdown" },
+    // { key: "inc_partner_publications", label: "Partner pubs" },
+    { key: "partners", label: "Consortia involved", type: "list" },
+    // { key: "linked_partners", label: "# Partners" },
+    { key: "entities", label: "Hosting Institutions", type: "list" },
+    // { key: "linked_entities", label: "# Entities" },
+    { key: "related_institutions", label: "Further Institutions" },
   ];
 
   function escapeHtml(value) {
@@ -176,9 +175,18 @@
   function renderCell(column, record) {
     const value = record[column.key];
 
-    if (column.type === "logo") {
-      if (!value) return `<td class="row-logo">—</td>`;
-      return `<td class="row-logo"><img src="${escapeHtml(value)}" alt="" width="90" loading="lazy" decoding="async"></td>`;
+    if (column.type === "logos") {
+      const project = record.logo_project;
+      const consortia = record.logo_consortia;
+      if (!project && !consortia) return `<td class="row-logos">—</td>`;
+      const imgs = [];
+      if (project) {
+        imgs.push(`<img class="logo-img logo-project" src="${escapeHtml(project)}" alt="Project logo" loading="lazy" decoding="async">`);
+      }
+      if (consortia) {
+        imgs.push(`<img class="logo-img logo-consortia" src="${escapeHtml(consortia)}" alt="Consortia logo" loading="lazy" decoding="async">`);
+      }
+      return `<td class="row-logos"><div class="logo-pair">${imgs.join("")}</div></td>`;
     }
 
     if (column.type === "name") {
