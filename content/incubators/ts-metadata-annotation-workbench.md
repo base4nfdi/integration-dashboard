@@ -1,0 +1,42 @@
++++
+title = "Metadata Annotation Workbench"
+date = 1970-01-01
+[extra]
+key_article = "ts-metadata-annotation-workbench"
+basic_service = "TS"
+status = "Finished"
+inc_start = ""
+inc_end = ""
+inc_cycle = 0
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4health.png"
++++
+
+The Metadata Annotation Workbench is developed in the NFDI4Health project. The service aims to assist researchers with semantic annotation of data dictionaries, questionnaires or other data collection instruments.
+
+Metadata Annotation Workbench is an incubator project within the **Terminology Service (TS)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 0.
+
+## Timeline
+
+- **Start:** —
+- **End:** —
+- **Cycle:** 0
+
+## Goals
+
+- Using terminologies of SemLookP as a source for annotation
+- Provide information about terms via the TSS metadata widget
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **ts-metadata-annotation-workbench** in the NocoDB dashboard table.

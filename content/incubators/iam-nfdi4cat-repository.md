@@ -1,0 +1,41 @@
++++
+title = "NFDI4CAT Repository"
+date = 2025-07-31
+[extra]
+key_article = "iam-nfdi4cat-repository"
+basic_service = "IAM"
+status = "Finished"
+inc_start = "2025-02-01"
+inc_end = "2025-07-31"
+inc_cycle = 3
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://incubators.nfdi-aai.de/images/nfdi4cat.svg"
++++
+
+The NFDI4CAT community requires a central solution for the storage and exchange of experimental and simulation data to streamline research activities and support collaboration. To address this need, NFDI4CAT propose the deployment of a central repository using Dataverse. This repository will facilitate organisation, sharing, and archiving of research data within the community, ensuring efficient data management and accessibility. We would like to explore the possibility to use the NFDI Authentication and Authorisation Infrastructure Framework for the NFDI4Cat Dataverse repository. This will enable our repository users with seamless and secure access to their data.
+
+NFDI4CAT Repository is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 3 completed on 2025-07-31.
+
+## Timeline
+
+- **Start:** 2025-02-01
+- **End:** 2025-07-31
+- **Cycle:** 3
+
+## Results
+
+.
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **iam-nfdi4cat-repository** in the NocoDB dashboard table.

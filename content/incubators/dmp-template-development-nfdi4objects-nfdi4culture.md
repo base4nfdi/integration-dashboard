@@ -1,0 +1,39 @@
++++
+title = "Template Development — NFDI4Objects, NFDI4Culture"
+date = 2025-12-31
+[extra]
+key_article = "dmp-template-development-nfdi4objects-nfdi4culture"
+basic_service = "DMP"
+status = "Finished"
+inc_start = "2025-07-01"
+inc_end = "2025-12-31"
+inc_cycle = 0
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://www.dmp4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png"
++++
+
+Template Development — NFDI4Objects, NFDI4Culture is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 0 completed on 2025-12-31.
+
+## Timeline
+
+- **Start:** 2025-07-01
+- **End:** 2025-12-31
+- **Cycle:** 0
+
+## Goals
+
+The product of this incubator project is a DMP template to help museums and collections implement the FAIR principles. The template provides an accessible option for assessing the FAIR quality of collection data. The questions are categorised according to four typical processing phases: digitisation, documentation, publication and storage/archiving. Most of the questions within these categories are assigned to indicators from the FAIR Data Maturity Model. The template includes answer options, some recommendations for action, help texts, notes and links to useful materials. The aim is to create a template that illustrates the different levels of FAIR implementation, while also providing institutions with a roadmap to improve the quality of their data.
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **dmp-template-development-nfdi4objects-nfdi4culture** in the NocoDB dashboard table.

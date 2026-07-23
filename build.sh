@@ -27,6 +27,9 @@ else
   echo "No NOCODB_API_TOKEN / .env — using existing static/data.json" >&2
 fi
 
+echo "==> Generating missing incubator pages"
+node scripts/generate-incubator-pages.mjs
+
 echo "==> Building site with Zola"
 zola build "$@"
 echo "==> Build complete"

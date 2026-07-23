@@ -1,0 +1,46 @@
++++
+title = "JARDS Attribute Queries in RegApp"
+date = 2024-07-31
+[extra]
+key_article = "iam-jards-attribute-queries-in-regapp"
+basic_service = "IAM"
+status = "Finished"
+inc_start = "2024-02-01"
+inc_end = "2024-07-31"
+inc_cycle = 1
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://incubators.nfdi-aai.de/images/nhraai_complete.png"
++++
+
+At RWTH Aachen University, the JARDS platform is used by researchers to apply for resources such as storage space or computing time. The applications are assessed in a multi-stage scientific review process. After approval, researchers must be given access to the resource and be able to manage other project members. This requires information about approved projects in RegApp. The aim of this project is to enable attribute queries via the SAML protocol in RegApp and to set up a Shibboleth-based attribute authority that returns user data from JARDS. This demonstrates how external applications can be integrated into the Community AAI as attribute authorities.
+
+JARDS Attribute Queries in RegApp is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 1 completed on 2024-07-31.
+
+## Timeline
+
+- **Start:** 2024-02-01
+- **End:** 2024-07-31
+- **Cycle:** 1
+
+## Results
+
+Implementation of a generic Docker image that can be used to set up
+a Shibboleth-based attribute authority
+
+Provision of an attribute authority for JARDS project data
+
+Extension of the RegApp to support SAML attribute queries
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **iam-jards-attribute-queries-in-regapp** in the NocoDB dashboard table.

@@ -1,0 +1,47 @@
++++
+title = "AgiMo: Data - driven agile planning for responsible mobility"
+date = 2026-07-31
+[extra]
+key_article = "iam-agimo-data-driven-agile-planning-for-responsible-mobility"
+basic_service = "IAM"
+status = "In preparation"
+inc_start = "2026-02-01"
+inc_end = "2026-07-31"
+inc_cycle = 5
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://incubators.nfdi-aai.de/images/missing.jpg"
++++
+
+The primary objective of the incubator proposal is to implement an RDM system that can be integrated into a virtual research environment for transportation science. Authentication should be handled by Community AAI software where customisation needs to be implemented wherever applicable This approach is advantageous as it enables ease of authentication for par ticipants / users from other institutions, while also supporting the implementation of authorization and group management within our services where applicable.
+
+AgiMo: Data - driven agile planning for responsible mobility is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
+
+## Current status
+
+**In preparation** — cycle 5, planned start 2026-02-01.
+
+## Timeline
+
+- **Start:** 2026-02-01
+- **End:** 2026-07-31
+- **Cycle:** 5
+
+## Goals
+
+- Testing the AAI software with a dedicated test instance connected to our Infraverse infrastructure
+- Establishing a successful integration of the AAI software login with the production instance of Infraverse
+- Utilising the RegApp features (Group management, API …) within our infrastructure to streamline group management, role assignments, and authorization processes
+
+## Results
+
+Not yet available
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **iam-agimo-data-driven-agile-planning-for-responsible-mobility** in the NocoDB dashboard table.

@@ -1,0 +1,44 @@
++++
+title = "Template Development — Text+"
+date = 2025-12-31
+[extra]
+key_article = "dmp-template-development-textplus"
+basic_service = "DMP"
+status = "Finished"
+inc_start = "2025-09-01"
+inc_end = "2025-12-31"
+inc_cycle = 0
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://www.dmp4nfdi.de/images/text+_logo.png"
++++
+
+Template Development — Text+ is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 0 completed on 2025-12-31.
+
+## Timeline
+
+- **Start:** 2025-09-01
+- **End:** 2025-12-31
+- **Cycle:** 0
+
+## Goals
+
+The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.
+
+## Results
+
+Text+ RDMO Catalog
+- [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B)
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **dmp-template-development-textplus** in the NocoDB dashboard table.

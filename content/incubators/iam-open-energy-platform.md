@@ -1,0 +1,48 @@
++++
+title = "Open Energy Platform"
+date = 2025-07-31
+[extra]
+key_article = "iam-open-energy-platform"
+basic_service = "IAM"
+status = "Finished"
+inc_start = "2025-02-01"
+inc_end = "2025-07-31"
+inc_cycle = 3
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_consortia = "https://incubators.nfdi-aai.de/images/open-energy-platform.png"
++++
+
+With this incubator process, we (NFDI4Energy) want to commit to a specific CAAI solution, namely Reg-APP, and integrate it on the OpenEnergyPlatform (OEP). NFDI4Energy is committed in reusing already existing solutions and platforms. As a result, the OEP will serve as one of the main bases for further developments in Research Data Management in the Energy domain and will be a linking and collection point for further NFDI4Energy services. The OEP currently consists of a simple local login (E-Mail and Password) based on basic services available through the python package Django with a PostgreSQL database and simple fronted technology (HTML, JavaScript, CSS). To add Reg-APP support we plan to use the django-allauth module, which supports SAML as well as OpenID Connect.
+
+Open Energy Platform is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 3 completed on 2025-07-31.
+
+## Timeline
+
+- **Start:** 2025-02-01
+- **End:** 2025-07-31
+- **Cycle:** 3
+
+## Goals
+
+- Integrate RegAPP on the OpenEnergyPlatform as the primary Authentication Service
+- Transfer or map existing user accounts, since we plan to maintain the legacy login as well as the RegAPP login
+- Operate the OEP and associated services under real environment conditions. As the OEP is a community service we think that a connection to the NFDI Infra proxy will not be necessary
+- The served user base will be a mix of researchers, industry partners and society. As such an authentication method that is not based on the research infrastructure needs to be supported, as well
+
+## Results
+
+- [https://github.com/orgs/OpenEnergyPlatform/projects/40](https://github.com/orgs/OpenEnergyPlatform/projects/40)
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **iam-open-energy-platform** in the NocoDB dashboard table.
