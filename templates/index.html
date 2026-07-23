@@ -167,8 +167,14 @@
       .join("");
   }
 
-  function incubatorUrl(slug) {
+  function incubatorUrl(record) {
     const base = incubatorBaseUrl.endsWith("/") ? incubatorBaseUrl : incubatorBaseUrl + "/";
+    const service = String(record.basic_service || "")
+      .trim()
+      .toLowerCase();
+    const slug = String(record.key_article || "").trim();
+    if (!slug) return base;
+    if (service) return base + service + "/" + slug + "/";
     return base + slug + "/";
   }
 
@@ -192,7 +198,7 @@
     if (column.type === "name") {
       const text = escapeHtml(value || "—");
       if (record.key_article) {
-        return `<td><a href="${incubatorUrl(record.key_article)}">${text}</a></td>`;
+        return `<td><a href="${incubatorUrl(record)}">${text}</a></td>`;
       }
       return `<td>${text}</td>`;
     }

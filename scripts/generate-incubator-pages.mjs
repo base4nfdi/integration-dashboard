@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Create missing content/incubators/{key_article}.md pages from static/data.json.
+ * Create missing content/incubators/{service}/{key_article}.md pages from static/data.json.
  *
  * Existing Markdown files are left unchanged unless --force is passed.
  *
@@ -18,11 +18,12 @@ const DEFAULT_DATA = join(repoRoot, "static/data.json");
 const DEFAULT_OUT_DIR = join(repoRoot, "content/incubators");
 
 const SERVICE_LABELS = {
-  TS: "Terminology Service (TS)",
+  TS: "Terminology Services (TS)",
   IAM: "Identity and Access Management (IAM)",
   DMP: "Data Management Planning (DMP)",
 };
 
+const SERVICE_DIRS = new Set(["ts", "dmp", "iam"]);
 const KEY_ARTICLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function parseArgs(argv) {
@@ -40,7 +41,8 @@ function printHelp() {
   console.log(`Usage:
   node scripts/generate-incubator-pages.mjs [--dry-run] [--force]
 
-Creates missing incubator report Markdown files from static/data.json.
+Creates missing incubator report Markdown files under
+content/incubators/{ts|dmp|iam}/ from static/data.json.
 By default existing files are not overwritten.
 `);
 }
@@ -84,6 +86,14 @@ function pageDate(record) {
 function serviceLabel(basicService) {
   const code = asText(basicService).toUpperCase();
   return SERVICE_LABELS[code] ?? (code || "Unknown");
+}
+
+function serviceDir(basicService) {
+  const code = asText(basicService).toLowerCase();
+  if (!SERVICE_DIRS.has(code)) {
+    throw new Error(`Unknown basic_service for path: ${basicService || "(empty)"}`);
+  }
+  return code;
 }
 
 function displayDate(value) {
@@ -320,6 +330,9 @@ async function main() {
   }
 
   mkdirSync(DEFAULT_OUT_DIR, { recursive: true });
+  for (const dir of SERVICE_DIRS) {
+    mkdirSync(join(DEFAULT_OUT_DIR, dir), { recursive: true });
+  }
 
   const created = [];
   const skipped = [];
@@ -336,7 +349,19 @@ async function main() {
       continue;
     }
 
-    const outPath = join(DEFAULT_OUT_DIR, `${keyArticle}.md`);
+    let service;
+    try {
+      service = serviceDir(record.basic_service);
+    } catch (error) {
+      ignored.push({
+        reason: "unknown_basic_service",
+        key_article: keyArticle,
+        basic_service: record.basic_service,
+      });
+      continue;
+    }
+
+    const outPath = join(DEFAULT_OUT_DIR, service, `${keyArticle}.md`);
     const exists = existsSync(outPath);
     if (exists && !args.force) {
       skipped.push(keyArticle);

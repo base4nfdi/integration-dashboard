@@ -8,6 +8,10 @@
     <p class="breadcrumb">
       <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
       <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
+      {% if page.extra.basic_service %}
+      {% set service_slug = page.extra.basic_service | lower %}
+      <a href="{{ get_url(path='@/incubators/' ~ service_slug ~ '/_index.md') | safe }}">{{ page.extra.basic_service }}</a> /
+      {% endif %}
       {{ page.title }}
     </p>
     <div class="blog-post-title-row">
