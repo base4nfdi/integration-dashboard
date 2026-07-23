@@ -18,6 +18,27 @@
       <h3>Incubators</h3>
       <p class="table-meta" id="table-meta">Loading data…</p>
     </div>
+
+    <form class="filter-bar" id="filter-bar" hidden aria-label="Filter incubators">
+      <div class="filter-search">
+        <label class="visually-hidden" for="filter-search">Search table</label>
+        <input
+          type="search"
+          id="filter-search"
+          name="q"
+          placeholder="Search all text columns…"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+
+      <div class="filter-groups" id="filter-groups"></div>
+
+      <div class="filter-actions">
+        <button type="button" class="filter-clear" id="filter-clear" disabled>Clear filters</button>
+      </div>
+    </form>
+
     <div class="table-wrap">
       <table class="data-table" id="data-table">
         <thead id="table-head"></thead>
@@ -50,6 +71,23 @@
     // { key: "linked_entities", label: "# Entities" },
     { key: "related_institutions", label: "Further Institutions" },
   ];
+
+  /** Discrete filters shown as checkbox groups. */
+  const filterDefs = [
+    { key: "basic_service", label: "Basic service" },
+    { key: "inc_status", label: "Status" },
+    { key: "inc_cycle", label: "Cycle" },
+  ];
+
+  /** Columns included in free-text search (excludes logos / non-text). */
+  const searchableColumns = columns.filter((column) => column.type !== "logos");
+
+  const state = {
+    records: [],
+    meta: null,
+    search: "",
+    filters: Object.fromEntries(filterDefs.map((def) => [def.key, new Set()])),
+  };
 
   function escapeHtml(value) {
     return String(value)
@@ -140,6 +178,63 @@
     return blocks.join("");
   }
 
+  function cellText(column, record) {
+    const value = record[column.key];
+    if (column.type === "list") {
+      return Array.isArray(value) ? value.join(" ") : "";
+    }
+    if (column.type === "date") {
+      return value ? formatDate(value) : "";
+    }
+    if (value == null) return "";
+    return String(value);
+  }
+
+  function recordSearchText(record) {
+    return searchableColumns
+      .map((column) => cellText(column, record))
+      .join(" ")
+      .toLowerCase();
+  }
+
+  function uniqueValues(records, key) {
+    const values = new Set();
+    for (const record of records) {
+      const value = record[key];
+      if (value == null || value === "") continue;
+      values.add(String(value));
+    }
+    return Array.from(values).sort((a, b) => {
+      const na = Number(a);
+      const nb = Number(b);
+      if (!Number.isNaN(na) && !Number.isNaN(nb) && String(na) === a && String(nb) === b) {
+        return na - nb;
+      }
+      return a.localeCompare(b, undefined, { sensitivity: "base" });
+    });
+  }
+
+  function hasActiveFilters() {
+    if (state.search.trim()) return true;
+    return filterDefs.some((def) => state.filters[def.key].size > 0);
+  }
+
+  function filterRecords(records) {
+    const query = state.search.trim().toLowerCase();
+    return records.filter((record) => {
+      for (const def of filterDefs) {
+        const selected = state.filters[def.key];
+        if (selected.size === 0) continue;
+        const value = record[def.key];
+        if (value == null || value === "" || !selected.has(String(value))) {
+          return false;
+        }
+      }
+      if (!query) return true;
+      return recordSearchText(record).includes(query);
+    });
+  }
+
   function renderSummary(records) {
     const total = records.length;
     const finished = records.filter((row) => row.inc_status === "Finished").length;
@@ -226,7 +321,37 @@
     return `<td>${escapeHtml(value)}</td>`;
   }
 
-  function renderTable(records, meta) {
+  function renderFilterBar(records) {
+    const groups = document.getElementById("filter-groups");
+    groups.innerHTML = filterDefs
+      .map((def) => {
+        const options = uniqueValues(records, def.key);
+        if (options.length === 0) return "";
+        const chips = options
+          .map((option) => {
+            const id = `filter-${def.key}-${option.replace(/[^a-zA-Z0-9_-]+/g, "-").toLowerCase()}`;
+            const checked = state.filters[def.key].has(option) ? " checked" : "";
+            return `
+              <label class="filter-chip" for="${id}">
+                <input type="checkbox" id="${id}" name="${escapeHtml(def.key)}" value="${escapeHtml(option)}"${checked}>
+                <span>${escapeHtml(option)}</span>
+              </label>
+            `;
+          })
+          .join("");
+        return `
+          <fieldset class="filter-group">
+            <legend>${escapeHtml(def.label)}</legend>
+            <div class="filter-chip-list">${chips}</div>
+          </fieldset>
+        `;
+      })
+      .join("");
+
+    document.getElementById("filter-bar").hidden = false;
+  }
+
+  function renderTable(records, meta, totalCount) {
     const head = document.getElementById("table-head");
     const body = document.getElementById("table-body");
 
@@ -234,16 +359,71 @@
       <tr>${columns.map((column) => `<th scope="col">${column.label}</th>`).join("")}</tr>
     `;
 
-    body.innerHTML = records
-      .map((record) => `<tr>${columns.map((column) => renderCell(column, record)).join("")}</tr>`)
-      .join("");
+    if (records.length === 0) {
+      body.innerHTML = `
+        <tr>
+          <td colspan="${columns.length}" class="table-empty">
+            No incubators match the current filters.
+          </td>
+        </tr>
+      `;
+    } else {
+      body.innerHTML = records
+        .map((record) => `<tr>${columns.map((column) => renderCell(column, record)).join("")}</tr>`)
+        .join("");
+    }
 
     const source = meta?.source === "nocodb" ? "NocoDB" : "dashboard data";
     const fetched = meta?.fetched_at
       ? ` · updated ${new Date(meta.fetched_at).toLocaleString()}`
       : "";
+    const countLabel =
+      records.length === totalCount
+        ? `${records.length} row${records.length === 1 ? "" : "s"}`
+        : `${records.length} of ${totalCount} rows`;
     document.getElementById("table-meta").textContent =
-      `${records.length} row${records.length === 1 ? "" : "s"} from ${source}${fetched}`;
+      `${countLabel} from ${source}${fetched}`;
+
+    document.getElementById("filter-clear").disabled = !hasActiveFilters();
+  }
+
+  function applyView() {
+    const filtered = filterRecords(state.records);
+    renderSummary(filtered);
+    renderTable(filtered, state.meta, state.records.length);
+  }
+
+  function bindFilterControls() {
+    const searchInput = document.getElementById("filter-search");
+    const filterBar = document.getElementById("filter-bar");
+    const clearButton = document.getElementById("filter-clear");
+
+    searchInput.addEventListener("input", () => {
+      state.search = searchInput.value;
+      applyView();
+    });
+
+    filterBar.addEventListener("change", (event) => {
+      const input = event.target;
+      if (!(input instanceof HTMLInputElement) || input.type !== "checkbox") return;
+      const key = input.name;
+      if (!state.filters[key]) return;
+      if (input.checked) state.filters[key].add(input.value);
+      else state.filters[key].delete(input.value);
+      applyView();
+    });
+
+    clearButton.addEventListener("click", () => {
+      state.search = "";
+      searchInput.value = "";
+      for (const def of filterDefs) state.filters[def.key].clear();
+      filterBar
+        .querySelectorAll('input[type="checkbox"]')
+        .forEach((input) => {
+          input.checked = false;
+        });
+      applyView();
+    });
   }
 
   async function loadDashboard() {
@@ -254,8 +434,10 @@
       const records = Array.isArray(payload?.records) ? payload.records : [];
       if (records.length === 0) throw new Error("No incubator records found");
 
-      renderSummary(records);
-      renderTable(records, payload);
+      state.records = records;
+      state.meta = payload;
+      renderFilterBar(records);
+      applyView();
     } catch (error) {
       document.getElementById("table-meta").textContent = "Failed to load dashboard data";
       document.getElementById("table-body").innerHTML = `
@@ -264,6 +446,7 @@
     }
   }
 
+  bindFilterControls();
   loadDashboard();
 })();
 </script>
