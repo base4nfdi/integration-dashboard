@@ -1,0 +1,28 @@
+{
+  "mode": "dry-run",
+  "compared_against": "live-nocodb",
+  "planned_at": "2026-07-23T09:36:17.927Z",
+  "totals": {
+    "missing_from_nocodb": 0,
+    "will_push": 0,
+    "skipped_already_matched": 101
+  },
+  "by_source": {
+    "dmp4nfdi": {
+      "missing": 0,
+      "pushing": 0,
+      "already_matched": 31
+    },
+    "iam4nfdi": {
+      "missing": 0,
+      "pushing": 0,
+      "already_matched": 39
+    },
+    "ts4nfdi": {
+      "missing": 0,
+      "pushing": 0,
+      "already_matched": 31
+    }
+  },
+  "records": []
+}

@@ -1,0 +1,775 @@
+{
+  "basic_service": "TS",
+  "counts": {
+    "source": 31,
+    "nocodb": 31,
+    "matched": 31,
+    "only_in_source": 0,
+    "only_in_nocodb": 0
+  },
+  "matches": [
+    {
+      "score": 2.36,
+      "source": {
+        "inc_name": "RADAR",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Chem",
+          "NFDI4Culture",
+          "NFDI4Memory"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RADAR",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Chem",
+          "NFDI4Culture",
+          "NFDI4Memory"
+        ]
+      },
+      "field_diffs": {
+        "inc_results": {
+          "source": "https://doi.org/10.5281/zenodo.17090276\nhttps://doi.org/10.5281/zenodo.16736267\nhttps://radar.products.fiz-karlsruhe.de/en/nachricht/radar-release-v123-ts4nfdi-integration-abgeschlossen",
+          "nocodb": ""
+        }
+      }
+    },
+    {
+      "score": 2.12,
+      "source": {
+        "inc_name": "WDCC",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "WDCC",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "",
+          "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "nmrXiv",
+        "inc_cycle": 0,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "nmrXiv",
+        "inc_cycle": 0,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "ChEBI",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "ChEBI",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Coconut",
+        "inc_cycle": 0,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Coconut",
+        "inc_cycle": 0,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Cat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "BERD Terminology Service",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "BERD@NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "BERD Terminology Service",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "BERD@NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Terminology service for Plasma-MDS",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4BIOIMAGE"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Terminology service for Plasma-MDS",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4BIOIMAGE"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "preVIEW",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "preVIEW",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Metadata Annotation Workbench",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Metadata Annotation Workbench",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Discuss Data",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Discuss Data",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Text+"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Open Energy Platform",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Energy"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Open Energy Platform",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Energy"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "ICONCLASS",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Culture",
+          "NFDI4Memory",
+          "Text+",
+          "NFDI4Objects"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "ICONCLASS",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture",
+            "NFDI4Memory",
+            "Text+",
+            "NFDI4Objects"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Ontology of the historical German-language nomenclature",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Memory",
+          "BERD@NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Ontology of the historical German-language nomenclature",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Memory",
+            "BERD@NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Health Study Hub",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Health Study Hub",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "DALIA Search Portal",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "DALIA Search Portal",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2.12,
+      "source": {
+        "inc_name": "AIMS",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "AIMS",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "field_diffs": {
+        "inc_end": {
+          "source": "2026-09-30",
+          "nocodb": ""
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "Base4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Base4NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "Base4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Base4NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Metabase",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "NFDIxCS"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Metabase",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDIxCS"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "MathModDB",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "MaRDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "MathModDB",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MaRDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "FAIRagro Terminology Service",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "FAIRagro Terminology Service",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRagro"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "TS4NDSI integration in Galaxy",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "TS4NDSI integration in Galaxy",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "TeSS",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "DAPHNE4NFDI",
+          "PUNCH4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "TeSS",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "DAPHNE4NFDI",
+            "PUNCH4NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "DAPHNE4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "DAPHNE4NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2.12,
+      "source": {
+        "inc_name": "SensorCV",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "SensorCV",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "field_diffs": {
+        "inc_start": {
+          "source": "",
+          "nocodb": "2026-07-15"
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/sms.png",
+          "nocodb": ""
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Energy"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Energy"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Culture",
+          "NFDI4Memory",
+          "NFDI4Objects"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture",
+            "NFDI4Memory",
+            "NFDI4Objects"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "OstData & 4MMS",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Memory"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "OstData & 4MMS",
+        "inc_cycle": 4,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Memory"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Immuno"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Immuno"
+          ],
+          "nocodb": []
+        }
+      }
+    }
+  ],
+  "only_in_source": [],
+  "only_in_nocodb": []
+}

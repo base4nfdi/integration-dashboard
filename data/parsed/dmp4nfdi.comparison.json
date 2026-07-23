@@ -1,0 +1,809 @@
+{
+  "basic_service": "DMP",
+  "counts": {
+    "source": 31,
+    "nocodb": 31,
+    "matched": 31,
+    "only_in_source": 0,
+    "only_in_nocodb": 0
+  },
+  "matches": [
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RADAR",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Culture",
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RADAR",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture",
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — NFDI4Chem",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — NFDI4Chem",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.263,
+      "source": {
+        "inc_name": "Template Development — NFDI4Ing",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "DMP template for engineering sciences",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "field_diffs": {
+        "inc_name": {
+          "source": "Template Development — NFDI4Ing",
+          "nocodb": "DMP template for engineering sciences"
+        },
+        "inc_end": {
+          "source": "2026-12-31",
+          "nocodb": ""
+        },
+        "logo_consortia": {
+          "source": "https://www.dmp4nfdi.de/images/nfdi4ing_logo.png",
+          "nocodb": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Training & Outreach — NFDI4Health",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Training & Outreach — NFDI4Health",
+        "inc_cycle": 2,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.22,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Earth",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Operational RDMO for the Earth System Science community",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "field_diffs": {
+        "inc_name": {
+          "source": "RDMO Hosting — NFDI4Earth",
+          "nocodb": "Operational RDMO for the Earth System Science community"
+        },
+        "inc_results": {
+          "source": "NFDI4Earth RDMO Client\nhttps://rdmo.nfdi4earth.de/\nRDMO Sensor Search option set plugin updated\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
+          "nocodb": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
+        },
+        "logo_consortia": {
+          "source": "https://www.dmp4nfdi.de/images/nfdi4earth_logo.png",
+          "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "FAIRmat",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRmat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "FAIRmat",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRmat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Coscine",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Coscine",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Integration — FAIRagro",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Integration — FAIRagro",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRagro"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Training & Outreach — Text+",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Training & Outreach — Text+",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Text+"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Training & Outreach — NFDI4Cat",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Training & Outreach — NFDI4Cat",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Cat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — NFDI4Health",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — NFDI4Health",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — MaRDI",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": [
+          "MaRDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — MaRDI",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MaRDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Microbiota",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Microbiota"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Microbiota",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Microbiota"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Energy",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Energy"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Energy",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Energy"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Hosting — MatWerk",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "MatWerk"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — MatWerk",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MatWerk"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4BIOIMAGE",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4BIOIMAGE"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4BIOIMAGE",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4BIOIMAGE"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Health",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Health",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "RDMO Integration — MaRDI",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "MaRDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Integration — MaRDI",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MaRDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — NFDI4Culture",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Culture"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — NFDI4Culture",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — NFDI4Memory",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Memory"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — NFDI4Memory",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Memory"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — NFDI4Objects, NFDI4Culture",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Objects",
+          "NFDI4Culture"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — NFDI4Objects, NFDI4Culture",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Objects",
+            "NFDI4Culture"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — FAIRagro",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — FAIRagro",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRagro"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Template Development — Text+",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Template Development — Text+",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Text+"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Training & Outreach — NFDI4Chem",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Training & Outreach — NFDI4Chem",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Ing",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Ing",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Chem",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Chem",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — FAIRagro",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — FAIRagro",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRagro"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Integration — NFDI4Biodiversity",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Biodiversity"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Integration — NFDI4Biodiversity",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Biodiversity"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Culture",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Culture"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Culture",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — MaRDI",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "MaRDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — MaRDI",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MaRDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 1.8,
+      "source": {
+        "inc_name": "RDMO Hosting — NFDI4Earth",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "RDMO Hosting — NFDI4Earth",
+        "inc_cycle": null,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Earth"
+          ],
+          "nocodb": []
+        }
+      }
+    }
+  ],
+  "only_in_source": [],
+  "only_in_nocodb": []
+}

@@ -1,0 +1,925 @@
+{
+  "basic_service": "IAM",
+  "counts": {
+    "source": 39,
+    "nocodb": 39,
+    "matched": 39,
+    "only_in_source": 0,
+    "only_in_nocodb": 0
+  },
+  "matches": [
+    {
+      "score": 2.12,
+      "source": {
+        "inc_name": "NFDI AAI for the NFDI4ING Jupyter Service",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NFDI AAI for the NFDI4ING Jupyter Service",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "field_diffs": {
+        "inc_start": {
+          "source": "2026-02-01",
+          "nocodb": ""
+        },
+        "inc_end": {
+          "source": "2026-07-31",
+          "nocodb": ""
+        },
+        "inc_results": {
+          "source": "https://github.tik.uni-stuttgart.de",
+          "nocodb": ""
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Single-Sign-On for TS4NFDI services",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": [
+          "TS4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Single-Sign-On for TS4NFDI services",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "TS4NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Come2Data - Competence Center for Interdisciplinary Data Science",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Come2Data - Competence Center for Interdisciplinary Data Science",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "AgiMo: Data - driven agile planning for responsible mobility",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "AgiMo: Data - driven agile planning for responsible mobility",
+        "inc_cycle": 5,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "AAI service integration into LARA",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "AAI service integration into LARA",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Cat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Data Ingest Service",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Data Ingest Service",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Chaldene: Accessible High-Performance Computing for Image Processing",
+        "inc_cycle": 4,
+        "inc_status": "Running",
+        "partners": [
+          "MatWerk"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Chaldene: Accessible High-Performance Computing for Image Processing",
+        "inc_cycle": 4,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MatWerk"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Single Sign-On for NFDI internal ICT tools",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": [
+          "NFDIDIREKTORAT"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Single Sign-On for NFDI internal ICT tools",
+        "inc_cycle": 5,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDIDIREKTORAT"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Best practice AAI for BERD Data Portal",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": [
+          "BERD@NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Best practice AAI for BERD Data Portal",
+        "inc_cycle": 4,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "BERD@NFDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Biodiversity"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Biodiversity"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Opening up the SimpleVM Bielefeld University Installation for external collaborations",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Opening up the SimpleVM Bielefeld University Installation for external collaborations",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NFDI AAI for DALIA",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "NFDI AAI for DALIA",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Integration: Aruna Data Orchestration Engine with Infrastructure Proxy",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Integration: Aruna Data Orchestration Engine with Infrastructure Proxy",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Jupyter4NFDI accessible for NFDI and beyond",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Jupyter4NFDI accessible for NFDI and beyond",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "BIIGLE",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Biodiversity"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "BIIGLE",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Biodiversity"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "WissKI",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Objects"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "WissKI",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Objects"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Terminology Services2.0",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Terminology Services2.0",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Open Energy Platform",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Energy"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Open Energy Platform",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Energy"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NOMAD Integration",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRmat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NOMAD Integration",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRmat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NFDI4CAT Repository",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NFDI4CAT Repository",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Cat"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "File Transfer Service FTS",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "File Transfer Service FTS",
+        "inc_cycle": 3,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Forum 4 MICA",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "KonsortSWD"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Forum 4 MICA",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "KonsortSWD"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "FairAgro",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "FairAgro",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "FAIRagro"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "DataPlant",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": [
+          "DataPLANT"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "DataPlant",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "DataPLANT"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Coscine-2",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Coscine-2",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Come2Data",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "nocodb": {
+        "inc_name": "Come2Data",
+        "inc_cycle": 3,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NFDIxCS",
+        "inc_cycle": 1,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDIxCS"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NFDIxCS",
+        "inc_cycle": 1,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDIxCS"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Authorisation on Objects",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Authorisation on Objects",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "Text+"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Integration of NFDI AAI to Open edX",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Integration of NFDI AAI to Open edX",
+        "inc_cycle": 2,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Earth"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Terminology Service",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": [
+          "NFDI4Chem"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Terminology Service",
+        "inc_cycle": 1,
+        "inc_status": "Running",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Chem"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "NFDI4Culture",
+        "inc_cycle": 1,
+        "inc_status": "In preparation",
+        "partners": [
+          "NFDI4Culture"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NFDI4Culture",
+        "inc_cycle": 1,
+        "inc_status": "In preparation",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Culture"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "FDPG - Analysing data from clinical care",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Health"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "FDPG - Analysing data from clinical care",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Health"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Minimal OIDC login",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "MaRDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Minimal OIDC login",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "MaRDI"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "ArgoCD",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4DataScience"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "ArgoCD",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4DataScience"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Coscine",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Coscine",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "JARDS Attribute Queries in RegApp",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "JARDS Attribute Queries in RegApp",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "MetadataHub",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "MetadataHub",
+        "inc_cycle": 1,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    },
+    {
+      "score": 2,
+      "source": {
+        "inc_name": "Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": [
+          "NFDI4Ing"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service",
+        "inc_cycle": 0,
+        "inc_status": "Finished",
+        "partners": []
+      },
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing"
+          ],
+          "nocodb": []
+        }
+      }
+    }
+  ],
+  "only_in_source": [],
+  "only_in_nocodb": []
+}

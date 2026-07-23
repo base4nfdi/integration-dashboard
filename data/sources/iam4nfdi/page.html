@@ -1,0 +1,3851 @@
+<!DOCTYPE html>
+
+<style>
+    body {
+      background-color: white;
+      max-width: device-width;
+      padding: 30px 30px;
+      color: #313131;
+    }
+
+    a {
+      color: #0ABAF0;
+    }
+</style>
+
+
+<html lang="en">
+  <head>
+    <title>Incubator Dashboard</title>
+    <!-- Not required in Confluence -->
+    <meta charset="utf-8" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="js/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <style>
+#card-grid .card-img-top {
+  max-width: 100%;
+  height: 8em;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+    </style>
+
+    <style>
+      @font-face {
+        font-family: "Fira Sans";
+        src: url("/font/FiraSans-Regular.ttf") format('truetype');
+      }
+
+      * {
+          font-family: "Fira Sans";
+      }
+
+    </style>
+
+    <style>
+      @media print {
+        .collapse:not(.show) {
+          display: unset;
+        }
+        .card-columns {
+          column-count: 1;
+        }
+      }
+
+      .color-completed {
+        background-color: #0ABAF0;
+      }
+
+      .color-ongoing {
+        background-color: #FBBC41;
+      }
+
+      .color-pending {
+        background-color: #0ABAF0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Content -->
+    <div class="container-fluid">
+      <!-- Banner -->
+      <div
+        class="row pt-4 pr-4 pb-5"
+      >
+        <img
+          src="images/dashboard-banner-nfdi.svg"
+          class="mx-auto"
+          style="height: 100%; width: 100%"
+        />
+      </div>
+
+      <!-- Head -->
+      <div class="card-deck mb-3">
+        <div class="card">
+          <div class="row no-gutters">
+            <div class="col-md-4 p-2 color-completed">
+              <img
+                src="images/trophy.svg"
+                class="card-img"
+              />
+            </div>
+            <div class="col-md-8" style="background-color: #e6e6e6">
+              <div class="card-body text-center">
+                  <!-- xxxxxxxxxxxxxxxxx -->
+                  <div class="card-text font-weight-bold" style="font-size: xx-large">27</div>
+                <p class="card-text"><small class="text-muted">Completed activities</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row no-gutters">
+            <div class="col-md-4 color-ongoing">
+              <img
+                src="images/gears.svg"
+                class="card-img p-2"
+              />
+            </div>
+            <div class="col-md-8" style="background-color: #e6e6e6">
+              <div class="card-body text-center">
+                <div class="card-text font-weight-bold" style="font-size: xx-large">7</div>
+                  <!-- xxxxxxxxxxxxxxxxx -->
+                <p class="card-text"><small class="text-muted">Ongoing activities</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="row no-gutters">
+            <div class="col-md-4 color-pending">
+              <img
+                src="images/idea.svg"
+                class="card-img p-2"
+              />
+            </div>
+            <div class="col-md-8" style="background-color: #e6e6e6">
+              <div class="card-body text-center">
+                <div class="card-text font-weight-bold" style="font-size: xx-large">0</div>
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                <p class="card-text"><small class="text-muted">Pending ideas</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card"> -->
+        <!--   <div class="row no-gutters"> -->
+        <!--     <div class="col-md-4" style="background-color: lightblue"> -->
+        <!--       <img -->
+        <!--         src="https://wiki.geant.org/download/attachments/148090083/student.svg" -->
+        <!--         class="card-img p-2" -->
+        <!--       /> -->
+        <!--     </div> -->
+        <!--     <div class="col-md-8" style="background-color: #e6e6e6"> -->
+        <!--       <div class="card-body text-center"> -->
+        <!--         <div class="card-text font-weight-bold" style="font-size: xx-large">6</div> -->
+        <!--         <p class="card-text"><small class="text-muted">TIM students</small></p> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
+        <!-- <div class="card"> -->
+        <!--   <div class="row no-gutters"> -->
+        <!--     <div class="col-md-4" style="background-color: lightsalmon"> -->
+        <!--       <img -->
+        <!--         src="https://wiki.geant.org/download/attachments/148090083/team.svg" -->
+        <!--         class="card-img p-2" -->
+        <!--       /> -->
+        <!--     </div> -->
+        <!--     <div class="col-md-8" style="background-color: #e6e6e6"> -->
+        <!--       <div class="card-body text-center"> -->
+        <!--         <div class="card-text font-weight-bold" style="font-size: xx-large">14</div> -->
+        <!--         <p class="card-text"><small class="text-muted">Active members</small></p> -->
+        <!--       </div> -->
+        <!--     </div> -->
+        <!--   </div> -->
+        <!-- </div> -->
+      </div>
+
+      <!-- Timeline -->
+
+      <!-- Overview section -->
+      <div class="accordion d-print-none" id="overview-panel">
+        <div class="row">
+          <div class="btn-group col-4" role="group">
+            <button
+              class="btn btn-outline-primary"
+              id="tab-main-head"
+              type="button"
+              data-toggle="collapse"
+              data-target="#tab-incubator-body">
+                  Incubator
+            </button>
+            <button
+              class="btn btn-outline-primary"
+              id="tab-topics-head"
+              type="button"
+              data-toggle="collapse"
+              data-target="#tab-topics-body">
+                  Topics
+            </button>
+            <!-- <button -->
+            <!--   class="btn btn-outline-primary" -->
+            <!--   id="tab-deliverable-head" -->
+            <!--   type="button" -->
+            <!--   data-toggle="collapse" -->
+            <!--   data-target="#tab-deliverable-body"> -->
+            <!--       Handover -->
+            <!-- </button> -->
+            <button
+              class="btn btn-outline-primary"
+              id="tab-howto-head"
+              type="button"
+              data-toggle="collapse"
+              data-target="#tab-howto-body">
+                  Incubator Howto
+            </button>
+          </div>
+        </div>
+        <!-- Incubator tab -->
+        <div class="row collapse show" id="tab-incubator-body" data-parent="#overview-panel">
+          <div class="col-4">
+            <div class="list-group" role="tablist">
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action active"
+                id="incubator-vision-head"
+                data-toggle="list"
+                href="#incubator-vision"
+                role="tab"
+                >Vision & Mission</a
+              >
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="incubator-process-head"
+                data-toggle="list"
+                href="#incubator-process"
+                role="tab"
+                >Process Methodology</a
+              >
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="incubator-roles-head"
+                data-toggle="list"
+                href="#incubator-roles"
+                role="tab"
+                >Community Engagement
+              </a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="incubator-content">
+              <div class="tab-pane fade show active" id="incubator-vision" role="tabpanel">
+                <p>
+                    The IAM4NFDI Incubator aims to develop, foster and mature new ideas in the field of
+                    identity and access management. The incubator will investigate new technologies that
+                    currently have no place (yet) in the services ecosystem of the <a href="https://base4nfdi.de/projects/iam4nfdi" target="_blank">IAM4NFDI project</a>. This
+                    may include to test and experiment with potential new features for existing CAAI
+                    solutions. You can find more information about IAM4NFDI in our <a href="https://doc.nfdi-aai.de/"target="_blank">documentation</a>.
+                </p>
+                <!-- <div> -->
+                <!--   <a -->
+                <!--     href="https://wiki.geant.org/x/wbAuBw" -->
+                <!--     target="_blank" -->
+                <!--     class="btn btn-outline-primary" -->
+                <!--     >Activity Process</a -->
+                <!--   > -->
+                <!-- </div> -->
+              </div>
+              <div class="tab-pane fade" id="incubator-process" role="tabpanel">
+                <p>
+                    The incubator runs six sprints per Incubator. These incubators typically take about 6 months and
+                    employ an agile methodology to enable rapid development of ideas. Preferably at least two
+                    subject matter experts work together with support from the project team. Subject matter experts
+                    are recruited from within the team. In addition, the project team facilitates the incubator track by
+                    providing a scrum master and dedicated developers. During the incubator project there is regular
+                    exchange between the project team and the selected CAAI solution. At regular intervals the
+                    project members will give a short update on the current state within a sprint demo meeting.
+                </p>
+                <!-- <div> -->
+                <!--   <a -->
+                <!--     href="https://wiki.geant.org/x/O4LYBw" -->
+                <!--     target="_blank" -->
+                <!--     class="btn btn-outline-primary" -->
+                <!--     >Development Process</a -->
+                <!--   > -->
+                <!-- </div> -->
+              </div>
+              <div class="tab-pane fade" id="incubator-roles" role="tabpanel">
+                <p>
+                    The Main Incubator Board (MIB) aims to represent a broad view on all developments in
+                    identity and access management within the different NFDI consortia. MIB members are
+                    project members of IAM4NFDI, experts from the different CAAI solutions and service
+                    stewards from BASE4NFDI. They evaluate new ideas and provide advice to the work
+                    package lead. They are also responsible for reviewing activities at the end of each
+                    incubator cycle and providing recommendations on how to proceed. The incubator team
+                    presents their results regularly to the the MIB's and the wider community. In the middle
+                    and at the end of a cycle there are two events public events, so called sprint demos.
+                </p>
+                <!-- <div> -->
+                <!--   <a -->
+                <!--     href="https://wiki.geant.org/x/sbAuBw" -->
+                <!--     target="_blank" -->
+                <!--     class="btn btn-outline-primary" -->
+                <!--     >Selection Process</a -->
+                <!--   > -->
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Topics tab -->
+        <div class="row collapse" id="tab-topics-body" data-parent="#overview-panel">
+          <div class="col-4">
+            <div class="list-group" role="tablist">
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action active"
+                id="topics-identity-head"
+                data-toggle="list"
+                href="#topics-identity"
+                role="tab"
+                >Identity and Access Management
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="topics-standards-head"
+                data-toggle="list"
+                href="#topics-standards"
+                role="tab">
+                  Standards and Protocols
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="topics-security-head"
+                data-toggle="list"
+                href="#topics-security"
+                role="tab">
+                  Security and Privacy
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="topics-infrastructure-head"
+                data-toggle="list"
+                href="#topics-infrastructure"
+                role="tab">
+                  Infrastructure support
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="topics-integration-head"
+                data-toggle="list"
+                href="#topics-integration"
+                role="tab">
+                  Integration support
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="topics-consultancy-head"
+                data-toggle="list"
+                href="#topics-consultancy"
+                role="tab">
+                  Consultancy
+              </a>
+            </div>
+          </div>
+          <div class="col-8 tab-content" id="topics-content">
+            <div class="tab-pane fade show active" id="topics-identity" role="tabpanel">
+              <div class="row mb-2">
+                Identity and Access Management (IAM) is about creating and managing digital identity
+                for users, which can be used to represent a person in the digital world. Using state
+                of the art authentication and authorization methods ensures that only the owner can
+                access his identity and only entitled can access a resource. In this area, it is all
+                about Identity Providers, Identity Federation, Service Providers and Discovery
+                Services. Your project may improve existing software solutions or create new
+                applications for a global community.
+              </div>
+            </div>
+            <div class="tab-pane fade" id="topics-standards" role="tabpanel">
+              <div class="row">
+                Building on top of existing infrastructure and applications, Standards and Protocols
+                is about creating new ways to for applications and users to communicate. This area
+                is all about protocols and standards used or being developed in the global Trust and
+                Identity community, like the Security Assertion Markup Language (SAML) and Open ID
+                Connect (OIDC), which will be used to integrate new capabilities in an already
+                existing large infrastructure.
+              </div>
+            </div>
+            <div class="tab-pane fade" id="topics-security" role="tabpanel">
+              <div class="row">
+                Security is an integral part of most applications and infrastructures. Ensuring data
+                protection, privacy and safety by using measures like encryption and cryptography is
+                nowadays mandatory. In this area, you may investigate, test and integrate new
+                security features in existing Trust & Identity applications or to create new
+                services that help secure our community, by working on for example multi factor
+                authentication or HSM technologies.
+              </div>
+            </div>
+            <div class="tab-pane fade" id="topics-infrastructure" role="tabpanel">
+              <div class="row">
+                Identity and Access Management deals with personal data,
+                which requires adequate protection. The setup and
+                operation of dedicated and secure infrastructre is
+                therefore offered as one service within the IAM4NFDI
+                project. Find more details [HERE](link to WP3 Document!)
+              </div>
+            </div>
+            <div class="tab-pane fade" id="topics-integration" role="tabpanel">
+              <div class="row">
+                Identity and Access Management solutions need to be
+                integrated into Software the provides services to users,
+                based on who the user is. Software services that do not yet support
+                the federated access management are extended so they can
+                make use of the information about the user to streamline
+                user expierence and administration of the service.
+              </div>
+            </div>
+            <div class="tab-pane fade" id="topics-consultancy" role="tabpanel">
+              <div class="row">
+                  Consultancy is often a first step to get the identity
+                  management of a consortium integrated with the NFDI-AAI.
+                  This includes topics from technical, legal, and architecture
+                  fields.
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Deliverable tab -->
+        <div class="row collapse" id="tab-deliverable-body" data-parent="#overview-panel">
+          <div class="col-4">
+            <div class="list-group" role="tablist">
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action active"
+                id="deliverable-service-head"
+                data-toggle="list"
+                href="#deliverable-service"
+                role="tab"
+                >T&I Service Task</a
+              >
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="deliverable-community-head"
+                data-toggle="list"
+                href="#deliverable-community"
+                role="tab"
+                >R&E Community</a
+              >
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="deliverable-external-head"
+                data-toggle="list"
+                href="#deliverable-external"
+                role="tab"
+                >External Parties
+              </a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="incubator-content">
+              <div class="tab-pane fade show active" id="deliverable-service" role="tabpanel">
+                <p>
+                  The service task operates and maintains the T&I services in the GÉANT project. The
+                  incubator works closely with the responsible service owner on activities that have
+                  an impact on an existing service. They are already involved in the selection of
+                  new activities to ensure that the topic is appropriately supported. Once the
+                  activity is completed, all results are handed over to the service owner, who will
+                  take care of further development.
+                </p>
+              </div>
+              <div class="tab-pane fade" id="deliverable-community" role="tabpanel">
+                <p>
+                  Some of the Incubator's outputs are not handed over to a specific party, but are
+                  made available to the wider community. These are, for example, the results of
+                  studies and research that are published or software that is publicly released as
+                  open source. All results are publicly available and announced via the project's
+                  news channels to inform as many community members as possible.
+                </p>
+              </div>
+              <div class="tab-pane fade" id="deliverable-external" role="tabpanel">
+                <p>
+                  In addition to the general R&E community, the Incubator sometimes works with
+                  external partners. These can be other communities, projects or groups that develop
+                  software products or provide services. Examples are institutions, individual NRENS
+                  or groups such as the Shibboleth Consortium.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Timeline tab -->
+        <div class="row collapse" id="tab-howto-body" data-parent="#overview-panel">
+          <div class="col-4">
+            <div class="list-group" role="tablist">
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action active"
+                id="timeline-c2-head"
+                data-toggle="list"
+                href="#timeline-c2"
+                role="tab"
+                >How to submit new ideas
+              </a>
+              <a
+                class="btn btn-outline-primary list-group-item list-group-item-action"
+                id="timeline-head"
+                data-toggle="list"
+                href="#timeline"
+                role="tab"
+                >Incubator Timeline
+              </a>
+              <!-- <a -->
+              <!--   class="btn btn-outline-primary list-group-item list-group-item-action" -->
+              <!--   id="timeline-c3-head" -->
+              <!--   data-toggle="list" -->
+              <!--   href="#timeline-c3" -->
+              <!--   role="tab" -->
+              <!--   >Overview of new ideas and activities -->
+              <!-- </a> -->
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="tab-content" id="timeline-content">
+              <div class="tab-pane fade show" id="timeline" role="tabpanel">
+                <div class="list-group list-group-horizontal">
+                  <div class="list-group-item list-group-item-action color-completed" >
+                     <strong>Cycle 0</strong><br />
+                         01 Aug 2023 - 31 Jan 2024
+                  </div>
+                  <div class="list-group-item list-group-item-action color-completed">
+                      <strong>Cycle 1</strong><br />
+                         01 Feb 2024 - 31 Jul 2024
+                  </div>
+                  <div class="list-group-item list-group-item-action color-completed" >
+                      <strong>Cycle 2</strong><br />
+                        01 Aug 2024 - 31 Jan 2025
+                  </div>
+                  <div class="list-group-item list-group-item-action color-ongoing">
+                      <strong>Cycle 3</strong><br />
+                         01 Feb 2025 - 31 Jul 2025
+                  </div>
+                </div>
+                <div class="list-group list-group-horizontal">
+                  <div class="list-group-item list-group-item-action color-pending">
+                      <strong>Cycle 4</strong><br />
+                        01 Aug 2025 - 31 Jan 2026
+                  </div>
+                  <div class="list-group-item list-group-item-action color-none" >
+                      <strong>Cycle 5</strong><br />
+                         01 Feb 2026 - 31 Jul 2026
+                  </div>
+                  <div class="list-group-item list-group-item-action color-none">
+                      <strong>Cycle 6</strong><br />
+                        01 Aug 2026 - 31 Jan 2027
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane content show active" id="timeline-c2" role="tabpanel">
+                <p>
+                    The Incubator accepts proposals from all NFDI consortia as long as they are suitable to
+                    improve the identity and access management within NFDI. All kinds of innovative ideas
+                    are welcome, regardless of whether they are about new products, improving existing
+                    services or even completely disruptive. The format for submitting a proposal is designed
+                    to be as simple as possible. There is a "Call for Ideas" where anyone can submit their
+                    ideas. All you have to do is fill out the template and describe your own idea. New ideas
+                    can be submitted at any time, but there is a deadline before each cycle so that they can
+                    be considered for the next cycle.
+                </p>
+                <a
+                  href="https://extfiles.dfn.de/index.php/s/eDzxzbdbdoGtiPb/download"
+                  target="_blank"
+                  class="btn btn-outline-primary m-1"
+                  >Incubator Process
+                </a>
+                <a
+                  href="https://extfiles.dfn.de/index.php/s/sYHXnnpzgp3TEaC/download"
+                  target="_blank"
+                  class="btn btn-outline-primary m-1"
+                  >Incubator Proposal Template
+                </a>
+              </div>
+              <!-- <div class="tab-pane fade" id="timeline-c3" role="tabpanel"> -->
+              <!--   <a href="https://wiki.geant.org/download/attachments/148090083/diagram-ideas.svg" -->
+              <!--     ><img -->
+              <!--       src="https://wiki.geant.org/download/attachments/148090083/diagram-ideas.svg" -->
+              <!--       class="img-thumbnail" -->
+              <!--   /></a> -->
+              <!--   <a -->
+              <!--     href="https://wiki.geant.org/download/attachments/148090083/diagram-activities.svg" -->
+              <!--     ><img -->
+              <!--       src="https://wiki.geant.org/download/attachments/148090083/diagram-activities.svg" -->
+              <!--       class="img-thumbnail" -->
+              <!--   /></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <hr class="d-print-none" />
+
+      <h2>Activities</h2>
+      <!-- Card filter -->
+      <div class="form-row">
+        <div class="form-group col-3">
+          <select id="card-filter-topic" class="form-control" oninput="searchActivities()">
+            <option selected value="">Filter by topic</option>
+            <option value="Identity">Identity and Access Management</option>
+            <option value="Standards">Standards and Protocols</option>
+            <option value="Security">Security and Privacy</option>
+            <option value="Infrastructure">Infrastructure Setup</option>
+            <option value="Consultancy">Consultancy</option>
+            <option value="Development">Development</option>
+          </select>
+        </div>
+        <div class="form-group col-3">
+          <select id="card-filter-status" class="form-control" oninput="searchActivities()">
+            <option selected value="">Filter by Incubator Status</option>
+                <option value="Submitted">Submitted</option>
+                <option value="Running">Running</option>
+                <!-- <option value="Completed">Completed</option> -->
+                <!-- <option value="Upcoming">Moved to Next Cycle</option> -->
+                <!-- <option value="Review">Review Pending</option> -->
+                <!-- <option value="NoResponse">No Response</option> -->
+                <!-- <option value="Denied">Denied</option> -->
+                <!-- <option value="NoCapacity">No Capacity</option> -->
+                <!-- <option value="Incomplete">Incomplete</option> -->
+          </select>
+        </div>
+        <div class="form-group col-3">
+          <select id="card-filter-cycle" class="custom-select" oninput="searchActivities()">
+            <option selected value="">Filter by cycle</option>
+            <option>Cycle 0</option>
+            <option>Cycle 1</option>
+            <option>Cycle 2</option>
+            <option>Cycle 3</option>
+            <option>Cycle 4</option>
+            <option>Cycle 5</option>
+            <!-- <optgroup label="GN4-3"> -->
+            <!--   <option>Cycle 0</option> -->
+            <!--   <option>Cycle 1</option> -->
+            <!--   <option>Cycle 2</option> -->
+            <!--   <option>Cycle 3</option> -->
+            <!-- </optgroup> -->
+            <!-- <optgroup label="GN5-1"> -->
+            <!--   <option value="Cycle 7">Cycle 7 (Current)</option> -->
+            <!--   <option>Cycle 8</option> -->
+            <!--   <option>Cycle 9</option> -->
+            <!-- </optgroup> -->
+          </select>
+        </div>
+        <div class="form-group col-3">
+          <select id="card-filter-deliverable" class="form-control" oninput="searchActivities()">
+            <option selected value="">Filter by NFDI Consortium</option>
+            <option value="BERD@NFDI"        >BERD@NFDI</option>
+            <option value="DAPHNE4NFDI"      >DAPHNE4NFDI</option>
+            <option value="DATAPLANT"        >DataPLANT</option>
+            <option value="FAIRAGRO"         >FAIRagro</option>
+            <option value="FAIRMAT"          >FAIRmat</option>
+            <option value="GHGA"             >GHGA</option>
+            <option value="KONSORTSWD"       >KonsortSWD</option>
+            <option value="MARDI"            >MaRDI</option>
+            <option value="MII"              >MII</option>
+            <option value="NFDI4BIODIVERSITY">NFDI4Biodiversity</option>
+            <option value="NFDI4BIOIMAGE"    >NFDI4BIOIMAGE</option>
+            <option value="NFDI4CAT"         >NFDI4Cat</option>
+            <option value="NFDI4CHEM"        >NFDI4Chem</option>
+            <option value="NFDI4CULTURE"     >NFDI4Culture</option>
+            <option value="NFDI4DATASCIENCE" >NFDI4DataScience</option>
+            <option value="NFDI4EARTH"       >NFDI4Earth</option>
+            <option value="NFDI4ENERGY"      >NFDI4Energy</option>
+            <option value="NFDI4HEALTH"      >NFDI4Health</option>
+            <option value="NFDI4IMMUNO"      >NFDI4Immuno</option>
+            <option value="NFDI4ING"         >NFDI4Ing</option>
+            <option value="NFDI4MEMORY"      >NFDI4Memory</option>
+            <option value="NFDI4MICROBIOTA"  >NFDI4Microbiota</option>
+            <option value="NFDI4OBJECTS"     >NFDI4Objects</option>
+            <option value="NFDI-MATWERK"     >NFDI-MatWerk</option>
+            <option value="NFDIXCS"          >NFDIxCS</option>
+            <option value="PUNCH4NFDI"       >PUNCH4NFDI</option>
+            <option value="TEXT+"            >Text+</option>
+            <option value="NFDIDIREKTORAT"   >NFDI Direktorat</option>
+            <option value="BASE"             >Base</option>
+            <option value="EXTERNAL"         >Extern</option>
+          </select>
+        </div>
+        <div class="form-group col-3">
+          <input
+            type="text"
+            id="card-filter-text"
+            class="form-control"
+            onkeyup="searchActivities()"
+            placeholder="Search activity"
+          />
+        </div>
+      </div>
+
+      <!-- Cards -->
+      <div class="card-columns" id="card-grid">
+        <!-- #include-cards -->
+<!-- nfdi4ingjupyter -->
+<div class="card" id="nfdi4ingjupyter">
+  <img
+    src="https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2026 - 31 Jul 2026"
+        >Cycle 5</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">BASE</span>
+    </div>
+    <h2 class="card-title">NFDI AAI for the NFDI4ING Jupyter Service</h2>
+    <p class="card-text">
+    <p>The jupyter service is actually connected via SAML to the EDUGAIN
+federation. We use apache_mod_shib to provide the necessary attribute to
+our login application. We want to understand the architecture of NFDI
+AAI, the meaning of community AAIs, infrastructure proxies and virtual
+organisations to be able to plan and implement the necessary steps to
+connect our service to the NFDI AAI infrastructure. So far, we are not
+able to configure our service using the existing documentation. We hope
+to get the knowledge we need within this incubator project, learn form
+experiences from others and also help to ease this process for other
+services. In order to do so, we have to perform the following steps: -
+Clarification of requirements and necessary steps to connect a service
+to NFDI AAI (AAI4NFDI team together with project team) - Selection of
+the community AAI (project team) - Clarification of the process how and
+where to define user groups (like engineers) (AAI4NFDI team together
+with project team) - Implementation of integration of NFDI AAI (project
+team with support of NFDI4AAI team) - Plan how to migrate existing users
+(project team with support of NFDI4AAI team)</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Ease the onboarding of new institutions/user groups to our
+service</li>
+<li>Allow users outside academia (EDUGAIN) to login into our service
+(like federal research organisations)</li>
+<li>Allow to confine the access to the service to selected user
+group</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nfdi4ingjupyter-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://jupyter.nfdi4ing.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="nfdi4ingjupyter-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p><a href="https://github.tik.uni-stuttgart.de"
+class="uri">https://github.tik.uni-stuttgart.de</a></p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      CC-BY 4.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- ts4nfdi2 -->
+<div class="card" id="ts4nfdi2">
+  <img
+    src="images/TS4NFDI-small-grey.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2026 - 31 Jul 2026"
+        >Cycle 5</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Single-Sign-On for TS4NFDI services</h2>
+    <p class="card-text">
+    <p>The incubator project aims to implement a Single Sign-On (SSO)
+solution for Terminology Services 4 NFDI (TS4NFDI), which provides
+cross-domain services for terminology provision, curation, development,
+harmonization, and mapping. The platform integrates standardized
+services including a centralized API Gateway, NFDI-wide Mapping Service,
+and Terminology Service Suite widgets, all accessible through a central
+Service Portal for unified collection and mapping management.</p>
+<p>The planned Authentication and Authorization Infrastructure (AAI)
+will support login via NFDI-AAI, ORCID, and GitHub, with compatibility
+for EOSC AAI. The API Gateway provides database access for all services,
+enabling storage of user-specific configurations and collections. Beyond
+current data provision, TS4NFDI will support terminology curation
+workflows where logged-in users can suggest extensions through graphical
+interfaces, automatically generating GitHub issues or pull requests with
+ORCID identifiers for proper curator review and contribution
+credits.</p>
+<p>The TS4NFDI Mapping Service, implemented using Cocoda software, will
+be extended from its current ORCID and GitHub authentication to include
+NFDI AAI login capabilities. Given discussions about integrating TS4NFDI
+into the NFDI EOSC node, the AAI solution is designed for EOSC AAI
+infrastructure compatibility.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Integrate RegApp to the API Gateway as the primary authentication
+service.</li>
+<li>The following services should be connected to the authentication
+service: TS4NFDI Service Portal, TS4NFDI Mapping Service and the
+Terminology Service Suite</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#ts4nfdi2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://terminology.services.base4nfdi.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="ts4nfdi2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li><a href="https://terminology.services.base4nfdi.de/"
+class="uri">https://terminology.services.base4nfdi.de/</a></li>
+<li><a href="https://github.com/ts4nfdi/api-gateway"
+class="uri">https://github.com/ts4nfdi/api-gateway</a></li>
+<li><a href="https://github.com/ts4nfdi/service-portal"
+class="uri">https://github.com/ts4nfdi/service-portal</a></li>
+<li><a href="https://github.com/ts4nfdi/terminology-service-suite"
+class="uri">https://github.com/ts4nfdi/terminology-service-suite</a></li>
+<li><a href="https://github.com/gbv/cocoda"
+class="uri">https://github.com/gbv/cocoda</a></li>
+<li><a href="https://github.com/gbv/login-server"
+class="uri">https://github.com/gbv/login-server</a></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT License
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- come2data2 -->
+<div class="card" id="come2data2">
+  <img
+    src="https://come2data.de/wp-content/uploads/2025/07/theme-logo.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Submitted</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2026 - 31 Jul 2026"
+        >Cycle 5</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: didmos</span>
+      <span class="badge badge-pill bg-dark text-light">EXTERNAL</span>
+    </div>
+    <h2 class="card-title">Come2Data - Competence Center for Interdisciplinary Data Science</h2>
+    <p class="card-text">
+    <p>External visitors should be able to use teaching resources published
+on our website like learning paths curated by the Come2Data team. They
+should be able to track and save their state of completion of such
+learning paths and be able to continue at a later point in time. To
+reach that goal, external visitors need to have a way to log into the
+website and create an account, also without having an institutional
+affiliation, for instance with their ORCID-ID.</p>
+<p>We would like to give virtual organisations (VO), such as members of
+a specific NFDI consortium, access to our resources and IT systems with
+one of their accounts like ORCID-ID. Therefore we need to be able to
+register a vo in our IT components</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#come2data2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://come2data.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="come2data2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li><a href="https://zenodo.org/communities/come2data"
+class="uri">https://zenodo.org/communities/come2data</a></li>
+<li><a href="https://gitlab.hrz.tu-chemnitz.de/come2data"
+class="uri">https://gitlab.hrz.tu-chemnitz.de/come2data</a></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Apache License, Version 2.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- agimo -->
+<div class="card" id="agimo">
+  <img
+    src="images/missing.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Submitted</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2026 - 31 Jul 2026"
+        >Cycle 5</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">EXTERNAL</span>
+    </div>
+    <h2 class="card-title">AgiMo: Data - driven agile planning for responsible mobility</h2>
+    <p class="card-text">
+    <p>The primary objective of the incubator proposal is to implement an
+RDM system that can be integrated into a virtual research environment
+for transportation science. Authentication should be handled by
+Community AAI software where customisation needs to be implemented
+wherever applicable</p>
+<p>This approach is advantageous as it enables ease of authentication
+for par ticipants / users from other institutions, while also supporting
+the implementation of authorization and group management within our
+services where applicable.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Testing the AAI software with a dedicated test instance connected to
+our Infraverse infrastructure.</li>
+<li>Establishing a successful integration of the AAI software login with
+the production instance of Infraverse.</li>
+<li>Utilising the RegApp features (Group management, API …) within our
+infrastructure to streamline group management, role assignments, and
+authorization processes.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#agimo-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://infraverse-dev.zih.tu-dresden.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="agimo-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p>Not yet available</p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      CC by 4.0 + MIT
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- lara-4 -->
+<div class="card" id="lara-4">
+  <img
+    src="https://gitlab.com/LARAsuite/lara/-/raw/master/docs/images/lara/LARA_logo.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2025 - 31 Jan 2026"
+        >Cycle 4</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4CAT</span>
+    </div>
+    <h2 class="card-title">AAI service integration into LARA</h2>
+    <p class="card-text">
+    <p>LARA is an AI driven, next generation open-source Research Data
+Management / LIMS / ELN System. It supports natural scientist of all
+disciplines to generate highly interlinked, semantically annotated data
+and metadata knowledge graphs. With its lab-automation capabilities it
+can capture semantically annotated (measurement) data from the moment of
+creation. (Local) AI systems assist to structure the research data and
+build a query-able knowledge graph, making them as FAIR as possible.
+Experimental results can be seamlessly synchronised with different
+project partners or public repositories (like NFDI dataverses,
+e.g. NFDI4Cat, Zenodo, EOSC cloud).</p>
+<p>This project shall develop a generic django-allauth (<a
+href="https://github.com/pennersr/django-allauth"
+class="uri">https://github.com/pennersr/django-allauth</a>) based plugin
+to grant the NFDI community access to a LARA service.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Develop a generic python-django allauth plugin, that can be (re-)
+used in many django based projects, like LARAsuite, to grant NFDI
+community access.</li>
+<li>Authorisation information shall provide a restricted view on the
+research data stored in the LARA databases.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#lara-4-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://lara.uni-greifswald.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="lara-4-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p><a href="https://gitlab.com/LARAsuite"
+class="uri">https://gitlab.com/LARAsuite</a></p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT Licence
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- data-ingest-4 -->
+<div class="card" id="data-ingest-4">
+  <img
+    src="images/nfdi4ing.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2025 - 31 Jan 2026"
+        >Cycle 4</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">Data Ingest Service</h2>
+    <p class="card-text">
+    <p>The NFDI4ING Data Ingest Service (<a
+href="https://ingest.nfdi4ing.de"
+class="uri">https://ingest.nfdi4ing.de</a>) uses OpenID connect for
+authentication and authorisation. Currently it is using a custom
+keycloak installation for DFN federation or ORCID login. We would like
+to connect it to the NFDI AAI.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>The Data Ingest Service originally was designed to target
+architecture and civil engineering, but we will breaden the scope in the
+future.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#data-ingest-4-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://ingest.nfdi4ing.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="data-ingest-4-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p><a href="https://gitlab.ulb.tu-darmstadt.de"
+class="uri">https://gitlab.ulb.tu-darmstadt.de</a></p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT Licence
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- chaldene-4 -->
+<div class="card" id="chaldene-4">
+  <img
+    src="https://github.com/c3di/chaldene/blob/master/logo_128x128.png?raw=true"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2025 - 31 Jan 2026"
+        >Cycle 4</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">MATWERK</span>
+    </div>
+    <h2 class="card-title">Chaldene: Accessible High-Performance Computing for Image Processing</h2>
+    <p class="card-text">
+    <p>Currently, Chaldene is not optimised for computationally intensive AI
+workflows. This limitation hinders its application for cutting-edge,
+AI-driven research within the NFDI community.</p>
+<p>To address this gap, we are working on connecting Chaldene to
+High-Performance Computing (HPC) infrastructures using containerised
+workflow execution. This approach requires a robust trust and identity
+framework, making the integration with the NFDI Authentication and
+Authorisation Infrastructure (AAI) essential for two primary
+functions:</p>
+<ol type="1">
+<li><p>Secure HPC Access: The NFDI AAI is required to provide
+researchers with seamless and secure authenticated access to remote HPC
+resources. It will allow Chaldene to act on a user’s behalf, submitting
+containerised jobs to clusters by leveraging the user’s trusted home
+institution identity, thus eliminating the need for separate
+credentials.</p></li>
+<li><p>FAIR Workflow Sharing: To make Chaldene workflows truly shareable
+and reproducible according to FAIR principles, the NFDI AAI is
+necessary. It ensures that when a workflow is shared, a collaborator can
+execute it using their own verified identity, accessing the required
+data and compute resources they are authorized for, regardless of their
+institution.</p></li>
+</ol>
+<h4 id="goals">Goals</h4>
+<p>Demonstrate NFDI AAI value for:</p>
+<ul>
+<li>accessing remote computational resources</li>
+<li>enabling FAIR workflow sharing</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#chaldene-4-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.google.com/search?hl=en&q=chaldene tim dahmen"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="chaldene-4-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p><a href="https://github.com/c3di/chaldene"
+class="uri">https://github.com/c3di/chaldene</a></p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT or LGPL
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- direktor-4 -->
+<div class="card" id="direktor-4">
+  <img
+    src="https://www.nfdi.de/wp-content/uploads/2022/02/nfdi_rgb_Wortmarke.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2026 - 31 Jul 2026"
+        >Cycle 5</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">NFDIDIREKTORAT</span>
+    </div>
+    <h2 class="card-title">Single Sign-On for NFDI internal ICT tools</h2>
+    <p class="card-text">
+    <p>The NFDI Association’s Office provides ICT tools that support all
+persons working for NFDI. Single sign on will be implemented for these
+NFDI internal ICT tools to increase the efficiency of on- and
+offboarding and improve the overall IT-security within NFDI.</p>
+<p>The office of the NFDI association provides several ICT tools that
+support work in NFDI. These include:</p>
+<ul>
+<li><a href="https://all-chat.nfdi.de">Rocket.Chat: Real-time
+messaging</a> 1.600 User</li>
+<li><a href="https://openproject.nfdi.de">OpenProject: Project
+Management</a> 850 User</li>
+<li><a href="https://nocodb.nfdi.de">NocoDB: Database Platform</a>
+(currently in soft launch)</li>
+<li>Cloud Storage Service: file sharing, collaborative document editing,
+group calendar</li>
+</ul>
+<p>These services are self-hosted on premise. So far, only the internal
+authentication of these services is used. Accounts are created by
+appointed consortia admins for their respective consortium members or by
+the IT-Support team of the NFDI Office. Connect (OIDC) and
+Shibboleth.</p>
+<p>Goals - Streamline onboarding new employees, as only one central
+account per person needs to be set up - Allow reliable and efficient
+offboarding of persons leaving NFDI - Strengthen IT security - Improve
+monitoring of usage of the tools</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#direktor-4-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.nfdi.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="direktor-4-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        Not applicable
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      -
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- berd-4 -->
+<div class="card" id="berd-4">
+  <img
+    src="https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2025 - 31 Jan 2026"
+        >Cycle 4</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">BERD@NFDI</span>
+    </div>
+    <h2 class="card-title">Best practice AAI for BERD Data Portal</h2>
+    <p class="card-text">
+    <p>This incubator project focuses on applying IAM4NFDI standards within
+the BERD@NFDI infrastructure. We aim to adopt best practices and
+reference implementations (e.g., OpenID Connect, entitlement-based
+access) to future-proof our platform for federated, cross-consortia
+workflows. The project will help ensure compatibility with external
+services such as Galaxy, and position BERD for participation in the EOSC
+federated system.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Implement OpenID Connect as the SSO protocol following IAM4NFDI
+recommendations.</li>
+<li>Apply attribute exchange mechanisms for user entitlements and
+roles.</li>
+<li>Enable future compatibility with federated identity and EOSC
+guidelines.</li>
+<li>Validate use cases with external services (e.g., Galaxy) that rely
+on IAM-compliant standards.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#berd-4-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://berd-nfdi.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="berd-4-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        Not yet published
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      CC By 4.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- gfbio-3 -->
+<div class="card" id="gfbio-3">
+  <img
+    src="images/gfbio_logo.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: acadid</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4BIODIVERSITY</span>
+    </div>
+    <h2 class="card-title">GFBio Single-Sign-On for NFDI4Biodiversity</h2>
+    <p class="card-text">
+    <p>Wir wollen die GFBio Single-Sign-On Lösung evaluieren, ob sie als
+Login für die Dienste der NFDI4Biodversity geeignet ist. Außerdem soll
+die Kompatibilität mit dem Lifescience AAI Login geprüft und
+sichergestellt werden.</p>
+<p>Die GFBio Single-Sign-On Lösung ist ein dedizierter Dienst, der von
+der GWDG betrieben wird, um die Authentifizierung für die
+Dienstbetreiber des GFBio e.V. (Geschäftsstelle und Mitglieder)
+bereitzustellen. Der Dienst basiert auf der AcademicID, die eine der
+Community AAIs im IAM4NFDI ist. Das GFBio Single-Sign-On kann derzeit
+föderierte Anmeldungen aus der DFN-AAI und der LifescienceAAI
+ermöglichen und bietet darüber hinaus die Möglichkeit, dass sich jeder
+Nutzer selbst einen GFBio Account registrieren kann. Im Rahmen dieses
+Inkubators soll untersucht werden, inwieweit die GFBio Single-Sign-On
+Lösung für alle Bedürfnisse der NFDI4Biodiversity genutzt werden kann.
+Eine große Frage ist unter anderem die Autorisierung und
+Gruppenverwaltung in den GFBio Diensten und vor allem das Zusammenspiel
+mit der LifescienceAAI-Login und einem dedizierten GFBio Account, der
+auf der Academic Cloud basiert.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Das Ziel dieses Inkubators ist es, eine klare Aussage zu machen, wie
+wir mit dem GFBio Single-Sign- On die Autorisierung und das
+Gruppenmanagement in den GFBio-Diensten weiter nutzen können und auch
+Nutzer/innen einbeziehen, die sich über die LifescienceAAI registriert
+haben.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#gfbio-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://gfbio.org/about"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="gfbio-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p>https://kb.gfbio.org/</p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      permissive open-source + CC0 / CC-BY
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- simplevm-3 -->
+<div class="card" id="simplevm-3">
+  <img
+    src="https://simplevm.github.io/assets/images/SimpleVM_New.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: Infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Opening up the SimpleVM Bielefeld University Installation for external collaborations</h2>
+    <p class="card-text">
+    <p>Easy access to computational resources for challenging bioinformatics
+analyses is often difficult for researchers to obtain. SimpleVM
+(https://simplevm.github.io) is hosted in the de.NBI Cloud, which
+provides compute and storage resources for several NFDI consortia and
+services such as Jupyter4NFDI and TS4NFDI. SimpleVM provides VMs with
+browser-based virtual research environments for data-processing,
+development use-cases, cluster-based computing, GPU-accelerated cases,
+and workshop scenarios. SimpleVM is also used as a teaching application
+at Bielefeld University as part of the Data Science Infrastructure (DSI)
+initiative, integrated with the local Shibboleth IdP.</p>
+<p>The purpose of this incubator project is to allow external
+researchers to use the SimpleVM DSI installation and participate in
+teaching courses and projects. If successful, NFDI AAI will be used for
+de.NBI Cloud SimpleVM as well.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>The SimpleVM DSI platform should be accessible to non-Bielefeld
+University members to enable the collaboration between members of
+different educational and research institutions, including NFDI
+consortia.</li>
+<li>User login/registration into SimpleVM DSI via the NFDI Infra
+Proxy.</li>
+<li>Minimal required attributes (User ID, User Name, e-Mail) are
+transferred to SimpleVM DSI Keycloak.</li>
+<li>Access access to the SimpleVM dashboard and project resources for
+members.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#simplevm-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://simplevm.github.io"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="simplevm-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <a href="https://github.com/deNBI">https://github.com/deNBI</a>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MISSING, in preparation to select a suitable OpenSource license
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- clowm-3 -->
+<div class="card" id="clowm-3">
+  <img
+    src="https://gitlab.ub.uni-bielefeld.de/cmg/clowm/clowm-ui/-
+/raw/main/src/assets/images/clowm.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: Infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI</h2>
+    <p class="card-text">
+    <p>In the context of NFDI4Microbita we develop with the Cloud-based
+Workflow Manager (CloWM) an integrated platform for highly scalable
+workflow execution. CloWM allows the seamless integration of (1)
+versioned workflows, (2) robust data storage, (3) a highly scalable
+compute layer and (4) a user- friendly interface. Due to its generic
+design the platform is also used in other NFDIs (e.g. NFDI4Biodiversity)
+as an execution environment for community specific data analysis
+workflows and will be an official de.NBI service soon. With this
+Incubator project we want to open our service to a broader community by
+supporting the usage of other community AAIs for authentication.</p>
+<p>The CloWM platform currently supports LS LOGIN (Life Science Login)
+via OIDC as SSO solution for user authentication. If the NFDI Infra
+Proxy supports OIDC, we will add it as an additional login option and
+hence opening the platform to users of other community AAIs.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li><p>The CloWM platform should provide the NFDI Infra Proxy as
+login/registration option to users from other consortia where LS LOGIN
+is not so widely used as in the life sciences. This will open the
+platform to a broader community.</p></li>
+<li><p>We expect that the results of this incubator will further open
+the CloWM platform to the whole NFDI community. Since CloWM is
+completely open source (Apache 2.0 license), the implemented login
+provider using the NFDI Infra Proxy might also be used as an open,
+blueprint implementation for other web-based services in the
+future.</p></li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#clowm-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://clowm.bi.denbi.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="clowm-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        See: <a href="https://gitlab.ub.uni-bielefeld.de/cmg/clowm">https://gitlab.ub.uni-bielefeld.de/cmg/clowm</a>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Apache v2.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- dalia-3 -->
+<div class="card" id="dalia-3">
+  <img
+    src="images/dalia-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: Infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">NFDI AAI for DALIA</h2>
+    <p class="card-text">
+    <p>DALIA is a search platform for teaching and learning resources on RDM
+and data literacy. Its intended purpose is to offer a single point of
+entry to search and access open educational resources (OER) published by
+NFDI’s consortia and sections and by third parties.</p>
+<p>The integration of the DALIA platform with IAM4NFDI will strengthen
+the connection to the NFDI and RDM communities and will offer a seamless
+authentication flow for DALIA’s users.</p>
+<p>The DALIA platform consists of a Django-based backend application
+server and a frontend web application based on the Next.js framework.
+The authentication library we plan to use in DALIA’s backend is
+django-allauth which supports various social authentication flows and
+protocols, in particular a general OIDC provider. The library’s new
+headless feature
+(https://docs.allauth.org/en/latest/headless/index.html) will be used to
+provide a REST-based authentication flow for DALIA’s frontend.
+Additionally, we envision to process attributes from IAM4NFDI’s Core
+Attribute Profile to populate our users’ profiles.</p>
+<p>We can reuse findings and solutions by other projects and IAM4NFDI
+incubators on the integration of NFDI AAI into Python web projects:</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Addition of an NFDI AAI login to DALIA’s search portal by
+integration of the NFDI Infrastructure Proxy as an OIDC provider.</li>
+<li>Users can login at the DALIA search portal via the NFDI AAI, in
+particular by using their Home-IdP.</li>
+<li>Become an overarching NFDI base service, thus it should connect to
+the NFDI AAI infrastructure via the Infrastructure Proxy.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#dalia-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://dalia.education"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="dalia-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        https://git.rwth-aachen.de/dalia/backend/django
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT License
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- aruna-3 -->
+<div class="card" id="aruna-3">
+  <img
+    src="https://github.com/arunaengine/.github/blob/main/profile/img/aruna_white_font.png?raw=true"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: Infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Integration: Aruna Data Orchestration Engine with Infrastructure Proxy</h2>
+    <p class="card-text">
+    <p>As part of the incubator project, the Aruna Data Orchestration Engine
+is to enable authentication against the Infrastructure Proxy
+Infrastructure Service of IAM4NFDI. This allows easy access to all
+community AAIs involved in IAM4NFDI without having to integrate each AAI
+individually.</p>
+<p>We want to support authentication via the Infrastructure Proxy
+Infrastructure Service in our Aruna Data Orchestration service. The
+service is developed inside the NFDI4Microbiota and NFDI4Biodiversity
+consortia. Currently, we support Life Science Login and GFBio SSO (via
+OIDC). If the IAM4NFDI Infrastructure Proxy Infrastructure Service
+supports OIDC, adding it as a login option should be straight forward.
+Our Aruna Data Orchestration service already supports multiple OIDC
+identity provider for individual users.</p>
+<h4 id="goal">Goal:</h4>
+<ul>
+<li>Enabling the user authentication via the Infrastructure Proxy
+Infrastructure Service provided by</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#aruna-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://aruna-engine.org"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="aruna-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        See <a href="https://github.com/arunaengine">https://github.com/arunaengine</a>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Apache V2.0<br/>MIT License
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- jupyter-3 -->
+<div class="card" id="jupyter-3">
+  <img
+    src="https://base4nfdi.de/images/nicepage-images/Jupyter4NFDI.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: Infraproxy</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Jupyter4NFDI accessible for NFDI and beyond</h2>
+    <p class="card-text">
+    <p>Jupyter4NFDI aims to address the fragmented deployment of Jupyter
+Notebooks across NFDI consortia by offering a centralised service.</p>
+<p>Jupyter4NFDI project is a central service that integrates resources
+from participating institutions and enables users to run Jupyter
+notebooks on infrastructure (Jupyterhubs)</p>
+<p>The incubator provides the framework for preparing and eventually
+realising the integration with the NFDI Infra Proxy, which will
+effectively make the service accessible to all community AAIs.</p>
+<p>The aim of this incubator cycle is the integration of the
+Jupyter4NFDI hub with the NFDI Infra Proxy and with the community AAIs.
+While the central hub of Jupyter4NFDI already is in place and accessible
+via the Helmholtz AAI – one of the IAM4NFDI community AAIs –, the aim is
+to provide wider access to it by integrating the proxy as soon as this
+becomes available.</p>
+<p>At a technical level, the communication required to delegate work to
+the Jupyterhubs available is realized by Jupyterhub Outpost, a Python
+software created specifically for the use case of this project. At a
+conceptual level, the work will consist in translating the AAI concepts
+in appropriate options for the service, in formulating requirements of
+the service for the AAI, in helping to harmonize the options of the
+central service and the existing Jupyterhubs and their AAIs.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Simplify access, improve user experience, and extend Jupyter’s reach
+to a wider audience within and beyond the NFDI.</li>
+<li>Extend the reach of Jupyter4NFDI so that it is usable by all
+community AAIs which are part of IAM4NFDI, so basically the use across
+all NFDI consortia is intended.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#jupyter-3-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://docs.hub.nfdi-jupyter.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="jupyter-3-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <a href="https://nfdi-jupyter.de">https://nfdi-jupyter.de</a>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      <a href="https://github.com/kreuzert/jupyterhub-outpost/blob/main/LICENSE">BSD 3-Clause</a>
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- biigle-1 -->
+<div class="card" id="biigle-1">
+  <img
+    src="images/biigle-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4BIODIVERSITY</span>
+    </div>
+    <h2 class="card-title">BIIGLE</h2>
+    <p class="card-text">
+    <p>We want to support authentication via the NFDI Infra Proxy in our
+BIIGLE service for image and video annotation (biigle.de). The service
+is part of the NFDI4Biodiversity service catalogue and also participates
+as a pilot project in NFDI4Earth.</p>
+<p>BIIGLE should provide the NFDI Infra Proxy as a login/registration
+option so users from different consortia (currently NFDI4Biodiversity
+and NFDI4Earth) can easily use the service.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#biigle-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://biigle.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="biigle-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        https://github.com/biigle
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      GPLv3.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- wisski-02 -->
+<div class="card" id="wisski-02">
+  <img
+    src="images/wisski-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2024 - 31 Jan 2025"
+        >Cycle 2</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: didmos</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4OBJECTS</span>
+    </div>
+    <h2 class="card-title">WissKI</h2>
+    <p class="card-text">
+    <p>For the Scientific Communication Infrastructure (<a
+href="https://wiss-ki.eu">WissKI</a>), the joint initiative of the Data
+Competence Centre <a href="https://sammlungen.io">SODa</a> is planning
+to set up a didmos Community AAI Single Sign-On (SSO) system from <a
+href="https://daasi.de">DAASI</a> as part of the IAM4NFDI incubator
+fund. WissKI-based services such as the WissKI Cloud and the Semantic
+Coworking Space (SCS) as well as the entire <a
+href="http://nfdi.de">NFDI</a> network will also benefit from this.</p>
+<p>With the aim of creating a robust, compatible authentication and
+authorisation infrastructure (CAAI) for the WissKI-based infrastructure
+offerings, the open source didmos solution was selected due to its
+compatibility with dockerisation and its proximity to the GLAM and DH
+communities, in particular <a
+href="https://nfdi4culture.de">NFDI4Culture</a>, <a
+href="https://www.nfdi4objects.net">NFDI4Objects</a> and <a
+href="https://4memory.de">NFDI4Memory</a>, and comprises the following
+work steps:</p>
+<ol type="1">
+<li>Setting up a client in the central didmos instance</li>
+<li>Configuration of the NFDI AAI federation</li>
+<li>Configuration of the WissKI instances as clients</li>
+</ol>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#wisski-02-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://wiss-ki.eu/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="wisski-02-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        Missing!!
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Missing!!
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- ts+-2 -->
+<div class="card" id="ts+-2">
+  <img
+    src="images/nfdi4chem-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4CHEM</span>
+    </div>
+    <h2 class="card-title">Terminology Services2.0</h2>
+    <p class="card-text">
+    <p>While our initial incubator proposal focused solely on the
+Terminology Service (TS), we soon realised that its requirements did not
+encompass the full spectrum of services within the NFDI4Chem consortium.
+Consequently, we expanded our approach to include the major services of
+NFDI4Chem in the Community AAI. Currently, in addition to the <a
+href="https://terminology.nfdi4chem.de/ts">Terminology Service (TS)</a>,
+we are testing the Community AAI with <a
+href="https://chemotion.net">Chemotion Repository</a>, <a
+href="https://nmrxiv.org">nmrXiv</a> and <a
+href="https://coconut.naturalproducts.net">COCONUT</a>. We plan to
+integrate more services with the Community AAI in the future.</p>
+<p>Goals</p>
+<p>Our primary objective is to establish a unified AAI solution within a
+single consortium, enabling users to seamlessly access and utilise all
+available resources. In the second phase of the incubator project, we
+aim to integrate test instances of various services with the chosen
+CAAI. This will help us gather requirements that might necessitate
+modifications on both services and CAAI.</p>
+<p>This will help us ensure that we meet our requirements of the
+majority of these services.</p>
+<ul>
+<li>Support different logins both institutional and non-institutional.
+(Flexibility of customising the list)</li>
+<li>Multiple account creation and linking</li>
+<li>REST API with authentication code, so as to ease the maintenance of
+a service (for example during account deprovisioning, or movement of
+staff within the department)</li>
+<li>Improve flexibility of creating LDAP servers (internal and external)
+and communication with its OIDC instance.</li>
+<li>Facilitate both GUI and non-GUI based logins [optional]</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#ts+-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://knowledgebase.nfdi4chem.de/knowledge_base/docs/chemotion_repository/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="ts+-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- oep-2 -->
+<div class="card" id="oep-2">
+  <img
+    src="images/open-energy-platform.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ENERGY</span>
+    </div>
+    <h2 class="card-title">Open Energy Platform</h2>
+    <p class="card-text">
+    <p>With this incubator process, we (NFDI4Energy) want to commit to a
+specific CAAI solution, namely Reg-APP, and integrate it on the
+OpenEnergyPlatform (OEP). NFDI4Energy is committed in reusing already
+existing solutions and platforms. As a result, the OEP will serve as one
+of the main bases for further developments in Research Data Management
+in the Energy domain and will be a linking and collection point for
+further NFDI4Energy services.</p>
+<p>The OEP currently consists of a simple local login (E-Mail and
+Password) based on basic services available through the python package
+Django with a PostgreSQL database and simple fronted technology (HTML,
+JavaScript, CSS). To add Reg-APP support we plan to use the
+django-allauth module, which supports SAML as well as OpenID
+Connect.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Integrate RegAPP on the OpenEnergyPlatform as the primary
+Authentication Service.</li>
+<li>Transfer or map existing user accounts, since we plan to maintain
+the legacy login as well as the RegAPP login.</li>
+<li>Operate the OEP and associated services under real environment
+conditions. As the OEP is a community service we think that a connection
+to the NFDI Infra proxy will not be necessary.</li>
+<li>The served user base will be a mix of researchers, industry partners
+and society. As such an authentication method that is not based on the
+research infrastructure needs to be supported, as well.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#oep-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://openenergyplatform.org"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="oep-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p>https://github.com/orgs/OpenEnergyPlatform/projects/40</p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?tab=License-1-ov-file
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- fairmat-2 -->
+<div class="card" id="fairmat-2">
+  <img
+    src="images/nomad-logo.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: unity</span>
+      <span class="badge badge-pill bg-dark text-light">FAIRMAT</span>
+    </div>
+    <h2 class="card-title">NOMAD Integration</h2>
+    <p class="card-text">
+    <p>We want to link NOMAD to the NFDI AAI. NOMAD is a web-based research
+data management (RDM) platform for material science. It integrates a
+data repository, Electronic Lab Notebook (ELN), and JupyterHub into a
+unified platform. It is the main service developed and offered by the
+FAIRmat consortium.</p>
+<p>NOMAD uses Keycloak as a Single Sign-On (SSO) solution. We operate a
+single central instance that is used by all NOMAD installations and
+services. Currently, we only allow users to use NOMAD accounts that were
+created on this Keycloak instance. NOMAD uses Keycloak primarily for
+authentication since all rights are managed within the NOMAD
+application. Therefore, we currently do not see any need for (community)
+roles, attributes, or similar functionality within NFDI AAI.</p>
+<p>Technically, we want to realise this integration either via OpenID
+connect or SAML depending on NFDI AAI capabilities. Since, NFDI AAI and
+Keycloak already support at least one shared protocol, the integration
+should be straight forward. Most of the work, will probably be dedicated
+to test the integration. We might need some assistance in configuring
+the connection via OIDC or SAML.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Integrate the NFDI AAI as an identity provider for NOMADs central
+Keycloak instance. This should allow users to login with their existing
+NFDI AAI identities. A large portion of the ~4000 existing NOMAD users
+are affiliated with research institutes and Universities in Germany and
+Europe. Therefore, many of the existing users and potential new users
+might already hold identities within the 4 proposed NFDI AAI
+solutions.</li>
+<li>Simplify future integrations with other (NFDI) services (within the
+materials science community and beyond). For this it is necessary that
+services rely on a shared NFDI AAI solutions.</li>
+<li>Evaluate the use of linking different identities belonging to the
+same individual user.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#fairmat-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://nomad-lab.eu"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="fairmat-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- nfdi4cat-2 -->
+<div class="card" id="nfdi4cat-2">
+  <img
+    src="images/nfdi4cat.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4CAT</span>
+    </div>
+    <h2 class="card-title">NFDI4CAT Repository</h2>
+    <p class="card-text">
+    <p>The NFDI4CAT community requires a central solution for the storage
+and exchange of experimental and simulation data to streamline research
+activities and support collaboration. To address this need, NFDI4CAT
+propose the deployment of a central repository using Dataverse. This
+repository will facilitate organisation, sharing, and archiving of
+research data within the community, ensuring efficient data management
+and accessibility. We would like to explore the possibility to use the
+NFDI Authentication and Authorisation Infrastructure Framework for the
+NFDI4Cat Dataverse repository. This will enable our repository users
+with seamless and secure access to their data.</p>
+<h4 id="goals">Goals</h4>
+<ol type="1">
+<li>Incorporate the concepts of community and infrastructure proxy.</li>
+<li>Integrate NFDI AAI single sign-on for Dataverse for the NFDI4CAT
+community.</li>
+<li>Include all stakeholders (University, Non-University).</li>
+<li>Address any issues identified during testing to ensure a smooth and
+reliable user experience.</li>
+</ol>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nfdi4cat-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://repository.nfdi4cat.org"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="nfdi4cat-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- fts-2 -->
+<div class="card" id="fts-2">
+  <img
+    src="images/nfdi4ing.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2024 - 31 Jan 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">File Transfer Service FTS</h2>
+    <p class="card-text">
+    <p>The File Transfer Service (FTS) is a Software that is developed by
+CERN and that specializes in easy, large scale data transfer. It allows
+the scheduling of transfers and results in a good utilization of the
+available bandwidth. We are currently setting up an FTS instance to
+enable users to transfer their research data between different
+endpoints, our research data management system, and the cluster.</p>
+<h4 id="goals">Goals</h4>
+<p>As a result of the project, it should be possible to login through
+our community AAI solution at the FTS web-interface. This removes the
+need for client certificates. When granted permission to access FTS this
+way, an FTS user should automatically be created with basic transfer
+permissions. Users should also be able to view the Web Monitoring to see
+the status of their transfers, while administrators should be able to
+view the status of the overall service. Participants of this incubator
+are the project team members that implements this project. The
+communities that require a solution are researchers from different NFDI
+consortia that will use the FTS instance of the RWTH Aachen University
+to transfer their research data quickly and reliably.</p>
+<ul>
+<li>The RegApp is connected to the FTS server instance of the RWTH
+Aachen University.</li>
+<li>Generation of new FTS users is prompted by first-time access through
+the RegApp.</li>
+<li>The Web Monitoring platform of the FTS instance, which is separate
+from the server, is connected to the RegApp.</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#fts-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.google.com/search?hl=en&q=FTS+MATWERK"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="fts-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- forum4mica-2 -->
+<div class="card" id="forum4mica-2">
+  <img
+    src="images/forum4mica.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">KONSORTSWD</span>
+    </div>
+    <h2 class="card-title">Forum 4 MICA</h2>
+    <p class="card-text">
+    <p>The idea of the incubator proposal is to use the Forum4MICA as a
+pilot project to connect the consortium KonsortSWD to Community AAI.</p>
+<p>Forum4MICA is a publicly accessible exchange and information platform
+on topics related to the data collections of the participating Research
+Data Centers (RDC). The online forum gives RDCs (currently 18) an
+additional option for communicating with their data users and interested
+persons. It enables the provision of specifically requested information
+on the research data provided.</p>
+<p>As submissions and interactions are only possible for registered
+users, logins via NFDI-AAI would substantially improve the user
+experience and reduce effort.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li><p>Find out if an implementation of an IAM system in the consortia
+is possible and act as a demonstrator within KonsortSWD.</p></li>
+<li><p>Connect the existing community service Forum4MICA to NFDI
+AAI.</p></li>
+<li><p>Identify which possibilities exist to connect the
+service</p></li>
+<li><p>Evaluate the transferability of the IAM results in this incubator
+to additional services. E.g. institutional repositories (e.g. at GESIS)
+require registration but have so far not expressed interest in joining
+IAM4NFDI For these providers this incubator would be a demonstration of
+the service’s capabilities.</p></li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#forum4mica-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://forum.lifbi.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="forum4mica-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- fairagro-2 -->
+<div class="card" id="fairagro-2">
+  <img
+    src="images/fairagro.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">FAIRAGRO</span>
+    </div>
+    <h2 class="card-title">FairAgro</h2>
+    <p class="card-text">
+    <p>FAIRagro is the NFDI consortium focussing on agrosystems research.
+FAIRagro will offer various services, such as a Nextcloud system, a
+Zammad-based helpdesk system, and the FAIRagro Search Portal. These
+services will be integrated with an Authentication and Authorisation
+Infrastructure (AAI) based on NFDI recommendations to facilitate
+usage.</p>
+<p>Further services will be connected to the CAAI, including
+consortium-internal services and community services.</p>
+<h4 id="goals">Goals</h4>
+<p>Link the existing FAIRagro services to the CAAI and develop a group
+and role concept to enable authorisation of different user groups. The
+integration process will involve the definition of groups and roles with
+regard to the consortium</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#fairagro-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://fairagro.net/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="fairagro-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- dataplant-2 -->
+<div class="card" id="dataplant-2">
+  <img
+    src="images/dataplant.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2024 - 31 Jan 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: other</span>
+      <span class="badge badge-pill bg-dark text-light">DATAPLANT</span>
+    </div>
+    <h2 class="card-title">DataPlant</h2>
+    <p class="card-text">
+    <p>The DataPLANT consortium develops and provides a wide range of
+services to support FAIR data science in plant biology. In the past, we
+have implemented our own IAM infrastructure but as our collaborations
+with other consortia and institutions continue to grow, we are in need
+of a broader IAM integration.</p>
+<p>Our infrastructure needs to be connected to the larger IAM4NFDI
+system to allow users from both DataPLANT and other consortia to use our
+services. The DataPLANT user base needs to be integrated as a community
+identity provider. Authorisation decisions within the services should be
+derived from user attributes provided by the respective consortia
+identity providers.</p>
+<h4 id="goals">Goals</h4>
+<ol type="1">
+<li><p>Integrate our identity provider with the IAM4NFDI system to allow
+DataPLANT users to easily connect to other NFDI services.</p></li>
+<li><p>Connect the IAM4NFDI infrastructure to our services to allow
+users from other consortia to use our services.</p></li>
+<li><p>Management of user attributes, their propagation across the
+service landscape and how we can use them to implement fine-grained
+authorisation policies based on entitlements, user affiliation and role,
+among other things.</p></li>
+</ol>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#dataplant-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://nfdi4plants.org"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="dataplant-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- coscine-2 -->
+<div class="card" id="coscine-2">
+  <img
+    src="images/rwth_coscine_rgb.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2024 - 31 Jan 2025"
+        >Cycle 2</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">Coscine-2</h2>
+    <p class="card-text">
+    <p>Coscine is an open-source platform for research data management (RDM)
+and can be used by all researchers of every field. In context of the
+FAIR-principles the login to Coscine is already possible with an
+institutional account (Single Sign-On) or using ORCID.</p>
+<p>One aim of this incubator proposal is the extended support of social
+login possibilities within our CAAI (RegApp). Furthermore, we would
+strive for the connection of accounts inside RegApp (e.g., ORCID with
+Single Sign-On). This would simplify the usage of Coscine because now
+the user needs to manually connect the accounts within the platform
+itself. As a further point of the anticipated work, we would see the
+supply of intersections for delivering of information by the home
+organisation as well as by the AAI. This would improve the transfer of
+roles which is needed because in Coscine different functionalities are
+linked to specific roles.</p>
+<h4 id="goals">Goals</h4>
+<ul>
+<li>Enabling intersections in a decentralized way to get information
+from the Home Organisation as well as from the AAI Login about the roles
+which are given in Coscine.</li>
+<li>Analysing in which context the definition of roles in the framework
+of NFDI and Coscine makes sense and in how far they need to be
+implemented (e.g. as Reviewer for Application Profiles).</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#coscine-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://about.coscine.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="coscine-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        .
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      .
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- come2data-2 -->
+<div class="card" id="come2data-2">
+  <img
+    src="images/come2data.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2025 - 31 Jul 2025"
+        >Cycle 3</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: didmos</span>
+      <span class="badge badge-pill bg-dark text-light">GENERAL</span>
+    </div>
+    <h2 class="card-title">Come2Data</h2>
+    <p class="card-text">
+    <p>Come2Data aims to close a currently existing gap in support regarding
+a large range of data issues, such as:</p>
+<ul>
+<li>Data problems during any stage of the data life cycle
+(e.g. acquisition, management, analyses and publication)</li>
+<li>Trainings to acquire data competencies.</li>
+</ul>
+<p>To address these issues, we operate a help desk (level 1 support) and
+provide educational resources, such as certified trainings (after
+completion of the current funding period for establishing the centre).
+For very specific data problems, we have a database of specialists in
+the respective fields who will gain access to Come2Data resources once
+they serve as data experts for our helpdesk (level 2 support).</p>
+<p>In order to run the centre, we plan to implement a systematic
+technical infrastructure, containing a WordPress CMS-based website, a
+triple-store knowledge base, and storage space for large data</p>
+<p>We seek support for an AAI solution that integrates the
+institution-specific IDM solutions to grant selective access on various
+levels (see above). We furthermore look for a solution to work with
+users with educational or scientific institutional login as well as
+without such a login possibility.</p>
+<h4 id="goals">Goals</h4>
+<p>We aim for a broadly available authorisation process to gain access
+to our services that implements the use of existing AAI-solutions.</p>
+<p>For users who are not affiliated with any community providing an
+AAI-service, an alternative solution is required, e.g. to register for
+our trainings and gain access to course material. The overarching goal
+is to make our services available to a broad range of users from both
+academic and non-academic (e.g. industrial, general public)
+backgrounds.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#come2data-2-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.come2data.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="come2data-2-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        missing
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      missing
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- nfdixcs-1 -->
+<div class="card" id="nfdixcs-1">
+  <img
+    src="images/nfdixcs-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">NoCapacity</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 30 Jun 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: </span>
+      <span class="badge badge-pill bg-dark text-light">NFDIXCS</span>
+    </div>
+    <h2 class="card-title">NFDIxCS</h2>
+    <p class="card-text">
+    <p>The current startup phase of NFDIxCS is characterized to hammer out
+the detailed requirements for the NFDIxCS platform. A key of both areas
+– the platform and the RDMCs – need a profound, flexible and extensible
+way to use and manage identities, authentication and authorization
+methods for accessing the plarform and the RDMCs managed within the
+platform.</p>
+<p>The goal of the incubator is threfore to explore the field of
+identity management methods and technologies which are available and in
+wide use in the community – primarily in the field of platforms for
+management and publication of research data in Computer Science but also
+in related scientific areas beyond CS. The result of this will  be a
+list of related methods and architectural requirements to use the
+methods in the NFDIxCS systems that are implemented in the future.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nfdixcs-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.google.com/search?hl=en&q=nfdixcs"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="nfdixcs-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        No content provided.
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      No content provided.
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- auth-on-ojb-1 -->
+<div class="card" id="auth-on-ojb-1">
+  <img
+    src="images/text-plus-logo.svg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Development</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 30 Jun 2024"
+        >Cycle 2</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: acadid</span>
+      <span class="badge badge-pill bg-dark text-light">TEXT+</span>
+    </div>
+    <h2 class="card-title">Authorisation on Objects</h2>
+    <p class="card-text">
+    <p>Repositories in general need certain authentication and authorization
+functionalities for controlling import and export of data. It would be
+desirable, that an NFDI-wide IAM solution supports such AAI functions,
+as they are required by potentially all research data repositories
+across all disciplines.</p>
+<p>We acceppt this challenge and use the TextGrid and DARIAH-DE
+Repositories as examples to implement such AAI functions, if as
+extension, integration or even overall management shall be subject to
+decision of the IAM4NFDI group.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#auth-on-ojb-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.google.com/search?q=authorisation+on+objects"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="auth-on-ojb-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p>Die Resultate werden momentan als Minutes der (ungefähr) monatlichen
+Treffen und Videokonferenzen festgehalten, samt Aufgaben und weiterem
+Vorgehen. Die technischen und inhaltlichen Erörterungen zwischen den
+Partnern GWDG, DAASI, und SUB sind fortgeschritten.</p>
+<p>Die verwendeten Technologien und Dienste werden am Beispiel von
+TextGrid und DARIAH-DE Repository sowie einer für NFDI-weiten
+generischen Lösung evaluiert und angedacht. Sobald die Evaluation und
+Planung angeschlossen ist, ist eine gemeinsame Implementierung der
+jeweiligen Prototypen angedacht.</p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      möglicherweise EUPL-1.2
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- open-edx-1 -->
+<div class="card" id="open-edx-1">
+  <img
+    src="images/nfdi4earth-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Aug 2024 - 31 Jan 2025"
+        >Cycle 2</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: acadid</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4EARTH</span>
+    </div>
+    <h2 class="card-title">Integration of NFDI AAI to Open edX</h2>
+    <p class="card-text">
+    <p>This Incubator Project focuses on integrating the NFDI Authentication
+and Authorisation Infrastructure (AAI) with Open edX. The primary goals
+are to gain an initial understanding of IAM4NFDI, test the usability and
+features of available Community AAIs, and determine the best Community
+AAI to use.</p>
+<h3 id="three-major-steps">Three major steps</h3>
+<h4 id="authentication-process">Authentication Process</h4>
+<ul>
+<li>Applied for OAuth-Client with three Community AAIs (Unity, RegApp,
+AcademicID), created a Flask app for testing authentication
+methods.</li>
+<li>Integrated three Community AAIs into Open edX using Python Social
+Auth, with reusable Python classes for third-party authentication.</li>
+</ul>
+<h4 id="virtual-organisations">Virtual Organisations</h4>
+<p>Applied for admin accounts, tested UI handling, and examined the
+impact on authentication attributes.</p>
+<h4 id="decision-on-caai">Decision on CAAI</h4>
+<p>Compared three AAIs using a rating matrix, recommended one within the
+consortium, verified by an internal group, and finalised by the steering
+group.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#open-edx-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://apps.edutrain.nfdi4earth.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="open-edx-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li>Open edX login page: <a
+href="https://apps.edutrain.nfdi4earth.de/authn/login?next=%2F"
+class="uri">https://apps.edutrain.nfdi4earth.de/authn/login?next=%2F</a></li>
+<li>Adaption of python package <a
+href="https://github.com/omab/python-social-auth/tree/master">Social
+Core</a> of the Python <a
+href="https://python-social-auth.readthedocs.io/en/latest/">Social
+Auth</a> <a
+href="https://git.rwth-aachen.de/nfdi4earth/architecture/nfdi_social_auth">available
+here</a></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Python package - Licence: Apache v2.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- terminology-1 -->
+<div class="card" id="terminology-1">
+  <img
+    src="images/NFDI4Chem-Logo_mehrfarbig_schwarz.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Running</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 30 Jun 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4CHEM</span>
+    </div>
+    <h2 class="card-title">Terminology Service</h2>
+    <p class="card-text">
+    <p>The goal of NFDI4Chem is to have a unified AAI solution within a
+single consortium, enabling users to seamlessly access and utilize all
+available resources. From the incubator project, we aim to integrate
+test instances of various services with the chosen CAAI. This will help
+us gather requirements that might necessitate modifications on both the
+services and the CAAI front, ensuring that the needs of the majority of
+these services are met. Following comprehensive testing across all
+facets, the test instances of each service will transition into
+production. The list of services to be connected with CAAI includes the
+<a href="https://terminology.nfdi4chem.de/ts">Terminology Service</a>
+(TS), <a href="https://chemotion.net">Chemotion Repository</a>, <a
+href="https://nmrxiv.org">nmrXiv</a>, <a
+href="https://coconut.naturalproducts.net">COCONUT</a> and more.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#terminology-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://knowledgebase.nfdi4chem.de/knowledge_base/docs/chemotion_repository"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="terminology-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li><a
+href="https://knowledgebase.nfdi4chem.de/knowledge_base/docs/chemotion_repository"
+class="uri">https://knowledgebase.nfdi4chem.de/knowledge_base/docs/chemotion_repository</a></li>
+<li>Derivables:
+<ul>
+<li>Implementing the CAAI software across multiple services in the
+NFDI4Chem consortium.</li>
+<li>Successfully transitioning demo/test instances to production after
+comprehensive testing across all facets.</li>
+</ul></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      No content provided.
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- nfdi4culture-1 -->
+<div class="card" id="nfdi4culture-1">
+  <img
+    src="images/nfdi4culture.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Review</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 30 Jun 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: didmos</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4CULTURE</span>
+    </div>
+    <h2 class="card-title">NFDI4Culture</h2>
+    <p class="card-text">
+    <p>The current NFDI4Culture IAM plays a pivotal role as the central
+AAI/SSO backbone of the consortium. It accommodates approx. 400 user
+accounts and seven integrated services, thus contributing significantly
+to the consortium’s operational efficiency. Due to the implementation of
+DFN standards, the current IAM already exhibits a high degree of
+compatibility with the IAM4NFDI set of SAML attributes. The logical next
+step for NFDI4Culture is the integration of its IAM into the evolving
+CAAI architecture of IAM4NFDI.</p>
+<p>The transition is based on a two-tiered process:</p>
+<ol type="1">
+<li><p>On tier one (not part of the incubator), NFDI4Culture is going to
+cooperate with DAASI to migrate the existing IAM solution to the
+IAM4NFDI-compatible CAAI solution didmos.</p></li>
+<li><p>On tier two (which is the focus of this incubator proposal), the
+consortium is planning to connect up to three exemplary services from
+its portfolio to the new IAM4NFDI-compatible CAAI while focusing on the
+conceptualisation, implementation, and operationalisation of the
+relevant NFDI policies and the design of a consortium-wide Incident
+Response Management system. The technical aspects of the integration of
+the services mentioned above will be done by DAASI in tier one. DAASI
+will also act as interface between tier one and tier two.</p></li>
+</ol>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#nfdi4culture-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://nfdi4culture.de/id/E5913"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="nfdi4culture-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li>https://doc.nfdi-aai.de/policies/</li>
+<li>https://codebase.helmholtz.cloud/m-team/nfdi/nfdi-policies</li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      CC-BY 4.0 <a href='https://creativecommons.org/licenses/by/4.0/deed.en'>https://creativecommons.org/licenses/by/4.0/deed.en</a>
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- fdpg-1 -->
+<div class="card" id="fdpg-1">
+  <img
+    src="images/FD_Plattform_engl_rgb.jpg"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 30 Jun 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: unity</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4HEALTH</span>
+    </div>
+    <h2 class="card-title">FDPG - Analysing data from clinical care</h2>
+    <p class="card-text">
+    <p>The German Portal for Medical Research Data (FDPG) is the central
+point of administration for scientists conducting research projects with
+routine medical data from German universities.</p>
+<p>The Medical Informatics Initiative (MII), which is funded by the
+Federal Ministry of Education and Research (BMBF), collects patient data
+and biosamples taken during routine care for medical research and
+processes them at data integration centres based in university
+hospitals. The data are then made available in accordance with data
+protection regulations.</p>
+<p>The FDPG offers:</p>
+<ul>
+<li>An overview of databases for cross-centre research the
+opportunity</li>
+<li>To evaluate the feasibility of specific research questions
+using</li>
+<li>Feasibility inquiries a standardised process for requesting data
+and</li>
+<li>Biosamples an established contractual framework for simple data
+use</li>
+<li>The central coordination of data provision the transparent</li>
+<li>Presentation of research projects in the project registry</li>
+</ul>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#fdpg-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://forschen-fuer-gesundheit.de"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="fdpg-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li>Feasibility portal from a cooperation with the FDPGplus project
+<ul>
+<li><a
+href="https://github.com/medizininformatik-initiative/feasibility-gui"
+class="uri">https://github.com/medizininformatik-initiative/feasibility-gui</a>
+(see also feasibility-backend and feasibility-deploy)</li>
+</ul></li>
+<li>Application portal
+<ul>
+<li><a
+href="https://github.com/medizininformatik-initiative/fdpg-webapp"
+class="uri">https://github.com/medizininformatik-initiative/fdpg-webapp</a>
+and</li>
+<li><a href="https://github.com/medizininformatik-initiative/fdpg-api"
+class="uri">https://github.com/medizininformatik-initiative/fdpg-api</a></li>
+</ul></li>
+<li>Dashboard for viewing available data from local sites:
+<ul>
+<li><a
+href="https://github.com/medizininformatik-initiative/fdpg-dizdashboard"
+class="uri">https://github.com/medizininformatik-initiative/fdpg-dizdashboard</a></li>
+</ul></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      All source code is available under license: <a href='https://github.com/medizininformatik-initiative/fdpg-webapp?tab=Apache-2.0-1-ov-file#readme'>https://github.com/medizininformatik-initiative/fdpg-webapp?tab=Apache-2.0-1-ov-file#readme</a>
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- mardi-1 -->
+<div class="card" id="mardi-1">
+  <img
+    src="images/mardi-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Consultancy</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 31 Jul 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: didmos</span>
+      <span class="badge badge-pill bg-dark text-light">MARDI</span>
+    </div>
+    <h2 class="card-title">Minimal OIDC login</h2>
+    <p class="card-text">
+    <p>Numerous web platforms, such as MediaWiki, support the OpenID Connect
+(OIDC) protocol, allowing users to sign in using their existing
+accounts. While Google or ORCID accounts were previously used for
+logging in, this incubator project aims to facilitate logging in using
+accounts from NFDI institutions with minimal effort for users and
+administrators while ensuring maximum privacy.</p>
+<p>The Germany National Mathematical Research Data Initiative (MaRDI,
+mardi4nfdi.de) utilizes MediaWiki as its software to establish a
+comprehensive portal for research data in mathematics and related
+fields. This platform shares general-purpose technology with the
+Wikimedia Foundation and extends its functionality to cater to the
+specific needs of the MaRDI consortium. A fundamental requirement voiced
+by mathematicians contributing their research data is to avoid the
+maintenance of additional accounts, making the reuse of their
+institutional accounts a practical choice. Furthermore, this approach
+effectively mitigates the risk of spam by disallowing anonymous
+editing.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#mardi-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="mardi-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li><a href="https://portal.mardi4nfdi.de/wiki/Portal">The MaRDI Portal
+(log in with your institutional account)</a></li>
+<li><a href="https://github.com/MaRDI4NFDI/portal-compose">Source
+code</a></li>
+<li><a
+href="https://www.mediawiki.org/wiki/Extension:OpenID_Connect">MediaWiki
+OIDC extension</a></li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      The incubator will be realized based on the didmos CAA which is licensed Apache 2.0
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- argocd-1 -->
+<div class="card" id="argocd-1">
+  <img
+    src="images/argocd.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 31 Jul 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4DATASCIENCE</span>
+    </div>
+    <h2 class="card-title">ArgoCD</h2>
+    <p class="card-text">
+    <p>IAM4NFDI aims to connect and expand current and new IAM (Identity and
+Access Management) systems, allowing researchers from various fields and
+institutions to easily access digital resources in NFDI.</p>
+<p>To achieve this goal, IAM4NFDI introduced Incubator Cycles to promote
+ideas and needs for the NFDI-AAI (Authentication and Authorization
+Infrastructure).</p>
+<p>NFDI4DS successfully proposed such an incubator project. It is using
+ArgoCD as a prototype for implementing IAM solutions and will be
+realized at TU Dresden.</p>
+<p>The TU Dresden data center has already set up a Kubernetes Cluster
+for NFDI4DS users. It provides a user-friendly GitOps solution, ArgoCD,
+to access the cluster. The main users of ArgoCD within NFDI4DataScience
+are providers of our services, such as repositories and computation
+services for the data science community.</p>
+<p>The goal is to authenticate our ArgoCD users through Single Sign-On
+with their institutional credentials to</p>
+<ul>
+<li>improve user experience</li>
+<li>increase employee productivity by reducing the time they must spend
+signing on and dealing with passwords</li>
+<li>achieve better access control</li>
+<li>improve security</li>
+</ul>
+<p>Additionally, we’d like to gain a comprehensive experience from
+connecting ArgoCD to NFDI’s community AAIs. This incubator project will
+share the lessons learned to leverage the A (Accessibility) and I
+(Interoperability) in FAIR.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#argocd-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://www.nfdi4datascience.de/news/202402_argocd"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="argocd-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <p>We implemented the CAAI software on ArgoCD in the
+NFDI4DataScience consortium. Ownership &amp; UtilisationNo content
+provided.</p>
+<p><a href="https://k8scluster.zih.tu-dresden.de/argocd"
+class="uri">https://k8scluster.zih.tu-dresden.de/argocd</a></p>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      
+      Dont know what that mean - the service is > opensource.
+      
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- coscine-1 -->
+<div class="card" id="coscine-1">
+  <img
+    src="images/rwth_coscine_rgb.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 31 Jul 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">Coscine</h2>
+    <p class="card-text">
+    <p><a href="https://about.coscine.de/">Coscine</a> is a platform for
+research data management. Coscine offers researchers:</p>
+<ul>
+<li>Storage space: access to free storage space (depending on
+organisational affiliation)</li>
+<li>Integration: Access to project-related data sources (e.g. research
+data repository, linked files, archived data)</li>
+<li>Collaboration: Access for all project members</li>
+<li>Metadata: Automatically linked to project data</li>
+<li>Individuality: Project-specific metadata can be created as
+application profiles</li>
+<li>Archiving: Archive research data on site</li>
+</ul>
+<p>The metadata for research projects can be shared publicly on Coscine,
+made searchable and, in the long term, findable at national level.
+Coscine thus contributes to the goals of the National Research Data
+Infrastructure <a href="https://www.nfdi.de">NFDI</a> by making valuable
+scientific and research data accessible to the entire German scientific
+system.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#coscine-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://about.coscine.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="coscine-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <a href="https://coscine.rwth-aachen.de/login/">https://coscine.rwth-aachen.de/login/</a>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT Licence
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- jards-1 -->
+<div class="card" id="jards-1">
+  <img
+    src="images/nhraai_complete.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Integration</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Feb 2024 - 31 Jul 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">JARDS Attribute Queries in RegApp</h2>
+    <p class="card-text">
+    <p>At RWTH Aachen University, the JARDS platform is used by researchers
+to apply for resources such as storage space or computing time. The
+applications are assessed in a multi-stage scientific review process.
+After approval, researchers must be given access to the resource and be
+able to manage other project members. This requires information about
+approved projects in RegApp. The aim of this project is to enable
+attribute queries via the SAML protocol in RegApp and to set up a
+Shibboleth-based attribute authority that returns user data from JARDS.
+This demonstrates how external applications can be integrated into the
+Community AAI as attribute authorities.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#jards-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://jards.coscine.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="jards-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li>Implementation of a generic Docker image that can be used to set up
+a Shibboleth-based attribute authority</li>
+<li>Provision of an attribute authority for JARDS project data</li>
+<li>Extension of the RegApp to support SAML attribute queries</li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      The code for the Docker image for an
+attribute authority is available under the Apache Licence 2.0.
+If you are interested, please contact <a href="mailto:jards-dev@itc.rwth-aachen.de">jards-dev@itc.rwth-aachen.de</a>.
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- metadatahub-1 -->
+<div class="card" id="metadatahub-1">
+  <img
+    src="https://i.imgur.com/8gBPS5a.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Denied</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="01 Jan 2024 - 31 Jul 2024"
+        >Cycle 1</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: regapp</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">MetadataHub</h2>
+    <p class="card-text">
+    MetadataHub allows access to various metadata stores
+    developed in the NFDI. All operations from "Create" to "Search" can be
+    performed on the metadata stores. There are two demonstrators for this,
+    one showing the interfaces and the other providing a search across all
+    metadata stores.
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#metadatahub-1-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://nfdi4ing.de/base-services/s-3/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="metadatahub-1-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        
+      <p>The following results were created and delivered:</p>
+      <ul>
+        <li>
+          <a href="https://nfdi4ing.pages.rwth-aachen.de/s-3/s-3-3/multi-store-search/#/">Multi Store Search Page</a>
+        </li>
+        <li>
+            <a href="https://git.rwth-aachen.de/nfdi4ing/s-3/s-3-3">Source Code (gitlab)</a>
+        </li>
+        <li>
+          <a href="https://publications.rwth-aachen.de/record/862081">Publication</a>
+        </li>
+      </ul>
+    
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      MIT License 
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+<!-- RDMO-0 -->
+<div class="card" id="RDMO-0">
+  <img
+    src="images/RDMO-logo.png"
+    class="card-img-top"
+    alt="photo"
+  />
+  <div class="card-body">
+    <div class="tags">
+      <span class="badge badge-pill badge-primary">Infrastructure</span>
+      <span class="badge badge-pill badge-success">Completed</span>
+      <span
+        class="badge badge-pill badge-info"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="31 Jul 2023 - 28 Feb 2023"
+        >Cycle 0</span
+      >
+      <span class="badge badge-pill badge-secondary"></span>
+      <span class="badge badge-pill badge-info">CAAI: na</span>
+      <span class="badge badge-pill bg-dark text-light">NFDI4ING</span>
+    </div>
+    <h2 class="card-title">Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service</h2>
+    <p class="card-text">
+    <p>This a pilot to the IAM4NFDI incubator projects. It will serve as a
+proof-of-principle for the implementation of the Community AAI (CAAI)
+solutions into an existing web service. Each of the CAAIs will be
+integrated in parallel as an OpenID Connect (OIDC) provider to the test
+instance of the [RDMO NFDI4ING servic]
+(https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/). The RDMO software
+provides a straightforward way to integrate a wide-range of OIDC
+providers since it is built upon the Django Web Framework which can
+leverage the related django-allauth package for this purpose. A simple
+login via the website will show that the integration with the CAAI was
+successful.</p>
+    </p>
+    <button
+      class="btn btn-info d-print-none"
+      type="button"
+      data-toggle="collapse"
+      data-target="#RDMO-0-details"
+    >
+      Show Details
+    </button>
+    <a
+        href="https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/"
+      class="btn btn-outline-primary float-right"
+      target="_blank"
+      >Activity page</a
+    >
+  </div>
+  <ul class="list-group list-group-flush collapse" id="RDMO-0-details">
+    <li class="list-group-item">
+      <h5>Results & Deliverables</h5>
+        <ul>
+<li>successful integration of each of the AcademicID, didmos, RegApp,
+Unity solutions as an OIDC Provider that allows for authentication into
+the service.</li>
+</ul>
+        <hr/>
+      <h5>Ownership & Utilisation</h5>
+      <p>
+      Apache License
+      </p>
+      <!-- The source code was submitted upstream to the Perun developers. -->
+    </li>
+  </ul>
+</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer 
+    class="text-center text-lg-start text-white"
+    style="background-color: #3e4551"
+    >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+    <!-- Section: Links -->
+    <section class="">
+      <!--Grid row-->
+      <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>Attribution</u></h5>
+          <p class="small">
+            Images available at
+            <a href="https://pixabay.com/">pixabay</a> and
+            <a href="https://unsplash.com/">Unsplash</a>, Icons made by
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+            <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a>,
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and
+            <a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a>
+            from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>Funding</u></h5>
+          <p>
+            <p><a href='https://www.dfg.de/'><img style='width: 260px' src='/images/dfg_logo_schriftzug_weiss_foerderung_en.gif'></a></p>
+            <p class="small">Partially funded by DFG as part of NFDI.</p>
+            <p class="text-secondary small"><b>Grant Number: </b> 521466146 </p>
+          </p>
+        </div>
+
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>License</u></h5>
+          <p class="small">
+            The contents of this website are licensed under CC BY-SA 4.0
+          </p>
+          <a href="https://creativecommons.org/licenses/by-sa/4.0/legalcode" target="_blank" rel="noopener">
+              <img src="https://doc.nfdi-aai.de/images/cc-by-sa_icon.png"></a>
+          </p>
+      </div>
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase"><u>Links</u></h5>
+
+          <ul class="list-unstyled mb-0">
+            <li class="text-center">
+              <a href="https://www.kit.edu/impressum.php">Legal Notice</a>
+            </li>
+            <li class="text-center">
+              <a href="https://codebase.helmholtz.cloud/m-team/nfdi/nfdi-incubator-dashboard">Page Sourcecode on GitLab</a>
+            </li>
+            <li class="text-center">
+              <a href="https://doc.nfdi-aai.de/documents_contact/">Contact</a>
+            </li>
+            <li class="text-center">
+              <a href="https://www.kit.edu/privacypolicy.php">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+
+      <!--Grid row-->
+    </section>
+    <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+      class="text-center p-3"
+      style="background-color: rgba(0, 0, 0, 0.2)"
+      >
+    © 2024 IAM4NFDI, 
+    <a class="text-white" href="https://base4nfdi.de/">Base4NFDI</a
+      >
+    </div>
+    <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- JS -->
+    <script
+      src="js/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Activate tooltips -->
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
+
+    <!-- Filter bar -->
+    <script>
+      function searchActivities() {
+        const cardContainer = document.getElementById('card-grid');
+        const cards = cardContainer.getElementsByClassName('card');
+
+        let filter = [];
+        filter[0] = document.getElementById('card-filter-text').value.toUpperCase();
+        filter[1] = document.getElementById('card-filter-topic').value;
+        filter[2] = document.getElementById('card-filter-cycle').value;
+        filter[3] = document.getElementById('card-filter-deliverable').value;
+        filter[4] = document.getElementById('card-filter-status').value;
+
+        for (let i = 0; i < cards.length; i++) {
+          let card = cards[i];
+          let text = card.querySelector('.card-body h2.card-title').innerText;
+          let tags = card.querySelector('.card-body .tags').innerText;
+
+          if (
+            text.toUpperCase().indexOf(filter[0]) > -1 &&
+            tags.indexOf(filter[1]) > -1 &&
+            tags.indexOf(filter[2]) > -1 &&
+            tags.indexOf(filter[3]) > -1 &&
+            tags.indexOf(filter[4]) > -1
+          ) {
+            cards[i].style.display = '';
+          } else {
+            cards[i].style.display = 'none';
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

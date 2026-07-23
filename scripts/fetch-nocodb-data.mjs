@@ -7,11 +7,13 @@
  *
  * Optional env:
  *   NOCODB_BASE_URL, NOCODB_TABLE_ID, NOCODB_VIEW_ID, NOCODB_PAGE_SIZE, OUTPUT_JSON
+ *   FETCH_TIMEOUT_MS — per-request timeout (default: 60000)
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { fetchNocoDbRecords, parsePositiveInt } from "./lib/http-utils.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
@@ -38,7 +40,10 @@ function loadDotEnv() {
       }
       if (!(key in process.env)) process.env[key] = value;
     }
-  } catch {
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      throw new Error(`Failed to read .env: ${error.message}`);
+    }
     // .env is optional when vars are exported in the shell/CI
   }
 }
@@ -84,43 +89,6 @@ function normalizeRecord(raw) {
   };
 }
 
-async function fetchAllRecords({ baseUrl, tableId, viewId, token, pageSize }) {
-  const records = [];
-  let offset = 0;
-
-  while (true) {
-    const params = new URLSearchParams({
-      offset: String(offset),
-      limit: String(pageSize),
-      where: "",
-      viewId,
-    });
-
-    const url = `${baseUrl}/api/v2/tables/${tableId}/records?${params}`;
-    const response = await fetch(url, {
-      headers: { "xc-token": token },
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-      throw new Error(`NocoDB request failed (${response.status}): ${body}`);
-    }
-
-    const payload = await response.json();
-    const batch = Array.isArray(payload?.list) ? payload.list : [];
-    records.push(...batch);
-
-    const pageInfo = payload?.pageInfo;
-    if (pageInfo?.isLastPage === true || batch.length < pageSize) {
-      break;
-    }
-
-    offset += batch.length;
-  }
-
-  return records;
-}
-
 async function main() {
   loadDotEnv();
 
@@ -138,19 +106,35 @@ async function main() {
   );
   const tableId = process.env.NOCODB_TABLE_ID ?? "m3zt5vqlyja927x";
   const viewId = process.env.NOCODB_VIEW_ID ?? "vwiouc4g6dgp01qp";
-  const pageSize = Number(process.env.NOCODB_PAGE_SIZE ?? "100");
+  const pageSize = parsePositiveInt(
+    process.env.NOCODB_PAGE_SIZE,
+    100,
+    "NOCODB_PAGE_SIZE"
+  );
+  const timeoutMs = parsePositiveInt(
+    process.env.FETCH_TIMEOUT_MS,
+    60_000,
+    "FETCH_TIMEOUT_MS"
+  );
   const outputPath = resolve(
     repoRoot,
     process.env.OUTPUT_JSON ?? "static/data.json"
   );
 
-  const rawRecords = await fetchAllRecords({
+  const rawRecords = await fetchNocoDbRecords({
     baseUrl,
     tableId,
     viewId,
     token,
     pageSize,
+    timeoutMs,
   });
+
+  if (rawRecords.length === 0) {
+    throw new Error(
+      `NocoDB returned 0 records for table ${tableId} (view ${viewId}) — refusing to overwrite ${outputPath}`
+    );
+  }
 
   const records = rawRecords.map(normalizeRecord);
   const payload = {

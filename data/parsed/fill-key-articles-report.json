@@ -1,0 +1,612 @@
+{
+  "mode": "apply",
+  "planned_at": "2026-07-23T09:44:29.822Z",
+  "totals": {
+    "rows": 101,
+    "to_fill": 94,
+    "skipped": 7
+  },
+  "updates": [
+    {
+      "id": 11,
+      "basic_service": "DMP",
+      "inc_name": "RADAR",
+      "key_article": "dmp-radar"
+    },
+    {
+      "id": 12,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — NFDI4Chem",
+      "key_article": "dmp-template-development-nfdi4chem"
+    },
+    {
+      "id": 13,
+      "basic_service": "DMP",
+      "inc_name": "Training & Outreach — NFDI4Health",
+      "key_article": "dmp-training-and-outreach-nfdi4health"
+    },
+    {
+      "id": 14,
+      "basic_service": "DMP",
+      "inc_name": "FAIRmat",
+      "key_article": "dmp-fairmat"
+    },
+    {
+      "id": 15,
+      "basic_service": "DMP",
+      "inc_name": "Coscine",
+      "key_article": "dmp-coscine"
+    },
+    {
+      "id": 16,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Integration — FAIRagro",
+      "key_article": "dmp-rdmo-integration-fairagro"
+    },
+    {
+      "id": 17,
+      "basic_service": "DMP",
+      "inc_name": "Training & Outreach — Text+",
+      "key_article": "dmp-training-and-outreach-textplus"
+    },
+    {
+      "id": 18,
+      "basic_service": "DMP",
+      "inc_name": "Training & Outreach — NFDI4Cat",
+      "key_article": "dmp-training-and-outreach-nfdi4cat"
+    },
+    {
+      "id": 19,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — NFDI4Health",
+      "key_article": "dmp-template-development-nfdi4health"
+    },
+    {
+      "id": 20,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — MaRDI",
+      "key_article": "dmp-template-development-mardi"
+    },
+    {
+      "id": 21,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Microbiota",
+      "key_article": "dmp-rdmo-hosting-nfdi4microbiota"
+    },
+    {
+      "id": 22,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Energy",
+      "key_article": "dmp-rdmo-hosting-nfdi4energy"
+    },
+    {
+      "id": 23,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — MatWerk",
+      "key_article": "dmp-rdmo-hosting-matwerk"
+    },
+    {
+      "id": 24,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4BIOIMAGE",
+      "key_article": "dmp-rdmo-hosting-nfdi4bioimage"
+    },
+    {
+      "id": 25,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Health",
+      "key_article": "dmp-rdmo-hosting-nfdi4health"
+    },
+    {
+      "id": 26,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Integration — MaRDI",
+      "key_article": "dmp-rdmo-integration-mardi"
+    },
+    {
+      "id": 27,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — NFDI4Culture",
+      "key_article": "dmp-template-development-nfdi4culture"
+    },
+    {
+      "id": 28,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — NFDI4Memory",
+      "key_article": "dmp-template-development-nfdi4memory"
+    },
+    {
+      "id": 29,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — NFDI4Objects, NFDI4Culture",
+      "key_article": "dmp-template-development-nfdi4objects-nfdi4culture"
+    },
+    {
+      "id": 30,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — FAIRagro",
+      "key_article": "dmp-template-development-fairagro"
+    },
+    {
+      "id": 31,
+      "basic_service": "DMP",
+      "inc_name": "Template Development — Text+",
+      "key_article": "dmp-template-development-textplus"
+    },
+    {
+      "id": 32,
+      "basic_service": "DMP",
+      "inc_name": "Training & Outreach — NFDI4Chem",
+      "key_article": "dmp-training-and-outreach-nfdi4chem"
+    },
+    {
+      "id": 33,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Ing",
+      "key_article": "dmp-rdmo-hosting-nfdi4ing"
+    },
+    {
+      "id": 34,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Chem",
+      "key_article": "dmp-rdmo-hosting-nfdi4chem"
+    },
+    {
+      "id": 35,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — FAIRagro",
+      "key_article": "dmp-rdmo-hosting-fairagro"
+    },
+    {
+      "id": 36,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Integration — NFDI4Biodiversity",
+      "key_article": "dmp-rdmo-integration-nfdi4biodiversity"
+    },
+    {
+      "id": 37,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Culture",
+      "key_article": "dmp-rdmo-hosting-nfdi4culture"
+    },
+    {
+      "id": 38,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — MaRDI",
+      "key_article": "dmp-rdmo-hosting-mardi"
+    },
+    {
+      "id": 39,
+      "basic_service": "DMP",
+      "inc_name": "RDMO Hosting — NFDI4Earth",
+      "key_article": "dmp-rdmo-hosting-nfdi4earth"
+    },
+    {
+      "id": 40,
+      "basic_service": "IAM",
+      "inc_name": "Single-Sign-On for TS4NFDI services",
+      "key_article": "iam-single-sign-on-for-ts4nfdi-services"
+    },
+    {
+      "id": 41,
+      "basic_service": "IAM",
+      "inc_name": "Come2Data - Competence Center for Interdisciplinary Data Science",
+      "key_article": "iam-come2data-competence-center-for-interdisciplinary-data-science"
+    },
+    {
+      "id": 42,
+      "basic_service": "IAM",
+      "inc_name": "AgiMo: Data - driven agile planning for responsible mobility",
+      "key_article": "iam-agimo-data-driven-agile-planning-for-responsible-mobility"
+    },
+    {
+      "id": 43,
+      "basic_service": "IAM",
+      "inc_name": "AAI service integration into LARA",
+      "key_article": "iam-aai-service-integration-into-lara"
+    },
+    {
+      "id": 44,
+      "basic_service": "IAM",
+      "inc_name": "Data Ingest Service",
+      "key_article": "iam-data-ingest-service"
+    },
+    {
+      "id": 45,
+      "basic_service": "IAM",
+      "inc_name": "Chaldene: Accessible High-Performance Computing for Image Processing",
+      "key_article": "iam-chaldene-accessible-high-performance-computing-for-image-processing"
+    },
+    {
+      "id": 46,
+      "basic_service": "IAM",
+      "inc_name": "Single Sign-On for NFDI internal ICT tools",
+      "key_article": "iam-single-sign-on-for-nfdi-internal-ict-tools"
+    },
+    {
+      "id": 47,
+      "basic_service": "IAM",
+      "inc_name": "Best practice AAI for BERD Data Portal",
+      "key_article": "iam-best-practice-aai-for-berd-data-portal"
+    },
+    {
+      "id": 48,
+      "basic_service": "IAM",
+      "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
+      "key_article": "iam-gfbio-single-sign-on-for-nfdi4biodiversity"
+    },
+    {
+      "id": 49,
+      "basic_service": "IAM",
+      "inc_name": "Opening up the SimpleVM Bielefeld University Installation for external collaborations",
+      "key_article": "iam-opening-up-the-simplevm-bielefeld-university-installation-for-external-collaborations"
+    },
+    {
+      "id": 50,
+      "basic_service": "IAM",
+      "inc_name": "Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI",
+      "key_article": "iam-opening-the-cloud-based-workflow-manager-clowm-to-the-whole-nfdi"
+    },
+    {
+      "id": 51,
+      "basic_service": "IAM",
+      "inc_name": "NFDI AAI for DALIA",
+      "key_article": "iam-nfdi-aai-for-dalia"
+    },
+    {
+      "id": 52,
+      "basic_service": "IAM",
+      "inc_name": "Integration: Aruna Data Orchestration Engine with Infrastructure Proxy",
+      "key_article": "iam-integration-aruna-data-orchestration-engine-with-infrastructure-proxy"
+    },
+    {
+      "id": 53,
+      "basic_service": "IAM",
+      "inc_name": "Jupyter4NFDI accessible for NFDI and beyond",
+      "key_article": "iam-jupyter4nfdi-accessible-for-nfdi-and-beyond"
+    },
+    {
+      "id": 54,
+      "basic_service": "IAM",
+      "inc_name": "BIIGLE",
+      "key_article": "iam-biigle"
+    },
+    {
+      "id": 55,
+      "basic_service": "IAM",
+      "inc_name": "WissKI",
+      "key_article": "iam-wisski"
+    },
+    {
+      "id": 56,
+      "basic_service": "IAM",
+      "inc_name": "Terminology Services2.0",
+      "key_article": "iam-terminology-services2-0"
+    },
+    {
+      "id": 57,
+      "basic_service": "IAM",
+      "inc_name": "Open Energy Platform",
+      "key_article": "iam-open-energy-platform"
+    },
+    {
+      "id": 58,
+      "basic_service": "IAM",
+      "inc_name": "NOMAD Integration",
+      "key_article": "iam-nomad-integration"
+    },
+    {
+      "id": 59,
+      "basic_service": "IAM",
+      "inc_name": "NFDI4CAT Repository",
+      "key_article": "iam-nfdi4cat-repository"
+    },
+    {
+      "id": 60,
+      "basic_service": "IAM",
+      "inc_name": "File Transfer Service FTS",
+      "key_article": "iam-file-transfer-service-fts"
+    },
+    {
+      "id": 61,
+      "basic_service": "IAM",
+      "inc_name": "Forum 4 MICA",
+      "key_article": "iam-forum-4-mica"
+    },
+    {
+      "id": 62,
+      "basic_service": "IAM",
+      "inc_name": "FairAgro",
+      "key_article": "iam-fairagro"
+    },
+    {
+      "id": 63,
+      "basic_service": "IAM",
+      "inc_name": "DataPlant",
+      "key_article": "iam-dataplant"
+    },
+    {
+      "id": 64,
+      "basic_service": "IAM",
+      "inc_name": "Coscine-2",
+      "key_article": "iam-coscine-2"
+    },
+    {
+      "id": 65,
+      "basic_service": "IAM",
+      "inc_name": "Come2Data",
+      "key_article": "iam-come2data"
+    },
+    {
+      "id": 66,
+      "basic_service": "IAM",
+      "inc_name": "NFDIxCS",
+      "key_article": "iam-nfdixcs"
+    },
+    {
+      "id": 67,
+      "basic_service": "IAM",
+      "inc_name": "Authorisation on Objects",
+      "key_article": "iam-authorisation-on-objects"
+    },
+    {
+      "id": 68,
+      "basic_service": "IAM",
+      "inc_name": "Integration of NFDI AAI to Open edX",
+      "key_article": "iam-integration-of-nfdi-aai-to-open-edx"
+    },
+    {
+      "id": 69,
+      "basic_service": "IAM",
+      "inc_name": "Terminology Service",
+      "key_article": "iam-terminology-service"
+    },
+    {
+      "id": 70,
+      "basic_service": "IAM",
+      "inc_name": "NFDI4Culture",
+      "key_article": "iam-nfdi4culture"
+    },
+    {
+      "id": 71,
+      "basic_service": "IAM",
+      "inc_name": "FDPG - Analysing data from clinical care",
+      "key_article": "iam-fdpg-analysing-data-from-clinical-care"
+    },
+    {
+      "id": 72,
+      "basic_service": "IAM",
+      "inc_name": "Minimal OIDC login",
+      "key_article": "iam-minimal-oidc-login"
+    },
+    {
+      "id": 73,
+      "basic_service": "IAM",
+      "inc_name": "ArgoCD",
+      "key_article": "iam-argocd"
+    },
+    {
+      "id": 74,
+      "basic_service": "IAM",
+      "inc_name": "Coscine",
+      "key_article": "iam-coscine"
+    },
+    {
+      "id": 75,
+      "basic_service": "IAM",
+      "inc_name": "JARDS Attribute Queries in RegApp",
+      "key_article": "iam-jards-attribute-queries-in-regapp"
+    },
+    {
+      "id": 76,
+      "basic_service": "IAM",
+      "inc_name": "MetadataHub",
+      "key_article": "iam-metadatahub"
+    },
+    {
+      "id": 77,
+      "basic_service": "IAM",
+      "inc_name": "Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service",
+      "key_article": "iam-pilot-project-a-prototypical-integration-of-each-of-the-community-aai-solutions-for-the-authentication-to-the-rdmo-nfdi4ing-service"
+    },
+    {
+      "id": 78,
+      "basic_service": "TS",
+      "inc_name": "nmrXiv",
+      "key_article": "ts-nmrxiv"
+    },
+    {
+      "id": 79,
+      "basic_service": "TS",
+      "inc_name": "ChEBI",
+      "key_article": "ts-chebi"
+    },
+    {
+      "id": 80,
+      "basic_service": "TS",
+      "inc_name": "Coconut",
+      "key_article": "ts-coconut"
+    },
+    {
+      "id": 81,
+      "basic_service": "TS",
+      "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+      "key_article": "ts-nfdi4cat-central-data-repository-repo4cat"
+    },
+    {
+      "id": 82,
+      "basic_service": "TS",
+      "inc_name": "BERD Terminology Service",
+      "key_article": "ts-berd-terminology-service"
+    },
+    {
+      "id": 83,
+      "basic_service": "TS",
+      "inc_name": "Terminology service for Plasma-MDS",
+      "key_article": "ts-terminology-service-for-plasma-mds"
+    },
+    {
+      "id": 84,
+      "basic_service": "TS",
+      "inc_name": "preVIEW",
+      "key_article": "ts-preview"
+    },
+    {
+      "id": 85,
+      "basic_service": "TS",
+      "inc_name": "Metadata Annotation Workbench",
+      "key_article": "ts-metadata-annotation-workbench"
+    },
+    {
+      "id": 86,
+      "basic_service": "TS",
+      "inc_name": "Discuss Data",
+      "key_article": "ts-discuss-data"
+    },
+    {
+      "id": 87,
+      "basic_service": "TS",
+      "inc_name": "Open Energy Platform",
+      "key_article": "ts-open-energy-platform"
+    },
+    {
+      "id": 88,
+      "basic_service": "TS",
+      "inc_name": "ICONCLASS",
+      "key_article": "ts-iconclass"
+    },
+    {
+      "id": 89,
+      "basic_service": "TS",
+      "inc_name": "Ontology of the historical German-language nomenclature",
+      "key_article": "ts-ontology-of-the-historical-german-language-nomenclature"
+    },
+    {
+      "id": 90,
+      "basic_service": "TS",
+      "inc_name": "Health Study Hub",
+      "key_article": "ts-health-study-hub"
+    },
+    {
+      "id": 91,
+      "basic_service": "TS",
+      "inc_name": "DALIA Search Portal",
+      "key_article": "ts-dalia-search-portal"
+    },
+    {
+      "id": 92,
+      "basic_service": "TS",
+      "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
+      "key_article": "ts-integrate-ts4nfdi-into-dmp4nfdi-rdmo-service"
+    },
+    {
+      "id": 93,
+      "basic_service": "TS",
+      "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
+      "key_article": "ts-enabling-semantic-interoperability-via-datacite-terminologies"
+    },
+    {
+      "id": 94,
+      "basic_service": "TS",
+      "inc_name": "Metabase",
+      "key_article": "ts-metabase"
+    },
+    {
+      "id": 95,
+      "basic_service": "TS",
+      "inc_name": "MathModDB",
+      "key_article": "ts-mathmoddb"
+    },
+    {
+      "id": 96,
+      "basic_service": "TS",
+      "inc_name": "FAIRagro Terminology Service",
+      "key_article": "ts-fairagro-terminology-service"
+    },
+    {
+      "id": 97,
+      "basic_service": "TS",
+      "inc_name": "TS4NDSI integration in Galaxy",
+      "key_article": "ts-ts4ndsi-integration-in-galaxy"
+    },
+    {
+      "id": 98,
+      "basic_service": "TS",
+      "inc_name": "TeSS",
+      "key_article": "ts-tess"
+    },
+    {
+      "id": 99,
+      "basic_service": "TS",
+      "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+      "key_article": "ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories"
+    },
+    {
+      "id": 100,
+      "basic_service": "TS",
+      "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+      "key_article": "ts-improving-interoperability-for-climate-and-energy-policy-ontologies"
+    },
+    {
+      "id": 101,
+      "basic_service": "TS",
+      "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+      "key_article": "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment"
+    },
+    {
+      "id": 102,
+      "basic_service": "TS",
+      "inc_name": "OstData & 4MMS",
+      "key_article": "ts-ostdata-and-4mms"
+    },
+    {
+      "id": 103,
+      "basic_service": "TS",
+      "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+      "key_article": "ts-semantic-and-interoperable-metadata-integration-for-eln-objects"
+    },
+    {
+      "id": 104,
+      "basic_service": "TS",
+      "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+      "key_article": "ts-integration-of-ontology-based-auto-completion-in-nfdi4immuno-excel-metadata-templates"
+    }
+  ],
+  "skipped": [
+    {
+      "id": 1,
+      "reason": "already_set",
+      "key_article": "ts-radar"
+    },
+    {
+      "id": 2,
+      "reason": "already_set",
+      "key_article": "ts-wdcc"
+    },
+    {
+      "id": 3,
+      "reason": "already_set",
+      "key_article": "ts-aims"
+    },
+    {
+      "id": 4,
+      "reason": "already_set",
+      "key_article": "iam-nfdi4ing-jupyter"
+    },
+    {
+      "id": 5,
+      "reason": "already_set",
+      "key_article": "dmp-nfdi4ing-engineering"
+    },
+    {
+      "id": 6,
+      "reason": "already_set",
+      "key_article": "dmp-nfdi4earth-rdmo"
+    },
+    {
+      "id": 8,
+      "reason": "already_set",
+      "key_article": "ts-sensorcv"
+    }
+  ]
+}
