@@ -5,13 +5,35 @@
 {% block content %}
 <section class="blog-list">
   <header class="dashboard-header">
-    <p class="breadcrumb"><a href="{{ get_url(path='/') | safe }}">Dashboard</a> / Reports</p>
+    <p class="breadcrumb">
+      <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
+      {% if section.extra.basic_service %}
+      <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
+      {{ section.extra.basic_service }}
+      {% else %}
+      Reports
+      {% endif %}
+    </p>
     <h2>{{ section.title }}</h2>
     {% if section.content %}
     <div class="dashboard-intro">{{ section.content | safe }}</div>
     {% endif %}
   </header>
 
+  {% if section.subsections %}
+  <div class="service-shortcuts" aria-label="Basic services">
+    {% for path in section.subsections %}
+    {% set service = get_section(path=path) %}
+    <a class="service-shortcut" href="{{ service.permalink | safe }}">
+      <span class="service-shortcut-code">{{ service.extra.basic_service | default(value=service.title) }}</span>
+      <span class="service-shortcut-label">{{ service.title }}</span>
+      <span class="service-shortcut-count">{{ service.pages | length }} report{% if service.pages | length != 1 %}s{% endif %}</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if section.pages %}
   <div class="table-panel">
     <ul class="blog-entries">
       {% for page in section.pages %}
@@ -29,5 +51,6 @@
       {% endfor %}
     </ul>
   </div>
+  {% endif %}
 </section>
 {% endblock %}

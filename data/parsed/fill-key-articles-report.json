@@ -280,7 +280,7 @@
     {
       "id": 56,
       "basic_service": "IAM",
-      "inc_name": "Terminology Services2.0",
+      "inc_name": "Terminology Servicess2.0",
       "key_article": "iam-terminology-services2-0"
     },
     {
@@ -358,7 +358,7 @@
     {
       "id": 69,
       "basic_service": "IAM",
-      "inc_name": "Terminology Service",
+      "inc_name": "Terminology Services",
       "key_article": "iam-terminology-service"
     },
     {
@@ -436,13 +436,13 @@
     {
       "id": 82,
       "basic_service": "TS",
-      "inc_name": "BERD Terminology Service",
+      "inc_name": "BERD Terminology Services",
       "key_article": "ts-berd-terminology-service"
     },
     {
       "id": 83,
       "basic_service": "TS",
-      "inc_name": "Terminology service for Plasma-MDS",
+      "inc_name": "Terminology Services for Plasma-MDS",
       "key_article": "ts-terminology-service-for-plasma-mds"
     },
     {
@@ -520,7 +520,7 @@
     {
       "id": 96,
       "basic_service": "TS",
-      "inc_name": "FAIRagro Terminology Service",
+      "inc_name": "FAIRagro Terminology Services",
       "key_article": "ts-fairagro-terminology-service"
     },
     {
@@ -550,7 +550,7 @@
     {
       "id": 101,
       "basic_service": "TS",
-      "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+      "inc_name": "Terminology Services Suite integration for WissKI authority data enrichment",
       "key_article": "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment"
     },
     {

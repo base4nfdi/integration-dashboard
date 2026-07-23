@@ -1,0 +1,42 @@
++++
+title = "Ontology of the historical German-language nomenclature"
+date = 2026-02-28
+[extra]
+key_article = "ts-ontology-of-the-historical-german-language-nomenclature"
+basic_service = "TS"
+status = "Finished"
+inc_start = "2025-08-14"
+inc_end = "2026-02-28"
+inc_cycle = 2
+inc_partner_publications = 0
+linked_partners = 0
+linked_entities = 0
+logo_project = "https://terminology.services.base4nfdi.de/img/ohdab.png"
++++
+
+The Ontology of the historical German-language nomenclature for offices and professions (OhdAB) provides classifications according to job profiles and requirement levels based on the "Classification of Occupations 2010/2020" (KldB 2010) for historical professions. The OhdAB is maintained and curated within FactGrid. FactGrid is an instance of Wikibase.
+
+Ontology of the historical German-language nomenclature is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
+
+## Current status
+
+**Finished** — cycle 2 completed on 2026-02-28.
+
+## Timeline
+
+- **Start:** 2025-08-14
+- **End:** 2026-02-28
+- **Cycle:** 2
+
+## Goals
+
+- Provision of the OhdAB in a Terminology Services
+- Automated workflow to update the OhdAB
+
+## Partners & entities
+
+- **Partner publications:** 0
+
+## Notes
+
+This report maps to row **ts-ontology-of-the-historical-german-language-nomenclature** in the NocoDB dashboard table.

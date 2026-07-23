@@ -1217,7 +1217,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "Terminology Services2.0",
+            "inc_name": "Terminology Servicess2.0",
             "inc_cycle": 3,
             "inc_status": "Finished",
             "partners": [
@@ -1225,7 +1225,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "Terminology Services2.0",
+            "inc_name": "Terminology Servicess2.0",
             "inc_cycle": 3,
             "inc_status": "Finished",
             "partners": []
@@ -1533,7 +1533,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "Terminology Service",
+            "inc_name": "Terminology Services",
             "inc_cycle": 1,
             "inc_status": "Running",
             "partners": [
@@ -1541,7 +1541,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "Terminology Service",
+            "inc_name": "Terminology Services",
             "inc_cycle": 1,
             "inc_status": "Running",
             "partners": []
@@ -1917,7 +1917,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "BERD Terminology Service",
+            "inc_name": "BERD Terminology Services",
             "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
@@ -1925,7 +1925,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "BERD Terminology Service",
+            "inc_name": "BERD Terminology Services",
             "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": []
@@ -1942,7 +1942,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "Terminology service for Plasma-MDS",
+            "inc_name": "Terminology Services for Plasma-MDS",
             "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
@@ -1950,7 +1950,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "Terminology service for Plasma-MDS",
+            "inc_name": "Terminology Services for Plasma-MDS",
             "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": []
@@ -2291,7 +2291,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "FAIRagro Terminology Service",
+            "inc_name": "FAIRagro Terminology Services",
             "inc_cycle": 3,
             "inc_status": "Running",
             "partners": [
@@ -2299,7 +2299,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "FAIRagro Terminology Service",
+            "inc_name": "FAIRagro Terminology Services",
             "inc_cycle": 3,
             "inc_status": "Running",
             "partners": []
@@ -2438,7 +2438,7 @@
         {
           "score": 2,
           "source": {
-            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+            "inc_name": "Terminology Services Suite integration for WissKI authority data enrichment",
             "inc_cycle": 4,
             "inc_status": "In preparation",
             "partners": [
@@ -2448,7 +2448,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+            "inc_name": "Terminology Services Suite integration for WissKI authority data enrichment",
             "inc_cycle": 4,
             "inc_status": "In preparation",
             "partners": []

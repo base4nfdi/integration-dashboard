@@ -381,7 +381,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Services2.0",
+        "inc_name": "Terminology Servicess2.0",
         "inc_cycle": 3,
         "inc_status": "Finished",
         "partners": [
@@ -389,7 +389,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Services2.0",
+        "inc_name": "Terminology Servicess2.0",
         "inc_cycle": 3,
         "inc_status": "Finished",
         "partners": []
@@ -697,7 +697,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Service",
+        "inc_name": "Terminology Services",
         "inc_cycle": 1,
         "inc_status": "Running",
         "partners": [
@@ -705,7 +705,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Service",
+        "inc_name": "Terminology Services",
         "inc_cycle": 1,
         "inc_status": "Running",
         "partners": []

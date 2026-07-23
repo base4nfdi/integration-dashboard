@@ -128,14 +128,14 @@
       "activityPage": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/"
     },
     {
-      "title": "BERD Terminology Service",
+      "title": "BERD Terminology Services",
       "cycle": 0,
       "status": "Finished",
       "start": "29.05.2024",
       "end": "19.11.2024",
-      "description": "BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.",
+      "description": "BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Services provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.",
       "goals": [
-        "Setting up a terminology service for BERD@NFDI using the Terminology Service Suite (TSS)",
+        "Setting up a Terminology Services for BERD@NFDI using the Terminology Services Suite (TSS)",
         "Provision of BERD related terminologies"
       ],
       "consortium": [
@@ -150,14 +150,14 @@
       ]
     },
     {
-      "title": "Terminology service for Plasma-MDS",
+      "title": "Terminology Services for Plasma-MDS",
       "cycle": 0,
       "status": "Finished",
       "start": "~",
       "end": "19.11.2024",
       "description": "The plasma ontology (Plasma-O) is a domain-specific ontology for low-temperature plasma science and technology. It aims to support the standardized documentation and annotation of data and information in this field. The ontology contains classes and properties for the entities which are relevant in typical plasma studies, such as plasma generating devices, media, materials and diagnostic methods.",
       "goals": [
-        "Provision of Plasma-O in a self-hosted terminology service"
+        "Provision of Plasma-O in a self-hosted Terminology Services"
       ],
       "consortium": [
         "NFDI4BIOIMAGE"
@@ -223,7 +223,7 @@
       "end": "10.2025",
       "description": "Discuss Data (www.discuss-data.net) is an open repository for storing, sharing and discussing research data on Eastern Europe, South Caucasus and Central Asia and is currently building further Community Spaces, for example for the Digital Humanities .The platform, launched in September 2020, is funded by the German Research Foundation (DFG, Project number 493011772) and operated by the Research Centre for East European Studies at the University of Bremen (FSO) and the Göttingen State and University Library (SUB). Discuss Data goes beyond ordinary repositories and offers an interactive online platform for the discussion and quality assessment of research data and creates a space for academic communication and for the community-specific publication, curation, annotation and discussion of research data. ",
       "goals": [
-        "Setting up a selfhosted terminology service based on OLS",
+        "Setting up a selfhosted Terminology Services based on OLS",
         "Adding this TS as backend source to the TS4NFDI API Gateway",
         "Provision of collection(s) via API Gateway",
         "Integration of TSS widgets"
@@ -260,7 +260,7 @@
       "status": "Finished",
       "start": "03.09.2025",
       "end": "31.03.2026",
-      "description": "Adding support for the globally used cultural heritage subject classification system iconclass.org to the Terminology Services 4 NFDI. This will allow Iconclass to be selected as a base data source, and to allow other systems to make use of the TS4NFDI hierarchy and graph widgets for visualization and as navigation aids.",
+      "description": "Adding support for the globally used cultural heritage subject classification system iconclass.org to the Terminology Servicess 4 NFDI. This will allow Iconclass to be selected as a base data source, and to allow other systems to make use of the TS4NFDI hierarchy and graph widgets for visualization and as navigation aids.",
       "goals": [
         "Providing ICONCLASS as a backend for the TS4NFDI API Gateway",
         "Usage of ICONCLASS via TSS widgets"
@@ -283,7 +283,7 @@
       "end": "02.2026",
       "description": "The Ontology of the historical German-language nomenclature for offices and professions (OhdAB) provides classifications according to job profiles and requirement levels based on the \"Classification of Occupations 2010/2020\" (KldB 2010) for historical professions. The OhdAB is maintained and curated within FactGrid. FactGrid is an instance of Wikibase.",
       "goals": [
-        "Provision of the OhdAB in a terminology service",
+        "Provision of the OhdAB in a Terminology Services",
         "Automated workflow to update the OhdAB"
       ],
       "consortium": [
@@ -339,7 +339,7 @@
       "end": "09.2026",
       "description": "AIMS (Applying Interoperable Metadata Standards) is developing a platform for creating, sharing, and reusing interoperable and machine-readable metadata profiles based on SHACL shapes. The project addresses key challenges in research data management by enabling researchers to model semantic metadata schemas in a modular and hierarchical fashion using elements from established controlled terminologies. AIMS provides a central web-UI for managing profiles, backed by repositories for storing validated metadata sets and integrating with electronic lab notebooks (ELNs) like eLabFTW and openBIS. The project consortium includes ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg.",
       "goals": [
-        "Replace current terminology providers with TS4NFDI API Gateway as unified terminology service",
+        "Replace current terminology providers with TS4NFDI API Gateway as unified Terminology Services",
         "Integrate TS4NFDI Service Suite widgets to AIMS"
       ],
       "consortium": [
@@ -372,7 +372,7 @@
       "status": "Running",
       "start": "03.2026",
       "end": "09.2026",
-      "description": "This incubator project aims to host the DataCite metadata model and controlled vocabularies within the TIB Terminology Services (TS) infrastructure and expose them through the TS4NFDI API Gateway. The goal is to provide a canonical, machine-actionable representation of DataCite terms, including stable URIs, labels, definitions, and versioning, that can be reused consistently across NFDI services and beyond. Rather than introducing a new ontology for metadata, the project operationalises an existing, widely adopted metadata standard inside the TS ecosystem, enabling downstream propagation to TS4NFDI services and client applications. In this way other services such as ELNs, DMPs or other data repositories could use the well-established DataCite terms through the API Gateway and the widgets of the Terminology Service Suite. In addition, the project will establish and maintain curated mappings between DataCite vocabularies and related schemas such as schema.org and DCAT, using the TS4NFDI mapping service. These centrally managed mappings will be provided via the mapping service to support semantic interoperability without requiring hard-coded, system-specific alignments across different knowledge domains.",
+      "description": "This incubator project aims to host the DataCite metadata model and controlled vocabularies within the TIB Terminology Servicess (TS) infrastructure and expose them through the TS4NFDI API Gateway. The goal is to provide a canonical, machine-actionable representation of DataCite terms, including stable URIs, labels, definitions, and versioning, that can be reused consistently across NFDI services and beyond. Rather than introducing a new ontology for metadata, the project operationalises an existing, widely adopted metadata standard inside the TS ecosystem, enabling downstream propagation to TS4NFDI services and client applications. In this way other services such as ELNs, DMPs or other data repositories could use the well-established DataCite terms through the API Gateway and the widgets of the Terminology Services Suite. In addition, the project will establish and maintain curated mappings between DataCite vocabularies and related schemas such as schema.org and DCAT, using the TS4NFDI mapping service. These centrally managed mappings will be provided via the mapping service to support semantic interoperability without requiring hard-coded, system-specific alignments across different knowledge domains.",
       "goals": [
         "host a canonical, machine-actionable representation of DataCite terms",
         "provision of mappings in the mapping service"
@@ -392,7 +392,7 @@
       "end": "09.2026",
       "description": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontolgogies, and connects to external systems such as the open research knowledge graph (ORKG).",
       "goals": [
-        "Hosting terminologies for Metabase in a terminology service",
+        "Hosting terminologies for Metabase in a Terminology Services",
         "Connect TIB TS to Metabase"
       ],
       "consortium": [
@@ -421,12 +421,12 @@
       "logoH": 300
     },
     {
-      "title": "FAIRagro Terminology Service",
+      "title": "FAIRagro Terminology Services",
       "cycle": "3",
       "status": "Running",
       "start": "03.2026",
       "end": "09.2026",
-      "description": "The main purpose of the incubator project is a strong integration of TS4NFDI services with FAIRagro products and services. This includes the following concrete project objectives: 1)Automatic instantiation and updating of a FAIRagro Terminology Service Instance based on the FAIRagro Standards Inventory, 2) Implementation of mappings (preferably using the SciWin workflow engine developed in FAIRagro) for terminologies that are not yet available in a form directly usable for consumption by the TS4NFDI infrastructure, by map terminology distribution files in different formats to e.g. SKOS thesauri that can be used in a backend Skosmos service and 3) Demonstration of use of the TS4NFDI instance in selected FAIRagro products.",
+      "description": "The main purpose of the incubator project is a strong integration of TS4NFDI services with FAIRagro products and services. This includes the following concrete project objectives: 1)Automatic instantiation and updating of a FAIRagro Terminology Services Instance based on the FAIRagro Standards Inventory, 2) Implementation of mappings (preferably using the SciWin workflow engine developed in FAIRagro) for terminologies that are not yet available in a form directly usable for consumption by the TS4NFDI infrastructure, by map terminology distribution files in different formats to e.g. SKOS thesauri that can be used in a backend Skosmos service and 3) Demonstration of use of the TS4NFDI instance in selected FAIRagro products.",
       "goals": [
         "Provision of terminologies in a Terminlogy Service",
         "Establishing workflow of alignment integration",
@@ -446,7 +446,7 @@
       "status": "In preparation",
       "start": "Q3/2026",
       "end": "-",
-      "description": "To strengthen FAIR data practices and semantic interoperability within research tools and workflows, we propose to integrate Galaxy with the TS4NFDI Terminology Service. This integration will allow Galaxy datatype definitions to be annotated with standardized concepts from the EDAM ontology, accessed dynamically through TS4NFDI. By linking Galaxy datatypes to persistent ontology identifiers, researchers will be supported in selecting, interpreting, and reusing data in a more transparent and interoperable way. As a demonstrator, we will extend a subset of Galaxy datatype descriptors with references to EDAM terms served via TS4NFDI. When users interact with these datatypes in Galaxy, they will be able to view the corresponding ontology concepts and their definitions directly within the platform via the TS4nfdi widgets. Workflows and outputs will then carry these semantic annotations forward, enabling improved provenance tracking, automated metadata enrichment, and easier integration with NFDI services. This work will demonstrate how Galaxy can adopt shared terminology infrastructures to lower barriers to FAIR data compliance and enable consistent, domain-appropriate semantic annotation across research communities.",
+      "description": "To strengthen FAIR data practices and semantic interoperability within research tools and workflows, we propose to integrate Galaxy with the TS4NFDI Terminology Services. This integration will allow Galaxy datatype definitions to be annotated with standardized concepts from the EDAM ontology, accessed dynamically through TS4NFDI. By linking Galaxy datatypes to persistent ontology identifiers, researchers will be supported in selecting, interpreting, and reusing data in a more transparent and interoperable way. As a demonstrator, we will extend a subset of Galaxy datatype descriptors with references to EDAM terms served via TS4NFDI. When users interact with these datatypes in Galaxy, they will be able to view the corresponding ontology concepts and their definitions directly within the platform via the TS4nfdi widgets. Workflows and outputs will then carry these semantic annotations forward, enabling improved provenance tracking, automated metadata enrichment, and easier integration with NFDI services. This work will demonstrate how Galaxy can adopt shared terminology infrastructures to lower barriers to FAIR data compliance and enable consistent, domain-appropriate semantic annotation across research communities.",
       "goals": [],
       "consortium": [],
       "logo": "galaxy-eu.svg",
@@ -515,12 +515,12 @@
       "logoH": 250
     },
     {
-      "title": "Terminology Service Suite integration for WissKI authority data enrichment",
+      "title": "Terminology Services Suite integration for WissKI authority data enrichment",
       "cycle": "4",
       "status": "In preparation",
       "start": "Q3/2026",
       "end": "-",
-      "description": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
+      "description": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Services Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
       "goals": [],
       "consortium": [
         "NFDI4Culture",
