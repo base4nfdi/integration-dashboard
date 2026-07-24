@@ -24,9 +24,21 @@
   <div class="service-shortcuts" aria-label="Basic services">
     {% for path in section.subsections %}
     {% set service = get_section(path=path) %}
-    <a class="service-shortcut" href="{{ service.permalink | safe }}">
-      <span class="service-shortcut-code">{{ service.extra.basic_service | default(value=service.title) }}</span>
+    {% set service_code = service.extra.basic_service | default(value=service.title) %}
+    <a class="service-shortcut{% if service.extra.logo %} service-shortcut--logo{% endif %}" href="{{ service.permalink | safe }}">
+      {% if service.extra.logo %}
+      <img
+        class="service-shortcut-logo"
+        src="{{ get_url(path=service.extra.logo) | safe }}"
+        alt="{{ service_code }}4NFDI"
+        title="{{ service.title }}"
+        loading="lazy"
+        decoding="async"
+      >
+      {% else %}
+      <span class="service-shortcut-code">{{ service_code }}</span>
       <span class="service-shortcut-label">{{ service.title }}</span>
+      {% endif %}
       <span class="service-shortcut-count">{{ service.pages | length }} report{% if service.pages | length != 1 %}s{% endif %}</span>
     </a>
     {% endfor %}

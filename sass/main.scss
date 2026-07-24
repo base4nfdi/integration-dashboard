@@ -251,7 +251,7 @@ main.container:has(.dashboard) {
 
 .dashboard-intro {
   color: var(--text-muted);
-  max-width: 60ch;
+  width: calc(100% - 3.5rem);
 }
 
 .summary-cards {
@@ -651,7 +651,7 @@ main.container:has(.dashboard) {
 
 .service-shortcuts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
   gap: 1rem;
   margin: 0 0 1.5rem;
 }
@@ -667,7 +667,7 @@ main.container:has(.dashboard) {
   box-shadow: var(--shadow);
   color: var(--text);
   text-decoration: none;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .service-shortcut:hover {
@@ -675,6 +675,30 @@ main.container:has(.dashboard) {
   color: var(--text);
   font-weight: 600;
   transform: translateY(-1px);
+}
+
+.service-shortcut--logo {
+  gap: 0.75rem;
+  padding: 0;
+  overflow: hidden;
+  background: var(--nfdi-anthrazit);
+  border-color: transparent;
+  color: var(--nfdi-white);
+}
+
+.service-shortcut--logo:hover {
+  border-color: var(--accent);
+  color: var(--nfdi-white);
+  font-weight: 500;
+  box-shadow: 0 12px 28px rgba(69, 84, 107, 0.35);
+}
+
+.service-shortcut-logo {
+  display: block;
+  width: 80%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: var(--nfdi-anthrazit);
 }
 
 .service-shortcut-code {
@@ -695,6 +719,12 @@ main.container:has(.dashboard) {
   color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 500;
+}
+
+.service-shortcut--logo .service-shortcut-count {
+  margin: 0;
+  padding: 0 1.1rem 1rem;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .blog-entries {
