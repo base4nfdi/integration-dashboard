@@ -28,7 +28,7 @@ import {
 
 const SOURCE_ID = "dmp4nfdi";
 const BASIC_SERVICE = "DMP";
-const SITE_BASE = "https://www.dmp4nfdi.de/";
+const SITE_BASE = "https://dmp.services.base4nfdi.de/";
 const DEFAULT_INPUT = join(repoRoot, "data/sources/dmp4nfdi/incubator.md");
 const DEFAULT_OUTPUT = join(repoRoot, "data/parsed/dmp4nfdi.json");
 
