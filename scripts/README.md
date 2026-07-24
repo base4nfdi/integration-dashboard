@@ -43,8 +43,9 @@ fetch-source-pages  →   parse-* / parse-source-pages
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
 3. `fetch-nocodb-data.mjs` — refresh `static/data.json` (skipped if no token)  
 4. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
-5. `generate-incubator-pages.mjs` — create missing Markdown report pages  
-6. `zola build`
+5. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
+6. `generate-incubator-pages.mjs` — create missing Markdown report pages  
+7. `zola build`
 
 ---
 
@@ -66,7 +67,7 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | Variable | Default | Script |
 | --- | --- | --- |
 | `OUTPUT_DIR` | `data/sources` | `fetch-source-pages.mjs` |
-| `FETCH_RETRIES` | `2` | `fetch-source-pages.mjs`, `cache-partner-logos.mjs` |
+| `FETCH_RETRIES` | `2` | `fetch-source-pages.mjs`, `cache-partner-logos.mjs`, `cache-fonts.mjs` |
 | `OUTPUT_JSON` | `static/data.json` | `fetch-nocodb-data.mjs`, `cache-partner-logos.mjs` |
 | `DMP_INPUT` / `DMP_OUTPUT` | `data/sources/dmp4nfdi/…` → `data/parsed/…` | `parse-dmp4nfdi.mjs` |
 | `IAM_INPUT` / `IAM_OUTPUT` | `data/sources/iam4nfdi/…` → `data/parsed/…` | `parse-iam4nfdi.mjs` |
@@ -167,7 +168,29 @@ Known broken upstream URLs can be remapped in `LOGO_URL_ALIASES` inside `scripts
 
 ---
 
-### 5. Generate incubator pages
+### 5. Cache project fonts
+
+**File:** `cache-fonts.mjs`
+
+Downloads the Base4NFDI Nicepage `fonts.css` and every relative `.woff2` it references into `static/fonts/`. The site template loads the local stylesheet so Fira Sans is not blocked by missing CORS headers on the upstream host. Existing files are skipped unless `--force` is passed.
+
+```bash
+node scripts/cache-fonts.mjs
+node scripts/cache-fonts.mjs --dry-run
+node scripts/cache-fonts.mjs --force
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--dry-run` | Report planned downloads; no files written (CSS is still fetched to discover file list) |
+| `--force` | Re-download even when local files already exist |
+| `-h`, `--help` | Show usage |
+
+A `manifest.json` beside the cached fonts maps source URL → local path.
+
+---
+
+### 6. Generate incubator pages
 
 **File:** `generate-incubator-pages.mjs`
 
@@ -187,7 +210,7 @@ node scripts/generate-incubator-pages.mjs --force
 
 ---
 
-### 6. Push parsed sources into NocoDB
+### 7. Push parsed sources into NocoDB
 
 **File:** `push-source-pages-to-nocodb.mjs`
 
@@ -214,7 +237,7 @@ Requires `NOCODB_API_TOKEN` for live NocoDB access (not needed for `--local` dry
 
 ---
 
-### 7. Patch logo fields
+### 8. Patch logo fields
 
 **File:** `patch-logo-consortia.mjs`
 
@@ -240,7 +263,7 @@ node scripts/patch-logo-consortia.mjs --service ts4nfdi --apply
 
 ---
 
-### 8. Fill empty key articles
+### 9. Fill empty key articles
 
 **File:** `fill-key-articles.mjs`
 
@@ -269,6 +292,8 @@ These modules are imported by the scripts above; they are not meant to be run di
 | --- | --- |
 | `lib/http-utils.mjs` | Timed `fetch`, retries helpers, NocoDB list pagination |
 | `lib/parse-utils.mjs` | Record shape, date/status/partner normalization, NocoDB matching, JSON I/O |
+| `lib/logo-cache.mjs` | Partner logo download, manifest, Markdown/data path rewrites |
+| `lib/font-cache.mjs` | Project font CSS + woff2 download into `static/fonts/` |
 
 ---
 
