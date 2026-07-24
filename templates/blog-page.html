@@ -63,18 +63,30 @@
         {% if page.extra.logo_project or page.extra.logo_consortia %}
         <div class="blog-post-logo-partners">
           {% if page.extra.logo_project %}
+          {% set logo_project_raw = page.extra.logo_project %}
+          {% if logo_project_raw is starting_with("http://") or logo_project_raw is starting_with("https://") %}
+            {% set logo_project_src = logo_project_raw %}
+          {% else %}
+            {% set logo_project_src = get_url(path=logo_project_raw) %}
+          {% endif %}
           <img
             class="blog-post-logo blog-post-logo-project"
-            src="{{ page.extra.logo_project }}"
+            src="{{ logo_project_src | safe }}"
             alt="{{ page.title }} project logo"
             loading="lazy"
             decoding="async"
           >
           {% endif %}
           {% if page.extra.logo_consortia %}
+          {% set logo_consortia_raw = page.extra.logo_consortia %}
+          {% if logo_consortia_raw is starting_with("http://") or logo_consortia_raw is starting_with("https://") %}
+            {% set logo_consortia_src = logo_consortia_raw %}
+          {% else %}
+            {% set logo_consortia_src = get_url(path=logo_consortia_raw) %}
+          {% endif %}
           <img
             class="blog-post-logo blog-post-logo-consortia"
-            src="{{ page.extra.logo_consortia }}"
+            src="{{ logo_consortia_src | safe }}"
             alt="Consortia logo"
             loading="lazy"
             decoding="async"

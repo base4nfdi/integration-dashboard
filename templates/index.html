@@ -96,6 +96,16 @@
 (function () {
   const dataUrl = "{{ get_url(path='data.json') | safe }}";
   const incubatorBaseUrl = "{{ get_url(path='@/incubators/_index.md') | safe }}";
+  const staticRootUrl = "{{ get_url(path='/') | safe }}";
+
+  /** Resolve remote or site-relative logo paths for <img src>. */
+  function resolveAssetUrl(path) {
+    const value = String(path || "").trim();
+    if (!value) return "";
+    if (/^(?:https?:|data:|\/\/)/i.test(value)) return value;
+    const root = staticRootUrl.endsWith("/") ? staticRootUrl : staticRootUrl + "/";
+    return root + value.replace(/^\//, "");
+  }
 
   /** Basic-service codes → horizontal top logos. */
   const basicServiceLogos = {
@@ -411,8 +421,8 @@
     }
 
     if (column.type === "logos") {
-      const project = record.logo_project;
-      const consortia = record.logo_consortia;
+      const project = resolveAssetUrl(record.logo_project);
+      const consortia = resolveAssetUrl(record.logo_consortia);
       if (!project && !consortia) return `<td class="row-logos">—</td>`;
       const imgs = [];
       if (project) {

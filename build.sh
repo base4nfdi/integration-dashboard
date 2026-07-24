@@ -27,6 +27,9 @@ else
   echo "No NOCODB_API_TOKEN / .env — using existing static/data.json" >&2
 fi
 
+echo "==> Caching partner logos into static/"
+node scripts/cache-partner-logos.mjs
+
 echo "==> Generating missing incubator pages"
 node scripts/generate-incubator-pages.mjs
 

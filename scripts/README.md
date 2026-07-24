@@ -42,8 +42,9 @@ fetch-source-pages  →   parse-* / parse-source-pages
 1. `fetch-source-pages.mjs` — download source pages  
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
 3. `fetch-nocodb-data.mjs` — refresh `static/data.json` (skipped if no token)  
-4. `generate-incubator-pages.mjs` — create missing Markdown report pages  
-5. `zola build`
+4. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
+5. `generate-incubator-pages.mjs` — create missing Markdown report pages  
+6. `zola build`
 
 ---
 
@@ -65,8 +66,8 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | Variable | Default | Script |
 | --- | --- | --- |
 | `OUTPUT_DIR` | `data/sources` | `fetch-source-pages.mjs` |
-| `FETCH_RETRIES` | `2` | `fetch-source-pages.mjs` |
-| `OUTPUT_JSON` | `static/data.json` | `fetch-nocodb-data.mjs` |
+| `FETCH_RETRIES` | `2` | `fetch-source-pages.mjs`, `cache-partner-logos.mjs` |
+| `OUTPUT_JSON` | `static/data.json` | `fetch-nocodb-data.mjs`, `cache-partner-logos.mjs` |
 | `DMP_INPUT` / `DMP_OUTPUT` | `data/sources/dmp4nfdi/…` → `data/parsed/…` | `parse-dmp4nfdi.mjs` |
 | `IAM_INPUT` / `IAM_OUTPUT` | `data/sources/iam4nfdi/…` → `data/parsed/…` | `parse-iam4nfdi.mjs` |
 | `TS_INPUT` / `TS_OUTPUT` | `data/sources/ts4nfdi/…` → `data/parsed/…` | `parse-ts4nfdi.mjs` |
@@ -140,7 +141,33 @@ Requires `NOCODB_API_TOKEN`.
 
 ---
 
-### 4. Generate incubator pages
+### 4. Cache partner logos
+
+**File:** `cache-partner-logos.mjs`
+
+Downloads remote `logo_project` / `logo_consortia` images into `static/img/partner-logos/` and rewrites those fields in `static/data.json` plus incubator Markdown frontmatter to site-relative paths (`img/partner-logos/<id>.<ext>`). If a logo file already exists, the download is skipped.
+
+```bash
+node scripts/cache-partner-logos.mjs
+node scripts/cache-partner-logos.mjs --dry-run
+node scripts/cache-partner-logos.mjs --force
+node scripts/cache-partner-logos.mjs --skip-markdown
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--dry-run` | Report planned downloads/rewrites; no files written |
+| `--force` | Re-download even when a local file already exists |
+| `--skip-markdown` | Only update `static/data.json` / logo files |
+| `-h`, `--help` | Show usage |
+
+A `manifest.json` beside the cached images maps source URL → local path.
+
+Known broken upstream URLs can be remapped in `LOGO_URL_ALIASES` inside `scripts/lib/logo-cache.mjs` (e.g. Chaldene’s moved GitHub path) so builds keep working before the source site updates.
+
+---
+
+### 5. Generate incubator pages
 
 **File:** `generate-incubator-pages.mjs`
 
@@ -160,7 +187,7 @@ node scripts/generate-incubator-pages.mjs --force
 
 ---
 
-### 5. Push parsed sources into NocoDB
+### 6. Push parsed sources into NocoDB
 
 **File:** `push-source-pages-to-nocodb.mjs`
 
@@ -187,7 +214,7 @@ Requires `NOCODB_API_TOKEN` for live NocoDB access (not needed for `--local` dry
 
 ---
 
-### 6. Patch logo fields
+### 7. Patch logo fields
 
 **File:** `patch-logo-consortia.mjs`
 
@@ -213,7 +240,7 @@ node scripts/patch-logo-consortia.mjs --service ts4nfdi --apply
 
 ---
 
-### 7. Fill empty key articles
+### 8. Fill empty key articles
 
 **File:** `fill-key-articles.mjs`
 
@@ -279,6 +306,7 @@ node scripts/parse-source-pages.mjs
 node scripts/patch-logo-consortia.mjs --local           # optional preview vs export
 node scripts/patch-logo-consortia.mjs --apply
 node scripts/fetch-nocodb-data.mjs
+node scripts/cache-partner-logos.mjs                   # materialize static copies
 ```
 
 ---
