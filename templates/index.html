@@ -32,7 +32,51 @@
         >
       </div>
 
-      <div class="filter-groups" id="filter-groups"></div>
+      <div class="filter-groups" id="filter-groups-wrap">
+        <div class="filter-chip-groups" id="filter-groups"></div>
+
+        <div class="filter-group filter-consortia" id="filter-consortia" hidden>
+          <span class="filter-group-label" id="consortia-label">Consortia involved</span>
+          <div
+            class="filter-combobox"
+            id="consortia-combobox"
+            data-open="false"
+          >
+            <div class="filter-combobox-control" id="consortia-control">
+              <div class="filter-combobox-tags" id="consortia-tags"></div>
+              <input
+                type="text"
+                class="filter-combobox-input"
+                id="consortia-input"
+                role="combobox"
+                aria-expanded="false"
+                aria-controls="consortia-listbox"
+                aria-autocomplete="list"
+                aria-labelledby="consortia-label"
+                placeholder="Search consortia…"
+                autocomplete="off"
+                spellcheck="false"
+              >
+              <button
+                type="button"
+                class="filter-combobox-toggle"
+                id="consortia-toggle"
+                aria-label="Show consortia"
+                tabindex="-1"
+              >
+                <span aria-hidden="true">▾</span>
+              </button>
+            </div>
+            <ul
+              class="filter-combobox-list"
+              id="consortia-listbox"
+              role="listbox"
+              aria-labelledby="consortia-label"
+              hidden
+            ></ul>
+          </div>
+        </div>
+      </div>
 
       <div class="filter-actions">
         <button type="button" class="filter-clear" id="filter-clear" disabled>Clear filters</button>
@@ -93,6 +137,9 @@
     { key: "inc_cycle", label: "Cycle" },
   ];
 
+  /** Multi-value field filtered via searchable tag combobox (any-match). */
+  const consortiaFilterKey = "partners";
+
   /** Columns included in free-text search (excludes logos / non-text). */
   const searchableColumns = columns.filter((column) => column.type !== "logos");
 
@@ -101,6 +148,10 @@
     meta: null,
     search: "",
     filters: Object.fromEntries(filterDefs.map((def) => [def.key, new Set()])),
+    consortia: new Set(),
+    consortiaOptions: [],
+    consortiaQuery: "",
+    consortiaHighlight: -1,
   };
 
   function escapeHtml(value) {
@@ -218,19 +269,51 @@
       if (value == null || value === "") continue;
       values.add(String(value));
     }
-    return Array.from(values).sort((a, b) => {
-      const na = Number(a);
-      const nb = Number(b);
-      if (!Number.isNaN(na) && !Number.isNaN(nb) && String(na) === a && String(nb) === b) {
-        return na - nb;
+    return Array.from(values).sort(compareFilterValues);
+  }
+
+  function normalizeListItem(value) {
+    return String(value ?? "")
+      .replace(/\r/g, "")
+      .trim();
+  }
+
+  function uniqueListValues(records, key) {
+    const values = new Set();
+    for (const record of records) {
+      const list = record[key];
+      if (!Array.isArray(list)) continue;
+      for (const item of list) {
+        const normalized = normalizeListItem(item);
+        if (!normalized) continue;
+        values.add(normalized);
       }
-      return a.localeCompare(b, undefined, { sensitivity: "base" });
-    });
+    }
+    return Array.from(values).sort(compareFilterValues);
+  }
+
+  function compareFilterValues(a, b) {
+    const na = Number(a);
+    const nb = Number(b);
+    if (!Number.isNaN(na) && !Number.isNaN(nb) && String(na) === a && String(nb) === b) {
+      return na - nb;
+    }
+    return a.localeCompare(b, undefined, { sensitivity: "base" });
   }
 
   function hasActiveFilters() {
     if (state.search.trim()) return true;
+    if (state.consortia.size > 0) return true;
     return filterDefs.some((def) => state.filters[def.key].size > 0);
+  }
+
+  function recordHasAnyConsortium(record, selected) {
+    const partners = record[consortiaFilterKey];
+    if (!Array.isArray(partners) || partners.length === 0) return false;
+    for (const partner of partners) {
+      if (selected.has(normalizeListItem(partner))) return true;
+    }
+    return false;
   }
 
   function filterRecords(records) {
@@ -244,8 +327,20 @@
           return false;
         }
       }
+      if (state.consortia.size > 0 && !recordHasAnyConsortium(record, state.consortia)) {
+        return false;
+      }
       if (!query) return true;
       return recordSearchText(record).includes(query);
+    });
+  }
+
+  function filteredConsortiaOptions() {
+    const query = state.consortiaQuery.trim().toLowerCase();
+    return state.consortiaOptions.filter((option) => {
+      if (state.consortia.has(option)) return false;
+      if (!query) return true;
+      return option.toLowerCase().includes(query);
     });
   }
 
@@ -387,7 +482,130 @@
       })
       .join("");
 
+    state.consortiaOptions = uniqueListValues(records, consortiaFilterKey);
+    const consortiaGroup = document.getElementById("filter-consortia");
+    consortiaGroup.hidden = state.consortiaOptions.length === 0;
+    renderConsortiaCombobox();
+
     document.getElementById("filter-bar").hidden = false;
+  }
+
+  function setConsortiaOpen(open) {
+    const combobox = document.getElementById("consortia-combobox");
+    const input = document.getElementById("consortia-input");
+    const listbox = document.getElementById("consortia-listbox");
+    combobox.dataset.open = open ? "true" : "false";
+    input.setAttribute("aria-expanded", open ? "true" : "false");
+    listbox.hidden = !open;
+    if (!open) {
+      state.consortiaHighlight = -1;
+      input.removeAttribute("aria-activedescendant");
+    }
+  }
+
+  function renderConsortiaTags() {
+    const tags = document.getElementById("consortia-tags");
+    const input = document.getElementById("consortia-input");
+    const selected = Array.from(state.consortia).sort(compareFilterValues);
+    tags.innerHTML = selected
+      .map(
+        (option) => `
+          <span class="filter-combobox-tag">
+            <span class="filter-combobox-tag-label">${escapeHtml(option)}</span>
+            <button
+              type="button"
+              class="filter-combobox-tag-remove"
+              data-value="${escapeHtml(option)}"
+              aria-label="Remove ${escapeHtml(option)}"
+            >×</button>
+          </span>
+        `
+      )
+      .join("");
+    input.placeholder = selected.length === 0 ? "Search consortia…" : "Add another…";
+  }
+
+  function renderConsortiaList() {
+    const listbox = document.getElementById("consortia-listbox");
+    const input = document.getElementById("consortia-input");
+    const options = filteredConsortiaOptions();
+
+    if (state.consortiaHighlight >= options.length) {
+      state.consortiaHighlight = options.length > 0 ? options.length - 1 : -1;
+    }
+
+    if (options.length === 0) {
+      listbox.innerHTML = `
+        <li class="filter-combobox-empty" role="presentation">
+          ${state.consortiaQuery.trim() ? "No matching consortia" : "All consortia selected"}
+        </li>
+      `;
+      input.removeAttribute("aria-activedescendant");
+      return;
+    }
+
+    listbox.innerHTML = options
+      .map((option, index) => {
+        const id = `consortia-option-${index}`;
+        const selected = index === state.consortiaHighlight;
+        const activeClass = selected ? " is-active" : "";
+        return `
+          <li
+            class="filter-combobox-option${activeClass}"
+            id="${id}"
+            role="option"
+            data-value="${escapeHtml(option)}"
+            aria-selected="${selected ? "true" : "false"}"
+          >${escapeHtml(option)}</li>
+        `;
+      })
+      .join("");
+
+    if (state.consortiaHighlight >= 0) {
+      input.setAttribute(
+        "aria-activedescendant",
+        `consortia-option-${state.consortiaHighlight}`
+      );
+      const activeEl = listbox.querySelector(".is-active");
+      if (activeEl) {
+        activeEl.scrollIntoView({ block: "nearest" });
+      }
+    } else {
+      input.removeAttribute("aria-activedescendant");
+    }
+  }
+
+  function renderConsortiaCombobox() {
+    renderConsortiaTags();
+    renderConsortiaList();
+  }
+
+  function addConsortium(value) {
+    if (!value || state.consortia.has(value)) return;
+    state.consortia.add(value);
+    state.consortiaQuery = "";
+    document.getElementById("consortia-input").value = "";
+    state.consortiaHighlight = -1;
+    renderConsortiaCombobox();
+    setConsortiaOpen(true);
+    applyView();
+  }
+
+  function removeConsortium(value) {
+    if (!state.consortia.has(value)) return;
+    state.consortia.delete(value);
+    renderConsortiaCombobox();
+    applyView();
+  }
+
+  function clearConsortiaFilter() {
+    state.consortia.clear();
+    state.consortiaQuery = "";
+    state.consortiaHighlight = -1;
+    const input = document.getElementById("consortia-input");
+    if (input) input.value = "";
+    setConsortiaOpen(false);
+    renderConsortiaCombobox();
   }
 
   function renderTable(records, meta, totalCount) {
@@ -436,6 +654,15 @@
     const searchInput = document.getElementById("filter-search");
     const filterBar = document.getElementById("filter-bar");
     const clearButton = document.getElementById("filter-clear");
+    const consortiaInput = document.getElementById("consortia-input");
+    const consortiaControl = document.getElementById("consortia-control");
+    const consortiaListbox = document.getElementById("consortia-listbox");
+    const consortiaToggle = document.getElementById("consortia-toggle");
+    const consortiaCombobox = document.getElementById("consortia-combobox");
+
+    filterBar.addEventListener("submit", (event) => {
+      event.preventDefault();
+    });
 
     searchInput.addEventListener("input", () => {
       state.search = searchInput.value;
@@ -452,6 +679,109 @@
       applyView();
     });
 
+    consortiaInput.addEventListener("input", () => {
+      state.consortiaQuery = consortiaInput.value;
+      state.consortiaHighlight = 0;
+      renderConsortiaList();
+      setConsortiaOpen(true);
+    });
+
+    consortiaInput.addEventListener("focus", () => {
+      setConsortiaOpen(true);
+      renderConsortiaList();
+    });
+
+    consortiaInput.addEventListener("keydown", (event) => {
+      const options = filteredConsortiaOptions();
+      const open = consortiaCombobox.dataset.open === "true";
+
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        if (!open) setConsortiaOpen(true);
+        if (options.length === 0) return;
+        state.consortiaHighlight =
+          state.consortiaHighlight < options.length - 1
+            ? state.consortiaHighlight + 1
+            : 0;
+        renderConsortiaList();
+        return;
+      }
+
+      if (event.key === "ArrowUp") {
+        event.preventDefault();
+        if (!open) setConsortiaOpen(true);
+        if (options.length === 0) return;
+        state.consortiaHighlight =
+          state.consortiaHighlight > 0
+            ? state.consortiaHighlight - 1
+            : options.length - 1;
+        renderConsortiaList();
+        return;
+      }
+
+      if (event.key === "Enter") {
+        if (!open || options.length === 0) return;
+        event.preventDefault();
+        const index = state.consortiaHighlight >= 0 ? state.consortiaHighlight : 0;
+        addConsortium(options[index]);
+        return;
+      }
+
+      if (event.key === "Escape") {
+        if (!open) return;
+        event.preventDefault();
+        setConsortiaOpen(false);
+        return;
+      }
+
+      if (event.key === "Backspace" && consortiaInput.value === "" && state.consortia.size > 0) {
+        const selected = Array.from(state.consortia).sort(compareFilterValues);
+        removeConsortium(selected[selected.length - 1]);
+      }
+    });
+
+    consortiaControl.addEventListener("click", (event) => {
+      const removeButton = event.target.closest(".filter-combobox-tag-remove");
+      if (removeButton) {
+        event.preventDefault();
+        event.stopPropagation();
+        removeConsortium(removeButton.dataset.value);
+        consortiaInput.focus();
+        return;
+      }
+      if (event.target.closest(".filter-combobox-toggle")) return;
+      consortiaInput.focus();
+      setConsortiaOpen(true);
+      renderConsortiaList();
+    });
+
+    consortiaToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const open = consortiaCombobox.dataset.open === "true";
+      if (open) {
+        setConsortiaOpen(false);
+      } else {
+        consortiaInput.focus();
+        setConsortiaOpen(true);
+        renderConsortiaList();
+      }
+    });
+
+    consortiaListbox.addEventListener("mousedown", (event) => {
+      const option = event.target.closest(".filter-combobox-option");
+      if (!option) return;
+      event.preventDefault();
+      addConsortium(option.dataset.value);
+      consortiaInput.focus();
+    });
+
+    document.addEventListener("mousedown", (event) => {
+      if (!consortiaCombobox.contains(event.target)) {
+        setConsortiaOpen(false);
+      }
+    });
+
     clearButton.addEventListener("click", () => {
       state.search = "";
       searchInput.value = "";
@@ -461,6 +791,7 @@
         .forEach((input) => {
           input.checked = false;
         });
+      clearConsortiaFilter();
       applyView();
     });
   }
