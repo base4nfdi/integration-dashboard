@@ -28,6 +28,10 @@
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
   --gradient-cyan: rgba(11, 187, 239, 0.08);
   --gradient-green: rgba(162, 198, 23, 0.06);
+  /* Plates behind PNG logos so artwork stays readable on near-black UI */
+  --logo-plate-dark: #2a3344;
+  --logo-plate-light: #eef2f7;
+  --logo-plate-inset: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="light"] {
@@ -528,6 +532,23 @@ main.container:has(.dashboard) {
   border-radius: 0.35rem;
 }
 
+/* Dark mode: give PNG logos a contrasting plate so transparent / light artwork stays visible */
+[data-theme="dark"] .data-table .service-logo {
+  background:
+    linear-gradient(145deg, rgba(11, 187, 239, 0.12), transparent 55%),
+    var(--logo-plate-dark);
+  padding: 0.28rem 0.45rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--logo-plate-inset);
+}
+
+[data-theme="dark"] .data-table .logo-img {
+  background: var(--logo-plate-light);
+  padding: 0.28rem 0.4rem;
+  border-radius: 0.45rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
 .data-table .cell-markdown {
   max-width: 22rem;
   vertical-align: top;
@@ -733,16 +754,61 @@ main.container:has(.dashboard) {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.85rem;
+  gap: 1rem;
   flex-shrink: 0;
+}
+
+.blog-post-logo-partners {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.blog-post-logo-partners:not(:only-child) {
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.blog-post-logo-service-link {
+  display: block;
+  line-height: 0;
+  border-radius: 0.5rem;
+  transition: opacity 0.15s ease;
+}
+
+.blog-post-logo-service-link:hover {
+  opacity: 0.85;
 }
 
 .blog-post-logo {
   display: block;
-  height: 2.75rem;
+  height: 4.75rem;
   width: auto;
   max-width: 7rem;
   object-fit: contain;
+}
+
+/* Horizontal “Logo-top” marks read better a bit shorter/wider than partner marks */
+.blog-post-logo-service {
+  height: 3.25rem;
+  max-width: 11rem;
+}
+
+[data-theme="dark"] .blog-post-logo-project,
+[data-theme="dark"] .blog-post-logo-consortia {
+  background: var(--logo-plate-light);
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .blog-post-logo-service {
+  background:
+    linear-gradient(145deg, rgba(11, 187, 239, 0.12), transparent 55%),
+    var(--logo-plate-dark);
+  padding: 0.35rem 0.55rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--logo-plate-inset);
 }
 
 @media (max-width: 640px) {
@@ -754,6 +820,11 @@ main.container:has(.dashboard) {
   .blog-post-logo {
     height: 2.25rem;
     max-width: 5.5rem;
+  }
+
+  .blog-post-logo-service {
+    height: 1.85rem;
+    max-width: 7.5rem;
   }
 }
 

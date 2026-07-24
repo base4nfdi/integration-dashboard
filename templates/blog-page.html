@@ -16,25 +16,71 @@
     </p>
     <div class="blog-post-title-row">
       <h2>{{ page.title }}</h2>
-      {% if page.extra.logo_project or page.extra.logo_consortia %}
-      <div class="blog-post-logos" aria-label="Dataset logos">
-        {% if page.extra.logo_project %}
-        <img
-          class="blog-post-logo blog-post-logo-project"
-          src="{{ page.extra.logo_project }}"
-          alt="{{ page.title }} project logo"
-          loading="lazy"
-          decoding="async"
-        >
+      {% if page.extra.basic_service or page.extra.logo_project or page.extra.logo_consortia %}
+      <div class="blog-post-logos" aria-label="Service and partner logos">
+        {% if page.extra.basic_service %}
+        {% set service_code = page.extra.basic_service %}
+        {% set service_slug = service_code | lower %}
+        {% set service_logo_path = "" %}
+        {% set service_logo_label = service_code ~ "4NFDI" %}
+        {% if service_code == "DMP" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_DMP4NFDI-top.png" %}
+        {% elif service_code == "IAM" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_IAM4NFDI-top.png" %}
+        {% elif service_code == "TS" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_TS4NFDI-top.png" %}
+        {% elif service_code == "ACCT" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_ACCT4NFDI-top.png" %}
+        {% elif service_code == "Jupyter" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_Jupyter4NFDI-top.png" %}
+        {% elif service_code == "KGI" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_KGI4NFDI-top.png" %}
+        {% elif service_code == "PID" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_PID4NFDI-top.png" %}
+        {% elif service_code == "RDMT" or service_code == "RDMTraining" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_RDMT-top.png" %}
+          {% set service_logo_label = "RDMTraining4NFDI" %}
+        {% elif service_code == "Software" %}
+          {% set service_logo_path = "img/Base4NFDI-Logos/RGB/Logo-top/PNG/_nfdi-software-top.png" %}
+          {% set service_logo_label = "nfdi.software" %}
         {% endif %}
-        {% if page.extra.logo_consortia %}
-        <img
-          class="blog-post-logo blog-post-logo-consortia"
-          src="{{ page.extra.logo_consortia }}"
-          alt="Consortia logo"
-          loading="lazy"
-          decoding="async"
+        {% if service_logo_path %}
+        <a
+          class="blog-post-logo-service-link"
+          href="{{ get_url(path='@/incubators/' ~ service_slug ~ '/_index.md') | safe }}"
+          title="{{ service_logo_label }}"
         >
+          <img
+            class="blog-post-logo blog-post-logo-service"
+            src="{{ get_url(path=service_logo_path) | safe }}"
+            alt="{{ service_logo_label }}"
+            loading="lazy"
+            decoding="async"
+          >
+        </a>
+        {% endif %}
+        {% endif %}
+        {% if page.extra.logo_project or page.extra.logo_consortia %}
+        <div class="blog-post-logo-partners">
+          {% if page.extra.logo_project %}
+          <img
+            class="blog-post-logo blog-post-logo-project"
+            src="{{ page.extra.logo_project }}"
+            alt="{{ page.title }} project logo"
+            loading="lazy"
+            decoding="async"
+          >
+          {% endif %}
+          {% if page.extra.logo_consortia %}
+          <img
+            class="blog-post-logo blog-post-logo-consortia"
+            src="{{ page.extra.logo_consortia }}"
+            alt="Consortia logo"
+            loading="lazy"
+            decoding="async"
+          >
+          {% endif %}
+        </div>
         {% endif %}
       </div>
       {% endif %}
