@@ -267,7 +267,9 @@ export function normalizeStatus(status) {
 }
 
 export function normalizePartnerName(value) {
-  const raw = String(value ?? "").trim();
+  const raw = String(value ?? "")
+    .replace(/\r/g, "")
+    .trim();
   if (!raw) return "";
   const alias = PARTNER_ALIASES[raw.toLowerCase()];
   return alias ?? raw;

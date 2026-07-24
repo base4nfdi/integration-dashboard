@@ -55,7 +55,9 @@ function asString(value) {
 
 function asStringList(value) {
   if (!Array.isArray(value)) return [];
-  return value.filter((item) => item != null && String(item).length > 0).map(String);
+  return value
+    .map((item) => (item == null ? "" : String(item).replace(/\r/g, "").trim()))
+    .filter(Boolean);
 }
 
 function asNumber(value) {
