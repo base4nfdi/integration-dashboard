@@ -30,7 +30,7 @@ Metabase is an incubator project within the **Terminology Services (TS)** basic 
 
 ## Goals
 
-- Hosting terminologies for Metabase in a Terminology Services
+- Hosting terminologies for Metabase in a terminology service
 - Connect TIB TS to Metabase
 
 ## Partners & entities

@@ -1,5 +1,5 @@
 +++
-title = "BERD Terminology Services"
+title = "BERD Terminology Service"
 date = 2024-11-19
 [extra]
 key_article = "ts-berd-terminology-service"
@@ -14,9 +14,9 @@ linked_entities = 0
 logo_project = "https://terminology.services.base4nfdi.de/img/berd.png"
 +++
 
-BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Services provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.
+BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.
 
-BERD Terminology Services is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
+BERD Terminology Service is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
 
 ## Current status
 
@@ -30,7 +30,7 @@ BERD Terminology Services is an incubator project within the **Terminology Servi
 
 ## Goals
 
-- Setting up a Terminology Services for BERD@NFDI using the Terminology Services Suite (TSS)
+- Setting up a terminology service for BERD@NFDI using the Terminology Service Suite (TSS)
 - Provision of BERD related terminologies
 
 ## Results

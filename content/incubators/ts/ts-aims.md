@@ -33,7 +33,7 @@ AIMS is an incubator project within the **Terminology Services (TS)** basic serv
 
 ## Goals
 
-- Replace current terminology providers with TS4NFDI API Gateway as unified Terminology Services
+- Replace current terminology providers with TS4NFDI API Gateway as unified terminology service
 - Integrate TS4NFDI Service Suite widgets to AIMS
 
 ## Partners & entities

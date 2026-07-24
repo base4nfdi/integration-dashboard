@@ -30,7 +30,7 @@ Discuss Data is an incubator project within the **Terminology Services (TS)** ba
 
 ## Goals
 
-- Setting up a selfhosted Terminology Services based on OLS
+- Setting up a selfhosted terminology service based on OLS
 - Adding this TS as backend source to the TS4NFDI API Gateway
 - Provision of collection(s) via API Gateway
 - Integration of TSS widgets

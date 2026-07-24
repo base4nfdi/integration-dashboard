@@ -30,7 +30,7 @@ Ontology of the historical German-language nomenclature is an incubator project 
 
 ## Goals
 
-- Provision of the OhdAB in a Terminology Services
+- Provision of the OhdAB in a terminology service
 - Automated workflow to update the OhdAB
 
 ## Partners & entities

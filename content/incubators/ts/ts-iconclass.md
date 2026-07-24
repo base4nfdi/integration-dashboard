@@ -14,7 +14,7 @@ linked_entities = 0
 logo_project = "https://terminology.services.base4nfdi.de/img/ICONCLASS.png"
 +++
 
-Adding support for the globally used cultural heritage subject classification system iconclass.org to the Terminology Servicess 4 NFDI. This will allow Iconclass to be selected as a base data source, and to allow other systems to make use of the TS4NFDI hierarchy and graph widgets for visualization and as navigation aids.
+Adding support for the globally used cultural heritage subject classification system iconclass.org to the Terminology Services 4 NFDI. This will allow Iconclass to be selected as a base data source, and to allow other systems to make use of the TS4NFDI hierarchy and graph widgets for visualization and as navigation aids.
 
 ICONCLASS is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
 

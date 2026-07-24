@@ -1,5 +1,5 @@
 +++
-title = "Terminology Services for Plasma-MDS"
+title = "Terminology service for Plasma-MDS"
 date = 2024-11-19
 [extra]
 key_article = "ts-terminology-service-for-plasma-mds"
@@ -16,7 +16,7 @@ logo_project = "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.sv
 
 The plasma ontology (Plasma-O) is a domain-specific ontology for low-temperature plasma science and technology. It aims to support the standardized documentation and annotation of data and information in this field. The ontology contains classes and properties for the entities which are relevant in typical plasma studies, such as plasma generating devices, media, materials and diagnostic methods.
 
-Terminology Services for Plasma-MDS is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
+Terminology service for Plasma-MDS is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
 
 ## Current status
 
@@ -30,7 +30,7 @@ Terminology Services for Plasma-MDS is an incubator project within the **Termino
 
 ## Goals
 
-- Provision of Plasma-O in a self-hosted Terminology Services
+- Provision of Plasma-O in a self-hosted terminology service
 
 ## Results
 

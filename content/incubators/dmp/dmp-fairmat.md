@@ -1,5 +1,5 @@
 +++
-title = "FAIRmat"
+title = "FAIRmat RDMO Client for the Physical Sciences"
 date = 2026-06-30
 [extra]
 key_article = "dmp-fairmat"
@@ -11,10 +11,10 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://www.dmp4nfdi.de/images/psinnfdi_logo.png"
+logo_consortia = "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png"
 +++
 
-FAIRmat is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
+FAIRmat RDMO Client for the Physical Sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -37,4 +37,4 @@ SensorCV is an incubator project within the **Terminology Services (TS)** basic 
 
 ## Notes
 
-This report maps to row **ts-sensorcv** in the NocoDB dashboard table. (`key_article` is not yet set in NocoDB.)
+This report maps to row **ts-sensorcv** in the NocoDB dashboard table.

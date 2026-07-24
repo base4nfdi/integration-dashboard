@@ -1,5 +1,5 @@
 +++
-title = "RADAR"
+title = "DMP in RADAR"
 date = 2026-12-31
 [extra]
 key_article = "dmp-radar"
@@ -11,10 +11,10 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://www.dmp4nfdi.de/images/radar-4chem-4culture_logo.png"
+logo_consortia = "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png"
 +++
 
-RADAR is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
+DMP in RADAR is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 
