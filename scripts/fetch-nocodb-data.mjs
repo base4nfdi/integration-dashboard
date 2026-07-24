@@ -6,7 +6,10 @@
  *   NOCODB_API_TOKEN  — xc-token from https://nocodb.nfdi.de/dashboard/#/account/tokens
  *
  * Optional env:
- *   NOCODB_BASE_URL, NOCODB_TABLE_ID, NOCODB_VIEW_ID, NOCODB_PAGE_SIZE, OUTPUT_JSON
+ *   NOCODB_BASE_URL, NOCODB_TABLE_ID, NOCODB_PAGE_SIZE, OUTPUT_JSON
+ *   NOCODB_VIEW_ID — omit by default (recommended). If set, NocoDB applies that
+ *                    view's filters/sorts to the API response, which can silently
+ *                    drop rows from the dashboard export.
  *   FETCH_TIMEOUT_MS — per-request timeout (default: 60000)
  */
 
@@ -107,7 +110,9 @@ async function main() {
     ""
   );
   const tableId = process.env.NOCODB_TABLE_ID ?? "m3zt5vqlyja927x";
-  const viewId = process.env.NOCODB_VIEW_ID ?? "vwiouc4g6dgp01qp";
+  // Empty by default: table API without viewId returns all rows.
+  // A viewId inherits that view's UI filters (e.g. consortia = Text+).
+  const viewId = (process.env.NOCODB_VIEW_ID ?? "").trim();
   const pageSize = parsePositiveInt(
     process.env.NOCODB_PAGE_SIZE,
     100,
@@ -133,8 +138,9 @@ async function main() {
   });
 
   if (rawRecords.length === 0) {
+    const scope = viewId ? `view ${viewId}` : "full table (no viewId)";
     throw new Error(
-      `NocoDB returned 0 records for table ${tableId} (view ${viewId}) — refusing to overwrite ${outputPath}`
+      `NocoDB returned 0 records for table ${tableId} (${scope}) — refusing to overwrite ${outputPath}`
     );
   }
 
@@ -147,7 +153,13 @@ async function main() {
 
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, JSON.stringify(payload, null, 2) + "\n", "utf8");
-  console.log(`Wrote ${records.length} row(s) to ${outputPath}`);
+  const scope = viewId ? `view ${viewId}` : "full table";
+  console.log(`Wrote ${records.length} row(s) to ${outputPath} (${scope})`);
+  if (viewId) {
+    console.warn(
+      "Warning: NOCODB_VIEW_ID is set — NocoDB view filters apply to this export."
+    );
+  }
 }
 
 main().catch((error) => {
