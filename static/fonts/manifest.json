@@ -1,0 +1,638 @@
+{
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT3fcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUT3fcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT3fcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.681Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTTfcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUTTfcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTTfcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.714Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTDfcQ.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUTDfcQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTDfcQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.725Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTPfcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUTPfcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTPfcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.726Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT_fcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUT_fcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT_fcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.733Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT7fcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUT7fcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUT7fcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.736Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.740Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.746Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTzfcWTP.woff2": {
+    "path": "fonts/va9A4kDNxMZdWfMOD5VvkrCqUTzfcWTP.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9A4kDNxMZdWfMOD5VvkrCqUTzfcWTP.woff2",
+    "fetched_at": "2026-07-24T19:17:13.752Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.755Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.757Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.759Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.768Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.769Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.773Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.774Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.777Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.783Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.784Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.787Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.791Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnFK_eSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnFK_eSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.796Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.798Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.800Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.802Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.805Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.810Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.812Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnMK7eRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnMK7eRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.816Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.817Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.824Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.825Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnPKreSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnPKreSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.826Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.827Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.829Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.836Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.838Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.841Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.843Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnSKzeSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnSKzeSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.844Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.845Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.850Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.856Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.857Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.859Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.863Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.865Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.869Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSBf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.873Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.876Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneRhf6.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnWKneRhf6.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnWKneRhf6.woff2",
+    "fetched_at": "2026-07-24T19:17:13.877Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveSRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.878Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveShf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveShf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveShf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.881Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnZKveSxf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:13.882Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjEYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjEYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjEYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.886Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjFYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjFYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjFYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.889Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjJYTI.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjJYTI.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjJYTI.woff2",
+    "fetched_at": "2026-07-24T19:17:13.893Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjGYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjGYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjGYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.894Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjKYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjKYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjKYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.896Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjHYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjHYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjHYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.903Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjNYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5Vn9LjNYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5Vn9LjNYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.905Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjEYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjEYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjEYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.906Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjFYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjFYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjFYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.907Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjGYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjGYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjGYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.911Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjHYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjHYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjHYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.918Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjJYTI.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjJYTI.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjJYTI.woff2",
+    "fetched_at": "2026-07-24T19:17:13.920Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjNYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjNYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjNYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.921Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvk4jLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5Vvk4jLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvk4jLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.923Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjKYTLHdQ.woff2": {
+    "path": "fonts/va9C4kDNxMZdWfMOD5VvkrjKYTLHdQ.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9C4kDNxMZdWfMOD5VvkrjKYTLHdQ.woff2",
+    "fetched_at": "2026-07-24T19:17:13.924Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvl4jL.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5Vvl4jL.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvl4jL.woff2",
+    "fetched_at": "2026-07-24T19:17:13.928Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvlIjLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5VvlIjLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvlIjLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.934Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmojLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5VvmojLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmojLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.937Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmIjLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5VvmIjLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmIjLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.939Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvm4jLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5Vvm4jLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5Vvm4jLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.940Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmYjLeTY.woff2": {
+    "path": "fonts/va9E4kDNxMZdWfMOD5VvmYjLeTY.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9E4kDNxMZdWfMOD5VvmYjLeTY.woff2",
+    "fetched_at": "2026-07-24T19:17:13.943Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.944Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.949Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.952Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:13.959Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.960Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.962Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrA6Qif8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.963Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.965Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.967Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.977Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:13.979Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.981Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.982Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.983Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAGQCf8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.984Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.994Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:13.999Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.002Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:14.008Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.010Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrAWRSf8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.011Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.013Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.015Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.025Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:14.030Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.032Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.033Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.035Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBKRif7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBKRif7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.036Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.039Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.046Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.051Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.052Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:14.054Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBiQyf7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.055Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.057Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.059Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.068Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:14.070Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.071Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.073Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf0VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf0VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf0VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.074Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrBuRyf8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.077Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf1VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf1VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf1VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.082Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf4VFk.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf4VFk.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf4VFk.woff2",
+    "fetched_at": "2026-07-24T19:17:14.085Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf3VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf3VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf3VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.089Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf7VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf7VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf7VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.093Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf2VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf2VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf2VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.094Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf8VFn2lg.woff2": {
+    "path": "fonts/va9f4kDNxMZdWfMOD5VvkrByRCf8VFn2lg.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9f4kDNxMZdWfMOD5VvkrByRCf8VFn2lg.woff2",
+    "fetched_at": "2026-07-24T19:17:14.095Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eQhf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eQhf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eQhf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:14.101Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eRRf6TF0.woff2": {
+    "path": "fonts/va9B4kDNxMZdWfMOD5VnLK3eRRf6TF0.woff2",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/va9B4kDNxMZdWfMOD5VnLK3eRRf6TF0.woff2",
+    "fetched_at": "2026-07-24T19:17:15.129Z"
+  },
+  "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/fonts.css": {
+    "path": "fonts/fonts.css",
+    "source": "https://base4nfdi.de/components/com_nicepage/assets/css/fonts/fonts.css",
+    "fetched_at": "2026-07-24T19:17:29.654Z",
+    "files": 126
+  }
+}

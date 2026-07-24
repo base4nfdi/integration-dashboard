@@ -30,6 +30,9 @@ fi
 echo "==> Caching partner logos into static/"
 node scripts/cache-partner-logos.mjs
 
+echo "==> Caching project fonts into static/"
+node scripts/cache-fonts.mjs
+
 echo "==> Generating missing incubator pages"
 node scripts/generate-incubator-pages.mjs
 
