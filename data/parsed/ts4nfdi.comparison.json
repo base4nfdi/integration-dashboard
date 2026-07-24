@@ -9,7 +9,7 @@
   },
   "matches": [
     {
-      "score": 2.36,
+      "score": 2.11,
       "source": {
         "inc_name": "RADAR",
         "inc_cycle": 1,
@@ -21,7 +21,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "RADAR",
+        "inc_name": "TS in RADAR",
         "inc_cycle": 1,
         "inc_status": "Finished",
         "partners": [
@@ -31,6 +31,10 @@
         ]
       },
       "field_diffs": {
+        "inc_name": {
+          "source": "RADAR",
+          "nocodb": "TS in RADAR"
+        },
         "inc_results": {
           "source": "https://doi.org/10.5281/zenodo.17090276\nhttps://doi.org/10.5281/zenodo.16736267\nhttps://radar.products.fiz-karlsruhe.de/en/nachricht/radar-release-v123-ts4nfdi-integration-abgeschlossen",
           "nocodb": ""
@@ -156,7 +160,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "BERD Terminology Services",
+        "inc_name": "BERD Terminology Service",
         "inc_cycle": 0,
         "inc_status": "Finished",
         "partners": [
@@ -164,7 +168,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "BERD Terminology Services",
+        "inc_name": "BERD Terminology Service",
         "inc_cycle": 0,
         "inc_status": "Finished",
         "partners": []
@@ -181,7 +185,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Services for Plasma-MDS",
+        "inc_name": "Terminology service for Plasma-MDS",
         "inc_cycle": 0,
         "inc_status": "Finished",
         "partners": [
@@ -189,7 +193,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Services for Plasma-MDS",
+        "inc_name": "Terminology service for Plasma-MDS",
         "inc_cycle": 0,
         "inc_status": "Finished",
         "partners": []
@@ -530,7 +534,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "FAIRagro Terminology Services",
+        "inc_name": "FAIRagro Terminology Service",
         "inc_cycle": 3,
         "inc_status": "Running",
         "partners": [
@@ -538,7 +542,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "FAIRagro Terminology Services",
+        "inc_name": "FAIRagro Terminology Service",
         "inc_cycle": 3,
         "inc_status": "Running",
         "partners": []
@@ -677,7 +681,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Services Suite integration for WissKI authority data enrichment",
+        "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
         "inc_cycle": 4,
         "inc_status": "In preparation",
         "partners": [
@@ -687,7 +691,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Services Suite integration for WissKI authority data enrichment",
+        "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
         "inc_cycle": 4,
         "inc_status": "In preparation",
         "partners": []

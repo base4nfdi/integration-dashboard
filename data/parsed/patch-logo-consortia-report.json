@@ -1,0 +1,467 @@
+{
+  "mode": "apply",
+  "compared_against": "live-nocodb",
+  "only_host": null,
+  "logo_fields": [
+    "logo_consortia",
+    "logo_project"
+  ],
+  "planned_at": "2026-07-24T11:11:39.307Z",
+  "totals": {
+    "to_patch_rows": 1,
+    "will_patch_rows": 1,
+    "to_patch_fields": 1,
+    "will_patch_fields": 1,
+    "skipped": 61
+  },
+  "by_source": {
+    "ts4nfdi": {
+      "to_patch_rows": 1,
+      "will_patch_rows": 1
+    }
+  },
+  "updates": [
+    {
+      "source": "ts4nfdi",
+      "score": 2.12,
+      "id": 8,
+      "inc_name": "SensorCV",
+      "key_article": "ts-sensorcv",
+      "fields": {
+        "logo_project": {
+          "from": "",
+          "to": "https://terminology.services.base4nfdi.de/img/sms.png"
+        }
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "source": "ts4nfdi",
+      "id": 1,
+      "inc_name": "TS in RADAR",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 1,
+      "inc_name": "TS in RADAR",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 2,
+      "inc_name": "WDCC",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 2,
+      "inc_name": "WDCC",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 78,
+      "inc_name": "nmrXiv",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 78,
+      "inc_name": "nmrXiv",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 79,
+      "inc_name": "ChEBI",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 79,
+      "inc_name": "ChEBI",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 80,
+      "inc_name": "Coconut",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 80,
+      "inc_name": "Coconut",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 81,
+      "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 81,
+      "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 82,
+      "inc_name": "BERD Terminology Service",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 82,
+      "inc_name": "BERD Terminology Service",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 83,
+      "inc_name": "Terminology service for Plasma-MDS",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 83,
+      "inc_name": "Terminology service for Plasma-MDS",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 84,
+      "inc_name": "preVIEW",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 84,
+      "inc_name": "preVIEW",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 85,
+      "inc_name": "Metadata Annotation Workbench",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 85,
+      "inc_name": "Metadata Annotation Workbench",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 86,
+      "inc_name": "Discuss Data",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 86,
+      "inc_name": "Discuss Data",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 87,
+      "inc_name": "Open Energy Platform",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 87,
+      "inc_name": "Open Energy Platform",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 88,
+      "inc_name": "ICONCLASS",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 88,
+      "inc_name": "ICONCLASS",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 89,
+      "inc_name": "Ontology of the historical German-language nomenclature",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 89,
+      "inc_name": "Ontology of the historical German-language nomenclature",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 90,
+      "inc_name": "Health Study Hub",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 90,
+      "inc_name": "Health Study Hub",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 91,
+      "inc_name": "DALIA Search Portal",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 91,
+      "inc_name": "DALIA Search Portal",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 3,
+      "inc_name": "AIMS",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 3,
+      "inc_name": "AIMS",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 92,
+      "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 92,
+      "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 93,
+      "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 93,
+      "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 94,
+      "inc_name": "Metabase",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 94,
+      "inc_name": "Metabase",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 95,
+      "inc_name": "MathModDB",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 95,
+      "inc_name": "MathModDB",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 96,
+      "inc_name": "FAIRagro Terminology Service",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 96,
+      "inc_name": "FAIRagro Terminology Service",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 97,
+      "inc_name": "TS4NDSI integration in Galaxy",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 97,
+      "inc_name": "TS4NDSI integration in Galaxy",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 98,
+      "inc_name": "TeSS",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 98,
+      "inc_name": "TeSS",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 99,
+      "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 99,
+      "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 8,
+      "inc_name": "SensorCV",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 100,
+      "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 100,
+      "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 101,
+      "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 101,
+      "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 102,
+      "inc_name": "OstData & 4MMS",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 102,
+      "inc_name": "OstData & 4MMS",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 103,
+      "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 103,
+      "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+      "field": "logo_project",
+      "reason": "unchanged"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 104,
+      "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+      "field": "logo_consortia",
+      "reason": "source_empty"
+    },
+    {
+      "source": "ts4nfdi",
+      "id": 104,
+      "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+      "field": "logo_project",
+      "reason": "unchanged"
+    }
+  ]
+}

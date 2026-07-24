@@ -87,7 +87,7 @@
       "source": {
         "inc_name": "AgiMo: Data - driven agile planning for responsible mobility",
         "inc_cycle": 5,
-        "inc_status": "In preparation",
+        "inc_status": "NoResponse",
         "partners": []
       },
       "nocodb": {
@@ -96,7 +96,12 @@
         "inc_status": "In preparation",
         "partners": []
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "inc_status": {
+          "source": "NoResponse",
+          "nocodb": "In preparation"
+        }
+      }
     },
     {
       "score": 2,
@@ -153,7 +158,7 @@
       "source": {
         "inc_name": "Chaldene: Accessible High-Performance Computing for Image Processing",
         "inc_cycle": 4,
-        "inc_status": "Running",
+        "inc_status": "NoResponse",
         "partners": [
           "MatWerk"
         ]
@@ -165,6 +170,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "NoResponse",
+          "nocodb": "Running"
+        },
         "partners": {
           "source": [
             "MatWerk"
@@ -381,7 +390,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Servicess2.0",
+        "inc_name": "Terminology Services2.0",
         "inc_cycle": 3,
         "inc_status": "Finished",
         "partners": [
@@ -389,7 +398,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Servicess2.0",
+        "inc_name": "Terminology Services2.0",
         "inc_cycle": 3,
         "inc_status": "Finished",
         "partners": []
@@ -697,7 +706,7 @@
     {
       "score": 2,
       "source": {
-        "inc_name": "Terminology Services",
+        "inc_name": "Terminology Service",
         "inc_cycle": 1,
         "inc_status": "Running",
         "partners": [
@@ -705,7 +714,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Terminology Services",
+        "inc_name": "Terminology Service",
         "inc_cycle": 1,
         "inc_status": "Running",
         "partners": []

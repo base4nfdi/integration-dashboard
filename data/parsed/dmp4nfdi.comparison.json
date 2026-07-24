@@ -9,7 +9,7 @@
   },
   "matches": [
     {
-      "score": 2,
+      "score": 1.75,
       "source": {
         "inc_name": "RADAR",
         "inc_cycle": 2,
@@ -20,12 +20,16 @@
         ]
       },
       "nocodb": {
-        "inc_name": "RADAR",
+        "inc_name": "DMP in RADAR",
         "inc_cycle": 2,
         "inc_status": "Running",
         "partners": []
       },
       "field_diffs": {
+        "inc_name": {
+          "source": "RADAR",
+          "nocodb": "DMP in RADAR"
+        },
         "partners": {
           "source": [
             "NFDI4Culture",
@@ -88,7 +92,7 @@
           "nocodb": ""
         },
         "logo_consortia": {
-          "source": "https://www.dmp4nfdi.de/images/nfdi4ing_logo.png",
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
           "nocodb": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
         }
       }
@@ -146,13 +150,13 @@
           "nocodb": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
         },
         "logo_consortia": {
-          "source": "https://www.dmp4nfdi.de/images/nfdi4earth_logo.png",
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
           "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
         }
       }
     },
     {
-      "score": 2,
+      "score": 1.75,
       "source": {
         "inc_name": "FAIRmat",
         "inc_cycle": 1,
@@ -162,12 +166,16 @@
         ]
       },
       "nocodb": {
-        "inc_name": "FAIRmat",
+        "inc_name": "FAIRmat RDMO Client for the Physical Sciences",
         "inc_cycle": 1,
         "inc_status": "Finished",
         "partners": []
       },
       "field_diffs": {
+        "inc_name": {
+          "source": "FAIRmat",
+          "nocodb": "FAIRmat RDMO Client for the Physical Sciences"
+        },
         "partners": {
           "source": [
             "FAIRmat"

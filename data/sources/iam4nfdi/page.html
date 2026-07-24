@@ -115,7 +115,7 @@
             </div>
             <div class="col-md-8" style="background-color: #e6e6e6">
               <div class="card-body text-center">
-                <div class="card-text font-weight-bold" style="font-size: xx-large">7</div>
+                <div class="card-text font-weight-bold" style="font-size: xx-large">6</div>
                   <!-- xxxxxxxxxxxxxxxxx -->
                 <p class="card-text"><small class="text-muted">Ongoing activities</small></p>
               </div>
@@ -527,23 +527,27 @@
                       <strong>Cycle 2</strong><br />
                         01 Aug 2024 - 31 Jan 2025
                   </div>
-                  <div class="list-group-item list-group-item-action color-ongoing">
+                  <div class="list-group-item list-group-item-action color-completed">
                       <strong>Cycle 3</strong><br />
                          01 Feb 2025 - 31 Jul 2025
                   </div>
                 </div>
                 <div class="list-group list-group-horizontal">
-                  <div class="list-group-item list-group-item-action color-pending">
+                  <div class="list-group-item list-group-item-action color-completed">
                       <strong>Cycle 4</strong><br />
                         01 Aug 2025 - 31 Jan 2026
                   </div>
-                  <div class="list-group-item list-group-item-action color-none" >
+                  <div class="list-group-item list-group-item-action color-ongoing" >
                       <strong>Cycle 5</strong><br />
                          01 Feb 2026 - 31 Jul 2026
                   </div>
                   <div class="list-group-item list-group-item-action color-none">
                       <strong>Cycle 6</strong><br />
                         01 Aug 2026 - 31 Jan 2027
+                  </div>
+                  <div class="list-group-item list-group-item-action color-none" >
+                      <strong>Cycle 7</strong><br />
+                         01 Feb 2027 - 31 Jul 2027
                   </div>
                 </div>
               </div>
@@ -628,6 +632,7 @@
             <option>Cycle 3</option>
             <option>Cycle 4</option>
             <option>Cycle 5</option>
+            <option>Cycle 6</option>
             <!-- <optgroup label="GN4-3"> -->
             <!--   <option>Cycle 0</option> -->
             <!--   <option>Cycle 1</option> -->
@@ -795,11 +800,11 @@ class="uri">https://github.tik.uni-stuttgart.de</a></p>
     <h2 class="card-title">Single-Sign-On for TS4NFDI services</h2>
     <p class="card-text">
     <p>The incubator project aims to implement a Single Sign-On (SSO)
-solution for Terminology Servicess 4 NFDI (TS4NFDI), which provides
+solution for Terminology Services 4 NFDI (TS4NFDI), which provides
 cross-domain services for terminology provision, curation, development,
 harmonization, and mapping. The platform integrates standardized
 services including a centralized API Gateway, NFDI-wide Mapping Service,
-and Terminology Services Suite widgets, all accessible through a central
+and Terminology Service Suite widgets, all accessible through a central
 Service Portal for unified collection and mapping management.</p>
 <p>The planned Authentication and Authorization Infrastructure (AAI)
 will support login via NFDI-AAI, ORCID, and GitHub, with compatibility
@@ -821,7 +826,7 @@ infrastructure compatibility.</p>
 service.</li>
 <li>The following services should be connected to the authentication
 service: TS4NFDI Service Portal, TS4NFDI Mapping Service and the
-Terminology Services Suite</li>
+Terminology Service Suite</li>
 </ul>
     </p>
     <button
@@ -944,7 +949,7 @@ class="uri">https://gitlab.hrz.tu-chemnitz.de/come2data</a></li>
   <div class="card-body">
     <div class="tags">
       <span class="badge badge-pill badge-primary">Development</span>
-      <span class="badge badge-pill badge-success">Submitted</span>
+      <span class="badge badge-pill badge-success">NoResponse</span>
       <span
         class="badge badge-pill badge-info"
         data-toggle="tooltip"
@@ -1158,7 +1163,7 @@ class="uri">https://gitlab.ulb.tu-darmstadt.de</a></p>
   <div class="card-body">
     <div class="tags">
       <span class="badge badge-pill badge-primary">Development</span>
-      <span class="badge badge-pill badge-success">Running</span>
+      <span class="badge badge-pill badge-success">NoResponse</span>
       <span
         class="badge badge-pill badge-info"
         data-toggle="tooltip"
@@ -2011,14 +2016,14 @@ work steps:</p>
       <span class="badge badge-pill badge-info">CAAI: regapp</span>
       <span class="badge badge-pill bg-dark text-light">NFDI4CHEM</span>
     </div>
-    <h2 class="card-title">Terminology Servicess2.0</h2>
+    <h2 class="card-title">Terminology Services2.0</h2>
     <p class="card-text">
     <p>While our initial incubator proposal focused solely on the
-Terminology Services (TS), we soon realised that its requirements did not
+Terminology Service (TS), we soon realised that its requirements did not
 encompass the full spectrum of services within the NFDI4Chem consortium.
 Consequently, we expanded our approach to include the major services of
 NFDI4Chem in the Community AAI. Currently, in addition to the <a
-href="https://terminology.nfdi4chem.de/ts">Terminology Services (TS)</a>,
+href="https://terminology.nfdi4chem.de/ts">Terminology Service (TS)</a>,
 we are testing the Community AAI with <a
 href="https://chemotion.net">Chemotion Repository</a>, <a
 href="https://nmrxiv.org">nmrXiv</a> and <a
@@ -3010,7 +3015,7 @@ here</a></li>
       <span class="badge badge-pill badge-info">CAAI: na</span>
       <span class="badge badge-pill bg-dark text-light">NFDI4CHEM</span>
     </div>
-    <h2 class="card-title">Terminology Services</h2>
+    <h2 class="card-title">Terminology Service</h2>
     <p class="card-text">
     <p>The goal of NFDI4Chem is to have a unified AAI solution within a
 single consortium, enabling users to seamlessly access and utilize all
@@ -3021,7 +3026,7 @@ services and the CAAI front, ensuring that the needs of the majority of
 these services are met. Following comprehensive testing across all
 facets, the test instances of each service will transition into
 production. The list of services to be connected with CAAI includes the
-<a href="https://terminology.nfdi4chem.de/ts">Terminology Services</a>
+<a href="https://terminology.nfdi4chem.de/ts">Terminology Service</a>
 (TS), <a href="https://chemotion.net">Chemotion Repository</a>, <a
 href="https://nmrxiv.org">nmrXiv</a>, <a
 href="https://coconut.naturalproducts.net">COCONUT</a> and more.</p>
