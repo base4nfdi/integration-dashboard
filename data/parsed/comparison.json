@@ -1,5 +1,5 @@
 {
-  "compared_at": "2026-07-24T11:17:34.115Z",
+  "compared_at": "2026-07-24T11:47:15.181Z",
   "nocodb_file": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/static/data.json",
   "services": {
     "dmp4nfdi": {
@@ -2424,10 +2424,6 @@
             "inc_start": {
               "source": "",
               "nocodb": "2026-07-15"
-            },
-            "logo_project": {
-              "source": "https://terminology.services.base4nfdi.de/img/sms.png",
-              "nocodb": ""
             }
           }
         },

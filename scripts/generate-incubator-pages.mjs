@@ -291,12 +291,13 @@ function buildBody(record, keyArticle) {
   sections.push("");
   sections.push(formatPartnersSection(record));
   sections.push("");
-  sections.push("## Notes");
   sections.push("");
-  sections.push(
-    `This report maps to row **${keyArticle}** in the NocoDB dashboard table.`
-  );
-  sections.push("");
+  // sections.push("## Notes");
+  // sections.push("");
+  // sections.push(
+  //   `This report maps to row **${keyArticle}** in the NocoDB dashboard table.`
+  // );
+  // sections.push("");
 
   return sections.join("\n");
 }

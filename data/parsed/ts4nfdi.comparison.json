@@ -646,10 +646,6 @@
         "inc_start": {
           "source": "",
           "nocodb": "2026-07-15"
-        },
-        "logo_project": {
-          "source": "https://terminology.services.base4nfdi.de/img/sms.png",
-          "nocodb": ""
         }
       }
     },
