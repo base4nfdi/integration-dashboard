@@ -144,11 +144,13 @@ a:hover {
 
 .site-nav a {
   color: var(--header-text-muted);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }
 
 .site-nav a:hover {
   color: var(--nfdi-blau);
+  text-decoration: underline;
 }
 
 .theme-toggle {
@@ -242,11 +244,6 @@ main {
 main.container:has(.dashboard) {
   width: calc(100% - 3.5rem);
   max-width: none;
-}
-
-.dashboard-header h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
 }
 
 .dashboard-intro {
@@ -583,8 +580,20 @@ main.container:has(.dashboard) {
 
 .filter-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem;
+}
+
+.filter-actions .filter-search {
+  flex: 0 1 50%;
+  width: 50%;
+  min-width: min(100%, 12rem);
+  max-width: 50%;
+}
+
+.filter-actions .filter-search input[type="search"] {
+  max-width: none;
 }
 
 .filter-clear {

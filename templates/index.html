@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 
-{% block title %}{{ section.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
-
 {% block content %}
 <section class="dashboard">
   <header class="dashboard-header">
-    <h2>{{ section.title }}</h2>
     {% if section.content %}
     <div class="dashboard-intro">{{ section.content | safe }}</div>
     {% endif %}
@@ -20,18 +17,6 @@
     </div>
 
     <form class="filter-bar" id="filter-bar" hidden aria-label="Filter incubators">
-      <div class="filter-search">
-        <label class="visually-hidden" for="filter-search">Search table</label>
-        <input
-          type="search"
-          id="filter-search"
-          name="q"
-          placeholder="Search all text columns…"
-          autocomplete="off"
-          spellcheck="false"
-        >
-      </div>
-
       <div class="filter-groups" id="filter-groups-wrap">
         <div class="filter-chip-groups" id="filter-groups"></div>
 
@@ -80,6 +65,17 @@
 
       <div class="filter-actions">
         <button type="button" class="filter-clear" id="filter-clear" disabled>Clear filters</button>
+        <div class="filter-search">
+          <label class="visually-hidden" for="filter-search">Search table</label>
+          <input
+            type="search"
+            id="filter-search"
+            name="q"
+            placeholder="Search all text columns…"
+            autocomplete="off"
+            spellcheck="false"
+          >
+        </div>
       </div>
     </form>
 
@@ -135,7 +131,7 @@
     // { key: "inc_partner_publications", label: "Partner pubs" },
     { key: "partners", label: "Consortia involved", type: "list" },
     // { key: "linked_partners", label: "# Partners" },
-    { key: "entities", label: "Hosting Institutions", type: "list" },
+    { key: "entities", label: "Institutions", type: "list" },
     // { key: "linked_entities", label: "# Entities" },
     { key: "related_institutions", label: "Further Institutions" },
   ];
@@ -144,7 +140,7 @@
   const filterDefs = [
     { key: "basic_service", label: "Basic service" },
     { key: "inc_status", label: "Status" },
-    { key: "inc_cycle", label: "Cycle" },
+    // { key: "inc_cycle", label: "Cycle" },
   ];
 
   /** Multi-value field filtered via searchable tag combobox (any-match). */

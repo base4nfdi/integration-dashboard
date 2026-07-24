@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-07-24T19:06:13.363Z",
+  "fetched_at": "2026-07-24T20:08:51.828Z",
   "records": [
     {
       "id": 1,
@@ -2214,11 +2214,13 @@
       "inc_goals": "",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Immuno"
+      ],
       "entities": []
     }
   ],
-  "logos_localized_at": "2026-07-24T19:08:26.925Z"
+  "logos_localized_at": "2026-07-24T20:08:52.002Z"
 }
