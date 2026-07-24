@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-07-24T11:47:15.754Z",
+  "fetched_at": "2026-07-24T13:13:43.683Z",
   "records": [
     {
       "id": 1,
@@ -189,9 +189,12 @@
       "inc_goals": "The incubator project aims to improve the integration of RDMO and the RADAR research data repository within the NFDI context. This integration enables researchers to smoothly and reliably transfer metadata already entered in data management plans directly into the repository, reducing redundant data entry and minimizing errors. While a basic metadata transfer between the two services is already implemented, the underlying mappings require continuous optimization. This project will refine these mappings and optimize the plugins based on the generic NFDI DMP template and further enhance metadata transfer for the consortia-specific RDMO instances of NFDI4Chem and NFDI4Culture, including their tailored questionnaires, if available.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 2,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Chem",
+        "NFDI4Culture"
+      ],
       "entities": []
     },
     {
@@ -210,9 +213,11 @@
       "inc_goals": "A few years ago, NFDI4Chem developed a chemistry-specific DMP template. This was created based on surveys and interviews with chemists to identify their needs, and it aligns with the DFG checklist. The template is available as a RDMO catalogue within the NFDI4Chem RDMO instance and is widely used by researchers. In order to enhance the standardisation and interoperability of the template, NFDI4Chem will now be adapting it to align with the NFDI Template Framework developed by DMP4NFDI. This will result in an updated, interoperable version of the chemistry-specific DMP template.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Chem"
+      ],
       "entities": []
     },
     {
@@ -231,9 +236,11 @@
       "inc_goals": "The template \"Research Data Management Plan - Epidemiological studies\" is aimed at epidemiological researchers and has been implemented fully in RDMO. The incubator will help develop a training/tutorial for using this template while also providing an overview of DMPs and their relevance. The developed training/tutorial will provide a basis for further trainings/tutorials on the other NFDI4Health templates (one for clinical research and one shortened version that can be handed in along with a research proposal e.g. at the DFG) that will be implemented in RDMO.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Health"
+      ],
       "entities": []
     },
     {
@@ -252,9 +259,11 @@
       "inc_goals": "Establishing an RDMO client that provides high-quality, user-friendly DMP templates that meet funder requirements and reflects the needs of the research community. The service will initially support the solid-state physics community represented within the NFDI by FAIRmat. The RDMO client will be prepared for extensibility so that other physical-sciences consortia (PSinNFDI), including DAPHNE4NFDI, MaRDI, MatWerk, NFDI4Chem, NFDI4Cat, and PUNCH4NFDI, can provide their existing RDMO catalogues or later contribute domain requirements or templates if capacity allows.",
       "inc_results": "RDMO Client for the Physical Sciences\nhttps://dmp4ps.fairmat-nfdi.eu/",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "FAIRmat"
+      ],
       "entities": []
     },
     {
@@ -273,9 +282,11 @@
       "inc_goals": "The incubator project aims to enhance the integration between two services supporting researchers in the NFDI: RDMO and Coscine. By streamlining the workflow and reducing redundant efforts, the project focuses in a first step on connecting the NFDI4ING RDMO with Coscine using the NFDI DMP catalog. The incubator will simplify the metadata import for projects from RDMO to Coscine by eliminating the manual processes currently required through an improved API interface.",
       "inc_results": "RDMO Coscine Plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-coscine\nRDMO Plugin for the DFG Classification of Scientific Disciplines\nhttps://github.com/rdmorganiser/rdmo-plugins-dfg",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Ing"
+      ],
       "entities": []
     },
     {
@@ -294,9 +305,11 @@
       "inc_goals": "This incubator project focuses on community outreach and promoting FAIRagro’s domain-specific DMP template. The project also aims to increase the template’s interoperability by dynamically making terminologies available for specific questions. A workshop or training session will be organized to gather user feedback for template improvement and to foster its adoption across the agricultural research community. For terminology implementation the project will gather and contribute requirements to inform technical developments between DMP4NFDI and the TS4NFDI basic service.",
       "inc_results": "Workshop \"RDMO in Practice: Building Data Management Plans for Agricultural Research\"\nhttps://doi.org/10.5281/zenodo.21393038",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "FAIRagro"
+      ],
       "entities": []
     },
     {
@@ -315,9 +328,11 @@
       "inc_goals": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "Text+\r"
+      ],
       "entities": []
     },
     {
@@ -336,9 +351,11 @@
       "inc_goals": "NFDI4Cat is developing a discipline-specific DMP template that covers catalysis-related aspects like complex analysis, catalyst testing workflows and cooperation with industry. The important aspects of RDM in catalysis at the status quo, based on requirement analysis, will be addressed by the DMP template. The DMP template will be released to collect further community feedback and update the template based on this iterative workflow and further ongoing developments in RDM.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Cat"
+      ],
       "entities": []
     },
     {
@@ -357,9 +374,11 @@
       "inc_goals": "The template \"Research Data Management Plan - Epidemiological studies\" is aimed at epidemiological researchers and is currently published as a fillable PDF document. The goal of this incubator project is to fully implement the template in RDMO so that researchers can use, review and adapt it to their needs. The incubator will provide the basis for the implementation of two further NFDI4Health DMP templates, one for clinical research and one shortened version that can be handed it along with a research proposal, e.g. at the DFG.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Health"
+      ],
       "entities": []
     },
     {
@@ -378,9 +397,11 @@
       "inc_goals": "This project aims to develop a mathematics-specific DMP template, building on the recommendations of the MaRDI consortium’s white paper “Research Data Management Planning in Mathematics”. The project will translate discipline-specific requirements into a structured, modular template capturing the diversity of mathematical research data—proofs, algorithms, computational workflows, mathematical models, software, numerical datasets, and visualizations.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "MaRDI"
+      ],
       "entities": []
     },
     {
@@ -399,9 +420,11 @@
       "inc_goals": "NFDI4Microbiota will use RDMO to provide and continuously maintain a tailored DMP template for the microbiological research community. A dedicated test environment already supports current catalog development and evaluation, with the productive system scheduled for release by the end of 2025. Data stewards from the consortium's help desk will receive manager rights to offer first-level support and ensure wide user adoption.",
       "inc_results": "Test client ready; productive client in preparation\n\n              <!--",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Microbiota"
+      ],
       "entities": []
     },
     {
@@ -420,9 +443,11 @@
       "inc_goals": "Establishing an RDMO environment tailored to the consortium’s needs. During the incubator project, a test client will be set up, followed shortly by a productive system to enable early evaluation within the community by utilising existing RDMO catalogs and templates, e.g. by NFDI4ING. User access will be managed through the NFDI-AAI login, providing federated authentication based on institutional accounts.",
       "inc_results": "NFDI4Energy RDMO Client\nhttps://rdmo.nfdi4energy.org/",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Energy"
+      ],
       "entities": []
     },
     {
@@ -441,9 +466,11 @@
       "inc_goals": "Implementing an RDMO client to serve the consortium’s research data management activities. A pilot version will be launched for internal testing. A productive instance is foreseen after validation of the pilot.",
       "inc_results": "Test client ready; productive client in preparation\n\n              <!--",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI-MatWerk"
+      ],
       "entities": []
     },
     {
@@ -462,9 +489,11 @@
       "inc_goals": "Setting up an RDMO client to explore integration with existing data workflows and to develop initial catalog structures. Create familiarity with the template system and build up Know-How to enable guidance and teaching of users. Integration with the NFDI-AAI Didmos login is planned to provide seamless and secure user authentication.",
       "inc_results": "NFDI4BIOMAGE RDMO Client\nhttps://rdmo.nfdi4bioimage.de/",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4BIOIMAGE"
+      ],
       "entities": []
     },
     {
@@ -483,9 +512,11 @@
       "inc_goals": "The goal is to set up a dedicated RDMO client for NFDI4Health, which will provide a Data Management Plan (DMP) service for the health research community. A test system will be set up in the first incubator project to facilitate the implementation, development and testing of the catalogue. Work on the catalogue will likely form part of another incubator project prior to migration to a productive RDMO system. The RDMO client will support authentication via the NFDI-AAI, enabling users to securely log in with their institutional credentials.",
       "inc_results": "Test client ready; productive client in preparation\n\n              <!--",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Health"
+      ],
       "entities": []
     },
     {
@@ -504,9 +535,11 @@
       "inc_goals": "MaRDI offers its MaRDMO service to all researchers using mathematical methods in their research, regardless of discipline background. In this incubator project, the MaRDMO plugin collection for RDMO is further enhanced to include instrument data bases. The plugin will be able to query different instrument databases across NFDI consortia, and to store instrument metadata inside the MaRDMO template.",
       "inc_results": "Generic Search RDMO Plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-generic-search",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "MaRDI"
+      ],
       "entities": []
     },
     {
@@ -525,9 +558,11 @@
       "inc_goals": "The aim of this incubator project was to help cultural heritage institutions find the right software solution for organising and presenting their artefacts. To this end, we have developed a decision-making aid comprising two complementary DMP templates. One template is designed from the user's perspective (i.e. collections) to help clarify their requirements and assist in selecting suitable software for collection management. The other template enables collection management products to be described in detail from the provider's perspective, making them comparable for users. This facilitates a matching between software products and users.",
       "inc_results": "NFDI4Culture RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Culture"
+      ],
       "entities": []
     },
     {
@@ -546,9 +581,11 @@
       "inc_goals": "NFDI4Memory is developing a discipline-specific DMP template to support the historical research community in their application process. The questionnaire is being continually refined in close collaboration with the community. In this incubator project, the template is developed based on the existing NFDI DMP Template Framework, while adapting and extending results from the community. The project also includes the integration of the new template into the NFDI4Memory RDMO client.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Memory"
+      ],
       "entities": []
     },
     {
@@ -567,9 +604,12 @@
       "inc_goals": "The product of this incubator project is a DMP template to help museums and collections implement the FAIR principles. The template provides an accessible option for assessing the FAIR quality of collection data. The questions are categorised according to four typical processing phases: digitisation, documentation, publication and storage/archiving. Most of the questions within these categories are assigned to indicators from the FAIR Data Maturity Model. The template includes answer options, some recommendations for action, help texts, notes and links to useful materials. The aim is to create a template that illustrates the different levels of FAIR implementation, while also providing institutions with a roadmap to improve the quality of their data.",
       "inc_results": "",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 2,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Culture",
+        "NFDI4Objects"
+      ],
       "entities": []
     },
     {
@@ -588,9 +628,11 @@
       "inc_goals": "FAIRagro customises DMP templates of funding agencies based on the needs of the agrosystem community for efficient and straight forward usage. The close cooperation with DMP4NFDI will ensure the compatibility and reusability of the developments. During the incubator project, a customised DMP template for the agrosystem sciences will be created and made available, based on community feedback (e.g. through workshops) and aligned with the existing NFDI DMP Template Framework.",
       "inc_results": "FAIRagro RDMO Catalog\nhttps://github.com/fairagro/FAIRagro_DMP_Template",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "FAIRagro"
+      ],
       "entities": []
     },
     {
@@ -609,9 +651,11 @@
       "inc_goals": "The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.",
       "inc_results": "Text+ RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "Text+\r"
+      ],
       "entities": []
     },
     {
@@ -630,9 +674,11 @@
       "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
       "inc_results": "Training Guide for DMP Workshops\nhttps://doi.org/10.5281/zenodo.20529135",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Chem"
+      ],
       "entities": []
     },
     {
@@ -651,9 +697,11 @@
       "inc_goals": "Use the NFDI4ING RDMO service as the reference implementation for RDMO hosting in DMP4NFDI and as a foundation for onboarding further clients to the DMP4NFDI service.",
       "inc_results": "NFDI4Ing RDMO Client\nhttps://rdmo.nfdi4ing.de",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Ing"
+      ],
       "entities": []
     },
     {
@@ -672,9 +720,11 @@
       "inc_goals": "Host and operate the RDMO client for the NFDI4Chem consortium within the DMP4NFDI service and bring it into productive operation.",
       "inc_results": "NFDI4Chem RDMO Client\nhttps://rdmo.nfdi4chem.de",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Chem"
+      ],
       "entities": []
     },
     {
@@ -693,9 +743,11 @@
       "inc_goals": "Set up an RDMO client for the FAIRagro consortium that is ready to provide DMP templates to the community.",
       "inc_results": "FAIRagro RDMO Client\nhttps://rdmo.fairagro.net/",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "FAIRagro"
+      ],
       "entities": []
     },
     {
@@ -714,9 +766,11 @@
       "inc_goals": "Develop an RDMO plugin that connects the DMP tool to Zenodo, enabling users to publish DMPs as PDFs directly from RDMO.",
       "inc_results": "RDMO Zenodo Plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-zenodo",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Biodiversity"
+      ],
       "entities": []
     },
     {
@@ -735,9 +789,11 @@
       "inc_goals": "Host an RDMO tenant for the NFDI4Culture consortium and integrate the consortium’s community AAI as the login mechanism for authentication and authorization. RDMO user permissions should be manageable within the NFDI4Culture community AAI. The resulting service will support researchers, cultural professionals, and cultural heritage institutions.",
       "inc_results": "NFDI4Culture RDMO Client\nhttps://rdmo.nfdi4culture.de",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Culture"
+      ],
       "entities": []
     },
     {
@@ -756,9 +812,11 @@
       "inc_goals": "Set up an RDMO client for the MaRDI consortium and integrate the existing MaRDMO plugin, which connects RDMO with the MaRDI knowledge graph infrastructure.",
       "inc_results": "MaRDI RDMO Client\nhttps://rdmo.mardi4nfdi.de",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "MaRDI"
+      ],
       "entities": []
     },
     {
@@ -777,9 +835,11 @@
       "inc_goals": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.",
       "inc_results": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Earth"
+      ],
       "entities": []
     },
     {
@@ -882,9 +942,11 @@
       "inc_goals": "- The Data Ingest Service originally was designed to target architecture and civil engineering, but we will breaden the scope in the future",
       "inc_results": "https://gitlab.ulb.tu-darmstadt.de",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "NFDI4Ing"
+      ],
       "entities": []
     },
     {
@@ -925,9 +987,11 @@
       "inc_results": "Not applicable",
       "inc_partner_publications": 0,
       "linked_partners": 0,
-      "linked_entities": 0,
+      "linked_entities": 1,
       "partners": [],
-      "entities": []
+      "entities": [
+        "NFDI"
+      ]
     },
     {
       "id": 47,
@@ -945,9 +1009,11 @@
       "inc_goals": "- Implement OpenID Connect as the SSO protocol following IAM4NFDI recommendations\n- Apply attribute exchange mechanisms for user entitlements and roles\n- Enable future compatibility with federated identity and EOSC guidelines\n- Validate use cases with external services (e.g., Galaxy) that rely on IAM-compliant standards",
       "inc_results": "Not yet published",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
+      "linked_partners": 1,
       "linked_entities": 0,
-      "partners": [],
+      "partners": [
+        "BERD@NFDI"
+      ],
       "entities": []
     },
     {
@@ -966,10 +1032,14 @@
       "inc_goals": "- Das Ziel dieses Inkubators ist es, eine klare Aussage zu machen, wie wir mit dem GFBio Single-Sign- On die Autorisierung und das Gruppenmanagement in den GFBio-Diensten weiter nutzen können und auch Nutzer/innen einbeziehen, die sich über die LifescienceAAI registriert haben",
       "inc_results": "https://kb.gfbio.org/",
       "inc_partner_publications": 0,
-      "linked_partners": 0,
-      "linked_entities": 0,
-      "partners": [],
-      "entities": []
+      "linked_partners": 1,
+      "linked_entities": 1,
+      "partners": [
+        "NFDI4Biodiversity"
+      ],
+      "entities": [
+        "GFBio"
+      ]
     },
     {
       "id": 49,
@@ -988,9 +1058,11 @@
       "inc_results": "https://github.com/deNBI",
       "inc_partner_publications": 0,
       "linked_partners": 0,
-      "linked_entities": 0,
+      "linked_entities": 1,
       "partners": [],
-      "entities": []
+      "entities": [
+        "Bielefeld University"
+      ]
     },
     {
       "id": 50,
