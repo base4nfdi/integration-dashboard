@@ -38,6 +38,10 @@
         "inc_results": {
           "source": "https://doi.org/10.5281/zenodo.17090276\nhttps://doi.org/10.5281/zenodo.16736267\nhttps://radar.products.fiz-karlsruhe.de/en/nachricht/radar-release-v123-ts4nfdi-integration-abgeschlossen",
           "nocodb": ""
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
+          "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
         }
       }
     },
@@ -60,9 +64,13 @@
         ]
       },
       "field_diffs": {
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/wdcc.png",
+          "nocodb": "img/partner-logos/8ca946e929cc27bc.png"
+        },
         "logo_consortia": {
           "source": "",
-          "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+          "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
         }
       }
     },
@@ -88,6 +96,10 @@
             "NFDI4Chem"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/nmrxiv_repository.png",
+          "nocodb": "img/partner-logos/8e52852b66788d11.png"
         }
       }
     },
@@ -105,7 +117,12 @@
         "inc_status": "Finished",
         "partners": []
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/chebi.png",
+          "nocodb": "img/partner-logos/ef0a379775ece1e4.png"
+        }
+      }
     },
     {
       "score": 2,
@@ -129,6 +146,10 @@
             "NFDI4Chem"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/coconut.png",
+          "nocodb": "img/partner-logos/4b05f3d3cef46b2e.png"
         }
       }
     },
@@ -154,6 +175,10 @@
             "NFDI4Cat"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/nfdi4cat.png",
+          "nocodb": "img/partner-logos/4a8f5a62aea03e2b.png"
         }
       }
     },
@@ -179,6 +204,10 @@
             "BERD@NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/berd.png",
+          "nocodb": "img/partner-logos/a8573f5bcf411a39.png"
         }
       }
     },
@@ -204,6 +233,10 @@
             "NFDI4BIOIMAGE"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.svg",
+          "nocodb": "img/partner-logos/2f46b3090c3dd5f8.svg"
         }
       }
     },
@@ -229,6 +262,10 @@
             "NFDI4Health"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/preVIEW.svg",
+          "nocodb": "img/partner-logos/ee3199b54476df4d.svg"
         }
       }
     },
@@ -254,6 +291,10 @@
             "NFDI4Health"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
+          "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
         }
       }
     },
@@ -279,6 +320,10 @@
             "Text+"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/discuss-data.svg",
+          "nocodb": "img/partner-logos/1933602a07f6ab9e.svg"
         }
       }
     },
@@ -304,6 +349,10 @@
             "NFDI4Energy"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png",
+          "nocodb": "img/partner-logos/420b1ab6f7242fa5.png"
         }
       }
     },
@@ -335,6 +384,10 @@
             "NFDI4Objects"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/ICONCLASS.png",
+          "nocodb": "img/partner-logos/a0257f1df118d653.png"
         }
       }
     },
@@ -362,6 +415,10 @@
             "BERD@NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/ohdab.png",
+          "nocodb": "img/partner-logos/567f987e1dd0014a.png"
         }
       }
     },
@@ -387,6 +444,10 @@
             "NFDI4Health"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
+          "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
         }
       }
     },
@@ -404,7 +465,12 @@
         "inc_status": "Running",
         "partners": []
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/dalia.png",
+          "nocodb": "img/partner-logos/39ef828eaba7a05b.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -428,6 +494,10 @@
         "inc_end": {
           "source": "2026-09-30",
           "nocodb": ""
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png",
+          "nocodb": "img/partner-logos/b0faf7bb2f1d9ce6.png"
         }
       }
     },
@@ -453,6 +523,10 @@
             "Base4NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/DMP4NFDI.png",
+          "nocodb": "img/partner-logos/c20f374664866ba7.png"
         }
       }
     },
@@ -478,6 +552,10 @@
             "Base4NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/PID4NFDI.png",
+          "nocodb": "img/partner-logos/42230e20b86baef5.png"
         }
       }
     },
@@ -503,6 +581,10 @@
             "NFDIxCS"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/metabase-logo.svg",
+          "nocodb": "img/partner-logos/9d80b706f0cc1f85.svg"
         }
       }
     },
@@ -528,6 +610,10 @@
             "MaRDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/MathModDBLogo.png",
+          "nocodb": "img/partner-logos/7da39823e90b3deb.png"
         }
       }
     },
@@ -553,6 +639,10 @@
             "FAIRagro"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/FAIRagro.png",
+          "nocodb": "img/partner-logos/1584198a22a429d3.png"
         }
       }
     },
@@ -570,7 +660,12 @@
         "inc_status": "In preparation",
         "partners": []
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/galaxy-eu.svg",
+          "nocodb": "img/partner-logos/452248d3416df5d7.svg"
+        }
+      }
     },
     {
       "score": 2,
@@ -596,6 +691,10 @@
             "PUNCH4NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/tess-logo.svg",
+          "nocodb": "img/partner-logos/cf6d4cf72d711cd7.svg"
         }
       }
     },
@@ -621,6 +720,10 @@
             "DAPHNE4NFDI"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/DAPHNE4NFDI_logo.png",
+          "nocodb": "img/partner-logos/9f445863db409d4f.png"
         }
       }
     },
@@ -646,6 +749,10 @@
         "inc_start": {
           "source": "",
           "nocodb": "2026-07-15"
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/sms.png",
+          "nocodb": "img/partner-logos/21dc354f7bdfca6e.png"
         }
       }
     },
@@ -671,6 +778,10 @@
             "NFDI4Energy"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/CEPO-logo.png",
+          "nocodb": "img/partner-logos/c2ec2fab9b3ea704.png"
         }
       }
     },
@@ -700,6 +811,10 @@
             "NFDI4Objects"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
+          "nocodb": "img/partner-logos/db311bd7628d7af5.png"
         }
       }
     },
@@ -725,6 +840,10 @@
             "NFDI4Memory"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/ostdata.png",
+          "nocodb": "img/partner-logos/fa6ecd87e11ec9e1.png"
         }
       }
     },
@@ -742,7 +861,12 @@
         "inc_status": "In preparation",
         "partners": []
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/rspace_logo.svg",
+          "nocodb": "img/partner-logos/07de910f2aad00e7.svg"
+        }
+      }
     },
     {
       "score": 2,
@@ -766,6 +890,10 @@
             "NFDI4Immuno"
           ],
           "nocodb": []
+        },
+        "logo_project": {
+          "source": "https://terminology.services.base4nfdi.de/img/nfdi4immuno.png",
+          "nocodb": "img/partner-logos/ba427dc06317d8ac.png"
         }
       }
     }

@@ -11,7 +11,7 @@ inc_cycle = 3
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/forum4mica.png"
+logo_consortia = "img/partner-logos/452aa84a3edd4de7.png"
 +++
 
 The idea of the incubator proposal is to use the Forum4MICA as a pilot project to connect the consortium KonsortSWD to Community AAI. Forum4MICA is a publicly accessible exchange and information platform on topics related to the data collections of the participating Research Data Centers (RDC). The online forum gives RDCs (currently 18) an additional option for communicating with their data users and interested persons. It enables the provision of specifically requested information on the research data provided. As submissions and interactions are only possible for registered users, logins via NFDI-AAI would substantially improve the user experience and reduce effort.

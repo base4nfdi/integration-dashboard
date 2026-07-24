@@ -11,7 +11,7 @@ inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_project = "https://terminology.services.base4nfdi.de/img/berd.png"
+logo_project = "img/partner-logos/a8573f5bcf411a39.png"
 +++
 
 BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.

@@ -13,7 +13,7 @@ linked_partners = 1
 linked_entities = 1
 partners = ["NFDI4Ing"]
 entities = ["Technical University and State Library Darmstadt"]
-logo_project = "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png"
+logo_project = "img/partner-logos/b0faf7bb2f1d9ce6.png"
 related_institutions = "ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg"
 +++
 

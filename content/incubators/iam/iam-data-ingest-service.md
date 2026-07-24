@@ -11,7 +11,7 @@ inc_cycle = 4
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/nfdi4ing.jpg"
+logo_consortia = "img/partner-logos/8c7cff3511f4a43e.jpg"
 +++
 
 The NFDI4ING Data Ingest Service (https://ingest.nfdi4ing.de) uses OpenID connect for authentication and authorisation. Currently it is using a custom keycloak installation for DFN federation or ORCID login. We would like to connect it to the NFDI AAI.

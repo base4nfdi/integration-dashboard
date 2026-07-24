@@ -11,7 +11,7 @@ inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png"
+logo_consortia = "img/partner-logos/800a8c236b604f34.png"
 +++
 
 Template Development — NFDI4Objects, NFDI4Culture is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

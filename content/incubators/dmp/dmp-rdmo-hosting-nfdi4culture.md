@@ -11,7 +11,7 @@ inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png"
+logo_consortia = "img/partner-logos/67e627866c4ac8d4.png"
 +++
 
 RDMO Hosting — NFDI4Culture is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

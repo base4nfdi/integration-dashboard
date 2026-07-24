@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Ing"]
-logo_consortia = "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+logo_consortia = "img/partner-logos/a755e82e7aec255a.svg"
 +++
 
 DMP template for engineering sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

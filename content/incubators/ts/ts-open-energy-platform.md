@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_project = "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png"
+logo_project = "img/partner-logos/420b1ab6f7242fa5.png"
 +++
 
 NFDI4Energy is developing a platform that integrates key services to support researchers in the energy domain. Central components are accessible through the Open Energy Platform (OEP). A core element is the Open Energy Ontology (OEO), a dynamic domain ontology for energy system modeling. Additional complementary ontologies are currently in development to broaden the semantic framework.

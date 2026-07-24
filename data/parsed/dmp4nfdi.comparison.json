@@ -42,6 +42,10 @@
             "NFDI4Chem",
             "NFDI4Culture"
           ]
+        },
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png",
+          "nocodb": "img/partner-logos/79d79017d3100d9d.png"
         }
       }
     },
@@ -63,7 +67,12 @@
           "NFDI4Chem"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+          "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
+        }
+      }
     },
     {
       "score": 1.263,
@@ -94,7 +103,7 @@
         },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
-          "nocodb": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+          "nocodb": "img/partner-logos/a755e82e7aec255a.svg"
         }
       }
     },
@@ -116,7 +125,12 @@
           "NFDI4Health"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+          "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
+        }
+      }
     },
     {
       "score": 1.22,
@@ -147,7 +161,7 @@
         },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
-          "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+          "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
         }
       }
     },
@@ -173,6 +187,10 @@
         "inc_name": {
           "source": "FAIRmat",
           "nocodb": "FAIRmat RDMO Client for the Physical Sciences"
+        },
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png",
+          "nocodb": "img/partner-logos/7613ba801eafb62e.png"
         }
       }
     },
@@ -194,7 +212,12 @@
           "NFDI4Ing"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png",
+          "nocodb": "img/partner-logos/973257d523b9c266.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -214,7 +237,12 @@
           "FAIRagro"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+          "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -234,7 +262,12 @@
           "Text+"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
+          "nocodb": "img/partner-logos/db773a275cb2249c.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -254,7 +287,12 @@
           "NFDI4Cat"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
+          "nocodb": "img/partner-logos/77459895f95007f0.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -274,7 +312,12 @@
           "NFDI4Health"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+          "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -294,7 +337,12 @@
           "MaRDI"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+          "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -314,7 +362,12 @@
           "NFDI4Microbiota"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png",
+          "nocodb": "img/partner-logos/68e3cc17e1554305.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -334,7 +387,12 @@
           "NFDI4Energy"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
+          "nocodb": "img/partner-logos/f4255b2203c83db4.png"
+        }
+      }
     },
     {
       "score": 2,
@@ -362,6 +420,10 @@
           "nocodb": [
             "NFDI-MatWerk"
           ]
+        },
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
+          "nocodb": "img/partner-logos/83ae5ea177c95650.png"
         }
       }
     },
@@ -383,7 +445,12 @@
           "NFDI4BIOIMAGE"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
+          "nocodb": "img/partner-logos/bd284640d067a489.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -403,7 +470,12 @@
           "NFDI4Health"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+          "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -423,7 +495,12 @@
           "MaRDI"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+          "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -443,7 +520,12 @@
           "NFDI4Culture"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
+          "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -463,7 +545,12 @@
           "NFDI4Memory"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
+          "nocodb": "img/partner-logos/e8e523c5867ae478.png"
+        }
+      }
     },
     {
       "score": 2.24,
@@ -495,6 +582,10 @@
             "NFDI4Culture",
             "NFDI4Objects"
           ]
+        },
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png",
+          "nocodb": "img/partner-logos/800a8c236b604f34.png"
         }
       }
     },
@@ -516,7 +607,12 @@
           "FAIRagro"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+          "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -536,7 +632,12 @@
           "Text+"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
+          "nocodb": "img/partner-logos/db773a275cb2249c.png"
+        }
+      }
     },
     {
       "score": 2.12,
@@ -556,7 +657,12 @@
           "NFDI4Chem"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+          "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -576,7 +682,12 @@
           "NFDI4Ing"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
+          "nocodb": "img/partner-logos/bfa1a3b9daa9e273.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -596,7 +707,12 @@
           "NFDI4Chem"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+          "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -616,7 +732,12 @@
           "FAIRagro"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+          "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -636,7 +757,12 @@
           "NFDI4Biodiversity"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
+          "nocodb": "img/partner-logos/375d18e09586ac41.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -656,7 +782,12 @@
           "NFDI4Culture"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
+          "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -676,7 +807,12 @@
           "MaRDI"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+          "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+        }
+      }
     },
     {
       "score": 1.92,
@@ -696,7 +832,12 @@
           "NFDI4Earth"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "logo_consortia": {
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
+          "nocodb": "img/partner-logos/fb068dab27f7e96a.png"
+        }
+      }
     }
   ],
   "only_in_source": [],

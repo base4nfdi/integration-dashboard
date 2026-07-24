@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4health.png"
+logo_project = "img/partner-logos/c08cca7ca0e157bf.png"
 +++
 
 The Health Study Hub is a central discovery platform developed within the NFDI4Health initiative. It provides structured metadata about health studies, enabling researchers, scientists, and other stakeholders to explore and understand available research data without requiring direct access to sensitive datasets. The Hub emphasizes metadata transparency, interoperability, and usability, supporting FAIR data principles and promoting responsible data reuse.

@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png"
+logo_consortia = "img/partner-logos/6c311d8a04f9f7ac.png"
 +++
 
 Training & Outreach — NFDI4Chem is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

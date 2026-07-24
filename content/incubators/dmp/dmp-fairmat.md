@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png"
+logo_consortia = "img/partner-logos/7613ba801eafb62e.png"
 +++
 
 FAIRmat RDMO Client for the Physical Sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

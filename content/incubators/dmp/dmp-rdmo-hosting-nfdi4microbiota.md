@@ -11,7 +11,7 @@ inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png"
+logo_consortia = "img/partner-logos/68e3cc17e1554305.png"
 +++
 
 RDMO Hosting — NFDI4Microbiota is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

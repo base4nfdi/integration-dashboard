@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png"
+logo_consortia = "img/partner-logos/79d79017d3100d9d.png"
 +++
 
 DMP in RADAR is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

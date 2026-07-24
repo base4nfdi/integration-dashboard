@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_project = "https://terminology.services.base4nfdi.de/img/ICONCLASS.png"
+logo_project = "img/partner-logos/a0257f1df118d653.png"
 +++
 
 Adding support for the globally used cultural heritage subject classification system iconclass.org to the Terminology Services 4 NFDI. This will allow Iconclass to be selected as a base data source, and to allow other systems to make use of the TS4NFDI hierarchy and graph widgets for visualization and as navigation aids.

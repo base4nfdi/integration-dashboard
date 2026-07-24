@@ -11,7 +11,7 @@ inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png"
+logo_consortia = "img/partner-logos/fb068dab27f7e96a.png"
 +++
 
 RDMO Hosting — NFDI4Earth is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://i.imgur.com/8gBPS5a.png"
+logo_consortia = "img/partner-logos/0b0f4686d8056801.png"
 +++
 
 MetadataHub allows access to various metadata stores developed in the NFDI. All operations from "Create" to "Search" can be performed on the metadata stores. There are two demonstrators for this, one showing the interfaces and the other providing a search across all metadata stores.

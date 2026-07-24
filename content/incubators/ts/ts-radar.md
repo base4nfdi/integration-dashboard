@@ -13,7 +13,7 @@ linked_partners = 3
 linked_entities = 1
 partners = ["NFDI4Chem", "NFDI4Culture", "NFDI4Memory"]
 entities = ["FIZ Karlsruhe"]
-logo_project = "https://terminology.services.base4nfdi.de/img/radar.svg"
+logo_project = "img/partner-logos/f42d933cd392bd27.svg"
 +++
 
 RADAR is a multidisciplinary research data repository operated by FIZ Karlsruhe, offering institutions a secure and user-friendly platform to archive, manage, let peer review and publish research data. With the cost-free and low-threshold publication services RADAR4Chem (for chemistry) and RADAR4Culture (for cultural heritage and humanities), FIZ Karlsruhe provides tailored solutions for discipline-specific research needs based on RADAR and developed in the framework of the NFDI.

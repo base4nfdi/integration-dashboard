@@ -11,7 +11,7 @@ inc_cycle = 4
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png"
+logo_consortia = "img/partner-logos/3202b19d32c12245.png"
 +++
 
 This incubator project focuses on applying IAM4NFDI standards within the BERD@NFDI infrastructure. We aim to adopt best practices and reference implementations (e.g., OpenID Connect, entitlement-based access) to future-proof our platform for federated, cross-consortia workflows. The project will help ensure compatibility with external services such as Galaxy, and position BERD for participation in the EOSC federated system.

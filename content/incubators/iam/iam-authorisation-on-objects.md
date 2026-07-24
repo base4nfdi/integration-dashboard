@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/text-plus-logo.svg"
+logo_consortia = "img/partner-logos/795258ea8776a192.svg"
 +++
 
 Repositories in general need certain authentication and authorization functionalities for controlling import and export of data. It would be desirable, that an NFDI-wide IAM solution supports such AAI functions, as they are required by potentially all research data repositories across all disciplines. We acceppt this challenge and use the TextGrid and DARIAH-DE Repositories as examples to implement such AAI functions, if as extension, integration or even overall management shall be subject to decision of the IAM4NFDI group.

@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png"
+logo_consortia = "img/partner-logos/852580d0427f2d03.png"
 +++
 
 Coscine is a platform for research data management. Coscine offers researchers: Storage space: access to free storage space (depending on organisational affiliation) Integration: Access to project-related data sources (e.g. research data repository, linked files, archived data) Collaboration: Access for all project members Metadata: Automatically linked to project data Individuality: Project-specific metadata can be created as application profiles Archiving: Archive research data on site The metadata for research projects can be shared publicly on Coscine, made searchable and, in the long term, findable at national level. Coscine thus contributes to the goals of the National Research Data Infrastructure NFDI by making valuable scientific and research data accessible to the entire German scientific system.

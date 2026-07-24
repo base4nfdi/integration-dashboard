@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png"
+logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
 +++
 
 Template Development — NFDI4Health is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.

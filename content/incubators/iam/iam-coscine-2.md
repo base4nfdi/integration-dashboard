@@ -11,7 +11,7 @@ inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png"
+logo_consortia = "img/partner-logos/852580d0427f2d03.png"
 +++
 
 Coscine is an open-source platform for research data management (RDM) and can be used by all researchers of every field. In context of the FAIR-principles the login to Coscine is already possible with an institutional account (Single Sign-On) or using ORCID. One aim of this incubator proposal is the extended support of social login possibilities within our CAAI (RegApp). Furthermore, we would strive for the connection of accounts inside RegApp (e.g., ORCID with Single Sign-On). This would simplify the usage of Coscine because now the user needs to manually connect the accounts within the platform itself. As a further point of the anticipated work, we would see the supply of intersections for delivering of information by the home organisation as well as by the AAI. This would improve the transfer of roles which is needed because in Coscine different functionalities are linked to specific roles.
