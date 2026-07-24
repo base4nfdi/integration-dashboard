@@ -129,7 +129,7 @@
       }
     },
     {
-      "score": 2,
+      "score": 2.12,
       "source": {
         "inc_name": "Data Ingest Service",
         "inc_cycle": 4,
@@ -142,16 +142,11 @@
         "inc_name": "Data Ingest Service",
         "inc_cycle": 4,
         "inc_status": "Finished",
-        "partners": []
+        "partners": [
+          "NFDI4Ing"
+        ]
       },
-      "field_diffs": {
-        "partners": {
-          "source": [
-            "NFDI4Ing"
-          ],
-          "nocodb": []
-        }
-      }
+      "field_diffs": {}
     },
     {
       "score": 2,
@@ -208,7 +203,7 @@
       }
     },
     {
-      "score": 2,
+      "score": 2.12,
       "source": {
         "inc_name": "Best practice AAI for BERD Data Portal",
         "inc_cycle": 4,
@@ -221,19 +216,14 @@
         "inc_name": "Best practice AAI for BERD Data Portal",
         "inc_cycle": 4,
         "inc_status": "Finished",
-        "partners": []
+        "partners": [
+          "BERD@NFDI"
+        ]
       },
-      "field_diffs": {
-        "partners": {
-          "source": [
-            "BERD@NFDI"
-          ],
-          "nocodb": []
-        }
-      }
+      "field_diffs": {}
     },
     {
-      "score": 2,
+      "score": 2.12,
       "source": {
         "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
         "inc_cycle": 3,
@@ -246,16 +236,11 @@
         "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
         "inc_cycle": 3,
         "inc_status": "Running",
-        "partners": []
+        "partners": [
+          "NFDI4Biodiversity"
+        ]
       },
-      "field_diffs": {
-        "partners": {
-          "source": [
-            "NFDI4Biodiversity"
-          ],
-          "nocodb": []
-        }
-      }
+      "field_diffs": {}
     },
     {
       "score": 2,

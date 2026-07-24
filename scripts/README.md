@@ -56,7 +56,7 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `NOCODB_API_TOKEN` | — (required for live API) | fetch, push, patch, fill |
 | `NOCODB_BASE_URL` | `https://nocodb.nfdi.de` | same |
 | `NOCODB_TABLE_ID` | incubators table id | same |
-| `NOCODB_VIEW_ID` | default view id | same |
+| `NOCODB_VIEW_ID` | unset for full-table dashboard export (view filters apply if set) | same |
 | `NOCODB_PAGE_SIZE` | `100` | same |
 | `FETCH_TIMEOUT_MS` | `60000` | HTTP clients |
 

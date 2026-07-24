@@ -1,5 +1,5 @@
 {
-  "compared_at": "2026-07-24T13:13:43.169Z",
+  "compared_at": "2026-07-24T13:33:04.098Z",
   "nocodb_file": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/static/data.json",
   "services": {
     "dmp4nfdi": {
@@ -36,7 +36,7 @@
       },
       "matches": [
         {
-          "score": 1.75,
+          "score": 1.99,
           "source": {
             "inc_name": "RADAR",
             "inc_cycle": 2,
@@ -50,7 +50,10 @@
             "inc_name": "DMP in RADAR",
             "inc_cycle": 2,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Chem",
+              "NFDI4Culture"
+            ]
           },
           "field_diffs": {
             "inc_name": {
@@ -62,12 +65,15 @@
                 "NFDI4Culture",
                 "NFDI4Chem"
               ],
-              "nocodb": []
+              "nocodb": [
+                "NFDI4Chem",
+                "NFDI4Culture"
+              ]
             }
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — NFDI4Chem",
             "inc_cycle": 2,
@@ -80,16 +86,11 @@
             "inc_name": "Template Development — NFDI4Chem",
             "inc_cycle": 2,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Chem"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Chem"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
           "score": 1.263,
@@ -125,7 +126,7 @@
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Training & Outreach — NFDI4Health",
             "inc_cycle": 2,
@@ -138,16 +139,11 @@
             "inc_name": "Training & Outreach — NFDI4Health",
             "inc_cycle": 2,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Health"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Health"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
           "score": 1.22,
@@ -183,7 +179,7 @@
           }
         },
         {
-          "score": 1.75,
+          "score": 1.87,
           "source": {
             "inc_name": "FAIRmat",
             "inc_cycle": 1,
@@ -196,23 +192,19 @@
             "inc_name": "FAIRmat RDMO Client for the Physical Sciences",
             "inc_cycle": 1,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "FAIRmat"
+            ]
           },
           "field_diffs": {
             "inc_name": {
               "source": "FAIRmat",
               "nocodb": "FAIRmat RDMO Client for the Physical Sciences"
-            },
-            "partners": {
-              "source": [
-                "FAIRmat"
-              ],
-              "nocodb": []
             }
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Coscine",
             "inc_cycle": 1,
@@ -225,19 +217,14 @@
             "inc_name": "Coscine",
             "inc_cycle": 1,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Ing"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Ing"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Integration — FAIRagro",
             "inc_cycle": 1,
@@ -250,19 +237,14 @@
             "inc_name": "RDMO Integration — FAIRagro",
             "inc_cycle": 1,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "FAIRagro"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "FAIRagro"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Training & Outreach — Text+",
             "inc_cycle": 1,
@@ -275,19 +257,14 @@
             "inc_name": "Training & Outreach — Text+",
             "inc_cycle": 1,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "Text+"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "Text+"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Training & Outreach — NFDI4Cat",
             "inc_cycle": 1,
@@ -300,19 +277,14 @@
             "inc_name": "Training & Outreach — NFDI4Cat",
             "inc_cycle": 1,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Cat"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Cat"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — NFDI4Health",
             "inc_cycle": 1,
@@ -325,19 +297,14 @@
             "inc_name": "Template Development — NFDI4Health",
             "inc_cycle": 1,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Health"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Health"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — MaRDI",
             "inc_cycle": 1,
@@ -350,19 +317,14 @@
             "inc_name": "Template Development — MaRDI",
             "inc_cycle": 1,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "MaRDI"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "MaRDI"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Microbiota",
             "inc_cycle": 0,
@@ -375,19 +337,14 @@
             "inc_name": "RDMO Hosting — NFDI4Microbiota",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Microbiota"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Microbiota"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Energy",
             "inc_cycle": 0,
@@ -400,16 +357,11 @@
             "inc_name": "RDMO Hosting — NFDI4Energy",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Energy"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Energy"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
           "score": 2,
@@ -425,19 +377,23 @@
             "inc_name": "RDMO Hosting — MatWerk",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI-MatWerk"
+            ]
           },
           "field_diffs": {
             "partners": {
               "source": [
                 "MatWerk"
               ],
-              "nocodb": []
+              "nocodb": [
+                "NFDI-MatWerk"
+              ]
             }
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4BIOIMAGE",
             "inc_cycle": 0,
@@ -450,19 +406,14 @@
             "inc_name": "RDMO Hosting — NFDI4BIOIMAGE",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4BIOIMAGE"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4BIOIMAGE"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Health",
             "inc_cycle": 0,
@@ -475,19 +426,14 @@
             "inc_name": "RDMO Hosting — NFDI4Health",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Health"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Health"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "RDMO Integration — MaRDI",
             "inc_cycle": 0,
@@ -500,19 +446,14 @@
             "inc_name": "RDMO Integration — MaRDI",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "MaRDI"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "MaRDI"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — NFDI4Culture",
             "inc_cycle": 0,
@@ -525,19 +466,14 @@
             "inc_name": "Template Development — NFDI4Culture",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Culture"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Culture"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — NFDI4Memory",
             "inc_cycle": 0,
@@ -550,19 +486,14 @@
             "inc_name": "Template Development — NFDI4Memory",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Memory"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Memory"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.24,
           "source": {
             "inc_name": "Template Development — NFDI4Objects, NFDI4Culture",
             "inc_cycle": 0,
@@ -576,7 +507,10 @@
             "inc_name": "Template Development — NFDI4Objects, NFDI4Culture",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Culture",
+              "NFDI4Objects"
+            ]
           },
           "field_diffs": {
             "partners": {
@@ -584,12 +518,15 @@
                 "NFDI4Objects",
                 "NFDI4Culture"
               ],
-              "nocodb": []
+              "nocodb": [
+                "NFDI4Culture",
+                "NFDI4Objects"
+              ]
             }
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — FAIRagro",
             "inc_cycle": 0,
@@ -602,19 +539,14 @@
             "inc_name": "Template Development — FAIRagro",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "FAIRagro"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "FAIRagro"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Template Development — Text+",
             "inc_cycle": 0,
@@ -627,19 +559,14 @@
             "inc_name": "Template Development — Text+",
             "inc_cycle": 0,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "Text+"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "Text+"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Training & Outreach — NFDI4Chem",
             "inc_cycle": 1,
@@ -652,19 +579,14 @@
             "inc_name": "Training & Outreach — NFDI4Chem",
             "inc_cycle": 1,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Chem"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Chem"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Ing",
             "inc_cycle": null,
@@ -677,19 +599,14 @@
             "inc_name": "RDMO Hosting — NFDI4Ing",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Ing"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Ing"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Chem",
             "inc_cycle": null,
@@ -702,19 +619,14 @@
             "inc_name": "RDMO Hosting — NFDI4Chem",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Chem"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Chem"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — FAIRagro",
             "inc_cycle": null,
@@ -727,19 +639,14 @@
             "inc_name": "RDMO Hosting — FAIRagro",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "FAIRagro"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "FAIRagro"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Integration — NFDI4Biodiversity",
             "inc_cycle": null,
@@ -752,19 +659,14 @@
             "inc_name": "RDMO Integration — NFDI4Biodiversity",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Biodiversity"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Biodiversity"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Culture",
             "inc_cycle": null,
@@ -777,19 +679,14 @@
             "inc_name": "RDMO Hosting — NFDI4Culture",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Culture"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Culture"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — MaRDI",
             "inc_cycle": null,
@@ -802,19 +699,14 @@
             "inc_name": "RDMO Hosting — MaRDI",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "MaRDI"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "MaRDI"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 1.8,
+          "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Earth",
             "inc_cycle": null,
@@ -827,16 +719,11 @@
             "inc_name": "RDMO Hosting — NFDI4Earth",
             "inc_cycle": null,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Earth"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Earth"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         }
       ],
       "only_in_source": [],
@@ -973,7 +860,7 @@
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Data Ingest Service",
             "inc_cycle": 4,
@@ -986,16 +873,11 @@
             "inc_name": "Data Ingest Service",
             "inc_cycle": 4,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "NFDI4Ing"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Ing"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
           "score": 2,
@@ -1052,7 +934,7 @@
           }
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "Best practice AAI for BERD Data Portal",
             "inc_cycle": 4,
@@ -1065,19 +947,14 @@
             "inc_name": "Best practice AAI for BERD Data Portal",
             "inc_cycle": 4,
             "inc_status": "Finished",
-            "partners": []
+            "partners": [
+              "BERD@NFDI"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "BERD@NFDI"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
-          "score": 2,
+          "score": 2.12,
           "source": {
             "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
             "inc_cycle": 3,
@@ -1090,16 +967,11 @@
             "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
             "inc_cycle": 3,
             "inc_status": "Running",
-            "partners": []
+            "partners": [
+              "NFDI4Biodiversity"
+            ]
           },
-          "field_diffs": {
-            "partners": {
-              "source": [
-                "NFDI4Biodiversity"
-              ],
-              "nocodb": []
-            }
-          }
+          "field_diffs": {}
         },
         {
           "score": 2,
