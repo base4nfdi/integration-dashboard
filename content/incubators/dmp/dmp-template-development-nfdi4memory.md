@@ -34,6 +34,3 @@ NFDI4Memory is developing a discipline-specific DMP template to support the hist
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-template-development-nfdi4memory** in the NocoDB dashboard table.

@@ -34,6 +34,3 @@ NFDI4Cat is developing a discipline-specific DMP template that covers catalysis-
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-training-and-outreach-nfdi4cat** in the NocoDB dashboard table.

@@ -36,6 +36,3 @@ FDPG - Analysing data from clinical care is an incubator project within the **Id
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-fdpg-analysing-data-from-clinical-care** in the NocoDB dashboard table.

@@ -32,6 +32,3 @@ OstData & 4MMS is an incubator project within the **Terminology Services (TS)** 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-ostdata-and-4mms** in the NocoDB dashboard table.

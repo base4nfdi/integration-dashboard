@@ -34,6 +34,3 @@ This project aims to develop a mathematics-specific DMP template, building on th
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-template-development-mardi** in the NocoDB dashboard table.

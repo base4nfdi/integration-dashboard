@@ -32,6 +32,3 @@ Semantic and Interoperable Metadata Integration for ELN Objects is an incubator 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-semantic-and-interoperable-metadata-integration-for-eln-objects** in the NocoDB dashboard table.

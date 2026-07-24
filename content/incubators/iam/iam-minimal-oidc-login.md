@@ -38,6 +38,3 @@ Minimal OIDC login is an incubator project within the **Identity and Access Mana
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-minimal-oidc-login** in the NocoDB dashboard table.

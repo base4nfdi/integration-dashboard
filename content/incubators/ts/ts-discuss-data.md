@@ -39,6 +39,3 @@ Discuss Data is an incubator project within the **Terminology Services (TS)** ba
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-discuss-data** in the NocoDB dashboard table.

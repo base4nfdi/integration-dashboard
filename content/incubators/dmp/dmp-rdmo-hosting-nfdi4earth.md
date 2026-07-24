@@ -39,6 +39,3 @@ RDMO Sensor Search option set plugin
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-nfdi4earth** in the NocoDB dashboard table.

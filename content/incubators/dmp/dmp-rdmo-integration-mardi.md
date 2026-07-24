@@ -39,6 +39,3 @@ Generic Search RDMO Plugin
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-integration-mardi** in the NocoDB dashboard table.

@@ -40,6 +40,3 @@ GFBio Single-Sign-On for NFDI4Biodiversity is an incubator project within the **
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-gfbio-single-sign-on-for-nfdi4biodiversity** in the NocoDB dashboard table.

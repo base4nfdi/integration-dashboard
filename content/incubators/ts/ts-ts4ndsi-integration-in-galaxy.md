@@ -32,6 +32,3 @@ TS4NDSI integration in Galaxy is an incubator project within the **Terminology S
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-ts4ndsi-integration-in-galaxy** in the NocoDB dashboard table.

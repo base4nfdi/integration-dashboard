@@ -36,6 +36,3 @@ missing
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-come2data** in the NocoDB dashboard table.

@@ -39,6 +39,3 @@ Integration of NFDI AAI to Open edX is an incubator project within the **Identit
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-integration-of-nfdi-aai-to-open-edx** in the NocoDB dashboard table.

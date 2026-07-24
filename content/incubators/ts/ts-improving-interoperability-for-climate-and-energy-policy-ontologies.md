@@ -32,6 +32,3 @@ Improving Interoperability for Climate and Energy Policy Ontologies is an incuba
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-improving-interoperability-for-climate-and-energy-policy-ontologies** in the NocoDB dashboard table.

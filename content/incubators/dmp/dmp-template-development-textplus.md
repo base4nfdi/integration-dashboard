@@ -39,6 +39,3 @@ Text+ RDMO Catalog
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-template-development-textplus** in the NocoDB dashboard table.

@@ -39,6 +39,3 @@ NFDI4Energy RDMO Client
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-nfdi4energy** in the NocoDB dashboard table.

@@ -36,6 +36,3 @@ Not applicable
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-single-sign-on-for-nfdi-internal-ict-tools** in the NocoDB dashboard table.

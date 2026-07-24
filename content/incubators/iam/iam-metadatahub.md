@@ -38,6 +38,3 @@ MetadataHub is an incubator project within the **Identity and Access Management 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-metadatahub** in the NocoDB dashboard table.

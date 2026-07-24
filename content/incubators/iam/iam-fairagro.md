@@ -36,6 +36,3 @@ FairAgro is an incubator project within the **Identity and Access Management (IA
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-fairagro** in the NocoDB dashboard table.

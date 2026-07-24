@@ -36,6 +36,3 @@ SensorCV is an incubator project within the **Terminology Services (TS)** basic 
 - **Participating entity:** Helmholtz Association (1 linked)
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-sensorcv** in the NocoDB dashboard table.

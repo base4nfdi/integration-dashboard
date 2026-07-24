@@ -37,6 +37,3 @@ Enabling Semantic Interoperability via DataCite Terminologies is an incubator pr
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-enabling-semantic-interoperability-via-datacite-terminologies** in the NocoDB dashboard table.

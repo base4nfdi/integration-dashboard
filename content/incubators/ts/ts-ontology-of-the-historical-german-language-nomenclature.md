@@ -37,6 +37,3 @@ Ontology of the historical German-language nomenclature is an incubator project 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-ontology-of-the-historical-german-language-nomenclature** in the NocoDB dashboard table.

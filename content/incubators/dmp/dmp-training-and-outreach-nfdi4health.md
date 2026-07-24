@@ -34,6 +34,3 @@ The template "Research Data Management Plan - Epidemiological studies" is aimed 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-training-and-outreach-nfdi4health** in the NocoDB dashboard table.

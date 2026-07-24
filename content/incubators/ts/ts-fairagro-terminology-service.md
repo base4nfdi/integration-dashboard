@@ -39,6 +39,3 @@ FAIRagro Terminology Service is an incubator project within the **Terminology Se
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-fairagro-terminology-service** in the NocoDB dashboard table.

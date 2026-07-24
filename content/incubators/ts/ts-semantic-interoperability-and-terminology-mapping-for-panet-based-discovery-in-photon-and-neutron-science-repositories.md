@@ -32,6 +32,3 @@ Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in P
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories** in the NocoDB dashboard table.

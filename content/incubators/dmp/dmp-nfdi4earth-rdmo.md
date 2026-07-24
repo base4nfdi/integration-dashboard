@@ -41,6 +41,3 @@ Provision of an operational RDMO for the Earth System Science community to creat
 - **NFDI consortia:** NFDI4Earth (1 linked)
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-nfdi4earth-rdmo** in the NocoDB dashboard table.

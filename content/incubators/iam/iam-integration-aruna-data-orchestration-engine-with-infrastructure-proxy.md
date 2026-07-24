@@ -36,6 +36,3 @@ Integration: Aruna Data Orchestration Engine with Infrastructure Proxy is an inc
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-integration-aruna-data-orchestration-engine-with-infrastructure-proxy** in the NocoDB dashboard table.

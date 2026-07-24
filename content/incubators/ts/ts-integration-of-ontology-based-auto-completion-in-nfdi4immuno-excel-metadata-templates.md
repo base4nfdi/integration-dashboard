@@ -32,6 +32,3 @@ Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata temp
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-integration-of-ontology-based-auto-completion-in-nfdi4immuno-excel-metadata-templates** in the NocoDB dashboard table.

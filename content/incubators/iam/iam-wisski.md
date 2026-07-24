@@ -36,6 +36,3 @@ Missing!!
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-wisski** in the NocoDB dashboard table.

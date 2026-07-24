@@ -39,6 +39,3 @@ Training Guide for DMP Workshops
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-training-and-outreach-nfdi4chem** in the NocoDB dashboard table.

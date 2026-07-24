@@ -41,6 +41,3 @@ AAI service integration into LARA is an incubator project within the **Identity 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-aai-service-integration-into-lara** in the NocoDB dashboard table.

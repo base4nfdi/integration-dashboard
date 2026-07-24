@@ -1,5 +1,5 @@
 +++
-title = "Data Management Planning (DMP)"
+title = "Data Management Plans (DMP)"
 sort_by = "title"
 weight = 2
 template = "blog.html"
@@ -8,4 +8,4 @@ page_template = "blog-page.html"
 basic_service = "DMP"
 +++
 
-Incubator reports for the Data Management Planning (DMP) basic service.
+Incubator reports for the Data Management Plans (DMP) basic service.

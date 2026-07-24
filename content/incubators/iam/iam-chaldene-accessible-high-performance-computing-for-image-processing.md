@@ -36,6 +36,3 @@ Chaldene: Accessible High-Performance Computing for Image Processing is an incub
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-chaldene-accessible-high-performance-computing-for-image-processing** in the NocoDB dashboard table.

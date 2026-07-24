@@ -41,6 +41,3 @@ ChEBI is an incubator project within the **Terminology Services (TS)** basic ser
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-chebi** in the NocoDB dashboard table.

@@ -41,6 +41,3 @@ Extension of the RegApp to support SAML attribute queries
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-jards-attribute-queries-in-regapp** in the NocoDB dashboard table.

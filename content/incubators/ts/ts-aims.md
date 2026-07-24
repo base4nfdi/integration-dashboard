@@ -43,6 +43,3 @@ AIMS is an incubator project within the **Terminology Services (TS)** basic serv
 - **Related institutions:** ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-aims** in the NocoDB dashboard table.

@@ -40,6 +40,3 @@ NFDI AAI for the NFDI4ING Jupyter Service is an incubator project within the **I
 - **NFDI consortia:** NFDI4Ing (1 linked)
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-nfdi4ing-jupyter** in the NocoDB dashboard table.

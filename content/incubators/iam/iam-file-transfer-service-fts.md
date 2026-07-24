@@ -36,6 +36,3 @@ File Transfer Service FTS is an incubator project within the **Identity and Acce
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-file-transfer-service-fts** in the NocoDB dashboard table.

@@ -36,6 +36,3 @@ Integrate TS4NFDI into DMP4NFDI RDMO Service is an incubator project within the 
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-integrate-ts4nfdi-into-dmp4nfdi-rdmo-service** in the NocoDB dashboard table.

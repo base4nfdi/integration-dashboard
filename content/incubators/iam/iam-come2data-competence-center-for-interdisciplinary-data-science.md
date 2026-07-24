@@ -37,6 +37,3 @@ Come2Data - Competence Center for Interdisciplinary Data Science is an incubator
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-come2data-competence-center-for-interdisciplinary-data-science** in the NocoDB dashboard table.

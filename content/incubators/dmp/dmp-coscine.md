@@ -41,6 +41,3 @@ RDMO Plugin for the DFG Classification of Scientific Disciplines
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-coscine** in the NocoDB dashboard table.

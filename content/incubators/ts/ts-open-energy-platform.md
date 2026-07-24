@@ -37,6 +37,3 @@ Open Energy Platform is an incubator project within the **Terminology Services (
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-open-energy-platform** in the NocoDB dashboard table.

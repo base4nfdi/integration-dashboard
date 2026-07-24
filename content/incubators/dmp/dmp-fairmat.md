@@ -39,6 +39,3 @@ RDMO Client for the Physical Sciences
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-fairmat** in the NocoDB dashboard table.

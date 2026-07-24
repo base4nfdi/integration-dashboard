@@ -36,6 +36,3 @@ nmrXiv is an incubator project within the **Terminology Services (TS)** basic se
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-nmrxiv** in the NocoDB dashboard table.

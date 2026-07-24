@@ -41,6 +41,3 @@ Coscine-2 is an incubator project within the **Identity and Access Management (I
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-coscine-2** in the NocoDB dashboard table.

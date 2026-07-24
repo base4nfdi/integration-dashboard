@@ -41,6 +41,3 @@ WDCC is an incubator project within the **Terminology Services (TS)** basic serv
 - **Participating entity:** German Climate Computing Centre (1 linked)
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-wdcc** in the NocoDB dashboard table.

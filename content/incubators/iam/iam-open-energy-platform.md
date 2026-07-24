@@ -43,6 +43,3 @@ Open Energy Platform is an incubator project within the **Identity and Access Ma
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-open-energy-platform** in the NocoDB dashboard table.

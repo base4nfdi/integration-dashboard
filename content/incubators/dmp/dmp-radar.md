@@ -34,6 +34,3 @@ The incubator project aims to improve the integration of RDMO and the RADAR rese
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-radar** in the NocoDB dashboard table.

@@ -34,6 +34,3 @@ Text+ has created a DMP template in collaboration with participants of the conso
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-training-and-outreach-textplus** in the NocoDB dashboard table.

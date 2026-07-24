@@ -41,6 +41,3 @@ Jupyter4NFDI accessible for NFDI and beyond is an incubator project within the *
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-jupyter4nfdi-accessible-for-nfdi-and-beyond** in the NocoDB dashboard table.

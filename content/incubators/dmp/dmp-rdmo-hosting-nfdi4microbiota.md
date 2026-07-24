@@ -40,6 +40,3 @@ Test client ready; productive client in preparation
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-nfdi4microbiota** in the NocoDB dashboard table.

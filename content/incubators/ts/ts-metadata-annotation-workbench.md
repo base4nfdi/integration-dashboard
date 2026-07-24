@@ -37,6 +37,3 @@ Metadata Annotation Workbench is an incubator project within the **Terminology S
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-metadata-annotation-workbench** in the NocoDB dashboard table.

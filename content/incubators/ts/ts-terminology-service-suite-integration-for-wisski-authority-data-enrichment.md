@@ -32,6 +32,3 @@ Terminology Service Suite integration for WissKI authority data enrichment is an
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment** in the NocoDB dashboard table.

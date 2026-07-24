@@ -42,6 +42,3 @@ NFDI4Cat Central Data Repository (Repo4Cat) is an incubator project within the *
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-nfdi4cat-central-data-repository-repo4cat** in the NocoDB dashboard table.

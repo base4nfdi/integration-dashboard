@@ -41,6 +41,3 @@ Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI is an incubat
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-opening-the-cloud-based-workflow-manager-clowm-to-the-whole-nfdi** in the NocoDB dashboard table.

@@ -34,6 +34,3 @@ The product of this incubator project is a DMP template to help museums and coll
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-template-development-nfdi4objects-nfdi4culture** in the NocoDB dashboard table.

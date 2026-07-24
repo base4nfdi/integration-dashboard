@@ -39,6 +39,3 @@ NFDI4Ing RDMO Client
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-nfdi4ing** in the NocoDB dashboard table.

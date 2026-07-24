@@ -39,6 +39,3 @@ RDMO Zenodo Plugin
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-integration-nfdi4biodiversity** in the NocoDB dashboard table.

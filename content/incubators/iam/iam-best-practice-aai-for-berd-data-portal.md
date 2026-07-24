@@ -43,6 +43,3 @@ Not yet published
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-best-practice-aai-for-berd-data-portal** in the NocoDB dashboard table.

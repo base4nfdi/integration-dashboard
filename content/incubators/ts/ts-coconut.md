@@ -36,6 +36,3 @@ Coconut is an incubator project within the **Terminology Services (TS)** basic s
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-coconut** in the NocoDB dashboard table.

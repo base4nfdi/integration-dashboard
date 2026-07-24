@@ -37,6 +37,3 @@ MathModDB is an incubator project within the **Terminology Services (TS)** basic
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-mathmoddb** in the NocoDB dashboard table.

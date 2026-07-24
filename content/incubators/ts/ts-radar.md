@@ -42,6 +42,3 @@ TS in RADAR is an incubator project within the **Terminology Services (TS)** bas
 - **Participating entity:** FIZ Karlsruhe (1 linked)
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-radar** in the NocoDB dashboard table.

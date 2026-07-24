@@ -43,6 +43,3 @@ Opening up the SimpleVM Bielefeld University Installation for external collabora
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-opening-up-the-simplevm-bielefeld-university-installation-for-external-collaborations** in the NocoDB dashboard table.

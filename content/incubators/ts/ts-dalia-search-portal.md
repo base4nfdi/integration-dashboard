@@ -38,6 +38,3 @@ DALIA Search Portal is an incubator project within the **Terminology Services (T
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-dalia-search-portal** in the NocoDB dashboard table.

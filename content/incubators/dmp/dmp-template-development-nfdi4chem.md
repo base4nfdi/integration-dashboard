@@ -34,6 +34,3 @@ A few years ago, NFDI4Chem developed a chemistry-specific DMP template. This was
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-template-development-nfdi4chem** in the NocoDB dashboard table.

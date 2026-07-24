@@ -45,6 +45,3 @@ jeweiligen Prototypen angedacht.
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-authorisation-on-objects** in the NocoDB dashboard table.

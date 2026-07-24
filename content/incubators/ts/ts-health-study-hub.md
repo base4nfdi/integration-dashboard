@@ -37,6 +37,3 @@ Health Study Hub is an incubator project within the **Terminology Services (TS)*
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-health-study-hub** in the NocoDB dashboard table.

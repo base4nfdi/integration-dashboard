@@ -42,6 +42,3 @@ Not yet available
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-agimo-data-driven-agile-planning-for-responsible-mobility** in the NocoDB dashboard table.

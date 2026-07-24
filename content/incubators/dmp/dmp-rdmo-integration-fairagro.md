@@ -39,6 +39,3 @@ Workshop "RDMO in Practice: Building Data Management Plans for Agricultural Rese
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-integration-fairagro** in the NocoDB dashboard table.

@@ -39,6 +39,3 @@ FAIRagro RDMO Client
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-fairagro** in the NocoDB dashboard table.

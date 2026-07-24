@@ -37,6 +37,3 @@ ICONCLASS is an incubator project within the **Terminology Services (TS)** basic
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-iconclass** in the NocoDB dashboard table.

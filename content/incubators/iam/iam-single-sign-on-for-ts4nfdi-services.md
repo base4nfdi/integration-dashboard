@@ -46,6 +46,3 @@ Single-Sign-On for TS4NFDI services is an incubator project within the **Identit
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-single-sign-on-for-ts4nfdi-services** in the NocoDB dashboard table.

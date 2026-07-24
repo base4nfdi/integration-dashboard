@@ -42,6 +42,3 @@ NFDI AAI for DALIA is an incubator project within the **Identity and Access Mana
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-nfdi-aai-for-dalia** in the NocoDB dashboard table.

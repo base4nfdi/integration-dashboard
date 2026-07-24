@@ -36,6 +36,3 @@ NFDI4CAT Repository is an incubator project within the **Identity and Access Man
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-nfdi4cat-repository** in the NocoDB dashboard table.

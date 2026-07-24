@@ -36,6 +36,3 @@ Coscine is an incubator project within the **Identity and Access Management (IAM
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-coscine** in the NocoDB dashboard table.

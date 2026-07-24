@@ -36,6 +36,3 @@ Terminology Services2.0 is an incubator project within the **Identity and Access
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-terminology-services2-0** in the NocoDB dashboard table.

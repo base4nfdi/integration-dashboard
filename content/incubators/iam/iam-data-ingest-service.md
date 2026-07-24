@@ -40,6 +40,3 @@ Data Ingest Service is an incubator project within the **Identity and Access Man
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-data-ingest-service** in the NocoDB dashboard table.

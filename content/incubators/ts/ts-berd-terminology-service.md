@@ -41,6 +41,3 @@ BERD Terminology Service is an incubator project within the **Terminology Servic
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-berd-terminology-service** in the NocoDB dashboard table.

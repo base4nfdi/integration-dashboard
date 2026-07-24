@@ -42,6 +42,3 @@ NOMAD Integration is an incubator project within the **Identity and Access Manag
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-nomad-integration** in the NocoDB dashboard table.

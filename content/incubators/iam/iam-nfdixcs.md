@@ -36,6 +36,3 @@ No content provided.
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-nfdixcs** in the NocoDB dashboard table.

@@ -40,6 +40,3 @@ Terminology service for Plasma-MDS is an incubator project within the **Terminol
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-terminology-service-for-plasma-mds** in the NocoDB dashboard table.

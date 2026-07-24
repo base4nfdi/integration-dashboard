@@ -39,6 +39,3 @@ NFDI4Culture RDMO Client
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **dmp-rdmo-hosting-nfdi4culture** in the NocoDB dashboard table.

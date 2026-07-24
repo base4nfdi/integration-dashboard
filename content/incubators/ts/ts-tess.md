@@ -32,6 +32,3 @@ TeSS is an incubator project within the **Terminology Services (TS)** basic serv
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **ts-tess** in the NocoDB dashboard table.

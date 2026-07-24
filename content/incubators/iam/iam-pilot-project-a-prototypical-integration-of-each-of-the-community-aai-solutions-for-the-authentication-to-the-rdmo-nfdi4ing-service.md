@@ -38,6 +38,3 @@ the service.
 
 - **Partner publications:** 0
 
-## Notes
-
-This report maps to row **iam-pilot-project-a-prototypical-integration-of-each-of-the-community-aai-solutions-for-the-authentication-to-the-rdmo-nfdi4ing-service** in the NocoDB dashboard table.
