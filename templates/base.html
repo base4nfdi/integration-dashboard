@@ -33,7 +33,7 @@
       <div class="site-heading">
         <h1 class="site-title">{{ config.title | default(value="Dashboard") }}</h1>
         {% if config.description %}
-        <p class="site-description">{{ config.description }}</p>
+        <!-- <p class="site-description">{{ config.description }}</p> -->
         {% endif %}
         <nav class="site-nav" aria-label="Main">
           <a href="{{ get_url(path='/') | safe }}">Dashboard</a>
