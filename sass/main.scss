@@ -498,7 +498,8 @@ main.container:has(.dashboard) {
   background: var(--row-hover);
 }
 
-.data-table .row-logos {
+.data-table .row-logos,
+.data-table .row-service {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
@@ -516,6 +517,15 @@ main.container:has(.dashboard) {
   width: auto;
   max-width: 5.5rem;
   object-fit: contain;
+}
+
+.data-table .service-logo {
+  display: block;
+  height: 1.575rem;
+  width: auto;
+  max-width: 6.3rem;
+  object-fit: contain;
+  border-radius: 0.35rem;
 }
 
 .data-table .cell-markdown {

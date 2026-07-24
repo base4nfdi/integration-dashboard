@@ -53,10 +53,24 @@
   const dataUrl = "{{ get_url(path='data.json') | safe }}";
   const incubatorBaseUrl = "{{ get_url(path='@/incubators/_index.md') | safe }}";
 
+  /** Basic-service codes → horizontal top logos. */
+  const basicServiceLogos = {
+    DMP: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_DMP4NFDI-top.png') | safe }}",
+    IAM: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_IAM4NFDI-top.png') | safe }}",
+    TS: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_TS4NFDI-top.png') | safe }}",
+    ACCT: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_ACCT4NFDI-top.png') | safe }}",
+    Jupyter: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_Jupyter4NFDI-top.png') | safe }}",
+    KGI: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_KGI4NFDI-top.png') | safe }}",
+    PID: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_PID4NFDI-top.png') | safe }}",
+    RDMT: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_RDMT-top.png') | safe }}",
+    RDMTraining: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_RDMT-top.png') | safe }}",
+    Software: "{{ get_url(path='img/Base4NFDI-Logos/RGB/Logo-top/PNG/_nfdi-software-top.png') | safe }}",
+  };
+
   const columns = [
+    { key: "basic_service", label: "Basic service", type: "service" },
+    { key: "logos", label: "Partners", type: "logos" },
     { key: "inc_name", label: "Incubator", type: "name" },
-    { key: "basic_service", label: "Basic service" },
-    { key: "logos", label: "Logos", type: "logos" },
     { key: "inc_status", label: "Status", type: "status" },
     // { key: "inc_start", label: "Start", type: "date" },
     // { key: "inc_end", label: "End", type: "date" },
@@ -275,6 +289,31 @@
 
   function renderCell(column, record) {
     const value = record[column.key];
+
+    if (column.type === "service") {
+      const code = String(value || "").trim();
+      if (!code) return "<td>—</td>";
+      const src = basicServiceLogos[code];
+      if (!src) return `<td>${escapeHtml(code)}</td>`;
+      const serviceLabels = {
+        Software: "nfdi.software",
+        RDMT: "RDMTraining4NFDI",
+        RDMTraining: "RDMTraining4NFDI",
+      };
+      const label = serviceLabels[code] || `${code}4NFDI`;
+      return `
+        <td class="row-service">
+          <img
+            class="service-logo"
+            src="${escapeHtml(src)}"
+            alt="${escapeHtml(label)}"
+            title="${escapeHtml(label)}"
+            loading="lazy"
+            decoding="async"
+          >
+        </td>
+      `;
+    }
 
     if (column.type === "logos") {
       const project = record.logo_project;
