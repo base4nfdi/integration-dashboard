@@ -808,6 +808,52 @@ main.container:has(.dashboard) {
   margin: 0;
 }
 
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.static-page-header h2 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+}
+
+.static-page-body {
+  padding: 1.25rem 1.5rem;
+}
+
+.static-page-content h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.static-page-content h3:first-child {
+  margin-top: 0;
+}
+
+.static-page-content p,
+.static-page-content li {
+  color: var(--text-muted);
+}
+
+.static-page-content hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
 .breadcrumb {
   margin: 0 0 0.75rem;
   color: var(--text-muted);

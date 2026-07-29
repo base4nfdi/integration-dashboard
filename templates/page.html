@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
+
+{% block content %}
+<article class="static-page">
+  <header class="static-page-header">
+    <p class="breadcrumb">
+      <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
+      {{ page.title }}
+    </p>
+    <h2>{{ page.title }}</h2>
+  </header>
+  <div class="static-page-body table-panel">
+    <div class="static-page-content">
+      {{ page.content | safe }}
+    </div>
+  </div>
+</article>
+{% endblock %}

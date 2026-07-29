@@ -58,8 +58,11 @@
     {% block content %}{% endblock %}
   </main>
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>Built with <a href="https://www.getzola.org/">Zola</a></p>
+      <p class="footer-links">
+        <a href="{{ get_url(path='@/legal-notice.md') | safe }}">Legal notice</a>
+      </p>
     </div>
   </footer>
   <script src="{{ get_url(path='theme.js') | safe }}"></script>
