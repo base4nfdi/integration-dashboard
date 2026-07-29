@@ -869,7 +869,7 @@
       }
     },
     {
-      "score": 2,
+      "score": 2.12,
       "source": {
         "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
         "inc_cycle": 5,
@@ -882,15 +882,11 @@
         "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
         "inc_cycle": 5,
         "inc_status": "In preparation",
-        "partners": []
+        "partners": [
+          "NFDI4Immuno"
+        ]
       },
       "field_diffs": {
-        "partners": {
-          "source": [
-            "NFDI4Immuno"
-          ],
-          "nocodb": []
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nfdi4immuno.png",
           "nocodb": "img/partner-logos/ba427dc06317d8ac.png"

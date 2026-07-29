@@ -1,7 +1,7 @@
 {
   "source": "dmp4nfdi",
   "basic_service": "DMP",
-  "parsed_at": "2026-07-24T20:08:50.783Z",
+  "parsed_at": "2026-07-29T11:45:24.106Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/dmp4nfdi/incubator.md",
   "record_count": 31,
   "records": [
@@ -595,8 +595,8 @@
       "inc_cycle": 1,
       "inc_status": "Finished",
       "inc_descr": "",
-      "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
-      "inc_results": "Training Guide for DMP Workshops\nhttps://doi.org/10.5281/zenodo.20529135",
+      "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI will support the consortium by providing training materials and a training guide for data stewards. Based on the Train-the-Trainer concept for DMPs and RDMO, the guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
+      "inc_results": "Training Guideline – How to Plan and Run a Workshop on Data Management Plans\nhttps://doi.org/10.5281/zenodo.20529135\nOER – DMP Writing Made Easy: A Hands-on Workshop for Chemists\nhttps://doi.org/10.5281/zenodo.18349878",
       "inc_partner_publications": 0,
       "linked_partners": 1,
       "linked_entities": null,

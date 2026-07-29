@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-07-24T20:08:51.828Z",
+  "fetched_at": "2026-07-29T11:45:24.978Z",
   "records": [
     {
       "id": 1,
@@ -2222,5 +2222,5 @@
       "entities": []
     }
   ],
-  "logos_localized_at": "2026-07-24T20:08:52.002Z"
+  "logos_localized_at": "2026-07-29T11:45:25.110Z"
 }
