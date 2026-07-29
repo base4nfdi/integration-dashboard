@@ -626,6 +626,7 @@ main.container:has(.dashboard) {
 
 .table-wrap {
   overflow: auto;
+  min-height: 60vh;
   max-height: min(70vh, calc(100vh - 16rem));
   background-color: var(--surface);
   /* Cover gradients scroll with content; edge shadows stay fixed → appear when overflow scrolls. */
