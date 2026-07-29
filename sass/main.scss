@@ -626,7 +626,7 @@ main.container:has(.dashboard) {
 
 .table-wrap {
   overflow: auto;
-  min-height: 60vh;
+  min-height: 85vh;
   max-height: min(70vh, calc(100vh - 16rem));
   background-color: var(--surface);
   /* Cover gradients scroll with content; edge shadows stay fixed → appear when overflow scrolls. */
@@ -798,7 +798,7 @@ main.container:has(.dashboard) {
 }
 
 .site-footer {
-  padding: 0.5rem 0 0.75rem;
+  padding: 0.6rem 0 0.75rem;
   border-top: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -813,7 +813,68 @@ main.container:has(.dashboard) {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem 1.5rem;
+  gap: 0.5rem 1rem;
+}
+
+.footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.footer-logos--start {
+  justify-content: flex-start;
+}
+
+.footer-logos--end {
+  justify-content: flex-end;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.footer-logo:hover {
+  opacity: 0.85;
+}
+
+.footer-logo img {
+  display: block;
+  width: auto;
+  height: 50px;
+  max-width: none;
+  object-fit: contain;
+}
+
+.footer-logo--cc img {
+  height: 25px;
+}
+
+/* Light plates so DFG / de.NBI artwork stays readable on dark UI */
+[data-theme="dark"] .footer-logo--dfg,
+[data-theme="dark"] .footer-logo--denbi {
+  background: var(--logo-plate-light);
+  padding: 0.2rem 0.35rem;
+  box-shadow: var(--logo-plate-inset);
+}
+
+.footer-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 1rem;
+  text-align: center;
+  flex: 0 1 auto;
 }
 
 .footer-links a {
@@ -823,6 +884,17 @@ main.container:has(.dashboard) {
 
 .footer-links a:hover {
   color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .footer-inner {
+    justify-content: center;
+  }
+
+  .footer-logos {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
 }
 
 .static-page-header h2 {
