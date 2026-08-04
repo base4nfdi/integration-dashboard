@@ -438,7 +438,11 @@
       const text = escapeHtml(value || "—");
       const href = incubatorUrl(record);
       if (record.key_article || record.source_url) {
-        const external = /^https?:\/\//i.test(href);
+        // Report pages use absolute get_url() hrefs (same site) — only true
+        // off-site source_url fallbacks should open a new tab.
+        const external =
+          !record.key_article &&
+          /^https?:\/\//i.test(String(record.source_url || "").trim());
         const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
         return `<td><a href="${escapeHtml(href)}"${rel}>${text}</a></td>`;
       }
