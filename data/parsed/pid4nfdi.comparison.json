@@ -169,7 +169,7 @@
       "field_diffs": {}
     },
     {
-      "score": 2.04,
+      "score": 1.92,
       "source": {
         "inc_name": "Coscine: Assigning PIDs for Projects and Storage Resources",
         "inc_cycle": null,
@@ -185,10 +185,21 @@
         "inc_status": "",
         "partners": [
           "NFDI4Ing",
-          "MatWerk"
+          "NFDI-MatWerk"
         ]
       },
-      "field_diffs": {}
+      "field_diffs": {
+        "partners": {
+          "source": [
+            "NFDI4Ing",
+            "MatWerk"
+          ],
+          "nocodb": [
+            "NFDI4Ing",
+            "NFDI-MatWerk"
+          ]
+        }
+      }
     },
     {
       "score": 1.92,

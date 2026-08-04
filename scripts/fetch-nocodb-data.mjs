@@ -109,6 +109,16 @@ function normalizeIncubatorRecord(raw) {
   };
 }
 
+/** Names from the User_Stories ↔ REF_Entities M2M nest (when Lookup is absent). */
+function entitiesFromM2m(raw) {
+  const rows = raw["_nc_m2m_User_Stories_REF_Entities"];
+  if (!Array.isArray(rows)) return [];
+  return rows
+    .map((row) => row?.REF_Entities?.name ?? row?.name)
+    .map((item) => (item == null ? "" : String(item).replace(/\r/g, "").trim()))
+    .filter(Boolean);
+}
+
 /** Map raw User_Stories NocoDB record to the same dashboard JSON shape. */
 function normalizeUseCaseRecord(raw) {
   const partnersFromLookup = asStringList(raw[PARTNERS_FIELD]);
@@ -116,6 +126,23 @@ function normalizeUseCaseRecord(raw) {
     partnersFromLookup.length > 0
       ? partnersFromLookup
       : splitPartnersText(raw.partners);
+
+  // Institutions: Lookup → linked M2M names → legacy related_institutions text.
+  // PID cards originally landed in related_institutions (Further Institutions);
+  // prefer the Institutions column whenever we can recover the names.
+  const entitiesFromLookup = asStringList(raw[ENTITIES_FIELD]);
+  const entitiesFromLink = entitiesFromM2m(raw);
+  const relatedList = splitPartnersText(raw.related_institutions);
+  const hasLinkedEntities =
+    entitiesFromLookup.length > 0 || entitiesFromLink.length > 0;
+  const entities = hasLinkedEntities
+    ? entitiesFromLookup.length > 0
+      ? entitiesFromLookup
+      : entitiesFromLink
+    : relatedList;
+  const related_institutions = hasLinkedEntities
+    ? asString(raw.related_institutions)
+    : "";
 
   const name = asString(raw.uc_name || raw.inc_name || raw.title);
   const descr = asString(raw.uc_descr || raw.inc_descr);
@@ -125,7 +152,7 @@ function normalizeUseCaseRecord(raw) {
     inc_name: name,
     uc_name: name,
     basic_service: asString(raw.basic_service) || "PID",
-    related_institutions: asString(raw.related_institutions),
+    related_institutions,
     logo_project: asString(raw.logo_project),
     logo_consortia: asString(raw.logo_consortia),
     key_article: asString(raw.key_article),
@@ -139,9 +166,9 @@ function normalizeUseCaseRecord(raw) {
     inc_results: asString(raw.inc_results),
     inc_partner_publications: asNumber(raw.inc_partner_publications) ?? 0,
     linked_partners: asNumber(raw.linked_partners) ?? partners.length,
-    linked_entities: asNumber(raw.linked_entities),
+    linked_entities: asNumber(raw.linked_entities) ?? entities.length,
     partners,
-    entities: asStringList(raw[ENTITIES_FIELD]),
+    entities,
     source_url: asString(raw.source_url),
     uc_labels: asString(raw.uc_labels),
     pid_providers: asString(raw.pid_providers),

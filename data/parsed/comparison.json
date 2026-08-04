@@ -1,5 +1,5 @@
 {
-  "compared_at": "2026-08-04T08:12:29.556Z",
+  "compared_at": "2026-08-04T13:01:50.302Z",
   "nocodb_file": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/static/data.json",
   "services": {
     "dmp4nfdi": {
@@ -2624,7 +2624,7 @@
           "field_diffs": {}
         },
         {
-          "score": 2.04,
+          "score": 1.92,
           "source": {
             "inc_name": "Coscine: Assigning PIDs for Projects and Storage Resources",
             "inc_cycle": null,
@@ -2640,10 +2640,21 @@
             "inc_status": "",
             "partners": [
               "NFDI4Ing",
-              "MatWerk"
+              "NFDI-MatWerk"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "partners": {
+              "source": [
+                "NFDI4Ing",
+                "MatWerk"
+              ],
+              "nocodb": [
+                "NFDI4Ing",
+                "NFDI-MatWerk"
+              ]
+            }
+          }
         },
         {
           "score": 1.92,
