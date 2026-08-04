@@ -104,6 +104,24 @@ const DESIRED_COLUMNS = [
   { column_name: "source_url", title: "source_url", uidt: "URL" },
 ];
 
+/** Lookup columns created when their Links relation already exists. */
+const DESIRED_LOOKUPS = [
+  {
+    title: "name (from REF_Entities)",
+    column_name: "name_from_ref_entities",
+    relationTitle: "linked_entities",
+    // REF_Entities.name — stable across this NocoDB base
+    lookupColumnId: "nwl3ni20l2jpd0e",
+  },
+  {
+    title: "name (from REF_Partners)",
+    column_name: "name_from_ref_partners",
+    relationTitle: "linked_partners",
+    // REF_Partners.name
+    lookupColumnId: "6dmwv8c2w5l1g4p",
+  },
+];
+
 function loadDotEnv() {
   const envPath = join(repoRoot, ".env");
   try {
@@ -280,18 +298,55 @@ async function main() {
     `To create: ${missing.map((c) => c.title).join(", ") || "(none)"}`
   );
 
+  const lookupPlans = [];
+  for (const lookup of DESIRED_LOOKUPS) {
+    if (existing.has(lookup.title)) {
+      console.log(`Lookup already present: ${lookup.title}`);
+      continue;
+    }
+    const relationCol = (meta.columns ?? []).find(
+      (c) => String(c.title ?? "").trim() === lookup.relationTitle
+    );
+    if (!relationCol?.id) {
+      console.log(
+        `Skip lookup ${lookup.title}: relation ${lookup.relationTitle} not found`
+      );
+      continue;
+    }
+    // NocoDB expects relation/lookup ids on the body (not only under colOptions).
+    lookupPlans.push({
+      column_name: lookup.column_name,
+      title: lookup.title,
+      uidt: "Lookup",
+      fk_relation_column_id: relationCol.id,
+      fk_lookup_column_id: lookup.lookupColumnId,
+    });
+  }
+  console.log(
+    `Lookups to create: ${lookupPlans.map((c) => c.title).join(", ") || "(none)"}`
+  );
+
   if (args.dryRun) {
     console.log("Dry-run — no columns created.");
     return;
   }
 
+  let created = 0;
   for (const column of missing) {
     process.stdout.write(`Creating ${column.title}… `);
     await createColumn({ baseUrl, tableId, token, column, timeoutMs });
     console.log("ok");
+    created += 1;
   }
 
-  console.log(`Done. Created ${missing.length} column(s).`);
+  for (const column of lookupPlans) {
+    process.stdout.write(`Creating lookup ${column.title}… `);
+    await createColumn({ baseUrl, tableId, token, column, timeoutMs });
+    console.log("ok");
+    created += 1;
+  }
+
+  console.log(`Done. Created ${created} column(s).`);
 }
 
 const isMain =

@@ -125,7 +125,11 @@ export function parsePidHtml(html) {
       return p;
     });
 
-    const organizations = headingValue(body, "Organizations");
+    // Organizations → Institutions (entities), not Further Institutions.
+    const organizations = String(headingValue(body, "Organizations") ?? "")
+      .split(/\s*,\s*/)
+      .map((s) => s.trim())
+      .filter(Boolean);
     const resourceTypes =
       headingValue(body, "Resource types") ||
       attr(attrs, "data-lang") ||
@@ -150,7 +154,9 @@ export function parsePidHtml(html) {
         uc_name,
         uc_descr: descr,
         basic_service: BASIC_SERVICE,
-        related_institutions: organizations,
+        related_institutions: "",
+        entities: organizations,
+        linked_entities: organizations.length || null,
         inc_goals: goalsFromMeta({
           labels,
           resourceTypes,

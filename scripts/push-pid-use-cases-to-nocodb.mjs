@@ -6,6 +6,10 @@
  * Writes use-case columns: uc_name, uc_descr, key_article, basic_service, …
  * Also backfills those fields on matched existing rows when empty.
  *
+ * Organizations from the PID cards are linked into Institutions
+ * (`linked_entities` → REF_Entities). Unresolved names stay in
+ * `related_institutions` (Further Institutions).
+ *
  * Required env:
  *   NOCODB_API_TOKEN
  *
@@ -13,6 +17,7 @@
  *   NOCODB_BASE_URL
  *   NOCODB_USER_STORIES_TABLE_ID  — default mtq40pxpo5p0jmx
  *   NOCODB_USER_STORIES_VIEW_ID  — default empty (full table)
+ *   NOCODB_REF_ENTITIES_TABLE_ID — default 7v80fm7p5jpa7xj
  *
  * Usage:
  *   node scripts/push-pid-use-cases-to-nocodb.mjs
@@ -43,6 +48,7 @@ import {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const DEFAULT_TABLE_ID = "mtq40pxpo5p0jmx";
+const DEFAULT_ENTITIES_TABLE_ID = "7v80fm7p5jpa7xj";
 const PARSED_PATH = join(repoRoot, "data/parsed/pid4nfdi.json");
 const BASIC_SERVICE = "PID";
 
@@ -50,7 +56,6 @@ const WRITE_FIELDS = [
   "uc_name",
   "uc_descr",
   "basic_service",
-  "related_institutions",
   "logo_project",
   "logo_consortia",
   "key_article",
@@ -80,7 +85,6 @@ const BACKFILL_FIELDS = [
   "inc_descr",
   "inc_goals",
   "inc_results",
-  "related_institutions",
   "partners",
   "uc_labels",
   "pid_providers",
@@ -90,6 +94,19 @@ const BACKFILL_FIELDS = [
 ];
 
 const VALID_STATUSES = new Set(["In preparation", "Running", "Finished"]);
+
+/** Map PID card organization labels onto REF_Entities.name values. */
+const ENTITY_ALIASES = {
+  fzj: "Forschungszentrum Jülich",
+  gesis: "GESIS – Leibniz Institute for the Social Sciences",
+  "humboldt-universität zu berlin": "Humbold University Berlin",
+  "humboldt-universitat zu berlin": "Humbold University Berlin",
+  "humboldt university berlin": "Humbold University Berlin",
+  "humboldt-universität zu berlin (nomad repository operator)":
+    "Humbold University Berlin",
+  "humboldt-universitat zu berlin (nomad repository operator)":
+    "Humbold University Berlin",
+};
 
 function loadDotEnv() {
   const envPath = join(repoRoot, ".env");
@@ -173,6 +190,95 @@ function useCaseDescr(raw) {
   return asString(raw.uc_descr || raw.inc_descr);
 }
 
+function stripParenNote(name) {
+  return String(name ?? "")
+    .replace(/\s*\([^)]*\)\s*$/u, "")
+    .trim();
+}
+
+function entityLookupKeys(name) {
+  const raw = String(name ?? "")
+    .replace(/\r/g, "")
+    .trim();
+  if (!raw) return [];
+
+  const keys = new Set();
+  const add = (value) => {
+    const v = String(value ?? "")
+      .replace(/\r/g, "")
+      .trim()
+      .toLowerCase();
+    if (v) keys.add(v);
+  };
+
+  add(raw);
+  add(stripParenNote(raw));
+
+  const alias =
+    ENTITY_ALIASES[raw.toLowerCase()] ||
+    ENTITY_ALIASES[stripParenNote(raw).toLowerCase()];
+  if (alias) add(alias);
+
+  const compact = raw
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[^a-z0-9]/g, "");
+  if (compact) keys.add(compact);
+
+  return [...keys];
+}
+
+function buildEntityIdIndex(entityRows) {
+  const byKey = new Map();
+  for (const row of entityRows) {
+    const id = row.id;
+    if (id == null) continue;
+    for (const key of entityLookupKeys(row.name)) {
+      if (!byKey.has(key)) byKey.set(key, id);
+    }
+    // Leading acronym / short label before en-dash or parenthesis (e.g. GESIS – …)
+    const lead = String(row.name ?? "").match(
+      /^([A-Za-z0-9]+)(?:\s*[–\-—(]|$)/u
+    );
+    if (lead?.[1] && lead[1].length >= 2) {
+      const k = lead[1].toLowerCase();
+      if (!byKey.has(k)) byKey.set(k, id);
+    }
+  }
+  return byKey;
+}
+
+function resolveEntityIds(entityNames, entityIndex) {
+  const ids = [];
+  const unresolved = [];
+
+  for (const name of entityNames ?? []) {
+    let found = null;
+    for (const key of entityLookupKeys(name)) {
+      if (entityIndex.has(key)) {
+        found = entityIndex.get(key);
+        break;
+      }
+    }
+    if (found == null) unresolved.push(name);
+    else if (!ids.includes(found)) ids.push(found);
+  }
+
+  return { ids, unresolved };
+}
+
+/** Organization names from parsed PID records (entities, else legacy related). */
+function sourceEntities(raw) {
+  if (Array.isArray(raw.entities) && raw.entities.length > 0) {
+    return raw.entities.map((p) => asString(p).trim()).filter(Boolean);
+  }
+  return asString(raw.related_institutions)
+    .split(/\s*,\s*/)
+    .map((p) => p.trim())
+    .filter(Boolean);
+}
+
 function normalizeUserStoryRecord(raw) {
   const partnersRaw = raw.partners;
   const partners = Array.isArray(partnersRaw)
@@ -199,6 +305,9 @@ function normalizeUserStoryRecord(raw) {
     inc_goals: asString(raw.inc_goals),
     inc_results: asString(raw.inc_results),
     partners,
+    entities: Array.isArray(raw.entities)
+      ? raw.entities.map((p) => asString(p).trim()).filter(Boolean)
+      : [],
     source_url: asString(raw.source_url),
     uc_labels: asString(raw.uc_labels),
     pid_providers: asString(raw.pid_providers),
@@ -208,7 +317,7 @@ function normalizeUserStoryRecord(raw) {
   };
 }
 
-function toCreatePayload(record, usedKeyArticles) {
+function toCreatePayload(record, usedKeyArticles, entityIndex) {
   const payload = {};
   const name = useCaseName(record);
   const descr = useCaseDescr(record);
@@ -262,7 +371,18 @@ function toCreatePayload(record, usedKeyArticles) {
     claimUniqueKeyArticle(baseKey, usedKeyArticles)
   );
 
-  return payload;
+  const { ids, unresolved } = resolveEntityIds(
+    sourceEntities(record),
+    entityIndex
+  );
+  // Links are applied via the nested Links API (not record PATCH).
+  payload.related_institutions = emptyToNull(unresolved.join(", "));
+
+  return {
+    payload,
+    entityIds: ids,
+    unresolvedEntities: unresolved,
+  };
 }
 
 /**
@@ -270,11 +390,20 @@ function toCreatePayload(record, usedKeyArticles) {
  * `rawNocoRecord` should be the unnormalized NocoDB row so we can detect
  * truly missing columns (e.g. uc_descr before backfill, title before rename).
  */
-function buildBackfillPatch(sourceRecord, rawNocoRecord, usedKeyArticles) {
+function buildBackfillPatch(
+  sourceRecord,
+  rawNocoRecord,
+  usedKeyArticles,
+  entityIndex
+) {
   const patch = {};
   const name = useCaseName(sourceRecord);
   const descr = useCaseDescr(sourceRecord);
-  const createShape = toCreatePayload(sourceRecord, usedKeyArticles);
+  const { payload: createShape, entityIds } = toCreatePayload(
+    sourceRecord,
+    usedKeyArticles,
+    entityIndex
+  );
 
   const rawHas = (field) => asString(rawNocoRecord[field]).trim() !== "";
 
@@ -325,8 +454,37 @@ function buildBackfillPatch(sourceRecord, rawNocoRecord, usedKeyArticles) {
     if (value) patch[field] = value;
   }
 
-  if (Object.keys(patch).length === 0) return null;
-  return { id: rawNocoRecord.id, ...patch };
+  // Move Organizations out of Further Institutions into linked Institutions.
+  let names = sourceEntities(sourceRecord);
+  if (names.length === 0) {
+    names = asString(rawNocoRecord.related_institutions)
+      .split(/\s*,\s*/)
+      .map((p) => p.trim())
+      .filter(Boolean);
+  }
+  let linkEntityIds = entityIds;
+  let unresolvedEntities = [];
+  if (names.length > 0) {
+    const resolved = resolveEntityIds(names, entityIndex);
+    linkEntityIds = resolved.ids;
+    unresolvedEntities = resolved.unresolved;
+    const relatedValue = unresolvedEntities.join(", ");
+    const currentRelated = asString(rawNocoRecord.related_institutions).trim();
+    if (currentRelated !== relatedValue) {
+      patch.related_institutions = relatedValue || null;
+    }
+  }
+
+  const currentCount = asNumber(rawNocoRecord.linked_entities) ?? 0;
+  const needsLink = linkEntityIds.length !== currentCount;
+  if (Object.keys(patch).length === 0 && !needsLink) return null;
+
+  return {
+    id: rawNocoRecord.id,
+    ...patch,
+    _entityIds: linkEntityIds,
+    _unresolvedEntities: unresolvedEntities,
+  };
 }
 
 async function createRecords({ baseUrl, tableId, token, records, timeoutMs }) {
@@ -371,6 +529,108 @@ async function updateRecords({ baseUrl, tableId, token, records, timeoutMs }) {
   }
 }
 
+async function getLinkFieldId({ baseUrl, tableId, token, timeoutMs, title }) {
+  const response = await fetchOk(
+    `${baseUrl}/api/v2/meta/tables/${tableId}`,
+    { headers: { "xc-token": token } },
+    { timeoutMs, label: `NocoDB meta ${tableId}` }
+  );
+  const meta = await response.json();
+  const col = (meta.columns ?? []).find(
+    (c) => String(c.title ?? "").trim() === title
+  );
+  if (!col?.id) {
+    throw new Error(`Link field ${JSON.stringify(title)} not found on ${tableId}`);
+  }
+  return col.id;
+}
+
+async function listLinkedRecordIds({
+  baseUrl,
+  tableId,
+  linkFieldId,
+  recordId,
+  token,
+  timeoutMs,
+}) {
+  const url = `${baseUrl}/api/v2/tables/${tableId}/links/${linkFieldId}/records/${recordId}`;
+  const response = await fetchOk(
+    url,
+    { headers: { "xc-token": token } },
+    { timeoutMs, label: `NocoDB list links ${recordId}` }
+  );
+  const payload = await response.json();
+  const list = Array.isArray(payload?.list)
+    ? payload.list
+    : Array.isArray(payload)
+      ? payload
+      : [];
+  return list.map((row) => row.id).filter((id) => id != null);
+}
+
+/**
+ * Replace linked Institutions for a User_Stories row via the nested Links API.
+ * Record PATCH ignores Links fields on this NocoDB version.
+ */
+async function syncLinkedEntities({
+  baseUrl,
+  tableId,
+  linkFieldId,
+  recordId,
+  entityIds,
+  token,
+  timeoutMs,
+}) {
+  const desired = [...new Set(entityIds ?? [])];
+  const existing = await listLinkedRecordIds({
+    baseUrl,
+    tableId,
+    linkFieldId,
+    recordId,
+    token,
+    timeoutMs,
+  });
+
+  const desiredSet = new Set(desired.map(String));
+  const existingSet = new Set(existing.map(String));
+  const toRemove = existing.filter((id) => !desiredSet.has(String(id)));
+  const toAdd = desired.filter((id) => !existingSet.has(String(id)));
+
+  const url = `${baseUrl}/api/v2/tables/${tableId}/links/${linkFieldId}/records/${recordId}`;
+
+  if (toRemove.length > 0) {
+    await fetchOk(
+      url,
+      {
+        method: "DELETE",
+        headers: {
+          "xc-token": token,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(toRemove.map((id) => ({ id }))),
+      },
+      { timeoutMs, label: `NocoDB unlink entities ${recordId}` }
+    );
+  }
+
+  if (toAdd.length > 0) {
+    await fetchOk(
+      url,
+      {
+        method: "POST",
+        headers: {
+          "xc-token": token,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(toAdd.map((id) => ({ id }))),
+      },
+      { timeoutMs, label: `NocoDB link entities ${recordId}` }
+    );
+  }
+
+  return { added: toAdd.length, removed: toRemove.length };
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.help) {
@@ -396,6 +656,8 @@ async function main() {
   const tableId =
     process.env.NOCODB_USER_STORIES_TABLE_ID ?? DEFAULT_TABLE_ID;
   const viewId = (process.env.NOCODB_USER_STORIES_VIEW_ID ?? "").trim();
+  const entitiesTableId =
+    process.env.NOCODB_REF_ENTITIES_TABLE_ID ?? DEFAULT_ENTITIES_TABLE_ID;
   const pageSize = parsePositiveInt(
     process.env.NOCODB_PAGE_SIZE,
     100,
@@ -415,6 +677,8 @@ async function main() {
   /** @type {Map<string|number, object>} raw NocoDB rows by id (for backfill checks) */
   const rawById = new Map();
   let nocoRecords;
+  /** @type {Map<string, string|number>} */
+  let entityIndex = new Map();
   if (args.local || !token) {
     nocoRecords = loadNocoDbRecords().filter(
       (r) =>
@@ -426,6 +690,9 @@ async function main() {
     }
     console.log(
       `Loaded ${nocoRecords.length} PID/use-case row(s) from static/data.json`
+    );
+    console.log(
+      "Note: --local cannot resolve REF_Entities links (empty entity index)."
     );
   } else {
     const raw = await fetchNocoDbRecords({
@@ -443,6 +710,19 @@ async function main() {
     console.log(
       `Fetched ${nocoRecords.length} User_Stories row(s) from ${baseUrl}`
     );
+
+    const entityRows = await fetchNocoDbRecords({
+      baseUrl,
+      tableId: entitiesTableId,
+      viewId: "",
+      token,
+      pageSize,
+      timeoutMs,
+    });
+    entityIndex = buildEntityIdIndex(entityRows);
+    console.log(
+      `Loaded ${entityRows.length} REF_Entities row(s) for Institutions linking`
+    );
   }
 
   const match = matchAgainstNocoDb(sourceRecords, nocoRecords, BASIC_SERVICE);
@@ -453,10 +733,17 @@ async function main() {
   );
 
   const plannedCreates = match.only_in_source.map((record) => {
-    const payload = toCreatePayload(record, usedKeyArticles);
+    const { payload, unresolvedEntities, entityIds } = toCreatePayload(
+      record,
+      usedKeyArticles,
+      entityIndex
+    );
     return {
       uc_name: useCaseName(record),
       partners: record.partners ?? [],
+      entities: sourceEntities(record),
+      unresolved_entities: unresolvedEntities,
+      entity_ids: entityIds,
       payload,
     };
   });
@@ -467,12 +754,24 @@ async function main() {
     // Check blank fields on the raw row so aliases (title→uc_name, inc_descr→uc_descr)
     // do not hide missing columns that still need backfill.
     const rawRow = rawById.get(nocodb.id) ?? nocodb;
-    const patch = buildBackfillPatch(source, rawRow, usedKeyArticles);
+    const patch = buildBackfillPatch(
+      source,
+      rawRow,
+      usedKeyArticles,
+      entityIndex
+    );
     if (!patch) continue;
+    const {
+      _entityIds = [],
+      _unresolvedEntities = [],
+      ...fieldPatch
+    } = patch;
     plannedUpdates.push({
       uc_name: useCaseName(source),
       id: nocodb.id,
-      patch,
+      entity_ids: _entityIds,
+      unresolved_entities: _unresolvedEntities,
+      patch: fieldPatch,
     });
   }
 
@@ -507,11 +806,29 @@ async function main() {
       `${plannedUpdates.length} update(s)`
   );
   for (const item of limitedCreates) {
-    console.log(`  + ${item.uc_name} → ${item.payload.key_article}`);
+    const unresolved =
+      item.unresolved_entities?.length > 0
+        ? ` [unresolved entities: ${item.unresolved_entities.join(", ")}]`
+        : "";
+    const linkNote =
+      item.entity_ids?.length > 0
+        ? ` (link ${item.entity_ids.length} entit${item.entity_ids.length === 1 ? "y" : "ies"})`
+        : "";
+    console.log(
+      `  + ${item.uc_name} → ${item.payload.key_article}${linkNote}${unresolved}`
+    );
   }
   for (const item of plannedUpdates) {
     const fields = Object.keys(item.patch).filter((k) => k !== "id");
-    console.log(`  ~ ${item.uc_name} (id ${item.id}) ← ${fields.join(", ")}`);
+    const linkCount = item.entity_ids?.length ?? 0;
+    const linkNote =
+      linkCount > 0
+        ? ` (link ${linkCount} entit${linkCount === 1 ? "y" : "ies"})`
+        : "";
+    const fieldNote = fields.length > 0 ? fields.join(", ") : "entities only";
+    console.log(
+      `  ~ ${item.uc_name} (id ${item.id}) ← ${fieldNote}${linkNote}`
+    );
   }
   console.log(`Wrote ${reportPath}`);
 
@@ -525,6 +842,14 @@ async function main() {
     return;
   }
 
+  const linkFieldId = await getLinkFieldId({
+    baseUrl,
+    tableId,
+    token,
+    timeoutMs,
+    title: "linked_entities",
+  });
+
   if (limitedCreates.length > 0) {
     const created = await createRecords({
       baseUrl,
@@ -533,28 +858,71 @@ async function main() {
       records: limitedCreates.map((item) => item.payload),
       timeoutMs,
     });
-    const createdCount = Array.isArray(created)
-      ? created.length
+    const createdRows = Array.isArray(created)
+      ? created
       : Array.isArray(created?.list)
-        ? created.list.length
-        : limitedCreates.length;
-    console.log(`Created ${createdCount} User_Stories row(s).`);
+        ? created.list
+        : [];
+    console.log(`Created ${createdRows.length || limitedCreates.length} User_Stories row(s).`);
+
+    for (let i = 0; i < limitedCreates.length; i++) {
+      const item = limitedCreates[i];
+      const createdId = createdRows[i]?.id;
+      if (createdId == null || !item.entity_ids?.length) continue;
+      const sync = await syncLinkedEntities({
+        baseUrl,
+        tableId,
+        linkFieldId,
+        recordId: createdId,
+        entityIds: item.entity_ids,
+        token,
+        timeoutMs,
+      });
+      console.log(
+        `  linked ${item.uc_name} (id ${createdId}): +${sync.added}/-${sync.removed}`
+      );
+    }
   }
 
   if (plannedUpdates.length > 0) {
-    const updated = await updateRecords({
-      baseUrl,
-      tableId,
-      token,
-      records: plannedUpdates.map((item) => item.patch),
-      timeoutMs,
-    });
-    const updatedCount = Array.isArray(updated)
-      ? updated.length
-      : Array.isArray(updated?.list)
-        ? updated.list.length
-        : plannedUpdates.length;
-    console.log(`Updated ${updatedCount} User_Stories row(s).`);
+    const fieldUpdates = plannedUpdates
+      .map((item) => item.patch)
+      .filter((patch) => Object.keys(patch).some((k) => k !== "id"));
+    if (fieldUpdates.length > 0) {
+      const updated = await updateRecords({
+        baseUrl,
+        tableId,
+        token,
+        records: fieldUpdates,
+        timeoutMs,
+      });
+      const updatedCount = Array.isArray(updated)
+        ? updated.length
+        : Array.isArray(updated?.list)
+          ? updated.list.length
+          : fieldUpdates.length;
+      console.log(`Updated ${updatedCount} User_Stories row(s).`);
+    }
+
+    for (const item of plannedUpdates) {
+      if (!item.entity_ids?.length && (asNumber(rawById.get(item.id)?.linked_entities) ?? 0) === 0) {
+        continue;
+      }
+      const sync = await syncLinkedEntities({
+        baseUrl,
+        tableId,
+        linkFieldId,
+        recordId: item.id,
+        entityIds: item.entity_ids ?? [],
+        token,
+        timeoutMs,
+      });
+      if (sync.added || sync.removed) {
+        console.log(
+          `  linked ${item.uc_name} (id ${item.id}): +${sync.added}/-${sync.removed}`
+        );
+      }
+    }
   }
 }
 
