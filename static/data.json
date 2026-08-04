@@ -1,13 +1,25 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-07-29T11:45:24.978Z",
+  "fetched_at": "2026-08-04T08:12:13.816Z",
+  "tables": {
+    "incubators": {
+      "table_id": "m3zt5vqlyja927x",
+      "view_id": null,
+      "count": 101
+    },
+    "user_stories": {
+      "table_id": "mtq40pxpo5p0jmx",
+      "view_id": null,
+      "count": 11
+    }
+  },
   "records": [
     {
       "id": 1,
       "inc_name": "TS in RADAR",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/f42d933cd392bd27.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/radar.svg",
       "logo_consortia": "",
       "key_article": "ts-radar",
       "inc_start": "2025-02-21",
@@ -27,15 +39,17 @@
       ],
       "entities": [
         "FIZ Karlsruhe"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 2,
       "inc_name": "WDCC",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/8ca946e929cc27bc.png",
-      "logo_consortia": "img/partner-logos/d2899f44796b9a2d.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/wdcc.png",
+      "logo_consortia": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
       "key_article": "ts-wdcc",
       "inc_start": "2025-02-26",
       "inc_end": "2025-10-31",
@@ -52,14 +66,16 @@
       ],
       "entities": [
         "German Climate Computing Centre"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 3,
       "inc_name": "AIMS",
       "basic_service": "TS",
       "related_institutions": "ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg",
-      "logo_project": "img/partner-logos/b0faf7bb2f1d9ce6.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png",
       "logo_consortia": "",
       "key_article": "ts-aims",
       "inc_start": "2026-03-01",
@@ -77,7 +93,9 @@
       ],
       "entities": [
         "Technical University and State Library Darmstadt"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 4,
@@ -85,7 +103,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/a755e82e7aec255a.svg",
+      "logo_consortia": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
       "key_article": "iam-nfdi4ing-jupyter",
       "inc_start": "",
       "inc_end": "",
@@ -100,7 +118,9 @@
       "partners": [
         "NFDI4Ing"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 5,
@@ -108,7 +128,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/a755e82e7aec255a.svg",
+      "logo_consortia": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
       "key_article": "dmp-nfdi4ing-engineering",
       "inc_start": "2026-07-01",
       "inc_end": "",
@@ -123,7 +143,9 @@
       "partners": [
         "NFDI4Ing"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 6,
@@ -131,7 +153,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/d2899f44796b9a2d.png",
+      "logo_consortia": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
       "key_article": "dmp-nfdi4earth-rdmo",
       "inc_start": "2026-01-01",
       "inc_end": "2026-06-30",
@@ -146,14 +168,16 @@
       "partners": [
         "NFDI4Earth"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 8,
       "inc_name": "SensorCV",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/21dc354f7bdfca6e.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/sms.png",
       "logo_consortia": "",
       "key_article": "ts-sensorcv",
       "inc_start": "2026-07-15",
@@ -171,7 +195,9 @@
       ],
       "entities": [
         "Helmholtz Association"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 11,
@@ -179,7 +205,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/79d79017d3100d9d.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png",
       "key_article": "dmp-radar",
       "inc_start": "2026-07-01",
       "inc_end": "2026-12-31",
@@ -195,7 +221,9 @@
         "NFDI4Chem",
         "NFDI4Culture"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 12,
@@ -203,7 +231,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/6c311d8a04f9f7ac.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
       "key_article": "dmp-template-development-nfdi4chem",
       "inc_start": "2026-07-01",
       "inc_end": "2026-12-31",
@@ -218,7 +246,9 @@
       "partners": [
         "NFDI4Chem"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 13,
@@ -226,7 +256,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/a39dd4e2752dbcc5.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
       "key_article": "dmp-training-and-outreach-nfdi4health",
       "inc_start": "2026-07-01",
       "inc_end": "2026-12-31",
@@ -241,7 +271,9 @@
       "partners": [
         "NFDI4Health"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 14,
@@ -249,7 +281,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/7613ba801eafb62e.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png",
       "key_article": "dmp-fairmat",
       "inc_start": "2026-01-01",
       "inc_end": "2026-06-30",
@@ -264,7 +296,9 @@
       "partners": [
         "FAIRmat"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 15,
@@ -272,7 +306,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/973257d523b9c266.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png",
       "key_article": "dmp-coscine",
       "inc_start": "2026-01-01",
       "inc_end": "2026-06-30",
@@ -287,7 +321,9 @@
       "partners": [
         "NFDI4Ing"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 16,
@@ -295,7 +331,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2605943254a9ad2c.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
       "key_article": "dmp-rdmo-integration-fairagro",
       "inc_start": "2026-01-01",
       "inc_end": "2026-06-30",
@@ -310,7 +346,9 @@
       "partners": [
         "FAIRagro"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 17,
@@ -318,7 +356,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/db773a275cb2249c.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
       "key_article": "dmp-training-and-outreach-textplus",
       "inc_start": "2026-01-01",
       "inc_end": "2026-06-30",
@@ -333,7 +371,9 @@
       "partners": [
         "Text+"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 18,
@@ -341,7 +381,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/77459895f95007f0.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
       "key_article": "dmp-training-and-outreach-nfdi4cat",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -356,7 +396,9 @@
       "partners": [
         "NFDI4Cat"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 19,
@@ -364,7 +406,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/a39dd4e2752dbcc5.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
       "key_article": "dmp-template-development-nfdi4health",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -379,7 +421,9 @@
       "partners": [
         "NFDI4Health"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 20,
@@ -387,7 +431,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/5df745c12d212b3a.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
       "key_article": "dmp-template-development-mardi",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -402,7 +446,9 @@
       "partners": [
         "MaRDI"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 21,
@@ -410,7 +456,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/68e3cc17e1554305.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4microbiota",
       "inc_start": "2025-07-01",
       "inc_end": "2025-12-31",
@@ -425,7 +471,9 @@
       "partners": [
         "NFDI4Microbiota"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 22,
@@ -433,7 +481,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/f4255b2203c83db4.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4energy",
       "inc_start": "2025-07-01",
       "inc_end": "2025-12-31",
@@ -448,7 +496,9 @@
       "partners": [
         "NFDI4Energy"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 23,
@@ -456,7 +506,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/83ae5ea177c95650.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
       "key_article": "dmp-rdmo-hosting-matwerk",
       "inc_start": "2025-09-01",
       "inc_end": "2025-12-31",
@@ -471,7 +521,9 @@
       "partners": [
         "NFDI-MatWerk"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 24,
@@ -479,7 +531,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/bd284640d067a489.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4bioimage",
       "inc_start": "2025-10-01",
       "inc_end": "2025-12-31",
@@ -494,7 +546,9 @@
       "partners": [
         "NFDI4BIOIMAGE"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 25,
@@ -502,7 +556,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/a39dd4e2752dbcc5.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4health",
       "inc_start": "2025-10-01",
       "inc_end": "2025-12-31",
@@ -517,7 +571,9 @@
       "partners": [
         "NFDI4Health"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 26,
@@ -525,7 +581,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/5df745c12d212b3a.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
       "key_article": "dmp-rdmo-integration-mardi",
       "inc_start": "2025-09-01",
       "inc_end": "2025-12-31",
@@ -540,7 +596,9 @@
       "partners": [
         "MaRDI"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 27,
@@ -548,7 +606,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/67e627866c4ac8d4.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
       "key_article": "dmp-template-development-nfdi4culture",
       "inc_start": "2024-12-01",
       "inc_end": "2025-09-30",
@@ -563,7 +621,9 @@
       "partners": [
         "NFDI4Culture"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 28,
@@ -571,7 +631,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/e8e523c5867ae478.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
       "key_article": "dmp-template-development-nfdi4memory",
       "inc_start": "2025-07-01",
       "inc_end": "2025-12-31",
@@ -586,7 +646,9 @@
       "partners": [
         "NFDI4Memory"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 29,
@@ -594,7 +656,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/800a8c236b604f34.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png",
       "key_article": "dmp-template-development-nfdi4objects-nfdi4culture",
       "inc_start": "2025-07-01",
       "inc_end": "2025-12-31",
@@ -610,7 +672,9 @@
         "NFDI4Culture",
         "NFDI4Objects"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 30,
@@ -618,7 +682,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2605943254a9ad2c.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
       "key_article": "dmp-template-development-fairagro",
       "inc_start": "2025-07-01",
       "inc_end": "2025-12-31",
@@ -633,7 +697,9 @@
       "partners": [
         "FAIRagro"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 31,
@@ -641,7 +707,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/db773a275cb2249c.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
       "key_article": "dmp-template-development-textplus",
       "inc_start": "2025-09-01",
       "inc_end": "2025-12-31",
@@ -656,7 +722,9 @@
       "partners": [
         "Text+"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 32,
@@ -664,7 +732,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/6c311d8a04f9f7ac.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
       "key_article": "dmp-training-and-outreach-nfdi4chem",
       "inc_start": "2025-07-01",
       "inc_end": "2026-05-31",
@@ -679,7 +747,9 @@
       "partners": [
         "NFDI4Chem"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 33,
@@ -687,7 +757,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/bfa1a3b9daa9e273.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4ing",
       "inc_start": "2024-06-01",
       "inc_end": "2025-09-30",
@@ -702,7 +772,9 @@
       "partners": [
         "NFDI4Ing"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 34,
@@ -710,7 +782,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/6c311d8a04f9f7ac.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4chem",
       "inc_start": "2024-06-01",
       "inc_end": "2025-09-30",
@@ -725,7 +797,9 @@
       "partners": [
         "NFDI4Chem"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 35,
@@ -733,7 +807,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2605943254a9ad2c.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
       "key_article": "dmp-rdmo-hosting-fairagro",
       "inc_start": "2024-12-01",
       "inc_end": "2025-05-31",
@@ -748,7 +822,9 @@
       "partners": [
         "FAIRagro"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 36,
@@ -756,7 +832,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/375d18e09586ac41.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
       "key_article": "dmp-rdmo-integration-nfdi4biodiversity",
       "inc_start": "2024-06-01",
       "inc_end": "2025-06-30",
@@ -771,7 +847,9 @@
       "partners": [
         "NFDI4Biodiversity"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 37,
@@ -779,7 +857,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/67e627866c4ac8d4.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4culture",
       "inc_start": "2025-06-01",
       "inc_end": "2025-06-30",
@@ -794,7 +872,9 @@
       "partners": [
         "NFDI4Culture"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 38,
@@ -802,7 +882,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/5df745c12d212b3a.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
       "key_article": "dmp-rdmo-hosting-mardi",
       "inc_start": "2024-09-01",
       "inc_end": "2025-06-30",
@@ -817,7 +897,9 @@
       "partners": [
         "MaRDI"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 39,
@@ -825,7 +907,7 @@
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/fb068dab27f7e96a.png",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
       "key_article": "dmp-rdmo-hosting-nfdi4earth",
       "inc_start": "2024-06-01",
       "inc_end": "2025-06-30",
@@ -840,7 +922,9 @@
       "partners": [
         "NFDI4Earth"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 40,
@@ -848,7 +932,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/7066e8efa3e09180.svg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/TS4NFDI-small-grey.svg",
       "key_article": "iam-single-sign-on-for-ts4nfdi-services",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -861,7 +945,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 41,
@@ -869,7 +955,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/1ab32a56f53adec2.svg",
+      "logo_consortia": "https://come2data.de/wp-content/uploads/2025/07/theme-logo.svg",
       "key_article": "iam-come2data-competence-center-for-interdisciplinary-data-science",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -882,7 +968,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 42,
@@ -890,7 +978,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/b1d11b7ba8108d39.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/missing.jpg",
       "key_article": "iam-agimo-data-driven-agile-planning-for-responsible-mobility",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -903,7 +991,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 43,
@@ -911,7 +1001,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/0138f0aa96f01d85.svg",
+      "logo_consortia": "https://gitlab.com/LARAsuite/lara/-/raw/master/docs/images/lara/LARA_logo.svg",
       "key_article": "iam-aai-service-integration-into-lara",
       "inc_start": "2025-08-01",
       "inc_end": "2026-01-31",
@@ -924,7 +1014,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 44,
@@ -932,7 +1024,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/8c7cff3511f4a43e.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4ing.jpg",
       "key_article": "iam-data-ingest-service",
       "inc_start": "2025-08-01",
       "inc_end": "2026-01-31",
@@ -947,7 +1039,9 @@
       "partners": [
         "NFDI4Ing"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 45,
@@ -955,7 +1049,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/e83a727a08cc1255.png",
+      "logo_consortia": "https://github.com/c3di/chaldene/blob/master/docs/assets/logo_128x128.png",
       "key_article": "iam-chaldene-accessible-high-performance-computing-for-image-processing",
       "inc_start": "2025-08-01",
       "inc_end": "2026-01-31",
@@ -968,7 +1062,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 46,
@@ -976,7 +1072,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/f83b03fb95b50002.png",
+      "logo_consortia": "https://www.nfdi.de/wp-content/uploads/2022/02/nfdi_rgb_Wortmarke.png",
       "key_article": "iam-single-sign-on-for-nfdi-internal-ict-tools",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
@@ -991,7 +1087,9 @@
       "partners": [],
       "entities": [
         "NFDI"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 47,
@@ -999,7 +1097,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/3202b19d32c12245.png",
+      "logo_consortia": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
       "key_article": "iam-best-practice-aai-for-berd-data-portal",
       "inc_start": "2025-08-01",
       "inc_end": "2026-01-31",
@@ -1014,7 +1112,9 @@
       "partners": [
         "BERD@NFDI"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 48,
@@ -1022,7 +1122,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/f61f8959c019299f.svg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/gfbio_logo.svg",
       "key_article": "iam-gfbio-single-sign-on-for-nfdi4biodiversity",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1039,7 +1139,9 @@
       ],
       "entities": [
         "GFBio"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 49,
@@ -1047,7 +1149,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/3ed37396264f7d68.svg",
+      "logo_consortia": "https://simplevm.github.io/assets/images/SimpleVM_New.svg",
       "key_article": "iam-opening-up-the-simplevm-bielefeld-university-installation-for-external-collaborations",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1062,7 +1164,9 @@
       "partners": [],
       "entities": [
         "Bielefeld University"
-      ]
+      ],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 50,
@@ -1070,7 +1174,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2f8f0030e7abc9b2.svg",
+      "logo_consortia": "https://gitlab.ub.uni-bielefeld.de/cmg/clowm/clowm-ui/-\n/raw/main/src/assets/images/clowm.svg",
       "key_article": "iam-opening-the-cloud-based-workflow-manager-clowm-to-the-whole-nfdi",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1083,7 +1187,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 51,
@@ -1091,7 +1197,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/764ee5bf54a00a8d.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/dalia-logo.png",
       "key_article": "iam-nfdi-aai-for-dalia",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1104,7 +1210,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 52,
@@ -1112,7 +1220,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/d0d61fcba352ef3f.png",
+      "logo_consortia": "https://github.com/arunaengine/.github/blob/main/profile/img/aruna_white_font.png?raw=true",
       "key_article": "iam-integration-aruna-data-orchestration-engine-with-infrastructure-proxy",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1125,7 +1233,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 53,
@@ -1133,7 +1243,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/aa41a5de474f8b31.png",
+      "logo_consortia": "https://base4nfdi.de/images/nicepage-images/Jupyter4NFDI.png",
       "key_article": "iam-jupyter4nfdi-accessible-for-nfdi-and-beyond",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1146,7 +1256,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 54,
@@ -1154,7 +1266,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/9398849c5f7f7a6a.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/biigle-logo.png",
       "key_article": "iam-biigle",
       "inc_start": "2025-01-01",
       "inc_end": "2025-07-31",
@@ -1167,7 +1279,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 55,
@@ -1175,7 +1289,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/8f12974d9657557b.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/wisski-logo.png",
       "key_article": "iam-wisski",
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
@@ -1188,7 +1302,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 56,
@@ -1196,7 +1312,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/05ec8f1cfadfe6cb.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4chem-logo.png",
       "key_article": "iam-terminology-services2-0",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1209,7 +1325,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 57,
@@ -1217,7 +1335,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/6d20ebd08f1e9754.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/open-energy-platform.png",
       "key_article": "iam-open-energy-platform",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1230,7 +1348,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 58,
@@ -1238,7 +1358,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/f800628bef34deca.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nomad-logo.jpg",
       "key_article": "iam-nomad-integration",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1251,7 +1371,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 59,
@@ -1259,7 +1381,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/172c50564a8df4be.svg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
       "key_article": "iam-nfdi4cat-repository",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1272,7 +1394,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 60,
@@ -1280,7 +1404,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/8c7cff3511f4a43e.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4ing.jpg",
       "key_article": "iam-file-transfer-service-fts",
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
@@ -1293,7 +1417,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 61,
@@ -1301,7 +1427,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/452aa84a3edd4de7.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/forum4mica.png",
       "key_article": "iam-forum-4-mica",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1314,7 +1440,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 62,
@@ -1322,7 +1450,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/eaa9eef35f5d5b47.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/fairagro.png",
       "key_article": "iam-fairagro",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1335,7 +1463,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 63,
@@ -1343,7 +1473,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/053229561d547e96.svg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/dataplant.svg",
       "key_article": "iam-dataplant",
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
@@ -1356,7 +1486,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 64,
@@ -1364,7 +1496,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/852580d0427f2d03.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png",
       "key_article": "iam-coscine-2",
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
@@ -1377,7 +1509,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 65,
@@ -1385,7 +1519,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/67cd4a7cc7c23242.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/come2data.jpg",
       "key_article": "iam-come2data",
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
@@ -1398,7 +1532,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 66,
@@ -1406,7 +1542,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2d0b59aa31be6acd.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
       "key_article": "iam-nfdixcs",
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
@@ -1419,7 +1555,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 67,
@@ -1427,7 +1565,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/795258ea8776a192.svg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/text-plus-logo.svg",
       "key_article": "iam-authorisation-on-objects",
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
@@ -1440,7 +1578,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 68,
@@ -1448,7 +1588,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/863bac0ead893c90.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4earth-logo.png",
       "key_article": "iam-integration-of-nfdi-aai-to-open-edx",
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
@@ -1461,7 +1601,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 69,
@@ -1469,7 +1611,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2e4910e1462d407d.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/NFDI4Chem-Logo_mehrfarbig_schwarz.png",
       "key_article": "iam-terminology-service",
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
@@ -1482,7 +1624,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 70,
@@ -1490,7 +1634,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/5cf60a24b427860d.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nfdi4culture.jpg",
       "key_article": "iam-nfdi4culture",
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
@@ -1503,7 +1647,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 71,
@@ -1511,7 +1657,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/d739ed2271eb725f.jpg",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/FD_Plattform_engl_rgb.jpg",
       "key_article": "iam-fdpg-analysing-data-from-clinical-care",
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
@@ -1524,7 +1670,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 72,
@@ -1532,7 +1680,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/2520b12f7fbf8544.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/mardi-logo.png",
       "key_article": "iam-minimal-oidc-login",
       "inc_start": "2024-01-01",
       "inc_end": "2024-07-31",
@@ -1545,7 +1693,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 73,
@@ -1553,7 +1703,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/de660bf847514a1b.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/argocd.png",
       "key_article": "iam-argocd",
       "inc_start": "2024-01-01",
       "inc_end": "2024-07-31",
@@ -1566,7 +1716,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 74,
@@ -1574,7 +1726,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/852580d0427f2d03.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png",
       "key_article": "iam-coscine",
       "inc_start": "2024-01-01",
       "inc_end": "2024-07-31",
@@ -1587,7 +1739,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 75,
@@ -1595,7 +1749,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/bf5c3bbaac4f2812.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/nhraai_complete.png",
       "key_article": "iam-jards-attribute-queries-in-regapp",
       "inc_start": "2024-02-01",
       "inc_end": "2024-07-31",
@@ -1608,7 +1762,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 76,
@@ -1616,7 +1772,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/0b0f4686d8056801.png",
+      "logo_consortia": "https://i.imgur.com/8gBPS5a.png",
       "key_article": "iam-metadatahub",
       "inc_start": "2024-01-01",
       "inc_end": "2024-07-31",
@@ -1629,7 +1785,9 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 77,
@@ -1637,7 +1795,7 @@
       "basic_service": "IAM",
       "related_institutions": "",
       "logo_project": "",
-      "logo_consortia": "img/partner-logos/1cc2c59e43fe5ef1.png",
+      "logo_consortia": "https://incubators.nfdi-aai.de/images/RDMO-logo.png",
       "key_article": "iam-pilot-project-a-prototypical-integration-of-each-of-the-community-aai-solutions-for-the-authentication-to-the-rdmo-nfdi4ing-service",
       "inc_start": "2023-07-31",
       "inc_end": "2023-02-28",
@@ -1650,14 +1808,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 78,
       "inc_name": "nmrXiv",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/8e52852b66788d11.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/nmrxiv_repository.png",
       "logo_consortia": "",
       "key_article": "ts-nmrxiv",
       "inc_start": "",
@@ -1671,14 +1831,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 79,
       "inc_name": "ChEBI",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/ef0a379775ece1e4.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/chebi.png",
       "logo_consortia": "",
       "key_article": "ts-chebi",
       "inc_start": "2025-02-10",
@@ -1692,14 +1854,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 80,
       "inc_name": "Coconut",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/4b05f3d3cef46b2e.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/coconut.png",
       "logo_consortia": "",
       "key_article": "ts-coconut",
       "inc_start": "",
@@ -1713,14 +1877,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 81,
       "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/4a8f5a62aea03e2b.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/nfdi4cat.png",
       "logo_consortia": "",
       "key_article": "ts-nfdi4cat-central-data-repository-repo4cat",
       "inc_start": "2025-02-12",
@@ -1734,14 +1900,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 82,
       "inc_name": "BERD Terminology Service",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/a8573f5bcf411a39.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/berd.png",
       "logo_consortia": "",
       "key_article": "ts-berd-terminology-service",
       "inc_start": "2024-05-29",
@@ -1755,14 +1923,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 83,
       "inc_name": "Terminology service for Plasma-MDS",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/2f46b3090c3dd5f8.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.svg",
       "logo_consortia": "",
       "key_article": "ts-terminology-service-for-plasma-mds",
       "inc_start": "",
@@ -1776,14 +1946,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 84,
       "inc_name": "preVIEW",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/ee3199b54476df4d.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/preVIEW.svg",
       "logo_consortia": "",
       "key_article": "ts-preview",
       "inc_start": "",
@@ -1797,14 +1969,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 85,
       "inc_name": "Metadata Annotation Workbench",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/c08cca7ca0e157bf.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
       "logo_consortia": "",
       "key_article": "ts-metadata-annotation-workbench",
       "inc_start": "",
@@ -1818,14 +1992,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 86,
       "inc_name": "Discuss Data",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/1933602a07f6ab9e.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/discuss-data.svg",
       "logo_consortia": "",
       "key_article": "ts-discuss-data",
       "inc_start": "2025-02-20",
@@ -1839,14 +2015,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 87,
       "inc_name": "Open Energy Platform",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/420b1ab6f7242fa5.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png",
       "logo_consortia": "",
       "key_article": "ts-open-energy-platform",
       "inc_start": "2025-08-20",
@@ -1860,14 +2038,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 88,
       "inc_name": "ICONCLASS",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/a0257f1df118d653.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/ICONCLASS.png",
       "logo_consortia": "",
       "key_article": "ts-iconclass",
       "inc_start": "2025-09-03",
@@ -1881,14 +2061,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 89,
       "inc_name": "Ontology of the historical German-language nomenclature",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/567f987e1dd0014a.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/ohdab.png",
       "logo_consortia": "",
       "key_article": "ts-ontology-of-the-historical-german-language-nomenclature",
       "inc_start": "2025-08-14",
@@ -1902,14 +2084,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 90,
       "inc_name": "Health Study Hub",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/c08cca7ca0e157bf.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
       "logo_consortia": "",
       "key_article": "ts-health-study-hub",
       "inc_start": "2025-08-11",
@@ -1923,14 +2107,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 91,
       "inc_name": "DALIA Search Portal",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/39ef828eaba7a05b.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/dalia.png",
       "logo_consortia": "",
       "key_article": "ts-dalia-search-portal",
       "inc_start": "2025-08-08",
@@ -1944,14 +2130,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 92,
       "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/c20f374664866ba7.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/DMP4NFDI.png",
       "logo_consortia": "",
       "key_article": "ts-integrate-ts4nfdi-into-dmp4nfdi-rdmo-service",
       "inc_start": "2026-03-01",
@@ -1965,14 +2153,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 93,
       "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/42230e20b86baef5.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/PID4NFDI.png",
       "logo_consortia": "",
       "key_article": "ts-enabling-semantic-interoperability-via-datacite-terminologies",
       "inc_start": "2026-03-01",
@@ -1986,14 +2176,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 94,
       "inc_name": "Metabase",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/9d80b706f0cc1f85.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/metabase-logo.svg",
       "logo_consortia": "",
       "key_article": "ts-metabase",
       "inc_start": "2026-03-01",
@@ -2007,14 +2199,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 95,
       "inc_name": "MathModDB",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/7da39823e90b3deb.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/MathModDBLogo.png",
       "logo_consortia": "",
       "key_article": "ts-mathmoddb",
       "inc_start": "2026-03-01",
@@ -2028,14 +2222,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 96,
       "inc_name": "FAIRagro Terminology Service",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/1584198a22a429d3.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/FAIRagro.png",
       "logo_consortia": "",
       "key_article": "ts-fairagro-terminology-service",
       "inc_start": "2026-03-01",
@@ -2049,14 +2245,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 97,
       "inc_name": "TS4NDSI integration in Galaxy",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/452248d3416df5d7.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/galaxy-eu.svg",
       "logo_consortia": "",
       "key_article": "ts-ts4ndsi-integration-in-galaxy",
       "inc_start": "",
@@ -2070,14 +2268,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 98,
       "inc_name": "TeSS",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/cf6d4cf72d711cd7.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/tess-logo.svg",
       "logo_consortia": "",
       "key_article": "ts-tess",
       "inc_start": "",
@@ -2091,14 +2291,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 99,
       "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/9f445863db409d4f.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/DAPHNE4NFDI_logo.png",
       "logo_consortia": "",
       "key_article": "ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories",
       "inc_start": "",
@@ -2112,14 +2314,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 100,
       "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/c2ec2fab9b3ea704.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/CEPO-logo.png",
       "logo_consortia": "",
       "key_article": "ts-improving-interoperability-for-climate-and-energy-policy-ontologies",
       "inc_start": "",
@@ -2133,14 +2337,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 101,
       "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/db311bd7628d7af5.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
       "logo_consortia": "",
       "key_article": "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment",
       "inc_start": "",
@@ -2154,14 +2360,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 102,
       "inc_name": "OstData & 4MMS",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/fa6ecd87e11ec9e1.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/ostdata.png",
       "logo_consortia": "",
       "key_article": "ts-ostdata-and-4mms",
       "inc_start": "",
@@ -2175,14 +2383,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 103,
       "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/07de910f2aad00e7.svg",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/rspace_logo.svg",
       "logo_consortia": "",
       "key_article": "ts-semantic-and-interoperable-metadata-integration-for-eln-objects",
       "inc_start": "",
@@ -2196,14 +2406,16 @@
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
     },
     {
       "id": 104,
       "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
       "basic_service": "TS",
       "related_institutions": "",
-      "logo_project": "img/partner-logos/ba427dc06317d8ac.png",
+      "logo_project": "https://terminology.services.base4nfdi.de/img/nfdi4immuno.png",
       "logo_consortia": "",
       "key_article": "ts-integration-of-ontology-based-auto-completion-in-nfdi4immuno-excel-metadata-templates",
       "inc_start": "",
@@ -2219,8 +2431,329 @@
       "partners": [
         "NFDI4Immuno"
       ],
-      "entities": []
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
+    },
+    {
+      "id": 12,
+      "inc_name": "PID Service for Dataset Elements",
+      "basic_service": "PID",
+      "related_institutions": "GESIS",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-pid-service-for-dataset-elements",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The purpose of this analysis is to showcase PID integration in a new PID service that is being developed within the KonsortSWD consortium. This service aims to reference elements below the dataset, study, or publication level via PID, enhancing FAIRness of low-granular dataset elements and fulfilling requirements such as handling a large number of PIDs.",
+      "inc_goals": "- **Labels:** Large numbers of PIDs, High-granular data\n- **Resource types:** dataset elements\n- **PID providers:** ePIC\n- **Research field:** social sciences",
+      "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14327770",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "KonsortSWD"
+      ],
+      "entities": [],
+      "source_url": "https://doi.org/10.5281/zenodo.14327770",
+      "uc_labels": "Large numbers of PIDs, High-granular data",
+      "pid_providers": "ePIC",
+      "research_field": "social sciences",
+      "resource_types": "dataset elements",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 13,
+      "inc_name": "Instrument PIDs at the Helmholtz-Zentrum Berlin",
+      "basic_service": "PID",
+      "related_institutions": "HZB",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-instrument-pids-at-the-helmholtz-zentrum-berlin",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The Helmholtz Zentrum Berlin für Materialien und Energie (HZB) operates the BESSY II synchrotron radiation source and, until the end of 2019, operated the BER II neutron source. The synchrotron radiation of BESSY II (respectively neutrons at BER II) are directed through beamlines to experiment stations, where researchers can examine the interaction of the radiation with a sample, resulting in recorded measurements. The HZB registers DOIs via DataCite for its beamlines and experiment stations to uniquely identify these devices. Researchers can use the DOIs to link their publication data to the devices they have used to generate their measurements.",
+      "inc_goals": "- **Labels:** Connection metadata\n- **Resource types:** instruments\n- **PID providers:** DataCite\n- **Research field:** photon- and neutron sciences",
+      "inc_results": "Learn more\nhttps://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "DAPHNE4NFDI"
+      ],
+      "entities": [],
+      "source_url": "https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/",
+      "uc_labels": "Connection metadata",
+      "pid_providers": "DataCite",
+      "research_field": "photon- and neutron sciences",
+      "resource_types": "instruments",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 14,
+      "inc_name": "Instrument PIDs in the Sensor Management System",
+      "basic_service": "PID",
+      "related_institutions": "GFZ, UFZ, KIT, FZJ",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-instrument-pids-in-the-sensor-management-system",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "This analysis describes the integration of B2INST into the Sensor Management System (SMS), which enables standardized management of sensor metadata in the Earth System Sciences. By combining rich, machine-actionable metadata, controlled vocabulary, and persistent identifiers, the SMS makes instrument information readily reusable by automated workflows (e.g., knowledge graphs and AI/ML-driven discovery and quality control). The SMS has been developed by the four Helmholtz Centers from the Research Field Earth and Environment – Helmholtz Centre for Geosciences (GFZ), Helmholtz Center for Environmental Research (UFZ), Jülich Research Centre (FZJ), and Karlsruhe Institute of Technology (KIT) – as part of the Helmholtz DataHub initiative. Most instruments registered in B2INST originate from the SMS instances operated by these organizations. The report focuses on instrument metadata and curation processes, the seamlessly integrated PID registration workflow, and the lessons learned that can guide the adoption of instrument PIDs in equipment databases.",
+      "inc_goals": "- **Labels:** Controlled vocabulary, Metadata analysis\n- **Resource types:** instruments\n- **PID providers:** ePIC\n- **Research field:** Earth System Sciences",
+      "inc_results": "Learn more\nhttps://zenodo.org/records/17733707",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": [],
+      "source_url": "https://zenodo.org/records/17733707",
+      "uc_labels": "Controlled vocabulary, Metadata analysis",
+      "pid_providers": "ePIC",
+      "research_field": "Earth System Sciences",
+      "resource_types": "instruments",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 15,
+      "inc_name": "Metadata Analysis for the Genebank Information System",
+      "basic_service": "PID",
+      "related_institutions": "IPK Gatersleben",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-metadata-analysis-for-the-genebank-information-system",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The purpose of this report is to provide a comprehensive evaluation of the metadata quality and completeness of the FAIRAgro consortium. This analysis, conducted by DataCite, highlights the current state of metadata, offering insights into its alignment with persistent identifier and metadata best practices.",
+      "inc_goals": "- **Labels:** Metadata analysis\n- **Resource types:** datasets\n- **PID providers:** DataCite\n- **Research field:** agrosystem research",
+      "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14506202",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "FAIRagro"
+      ],
+      "entities": [],
+      "source_url": "https://doi.org/10.5281/zenodo.14506202",
+      "uc_labels": "Metadata analysis",
+      "pid_providers": "DataCite",
+      "research_field": "agrosystem research",
+      "resource_types": "datasets",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 16,
+      "inc_name": "PID Adoption at the SUB Göttingen",
+      "basic_service": "PID",
+      "related_institutions": "SUB Göttingen",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-pid-adoption-at-the-sub-gottingen",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The purpose of this analysis is to showcase PID integration within the Text+ consortium using the example of the SUB Göttingen. The report focuses on two well-integratied and long-running repositories (DARIAH-DE and TextGrid) for text-based research data from the humanities. We give details on different types of integrated PIDs, metadata quality handling, interaction with major infrastructures such as DARIAH and CLARIN, and describe new requirements and developments such as improved user input interfaces.",
+      "inc_goals": "- **Labels:** General\n- **Resource types:** text-based research data\n- **PID providers:** DataCite, ePIC\n- **Research field:** humanities",
+      "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14327691",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "Text+"
+      ],
+      "entities": [],
+      "source_url": "https://doi.org/10.5281/zenodo.14327691",
+      "uc_labels": "General",
+      "pid_providers": "DataCite, ePIC",
+      "research_field": "humanities",
+      "resource_types": "text-based research data",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 17,
+      "inc_name": "Metadata Analysis for StrainInfo",
+      "basic_service": "PID",
+      "related_institutions": "DSMZ",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-metadata-analysis-for-straininfo",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The purpose of this analysis is a comprehensive evaluation of the metadata quality and completeness for the StrainInfo service. StrainInfo, operated by the Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures GmbH, is an integral part of the NFDI4Microbiota consortium. This analysis, conducted by DataCite, highlights the current state of metadata in StrainInfo, offering insights into its alignment with persistent identifier and metadata best practices.",
+      "inc_goals": "- **Labels:** Metadata analysis\n- **Resource types:** microbial strains\n- **PID providers:** DataCite\n- **Research field:** microbiology, biodiversity",
+      "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14357800",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "NFDI4Microbiota"
+      ],
+      "entities": [],
+      "source_url": "https://doi.org/10.5281/zenodo.14357800",
+      "uc_labels": "Metadata analysis",
+      "pid_providers": "DataCite",
+      "research_field": "microbiology, biodiversity",
+      "resource_types": "microbial strains",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 18,
+      "inc_name": "PIDs for Services – Mapping Base4NFDI Requirements to DataCite Metadata",
+      "basic_service": "PID",
+      "related_institutions": "TIB",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-pids-for-services-mapping-base4nfdi-requirements-to-datacite-metadata",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The purpose of this work is to evaluate how Base4NFDI basic services (e.g. PID4NFDI, TS4NFDI, DMP4NFDI) can be assigned DOIs using the DataCite Metadata Schema. The analysis maps Base4NFDI portfolio requirements to DataCite’s metadata properties, identifies gaps and ambiguities, and formulates governance, workflow, and landing page recommendations for compliant DOI registration of services. The goal is to increase FAIRness, citation stability, discoverability, provenance tracking, and impact measurement of NFDI basic services.",
+      "inc_goals": "- **Labels:** Metadata mapping, Implementation concept\n- **Resource types:** projects, services (NFDI basic services)\n- **PID providers:** DataCite\n- **Research field:** generic, research data management",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "Base4NFDI"
+      ],
+      "entities": [],
+      "source_url": "",
+      "uc_labels": "Metadata mapping, Implementation concept",
+      "pid_providers": "DataCite",
+      "research_field": "generic, research data management",
+      "resource_types": "projects, services (NFDI basic services)",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 19,
+      "inc_name": "NOMAD – Clarifying Resource Type for DOI Registration of Aggregated Data",
+      "basic_service": "PID",
+      "related_institutions": "Humboldt-Universität zu Berlin (NOMAD repository operator)",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-nomad-clarifying-resource-type-for-doi-registration-of-aggregated-data",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "This use case analyses how NOMAD “Projects” (aggregations of uploaded files, directories, and derived entries) should be represented in the DataCite Metadata Schema for DOI registration. Our analysis showed that these “Projects” function as curated collections of heterogeneous research objects (nested files, heterogeneous data types, derived entries). They are not project descriptions in the sense of RAiDs, but structured aggregations of multiple items that are bundled and assigned a DOI. On that basis, the recommended resourceTypeGeneral is Collection rather than Dataset or Project. We therefore supported NOMAD in clarifying what exactly is being identified, how those aggregated objects should be described, and how the associated metadata can be enriched in a structured and interoperable way.",
+      "inc_goals": "- **Labels:** Metadata analysis, Resource type clarification\n- **Resource types:** collections (recommended for NOMAD Projects)\n- **PID providers:** DataCite\n- **Research field:** materials science, computational materials research",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "FAIRmat"
+      ],
+      "entities": [],
+      "source_url": "",
+      "uc_labels": "Metadata analysis, Resource type clarification",
+      "pid_providers": "DataCite",
+      "research_field": "materials science, computational materials research",
+      "resource_types": "collections (recommended for NOMAD Projects)",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 20,
+      "inc_name": "Coscine: Assigning PIDs for Projects and Storage Resources",
+      "basic_service": "PID",
+      "related_institutions": "RWTH Aachen University",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-coscine-assigning-pids-for-projects-and-storage-resources",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "Cosine is a web-based research data management (RDM) platform developed at RWTH Aachen University in collaboration with NFDI4Ing/NFDI-MatWerk. It can be used to store, manage and archive any kinds of general research data that arise from research projects. The platform focuses on making warm/active data FAIR by collecting rich, customizable metadata and assigning PIDs as early as possible, whereas the final publication of research results is not part of Coscine. The RDM platform assigns ePIC PIDs in the form of FAIR digital objects (FDOs) to enhance FAIRness and interoperability across systems.",
+      "inc_goals": "- **Labels:** Warm data, FAIR digital objects\n- **Resource types:** projects, storage resources\n- **PID providers:** ePIC\n- **Research field:** generic",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 2,
+      "linked_entities": null,
+      "partners": [
+        "NFDI4Ing",
+        "MatWerk"
+      ],
+      "entities": [],
+      "source_url": "",
+      "uc_labels": "Warm data, FAIR digital objects",
+      "pid_providers": "ePIC",
+      "research_field": "generic",
+      "resource_types": "projects, storage resources",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 21,
+      "inc_name": "Embedding ePIC PIDs into the NFDIxCS RDMC Creation Wizard workflow",
+      "basic_service": "PID",
+      "related_institutions": "GWDG, University of Potsdam, University of Duisburg-Essen, KIT",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-embedding-epic-pids-into-the-nfdixcs-rdmc-creation-wizard-workflow",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "The RDMC creation wizard leads a user through the publication process of a research data management container (RDMC). At the end of this workflow, an ePIC PID is assigned to the container, turning it into a FAIR Digital Object (FDO) with RDMC-specific metadata. The workflow uses existing repositories to publish the RDMC. Hence, additionally, other PIDs may be registered as well, depending on the repository in use (e.g., Zenodo, GRO.Data, or Coscine).",
+      "inc_goals": "- **Labels:** FAIR digital objects\n- **Resource types:** research data management containers (RDMCs)\n- **PID providers:** ePIC\n- **Research field:** computer sciences",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "NFDIxCS"
+      ],
+      "entities": [],
+      "source_url": "",
+      "uc_labels": "FAIR digital objects",
+      "pid_providers": "ePIC",
+      "research_field": "computer sciences",
+      "resource_types": "research data management containers (RDMCs)",
+      "integration_kind": "use-case"
+    },
+    {
+      "id": 22,
+      "inc_name": "PID4Cat: PIDs for digital and physical resources generated in catalysis research",
+      "basic_service": "PID",
+      "related_institutions": "HLRS",
+      "logo_project": "",
+      "logo_consortia": "",
+      "key_article": "pid-pid4cat-pids-for-digital-and-physical-resources-generated-in-catalysis-research",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": null,
+      "inc_status": "",
+      "inc_descr": "pid4cat is a service that is designed to assign persistent identifiers for resources generated in the catalysis research community, such as collections, samples, materials, devices, datasets, and services. The pid4cat service builds upon existing PID infrastructure, i.e., it assigns ePIC PIDs based on the Handle System while providing enhanced capabilities for metadata management and namespace delegation. pid4cat enables partner organizations to manage their own sub-namespaces while maintaining a consistent approach to identifier creation and metadata management in the overall pid4cat framework.",
+      "inc_goals": "- **Labels:** Implementation concept\n- **Resource types:** collections, materials, devices, datasets, services\n- **PID providers:** ePIC, pid4cat\n- **Research field:** Catalysis Research",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "NFDI4Cat"
+      ],
+      "entities": [],
+      "source_url": "",
+      "uc_labels": "Implementation concept",
+      "pid_providers": "ePIC, pid4cat",
+      "research_field": "Catalysis Research",
+      "resource_types": "collections, materials, devices, datasets, services",
+      "integration_kind": "use-case"
     }
-  ],
-  "logos_localized_at": "2026-07-29T11:45:25.110Z"
+  ]
 }

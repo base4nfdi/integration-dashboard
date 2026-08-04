@@ -43,6 +43,13 @@ const SOURCES = [
     type: "markdown",
     filename: "incubator.md",
   },
+  {
+    id: "pid4nfdi",
+    label: "PID4NFDI use cases",
+    url: "https://pid.services.base4nfdi.de/community/use-cases/",
+    type: "html",
+    filename: "page.html",
+  },
 ];
 
 /**

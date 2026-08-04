@@ -1,0 +1,12 @@
+{
+  "id": "pid4nfdi",
+  "label": "PID4NFDI use cases",
+  "source_url": "https://pid.services.base4nfdi.de/community/use-cases/",
+  "fetch_url": "https://pid.services.base4nfdi.de/community/use-cases/",
+  "type": "html",
+  "content_type": "text/html; charset=utf-8",
+  "status": 200,
+  "filename": "page.html",
+  "fetched_at": "2026-08-04T08:11:58.526Z",
+  "bytes": 32283
+}

@@ -61,7 +61,10 @@ const PARTNER_ALIASES = {
   "text+": "Text+",
   konsortswd: "KonsortSWD",
   nfdixcs: "NFDIxCS",
+  nfdixcsk: "NFDIxCS",
   "berd@nfdi": "BERD@NFDI",
+  daphne4nfdi: "DAPHNE4NFDI",
+  base4nfdi: "Base4NFDI",
 };
 
 /**
@@ -147,7 +150,9 @@ export function stripHtml(html) {
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/(p|div|li|h[1-6]|tr)>/gi, "\n")
     .replace(/<[^>]+>/g, "")
-    .replace(/&nbsp;/g, " ")
+    // PID4NFDI (and some other pages) emit `&nbsp` without a trailing `;`.
+    .replace(/&nbsp;?/gi, " ")
+    .replace(/&#160;/g, " ")
     .replace(/&amp;/g, "&")
     .replace(/&lt;/g, "<")
     .replace(/&gt;/g, ">")
@@ -156,6 +161,7 @@ export function stripHtml(html) {
     .replace(/\r\n/g, "\n")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
+    .replace(/[ \t]{2,}/g, " ")
     .trim();
 }
 

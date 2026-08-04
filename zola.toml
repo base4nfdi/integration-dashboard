@@ -1,5 +1,5 @@
-title = "Incubators Dashboard - Base4NFDI"
-description = "General overview of status of incubators related to Basic Services within NFDI."
+title = "Integration Dashboard - Base4NFDI"
+description = "General overview of status of incubators and use cases related to Basic Services within NFDI."
 
 # The URL the site will be built for
 base_url = "http://dashboard.localhost"

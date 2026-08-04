@@ -1,0 +1,917 @@
+{
+  "fetched_at": "2026-07-29T13:44:35.744Z",
+  "source_listing": "https://www.nfdi.de/news/?lang=en",
+  "scope": "news",
+  "lang": "en",
+  "posts_collected": 91,
+  "posts_matched": 19,
+  "term_counts": {
+    "base4nfdi": 14,
+    "basic-service": 17,
+    "ts4nfdi": 3,
+    "jupyter4nfdi": 1,
+    "dmp4nfdi": 3,
+    "rdmtraining4nfdi": 1,
+    "rdmt4nfdi": 0,
+    "pid4nfdi": 4,
+    "accounting4nfdi": 0,
+    "kgi4nfdi": 1,
+    "nfdi.software": 1,
+    "iam4nfdi": 5
+  },
+  "buzzwords": [
+    {
+      "id": "base4nfdi",
+      "label": "Base4NFDI"
+    },
+    {
+      "id": "basic-service",
+      "label": "basic service"
+    },
+    {
+      "id": "ts4nfdi",
+      "label": "TS4NFDI"
+    },
+    {
+      "id": "jupyter4nfdi",
+      "label": "Jupyter4NFDI"
+    },
+    {
+      "id": "dmp4nfdi",
+      "label": "DMP4NFDI"
+    },
+    {
+      "id": "rdmtraining4nfdi",
+      "label": "RDMTraining4NFDI"
+    },
+    {
+      "id": "rdmt4nfdi",
+      "label": "RDMT4NFDI"
+    },
+    {
+      "id": "pid4nfdi",
+      "label": "PID4NFDI"
+    },
+    {
+      "id": "accounting4nfdi",
+      "label": "Accounting4NFDI"
+    },
+    {
+      "id": "kgi4nfdi",
+      "label": "KGI4NFDI"
+    },
+    {
+      "id": "nfdi.software",
+      "label": "nfdi.software"
+    },
+    {
+      "id": "iam4nfdi",
+      "label": "IAM4NFDI"
+    }
+  ],
+  "matches": [
+    {
+      "id": 42800,
+      "date": "2026-01-14T11:04:54",
+      "slug": "nfditalks-2026-inspiring-lectures-on-nfdi-and-research-data",
+      "link": "https://www.nfdi.de/nfditalks-2026-inspiring-lectures-on-nfdi-and-research-data/?lang=en",
+      "title": "NFDITalks 2026: Inspiring lectures on NFDI and research data",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "dmp4nfdi",
+        "pid4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "dmp4nfdi",
+          "label": "DMP4NFDI",
+          "count": 1,
+          "snippets": [
+            "…m 21.09.26 NFDI-Geschäftstelle EOSC Node Germany 19.10.26 DMP4NFDI Software Managment Plans 02.11.26 NFDI4ING NFDI4ING Metada…"
+          ]
+        },
+        {
+          "id": "pid4nfdi",
+          "label": "PID4NFDI",
+          "count": 2,
+          "snippets": [
+            "…Earth, NFDI4Memory, DaTNet NFDI und Datentreuhand 18.05.26 PID4NFDI Intro to PID4NFDI service components 01.06.26 FAIRmat The…",
+            "…, DaTNet NFDI und Datentreuhand 18.05.26 PID4NFDI Intro to PID4NFDI service components 01.06.26 FAIRmat The NOMAD ecosystem 2…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41326,
+      "date": "2025-10-13T16:04:07",
+      "slug": "5-year-anniversary-of-the-nfdi-association-a-brief-journey-through-time-in-5-images",
+      "link": "https://www.nfdi.de/5-year-anniversary-of-the-nfdi-association-a-brief-journey-through-time-in-5-images/?lang=en",
+      "title": "5-year anniversary of the NFDI association: A brief journey through time in 5 images",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 1,
+          "snippets": [
+            "…sortia had been successfully onboarded, the first NFDI-wide basic services had been developed, and the association’s major development…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40970,
+      "date": "2025-09-08T11:00:02",
+      "slug": "rdm-in-action-highlights-oft-cordi-2025",
+      "link": "https://www.nfdi.de/rdm-in-action-highlights-oft-cordi-2025/?lang=en",
+      "title": "RDM in Action: Highlights oft CoRDI 2025",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 1,
+          "snippets": [
+            "…address. She emphasised the importance of the sections and Base4NFDI for establishing sustainable, method-driven RDM services –…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 40006,
+      "date": "2025-05-26T12:04:05",
+      "slug": "speaker-election-in-the-section-industry-engagement",
+      "link": "https://www.nfdi.de/speaker-election-in-the-section-industry-engagement/?lang=en",
+      "title": "Speaker election in the section Industry Engagement",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 1,
+          "snippets": [
+            "…ion of cooperation between industry and the NFDI consortia, basic services and other sections. To this end, the section involves an in…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 39567,
+      "date": "2025-04-23T10:18:59",
+      "slug": "dmp4nfdi-enters-the-integration-phase",
+      "link": "https://www.nfdi.de/dmp4nfdi-enters-the-integration-phase/?lang=en",
+      "title": "DMP4NFDI enters the integration phase",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "dmp4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 3,
+          "snippets": [
+            "…meeting, the application for the basic service DMP4NFDI of Base4NFDI will be continued in the integration phase. The service rep…",
+            "…stem. ➡️ Further information on the basic service: https://base4nfdi.de/projects/dmp4nfdi 📄 Overview of all basic services sub…",
+            "…4nfdi 📄 Overview of all basic services submitted: https://base4nfdi.de/projects/all-submissions"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 4,
+          "snippets": [
+            "DMP4NFDI enters the integration phase The DMP4NFDI basic service continues in the integration phase and contributes to stren…",
+            "…decision of the consortium meeting, the application for the basic service DMP4NFDI of Base4NFDI will be continued in the integration…",
+            "…FDI research data ecosystem. ➡️ Further information on the basic service: https://base4nfdi.de/projects/dmp4nfdi 📄 Overview of all…",
+            "…https://base4nfdi.de/projects/dmp4nfdi 📄 Overview of all basic services submitted: https://base4nfdi.de/projects/all-submissions"
+          ]
+        },
+        {
+          "id": "dmp4nfdi",
+          "label": "DMP4NFDI",
+          "count": 5,
+          "snippets": [
+            "DMP4NFDI enters the integration phase The DMP4NFDI basic service co…",
+            "DMP4NFDI enters the integration phase The DMP4NFDI basic service continues in the integration phase and contri…",
+            "…butes to strengthening common infrastructures in the NFDI. DMP4NFDI enters the integration phase by decision of the consortium…",
+            "…e consortium meeting, the application for the basic service DMP4NFDI of Base4NFDI will be continued in the integration phase. Th…",
+            "…r the expansion of shared infrastructures within the NFDI. DMP4NFDI (Data Management Plans for NFDI) is a centralised technical…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37992,
+      "date": "2025-01-07T15:25:00",
+      "slug": "first-services-roadshow-by-base4nfdi-watch-online-now",
+      "link": "https://www.nfdi.de/first-services-roadshow-by-base4nfdi-watch-online-now/?lang=en",
+      "title": "First Services Roadshow by Base4NFDI – Watch online now",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 4,
+          "snippets": [
+            "First Services Roadshow by Base4NFDI – Watch online now Base4NFDI held its first successful Ser…",
+            "First Services Roadshow by Base4NFDI – Watch online now Base4NFDI held its first successful Services Roadshow on Dec 4th, 202…",
+            "…d themselves in ten minutes plus a five minute discussion. Base4NFDI held its first successful Services Roadshow on Dec 4th, 202…",
+            "…tions, presentation PDF slides, and Q&A can be found on www.base4nfdi.de. This event is the first instance of an intended long se…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 2,
+          "snippets": [
+            "…vices Roadshow on Dec 4th, 2024, where all currently funded basic services under development pitched themselves in ten minutes plus a…",
+            "…vices Roadshow on Dec 4th, 2024, where all currently funded basic services under development pitched themselves in ten minutes plus a…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37384,
+      "date": "2024-11-14T10:53:27",
+      "slug": "eoscxnfdi-report",
+      "link": "https://www.nfdi.de/eoscxnfdi-report/?lang=en",
+      "title": "EOSCxNFDI: Event strengthens connection between EOSC and NFDI",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 2,
+          "snippets": [
+            "…n which projects around EOSC and NFDI were presented. RfII/Base4NFDI: Prof. Dr. Lars Bernard – Germany‘s RDM Infrastructure land…",
+            "…ard – Germany‘s RDM Infrastructure landscape – How NFDI and Base4NFDI could link into EOSC ?!? European Commission DG CNECT: Pet…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 1,
+          "snippets": [
+            "…What should be the goal of cooperation? Infrastructure and basic services Health AI ERICS as EOSC thematic nodes – connection to N…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 37030,
+      "date": "2024-10-14T14:33:37",
+      "slug": "new-funding-approved-for-basic-services-rdmtraining4nfdi-pid4nfdi-and-ts4nfdi",
+      "link": "https://www.nfdi.de/new-funding-approved-for-basic-services-rdmtraining4nfdi-pid4nfdi-and-ts4nfdi/?lang=en",
+      "title": "New funding approved for basic services RDMTraining4NFDI, PID4NFDI and TS4NFDI",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "ts4nfdi",
+        "rdmtraining4nfdi",
+        "pid4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 5,
+          "snippets": [
+            "…he subsequent integration phase. The funding will flow via Base4NFDI. At its meeting on 11 October, the Consortia Assembly deci…",
+            "…the subsequent integration phase. The funding will flow via Base4NFDI. Here you will find an overview of all previous submission…",
+            "…find an overview of all previous submission rounds: https://base4nfdi.de/projects/all-submissions RDMTraining4NFDI aims to creat…",
+            "…cific adaptation of such training. More: RDMTraining4NFDI – Base4NFDI PID4NFDI aims to enhance the usability of existing PID sys…",
+            "…ss through training and outreach programs. More: PID4NFDI – Base4NFDI TS4NFDI aims to provide a central access point to all term…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 4,
+          "snippets": [
+            "New funding approved for basic services RDMTraining4NFDI, PID4NFDI and TS4NFDI At its meeting on 1…",
+            "…on 11 October, the Consortia Assembly decided to fund three basic services. RDMTraining4NFDI will enter the initialisation phase, whil…",
+            "…on 11 October, the Consortia Assembly decided to fund three basic services. RDMTraining4NFDI will enter the initialisation phase, whil…",
+            "…rticipating in the NFDI sections! News from Base4NFDI: New Basic Services accepted for funding – Base4NFDI About the process: Proces…"
+          ]
+        },
+        {
+          "id": "ts4nfdi",
+          "label": "TS4NFDI",
+          "count": 5,
+          "snippets": [
+            "…approved for basic services RDMTraining4NFDI, PID4NFDI and TS4NFDI At its meeting on 11 October, the Consortia Assembly decid…",
+            "…FDI will enter the initialisation phase, while PID4NFDI and TS4NFDI have been approved for the subsequent integration phase. T…",
+            "…FDI will enter the initialisation phase, while PID4NFDI and TS4NFDI have been approved for the subsequent integration phase. Th…",
+            "…training and outreach programs. More: PID4NFDI – Base4NFDI TS4NFDI aims to provide a central access point to all terminologies…",
+            "…ts that can be added to existing applications of the users. TS4NFDI supports cross-domain application, harmonisation, and curat…"
+          ]
+        },
+        {
+          "id": "rdmtraining4nfdi",
+          "label": "RDMTraining4NFDI",
+          "count": 5,
+          "snippets": [
+            "New funding approved for basic services RDMTraining4NFDI, PID4NFDI and TS4NFDI At its meeting on 11 October, the Co…",
+            "…he Consortia Assembly decided to fund three basic services. RDMTraining4NFDI will enter the initialisation phase, while PID4NFDI and TS4…",
+            "…he Consortia Assembly decided to fund three basic services. RDMTraining4NFDI will enter the initialisation phase, while PID4NFDI and TS4…",
+            "…sion rounds: https://base4nfdi.de/projects/all-submissions RDMTraining4NFDI aims to create a modular collection of foundational RDM tra…",
+            "…r own community-specific adaptation of such training. More: RDMTraining4NFDI – Base4NFDI PID4NFDI aims to enhance the usability of exis…"
+          ]
+        },
+        {
+          "id": "pid4nfdi",
+          "label": "PID4NFDI",
+          "count": 5,
+          "snippets": [
+            "New funding approved for basic services RDMTraining4NFDI, PID4NFDI and TS4NFDI At its meeting on 11 October, the Consortia As…",
+            "…RDMTraining4NFDI will enter the initialisation phase, while PID4NFDI and TS4NFDI have been approved for the subsequent integrati…",
+            "…RDMTraining4NFDI will enter the initialisation phase, while PID4NFDI and TS4NFDI have been approved for the subsequent integrati…",
+            "…ation of such training. More: RDMTraining4NFDI – Base4NFDI PID4NFDI aims to enhance the usability of existing PID systems for t…",
+            "…ing awareness through training and outreach programs. More: PID4NFDI – Base4NFDI TS4NFDI aims to provide a central access point…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 36087,
+      "date": "2024-07-08T14:56:17",
+      "slug": "funding-for-new-basic-service-nfdi-software",
+      "link": "https://www.nfdi.de/funding-for-new-basic-service-nfdi-software/?lang=en",
+      "title": "Funding for new basic service nfdi.software",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "nfdi.software"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 4,
+          "snippets": [
+            "Funding for new basic service nfdi.software Base4NFDI is delighted to announce that the nfdi.software proposal ha…",
+            "…abling services from across the German research landscape. Base4NFDI is delighted to announce that the nfdi.software proposal ha…",
+            "…se do not hesitate to reach out to us with any question via base4nfdi-office@lists.nfdi.de. More: nfdi.software | Base4NFDI",
+            "…via base4nfdi-office@lists.nfdi.de. More: nfdi.software | Base4NFDI"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "Funding for new basic service nfdi.software Base4NFDI is delighted to announce that the…",
+            "…ecision! This marks a growth in NFDI’s initiative to build basic services for consortia and demonstrates a step forward in the effort…",
+            "…g the Consortia Assembly’s decision! Congratulations to the basic service team! This marks a growth in NFDI’s initiative to build b…",
+            "…e team! This marks a growth in NFDI’s initiative to build basic services for consortia and demonstrates a step forward in the effort…",
+            "…more complex reuse of metadata and software. With the new basic service, we are one step closer to facilitating an open science lan…"
+          ]
+        },
+        {
+          "id": "nfdi.software",
+          "label": "nfdi.software",
+          "count": 5,
+          "snippets": [
+            "Funding for new basic service nfdi.software Base4NFDI is delighted to announce that the nfdi.software…",
+            "…nfdi.software Base4NFDI is delighted to announce that the nfdi.software proposal has been accepted for funding of the initialisatio…",
+            "…rch landscape. Base4NFDI is delighted to announce that the nfdi.software proposal has been accepted for funding of the initialisatio…",
+            "…abling services from across the German research landscape. nfdi.software aims to design, implement, and test a central marketplace f…",
+            "…th any question via base4nfdi-office@lists.nfdi.de. More: nfdi.software | Base4NFDI"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 35416,
+      "date": "2024-04-15T14:16:58",
+      "slug": "funding-for-new-basic-services-for-jupyter-notebooks-data-management-plans-and-knowledge-graphs",
+      "link": "https://www.nfdi.de/funding-for-new-basic-services-for-jupyter-notebooks-data-management-plans-and-knowledge-graphs/?lang=en",
+      "title": "Funding for new basic services for Jupyter notebooks, data management plans and knowledge graphs",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "jupyter4nfdi",
+        "dmp4nfdi",
+        "kgi4nfdi",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 5,
+          "snippets": [
+            "…phase) in the near future. The funding will be provided via Base4NFDI. The basic service initiatives Jupyter4NFDI, DMP4NFDI and…",
+            "…phase) in the near future. The funding will be provided via Base4NFDI. Here you will find an overview of all previous submission…",
+            "…find an overview of all previous submission rounds: https://base4nfdi.de/projects/all-submissions Jupyter4NFDI The Jupyter-Note…",
+            "…le to everyone within NFDI and beyond. More: Jupyter4NFDI (base4nfdi.de) DMP4NFDI A new basic service for NFDI-wide data manag…",
+            "…bility and integration of DMPs using RDMO. More: DMP4NFDI (base4nfdi.de) KGI4NFDI Knowledge graphs (KG) are an important and p…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "Funding for new basic services for Jupyter notebooks, data management plans and knowledge…",
+            "…notebooks, data management plans and knowledge graphs The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submit…",
+            "…ar future. The funding will be provided via Base4NFDI. The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submit…",
+            "…beyond. More: Jupyter4NFDI (base4nfdi.de) DMP4NFDI A new basic service for NFDI-wide data management plans (DMP) and software mana…",
+            "…lised and reusable KG infrastructure (KGI) is missing. This basic service will provide components of such a KGI. These include a KG r…"
+          ]
+        },
+        {
+          "id": "jupyter4nfdi",
+          "label": "Jupyter4NFDI",
+          "count": 5,
+          "snippets": [
+            "…t plans and knowledge graphs The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for fund…",
+            "…l be provided via Base4NFDI. The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for fund…",
+            "…sion rounds: https://base4nfdi.de/projects/all-submissions Jupyter4NFDI The Jupyter-Notebooks application is used for various task…",
+            "…f the services are widely available, many are inaccessible. Jupyter4NFDI aims to provide a centralised service. Access is to be simp…",
+            "…s the creation of reproducible FAIR Digital Objects (FDOs). Jupyter4NFDI is committed to a collaborative and centralised approach th…"
+          ]
+        },
+        {
+          "id": "dmp4nfdi",
+          "label": "DMP4NFDI",
+          "count": 5,
+          "snippets": [
+            "…owledge graphs The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for funding. At it…",
+            "…via Base4NFDI. The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for funding. At it…",
+            "…within NFDI and beyond. More: Jupyter4NFDI (base4nfdi.de) DMP4NFDI A new basic service for NFDI-wide data management plans (D…",
+            "…ware management plans (SMP) is being created under the name DMP4NFDI. The service includes the hosting of the open source DMP to…",
+            "…interoperability and integration of DMPs using RDMO. More: DMP4NFDI (base4nfdi.de) KGI4NFDI Knowledge graphs (KG) are an impo…"
+          ]
+        },
+        {
+          "id": "kgi4nfdi",
+          "label": "KGI4NFDI",
+          "count": 4,
+          "snippets": [
+            "…s The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for funding. At its meeting on…",
+            "…. The basic service initiatives Jupyter4NFDI, DMP4NFDI and KGI4NFDI have submitted applications for funding. At its meeting on…",
+            "…gration of DMPs using RDMO. More: DMP4NFDI (base4nfdi.de) KGI4NFDI Knowledge graphs (KG) are an important and powerful semant…",
+            "…as those of the European Open Science Cloud (EOSC). More: KGI4NFDI (base4nfdi.de) News on the Base4NFDI website: 3 more! Basi…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 1,
+          "snippets": [
+            "…be simplified and user-friendliness significantly improved. IAM4NFDI will be integrated to control access to the centralised ser…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 34300,
+      "date": "2023-12-22T13:58:56",
+      "slug": "the-nfdi-annual-review-2023",
+      "link": "https://www.nfdi.de/the-nfdi-annual-review-2023/?lang=en",
+      "title": "The NFDI annual review 2023",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "ts4nfdi",
+        "pid4nfdi",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 2,
+          "snippets": [
+            "…her with the seven new consortia, the network of consortia, Base4NFDI, has also been launched. Base4NFDI aims to offer services t…",
+            "…he network of consortia, Base4NFDI, has also been launched. Base4NFDI aims to offer services to support research data management…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 4,
+          "snippets": [
+            "…s disciplines, data types and existing infrastructures. The basic services are intended to be usable NFDI-wide. The basic service IAM4…",
+            "…The basic services are intended to be usable NFDI-wide. The basic service IAM4NFDI (Identity ad Access Management) has already receiv…",
+            "…) services are currently in the initialisation phase. These basic service applications were prepared in particular by the Common Infr…",
+            "…re currently working on submitting further applications for basic services. In addition, the sections have written statements, organis…"
+          ]
+        },
+        {
+          "id": "ts4nfdi",
+          "label": "TS4NFDI",
+          "count": 1,
+          "snippets": [
+            "…ion phase. The PID4NFDI (Persistent Identifier Service) and TS4NFDI (Terminology Services) services are currently in the initia…"
+          ]
+        },
+        {
+          "id": "pid4nfdi",
+          "label": "PID4NFDI",
+          "count": 1,
+          "snippets": [
+            "…ived funding approval for a two-year integration phase. The PID4NFDI (Persistent Identifier Service) and TS4NFDI (Terminology Se…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 1,
+          "snippets": [
+            "…ices are intended to be usable NFDI-wide. The basic service IAM4NFDI (Identity ad Access Management) has already received fundin…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 33913,
+      "date": "2023-11-21T11:13:59",
+      "slug": "base4nfdi-iam4nfdi-receives-funding-for-integration-phase",
+      "link": "https://www.nfdi.de/base4nfdi-iam4nfdi-receives-funding-for-integration-phase/?lang=en",
+      "title": "Base4NFDI: IAM4NFDI receives funding for integration phase",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 4,
+          "snippets": [
+            "Base4NFDI: IAM4NFDI receives funding for integration phase In the th…",
+            "…M4NFDI receives funding for integration phase In the third Base4NFDI call for proposals, the IAM4NFDI application for funding as…",
+            "…itialisation phase. (Published on 21.11.2023) In the third Base4NFDI call for proposals, the IAM4NFDI application for funding as…",
+            "…ng solutions. Further information can be found at: https://base4nfdi.de/projects/iam4nfdi"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 3,
+          "snippets": [
+            "…ll for proposals, the IAM4NFDI application for funding as a basic service was approved by the NFDI Consortia Assembly for a two-year…",
+            "…ll for proposals, the IAM4NFDI application for funding as a basic service was approved by the NFDI Consortia Assembly for a two-year…",
+            "…m of accessing digital resources NFDI-wide and beyond. This basic service is to become a decentralised, federated IAM (identity and a…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 5,
+          "snippets": [
+            "Base4NFDI: IAM4NFDI receives funding for integration phase In the third Base4N…",
+            "…ation phase In the third Base4NFDI call for proposals, the IAM4NFDI application for funding as a basic service was approved by…",
+            "…e NFDI Consortia Assembly for a two-year integration phase. IAM4NFDI is thus the first service to enter the second phase after i…",
+            "…21.11.2023) In the third Base4NFDI call for proposals, the IAM4NFDI application for funding as a basic service was approved by…",
+            "…e NFDI Consortia Assembly for a two-year integration phase. IAM4NFDI is thus the first service to enter the second phase after i…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32993,
+      "date": "2023-07-11T15:49:52",
+      "slug": "funding-of-new-nfdi-basic-services-for-persistent-identifiers-and-terminologies",
+      "link": "https://www.nfdi.de/funding-of-new-nfdi-basic-services-for-persistent-identifiers-and-terminologies/?lang=en",
+      "title": "Funding of new NFDI Basic Services for Persistent Identifiers and Terminologies",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "ts4nfdi",
+        "pid4nfdi",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 4,
+          "snippets": [
+            "…ds are provided by the German Research Foundation (DFG) via Base4NFDI. PID4NFDI (Persistent Identifier Services for the German N…",
+            "…een made on IAM4NFDI. Read more about the process here: How Base4NFDI will decide. More information on Base4NFDI: https://bas…",
+            "…ss here: How Base4NFDI will decide. More information on Base4NFDI: https://base4nfdi.de/",
+            "…FDI will decide. More information on Base4NFDI: https://base4nfdi.de/"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "Funding of new NFDI Basic Services for Persistent Identifiers and Terminologies The developme…",
+            "…nd Terminologies The development of the NFDI portfolio for basic services is progressing with two further projects. The Consortia Ass…",
+            "…DI Association decided in its meeting on 7 July to fund two basic service applications. In a one-year initialisation phase, a servic…",
+            "…ed on 11.07.2023) The development of the NFDI portfolio for basic services is progressing with two further projects. The Consortia Ass…",
+            "…DI Association decided in its meeting on 7 July to fund two basic service applications. In a one-year initialisation phase, a service…"
+          ]
+        },
+        {
+          "id": "ts4nfdi",
+          "label": "TS4NFDI",
+          "count": 2,
+          "snippets": [
+            "…velop and operate NFDI-specific services only when needed. TS4NFDI (Terminology Services 4 NFDI) Terminologies play an importa…",
+            "…be and curate terminologies. The Terminology Base Service (TS4NFDI) aims to standardise and harmonise terminology management w…"
+          ]
+        },
+        {
+          "id": "pid4nfdi",
+          "label": "PID4NFDI",
+          "count": 4,
+          "snippets": [
+            "…ded by the German Research Foundation (DFG) via Base4NFDI. PID4NFDI (Persistent Identifier Services for the German National Res…",
+            "…other challenges need to be addressed by NFDI as a whole. PID4NFDI will address these challenges and design the work programme…",
+            "…NFDI foundation service on proven PID infrastructures. The PID4NFDI consortium is composed of key stakeholders from the nationa…",
+            "…nd integration activities. In the technical implementation, PID4NFDI will promote the adoption of PID infrastructures and servic…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 1,
+          "snippets": [
+            "…ts. In March, a positive decision had already been made on IAM4NFDI. Read more about the process here: How Base4NFDI will decid…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 32147,
+      "date": "2023-04-05T14:30:45",
+      "slug": "iam4nfdi-identity-and-access-management-starts-path-to-nfdi-wide-basic-service",
+      "link": "https://www.nfdi.de/iam4nfdi-identity-and-access-management-starts-path-to-nfdi-wide-basic-service/?lang=en",
+      "title": "IAM4NFDI: Identity and access management starts path to NFDI-wide basic service",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 5,
+          "snippets": [
+            "…frastructure (IAM4NFDI)” by the collaborative joint project Base4NFDI. This is intended to create the conditions for users from…",
+            "…frastructure (IAM4NFDI)” by the collaborative joint project Base4NFDI. This is intended to create the conditions for users from d…",
+            "…areas and NFDI consortia. Read more about the process here: Base4NFDI – How B4N will Decide. Base4NFDI is a network of all NFDI…",
+            "…e about the process here: Base4NFDI – How B4N will Decide. Base4NFDI is a network of all NFDI consortia that aims to advance the…",
+            "…process out of the NFDI consortia. More information about Base4NFDI: https://base4nfdi.de/"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "…DI: Identity and access management starts path to NFDI-wide basic service On 31 March, the consortia assembly of the NFDI Associatio…",
+            "…he NFDI Association unanimously approved the funding of the basic service application “Identity and Access Management for the German…",
+            "…he NFDI Association unanimously approved the funding of the basic service application “Identity and Access Management for the German…",
+            "…rces within NFDI as easily as possible.” This is the first basic service application to be launched by the consortia assembly. The p…",
+            "…consortia that aims to advance the development of NFDI-wide basic services. The project, funded by the German Research Foundation (DFG…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 4,
+          "snippets": [
+            "IAM4NFDI: Identity and access management starts path to NFDI-wide ba…",
+            "…ement for the German National Research Data Infrastructure (IAM4NFDI)” by the collaborative joint project Base4NFDI. This is in…",
+            "…ement for the German National Research Data Infrastructure (IAM4NFDI)” by the collaborative joint project Base4NFDI. This is int…",
+            "…itutions to be able to register for services and use them. IAM4NFDI wants to connect existing solutions for this purpose. The a…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31564,
+      "date": "2023-02-28T15:57:28",
+      "slug": "start-of-funding-for-seven-consortia-and-base4nfdi",
+      "link": "https://www.nfdi.de/start-of-funding-for-seven-consortia-and-base4nfdi/?lang=en",
+      "title": "Start of funding for seven consortia and Base4NFDI",
+      "categories": [
+        17,
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 4,
+          "snippets": [
+            "Start of funding for seven consortia and Base4NFDI Welcome! Seven further consortia and Base4NFDI will be inc…",
+            "…nsortia and Base4NFDI Welcome! Seven further consortia and Base4NFDI will be included in the federal and state funding of NFDI f…",
+            "…row. (Published on 28.02.2023) Seven further consortia and Base4NFDI will be included in the federal and state funding of NFDI f…",
+            "…eased that the NFDI network continues to grow and welcome: Base4NFDI: Basic services for NFDI FAIRagro: FAIR Data Infrastructur…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 1,
+          "snippets": [
+            "…the NFDI network continues to grow and welcome: Base4NFDI: Basic services for NFDI FAIRagro: FAIR Data Infrastructure for Agrosystem…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 31019,
+      "date": "2022-12-27T12:36:19",
+      "slug": "the-nfdi-year-in-review-2022-highlights-and-changes",
+      "link": "https://www.nfdi.de/the-nfdi-year-in-review-2022-highlights-and-changes/?lang=en",
+      "title": "The NFDI Year in Review 2022: Highlights and Changes",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 5,
+          "snippets": [
+            "…four sections took off, the consortia successfully launched Base4NFDI, the third-party funded project Data Literacy started and N…",
+            "…four sections took off, the consortia successfully launched Base4NFDI, the third-party funded project Data Literacy started and N…",
+            "…. Basic services and consortia: The funding commitment for Base4NFDI is the result of a joint working process of the consortia.…",
+            "…for cross-consortium work. By the end of April, a completed Base4NFDI application with the participation of all 19 already funded…",
+            "…ndation, the Joint Science Conference (GWK) decided to fund Base4NFDI at the beginning of November. At the same time, seven other…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 3,
+          "snippets": [
+            "…rastructures” and “(Meta)data, Terminologies, Provenance”. Basic services and consortia: The funding commitment for Base4NFDI is the…",
+            "…opposed votes to publish a joint statement on the topic of basic services. The core statement: The creation and operation of basic se…",
+            "…services. The core statement: The creation and operation of basic services should be driven by the needs of the NFDI community. In thi…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 30718,
+      "date": "2022-11-04T15:21:38",
+      "slug": "funding-decided-for-eight-more-nfdi-consortia",
+      "link": "https://www.nfdi.de/funding-decided-for-eight-more-nfdi-consortia/?lang=en",
+      "title": "Funding decided for eight more NFDI consortia",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 1,
+          "snippets": [
+            "…nal Research Data Infrastructure (NFDI). Among them is the Base4NFDI basic service consortium, which wants to offer services for…"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 2,
+          "snippets": [
+            "…ch Data Infrastructure (NFDI). Among them is the Base4NFDI basic service consortium, which wants to offer services for all consortia…",
+            "…the NFDI Association had spoken out in its favour of common basic services in a position statement. In addition, the GWK has decided…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28062,
+      "date": "2022-01-19T10:46:52",
+      "slug": "nfdi-consortia-publish-statement-on-basic-services",
+      "link": "https://www.nfdi.de/nfdi-consortia-publish-statement-on-basic-services/?lang=en",
+      "title": "NFDI consortia publish statement on basic services",
+      "categories": [
+        43,
+        55
+      ],
+      "matched_terms": [
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "NFDI consortia publish statement on basic services At the Consortia Assembly of the Association German Nation…",
+            "…d the publication of a collective statement on the topic of basic services without any dissenting votes. Read the published statement…",
+            "…d the publication of a collective statement on the topic of basic services without any dissenting votes. The background to this is th…",
+            "…calls for proposals has also made it possible to apply for basic service consortia. In December, the Deutsche Forschungsgemeinschaft…",
+            "…edule that regulates the further procedure for applying for basic service consortia. The timetable was discussed internally at the N…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27657,
+      "date": "2021-12-07T15:46:17",
+      "slug": "dfg-publishes-timetable-for-basic-service-consortia",
+      "link": "https://www.nfdi.de/dfg-publishes-timetable-for-basic-service-consortia/?lang=en",
+      "title": "DFG publishes timetable for basic service consortia",
+      "categories": [
+        43
+      ],
+      "matched_terms": [
+        "basic-service"
+      ],
+      "matches": [
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 5,
+          "snippets": [
+            "DFG publishes timetable for basic service consortia The Deutsche Forschungsgemeinschaft (DFG, German…",
+            "…hed a timetable for the decision-making process for funding basic services in the German National Research Data Infrastructure. The f…",
+            "…rch Data Infrastructure. The final decision on funding for basic service consortia will be made by the Joint Science Conference (GWK…",
+            "…shed a schedule for the decision-making process for funding basic services in the National Research Data Infrastructure. According to…",
+            "…ture. According to the schedule, the call for proposals for basic service consortia will be published in January 2022. The final deci…"
+          ]
+        }
+      ]
+    }
+  ]
+}

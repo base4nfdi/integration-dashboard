@@ -1,0 +1,13 @@
+{
+  "id": "nfdi-news",
+  "label": "NFDI news (English)",
+  "source_url": "https://www.nfdi.de/news/?lang=en",
+  "fetch_url": "https://www.nfdi.de/wp-json/wp/v2/posts",
+  "type": "json",
+  "scope": "news",
+  "lang": "en",
+  "fetched_at": "2026-07-29T13:44:35.744Z",
+  "posts_collected": 91,
+  "posts_matched": 19,
+  "filename": "posts.json"
+}

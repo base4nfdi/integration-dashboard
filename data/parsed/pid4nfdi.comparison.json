@@ -1,0 +1,236 @@
+{
+  "basic_service": "PID",
+  "counts": {
+    "source": 11,
+    "nocodb": 11,
+    "matched": 11,
+    "only_in_source": 0,
+    "only_in_nocodb": 0
+  },
+  "matches": [
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "PID Service for Dataset Elements",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "KonsortSWD"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "PID Service for Dataset Elements",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "KonsortSWD"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "Instrument PIDs at the Helmholtz-Zentrum Berlin",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "DAPHNE4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Instrument PIDs at the Helmholtz-Zentrum Berlin",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "DAPHNE4NFDI"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "Instrument PIDs in the Sensor Management System",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Instrument PIDs in the Sensor Management System",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Earth"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "Metadata Analysis for the Genebank Information System",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Metadata Analysis for the Genebank Information System",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "FAIRagro"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "PID Adoption at the SUB Göttingen",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "PID Adoption at the SUB Göttingen",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "Text+"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "Metadata Analysis for StrainInfo",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Microbiota"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Metadata Analysis for StrainInfo",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Microbiota"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "PIDs for Services – Mapping Base4NFDI Requirements to DataCite Metadata",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "Base4NFDI"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "PIDs for Services – Mapping Base4NFDI Requirements to DataCite Metadata",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "Base4NFDI"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "NOMAD – Clarifying Resource Type for DOI Registration of Aggregated Data",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "FAIRmat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "NOMAD – Clarifying Resource Type for DOI Registration of Aggregated Data",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "FAIRmat"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 2.04,
+      "source": {
+        "inc_name": "Coscine: Assigning PIDs for Projects and Storage Resources",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Ing",
+          "MatWerk"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Coscine: Assigning PIDs for Projects and Storage Resources",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Ing",
+          "MatWerk"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "Embedding ePIC PIDs into the NFDIxCS RDMC Creation Wizard workflow",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDIxCS"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "Embedding ePIC PIDs into the NFDIxCS RDMC Creation Wizard workflow",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDIxCS"
+        ]
+      },
+      "field_diffs": {}
+    },
+    {
+      "score": 1.92,
+      "source": {
+        "inc_name": "PID4Cat: PIDs for digital and physical resources generated in catalysis research",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "nocodb": {
+        "inc_name": "PID4Cat: PIDs for digital and physical resources generated in catalysis research",
+        "inc_cycle": null,
+        "inc_status": "",
+        "partners": [
+          "NFDI4Cat"
+        ]
+      },
+      "field_diffs": {}
+    }
+  ],
+  "only_in_source": [],
+  "only_in_nocodb": []
+}

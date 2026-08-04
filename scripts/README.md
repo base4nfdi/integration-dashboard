@@ -1,6 +1,6 @@
 # Dashboard Data Pipeline Scripts
 
-Node.js utilities that fetch, parse, sync, and materialize incubator data for the Base4NFDI dashboard. They sit between public service sources, NocoDB, and the Zola content tree.
+Node.js utilities that fetch, parse, sync, and materialize integration data (incubators + use cases) for the Base4NFDI Integration Dashboard. They sit between public service sources, NocoDB, and the Zola content tree.
 
 Most day-to-day work is covered by `./build.sh` at the repository root. The scripts below are the individual stages of that pipeline, plus maintenance tools for NocoDB.
 
@@ -32,16 +32,16 @@ Public sources          Parsed JSON              NocoDB / site
 fetch-source-pages  →   parse-* / parse-source-pages
                         ↓                        ↓
                    data/parsed/*.json     fetch-nocodb-data → static/data.json
-                        ↓                        ↓
+                        ↓                 (Incubators + User_Stories)
               push / patch / fill          generate-incubator-pages
-                                           → content/incubators/{ts,dmp,iam}/
+                                           → content/incubators/{ts,dmp,iam,pid}/
 ```
 
 **Typical build path** (`./build.sh`):
 
 1. `fetch-source-pages.mjs` — download source pages  
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
-3. `fetch-nocodb-data.mjs` — refresh `static/data.json` (skipped if no token)  
+3. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
 4. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
 5. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
 6. `generate-incubator-pages.mjs` — create missing Markdown report pages  
@@ -59,6 +59,8 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `NOCODB_BASE_URL` | `https://nocodb.nfdi.de` | same |
 | `NOCODB_TABLE_ID` | incubators table id | same |
 | `NOCODB_VIEW_ID` | unset for full-table dashboard export (view filters apply if set) | same |
+| `NOCODB_USER_STORIES_TABLE_ID` | `mtq40pxpo5p0jmx` | fetch, PID push, schema ensure |
+| `NOCODB_USER_STORIES_VIEW_ID` | unset for full-table export | fetch, PID push |
 | `NOCODB_PAGE_SIZE` | `100` | same |
 | `FETCH_TIMEOUT_MS` | `60000` | HTTP clients |
 
@@ -72,6 +74,9 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `DMP_INPUT` / `DMP_OUTPUT` | `data/sources/dmp4nfdi/…` → `data/parsed/…` | `parse-dmp4nfdi.mjs` |
 | `IAM_INPUT` / `IAM_OUTPUT` | `data/sources/iam4nfdi/…` → `data/parsed/…` | `parse-iam4nfdi.mjs` |
 | `TS_INPUT` / `TS_OUTPUT` | `data/sources/ts4nfdi/…` → `data/parsed/…` | `parse-ts4nfdi.mjs` |
+| `PID_INPUT` / `PID_OUTPUT` | `data/sources/pid4nfdi/…` → `data/parsed/…` | `parse-pid4nfdi.mjs` |
+| `OUTPUT_DIR` / `OUTPUT_JSON` | `data/sources/nfdi-news` / `data/parsed/nfdi-news.json` | `crawl-nfdi-news.mjs` |
+| `NEWS_LANG` / `NEWS_PER_PAGE` | `en` / `100` | `crawl-nfdi-news.mjs` |
 | `NOCODB_PARTNERS_TABLE_ID` | partners table id | `push-source-pages-to-nocodb.mjs` |
 
 ---
@@ -89,6 +94,7 @@ Downloads the public incubator sources used by the parsers and stores them under
 | IAM4NFDI incubator dashboard | HTML | `data/sources/iam4nfdi/page.html` |
 | TS4NFDI projects | JSON | `data/sources/ts4nfdi/projects.json` |
 | DMP4NFDI incubator content | Markdown | `data/sources/dmp4nfdi/incubator.md` |
+| PID4NFDI use cases | HTML | `data/sources/pid4nfdi/page.html` |
 
 Also writes per-source `meta.json` and a top-level `manifest.json`. All sources must succeed; a partial failure aborts without writing a mixed set.
 
@@ -117,11 +123,13 @@ Each parser reads a stored source file, emits NocoDB-aligned records, and writes
 | `parse-dmp4nfdi.mjs` | `data/sources/dmp4nfdi/incubator.md` | `data/parsed/dmp4nfdi.json` (+ `.comparison.json`) |
 | `parse-iam4nfdi.mjs` | `data/sources/iam4nfdi/page.html` | `data/parsed/iam4nfdi.json` (+ `.comparison.json`) |
 | `parse-ts4nfdi.mjs` | `data/sources/ts4nfdi/projects.json` | `data/parsed/ts4nfdi.json` (+ `.comparison.json`) |
+| `parse-pid4nfdi.mjs` | `data/sources/pid4nfdi/page.html` | `data/parsed/pid4nfdi.json` (+ `.comparison.json`) |
 
 ```bash
 node scripts/parse-dmp4nfdi.mjs
 node scripts/parse-iam4nfdi.mjs
 node scripts/parse-ts4nfdi.mjs
+node scripts/parse-pid4nfdi.mjs
 ```
 
 Override paths with the `*_INPUT` / `*_OUTPUT` variables listed above when needed.
@@ -132,7 +140,7 @@ Override paths with the `*_INPUT` / `*_OUTPUT` variables listed above when neede
 
 **File:** `fetch-nocodb-data.mjs`
 
-Pulls incubator rows from NocoDB, normalizes linked partner/entity fields, and writes `static/data.json` (the site’s primary data feed). Refuses to overwrite the file if the API returns zero records.
+Pulls incubator rows from the Incubators table and use-case rows from User_Stories, normalizes partner/entity fields into a shared shape, and writes `static/data.json` (the site’s primary data feed). Refuses to overwrite the file if the Incubators API returns zero records.
 
 ```bash
 node scripts/fetch-nocodb-data.mjs
@@ -194,7 +202,7 @@ A `manifest.json` beside the cached fonts maps source URL → local path.
 
 **File:** `generate-incubator-pages.mjs`
 
-Creates missing Markdown report pages under `content/incubators/{ts,dmp,iam}/` from `static/data.json`. Existing files are left alone unless `--force` is passed.
+Creates missing Markdown report pages under `content/incubators/{ts,dmp,iam,pid}/` from `static/data.json`. Existing files are left alone unless `--force` is passed.
 
 ```bash
 node scripts/generate-incubator-pages.mjs
@@ -284,6 +292,53 @@ Requires `NOCODB_API_TOKEN`.
 
 ---
 
+### 10. Ensure User_Stories schema / push PID use cases
+
+**Files:** `ensure-user-stories-schema.mjs`, `push-pid-use-cases-to-nocodb.mjs`
+
+Creates Incubators-aligned columns on the NocoDB User_Stories table (idempotent), then inserts parsed PID use cases. Both default to dry-run-safe behaviour (`ensure` writes unless `--dry-run`; `push` requires `--apply`).
+
+```bash
+node scripts/ensure-user-stories-schema.mjs --dry-run
+node scripts/ensure-user-stories-schema.mjs
+node scripts/push-pid-use-cases-to-nocodb.mjs
+node scripts/push-pid-use-cases-to-nocodb.mjs --apply
+```
+
+### 11. Crawl NFDI news for Base4NFDI buzzwords
+
+**File:** `crawl-nfdi-news.mjs`
+
+Collects English NFDI news posts that appear on [nfdi.de/news](https://www.nfdi.de/news/?lang=en) (WordPress REST API, full article bodies) and scans them for Base4NFDI / basic-service terms. Divi “Related Articles” / “Other posts” footers are stripped before scanning so related-post chrome does not create false hits:
+
+`Base4NFDI`, `basic service(s)`, `TS4NFDI`, `Jupyter4NFDI`, `DMP4NFDI`, `RDMTraining4NFDI`, `RDMT4NFDI`, `PID4NFDI`, `Accounting4NFDI`, `KGI4NFDI`, `nfdi.software`, `IAM4NFDI`.
+
+Writes the full collection under `data/sources/nfdi-news/` and a matches report to `data/parsed/nfdi-news.json`.
+
+```bash
+node scripts/crawl-nfdi-news.mjs
+node scripts/crawl-nfdi-news.mjs --scope all
+node scripts/crawl-nfdi-news.mjs --dry-run --limit 20
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--scope news` | Only the WordPress **News** category (default; matches the listing page) |
+| `--scope all` | Every English post (newsletters, success stories, press, …) |
+| `--dry-run` | Print summary only; do not write files |
+| `--limit <n>` | Cap how many posts to fetch (testing) |
+| `-h`, `--help` | Show usage |
+
+| Variable | Default | Notes |
+| --- | --- | --- |
+| `OUTPUT_DIR` | `data/sources/nfdi-news` | Raw posts + `meta.json` |
+| `OUTPUT_JSON` | `data/parsed/nfdi-news.json` | Matches report |
+| `NEWS_LANG` | `en` | Polylang language code |
+| `NEWS_PER_PAGE` | `100` | WP API page size (max 100) |
+| `FETCH_TIMEOUT_MS` / `FETCH_RETRIES` | `60000` / `2` | Shared HTTP settings |
+
+---
+
 ## Shared libraries
 
 These modules are imported by the scripts above; they are not meant to be run directly.
@@ -320,6 +375,20 @@ node scripts/fetch-source-pages.mjs
 node scripts/parse-source-pages.mjs
 node scripts/push-source-pages-to-nocodb.mjs            # review dry-run
 node scripts/push-source-pages-to-nocodb.mjs --apply
+node scripts/fetch-nocodb-data.mjs
+node scripts/generate-incubator-pages.mjs
+```
+
+### Onboard PID use cases into User_Stories
+
+Source of truth: [PID4NFDI use cases](https://pid.services.base4nfdi.de/community/use-cases/). Rows land in the NocoDB [User_Stories](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/mtq40pxpo5p0jmx/vwlhq1q3k6gcqrjd/user_stories) table and are merged into the Integration Dashboard export.
+
+```bash
+node scripts/ensure-user-stories-schema.mjs             # create aligned columns (once)
+node scripts/fetch-source-pages.mjs
+node scripts/parse-pid4nfdi.mjs
+node scripts/push-pid-use-cases-to-nocodb.mjs           # review dry-run
+node scripts/push-pid-use-cases-to-nocodb.mjs --apply
 node scripts/fetch-nocodb-data.mjs
 node scripts/generate-incubator-pages.mjs
 ```
