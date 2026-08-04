@@ -16,6 +16,7 @@ const PARSERS = [
   "parse-dmp4nfdi.mjs",
   "parse-iam4nfdi.mjs",
   "parse-ts4nfdi.mjs",
+  "parse-pid4nfdi.mjs",
 ];
 
 function runParser(file) {
@@ -58,6 +59,10 @@ function main() {
     ),
     ts4nfdi: readJson(
       join(repoRoot, "data/parsed/ts4nfdi.comparison.json"),
+      { hint: comparisonHint }
+    ),
+    pid4nfdi: readJson(
+      join(repoRoot, "data/parsed/pid4nfdi.comparison.json"),
       { hint: comparisonHint }
     ),
   };

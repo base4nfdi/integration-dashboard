@@ -12,11 +12,11 @@
 
   <div class="table-panel">
     <div class="table-panel-header">
-      <h3>Incubators</h3>
+      <h3>Integrations</h3>
       <p class="table-meta" id="table-meta">Loading data…</p>
     </div>
 
-    <form class="filter-bar" id="filter-bar" hidden aria-label="Filter incubators">
+    <form class="filter-bar" id="filter-bar" hidden aria-label="Filter integrations">
       <div class="filter-groups" id="filter-groups-wrap">
         <div class="filter-chip-groups" id="filter-groups"></div>
 
@@ -120,7 +120,7 @@
   const columns = [
     { key: "basic_service", label: "Basic service", type: "service" },
     { key: "logos", label: "Partners", type: "logos" },
-    { key: "inc_name", label: "Incubator", type: "name" },
+    { key: "inc_name", label: "INCUBATOR/USE-CASE", type: "name" },
     { key: "inc_status", label: "Status", type: "status" },
     // { key: "inc_start", label: "Start", type: "date" },
     // { key: "inc_end", label: "End", type: "date" },
@@ -360,7 +360,7 @@
     ).size;
 
     const cards = [
-      { label: "Total incubators", value: total },
+      { label: "Total integrations", value: total },
       { label: "Finished", value: finished },
       { label: "Running", value: running },
       { label: "In preparation", value: preparing },
@@ -378,12 +378,16 @@
   }
 
   function incubatorUrl(record) {
+    const external = String(record.source_url || "").trim();
+    if (external && /^https?:\/\//i.test(external) && !record.key_article) {
+      return external;
+    }
     const base = incubatorBaseUrl.endsWith("/") ? incubatorBaseUrl : incubatorBaseUrl + "/";
     const service = String(record.basic_service || "")
       .trim()
       .toLowerCase();
     const slug = String(record.key_article || "").trim();
-    if (!slug) return base;
+    if (!slug) return external || base;
     if (service) return base + service + "/" + slug + "/";
     return base + slug + "/";
   }
@@ -432,8 +436,11 @@
 
     if (column.type === "name") {
       const text = escapeHtml(value || "—");
-      if (record.key_article) {
-        return `<td><a href="${incubatorUrl(record)}">${text}</a></td>`;
+      const href = incubatorUrl(record);
+      if (record.key_article || record.source_url) {
+        const external = /^https?:\/\//i.test(href);
+        const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
+        return `<td><a href="${escapeHtml(href)}"${rel}>${text}</a></td>`;
       }
       return `<td>${text}</td>`;
     }
@@ -626,7 +633,7 @@
       body.innerHTML = `
         <tr>
           <td colspan="${columns.length}" class="table-empty">
-            No incubators match the current filters.
+            No integrations match the current filters.
           </td>
         </tr>
       `;
@@ -808,7 +815,7 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const payload = await response.json();
       const records = Array.isArray(payload?.records) ? payload.records : [];
-      if (records.length === 0) throw new Error("No incubator records found");
+      if (records.length === 0) throw new Error("No integration records found");
 
       state.records = records;
       state.meta = payload;

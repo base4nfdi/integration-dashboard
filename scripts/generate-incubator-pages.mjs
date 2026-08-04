@@ -21,9 +21,10 @@ const SERVICE_LABELS = {
   TS: "Terminology Services (TS)",
   IAM: "Identity and Access Management (IAM)",
   DMP: "Data Management Planning (DMP)",
+  PID: "Persistent Identifiers (PID)",
 };
 
-const SERVICE_DIRS = new Set(["ts", "dmp", "iam"]);
+const SERVICE_DIRS = new Set(["ts", "dmp", "iam", "pid"]);
 const KEY_ARTICLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function parseArgs(argv) {
@@ -41,8 +42,8 @@ function printHelp() {
   console.log(`Usage:
   node scripts/generate-incubator-pages.mjs [--dry-run] [--force]
 
-Creates missing incubator report Markdown files under
-content/incubators/{ts|dmp|iam}/ from static/data.json.
+Creates missing integration report Markdown files under
+content/incubators/{ts|dmp|iam|pid}/ from static/data.json.
 By default existing files are not overwritten.
 `);
 }
@@ -252,8 +253,13 @@ function buildBody(record, keyArticle) {
     sections.push("");
   }
 
+  const kind =
+    asText(record.integration_kind) === "use-case" ||
+    asText(record.basic_service).toUpperCase() === "PID"
+      ? "use case"
+      : "incubator project";
   sections.push(
-    `${name} is an incubator project within the **${service}** basic service of Base4NFDI.`
+    `${name} is a ${kind} within the **${service}** basic service of Base4NFDI.`
   );
   sections.push("");
   sections.push("## Current status");

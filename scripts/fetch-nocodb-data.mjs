@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 /**
- * Fetches incubator rows from NocoDB and writes static/data.json.
+ * Fetches incubator + PID use-case rows from NocoDB and writes static/data.json.
+ *
+ * Incubators come from NOCODB_TABLE_ID (default Incubators table).
+ * Use cases come from NOCODB_USER_STORIES_TABLE_ID (default User_Stories).
  *
  * Required env:
  *   NOCODB_API_TOKEN  — xc-token from https://nocodb.nfdi.de/dashboard/#/account/tokens
@@ -10,6 +13,8 @@
  *   NOCODB_VIEW_ID — omit by default (recommended). If set, NocoDB applies that
  *                    view's filters/sorts to the API response, which can silently
  *                    drop rows from the dashboard export.
+ *   NOCODB_USER_STORIES_TABLE_ID — default mtq40pxpo5p0jmx
+ *   NOCODB_USER_STORIES_VIEW_ID — omit by default
  *   FETCH_TIMEOUT_MS — per-request timeout (default: 60000)
  */
 
@@ -23,6 +28,7 @@ const repoRoot = resolve(__dirname, "..");
 
 const PARTNERS_FIELD = "name (from REF_Partners)";
 const ENTITIES_FIELD = "name (from REF_Entities)";
+const DEFAULT_USER_STORIES_TABLE_ID = "mtq40pxpo5p0jmx";
 
 function loadDotEnv() {
   const envPath = join(repoRoot, ".env");
@@ -69,8 +75,15 @@ function asNumber(value) {
   return Number.isFinite(n) ? n : null;
 }
 
-/** Map raw NocoDB record to the dashboard JSON shape. */
-function normalizeRecord(raw) {
+function splitPartnersText(value) {
+  return asString(value)
+    .split(/\s*,\s*/)
+    .map((p) => p.replace(/\r/g, "").trim())
+    .filter(Boolean);
+}
+
+/** Map raw Incubators NocoDB record to the dashboard JSON shape. */
+function normalizeIncubatorRecord(raw) {
   return {
     id: raw.id ?? null,
     inc_name: asString(raw.inc_name),
@@ -91,6 +104,45 @@ function normalizeRecord(raw) {
     linked_entities: asNumber(raw.linked_entities),
     partners: asStringList(raw[PARTNERS_FIELD]),
     entities: asStringList(raw[ENTITIES_FIELD]),
+    source_url: "",
+    integration_kind: "incubator",
+  };
+}
+
+/** Map raw User_Stories NocoDB record to the same dashboard JSON shape. */
+function normalizeUseCaseRecord(raw) {
+  const partnersFromLookup = asStringList(raw[PARTNERS_FIELD]);
+  const partners =
+    partnersFromLookup.length > 0
+      ? partnersFromLookup
+      : splitPartnersText(raw.partners);
+
+  return {
+    id: raw.id ?? null,
+    inc_name: asString(raw.inc_name || raw.title),
+    basic_service: asString(raw.basic_service) || "PID",
+    related_institutions: asString(raw.related_institutions),
+    logo_project: asString(raw.logo_project),
+    logo_consortia: asString(raw.logo_consortia),
+    key_article: asString(raw.key_article),
+    inc_start: asString(raw.inc_start),
+    inc_end: asString(raw.inc_end),
+    inc_cycle: raw.inc_cycle ?? null,
+    inc_status: asString(raw.inc_status),
+    inc_descr: asString(raw.inc_descr),
+    inc_goals: asString(raw.inc_goals),
+    inc_results: asString(raw.inc_results),
+    inc_partner_publications: asNumber(raw.inc_partner_publications) ?? 0,
+    linked_partners: asNumber(raw.linked_partners) ?? partners.length,
+    linked_entities: asNumber(raw.linked_entities),
+    partners,
+    entities: asStringList(raw[ENTITIES_FIELD]),
+    source_url: asString(raw.source_url),
+    uc_labels: asString(raw.uc_labels),
+    pid_providers: asString(raw.pid_providers),
+    research_field: asString(raw.research_field),
+    resource_types: asString(raw.resource_types),
+    integration_kind: "use-case",
   };
 }
 
@@ -113,6 +165,11 @@ async function main() {
   // Empty by default: table API without viewId returns all rows.
   // A viewId inherits that view's UI filters (e.g. consortia = Text+).
   const viewId = (process.env.NOCODB_VIEW_ID ?? "").trim();
+  const userStoriesTableId =
+    process.env.NOCODB_USER_STORIES_TABLE_ID ?? DEFAULT_USER_STORIES_TABLE_ID;
+  const userStoriesViewId = (
+    process.env.NOCODB_USER_STORIES_VIEW_ID ?? ""
+  ).trim();
   const pageSize = parsePositiveInt(
     process.env.NOCODB_PAGE_SIZE,
     100,
@@ -128,7 +185,7 @@ async function main() {
     process.env.OUTPUT_JSON ?? "static/data.json"
   );
 
-  const rawRecords = await fetchNocoDbRecords({
+  const rawIncubators = await fetchNocoDbRecords({
     baseUrl,
     tableId,
     viewId,
@@ -137,24 +194,59 @@ async function main() {
     timeoutMs,
   });
 
-  if (rawRecords.length === 0) {
+  if (rawIncubators.length === 0) {
     const scope = viewId ? `view ${viewId}` : "full table (no viewId)";
     throw new Error(
       `NocoDB returned 0 records for table ${tableId} (${scope}) — refusing to overwrite ${outputPath}`
     );
   }
 
-  const records = rawRecords.map(normalizeRecord);
+  let rawUseCases = [];
+  try {
+    rawUseCases = await fetchNocoDbRecords({
+      baseUrl,
+      tableId: userStoriesTableId,
+      viewId: userStoriesViewId,
+      token,
+      pageSize,
+      timeoutMs,
+    });
+  } catch (error) {
+    console.warn(
+      `Warning: could not fetch User_Stories (${userStoriesTableId}): ${error.message}`
+    );
+  }
+
+  const incubatorRecords = rawIncubators.map(normalizeIncubatorRecord);
+  const useCaseRecords = rawUseCases.map(normalizeUseCaseRecord);
+  const records = [...incubatorRecords, ...useCaseRecords];
+
   const payload = {
     source: "nocodb",
     fetched_at: new Date().toISOString(),
+    tables: {
+      incubators: {
+        table_id: tableId,
+        view_id: viewId || null,
+        count: incubatorRecords.length,
+      },
+      user_stories: {
+        table_id: userStoriesTableId,
+        view_id: userStoriesViewId || null,
+        count: useCaseRecords.length,
+      },
+    },
     records,
   };
 
   mkdirSync(dirname(outputPath), { recursive: true });
   writeFileSync(outputPath, JSON.stringify(payload, null, 2) + "\n", "utf8");
   const scope = viewId ? `view ${viewId}` : "full table";
-  console.log(`Wrote ${records.length} row(s) to ${outputPath} (${scope})`);
+  console.log(
+    `Wrote ${records.length} row(s) to ${outputPath} ` +
+      `(incubators=${incubatorRecords.length} [${scope}], ` +
+      `use-cases=${useCaseRecords.length})`
+  );
   if (viewId) {
     console.warn(
       "Warning: NOCODB_VIEW_ID is set — NocoDB view filters apply to this export."
