@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fetches incubator + PID use-case rows from NocoDB and writes static/data.json.
+ * Fetches incubators + PID use-case rows from NocoDB and writes static/data.json.
  *
  * Incubators come from NOCODB_TABLE_ID (default Incubators table).
  * Use cases come from NOCODB_USER_STORIES_TABLE_ID (default User_Stories).

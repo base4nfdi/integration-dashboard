@@ -61,8 +61,11 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `NOCODB_VIEW_ID` | unset for full-table dashboard export (view filters apply if set) | same |
 | `NOCODB_USER_STORIES_TABLE_ID` | `mtq40pxpo5p0jmx` | fetch, PID push, schema ensure |
 | `NOCODB_USER_STORIES_VIEW_ID` | unset for full-table export | fetch, PID push |
+| `NOCODB_REF_ENTITIES_TABLE_ID` | `7v80fm7p5jpa7xj` | `push-ref-entities-to-nocodb.mjs` |
+| `NOCODB_REF_ENTITIES_VIEW_ID` | unset for full-table access | `push-ref-entities-to-nocodb.mjs` |
 | `NOCODB_PAGE_SIZE` | `100` | same |
 | `FETCH_TIMEOUT_MS` | `60000` | HTTP clients |
+| `WIKIDATA_USER_AGENT` | Base4NFDI dashboard UA | `push-ref-entities-to-nocodb.mjs` |
 
 ### Fetch / parse
 
@@ -305,7 +308,35 @@ node scripts/push-pid-use-cases-to-nocodb.mjs
 node scripts/push-pid-use-cases-to-nocodb.mjs --apply
 ```
 
-### 11. Crawl NFDI news for Base4NFDI buzzwords
+### 11. Sync REF_Entities from Wikidata
+
+**File:** `push-ref-entities-to-nocodb.mjs`
+
+Pulls German research institutes from the [Wikidata Query Service](https://query.wikidata.org/) (`P31=Q31855`, `P17=Q183`) with English `name`, `official_website` (`P856`), and `official_logo` (`P154`), then syncs them into the NocoDB [REF_Entities](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/7v80fm7p5jpa7xj/9avpyay7fl9c5ar/ref_entities) table. Existing rows are matched by `wikidata_identifier` (Q-id) or normalized `name` and only receive missing website/logo values (never overwrites filled cells).
+
+Also supports an interactive `--search` mode: look up a candidate by name, preview Wikidata fields, and confirm insert/backfill.
+
+```bash
+node scripts/push-ref-entities-to-nocodb.mjs
+node scripts/push-ref-entities-to-nocodb.mjs --backfill-only --apply
+node scripts/push-ref-entities-to-nocodb.mjs --limit 25 --apply
+node scripts/push-ref-entities-to-nocodb.mjs --search "FIZ Karlsruhe"
+node scripts/push-ref-entities-to-nocodb.mjs --search "DKRZ" --pick 1 --apply
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--apply` | POST/PATCH NocoDB |
+| `--dry-run` | Preview only (default) |
+| `--backfill-only` | Only fill blank website/logo on existing rows |
+| `--limit <n>` | Cap creates |
+| `--search <name>` | Interactive Wikidata lookup + optional insert |
+| `--pick <n>` | With `--search`, select result *n* without a prompt |
+| `-h`, `--help` | Show usage |
+
+Writes a plan to `data/parsed/ref-entities.push-report.json`. Requires `NOCODB_API_TOKEN`. Wikidata has ~2k German research institutes — review the dry-run (or use `--backfill-only` / `--limit`) before `--apply`.
+
+### 12. Crawl NFDI news for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 
