@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Create missing content/incubators/{service}/{key_article}.md pages from static/data.json.
+ * Create missing content/integrations/{service}/{key_article}.md pages from static/data.json.
  *
  * Existing Markdown files are left unchanged unless --force is passed.
  *
@@ -15,7 +15,7 @@ import { join } from "node:path";
 import { loadNocoDbRecords, repoRoot } from "./lib/parse-utils.mjs";
 
 const DEFAULT_DATA = join(repoRoot, "static/data.json");
-const DEFAULT_OUT_DIR = join(repoRoot, "content/incubators");
+const DEFAULT_OUT_DIR = join(repoRoot, "content/integrations");
 
 const SERVICE_LABELS = {
   TS: "Terminology Services (TS)",
@@ -42,8 +42,8 @@ function printHelp() {
   console.log(`Usage:
   node scripts/generate-incubator-pages.mjs [--dry-run] [--force]
 
-Creates missing integration report Markdown files under
-content/incubators/{ts|dmp|iam|pid}/ from static/data.json.
+Creates missing integration Markdown files under
+content/integrations/{ts|dmp|iam|pid}/ from static/data.json.
 By default existing files are not overwritten.
 `);
 }

@@ -14,7 +14,7 @@ need_cmd() {
 need_cmd node
 need_cmd zola
 
-echo "==> Fetching incubator source pages"
+echo "==> Fetching integration source pages"
 node scripts/fetch-source-pages.mjs
 
 echo "==> Parsing source pages"
@@ -33,7 +33,7 @@ node scripts/cache-partner-logos.mjs
 echo "==> Caching project fonts into static/"
 node scripts/cache-fonts.mjs
 
-echo "==> Generating missing incubator pages"
+echo "==> Generating missing integration pages"
 node scripts/generate-incubator-pages.mjs
 
 echo "==> Building site with Zola"
