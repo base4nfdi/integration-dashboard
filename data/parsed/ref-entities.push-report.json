@@ -1,0 +1,130 @@
+{
+  "mode": "apply",
+  "table_id": "7v80fm7p5jpa7xj",
+  "backfill_only": true,
+  "planned_at": "2026-08-04T11:03:53.579Z",
+  "totals": {
+    "nocodb": 18,
+    "missing_from_nocodb": 0,
+    "will_create": 0,
+    "will_update": 13,
+    "existing_with_qid": 18,
+    "existing_resolved_from_wikidata": 18
+  },
+  "creates": [],
+  "creates_truncated": false,
+  "updates": [
+    {
+      "name": "Leibniz Association",
+      "id": 6,
+      "patch": {
+        "id": 6,
+        "official_website": "https://www.leibniz-gemeinschaft.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Leibniz%20Logo%20DE%20Blau-Schwarz%20500px.svg"
+      }
+    },
+    {
+      "name": "Max-Planck Society",
+      "id": 7,
+      "patch": {
+        "id": 7,
+        "official_website": "https://www.mpg.de/en"
+      }
+    },
+    {
+      "name": "Thyssen Foundation",
+      "id": 8,
+      "patch": {
+        "id": 8,
+        "official_website": "http://www.fritz-thyssen-stiftung.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Fritz-Thyssen-Stiftung%20Logo.svg"
+      }
+    },
+    {
+      "name": "Union of German Academies of Sciences and Humanities",
+      "id": 9,
+      "patch": {
+        "id": 9,
+        "official_website": "http://www.akademienunion.de/en/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Union%20der%20deutschen%20Akademien%20der%20Wissenschaften%20Logo.svg"
+      }
+    },
+    {
+      "name": "Volkswagen Foundation",
+      "id": 10,
+      "patch": {
+        "id": 10,
+        "official_website": "https://www.volkswagenstiftung.de/en",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Volkswagenstiftung.svg"
+      }
+    },
+    {
+      "name": "German Climate Computing Centre",
+      "id": 11,
+      "patch": {
+        "id": 11,
+        "official_website": "http://www.dkrz.de"
+      }
+    },
+    {
+      "name": "Technical University and State Library Darmstadt",
+      "id": 12,
+      "patch": {
+        "id": 12,
+        "official_website": "https://www.ulb.tu-darmstadt.de/die_bibliothek/index.en.jsp"
+      }
+    },
+    {
+      "name": "FIZ Karlsruhe",
+      "id": 13,
+      "patch": {
+        "id": 13,
+        "official_website": "https://www.fiz-karlsruhe.de/en",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/FIZ%20Karlsruhe%20%E2%80%93%20Leibniz%20Institute%20for%20Information%20Infrastructure.png"
+      }
+    },
+    {
+      "name": "RADAR",
+      "id": 14,
+      "patch": {
+        "id": 14,
+        "official_website": "https://www.radar-service.eu/radar/en/home"
+      }
+    },
+    {
+      "name": "NFDI",
+      "id": 15,
+      "patch": {
+        "id": 15,
+        "official_website": "https://www.nfdi.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20Nfdi%20quer.png"
+      }
+    },
+    {
+      "name": "GFBio",
+      "id": 16,
+      "patch": {
+        "id": 16,
+        "official_website": "https://www.gfbio-ev.de"
+      }
+    },
+    {
+      "name": "Bielefeld University",
+      "id": 17,
+      "patch": {
+        "id": 17,
+        "official_website": "https://www.uni-bielefeld.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg"
+      }
+    },
+    {
+      "name": "Forschungszentrum Jülich",
+      "id": 18,
+      "patch": {
+        "id": 18,
+        "official_website": "https://www.fz-juelich.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20des%20Forschungszentrums%20J%C3%BClich%20seit%202018.svg"
+      }
+    }
+  ]
+}
