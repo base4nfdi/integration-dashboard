@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-08-04T08:29:49.894Z",
+  "fetched_at": "2026-08-04T11:20:51.030Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
@@ -2454,7 +2454,7 @@
       "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14327770",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "KonsortSWD"
       ],
@@ -2485,7 +2485,7 @@
       "inc_results": "Learn more\nhttps://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "DAPHNE4NFDI"
       ],
@@ -2516,7 +2516,7 @@
       "inc_results": "Learn more\nhttps://zenodo.org/records/17733707",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 1,
       "partners": [
         "NFDI4Earth"
       ],
@@ -2547,7 +2547,7 @@
       "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14506202",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "FAIRagro"
       ],
@@ -2578,7 +2578,7 @@
       "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14327691",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "Text+"
       ],
@@ -2609,7 +2609,7 @@
       "inc_results": "Learn more\nhttps://doi.org/10.5281/zenodo.14357800",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Microbiota"
       ],
@@ -2640,7 +2640,7 @@
       "inc_results": "",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "Base4NFDI"
       ],
@@ -2671,7 +2671,7 @@
       "inc_results": "",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "FAIRmat"
       ],
@@ -2702,7 +2702,7 @@
       "inc_results": "",
       "inc_partner_publications": 0,
       "linked_partners": 2,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Ing",
         "MatWerk"
@@ -2734,7 +2734,7 @@
       "inc_results": "",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "NFDIxCS"
       ],
@@ -2765,7 +2765,7 @@
       "inc_results": "",
       "inc_partner_publications": 0,
       "linked_partners": 1,
-      "linked_entities": null,
+      "linked_entities": 0,
       "partners": [
         "NFDI4Cat"
       ],
