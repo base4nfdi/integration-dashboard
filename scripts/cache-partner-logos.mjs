@@ -22,7 +22,7 @@ import {
 import { parsePositiveInt } from "./lib/http-utils.mjs";
 import { repoRoot } from "./lib/parse-utils.mjs";
 
-const DEFAULT_CONTENT = join(repoRoot, "content/incubators");
+const DEFAULT_CONTENT = join(repoRoot, "content/integrations");
 
 function parseArgs(argv) {
   const args = {

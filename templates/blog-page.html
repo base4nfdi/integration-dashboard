@@ -7,10 +7,10 @@
   <header class="blog-post-header">
     <p class="breadcrumb">
       <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
-      <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
+      <a href="{{ get_url(path='@/integrations/_index.md') | safe }}">Integrations</a> /
       {% if page.extra.basic_service %}
       {% set service_slug = page.extra.basic_service | lower %}
-      <a href="{{ get_url(path='@/incubators/' ~ service_slug ~ '/_index.md') | safe }}">{{ page.extra.basic_service }}</a> /
+      <a href="{{ get_url(path='@/integrations/' ~ service_slug ~ '/_index.md') | safe }}">{{ page.extra.basic_service }}</a> /
       {% endif %}
       {{ page.title }}
     </p>
@@ -47,7 +47,7 @@
         {% if service_logo_path %}
         <a
           class="blog-post-logo-service-link"
-          href="{{ get_url(path='@/incubators/' ~ service_slug ~ '/_index.md') | safe }}"
+          href="{{ get_url(path='@/integrations/' ~ service_slug ~ '/_index.md') | safe }}"
           title="{{ service_logo_label }}"
         >
           <img

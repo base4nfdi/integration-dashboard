@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
- * Ensure the NocoDB User_Stories table has columns aligned with Incubators
- * (plus a few use-case-specific fields). Idempotent: skips existing titles.
+ * Ensure the NocoDB User_Stories table has columns for PID use cases.
+ * Renames legacy `title` → `uc_name` when needed, and creates missing
+ * columns (including uc_descr, key_article, basic_service). Idempotent.
  *
  * Required env:
  *   NOCODB_API_TOKEN
@@ -27,7 +28,7 @@ const DEFAULT_TABLE_ID = "mtq40pxpo5p0jmx";
 
 /** Columns to create when missing (matched by title). */
 const DESIRED_COLUMNS = [
-  { column_name: "inc_name", title: "inc_name", uidt: "SingleLineText" },
+  { column_name: "uc_name", title: "uc_name", uidt: "SingleLineText" },
   {
     column_name: "basic_service",
     title: "basic_service",
@@ -46,6 +47,8 @@ const DESIRED_COLUMNS = [
       ],
     },
   },
+  { column_name: "key_article", title: "key_article", uidt: "SingleLineText" },
+  { column_name: "uc_descr", title: "uc_descr", uidt: "LongText" },
   {
     column_name: "related_institutions",
     title: "related_institutions",
@@ -53,7 +56,6 @@ const DESIRED_COLUMNS = [
   },
   { column_name: "logo_project", title: "logo_project", uidt: "URL" },
   { column_name: "logo_consortia", title: "logo_consortia", uidt: "URL" },
-  { column_name: "key_article", title: "key_article", uidt: "SingleLineText" },
   {
     column_name: "inc_start",
     title: "inc_start",
@@ -80,6 +82,7 @@ const DESIRED_COLUMNS = [
       ],
     },
   },
+  { column_name: "inc_name", title: "inc_name", uidt: "SingleLineText" },
   { column_name: "inc_descr", title: "inc_descr", uidt: "LongText" },
   { column_name: "inc_goals", title: "inc_goals", uidt: "LongText" },
   { column_name: "inc_results", title: "inc_results", uidt: "LongText" },
@@ -141,7 +144,8 @@ function printHelp() {
   console.log(`Usage:
   node scripts/ensure-user-stories-schema.mjs [--dry-run]
 
-Creates missing User_Stories columns aligned with the Incubators table.
+Renames legacy title → uc_name when needed, and creates missing
+User_Stories columns (uc_name, uc_descr, key_article, basic_service, …).
 `);
 }
 
@@ -168,6 +172,60 @@ async function createColumn({ baseUrl, tableId, token, column, timeoutMs }) {
     { timeoutMs, label: `NocoDB create column ${column.title}` }
   );
   return response.json();
+}
+
+async function updateColumn({ baseUrl, columnId, token, patch, timeoutMs }) {
+  const response = await fetchOk(
+    `${baseUrl}/api/v2/meta/columns/${columnId}`,
+    {
+      method: "PATCH",
+      headers: {
+        "xc-token": token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(patch),
+    },
+    { timeoutMs, label: `NocoDB rename column ${columnId}` }
+  );
+  return response.json();
+}
+
+/**
+ * If legacy `title` exists and `uc_name` does not, rename title → uc_name.
+ * Returns the (possibly updated) set of column titles.
+ */
+async function renameTitleToUcName({
+  baseUrl,
+  token,
+  columns,
+  existing,
+  dryRun,
+  timeoutMs,
+}) {
+  const hasUcName = existing.has("uc_name");
+  const titleCol = (columns ?? []).find(
+    (c) => String(c.title ?? "").trim() === "title"
+  );
+  if (!titleCol || hasUcName) return existing;
+
+  console.log(
+    dryRun
+      ? "Would rename column title → uc_name"
+      : "Renaming column title → uc_name…"
+  );
+  if (!dryRun) {
+    await updateColumn({
+      baseUrl,
+      columnId: titleCol.id,
+      token,
+      patch: { title: "uc_name", column_name: "uc_name" },
+      timeoutMs,
+    });
+    console.log("ok");
+  }
+  existing.delete("title");
+  existing.add("uc_name");
+  return existing;
 }
 
 async function main() {
@@ -198,15 +256,25 @@ async function main() {
   );
 
   const meta = await getTableMeta({ baseUrl, tableId, token, timeoutMs });
-  const existing = new Set(
+  let existing = new Set(
     (meta.columns ?? []).map((c) => String(c.title ?? "").trim())
   );
+
+  console.log(`Table: ${meta.title} (${tableId})`);
+  console.log(`Existing columns: ${existing.size}`);
+
+  existing = await renameTitleToUcName({
+    baseUrl,
+    token,
+    columns: meta.columns,
+    existing,
+    dryRun: args.dryRun,
+    timeoutMs,
+  });
 
   const missing = DESIRED_COLUMNS.filter((col) => !existing.has(col.title));
   const skipped = DESIRED_COLUMNS.filter((col) => existing.has(col.title));
 
-  console.log(`Table: ${meta.title} (${tableId})`);
-  console.log(`Existing columns: ${existing.size}`);
   console.log(`Already present: ${skipped.map((c) => c.title).join(", ") || "(none)"}`);
   console.log(
     `To create: ${missing.map((c) => c.title).join(", ") || "(none)"}`

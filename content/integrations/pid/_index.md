@@ -9,4 +9,4 @@ basic_service = "PID"
 logo = "img/Base4NFDI-Logos/RGB/Logos-long/PNG/_PID4NFDI.png"
 +++
 
-Use-case reports for the Persistent Identifiers (PID) basic service.
+Use-case integrations for the Persistent Identifiers (PID) basic service.

@@ -8,10 +8,10 @@
     <p class="breadcrumb">
       <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
       {% if section.extra.basic_service %}
-      <a href="{{ get_url(path='@/incubators/_index.md') | safe }}">Reports</a> /
+      <a href="{{ get_url(path='@/integrations/_index.md') | safe }}">Integrations</a> /
       {{ section.extra.basic_service }}
       {% else %}
-      Reports
+      Integrations
       {% endif %}
     </p>
     <h2>{{ section.title }}</h2>
@@ -39,7 +39,7 @@
       <span class="service-shortcut-code">{{ service_code }}</span>
       <span class="service-shortcut-label">{{ service.title }}</span>
       {% endif %}
-      <span class="service-shortcut-count">{{ service.pages | length }} report{% if service.pages | length != 1 %}s{% endif %}</span>
+      <span class="service-shortcut-count">{{ service.pages | length }} integration{% if service.pages | length != 1 %}s{% endif %}</span>
     </a>
     {% endfor %}
   </div>

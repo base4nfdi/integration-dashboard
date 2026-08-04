@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 /**
  * Push PID4NFDI use cases from data/parsed/pid4nfdi.json into the NocoDB
- * User_Stories table. Default mode is dry-run; use --apply to insert.
+ * User_Stories table. Default mode is dry-run; use --apply to insert/update.
+ *
+ * Writes use-case columns: uc_name, uc_descr, key_article, basic_service, …
+ * Also backfills those fields on matched existing rows when empty.
  *
  * Required env:
  *   NOCODB_API_TOKEN
@@ -44,8 +47,8 @@ const PARSED_PATH = join(repoRoot, "data/parsed/pid4nfdi.json");
 const BASIC_SERVICE = "PID";
 
 const WRITE_FIELDS = [
-  "title",
-  "inc_name",
+  "uc_name",
+  "uc_descr",
   "basic_service",
   "related_institutions",
   "logo_project",
@@ -55,9 +58,29 @@ const WRITE_FIELDS = [
   "inc_end",
   "inc_cycle",
   "inc_status",
+  "inc_name",
   "inc_descr",
   "inc_goals",
   "inc_results",
+  "partners",
+  "uc_labels",
+  "pid_providers",
+  "research_field",
+  "resource_types",
+  "source_url",
+];
+
+/** Fields backfilled onto matched rows when blank in NocoDB. */
+const BACKFILL_FIELDS = [
+  "uc_name",
+  "uc_descr",
+  "basic_service",
+  "key_article",
+  "inc_name",
+  "inc_descr",
+  "inc_goals",
+  "inc_results",
+  "related_institutions",
   "partners",
   "uc_labels",
   "pid_providers",
@@ -117,10 +140,10 @@ function printHelp() {
   node scripts/push-pid-use-cases-to-nocodb.mjs [options]
 
 Options:
-  --apply      Create rows in User_Stories (default is dry-run)
+  --apply      Create/update rows in User_Stories (default is dry-run)
   --dry-run    Preview only (default)
   --local      Compare against static/data.json instead of live NocoDB
-  --limit <n>  Cap how many records are pushed
+  --limit <n>  Cap how many create payloads are pushed
   -h, --help   Show this help
 `);
 }
@@ -142,15 +165,27 @@ function emptyToNull(value) {
   return value;
 }
 
+function useCaseName(raw) {
+  return asString(raw.uc_name || raw.inc_name || raw.title).trim();
+}
+
+function useCaseDescr(raw) {
+  return asString(raw.uc_descr || raw.inc_descr);
+}
+
 function normalizeUserStoryRecord(raw) {
   const partnersRaw = raw.partners;
   const partners = Array.isArray(partnersRaw)
     ? partnersRaw.map((p) => asString(p).trim()).filter(Boolean)
     : splitPartners(partnersRaw);
+  const name = useCaseName(raw);
+  const descr = useCaseDescr(raw);
 
   return {
     id: raw.id ?? null,
-    inc_name: asString(raw.inc_name || raw.title),
+    uc_name: name,
+    uc_descr: descr,
+    inc_name: name,
     basic_service: asString(raw.basic_service) || BASIC_SERVICE,
     related_institutions: asString(raw.related_institutions),
     logo_project: asString(raw.logo_project),
@@ -160,7 +195,7 @@ function normalizeUserStoryRecord(raw) {
     inc_end: asString(raw.inc_end),
     inc_cycle: raw.inc_cycle ?? null,
     inc_status: asString(raw.inc_status),
-    inc_descr: asString(raw.inc_descr),
+    inc_descr: descr,
     inc_goals: asString(raw.inc_goals),
     inc_results: asString(raw.inc_results),
     partners,
@@ -175,14 +210,21 @@ function normalizeUserStoryRecord(raw) {
 
 function toCreatePayload(record, usedKeyArticles) {
   const payload = {};
-  const name = asString(record.inc_name).trim();
+  const name = useCaseName(record);
+  const descr = useCaseDescr(record);
 
   for (const field of WRITE_FIELDS) {
-    if (field === "title") {
-      payload.title = emptyToNull(name);
+    if (field === "key_article") continue;
+
+    if (field === "uc_name" || field === "inc_name") {
+      payload[field] = emptyToNull(name);
       continue;
     }
-    if (field === "key_article") continue;
+
+    if (field === "uc_descr" || field === "inc_descr") {
+      payload[field] = emptyToNull(descr);
+      continue;
+    }
 
     if (field === "inc_status") {
       const value = asString(record[field]).trim();
@@ -223,6 +265,70 @@ function toCreatePayload(record, usedKeyArticles) {
   return payload;
 }
 
+/**
+ * Build a PATCH for blank use-case fields on an existing row.
+ * `rawNocoRecord` should be the unnormalized NocoDB row so we can detect
+ * truly missing columns (e.g. uc_descr before backfill, title before rename).
+ */
+function buildBackfillPatch(sourceRecord, rawNocoRecord, usedKeyArticles) {
+  const patch = {};
+  const name = useCaseName(sourceRecord);
+  const descr = useCaseDescr(sourceRecord);
+  const createShape = toCreatePayload(sourceRecord, usedKeyArticles);
+
+  const rawHas = (field) => asString(rawNocoRecord[field]).trim() !== "";
+
+  for (const field of BACKFILL_FIELDS) {
+    if (field === "uc_name") {
+      // Prefer existing uc_name; also treat legacy title as already filled
+      // (ensure-user-stories-schema renames title → uc_name).
+      if (rawHas("uc_name") || rawHas("title")) continue;
+      if (name) patch.uc_name = name;
+      continue;
+    }
+    if (field === "inc_name") {
+      if (rawHas("inc_name")) continue;
+      if (name) patch.inc_name = name;
+      continue;
+    }
+    if (field === "uc_descr") {
+      if (rawHas("uc_descr")) continue;
+      if (descr) patch.uc_descr = descr;
+      continue;
+    }
+    if (field === "inc_descr") {
+      if (rawHas("inc_descr")) continue;
+      if (descr) patch.inc_descr = descr;
+      continue;
+    }
+    if (field === "basic_service") {
+      if (rawHas("basic_service")) continue;
+      patch.basic_service = BASIC_SERVICE;
+      continue;
+    }
+    if (field === "key_article") {
+      if (rawHas("key_article")) continue;
+      if (createShape.key_article) patch.key_article = createShape.key_article;
+      continue;
+    }
+    if (field === "partners") {
+      if (rawHas("partners")) continue;
+      const list = Array.isArray(sourceRecord.partners)
+        ? sourceRecord.partners
+        : [];
+      const value = list.join(", ");
+      if (value) patch.partners = value;
+      continue;
+    }
+    if (rawHas(field)) continue;
+    const value = asString(sourceRecord[field]).trim();
+    if (value) patch[field] = value;
+  }
+
+  if (Object.keys(patch).length === 0) return null;
+  return { id: rawNocoRecord.id, ...patch };
+}
+
 async function createRecords({ baseUrl, tableId, token, records, timeoutMs }) {
   const url = `${baseUrl}/api/v2/tables/${tableId}/records`;
   const response = await fetchOk(
@@ -241,6 +347,27 @@ async function createRecords({ baseUrl, tableId, token, records, timeoutMs }) {
     return await response.json();
   } catch (error) {
     throw new Error(`NocoDB create returned non-JSON: ${error.message}`);
+  }
+}
+
+async function updateRecords({ baseUrl, tableId, token, records, timeoutMs }) {
+  const url = `${baseUrl}/api/v2/tables/${tableId}/records`;
+  const response = await fetchOk(
+    url,
+    {
+      method: "PATCH",
+      headers: {
+        "xc-token": token,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(records),
+    },
+    { timeoutMs, label: `NocoDB update ${tableId}` }
+  );
+  try {
+    return await response.json();
+  } catch (error) {
+    throw new Error(`NocoDB update returned non-JSON: ${error.message}`);
   }
 }
 
@@ -285,6 +412,8 @@ async function main() {
   });
   const sourceRecords = Array.isArray(parsed.records) ? parsed.records : [];
 
+  /** @type {Map<string|number, object>} raw NocoDB rows by id (for backfill checks) */
+  const rawById = new Map();
   let nocoRecords;
   if (args.local || !token) {
     nocoRecords = loadNocoDbRecords().filter(
@@ -292,6 +421,9 @@ async function main() {
         String(r.basic_service).toUpperCase() === BASIC_SERVICE ||
         r.integration_kind === "use-case"
     );
+    for (const r of nocoRecords) {
+      if (r.id != null) rawById.set(r.id, r);
+    }
     console.log(
       `Loaded ${nocoRecords.length} PID/use-case row(s) from static/data.json`
     );
@@ -304,6 +436,9 @@ async function main() {
       pageSize,
       timeoutMs,
     });
+    for (const r of raw) {
+      if (r.id != null) rawById.set(r.id, r);
+    }
     nocoRecords = raw.map(normalizeUserStoryRecord);
     console.log(
       `Fetched ${nocoRecords.length} User_Stories row(s) from ${baseUrl}`
@@ -317,17 +452,32 @@ async function main() {
       .filter(Boolean)
   );
 
-  const planned = match.only_in_source.map((record) => {
+  const plannedCreates = match.only_in_source.map((record) => {
     const payload = toCreatePayload(record, usedKeyArticles);
     return {
-      inc_name: record.inc_name,
+      uc_name: useCaseName(record),
       partners: record.partners ?? [],
       payload,
     };
   });
 
-  const limited =
-    args.limit == null ? planned : planned.slice(0, args.limit);
+  const plannedUpdates = [];
+  for (const { source, nocodb } of match.matches) {
+    if (nocodb.id == null) continue;
+    // Check blank fields on the raw row so aliases (title→uc_name, inc_descr→uc_descr)
+    // do not hide missing columns that still need backfill.
+    const rawRow = rawById.get(nocodb.id) ?? nocodb;
+    const patch = buildBackfillPatch(source, rawRow, usedKeyArticles);
+    if (!patch) continue;
+    plannedUpdates.push({
+      uc_name: useCaseName(source),
+      id: nocodb.id,
+      patch,
+    });
+  }
+
+  const limitedCreates =
+    args.limit == null ? plannedCreates : plannedCreates.slice(0, args.limit);
 
   const report = {
     mode: args.apply ? "apply" : "dry-run",
@@ -338,10 +488,12 @@ async function main() {
       source: sourceRecords.length,
       nocodb: nocoRecords.length,
       matched: match.matches.length,
-      missing_from_nocodb: planned.length,
-      will_push: limited.length,
+      missing_from_nocodb: plannedCreates.length,
+      will_create: limitedCreates.length,
+      will_update: plannedUpdates.length,
     },
-    records: limited,
+    creates: limitedCreates,
+    updates: plannedUpdates,
   };
 
   const reportPath = join(
@@ -351,36 +503,59 @@ async function main() {
   writeJson(reportPath, report);
 
   console.log(
-    `\n${report.mode}: ${limited.length}/${planned.length} missing use case(s) to push`
+    `\n${report.mode}: ${limitedCreates.length}/${plannedCreates.length} create(s), ` +
+      `${plannedUpdates.length} update(s)`
   );
-  for (const item of limited) {
-    console.log(`  + ${item.inc_name} → ${item.payload.key_article}`);
+  for (const item of limitedCreates) {
+    console.log(`  + ${item.uc_name} → ${item.payload.key_article}`);
+  }
+  for (const item of plannedUpdates) {
+    const fields = Object.keys(item.patch).filter((k) => k !== "id");
+    console.log(`  ~ ${item.uc_name} (id ${item.id}) ← ${fields.join(", ")}`);
   }
   console.log(`Wrote ${reportPath}`);
 
   if (!args.apply) {
-    console.log("Dry-run only. Re-run with --apply to create rows.");
+    console.log("Dry-run only. Re-run with --apply to create/update rows.");
     return;
   }
 
-  if (limited.length === 0) {
-    console.log("Nothing to create.");
+  if (limitedCreates.length === 0 && plannedUpdates.length === 0) {
+    console.log("Nothing to create or update.");
     return;
   }
 
-  const created = await createRecords({
-    baseUrl,
-    tableId,
-    token,
-    records: limited.map((item) => item.payload),
-    timeoutMs,
-  });
-  const createdCount = Array.isArray(created)
-    ? created.length
-    : Array.isArray(created?.list)
-      ? created.list.length
-      : limited.length;
-  console.log(`Created ${createdCount} User_Stories row(s).`);
+  if (limitedCreates.length > 0) {
+    const created = await createRecords({
+      baseUrl,
+      tableId,
+      token,
+      records: limitedCreates.map((item) => item.payload),
+      timeoutMs,
+    });
+    const createdCount = Array.isArray(created)
+      ? created.length
+      : Array.isArray(created?.list)
+        ? created.list.length
+        : limitedCreates.length;
+    console.log(`Created ${createdCount} User_Stories row(s).`);
+  }
+
+  if (plannedUpdates.length > 0) {
+    const updated = await updateRecords({
+      baseUrl,
+      tableId,
+      token,
+      records: plannedUpdates.map((item) => item.patch),
+      timeoutMs,
+    });
+    const updatedCount = Array.isArray(updated)
+      ? updated.length
+      : Array.isArray(updated?.list)
+        ? updated.list.length
+        : plannedUpdates.length;
+    console.log(`Updated ${updatedCount} User_Stories row(s).`);
+  }
 }
 
 const isMain =

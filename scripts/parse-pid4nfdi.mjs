@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
- * Parse PID4NFDI use-case HTML cards into a NocoDB-aligned record list
- * (User_Stories / Incubators field shape).
+ * Parse PID4NFDI use-case cards from the GitHub markdown source into a
+ * NocoDB-aligned record list (User_Stories field shape).
+ *
+ * Source embeds HTML pid-card blocks inside the markdown page body.
  *
  * Usage:
  *   node scripts/parse-pid4nfdi.mjs
@@ -26,8 +28,8 @@ import {
 const SOURCE_ID = "pid4nfdi";
 const BASIC_SERVICE = "PID";
 const SITE_PAGE =
-  "https://pid.services.base4nfdi.de/community/use-cases/";
-const DEFAULT_INPUT = join(repoRoot, "data/sources/pid4nfdi/page.html");
+  "https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md";
+const DEFAULT_INPUT = join(repoRoot, "data/sources/pid4nfdi/use-cases.md");
 const DEFAULT_OUTPUT = join(repoRoot, "data/parsed/pid4nfdi.json");
 
 function attr(tag, name) {
@@ -100,13 +102,14 @@ function goalsFromMeta({ labels, resourceTypes, pidProviders, researchField }) {
   return lines.join("\n");
 }
 
+/** Parse pid-card HTML blocks (embedded in the markdown source body). */
 export function parsePidHtml(html) {
   const records = [];
 
   for (const { attrs, body } of extractCards(html)) {
     const titleMatch = body.match(/<h2>([\s\S]*?)<\/h2>/i);
-    const inc_name = titleMatch ? stripHtml(titleMatch[1]) : "";
-    if (!inc_name) continue;
+    const uc_name = titleMatch ? stripHtml(titleMatch[1]) : "";
+    if (!uc_name) continue;
 
     const labelsFromAttr = String(attr(attrs, "data-type") || "")
       .split(/\s*,\s*/)
@@ -140,10 +143,14 @@ export function parsePidHtml(html) {
 
     records.push(
       emptyRecord({
-        inc_name,
+        // Dashboard / Incubators-shaped aliases (matching + page gen)
+        inc_name: uc_name,
+        inc_descr: descr,
+        // User_Stories use-case columns
+        uc_name,
+        uc_descr: descr,
         basic_service: BASIC_SERVICE,
         related_institutions: organizations,
-        inc_descr: descr,
         inc_goals: goalsFromMeta({
           labels,
           resourceTypes,
@@ -167,13 +174,18 @@ export function parsePidHtml(html) {
   return records;
 }
 
+/** Parse the PID4NFDI use-cases.md source (HTML cards inside markdown). */
+export function parsePidMarkdown(markdown) {
+  return parsePidHtml(markdown);
+}
+
 async function main() {
   const inputPath = resolve(process.env.PID_INPUT ?? DEFAULT_INPUT);
   const outputPath = resolve(process.env.PID_OUTPUT ?? DEFAULT_OUTPUT);
-  const html = readTextFile(inputPath, {
+  const markdown = readTextFile(inputPath, {
     hint: "Run: node scripts/fetch-source-pages.mjs",
   });
-  const records = parsePidHtml(html);
+  const records = parsePidMarkdown(markdown);
   assertNonEmptyRecords(records, "pid4nfdi");
 
   const payload = buildParsedPayload({

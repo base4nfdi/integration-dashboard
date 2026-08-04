@@ -46,9 +46,9 @@ const SOURCES = [
   {
     id: "pid4nfdi",
     label: "PID4NFDI use cases",
-    url: "https://pid.services.base4nfdi.de/community/use-cases/",
-    type: "html",
-    filename: "page.html",
+    url: "https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md",
+    type: "markdown",
+    filename: "use-cases.md",
   },
 ];
 

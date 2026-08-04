@@ -34,7 +34,7 @@ fetch-source-pages  →   parse-* / parse-source-pages
                    data/parsed/*.json     fetch-nocodb-data → static/data.json
                         ↓                 (Incubators + User_Stories)
               push / patch / fill          generate-incubator-pages
-                                           → content/incubators/{ts,dmp,iam,pid}/
+                                           → content/integrations/{ts,dmp,iam,pid}/
 ```
 
 **Typical build path** (`./build.sh`):
@@ -94,7 +94,7 @@ Downloads the public incubator sources used by the parsers and stores them under
 | IAM4NFDI incubator dashboard | HTML | `data/sources/iam4nfdi/page.html` |
 | TS4NFDI projects | JSON | `data/sources/ts4nfdi/projects.json` |
 | DMP4NFDI incubator content | Markdown | `data/sources/dmp4nfdi/incubator.md` |
-| PID4NFDI use cases | HTML | `data/sources/pid4nfdi/page.html` |
+| PID4NFDI use cases | Markdown | `data/sources/pid4nfdi/use-cases.md` |
 
 Also writes per-source `meta.json` and a top-level `manifest.json`. All sources must succeed; a partial failure aborts without writing a mixed set.
 
@@ -123,7 +123,7 @@ Each parser reads a stored source file, emits NocoDB-aligned records, and writes
 | `parse-dmp4nfdi.mjs` | `data/sources/dmp4nfdi/incubator.md` | `data/parsed/dmp4nfdi.json` (+ `.comparison.json`) |
 | `parse-iam4nfdi.mjs` | `data/sources/iam4nfdi/page.html` | `data/parsed/iam4nfdi.json` (+ `.comparison.json`) |
 | `parse-ts4nfdi.mjs` | `data/sources/ts4nfdi/projects.json` | `data/parsed/ts4nfdi.json` (+ `.comparison.json`) |
-| `parse-pid4nfdi.mjs` | `data/sources/pid4nfdi/page.html` | `data/parsed/pid4nfdi.json` (+ `.comparison.json`) |
+| `parse-pid4nfdi.mjs` | `data/sources/pid4nfdi/use-cases.md` | `data/parsed/pid4nfdi.json` (+ `.comparison.json`) |
 
 ```bash
 node scripts/parse-dmp4nfdi.mjs
@@ -198,11 +198,11 @@ A `manifest.json` beside the cached fonts maps source URL → local path.
 
 ---
 
-### 6. Generate incubator pages
+### 6. Generate integration pages
 
 **File:** `generate-incubator-pages.mjs`
 
-Creates missing Markdown report pages under `content/incubators/{ts,dmp,iam,pid}/` from `static/data.json`. Existing files are left alone unless `--force` is passed.
+Creates missing Markdown integration pages under `content/integrations/{ts,dmp,iam,pid}/` from `static/data.json`. Existing files are left alone unless `--force` is passed.
 
 ```bash
 node scripts/generate-incubator-pages.mjs
@@ -296,7 +296,7 @@ Requires `NOCODB_API_TOKEN`.
 
 **Files:** `ensure-user-stories-schema.mjs`, `push-pid-use-cases-to-nocodb.mjs`
 
-Creates Incubators-aligned columns on the NocoDB User_Stories table (idempotent), then inserts parsed PID use cases. Both default to dry-run-safe behaviour (`ensure` writes unless `--dry-run`; `push` requires `--apply`).
+Ensures User_Stories has use-case columns (`uc_name`, `uc_descr`, `key_article`, `basic_service`, …). Renames legacy `title` → `uc_name` when needed. Then creates missing PID rows and backfills blank use-case fields on matches. `ensure` writes unless `--dry-run`; `push` requires `--apply`.
 
 ```bash
 node scripts/ensure-user-stories-schema.mjs --dry-run
@@ -381,10 +381,10 @@ node scripts/generate-incubator-pages.mjs
 
 ### Onboard PID use cases into User_Stories
 
-Source of truth: [PID4NFDI use cases](https://pid.services.base4nfdi.de/community/use-cases/). Rows land in the NocoDB [User_Stories](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/mtq40pxpo5p0jmx/vwlhq1q3k6gcqrjd/user_stories) table and are merged into the Integration Dashboard export.
+Source of truth: [PID4NFDI use-cases.md](https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md). Rows land in the NocoDB [User_Stories](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/mtq40pxpo5p0jmx/vwlhq1q3k6gcqrjd/user_stories) table (`uc_name`, `uc_descr`, `key_article`, `basic_service`, …) and are merged into the Integration Dashboard export.
 
 ```bash
-node scripts/ensure-user-stories-schema.mjs             # create aligned columns (once)
+node scripts/ensure-user-stories-schema.mjs             # rename title→uc_name + create columns (once)
 node scripts/fetch-source-pages.mjs
 node scripts/parse-pid4nfdi.mjs
 node scripts/push-pid-use-cases-to-nocodb.mjs           # review dry-run

@@ -117,9 +117,13 @@ function normalizeUseCaseRecord(raw) {
       ? partnersFromLookup
       : splitPartnersText(raw.partners);
 
+  const name = asString(raw.uc_name || raw.inc_name || raw.title);
+  const descr = asString(raw.uc_descr || raw.inc_descr);
+
   return {
     id: raw.id ?? null,
-    inc_name: asString(raw.inc_name || raw.title),
+    inc_name: name,
+    uc_name: name,
     basic_service: asString(raw.basic_service) || "PID",
     related_institutions: asString(raw.related_institutions),
     logo_project: asString(raw.logo_project),
@@ -129,7 +133,8 @@ function normalizeUseCaseRecord(raw) {
     inc_end: asString(raw.inc_end),
     inc_cycle: raw.inc_cycle ?? null,
     inc_status: asString(raw.inc_status),
-    inc_descr: asString(raw.inc_descr),
+    inc_descr: descr,
+    uc_descr: descr,
     inc_goals: asString(raw.inc_goals),
     inc_results: asString(raw.inc_results),
     inc_partner_publications: asNumber(raw.inc_partner_publications) ?? 0,
