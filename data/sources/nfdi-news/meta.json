@@ -1,13 +1,21 @@
 {
   "id": "nfdi-news",
-  "label": "NFDI news (English)",
+  "label": "NFDI news & success stories (English)",
   "source_url": "https://www.nfdi.de/news/?lang=en",
+  "source_urls": [
+    "https://www.nfdi.de/news/?lang=en",
+    "https://www.nfdi.de/success-stories/?lang=en"
+  ],
   "fetch_url": "https://www.nfdi.de/wp-json/wp/v2/posts",
   "type": "json",
-  "scope": "news",
+  "scope": "both",
   "lang": "en",
-  "fetched_at": "2026-07-29T13:44:35.744Z",
-  "posts_collected": 91,
-  "posts_matched": 19,
+  "fetched_at": "2026-08-11T12:51:08.652Z",
+  "posts_collected": 132,
+  "posts_matched": 23,
+  "collection_counts": {
+    "news": 91,
+    "success-story": 41
+  },
   "filename": "posts.json"
 }

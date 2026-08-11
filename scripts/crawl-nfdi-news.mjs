@@ -1,10 +1,15 @@
 #!/usr/bin/env node
 /**
- * Crawl NFDI news (https://www.nfdi.de/news/?lang=en) via the WordPress REST API,
+ * Crawl NFDI news + success stories via the WordPress REST API,
  * collect full post bodies, and scan for Base4NFDI / basic-service buzzwords.
+ *
+ * Sources:
+ *   https://www.nfdi.de/news/?lang=en
+ *   https://www.nfdi.de/success-stories/?lang=en
  *
  * Usage:
  *   node scripts/crawl-nfdi-news.mjs
+ *   node scripts/crawl-nfdi-news.mjs --scope success-stories
  *   node scripts/crawl-nfdi-news.mjs --scope all
  *   node scripts/crawl-nfdi-news.mjs --dry-run --limit 20
  *
@@ -13,7 +18,7 @@
  *   OUTPUT_JSON      — matches report (default: data/parsed/nfdi-news.json)
  *   FETCH_TIMEOUT_MS — per-request timeout (default: 60000)
  *   FETCH_RETRIES    — retries after the first attempt (default: 2)
- *   NEWS_LANG        — Polylang language code (default: en)
+ *   NEWS_LANG        — Polylang / WPML language code (default: en)
  *   NEWS_PER_PAGE    — WP API page size, max 100 (default: 100)
  */
 
@@ -27,12 +32,57 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
 
 const NEWS_LISTING_URL = "https://www.nfdi.de/news/?lang=en";
+const SUCCESS_STORIES_LISTING_URL =
+  "https://www.nfdi.de/success-stories/?lang=en";
 const WP_POSTS_URL = "https://www.nfdi.de/wp-json/wp/v2/posts";
 /** WordPress category id for "News" (matches /news/?lang=en listing). */
 const NEWS_CATEGORY_ID = 43;
+/**
+ * WordPress category id for "Success Story"
+ * (matches /success-stories/?lang=en filterable collection).
+ */
+const SUCCESS_STORY_CATEGORY_ID = 134;
+
+const SCOPES = ["both", "news", "success-stories", "all"];
 
 const DEFAULT_OUTPUT_DIR = join(repoRoot, "data/sources/nfdi-news");
 const DEFAULT_OUTPUT_JSON = join(repoRoot, "data/parsed/nfdi-news.json");
+
+/** @typedef {"news"|"success-story"} CollectionId */
+
+/**
+ * @param {string} scope
+ * @returns {CollectionId[]|null} null = unrestricted (every English post)
+ */
+function collectionsForScope(scope) {
+  if (scope === "news") return ["news"];
+  if (scope === "success-stories") return ["success-story"];
+  if (scope === "both") return ["news", "success-story"];
+  return null;
+}
+
+/**
+ * @param {string} scope
+ */
+function listingUrlsForScope(scope) {
+  if (scope === "news") return [NEWS_LISTING_URL];
+  if (scope === "success-stories") return [SUCCESS_STORIES_LISTING_URL];
+  if (scope === "both") return [NEWS_LISTING_URL, SUCCESS_STORIES_LISTING_URL];
+  return [NEWS_LISTING_URL, SUCCESS_STORIES_LISTING_URL];
+}
+
+/**
+ * @param {number[]} categories
+ * @returns {CollectionId[]}
+ */
+function collectionsFromCategories(categories) {
+  const ids = Array.isArray(categories) ? categories : [];
+  /** @type {CollectionId[]} */
+  const collections = [];
+  if (ids.includes(NEWS_CATEGORY_ID)) collections.push("news");
+  if (ids.includes(SUCCESS_STORY_CATEGORY_ID)) collections.push("success-story");
+  return collections;
+}
 
 /**
  * Buzzwords / service names to detect in title + full body.
@@ -154,7 +204,7 @@ async function sleep(ms) {
  */
 export function parseArgs(argv) {
   const args = {
-    scope: "news",
+    scope: "both",
     dryRun: false,
     limit: null,
     help: false,
@@ -168,14 +218,18 @@ export function parseArgs(argv) {
       args.dryRun = true;
     } else if (arg === "--scope") {
       const value = argv[++i];
-      if (value !== "news" && value !== "all") {
-        throw new Error(`--scope must be "news" or "all", got: ${value}`);
+      if (!SCOPES.includes(value)) {
+        throw new Error(
+          `--scope must be one of ${SCOPES.join("|")}, got: ${value}`
+        );
       }
       args.scope = value;
     } else if (arg.startsWith("--scope=")) {
       const value = arg.slice("--scope=".length);
-      if (value !== "news" && value !== "all") {
-        throw new Error(`--scope must be "news" or "all", got: ${value}`);
+      if (!SCOPES.includes(value)) {
+        throw new Error(
+          `--scope must be one of ${SCOPES.join("|")}, got: ${value}`
+        );
       }
       args.scope = value;
     } else if (arg === "--limit") {
@@ -191,14 +245,17 @@ export function parseArgs(argv) {
 }
 
 function printHelp() {
-  console.log(`Crawl NFDI news and scan for Base4NFDI / basic-service buzzwords.
+  console.log(`Crawl NFDI news / success stories and scan for Base4NFDI buzzwords.
 
 Usage:
   node scripts/crawl-nfdi-news.mjs [options]
 
 Options:
-  --scope news|all   news = WP category "News" (default, matches listing page)
-                     all  = every English post
+  --scope both|news|success-stories|all
+                     both            = News + Success Story categories (default)
+                     news            = WP category "News" (/news/)
+                     success-stories = WP category "Success Story" (/success-stories/)
+                     all             = every English post
   --dry-run          Report only; do not write output files
   --limit <n>        Cap how many posts to fetch (for testing)
   -h, --help         Show this help
@@ -208,7 +265,7 @@ Environment:
   OUTPUT_JSON        Matches report (default: data/parsed/nfdi-news.json)
   FETCH_TIMEOUT_MS   Request timeout (default: 60000)
   FETCH_RETRIES      Extra attempts after first (default: 2)
-  NEWS_LANG          Polylang language (default: en)
+  NEWS_LANG          Polylang / WPML language (default: en)
   NEWS_PER_PAGE      WP page size ≤ 100 (default: 100)
 `);
 }
@@ -261,9 +318,10 @@ async function fetchPostsPage(url, { timeoutMs, retries }) {
 }
 
 /**
- * Paginate WordPress posts for the selected scope.
+ * Paginate WordPress posts for one category filter (or unrestricted).
  * @param {{
- *   scope: "news"|"all",
+ *   categoryId: number|null,
+ *   label: string,
  *   lang: string,
  *   perPage: number,
  *   limit: number|null,
@@ -271,8 +329,9 @@ async function fetchPostsPage(url, { timeoutMs, retries }) {
  *   retries: number,
  * }} options
  */
-export async function collectPosts(options) {
-  const { scope, lang, perPage, limit, timeoutMs, retries } = options;
+async function collectPostsForCategory(options) {
+  const { categoryId, label, lang, perPage, limit, timeoutMs, retries } =
+    options;
   const fields = [
     "id",
     "date",
@@ -302,12 +361,12 @@ export async function collectPosts(options) {
       orderby: "date",
       order: "desc",
     });
-    if (scope === "news") {
-      params.set("categories", String(NEWS_CATEGORY_ID));
+    if (categoryId != null) {
+      params.set("categories", String(categoryId));
     }
 
     const url = `${WP_POSTS_URL}?${params}`;
-    process.stdout.write(`Fetching posts page ${page}… `);
+    process.stdout.write(`Fetching ${label} page ${page}… `);
     const result = await fetchPostsPage(url, { timeoutMs, retries });
     total = result.total;
     totalPages = result.totalPages;
@@ -335,6 +394,92 @@ export async function collectPosts(options) {
 }
 
 /**
+ * Paginate WordPress posts for the selected scope.
+ * For `both`, fetches News and Success Story categories separately and merges
+ * by post id (a post can appear in both collections).
+ * @param {{
+ *   scope: "both"|"news"|"success-stories"|"all",
+ *   lang: string,
+ *   perPage: number,
+ *   limit: number|null,
+ *   timeoutMs: number,
+ *   retries: number,
+ * }} options
+ */
+export async function collectPosts(options) {
+  const { scope, lang, perPage, limit, timeoutMs, retries } = options;
+
+  /** @type {{ categoryId: number|null, label: string }[]} */
+  const queries =
+    scope === "news"
+      ? [{ categoryId: NEWS_CATEGORY_ID, label: "news" }]
+      : scope === "success-stories"
+        ? [
+            {
+              categoryId: SUCCESS_STORY_CATEGORY_ID,
+              label: "success-stories",
+            },
+          ]
+        : scope === "both"
+          ? [
+              { categoryId: NEWS_CATEGORY_ID, label: "news" },
+              {
+                categoryId: SUCCESS_STORY_CATEGORY_ID,
+                label: "success-stories",
+              },
+            ]
+          : [{ categoryId: null, label: "all-posts" }];
+
+  /** @type {Map<number, object>} */
+  const byId = new Map();
+  let pagesFetched = 0;
+  /** @type {Record<string, number|null>} */
+  const totalsByQuery = {};
+
+  for (const query of queries) {
+    // For multi-query scopes, each query may use the full --limit; the merged
+    // set is truncated after sort so dry-runs still sample both collections.
+    const result = await collectPostsForCategory({
+      categoryId: query.categoryId,
+      label: query.label,
+      lang,
+      perPage,
+      limit,
+      timeoutMs,
+      retries,
+    });
+    pagesFetched += result.pagesFetched;
+    totalsByQuery[query.label] = result.totalReported;
+
+    for (const post of result.posts) {
+      if (byId.has(post.id)) continue;
+      byId.set(post.id, post);
+    }
+  }
+
+  let posts = Array.from(byId.values()).sort((a, b) =>
+    String(b.date ?? "").localeCompare(String(a.date ?? ""))
+  );
+  if (limit != null && posts.length > limit) {
+    posts = posts.slice(0, limit);
+  }
+
+  return {
+    posts,
+    totalReported:
+      scope === "both"
+        ? Object.values(totalsByQuery).reduce(
+            (sum, n) => sum + (Number.isFinite(n) ? n : 0),
+            0
+          )
+        : (totalsByQuery[queries[0].label] ?? posts.length),
+    totalPagesReported: null,
+    pagesFetched,
+    totalsByQuery,
+  };
+}
+
+/**
  * Normalize a WP post into a stored record.
  * @param {object} post
  */
@@ -343,6 +488,7 @@ export function normalizePost(post) {
   const excerpt = htmlToPlainText(post?.excerpt?.rendered ?? "");
   const content = htmlToPlainText(post?.content?.rendered ?? "");
   const scanText = [title, excerpt, content].filter(Boolean).join("\n\n");
+  const categories = Array.isArray(post.categories) ? post.categories : [];
 
   return {
     id: post.id,
@@ -353,8 +499,9 @@ export function normalizePost(post) {
     title,
     excerpt,
     content,
-    categories: Array.isArray(post.categories) ? post.categories : [],
+    categories,
     tags: Array.isArray(post.tags) ? post.tags : [],
+    collections: collectionsFromCategories(categories),
     scan_text: scanText,
   };
 }
@@ -401,8 +548,18 @@ export function scanBuzzwords(text, terms = BUZZWORDS) {
 export function buildReport(posts, meta) {
   const matched = [];
   const termCounts = Object.fromEntries(BUZZWORDS.map((t) => [t.id, 0]));
+  const collectionCounts = {
+    news: 0,
+    "success-story": 0,
+  };
 
   for (const post of posts) {
+    for (const collection of post.collections ?? []) {
+      if (collectionCounts[collection] != null) {
+        collectionCounts[collection] += 1;
+      }
+    }
+
     const matches = scanBuzzwords(post.scan_text);
     if (matches.length === 0) continue;
 
@@ -417,6 +574,7 @@ export function buildReport(posts, meta) {
       link: post.link,
       title: post.title,
       categories: post.categories,
+      collections: post.collections ?? [],
       matched_terms: matches.map((m) => m.id),
       matches,
     });
@@ -424,13 +582,25 @@ export function buildReport(posts, meta) {
 
   matched.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
+  const sourceListings = listingUrlsForScope(meta.scope);
+
   return {
     fetched_at: meta.fetched_at,
-    source_listing: NEWS_LISTING_URL,
+    source_listing: sourceListings[0] ?? NEWS_LISTING_URL,
+    source_listings: sourceListings,
     scope: meta.scope,
     lang: meta.lang,
+    category_ids: collectionsForScope(meta.scope)
+      ? Object.fromEntries(
+          (collectionsForScope(meta.scope) ?? []).map((id) => [
+            id,
+            id === "news" ? NEWS_CATEGORY_ID : SUCCESS_STORY_CATEGORY_ID,
+          ])
+        )
+      : null,
     posts_collected: posts.length,
     posts_matched: matched.length,
+    collection_counts: collectionCounts,
     term_counts: termCounts,
     buzzwords: BUZZWORDS.map((t) => ({ id: t.id, label: t.label })),
     matches: matched,
@@ -473,10 +643,13 @@ async function main() {
     throw new Error("NEWS_PER_PAGE must be ≤ 100 (WordPress API limit)");
   }
 
+  const listingUrls = listingUrlsForScope(args.scope);
   console.log(
-    `Crawling NFDI news (scope=${args.scope}, lang=${lang}) via WP REST API`
+    `Crawling NFDI posts (scope=${args.scope}, lang=${lang}) via WP REST API`
   );
-  console.log(`Listing page reference: ${NEWS_LISTING_URL}`);
+  for (const url of listingUrls) {
+    console.log(`Listing page reference: ${url}`);
+  }
 
   const collection = await collectPosts({
     scope: args.scope,
@@ -497,11 +670,16 @@ async function main() {
 
   const sourcePayload = {
     fetched_at: fetchedAt,
-    source_listing: NEWS_LISTING_URL,
+    source_listing: listingUrls[0] ?? NEWS_LISTING_URL,
+    source_listings: listingUrls,
     api: WP_POSTS_URL,
     scope: args.scope,
     lang,
-    category_id: args.scope === "news" ? NEWS_CATEGORY_ID : null,
+    category_ids: {
+      news: NEWS_CATEGORY_ID,
+      "success-story": SUCCESS_STORY_CATEGORY_ID,
+    },
+    totals_by_query: collection.totalsByQuery,
     total_reported: collection.totalReported,
     total_pages_reported: collection.totalPagesReported,
     pages_fetched: collection.pagesFetched,
@@ -510,8 +688,9 @@ async function main() {
 
   const meta = {
     id: "nfdi-news",
-    label: "NFDI news (English)",
-    source_url: NEWS_LISTING_URL,
+    label: "NFDI news & success stories (English)",
+    source_url: listingUrls[0] ?? NEWS_LISTING_URL,
+    source_urls: listingUrls,
     fetch_url: WP_POSTS_URL,
     type: "json",
     scope: args.scope,
@@ -519,20 +698,28 @@ async function main() {
     fetched_at: fetchedAt,
     posts_collected: posts.length,
     posts_matched: report.posts_matched,
+    collection_counts: report.collection_counts,
     filename: "posts.json",
   };
 
   console.log(
     `\nCollected ${posts.length} post(s); ${report.posts_matched} match buzzwords.`
   );
+  if (report.collection_counts) {
+    console.log(
+      `  collections: news=${report.collection_counts.news}, success-story=${report.collection_counts["success-story"]}`
+    );
+  }
   for (const [id, count] of Object.entries(report.term_counts)) {
     if (count > 0) console.log(`  ${id}: ${count} post(s)`);
   }
   if (report.matches.length) {
     console.log("\nMatched posts:");
     for (const hit of report.matches) {
+      const collections =
+        hit.collections?.length > 0 ? hit.collections.join("+") : "other";
       console.log(
-        `  - ${hit.date?.slice(0, 10) ?? "????-??-??"}  ${hit.title}`
+        `  - ${hit.date?.slice(0, 10) ?? "????-??-??"}  [${collections}]  ${hit.title}`
       );
       console.log(`    ${hit.link}`);
       console.log(`    terms: ${hit.matched_terms.join(", ")}`);

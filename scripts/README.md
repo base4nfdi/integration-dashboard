@@ -336,35 +336,38 @@ node scripts/push-ref-entities-to-nocodb.mjs --search "DKRZ" --pick 1 --apply
 
 Writes a plan to `data/parsed/ref-entities.push-report.json`. Requires `NOCODB_API_TOKEN`. Wikidata has ~2k German research institutes — review the dry-run (or use `--backfill-only` / `--limit`) before `--apply`.
 
-### 12. Crawl NFDI news for Base4NFDI buzzwords
+### 12. Crawl NFDI news & success stories for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 
-Collects English NFDI news posts that appear on [nfdi.de/news](https://www.nfdi.de/news/?lang=en) (WordPress REST API, full article bodies) and scans them for Base4NFDI / basic-service terms. Divi “Related Articles” / “Other posts” footers are stripped before scanning so related-post chrome does not create false hits:
+Collects English posts from [nfdi.de/news](https://www.nfdi.de/news/?lang=en) and [nfdi.de/success-stories](https://www.nfdi.de/success-stories/?lang=en) via the WordPress REST API (full article bodies) and scans them for Base4NFDI / basic-service terms. Success stories use WP category **Success Story** (`134`); news uses **News** (`43`). Divi “Related Articles” / “Other posts” footers are stripped before scanning so related-post chrome does not create false hits:
 
 `Base4NFDI`, `basic service(s)`, `TS4NFDI`, `Jupyter4NFDI`, `DMP4NFDI`, `RDMTraining4NFDI`, `RDMT4NFDI`, `PID4NFDI`, `Accounting4NFDI`, `KGI4NFDI`, `nfdi.software`, `IAM4NFDI`.
 
-Writes the full collection under `data/sources/nfdi-news/` and a matches report to `data/parsed/nfdi-news.json`.
+Writes the full collection under `data/sources/nfdi-news/` and a matches report to `data/parsed/nfdi-news.json`. Each post records `collections` (`news` / `success-story`).
 
 ```bash
 node scripts/crawl-nfdi-news.mjs
+node scripts/crawl-nfdi-news.mjs --scope success-stories
 node scripts/crawl-nfdi-news.mjs --scope all
 node scripts/crawl-nfdi-news.mjs --dry-run --limit 20
 ```
 
 | Flag | Effect |
 | --- | --- |
-| `--scope news` | Only the WordPress **News** category (default; matches the listing page) |
-| `--scope all` | Every English post (newsletters, success stories, press, …) |
+| `--scope both` | **News** + **Success Story** categories (default) |
+| `--scope news` | Only the WordPress **News** category (`/news/`) |
+| `--scope success-stories` | Only the **Success Story** category (`/success-stories/`) |
+| `--scope all` | Every English post (newsletters, press, …) |
 | `--dry-run` | Print summary only; do not write files |
-| `--limit <n>` | Cap how many posts to fetch (testing) |
+| `--limit <n>` | Cap how many posts to keep after merge (testing) |
 | `-h`, `--help` | Show usage |
 
 | Variable | Default | Notes |
 | --- | --- | --- |
 | `OUTPUT_DIR` | `data/sources/nfdi-news` | Raw posts + `meta.json` |
 | `OUTPUT_JSON` | `data/parsed/nfdi-news.json` | Matches report |
-| `NEWS_LANG` | `en` | Polylang language code |
+| `NEWS_LANG` | `en` | Polylang / WPML language code |
 | `NEWS_PER_PAGE` | `100` | WP API page size (max 100) |
 | `FETCH_TIMEOUT_MS` / `FETCH_RETRIES` | `60000` / `2` | Shared HTTP settings |
 

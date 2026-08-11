@@ -1,23 +1,35 @@
 {
-  "fetched_at": "2026-07-29T13:44:35.744Z",
+  "fetched_at": "2026-08-11T12:51:08.652Z",
   "source_listing": "https://www.nfdi.de/news/?lang=en",
-  "scope": "news",
+  "source_listings": [
+    "https://www.nfdi.de/news/?lang=en",
+    "https://www.nfdi.de/success-stories/?lang=en"
+  ],
+  "scope": "both",
   "lang": "en",
-  "posts_collected": 91,
-  "posts_matched": 19,
+  "category_ids": {
+    "news": 43,
+    "success-story": 134
+  },
+  "posts_collected": 132,
+  "posts_matched": 23,
+  "collection_counts": {
+    "news": 91,
+    "success-story": 41
+  },
   "term_counts": {
-    "base4nfdi": 14,
-    "basic-service": 17,
-    "ts4nfdi": 3,
+    "base4nfdi": 16,
+    "basic-service": 19,
+    "ts4nfdi": 5,
     "jupyter4nfdi": 1,
-    "dmp4nfdi": 3,
+    "dmp4nfdi": 5,
     "rdmtraining4nfdi": 1,
     "rdmt4nfdi": 0,
     "pid4nfdi": 4,
     "accounting4nfdi": 0,
     "kgi4nfdi": 1,
     "nfdi.software": 1,
-    "iam4nfdi": 5
+    "iam4nfdi": 7
   },
   "buzzwords": [
     {
@@ -71,6 +83,196 @@
   ],
   "matches": [
     {
+      "id": 46095,
+      "date": "2026-07-24T12:06:26",
+      "slug": "enabling-dmp-services-for-the-agrosystems-research-community-dmp4nfdi-in-fairagro",
+      "link": "https://www.nfdi.de/enabling-dmp-services-for-the-agrosystems-research-community-dmp4nfdi-in-fairagro/?lang=en",
+      "title": "Enabling DMP services for the agrosystems research community: DMP4NFDI in FAIRagro",
+      "categories": [
+        156,
+        151,
+        160,
+        134,
+        157
+      ],
+      "collections": [
+        "success-story"
+      ],
+      "matched_terms": [
+        "basic-service",
+        "ts4nfdi",
+        "dmp4nfdi",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 2,
+          "snippets": [
+            "…the agrosystems research community with the support of the basic service DMP4NFDI. FAIRagro’s DMP Service is built on the open-sourc…",
+            "…the existing NFDI DMP Template Framework, developed by the basic service during their initialisation phase, making it machine-action…"
+          ]
+        },
+        {
+          "id": "ts4nfdi",
+          "label": "TS4NFDI",
+          "count": 2,
+          "snippets": [
+            "…ntegration of controlled vocabularies in collaboration with TS4NFDI. FAIRagro has established a comprehensive Data Management…",
+            "…DMP4NFDI also collaborate in a joint incubator project for TS4NFDI, aimed at dynamically providing terminologies for specific…"
+          ]
+        },
+        {
+          "id": "dmp4nfdi",
+          "label": "DMP4NFDI",
+          "count": 5,
+          "snippets": [
+            "…abling DMP services for the agrosystems research community: DMP4NFDI in FAIRagro FAIRagro DMP Service Strengthens Research Data…",
+            "…ent in Agricultural Systems Research In collaboration with DMP4NFDI, FAIRagro has established a comprehensive service for data…",
+            "…Developed through a series of joint incubator projects with DMP4NFDI, the service continues to evolve, including the future inte…",
+            "…ms research community with the support of the basic service DMP4NFDI. FAIRagro’s DMP Service is built on the open-source Researc…",
+            "…source Research Data Management Organiser (RDMO), hosted by DMP4NFDI, and provides a discipline-specific template tailored to ag…"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 1,
+          "snippets": [
+            "…g the long-term value and impact of research. Thanks to the IAM4NFDI login infrastructure implemented in RDMO, the FAIRagro comm…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43616,
+      "date": "2026-04-30T14:09:53",
+      "slug": "coscine-a-scalable-platform-for-fair-research-data-management-nfdi4ing",
+      "link": "https://www.nfdi.de/coscine-a-scalable-platform-for-fair-research-data-management-nfdi4ing/?lang=en",
+      "title": "Coscine: A Scalable Platform for FAIR Research Data Management (NFDI4ING)",
+      "categories": [
+        151,
+        149,
+        136,
+        150,
+        134
+      ],
+      "collections": [
+        "success-story"
+      ],
+      "matched_terms": [
+        "dmp4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "dmp4nfdi",
+          "label": "DMP4NFDI",
+          "count": 1,
+          "snippets": [
+            "…ith RDMO as part of a joint incubator with the Base Service DMP4NFDI (January–June 2026). The goal is to seamlessly connect data…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 45266,
+      "date": "2026-04-29T16:31:15",
+      "slug": "improved-fairness-through-the-simple-use-of-standardized-terms-ts4nfdi-in-radar-base4nfdi",
+      "link": "https://www.nfdi.de/improved-fairness-through-the-simple-use-of-standardized-terms-ts4nfdi-in-radar-base4nfdi/?lang=en",
+      "title": "Improved FAIRness through the simple use of standardized terms: TS4NFDI in RADAR (Base4NFDI)",
+      "categories": [
+        156,
+        152,
+        139,
+        134,
+        157
+      ],
+      "collections": [
+        "success-story"
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "basic-service",
+        "ts4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 2,
+          "snippets": [
+            "…ugh the simple use of standardized terms: TS4NFDI in RADAR (Base4NFDI) As part of an incubator project, the TS4NFDI basic servic…",
+            "…oundaries. More information: https://terminology.services.base4nfdi.de/"
+          ]
+        },
+        {
+          "id": "basic-service",
+          "label": "basic service",
+          "count": 2,
+          "snippets": [
+            "…R (Base4NFDI) As part of an incubator project, the TS4NFDI basic service was integrated into the interdisciplinary research data rep…",
+            "…gy Services 4 As part of an incubator project, the TS4NFDI basic service was integrated into the interdisciplinary research data rep…"
+          ]
+        },
+        {
+          "id": "ts4nfdi",
+          "label": "TS4NFDI",
+          "count": 5,
+          "snippets": [
+            "…oved FAIRness through the simple use of standardized terms: TS4NFDI in RADAR (Base4NFDI) As part of an incubator project, the…",
+            "…in RADAR (Base4NFDI) As part of an incubator project, the TS4NFDI basic service was integrated into the interdisciplinary res…",
+            "…ity, and ultimately the quality and reusability of datasets.TS4NFDI (Terminology Services 4 As part of an incubator project, t…",
+            "…erminology Services 4 As part of an incubator project, the TS4NFDI basic service was integrated into the interdisciplinary res…",
+            "…y, and ultimately the quality and reusability of datasets. TS4NFDI (Terminology Services 4 NFDI) provides access to quality-as…"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 43513,
+      "date": "2026-03-02T12:18:00",
+      "slug": "less-login-more-research-iam4nfdi-improves-access-to-coscine-in-nfdi4ing-base4nfdi",
+      "link": "https://www.nfdi.de/less-login-more-research-iam4nfdi-improves-access-to-coscine-in-nfdi4ing-base4nfdi/?lang=en",
+      "title": "Less Login, More Research: IAM4NFDI Improves Access to Coscine in NFDI4ING (Base4NFDI)",
+      "categories": [
+        156,
+        136,
+        150,
+        134
+      ],
+      "collections": [
+        "success-story"
+      ],
+      "matched_terms": [
+        "base4nfdi",
+        "iam4nfdi"
+      ],
+      "matches": [
+        {
+          "id": "base4nfdi",
+          "label": "Base4NFDI",
+          "count": 2,
+          "snippets": [
+            "…Research: IAM4NFDI Improves Access to Coscine in NFDI4ING (Base4NFDI) In two incubator projects, access to the research data ma…",
+            "…nce for the research community. More information: https://base4nfdi.de/projects/iam4nfdi"
+          ]
+        },
+        {
+          "id": "iam4nfdi",
+          "label": "IAM4NFDI",
+          "count": 5,
+          "snippets": [
+            "Less Login, More Research: IAM4NFDI Improves Access to Coscine in NFDI4ING (Base4NFDI) In two…",
+            "…better connected across the NFDI landscape with the help of IAM4NFDI. The goal was to simplify user login processes and the mana…",
+            "…processes and the management of access rights.By using the IAM4NFDI Community AAI of NFDI4ING, users can sign in with In two i…",
+            "…better connected across the NFDI landscape with the help of IAM4NFDI. The goal was to simplify user login processes and the mana…",
+            "…rocesses and the management of access rights. By using the IAM4NFDI Community AAI of NFDI4ING, users can sign in with familiar…"
+          ]
+        }
+      ]
+    },
+    {
       "id": 42800,
       "date": "2026-01-14T11:04:54",
       "slug": "nfditalks-2026-inspiring-lectures-on-nfdi-and-research-data",
@@ -78,6 +280,9 @@
       "title": "NFDITalks 2026: Inspiring lectures on NFDI and research data",
       "categories": [
         43
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "dmp4nfdi",
@@ -112,6 +317,9 @@
       "categories": [
         43
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "basic-service"
       ],
@@ -135,6 +343,9 @@
       "categories": [
         43,
         55
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi"
@@ -160,6 +371,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "basic-service"
       ],
@@ -182,6 +396,9 @@
       "title": "DMP4NFDI enters the integration phase",
       "categories": [
         43
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi",
@@ -233,6 +450,9 @@
       "categories": [
         43
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service"
@@ -270,6 +490,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service"
@@ -303,6 +526,9 @@
       "categories": [
         43,
         55
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi",
@@ -383,6 +609,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service",
@@ -435,6 +664,9 @@
       "categories": [
         43,
         55
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi",
@@ -523,6 +755,9 @@
       "categories": [
         43
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service",
@@ -586,6 +821,9 @@
       "categories": [
         43
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service",
@@ -635,6 +873,9 @@
       "title": "Funding of new NFDI Basic Services for Persistent Identifiers and Terminologies",
       "categories": [
         43
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi",
@@ -707,6 +948,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service",
@@ -760,6 +1004,9 @@
         17,
         43
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service"
@@ -794,6 +1041,9 @@
       "title": "The NFDI Year in Review 2022: Highlights and Changes",
       "categories": [
         43
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "base4nfdi",
@@ -834,6 +1084,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "base4nfdi",
         "basic-service"
@@ -868,6 +1121,9 @@
         43,
         55
       ],
+      "collections": [
+        "news"
+      ],
       "matched_terms": [
         "basic-service"
       ],
@@ -894,6 +1150,9 @@
       "title": "DFG publishes timetable for basic service consortia",
       "categories": [
         43
+      ],
+      "collections": [
+        "news"
       ],
       "matched_terms": [
         "basic-service"

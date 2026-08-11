@@ -1,0 +1,369 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
+
+{% block content %}
+{% set news = load_data(path="data/parsed/nfdi-news.json") %}
+{% set matches = news.matches | default(value=[]) %}
+{% set buzzwords = news.buzzwords | default(value=[]) %}
+{% set term_counts = news.term_counts %}
+{% set source_listings = news.source_listings | default(value=[]) %}
+{% set total_stories = matches | length %}
+
+<article class="static-page stories-page">
+  <header class="static-page-header">
+    <p class="breadcrumb">
+      <a href="{{ get_url(path='/') | safe }}">Dashboard</a> /
+      {{ page.title }}
+    </p>
+    <h2>{{ page.title }}</h2>
+    {% if page.content %}
+    <div class="dashboard-intro">{{ page.content | safe }}</div>
+    {% endif %}
+  </header>
+
+  <div class="summary-cards" aria-label="News match summary">
+    <article class="summary-card">
+      <p class="summary-label">Matched articles</p>
+      <p class="summary-value" id="stories-visible-count">{{ news.posts_matched | default(value=total_stories) }}</p>
+    </article>
+    <article class="summary-card">
+      <p class="summary-label">Articles scanned</p>
+      <p class="summary-value">{{ news.posts_collected | default(value="—") }}</p>
+    </article>
+    <article class="summary-card">
+      <p class="summary-label">NFDI Sources</p>
+      <p class="summary-value summary-value--text">
+        {% if source_listings | length > 0 %}
+        {% for url in source_listings %}
+        {% if "success-stories" in url %}
+        <a href="{{ url }}" target="_blank" rel="noopener noreferrer">success stories</a>{% if not loop.last %} · {% endif %}
+        {% else %}
+        <a href="{{ url }}" target="_blank" rel="noopener noreferrer">news</a>{% if not loop.last %} · {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% elif news.source_listing %}
+        <a href="{{ news.source_listing }}" target="_blank" rel="noopener noreferrer">nfdi.de</a>
+        {% else %}
+        nfdi.de
+        {% endif %}
+      </p>
+    </article>
+    <!-- <article class="summary-card">
+      <p class="summary-label">Last fetched</p>
+      <p class="summary-value summary-value--text">
+        {% if news.fetched_at %}
+        {{ news.fetched_at | truncate(length=10, end="") }}
+        {% else %}
+        —
+        {% endif %}
+      </p>
+    </article> -->
+  </div>
+
+  <div class="table-panel">
+    <div class="table-panel-header">
+      <h3>Matched NFDI articles</h3>
+      <p class="table-meta" id="stories-table-meta">
+        {% if total_stories == 1 %}
+        1 story
+        {% else %}
+        {{ total_stories }} articles
+        {% endif %}
+        {% if news.fetched_at %}
+        · updated {{ news.fetched_at | truncate(length=10, end="") }}
+        {% endif %}
+      </p>
+    </div>
+
+    {% if total_stories > 0 %}
+    <form class="filter-bar" id="stories-filter-bar" aria-label="Filter stories">
+      <div class="filter-groups">
+        <fieldset class="filter-group">
+          <legend>Collection</legend>
+          <div class="filter-chip-list" id="stories-collection-filters">
+            <label class="filter-chip" for="collection-filter-news">
+              <input type="checkbox" id="collection-filter-news" name="collection" value="news">
+              <span>News</span>
+            </label>
+            <label class="filter-chip" for="collection-filter-success-story">
+              <input type="checkbox" id="collection-filter-success-story" name="collection" value="success-story">
+              <span>Success Story</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="filter-group">
+          <legend>Matched terms</legend>
+          <div class="filter-chip-list" id="stories-term-filters">
+            {% for buzz in buzzwords %}
+            {% set count = term_counts[buzz.id] | default(value=0) %}
+            {% if count > 0 %}
+            <label class="filter-chip" for="term-filter-{{ buzz.id }}">
+              <input
+                type="checkbox"
+                id="term-filter-{{ buzz.id }}"
+                name="term"
+                value="{{ buzz.id }}"
+              >
+              <span>{{ buzz.label }}</span>
+            </label>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="filter-clear" id="stories-filter-clear" disabled>Clear filters</button>
+        <div class="filter-search">
+          <label class="visually-hidden" for="stories-filter-search">Search stories</label>
+          <input
+            type="search"
+            id="stories-filter-search"
+            name="q"
+            placeholder="Search title, date, terms…"
+            autocomplete="off"
+            spellcheck="false"
+          >
+        </div>
+      </div>
+    </form>
+    {% endif %}
+
+    <div class="table-wrap">
+      <table class="data-table stories-table" id="stories-table">
+        <thead>
+          <tr>
+            <th scope="col">Title (source link)</th>
+            <th scope="col">Published</th>
+            <th scope="col">Collection</th>
+            <!-- <th scope="col">Source</th> -->
+            <th scope="col">Matched terms</th>
+          </tr>
+        </thead>
+        <tbody id="stories-table-body">
+          {% if total_stories == 0 %}
+          <tr>
+            <td colspan="5" class="table-empty">No matched NFDI articles found.</td>
+          </tr>
+          {% else %}
+          {% for item in matches %}
+          {% set term_ids = item.matched_terms | default(value=[]) %}
+          {% set collections = item.collections | default(value=[]) %}
+          {% set published = item.date | truncate(length=10, end="") %}
+          <tr
+            class="stories-row"
+            data-terms="{{ term_ids | join(sep=' ') }}"
+            data-collections="{{ collections | join(sep=' ') }}"
+            data-search="{{ item.title }} {{ published }} {{ term_ids | join(sep=' ') }} {{ collections | join(sep=' ') }}{% if item.matches %}{% for term in item.matches %} {{ term.label }}{% endfor %}{% endif %}{% if 'news' in collections %} News{% endif %}{% if 'success-story' in collections %} Success Story{% endif %}"
+          >
+            <td class="stories-title">
+              {% if item.link %}
+              <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+              {% else %}
+              {{ item.title }}
+              {% endif %}
+            </td>
+            <td class="stories-date">
+              {% if item.date %}
+              <time datetime="{{ item.date }}">{{ published }}</time>
+              {% else %}
+              —
+              {% endif %}
+            </td>
+            <td class="stories-collections">
+              {% if collections | length > 0 %}
+              <ul class="term-chip-list">
+                {% for collection in collections %}
+                <li>
+                  <span class="term-chip term-chip--collection">
+                    {% if collection == "success-story" %}Success Story{% elif collection == "news" %}News{% else %}{{ collection }}{% endif %}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% else %}
+              —
+              {% endif %}
+            </td>
+            <!-- <td class="stories-source">
+              {% if item.link %}
+              <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">Open article</a>
+              {% else %}
+              —
+              {% endif %}
+            </td> -->
+            <td class="stories-terms">
+              {% if item.matches %}
+              <ul class="term-chip-list">
+                {% for term in item.matches %}
+                <li>
+                  <span class="term-chip" title="{{ term.id }}">
+                    {{ term.label }}
+                    {% if term.count and term.count > 1 %}
+                    <span class="term-chip-count">{{ term.count }}</span>
+                    {% endif %}
+                  </span>
+                </li>
+                {% endfor %}
+              </ul>
+              {% elif item.matched_terms %}
+              <ul class="term-chip-list">
+                {% for term_id in item.matched_terms %}
+                <li><span class="term-chip">{{ term_id }}</span></li>
+                {% endfor %}
+              </ul>
+              {% else %}
+              —
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+          <tr class="stories-empty-row" id="stories-empty-row" hidden>
+            <td colspan="5" class="table-empty">No stories match the current filters.</td>
+          </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  {% if buzzwords | length > 0 %}
+  <aside class="stories-term-legend table-panel">
+    <div class="table-panel-header">
+      <h3>Tracked terms</h3>
+      <p class="table-meta">Counts across matched stories</p>
+    </div>
+    <div class="stories-term-legend-body">
+      <ul class="term-chip-list term-chip-list--legend">
+        {% for buzz in buzzwords %}
+        {% set count = term_counts[buzz.id] | default(value=0) %}
+        <li>
+          <span class="term-chip{% if count == 0 %} term-chip--muted{% endif %}">
+            {{ buzz.label }}
+            <span class="term-chip-count">{{ count }}</span>
+          </span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </aside>
+  {% endif %}
+</article>
+
+{% if total_stories > 0 %}
+<script type="application/json" id="stories-page-config">
+{
+  "totalStories": {{ total_stories }},
+  "updatedLabel": {% if news.fetched_at %}" · updated {{ news.fetched_at | truncate(length=10, end="") }}"{% else %}""{% endif %}
+}
+</script>
+<script>
+(function () {
+  const configEl = document.getElementById("stories-page-config");
+  const config = JSON.parse(configEl.textContent);
+  const totalStories = Number(config.totalStories) || 0;
+  const updatedLabel = String(config.updatedLabel || "");
+
+  const filterBar = document.getElementById("stories-filter-bar");
+  const searchInput = document.getElementById("stories-filter-search");
+  const clearButton = document.getElementById("stories-filter-clear");
+  const rows = Array.from(document.querySelectorAll(".stories-row"));
+  const emptyRow = document.getElementById("stories-empty-row");
+  const tableMeta = document.getElementById("stories-table-meta");
+  const visibleCount = document.getElementById("stories-visible-count");
+
+  const state = {
+    search: "",
+    terms: new Set(),
+    collections: new Set(),
+  };
+
+  function selectedValues(name) {
+    return Array.from(
+      filterBar.querySelectorAll(`input[name="${name}"]:checked`),
+      (input) => input.value
+    );
+  }
+
+  function hasActiveFilters() {
+    return (
+      Boolean(state.search.trim()) ||
+      state.terms.size > 0 ||
+      state.collections.size > 0
+    );
+  }
+
+  function rowHasAny(row, datasetKey, selected) {
+    if (selected.size === 0) return true;
+    const values = new Set(
+      String(row.dataset[datasetKey] || "")
+        .split(/\s+/)
+        .filter(Boolean)
+    );
+    for (const value of selected) {
+      if (values.has(value)) return true;
+    }
+    return false;
+  }
+
+  function rowMatches(row) {
+    if (!rowHasAny(row, "collections", state.collections)) return false;
+    if (!rowHasAny(row, "terms", state.terms)) return false;
+
+    const query = state.search.trim().toLowerCase();
+    if (!query) return true;
+    return String(row.dataset.search || "").toLowerCase().includes(query);
+  }
+
+  function applyFilters() {
+    state.terms = new Set(selectedValues("term"));
+    state.collections = new Set(selectedValues("collection"));
+    state.search = searchInput.value;
+
+    let shown = 0;
+    for (const row of rows) {
+      const match = rowMatches(row);
+      row.hidden = !match;
+      if (match) shown += 1;
+    }
+
+    if (emptyRow) emptyRow.hidden = shown > 0;
+    if (visibleCount) visibleCount.textContent = String(shown);
+
+    const countLabel =
+      shown === totalStories
+        ? `${shown} stor${shown === 1 ? "y" : "ies"}`
+        : `${shown} of ${totalStories} stories`;
+    tableMeta.textContent = countLabel + updatedLabel;
+    clearButton.disabled = !hasActiveFilters();
+  }
+
+  filterBar.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+
+  searchInput.addEventListener("input", applyFilters);
+
+  filterBar.addEventListener("change", (event) => {
+    const input = event.target;
+    if (!(input instanceof HTMLInputElement)) return;
+    if (input.name !== "term" && input.name !== "collection") return;
+    applyFilters();
+  });
+
+  clearButton.addEventListener("click", () => {
+    searchInput.value = "";
+    filterBar
+      .querySelectorAll('input[name="term"], input[name="collection"]')
+      .forEach((input) => {
+        input.checked = false;
+      });
+    applyFilters();
+    searchInput.focus();
+  });
+})();
+</script>
+{% endif %}
+{% endblock %}

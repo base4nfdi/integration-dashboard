@@ -649,7 +649,7 @@
 
     const source = meta?.source === "nocodb" ? "NocoDB" : "dashboard data";
     const fetched = meta?.fetched_at
-      ? ` · updated ${new Date(meta.fetched_at).toLocaleString()}`
+      ? ` · updated ${String(meta.fetched_at).slice(0, 10)}`
       : "";
     const countLabel =
       records.length === totalCount
