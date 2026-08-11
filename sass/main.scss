@@ -1194,3 +1194,90 @@ main.container:has(.dashboard) {
 .blog-post-content ul {
   padding-left: 1.25rem;
 }
+
+.summary-value--text {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.stories-page .dashboard-intro {
+  max-width: 48rem;
+}
+
+.stories-table .stories-title {
+  min-width: 16rem;
+  font-weight: 600;
+}
+
+.stories-table .stories-date {
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
+.stories-table .stories-source {
+  white-space: nowrap;
+}
+
+.term-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.term-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.term-chip--muted {
+  color: var(--text-muted);
+  font-weight: 500;
+  opacity: 0.75;
+}
+
+.term-chip--collection {
+  background: color-mix(in srgb, var(--accent) 12%, var(--surface-raised));
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border));
+}
+
+.term-chip-count {
+  display: inline-block;
+  min-width: 1.1rem;
+  padding: 0.05rem 0.3rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.term-chip--muted .term-chip-count {
+  background: var(--text-muted);
+}
+
+.stories-term-legend {
+  margin-top: 1.25rem;
+}
+
+.stories-term-legend-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.term-chip-list--legend {
+  gap: 0.45rem;
+}
