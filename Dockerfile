@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG ZOLA_VERSION=0.22.1
+ARG ZOLA_VERSION=0.23.6
 
 # ---------------------------------------------------------------------------
 # Build: fetch NocoDB data (optional) + zola build → public/
