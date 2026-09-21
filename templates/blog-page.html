@@ -64,7 +64,7 @@
         <div class="blog-post-logo-partners">
           {% if page.extra.logo_project %}
           {% set logo_project_raw = page.extra.logo_project %}
-          {% if logo_project_raw is starting_with("http://") or logo_project_raw is starting_with("https://") %}
+          {% if logo_project_raw is starting_with(pat="http://") or logo_project_raw is starting_with(pat="https://") %}
             {% set logo_project_src = logo_project_raw %}
           {% else %}
             {% set logo_project_src = get_url(path=logo_project_raw) %}
@@ -79,7 +79,7 @@
           {% endif %}
           {% if page.extra.logo_consortia %}
           {% set logo_consortia_raw = page.extra.logo_consortia %}
-          {% if logo_consortia_raw is starting_with("http://") or logo_consortia_raw is starting_with("https://") %}
+          {% if logo_consortia_raw is starting_with(pat="http://") or logo_consortia_raw is starting_with(pat="https://") %}
             {% set logo_consortia_src = logo_consortia_raw %}
           {% else %}
             {% set logo_consortia_src = get_url(path=logo_consortia_raw) %}
