@@ -1,53 +1,61 @@
 {
-  "fetched_at": "2026-08-04T13:01:49.779Z",
+  "fetched_at": "2026-09-28T20:43:11.975Z",
   "output_dir": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources",
   "sources": [
     {
       "id": "iam4nfdi",
       "label": "IAM4NFDI Incubator Dashboard",
       "source_url": "https://incubators.nfdi-aai.de/",
+      "page_url": "https://incubators.nfdi-aai.de/",
+      "page_kind": "Incubators",
       "fetch_url": "https://incubators.nfdi-aai.de/",
       "type": "html",
       "content_type": "text/html",
       "status": 200,
       "filename": "page.html",
-      "fetched_at": "2026-08-04T13:01:48.905Z",
+      "fetched_at": "2026-09-28T20:43:10.915Z",
       "bytes": 149388
     },
     {
       "id": "ts4nfdi",
       "label": "TS4NFDI Service Portal projects",
       "source_url": "https://github.com/ts4nfdi/service-portal/blob/main/app/ui/incubators/projects.json",
+      "page_url": "https://terminology.services.base4nfdi.de/incubators",
+      "page_kind": "Incubators",
       "fetch_url": "https://raw.githubusercontent.com/ts4nfdi/service-portal/main/app/ui/incubators/projects.json",
       "type": "json",
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "projects.json",
-      "fetched_at": "2026-08-04T13:01:49.247Z",
-      "bytes": 34002
+      "fetched_at": "2026-09-28T20:43:11.281Z",
+      "bytes": 34348
     },
     {
       "id": "dmp4nfdi",
       "label": "DMP4NFDI incubator content",
       "source_url": "https://github.com/base4nfdi/dmp4nfdi-website/blob/main/content/incubator/_index.md?plain=1",
+      "page_url": "https://dmp.services.base4nfdi.de/incubator/",
+      "page_kind": "Incubators",
       "fetch_url": "https://raw.githubusercontent.com/base4nfdi/dmp4nfdi-website/main/content/incubator/_index.md",
       "type": "markdown",
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "incubator.md",
-      "fetched_at": "2026-08-04T13:01:49.509Z",
-      "bytes": 43898
+      "fetched_at": "2026-09-28T20:43:11.696Z",
+      "bytes": 44969
     },
     {
       "id": "pid4nfdi",
       "label": "PID4NFDI use cases",
       "source_url": "https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md",
+      "page_url": "https://pid.services.base4nfdi.de/community/use-cases/",
+      "page_kind": "Use cases",
       "fetch_url": "https://raw.githubusercontent.com/base4nfdi/pid4nfdi/main/content/community/use-cases.md",
       "type": "markdown",
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "use-cases.md",
-      "fetched_at": "2026-08-04T13:01:49.773Z",
+      "fetched_at": "2026-09-28T20:43:11.959Z",
       "bytes": 23269
     }
   ]

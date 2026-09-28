@@ -1,9 +1,9 @@
 {
   "source": "dmp4nfdi",
   "basic_service": "DMP",
-  "parsed_at": "2026-08-04T13:01:49.952Z",
+  "parsed_at": "2026-09-28T20:43:12.111Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/dmp4nfdi/incubator.md",
-  "record_count": 31,
+  "record_count": 32,
   "records": [
     {
       "id": null,
@@ -79,6 +79,31 @@
       ],
       "entities": [],
       "source_service_type": "Template Development",
+      "source_cycle_label": "Cycle 2"
+    },
+    {
+      "id": null,
+      "inc_name": "Template Development — MatWerk",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
+      "key_article": "dmp-template-development-matwerk",
+      "inc_start": "2026-07-01",
+      "inc_end": "2026-12-31",
+      "inc_cycle": 2,
+      "inc_status": "Running",
+      "inc_descr": "",
+      "inc_goals": "This incubator project will finalise the discipline-specific data management plan (DMP) template and make it available as an RDMO catalogue for the operational MatWerk RDMO client. Training and outreach activities will also be developed to raise awareness and build skills among researchers and stakeholders in NFDI-MatWerk.",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "MatWerk"
+      ],
+      "entities": [],
+      "source_service_type": "Template Development, RDMO Hosting",
       "source_cycle_label": "Cycle 2"
     },
     {
@@ -495,7 +520,7 @@
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "NFDI4Memory is developing a discipline-specific DMP template to support the historical research community in their application process. The questionnaire is being continually refined in close collaboration with the community. In this incubator project, the template is developed based on the existing NFDI DMP Template Framework, while adapting and extending results from the community. The project also includes the integration of the new template into the NFDI4Memory RDMO client.",
-      "inc_results": "",
+      "inc_results": "NFDI4Memory RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory",
       "inc_partner_publications": 0,
       "linked_partners": 1,
       "linked_entities": null,
@@ -571,7 +596,7 @@
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.",
-      "inc_results": "Text+ RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B",
+      "inc_results": "Text+ RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B\nText+ & DMP4NFDI – FDM als Joint Effort\nhttps://textplus.hypotheses.org/19076",
       "inc_partner_publications": 0,
       "linked_partners": 1,
       "linked_entities": null,

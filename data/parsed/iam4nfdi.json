@@ -1,7 +1,7 @@
 {
   "source": "iam4nfdi",
   "basic_service": "IAM",
-  "parsed_at": "2026-08-04T13:01:50.080Z",
+  "parsed_at": "2026-09-28T20:43:12.202Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/iam4nfdi/page.html",
   "record_count": 39,
   "records": [
@@ -76,7 +76,7 @@
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 5,
-      "inc_status": "In preparation",
+      "inc_status": "Finished",
       "inc_descr": "External visitors should be able to use teaching resources published on our website like learning paths curated by the Come2Data team. They should be able to track and save their state of completion of such learning paths and be able to continue at a later point in time. To reach that goal, external visitors need to have a way to log into the website and create an account, also without having an institutional affiliation, for instance with their ORCID-ID. We would like to give virtual organisations (VO), such as members of a specific NFDI consortium, access to our resources and IT systems with one of their accounts like ORCID-ID. Therefore we need to be able to register a vo in our IT components",
       "inc_goals": "",
       "inc_results": "https://zenodo.org/communities/come2data\nhttps://gitlab.hrz.tu-chemnitz.de/come2data",

@@ -2,11 +2,13 @@
   "id": "ts4nfdi",
   "label": "TS4NFDI Service Portal projects",
   "source_url": "https://github.com/ts4nfdi/service-portal/blob/main/app/ui/incubators/projects.json",
+  "page_url": "https://terminology.services.base4nfdi.de/incubators",
+  "page_kind": "Incubators",
   "fetch_url": "https://raw.githubusercontent.com/ts4nfdi/service-portal/main/app/ui/incubators/projects.json",
   "type": "json",
   "content_type": "text/plain; charset=utf-8",
   "status": 200,
   "filename": "projects.json",
-  "fetched_at": "2026-08-04T13:01:49.247Z",
-  "bytes": 34002
+  "fetched_at": "2026-09-28T20:43:11.281Z",
+  "bytes": 34348
 }

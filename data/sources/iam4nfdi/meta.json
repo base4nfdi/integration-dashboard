@@ -2,11 +2,13 @@
   "id": "iam4nfdi",
   "label": "IAM4NFDI Incubator Dashboard",
   "source_url": "https://incubators.nfdi-aai.de/",
+  "page_url": "https://incubators.nfdi-aai.de/",
+  "page_kind": "Incubators",
   "fetch_url": "https://incubators.nfdi-aai.de/",
   "type": "html",
   "content_type": "text/html",
   "status": 200,
   "filename": "page.html",
-  "fetched_at": "2026-08-04T13:01:48.905Z",
+  "fetched_at": "2026-09-28T20:43:10.915Z",
   "bytes": 149388
 }

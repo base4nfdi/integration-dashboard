@@ -35,23 +35,24 @@ sections:
     content:
       title: Call for incubator projects
       subtitle: |
-        <!--         
-        Submissions will open in the second half of March!
-        -->  
+        
+        Submissions will open on 26 October!
+        
 
         <!-- We look forward to your application!     
         
         **Deadline**: April 22, 2026 -->
 
-
+        <!--
         Next Call: Autumn 2026
+        -->
       text: |
         
         <!-- Our 2nd call for incubators is **now open**.
         
         To propose an incubator project, please complete the short application template outlining your goals, team, and expected outcomes, and **submit the template by April 22**. -->
         
-        Our **next call for incubator projects** will open in **autumn 2026**. To apply, please complete the short application template outlining your goals, team, and expected outcomes.
+        Our **next call for incubator projects** will open on **26 October**. To apply, please complete the short application template outlining your goals, team, and expected outcomes.
 
         **Download the Template:** <a href="/files/DMP4NFDI-incubator-template-application.odt" target="_blank" rel="noopener">.odt</a> | <a href="/files/DMP4NFDI-incubator-template-application.docx" target="_blank" rel="noopener">.docx</a> | <a href="/files/DMP4NFDI-incubator-template-application.pdf" target="_blank" rel="noopener">.pdf</a>    
         
@@ -153,6 +154,13 @@ sections:
               <h5>Goal:</h5><p>The Incubator Project aims to optimise the DMP template for engineering sciences. The goal is to significantly enhance the practical applicability of the template within the RDMO tool for engineering research. To this end, feedback gathered during live operation from the community is being incorporated into the revision process. The technical and content-related development involves aligning the questionnaire with the NFDI DMP Template Framework to ensure NFDI-wide standards. To enable the exchange of metadata between RDMO and Coscine, the Coscine query is also being adjusted.</p>
               <h5>Duration:</h5><p>July 2026 - December 2026</p>
             </div>
+
+          <div class="usecase-card" data-service="Template Development, RDMO Hosting" data-cycle="Cycle 2" data-nfdi="MatWerk">
+              <img src="/images/nfdi-matwerk_logo.png" alt="NFDI-MatWerk Logo">
+              <h4>Cycle 2</h4>     
+              <h5>Goal:</h5><p>This incubator project will finalise the discipline-specific data management plan (DMP) template and make it available as an RDMO catalogue for the operational MatWerk RDMO client. Training and outreach activities will also be developed to raise awareness and build skills among researchers and stakeholders in NFDI-MatWerk.</p>
+              <h5>Duration:</h5><p>July 2026 - December 2026</p>
+            </div>            
 
           <div class="usecase-card" data-service="Training & Outreach" data-cycle="Cycle 2" data-nfdi="NFDI4Health">
               <img src="/images/nfdi4health_logo.png" alt="NFDI4health Logo">
@@ -297,6 +305,7 @@ sections:
               <h4>Cycle 0</h4>        
               <h5>Goal:</h5><p>NFDI4Memory is developing a discipline-specific DMP template to support the historical research community in their application process. The questionnaire is being continually refined in close collaboration with the community. In this incubator project, the template is developed based on the existing NFDI DMP Template Framework, while adapting and extending results from the community. The project also includes the integration of the new template into the NFDI4Memory RDMO client.</p>
               <h5>Duration:</h5><p>July 2025 - Dec 2025</p>
+              <h5>Results:</h5><p><a href="https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory" target="_blank" rel="noopener noreferrer">NFDI4Memory RDMO Catalog</a></p>
             </div>      
             
           <div class="usecase-card" data-service="Template Development" data-cycle="Cycle 0" data-nfdi="NFDI4Objects, NFDI4Culture">
@@ -319,7 +328,9 @@ sections:
               <h4>Cycle 0</h4>     
               <h5>Goal:</h5><p>The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.</p>
               <h5>Duration:</h5><p>September 2025 - Dec 2025</p>
-              <h5>Results:</h5><p><a href="https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B" target="_blank" rel="noopener noreferrer">Text+ RDMO Catalog</a></p>
+              <h5>Results:</h5>
+              <p><a href="https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B" target="_blank" rel="noopener noreferrer">Text+ RDMO Catalog</a></p>
+              <p><a href="https://textplus.hypotheses.org/19076" target="_blank" rel="noopener noreferrer">Text+ & DMP4NFDI – FDM als Joint Effort</a></p>
             </div>          
           
           <div class="usecase-card" data-service="Training & Outreach" data-cycle="Cycle 0, Cycle 1" data-nfdi="NFDI4Chem">

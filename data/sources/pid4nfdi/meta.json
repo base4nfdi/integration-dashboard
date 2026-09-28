@@ -2,11 +2,13 @@
   "id": "pid4nfdi",
   "label": "PID4NFDI use cases",
   "source_url": "https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md",
+  "page_url": "https://pid.services.base4nfdi.de/community/use-cases/",
+  "page_kind": "Use cases",
   "fetch_url": "https://raw.githubusercontent.com/base4nfdi/pid4nfdi/main/content/community/use-cases.md",
   "type": "markdown",
   "content_type": "text/plain; charset=utf-8",
   "status": 200,
   "filename": "use-cases.md",
-  "fetched_at": "2026-08-04T13:01:49.773Z",
+  "fetched_at": "2026-09-28T20:43:11.959Z",
   "bytes": 23269
 }
