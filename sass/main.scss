@@ -153,68 +153,100 @@ a:hover {
   text-decoration: underline;
 }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
+.theme-switch {
+  --option: 2.25rem;
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(3, var(--option));
   flex-shrink: 0;
   margin-left: auto;
-  padding: 0.55rem 0.85rem;
-  border: 1px solid var(--border);
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 999px;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.22);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.theme-switch-thumb {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: var(--option);
+  height: var(--option);
+  border-radius: 999px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.1));
+  box-shadow:
+    inset 0 0 0 1px rgba(11, 187, 239, 0.55),
+    0 2px 10px rgba(11, 187, 239, 0.3);
+  pointer-events: none;
+}
+
+.theme-switch.is-ready .theme-switch-thumb {
+  transition: transform 0.28s cubic-bezier(0.34, 1.4, 0.64, 1), background-color 0.2s ease;
+}
+
+[data-theme-pref="system"] .theme-switch-thumb {
+  transform: translateX(100%);
+}
+
+[data-theme-pref="light"] .theme-switch-thumb {
+  transform: translateX(200%);
+}
+
+.theme-switch-option {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--option);
+  height: var(--option);
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--header-text-muted);
+  opacity: 0.55;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
 }
 
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+.theme-switch-option svg {
+  display: block;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
 }
 
-.site-header .theme-toggle {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
+.theme-switch-option:hover {
+  opacity: 0.9;
   color: var(--header-text);
 }
 
-.site-header .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: var(--nfdi-blau);
+.theme-switch-option:active {
+  transform: scale(0.9);
+}
+
+.theme-switch-option[aria-checked="true"] {
+  opacity: 1;
   color: var(--nfdi-blau);
 }
 
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--accent);
+.theme-switch-option[aria-checked="true"] svg {
+  filter: drop-shadow(0 0 4px rgba(11, 187, 239, 0.55));
+}
+
+.theme-switch-option:focus-visible {
+  outline: 2px solid var(--nfdi-blau);
   outline-offset: 2px;
 }
 
-.theme-toggle-icon {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-[data-theme="dark"] .theme-toggle-icon-sun {
-  display: inline;
-}
-
-[data-theme="dark"] .theme-toggle-icon-moon {
-  display: none;
-}
-
-[data-theme="light"] .theme-toggle-icon-sun {
-  display: none;
-}
-
-[data-theme="light"] .theme-toggle-icon-moon {
-  display: inline;
+@media (prefers-reduced-motion: reduce) {
+  .theme-switch.is-ready .theme-switch-thumb,
+  .theme-switch-option {
+    transition: none;
+  }
 }
 
 @media (max-width: 640px) {
-  .theme-toggle {
+  .theme-switch {
     margin-left: 0;
     align-self: flex-end;
   }
@@ -735,23 +767,54 @@ main.container:has(.dashboard) {
   object-fit: contain;
 }
 
+/* The "-top" artwork is already a slate badge (corner radius ≈ 11% of its height),
+   so style the badge itself instead of wrapping it in another plate. */
 .data-table .service-logo {
+  --service-logo-h: 1.575rem;
   display: block;
-  height: 1.575rem;
+  height: var(--service-logo-h);
   width: auto;
-  max-width: 6.3rem;
-  object-fit: contain;
-  border-radius: 0.35rem;
+  max-width: none;
+  border-radius: calc(var(--service-logo-h) * 0.111);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.12),
+    0 3px 8px -2px rgba(69, 85, 106, 0.35);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
 }
 
-/* Dark mode: give PNG logos a contrasting plate so transparent / light artwork stays visible */
+.data-table tbody tr:hover .service-logo {
+  transform: translateY(-1px);
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.14),
+    0 6px 14px -4px rgba(11, 187, 239, 0.45);
+}
+
 [data-theme="dark"] .data-table .service-logo {
-  background:
-    linear-gradient(145deg, rgba(11, 187, 239, 0.12), transparent 55%),
-    var(--logo-plate-dark);
-  padding: 0.28rem 0.45rem;
-  border-radius: 0.5rem;
-  box-shadow: var(--logo-plate-inset);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 2px 6px rgba(0, 0, 0, 0.45),
+    0 0 14px -4px rgba(11, 187, 239, 0.25);
+}
+
+[data-theme="dark"] .data-table tbody tr:hover .service-logo {
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 0 1px rgba(11, 187, 239, 0.45),
+    0 4px 10px rgba(0, 0, 0, 0.5),
+    0 0 18px -2px rgba(11, 187, 239, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .data-table .service-logo {
+    transition: none;
+  }
+
+  .data-table tbody tr:hover .service-logo {
+    transform: none;
+  }
 }
 
 [data-theme="dark"] .data-table .logo-img {
@@ -1140,6 +1203,94 @@ main.container:has(.dashboard) {
   opacity: 0.85;
 }
 
+.source-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.75rem;
+}
+
+.source-mark:hover,
+.source-mark:focus-visible {
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.source-mark:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.source-mark-plate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.7rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px rgba(69, 84, 107, 0.08);
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.source-mark:hover .source-mark-plate,
+.source-mark:focus-visible .source-mark-plate {
+  transform: translateY(-1px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(11, 187, 239, 0.18);
+}
+
+.source-mark-out {
+  position: absolute;
+  top: -0.4rem;
+  right: -0.4rem;
+  display: grid;
+  place-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #041820;
+  box-shadow: 0 0 0 2px var(--bg);
+}
+
+.source-mark-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.source-mark-kicker {
+  color: var(--accent);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.source-mark-where {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.source-mark:hover .source-mark-where,
+.source-mark:focus-visible .source-mark-where {
+  color: var(--text);
+}
+
 .blog-post-logo {
   display: block;
   height: 4.75rem;
@@ -1149,9 +1300,11 @@ main.container:has(.dashboard) {
 }
 
 /* Horizontal “Logo-top” marks read better a bit shorter/wider than partner marks */
+/* No max-width: clamping letterboxes the badge artwork inside its (shadowed) box. */
 .blog-post-logo-service {
-  height: 3.25rem;
-  max-width: 11rem;
+  --service-logo-h: 2.4rem;
+  height: var(--service-logo-h);
+  max-width: none;
 }
 
 [data-theme="dark"] .blog-post-logo-project,
@@ -1162,13 +1315,40 @@ main.container:has(.dashboard) {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+/* Dark mode: the service artwork is its own slate badge, so drop the surrounding plate
+   and let the badge carry the ring + glow. */
 [data-theme="dark"] .blog-post-logo-service {
-  background:
-    linear-gradient(145deg, rgba(11, 187, 239, 0.12), transparent 55%),
-    var(--logo-plate-dark);
-  padding: 0.35rem 0.55rem;
-  border-radius: 0.5rem;
-  box-shadow: var(--logo-plate-inset);
+  border-radius: calc(var(--service-logo-h) * 0.111);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.07),
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    0 0 22px -6px rgba(11, 187, 239, 0.3);
+  transition: box-shadow 0.16s ease, filter 0.16s ease;
+}
+
+[data-theme="dark"] .blog-post-logo-service-link:hover,
+[data-theme="dark"] .blog-post-logo-service-link:focus-visible {
+  opacity: 1;
+}
+
+[data-theme="dark"] .blog-post-logo-service-link:hover .blog-post-logo-service,
+[data-theme="dark"] .blog-post-logo-service-link:focus-visible .blog-post-logo-service,
+[data-theme="dark"] .source-mark:hover .blog-post-logo-service,
+[data-theme="dark"] .source-mark:focus-visible .blog-post-logo-service {
+  filter: brightness(1.08);
+  box-shadow:
+    0 0 0 1px rgba(11, 187, 239, 0.5),
+    0 6px 16px rgba(0, 0, 0, 0.5),
+    0 0 26px -4px rgba(11, 187, 239, 0.5);
+}
+
+[data-theme="dark"] .source-mark-plate,
+[data-theme="dark"] .source-mark:hover .source-mark-plate,
+[data-theme="dark"] .source-mark:focus-visible .source-mark-plate {
+  padding: 0;
+  background: none;
+  border-color: transparent;
+  box-shadow: none;
 }
 
 @media (max-width: 640px) {
@@ -1183,8 +1363,13 @@ main.container:has(.dashboard) {
   }
 
   .blog-post-logo-service {
-    height: 1.85rem;
-    max-width: 7.5rem;
+    --service-logo-h: 1.6rem;
+    height: var(--service-logo-h);
+    max-width: none;
+  }
+
+  .source-mark-where {
+    font-size: 0.64rem;
   }
 }
 

@@ -45,6 +45,46 @@
           {% set service_logo_label = "nfdi.software" %}
         {% endif %}
         {% if service_logo_path %}
+        {% set manifest = load_data(path="data/sources/manifest.json") %}
+        {% set source_id = service_code | lower ~ "4nfdi" %}
+        {% set source_url = "" %}
+        {% set source_kind = "" %}
+        {% for source in manifest.sources %}
+          {% if source.id == source_id %}
+            {% set_global source_url = source.page_url | default(value=source.source_url) %}
+            {% set_global source_kind = source.page_kind | default(value="Source") %}
+          {% endif %}
+        {% endfor %}
+        {% if source_url %}
+          {% set source_where = source_url | replace(from="https://", to="") | replace(from="http://", to="") | split(pat="/") | first %}
+        <a
+          class="source-mark"
+          href="{{ source_url | safe }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="{{ service_logo_label }} {{ source_kind | lower }} — {{ source_url }}"
+          aria-label="{{ service_logo_label }} {{ source_kind | lower }} (opens {{ source_where }})"
+        >
+          <span class="source-mark-plate">
+            <img
+              class="blog-post-logo blog-post-logo-service"
+              src="{{ get_url(path=service_logo_path) | safe }}"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+            <span class="source-mark-out" aria-hidden="true">
+              <svg viewBox="0 0 16 16" width="10" height="10">
+                <path fill="currentColor" d="M4.2 3.2h8.6v8.6h-2.1V7.3L4.5 13.5 3 12l6.2-6.2H4.2V3.2z"/>
+              </svg>
+            </span>
+          </span>
+          <span class="source-mark-copy">
+            <span class="source-mark-kicker">{{ source_kind }}</span>
+            <span class="source-mark-where">{{ source_where }}</span>
+          </span>
+        </a>
+        {% else %}
         <a
           class="blog-post-logo-service-link"
           href="{{ get_url(path='@/integrations/' ~ service_slug ~ '/_index.md') | safe }}"
@@ -58,6 +98,7 @@
             decoding="async"
           >
         </a>
+        {% endif %}
         {% endif %}
         {% endif %}
         {% if page.extra.logo_project or page.extra.logo_consortia %}

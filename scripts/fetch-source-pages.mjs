@@ -20,12 +20,19 @@ import { fetchOk, parsePositiveInt } from "./lib/http-utils.mjs";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
 
-/** Known public incubator source pages. */
+/**
+ * Known public incubator source pages.
+ *
+ * `url` is what gets fetched; `page_url` is the public page readers are sent
+ * to (differs when the data lives in a GitHub repo behind a rendered site).
+ */
 const SOURCES = [
   {
     id: "iam4nfdi",
     label: "IAM4NFDI Incubator Dashboard",
     url: "https://incubators.nfdi-aai.de/",
+    page_url: "https://incubators.nfdi-aai.de/",
+    page_kind: "Incubators",
     type: "html",
     filename: "page.html",
   },
@@ -33,6 +40,8 @@ const SOURCES = [
     id: "ts4nfdi",
     label: "TS4NFDI Service Portal projects",
     url: "https://github.com/ts4nfdi/service-portal/blob/main/app/ui/incubators/projects.json",
+    page_url: "https://terminology.services.base4nfdi.de/incubators",
+    page_kind: "Incubators",
     type: "json",
     filename: "projects.json",
   },
@@ -40,6 +49,8 @@ const SOURCES = [
     id: "dmp4nfdi",
     label: "DMP4NFDI incubator content",
     url: "https://github.com/base4nfdi/dmp4nfdi-website/blob/main/content/incubator/_index.md?plain=1",
+    page_url: "https://dmp.services.base4nfdi.de/incubator/",
+    page_kind: "Incubators",
     type: "markdown",
     filename: "incubator.md",
   },
@@ -47,6 +58,8 @@ const SOURCES = [
     id: "pid4nfdi",
     label: "PID4NFDI use cases",
     url: "https://github.com/base4nfdi/pid4nfdi/blob/main/content/community/use-cases.md",
+    page_url: "https://pid.services.base4nfdi.de/community/use-cases/",
+    page_kind: "Use cases",
     type: "markdown",
     filename: "use-cases.md",
   },
@@ -203,6 +216,8 @@ export async function fetchSource(source, { timeoutMs, retries } = {}) {
     id: source.id,
     label: source.label,
     source_url: source.url,
+    page_url: source.page_url ?? source.url,
+    page_kind: source.page_kind ?? "",
     fetch_url: result.fetchUrl,
     type: result.type,
     content_type: result.contentType,
