@@ -1,6 +1,5 @@
 (function () {
   const storageKey = "base4nfdi-theme";
-  const prefs = ["dark", "system", "light"];
   const media = window.matchMedia("(prefers-color-scheme: dark)");
 
   function getSystemTheme() {
@@ -8,8 +7,12 @@
   }
 
   function getPref() {
-    const stored = localStorage.getItem(storageKey);
-    return stored === "light" || stored === "dark" ? stored : "system";
+    try {
+      const stored = localStorage.getItem(storageKey);
+      return stored === "light" || stored === "dark" ? stored : "system";
+    } catch (error) {
+      return "system";
+    }
   }
 
   function applyPref(pref) {
@@ -19,16 +22,18 @@
     root.setAttribute("data-theme-pref", pref);
     root.style.colorScheme = theme;
 
-    document.querySelectorAll("#theme-switch [data-theme-value]").forEach((option) => {
-      const active = option.dataset.themeValue === pref;
-      option.setAttribute("aria-checked", String(active));
-      option.tabIndex = active ? 0 : -1;
+    document.querySelectorAll("#theme-switch .theme-switch-input").forEach((input) => {
+      input.checked = input.value === pref;
     });
   }
 
   function setPref(pref) {
-    if (pref === "system") localStorage.removeItem(storageKey);
-    else localStorage.setItem(storageKey, pref);
+    try {
+      if (pref === "system") localStorage.removeItem(storageKey);
+      else localStorage.setItem(storageKey, pref);
+    } catch (error) {
+      /* Private mode and locked-down Firefox can throw on storage access. */
+    }
     applyPref(pref);
   }
 
@@ -36,26 +41,24 @@
     if (getPref() === "system") applyPref("system");
   });
 
-  document.addEventListener("DOMContentLoaded", () => {
+  function init() {
     applyPref(getPref());
 
     const group = document.getElementById("theme-switch");
     if (!group) return;
 
-    group.addEventListener("click", (event) => {
-      const option = event.target.closest("[data-theme-value]");
-      if (option) setPref(option.dataset.themeValue);
-    });
-
-    group.addEventListener("keydown", (event) => {
-      const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
-      if (!step) return;
-      event.preventDefault();
-      const next = prefs[(prefs.indexOf(getPref()) + step + prefs.length) % prefs.length];
-      setPref(next);
-      group.querySelector(`[data-theme-value="${next}"]`).focus();
+    group.addEventListener("change", (event) => {
+      const input = event.target;
+      if (!input || !input.classList || !input.classList.contains("theme-switch-input")) return;
+      setPref(input.value);
     });
 
     requestAnimationFrame(() => group.classList.add("is-ready"));
-  });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
