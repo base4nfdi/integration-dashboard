@@ -1,0 +1,365 @@
+{
+  "mode": "apply",
+  "table_id": "pf8ggs9jduxse4x",
+  "planned_at": "2026-09-29T14:43:06.395Z",
+  "totals": {
+    "nocodb": 47,
+    "blank": 47,
+    "with_qid": 28,
+    "to_patch": 28,
+    "will_patch": 28,
+    "skipped": 19,
+    "rewritten": 4
+  },
+  "updates": [
+    {
+      "id": 1,
+      "name": "Base4NFDI",
+      "qid": "Q113544452",
+      "official_website": "https://base4nfdi.de/",
+      "wikidata_website": "https://base4nfdi.de/",
+      "rewritten": false,
+      "host": "base4nfdi.de"
+    },
+    {
+      "id": 2,
+      "name": "BERD@NFDI",
+      "qid": "Q108542181",
+      "official_website": "https://www.berd-nfdi.de",
+      "wikidata_website": "https://www.berd-nfdi.de",
+      "rewritten": false,
+      "host": "berd-nfdi.de"
+    },
+    {
+      "id": 3,
+      "name": "DAPHNE4NFDI",
+      "qid": "Q108542327",
+      "official_website": "https://www.daphne4nfdi.de",
+      "wikidata_website": "https://www.daphne4nfdi.de",
+      "rewritten": false,
+      "host": "daphne4nfdi.de"
+    },
+    {
+      "id": 4,
+      "name": "DataPLANT",
+      "qid": "Q98380336",
+      "official_website": "https://nfdi4plants.org",
+      "wikidata_website": "http://nfdi4plants.de",
+      "rewritten": true,
+      "host": "nfdi4plants.org"
+    },
+    {
+      "id": 5,
+      "name": "FAIRagro",
+      "qid": "Q113486316",
+      "official_website": "https://www.fairagro.net",
+      "wikidata_website": "https://www.fairagro.net",
+      "rewritten": false,
+      "host": "fairagro.net"
+    },
+    {
+      "id": 6,
+      "name": "FAIRmat",
+      "qid": "Q108542373",
+      "official_website": "https://www.fair-di.eu/fairmat/",
+      "wikidata_website": "https://www.fair-di.eu/fairmat/",
+      "rewritten": false,
+      "host": "fair-di.eu"
+    },
+    {
+      "id": 7,
+      "name": "GHGA",
+      "qid": "Q98380337",
+      "official_website": "https://www.ghga.de/",
+      "wikidata_website": "https://ghga.dkfz.de",
+      "rewritten": true,
+      "host": "ghga.de"
+    },
+    {
+      "id": 8,
+      "name": "KonsortSWD",
+      "qid": "Q98380340",
+      "official_website": "https://www.konsortswd.de",
+      "wikidata_website": "https://www.konsortswd.de",
+      "rewritten": false,
+      "host": "konsortswd.de"
+    },
+    {
+      "id": 9,
+      "name": "MaRDI",
+      "qid": "Q108327788",
+      "official_website": "https://www.mardi4nfdi.de",
+      "wikidata_website": "https://www.mardi4nfdi.de",
+      "rewritten": false,
+      "host": "mardi4nfdi.de"
+    },
+    {
+      "id": 10,
+      "name": "NFDI4Biodiversity",
+      "qid": "Q98380341",
+      "official_website": "https://www.nfdi4biodiversity.org",
+      "wikidata_website": "https://www.nfdi4biodiversity.org",
+      "rewritten": false,
+      "host": "nfdi4biodiversity.org"
+    },
+    {
+      "id": 11,
+      "name": "NFDI4BIOIMAGE",
+      "qid": "Q113500855",
+      "official_website": "https://nfdi4bioimage.de/",
+      "wikidata_website": "https://nfdi4bioimage.de/",
+      "rewritten": false,
+      "host": "nfdi4bioimage.de"
+    },
+    {
+      "id": 12,
+      "name": "NFDI4Cat",
+      "qid": "Q98380342",
+      "official_website": "https://nfdi4cat.org",
+      "wikidata_website": "https://nfdi4cat.org",
+      "rewritten": false,
+      "host": "nfdi4cat.org"
+    },
+    {
+      "id": 13,
+      "name": "NFDI4Chem",
+      "qid": "Q96678459",
+      "official_website": "https://www.nfdi4chem.de",
+      "wikidata_website": "https://www.nfdi4chem.de",
+      "rewritten": false,
+      "host": "nfdi4chem.de"
+    },
+    {
+      "id": 14,
+      "name": "NFDI4Culture",
+      "qid": "Q98276929",
+      "official_website": "https://nfdi4culture.de",
+      "wikidata_website": "https://nfdi4culture.de",
+      "rewritten": false,
+      "host": "nfdi4culture.de"
+    },
+    {
+      "id": 15,
+      "name": "NFDI4DataScience",
+      "qid": "Q108542422",
+      "official_website": "https://www.nfdi4datascience.de",
+      "wikidata_website": "https://www.nfdi4datascience.de",
+      "rewritten": false,
+      "host": "nfdi4datascience.de"
+    },
+    {
+      "id": 16,
+      "name": "NFDI4Earth",
+      "qid": "Q108542504",
+      "official_website": "https://www.nfdi4earth.de",
+      "wikidata_website": "https://www.nfdi4earth.de",
+      "rewritten": false,
+      "host": "nfdi4earth.de"
+    },
+    {
+      "id": 17,
+      "name": "NFDI4Energy",
+      "qid": "Q113499626",
+      "official_website": "https://nfdi4energy.uol.de/",
+      "wikidata_website": "https://www.nfdi4energy.de",
+      "rewritten": true,
+      "host": "nfdi4energy.uol.de"
+    },
+    {
+      "id": 18,
+      "name": "NFDI4Health",
+      "qid": "Q98380343",
+      "official_website": "https://www.nfdi4health.de",
+      "wikidata_website": "https://www.nfdi4health.de",
+      "rewritten": false,
+      "host": "nfdi4health.de"
+    },
+    {
+      "id": 19,
+      "name": "NFDI4Immuno",
+      "qid": "Q113543313",
+      "official_website": "https://www.nfdi4immuno.de/",
+      "wikidata_website": "https://www.nfdi4immuno.de/",
+      "rewritten": false,
+      "host": "nfdi4immuno.de"
+    },
+    {
+      "id": 20,
+      "name": "NFDI4Ing",
+      "qid": "Q98380344",
+      "official_website": "https://nfdi4ing.de",
+      "wikidata_website": "https://nfdi4ing.de",
+      "rewritten": false,
+      "host": "nfdi4ing.de"
+    },
+    {
+      "id": 21,
+      "name": "NFDI4Memory",
+      "qid": "Q98231721",
+      "official_website": "https://4memory.de/",
+      "wikidata_website": "https://4memory.de/",
+      "rewritten": false,
+      "host": "4memory.de"
+    },
+    {
+      "id": 22,
+      "name": "NFDI4Microbiota",
+      "qid": "Q99534506",
+      "official_website": "https://nfdi4microbiota.de/",
+      "wikidata_website": "https://nfdi4microbiota.de/",
+      "rewritten": false,
+      "host": "nfdi4microbiota.de"
+    },
+    {
+      "id": 23,
+      "name": "NFDI-MatWerk",
+      "qid": "Q108542607",
+      "official_website": "https://nfdi-matwerk.de",
+      "wikidata_website": "https://nfdi-matwerk.de",
+      "rewritten": false,
+      "host": "nfdi-matwerk.de"
+    },
+    {
+      "id": 24,
+      "name": "NFDI4Objects",
+      "qid": "Q98229157",
+      "official_website": "https://www.nfdi4objects.net",
+      "wikidata_website": "https://www.nfdi4objects.net",
+      "rewritten": false,
+      "host": "nfdi4objects.net"
+    },
+    {
+      "id": 25,
+      "name": "NFDIxCS",
+      "qid": "Q113501071",
+      "official_website": "https://nfdixcs.org/",
+      "wikidata_website": "https://nfdixcs.org/",
+      "rewritten": false,
+      "host": "nfdixcs.org"
+    },
+    {
+      "id": 26,
+      "name": "PUNCH4NFDI",
+      "qid": "Q108542637",
+      "official_website": "https://www.punch4nfdi.de",
+      "wikidata_website": "https://www.punch4nfdi.de",
+      "rewritten": false,
+      "host": "punch4nfdi.de"
+    },
+    {
+      "id": 27,
+      "name": "Text+",
+      "qid": "Q98271443",
+      "official_website": "https://www.text-plus.org",
+      "wikidata_website": "https://www.text-plus.org",
+      "rewritten": false,
+      "host": "text-plus.org"
+    },
+    {
+      "id": 46,
+      "name": "EOSC",
+      "qid": "Q29051497",
+      "official_website": "https://eosc.eu/",
+      "wikidata_website": "http://eosc-hub.eu",
+      "rewritten": true,
+      "host": "eosc.eu"
+    }
+  ],
+  "skipped": [
+    {
+      "id": 28,
+      "name": "NFDI consortia at large",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 29,
+      "name": "NFDI directorate",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 30,
+      "name": "NFDI Section Common Infrastructure",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 31,
+      "name": "NFDI Section Metadata, Terminologies, Provenance",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 32,
+      "name": "NFDI Section Industry Engagement",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 33,
+      "name": "NFDI Section EduTrain",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 34,
+      "name": "NFDI Section ELSA",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 35,
+      "name": "NFDI TF Evaluation and Reporting",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 36,
+      "name": "NFDI TF Governance and Sustainability",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 37,
+      "name": "NFDI TF Position Papers",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 38,
+      "name": "NFDI TF Tools",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 39,
+      "name": "NFDI Management Circle",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 40,
+      "name": "NFDI Communication Circle",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 41,
+      "name": "NFDI Finance Circle",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 42,
+      "name": "NFDI Consortial Assembly",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 43,
+      "name": "NFDI Members Assembly",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 44,
+      "name": "NFDI Scientific Senate",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 45,
+      "name": "NFDI Board of Trustees",
+      "reason": "no_wikidata_id"
+    },
+    {
+      "id": 47,
+      "name": "",
+      "reason": "missing_name"
+    }
+  ]
+}
