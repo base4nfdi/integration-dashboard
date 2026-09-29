@@ -41,11 +41,12 @@ fetch-source-pages  →   parse-* / parse-source-pages
 
 1. `fetch-source-pages.mjs` — download source pages  
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
-3. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
-4. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
-5. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
-6. `generate-incubator-pages.mjs` — create missing Markdown report pages  
-7. `zola build`
+3. `crawl-nfdi-news.mjs --scope both` — collect English NFDI news and success stories, then write `data/parsed/nfdi-news.json`  
+4. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
+5. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
+6. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
+7. `generate-incubator-pages.mjs` — create missing Markdown report pages  
+8. `zola build`
 
 ---
 

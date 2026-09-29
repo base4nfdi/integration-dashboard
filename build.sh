@@ -20,6 +20,9 @@ node scripts/fetch-source-pages.mjs
 echo "==> Parsing source pages"
 node scripts/parse-source-pages.mjs
 
+echo "==> Crawling NFDI news and success stories"
+node scripts/crawl-nfdi-news.mjs --scope both
+
 if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
   echo "==> Fetching NocoDB data"
   node scripts/fetch-nocodb-data.mjs
