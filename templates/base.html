@@ -17,8 +17,8 @@
       document.documentElement.style.colorScheme = theme;
     })();
   </script>
-  <link rel="stylesheet" href="{{ get_url(path='fonts/fonts.css') | safe }}">
-  <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='fonts/fonts.css', cachebust=true) | safe }}">
+  <link rel="stylesheet" href="{{ get_url(path='main.css', cachebust=true) | safe }}">
 </head>
 <body>
   <header class="site-header">
@@ -148,7 +148,7 @@
       </nav>
     </div>
   </footer>
-  <script src="{{ get_url(path='theme.js') | safe }}"></script>
+  <script src="{{ get_url(path='theme.js', cachebust=true) | safe }}"></script>
   <script>
     (function () {
       var header = document.querySelector(".site-header");
