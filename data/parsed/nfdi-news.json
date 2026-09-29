@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-08-11T12:51:08.652Z",
+  "fetched_at": "2026-09-29T15:40:17.425Z",
   "source_listing": "https://www.nfdi.de/news/?lang=en",
   "source_listings": [
     "https://www.nfdi.de/news/?lang=en",
@@ -11,10 +11,10 @@
     "news": 43,
     "success-story": 134
   },
-  "posts_collected": 132,
+  "posts_collected": 136,
   "posts_matched": 23,
   "collection_counts": {
-    "news": 91,
+    "news": 95,
     "success-story": 41
   },
   "term_counts": {
@@ -354,9 +354,12 @@
         {
           "id": "base4nfdi",
           "label": "Base4NFDI",
-          "count": 1,
+          "count": 4,
           "snippets": [
-            "…address. She emphasised the importance of the sections and Base4NFDI for establishing sustainable, method-driven RDM services –…"
+            "…research data management in Germany. Franziska Fritzsche Base4NFDI, GESIS I found it amazing to see how ideas and concepts h…",
+            "…RDM, FAIR services, and open science. Dr. Sandra Zänkert Base4NFDI; ZB MED I was very impressed by Petra Gehring’s (RFII) op…",
+            "…address. She emphasised the importance of the sections and Base4NFDI for establishing sustainable, method-driven RDM services –…",
+            "…d but always transparent responsibility. Alois Wieshuber Base4NFDI; DESY In addition to the inspiring exchange with experts…"
           ]
         }
       ]
@@ -503,7 +506,7 @@
           "label": "Base4NFDI",
           "count": 2,
           "snippets": [
-            "…n which projects around EOSC and NFDI were presented. RfII/Base4NFDI: Prof. Dr. Lars Bernard – Germany‘s RDM Infrastructure land…",
+            "…and NFDI were presented. Talks „Setting the Scene” RfII/Base4NFDI: Prof. Dr. Lars Bernard – Germany‘s RDM Infrastructure land…",
             "…ard – Germany‘s RDM Infrastructure landscape – How NFDI and Base4NFDI could link into EOSC ?!? European Commission DG CNECT: Pet…"
           ]
         },
@@ -512,7 +515,7 @@
           "label": "basic service",
           "count": 1,
           "snippets": [
-            "…What should be the goal of cooperation? Infrastructure and basic services Health AI ERICS as EOSC thematic nodes – connection to N…"
+            "…oal of cooperation? World Café tables Infrastructure and basic services Health AI ERICS as EOSC thematic nodes – connection to N…"
           ]
         }
       ]

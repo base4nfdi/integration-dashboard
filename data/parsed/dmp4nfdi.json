@@ -1,7 +1,7 @@
 {
   "source": "dmp4nfdi",
   "basic_service": "DMP",
-  "parsed_at": "2026-09-28T20:43:12.111Z",
+  "parsed_at": "2026-09-29T15:40:09.662Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/dmp4nfdi/incubator.md",
   "record_count": 32,
   "records": [

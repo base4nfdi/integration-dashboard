@@ -10,11 +10,11 @@
   "type": "json",
   "scope": "both",
   "lang": "en",
-  "fetched_at": "2026-08-11T12:51:08.652Z",
-  "posts_collected": 132,
+  "fetched_at": "2026-09-29T15:40:17.425Z",
+  "posts_collected": 136,
   "posts_matched": 23,
   "collection_counts": {
-    "news": 91,
+    "news": 95,
     "success-story": 41
   },
   "filename": "posts.json"

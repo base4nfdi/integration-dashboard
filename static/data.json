@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-09-28T20:43:14.062Z",
+  "fetched_at": "2026-09-29T15:40:18.533Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
@@ -65,7 +65,7 @@
         "NFDI4Earth"
       ],
       "entities": [
-        "German Climate Computing Centre"
+        "DKRZ German Climate Computing Centre"
       ],
       "source_url": "",
       "integration_kind": "incubator"
@@ -92,7 +92,7 @@
         "NFDI4Ing"
       ],
       "entities": [
-        "Technical University and State Library Darmstadt"
+        "ULB University and State Library Darmstadt"
       ],
       "source_url": "",
       "integration_kind": "incubator"
@@ -2492,7 +2492,7 @@
         "DAPHNE4NFDI"
       ],
       "entities": [
-        "HZB"
+        "HZB Helmholtz-Zentrum Berlin"
       ],
       "source_url": "https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/",
       "uc_labels": "Connection metadata",
@@ -2806,5 +2806,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-09-28T20:43:14.167Z"
+  "logos_localized_at": "2026-09-29T15:40:19.773Z"
 }

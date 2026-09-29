@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T15:07:14.841Z",
+  "fetched_at": "2026-09-29T15:40:19.676Z",
   "projects": {
     "Sensor Management System": {
       "name": "Sensor Management System",
@@ -1454,26 +1454,26 @@
       "source_logo": "https://www.dkrz.de/@@site-logo/dkrz.svg",
       "updated_at": "2026-09-29 14:09:59+00:00"
     },
-    "technical university and state library darmstadt": {
-      "name": "Technical University and State Library Darmstadt",
+    "ulb university and state library darmstadt": {
+      "name": "ULB University and State Library Darmstadt",
       "logo": "img/ref-logos/43dbc66e22aa7249.svg",
       "website": "https://www.ulb.tu-darmstadt.de/die_bibliothek/index.en.jsp",
       "source_logo": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg",
-      "updated_at": "2026-08-04 11:07:38+00:00"
+      "updated_at": "2026-09-29 15:19:26+00:00"
     },
-    "technicaluniversityandstatelibrarydarmstadt": {
-      "name": "Technical University and State Library Darmstadt",
+    "ulbuniversityandstatelibrarydarmstadt": {
+      "name": "ULB University and State Library Darmstadt",
       "logo": "img/ref-logos/43dbc66e22aa7249.svg",
       "website": "https://www.ulb.tu-darmstadt.de/die_bibliothek/index.en.jsp",
       "source_logo": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg",
-      "updated_at": "2026-08-04 11:07:38+00:00"
+      "updated_at": "2026-09-29 15:19:26+00:00"
     },
-    "Technical University and State Library Darmstadt": {
-      "name": "Technical University and State Library Darmstadt",
+    "ULB University and State Library Darmstadt": {
+      "name": "ULB University and State Library Darmstadt",
       "logo": "img/ref-logos/43dbc66e22aa7249.svg",
       "website": "https://www.ulb.tu-darmstadt.de/die_bibliothek/index.en.jsp",
       "source_logo": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg",
-      "updated_at": "2026-08-04 11:07:38+00:00"
+      "updated_at": "2026-09-29 15:19:26+00:00"
     },
     "fiz karlsruhe": {
       "name": "FIZ Karlsruhe",
