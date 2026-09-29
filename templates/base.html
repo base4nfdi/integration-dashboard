@@ -149,5 +149,29 @@
     </div>
   </footer>
   <script src="{{ get_url(path='theme.js') | safe }}"></script>
+  <script>
+    (function () {
+      var header = document.querySelector(".site-header");
+      if (!header) return;
+
+      var compact = false;
+      var frame = 0;
+
+      function update() {
+        frame = 0;
+        var y = window.scrollY || document.documentElement.scrollTop || 0;
+        var next = y > 0;
+        if (next === compact) return;
+        compact = next;
+        header.classList.toggle("is-compact", compact);
+      }
+
+      window.addEventListener("scroll", function () {
+        if (!frame) frame = window.requestAnimationFrame(update);
+      }, { passive: true });
+
+      update();
+    })();
+  </script>
 </body>
 </html>
