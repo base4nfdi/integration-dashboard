@@ -64,9 +64,11 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `NOCODB_USER_STORIES_VIEW_ID` | unset for full-table export | fetch, PID push |
 | `NOCODB_REF_ENTITIES_TABLE_ID` | `7v80fm7p5jpa7xj` | `push-ref-entities-to-nocodb.mjs` |
 | `NOCODB_REF_ENTITIES_VIEW_ID` | unset for full-table access | `push-ref-entities-to-nocodb.mjs` |
+| `NOCODB_PARTNERS_TABLE_ID` | `pf8ggs9jduxse4x` | `push-source-pages-to-nocodb.mjs`, `patch-ref-partners-logos.mjs` |
+| `NOCODB_PARTNERS_VIEW_ID` | unset for full-table access | `patch-ref-partners-logos.mjs` |
 | `NOCODB_PAGE_SIZE` | `100` | same |
 | `FETCH_TIMEOUT_MS` | `60000` | HTTP clients |
-| `WIKIDATA_USER_AGENT` | Base4NFDI dashboard UA | `push-ref-entities-to-nocodb.mjs` |
+| `WIKIDATA_USER_AGENT` | Base4NFDI dashboard UA | `push-ref-entities-to-nocodb.mjs`, `patch-ref-partners-logos.mjs` |
 
 ### Fetch / parse
 
@@ -81,7 +83,6 @@ fetch-source-pages  →   parse-* / parse-source-pages
 | `PID_INPUT` / `PID_OUTPUT` | `data/sources/pid4nfdi/…` → `data/parsed/…` | `parse-pid4nfdi.mjs` |
 | `OUTPUT_DIR` / `OUTPUT_JSON` | `data/sources/nfdi-news` / `data/parsed/nfdi-news.json` | `crawl-nfdi-news.mjs` |
 | `NEWS_LANG` / `NEWS_PER_PAGE` | `en` / `100` | `crawl-nfdi-news.mjs` |
-| `NOCODB_PARTNERS_TABLE_ID` | partners table id | `push-source-pages-to-nocodb.mjs` |
 
 ---
 
@@ -337,7 +338,34 @@ node scripts/push-ref-entities-to-nocodb.mjs --search "DKRZ" --pick 1 --apply
 
 Writes a plan to `data/parsed/ref-entities.push-report.json`. Requires `NOCODB_API_TOKEN`. Wikidata has ~2k German research institutes — review the dry-run (or use `--backfill-only` / `--limit`) before `--apply`.
 
-### 12. Crawl NFDI news & success stories for Base4NFDI buzzwords
+### 12. Patch REF_Partners official logos
+
+**File:** `patch-ref-partners-logos.mjs`
+
+Fills blank `official_logo` on the NocoDB [REF_Partners](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/pf8ggs9jduxse4x/wfo9jjldqwgz5ky/ref_partners) table. Existing values are never overwritten. Candidates, in order:
+
+1. Wikidata `P154` (Commons FilePath) via the row’s `wikidata_identifier`
+2. Name-matched remote `logo_consortia` from `data/parsed/{dmp,iam,ts,pid}4nfdi.json` (and `static/data.json` after reversing cached paths through `static/img/partner-logos/manifest.json`)
+3. Zenodo community logos from `communities.csv` in the sibling [zenodo-analyzer](https://github.com/base4nfdi) checkout (`../../zenodo-analyzer/communities.csv`, or `ZENODO_COMMUNITIES_CSV`). Matched by community title or slug (`nfdi4ds` → NFDI4DataScience, `punch4nfdi` → PUNCH4NFDI, …). Conference, plenary, and CC/WG communities are ignored.
+
+A dashboard logo is used only when the incubator row has **exactly one** partner and the URL/filename contains that partner’s slug. Combined / project logos (RADAR, Coscine, WissKI, …) are skipped. When several dashboard URLs match, the consortium’s own host (Wikidata `P856`) is preferred over `dmp.services.base4nfdi.de` / `incubators.nfdi-aai.de`.
+
+```bash
+node scripts/patch-ref-partners-logos.mjs
+node scripts/patch-ref-partners-logos.mjs --limit 10
+node scripts/patch-ref-partners-logos.mjs --apply
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--apply` | PATCH NocoDB |
+| `--dry-run` | Preview only (default) |
+| `--limit <n>` | Cap number of row updates |
+| `-h`, `--help` | Show usage |
+
+Writes a plan to `data/parsed/ref-partners-logos.push-report.json`. Requires `NOCODB_API_TOKEN`. NFDI sections / circles without a named logo are left empty.
+
+### 13. Crawl NFDI news & success stories for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 
@@ -436,6 +464,13 @@ node scripts/patch-logo-consortia.mjs --local           # optional preview vs ex
 node scripts/patch-logo-consortia.mjs --apply
 node scripts/fetch-nocodb-data.mjs
 node scripts/cache-partner-logos.mjs                   # materialize static copies
+```
+
+### Backfill REF_Partners official logos
+
+```bash
+node scripts/patch-ref-partners-logos.mjs               # review dry-run
+node scripts/patch-ref-partners-logos.mjs --apply
 ```
 
 ---
