@@ -91,6 +91,7 @@
 <script>
 (function () {
   const dataUrl = "{{ get_url(path='data.json') | safe }}";
+  const refDirectoryUrl = "{{ get_url(path='ref-directory.json') | safe }}";
   const incubatorBaseUrl = "{{ get_url(path='@/integrations/_index.md') | safe }}";
   const staticRootUrl = "{{ get_url(path='/') | safe }}";
 
@@ -152,6 +153,7 @@
   const state = {
     records: [],
     meta: null,
+    directory: { partners: {}, entities: {}, projects: {} },
     search: "",
     filters: Object.fromEntries(filterDefs.map((def) => [def.key, new Set()])),
     consortia: new Set(),
@@ -168,6 +170,74 @@
       .replace(/"/g, "&quot;");
   }
 
+  function directoryEntry(bucket, name) {
+    const raw = String(name || "").replace(/\r/g, "").trim();
+    if (!raw || !bucket) return null;
+    if (bucket[raw]) return bucket[raw];
+    const lower = raw.toLowerCase();
+    if (bucket[lower]) return bucket[lower];
+    const compact = lower.replace(/[^a-z0-9@+]/g, "");
+    if (compact && bucket[compact]) return bucket[compact];
+    return null;
+  }
+
+  function externalHref(value) {
+    const href = String(value || "").trim();
+    return /^https?:\/\//i.test(href) ? href : "";
+  }
+
+  function renderLinkedLogo(src, label, href, className) {
+    const img = `<img class="${className}" src="${escapeHtml(src)}" alt="${escapeHtml(label)}" title="${escapeHtml(label)}" loading="lazy" decoding="async">`;
+    if (!href) return img;
+    return `<a class="ref-logo-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${img}</a>`;
+  }
+
+  function renderDirectoryLogo(entry) {
+    if (!entry?.logo) return "";
+    return renderLinkedLogo(
+      resolveAssetUrl(entry.logo),
+      entry.name || "",
+      externalHref(entry.website),
+      "logo-img ref-logo"
+    );
+  }
+
+  function formatNameList(items, bucket) {
+    if (!Array.isArray(items) || items.length === 0) return "—";
+    return `<span class="ref-logo-row">${items
+      .map((name) => {
+        const entry = directoryEntry(bucket, name);
+        if (entry?.logo) return renderDirectoryLogo(entry);
+        return `<span class="ref-name">${escapeHtml(name)}</span>`;
+      })
+      .join("")}</span>`;
+  }
+
+  function splitFurtherInstitutions(value) {
+    return String(value || "")
+      .replace(/\r/g, "")
+      .split(/\s*,\s*/)
+      .flatMap((part) => part.split(/\s+and\s+/i))
+      .map((part) => part.trim())
+      .filter(Boolean);
+  }
+
+  function singlePartnerWebsite(record) {
+    const partners = Array.isArray(record.partners) ? record.partners : [];
+    if (partners.length !== 1) return "";
+    return externalHref(directoryEntry(state.directory.partners, partners[0])?.website);
+  }
+
+  function projectWebsite(record) {
+    const direct = externalHref(record.source_url);
+    if (direct) return direct;
+    for (const name of [record.inc_name, record.uc_name]) {
+      const href = externalHref(directoryEntry(state.directory.projects, name)?.website);
+      if (href) return href;
+    }
+    return "";
+  }
+
   function statusClass(status) {
     return "status-" + status.toLowerCase().replace(/[^a-z0-9]+/g, "-");
   }
@@ -181,11 +251,6 @@
       month: "short",
       day: "numeric",
     });
-  }
-
-  function formatList(items) {
-    if (!Array.isArray(items) || items.length === 0) return "—";
-    return items.map(escapeHtml).join(", ");
   }
 
   function renderInlineMarkdown(text) {
@@ -426,10 +491,24 @@
       if (!project && !consortia) return `<td class="row-logos">—</td>`;
       const imgs = [];
       if (project) {
-        imgs.push(`<img class="logo-img logo-project" src="${escapeHtml(project)}" alt="Project logo" loading="lazy" decoding="async">`);
+        imgs.push(
+          renderLinkedLogo(
+            project,
+            "Project logo",
+            projectWebsite(record),
+            "logo-img logo-project"
+          )
+        );
       }
       if (consortia) {
-        imgs.push(`<img class="logo-img logo-consortia" src="${escapeHtml(consortia)}" alt="Consortia logo" loading="lazy" decoding="async">`);
+        imgs.push(
+          renderLinkedLogo(
+            consortia,
+            "Consortia logo",
+            singlePartnerWebsite(record),
+            "logo-img logo-consortia"
+          )
+        );
       }
       return `<td class="row-logos"><div class="logo-pair">${imgs.join("")}</div></td>`;
     }
@@ -459,13 +538,19 @@
     }
 
     if (column.type === "list") {
-      return `<td>${formatList(value)}</td>`;
+      const bucket =
+        column.key === "entities" ? state.directory.entities : state.directory.partners;
+      return `<td class="ref-names">${formatNameList(value, bucket)}</td>`;
     }
 
     if (column.type === "markdown") {
       const html = renderMarkdown(value);
       if (!html) return "<td>—</td>";
       return `<td class="cell-markdown"><div class="md-content">${html}</div></td>`;
+    }
+
+    if (column.key === "related_institutions") {
+      return `<td class="ref-names">${formatNameList(splitFurtherInstitutions(value), state.directory.entities)}</td>`;
     }
 
     if (value == null || value === "") return "<td>—</td>";
@@ -820,6 +905,20 @@
       const payload = await response.json();
       const records = Array.isArray(payload?.records) ? payload.records : [];
       if (records.length === 0) throw new Error("No integration records found");
+
+      try {
+        const directoryResponse = await fetch(refDirectoryUrl);
+        if (directoryResponse.ok) {
+          const directory = await directoryResponse.json();
+          state.directory = {
+            partners: directory?.partners && typeof directory.partners === "object" ? directory.partners : {},
+            entities: directory?.entities && typeof directory.entities === "object" ? directory.entities : {},
+            projects: directory?.projects && typeof directory.projects === "object" ? directory.projects : {},
+          };
+        }
+      } catch {
+        state.directory = { partners: {}, entities: {}, projects: {} };
+      }
 
       state.records = records;
       state.meta = payload;

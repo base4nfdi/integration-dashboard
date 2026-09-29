@@ -102,6 +102,20 @@
         {% endif %}
         {% endif %}
         {% if page.extra.logo_project or page.extra.logo_consortia %}
+        {% set ref_directory = load_data(path="static/ref-directory.json") %}
+        {% set partner_website = "" %}
+        {% set_global project_href = page.extra.source_url | default(value="") %}
+        {% if ref_directory.projects %}
+          {% if project_href == "" and page.title in ref_directory.projects %}
+            {% set_global project_href = ref_directory.projects[page.title].website | default(value="") %}
+          {% endif %}
+        {% endif %}
+        {% if page.extra.partners and page.extra.partners | length == 1 %}
+          {% set partner_name = page.extra.partners | first %}
+          {% if partner_name in ref_directory.partners %}
+            {% set_global partner_website = ref_directory.partners[partner_name].website %}
+          {% endif %}
+        {% endif %}
         <div class="blog-post-logo-partners">
           {% if page.extra.logo_project %}
           {% set logo_project_raw = page.extra.logo_project %}
@@ -110,6 +124,17 @@
           {% else %}
             {% set logo_project_src = get_url(path=logo_project_raw) %}
           {% endif %}
+          {% if project_href is starting_with(pat="http://") or project_href is starting_with(pat="https://") %}
+          <a class="ref-logo-link" href="{{ project_href }}" target="_blank" rel="noopener noreferrer">
+            <img
+              class="blog-post-logo blog-post-logo-project"
+              src="{{ logo_project_src | safe }}"
+              alt="{{ page.title }} project logo"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+          {% else %}
           <img
             class="blog-post-logo blog-post-logo-project"
             src="{{ logo_project_src | safe }}"
@@ -118,6 +143,7 @@
             decoding="async"
           >
           {% endif %}
+          {% endif %}
           {% if page.extra.logo_consortia %}
           {% set logo_consortia_raw = page.extra.logo_consortia %}
           {% if logo_consortia_raw is starting_with(pat="http://") or logo_consortia_raw is starting_with(pat="https://") %}
@@ -125,6 +151,17 @@
           {% else %}
             {% set logo_consortia_src = get_url(path=logo_consortia_raw) %}
           {% endif %}
+          {% if partner_website is starting_with(pat="http://") or partner_website is starting_with(pat="https://") %}
+          <a class="ref-logo-link" href="{{ partner_website }}" target="_blank" rel="noopener noreferrer">
+            <img
+              class="blog-post-logo blog-post-logo-consortia"
+              src="{{ logo_consortia_src | safe }}"
+              alt="Consortia logo"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
+          {% else %}
           <img
             class="blog-post-logo blog-post-logo-consortia"
             src="{{ logo_consortia_src | safe }}"
@@ -132,6 +169,7 @@
             loading="lazy"
             decoding="async"
           >
+          {% endif %}
           {% endif %}
         </div>
         {% endif %}

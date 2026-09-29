@@ -234,6 +234,8 @@ function buildFrontMatter(record, keyArticle) {
   const related = asInline(record.related_institutions);
   if (logoProject) lines.push(`logo_project = ${tomlString(logoProject)}`);
   if (logoConsortia) lines.push(`logo_consortia = ${tomlString(logoConsortia)}`);
+  const sourceUrl = asUrl(record.source_url);
+  if (sourceUrl) lines.push(`source_url = ${tomlString(sourceUrl)}`);
   if (related) lines.push(`related_institutions = ${tomlString(related)}`);
 
   lines.push("+++");
