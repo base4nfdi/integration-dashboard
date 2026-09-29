@@ -1,0 +1,436 @@
+{
+  "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo": {
+    "path": "img/ref-logos/5bc1fe509df73328.bin",
+    "source": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
+    "fetched_at": "2026-09-29T15:03:02.598Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "Base4NFDI"
+  },
+  "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png": {
+    "path": "img/ref-logos/3202b19d32c12245.png",
+    "source": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
+    "fetched_at": "2026-09-29T15:03:02.949Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "BERD@NFDI"
+  },
+  "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo": {
+    "path": "img/ref-logos/551bf6e5598fdae4.bin",
+    "source": "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo",
+    "fetched_at": "2026-09-29T15:03:03.118Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "DAPHNE4NFDI"
+  },
+  "https://incubators.nfdi-aai.de/images/dataplant.svg": {
+    "path": "img/ref-logos/053229561d547e96.svg",
+    "source": "https://incubators.nfdi-aai.de/images/dataplant.svg",
+    "fetched_at": "2026-09-29T15:03:03.378Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "DataPLANT"
+  },
+  "https://dmp.services.base4nfdi.de/images/fairagro_logo.png": {
+    "path": "img/ref-logos/2605943254a9ad2c.png",
+    "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+    "fetched_at": "2026-09-29T15:03:03.903Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "FAIRagro"
+  },
+  "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo": {
+    "path": "img/ref-logos/8801a70ff77ee38e.bin",
+    "source": "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo",
+    "fetched_at": "2026-09-29T15:03:04.097Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "FAIRmat"
+  },
+  "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo": {
+    "path": "img/ref-logos/ae1e5f241f89eece.bin",
+    "source": "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo",
+    "fetched_at": "2026-09-29T15:03:04.774Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "GHGA"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/KonsortSWD%20-%20Logo.png": {
+    "path": "img/ref-logos/1c59535e670059bd.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/KonsortSWD%20-%20Logo.png",
+    "fetched_at": "2026-09-29T15:03:05.568Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "KonsortSWD"
+  },
+  "https://dmp.services.base4nfdi.de/images/mardi_logo.png": {
+    "path": "img/ref-logos/5df745c12d212b3a.png",
+    "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+    "fetched_at": "2026-09-29T15:03:05.727Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "MaRDI"
+  },
+  "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png": {
+    "path": "img/ref-logos/375d18e09586ac41.png",
+    "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
+    "fetched_at": "2026-09-29T15:03:05.917Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Biodiversity"
+  },
+  "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png": {
+    "path": "img/ref-logos/bd284640d067a489.png",
+    "source": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
+    "fetched_at": "2026-09-29T15:03:06.057Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4BIOIMAGE"
+  },
+  "https://incubators.nfdi-aai.de/images/nfdi4cat.svg": {
+    "path": "img/ref-logos/172c50564a8df4be.svg",
+    "source": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
+    "fetched_at": "2026-09-29T15:03:06.072Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Cat"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png": {
+    "path": "img/ref-logos/9d2526db2a69594f.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png",
+    "fetched_at": "2026-09-29T15:03:07.398Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Chem"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Culture%20Logo.png": {
+    "path": "img/ref-logos/58f1d5bd4dfa5804.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Culture%20Logo.png",
+    "fetched_at": "2026-09-29T15:03:07.847Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Culture"
+  },
+  "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo": {
+    "path": "img/ref-logos/2e6301fe17e2adc0.bin",
+    "source": "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo",
+    "fetched_at": "2026-09-29T15:03:08.025Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4DataScience"
+  },
+  "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png": {
+    "path": "img/ref-logos/d2899f44796b9a2d.png",
+    "source": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
+    "fetched_at": "2026-09-29T15:03:08.196Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Earth"
+  },
+  "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png": {
+    "path": "img/ref-logos/f4255b2203c83db4.png",
+    "source": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
+    "fetched_at": "2026-09-29T15:03:08.327Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Energy"
+  },
+  "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png": {
+    "path": "img/ref-logos/a39dd4e2752dbcc5.png",
+    "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+    "fetched_at": "2026-09-29T15:03:08.506Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Health"
+  },
+  "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo": {
+    "path": "img/ref-logos/18f84f806c7c3fde.bin",
+    "source": "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo",
+    "fetched_at": "2026-09-29T15:03:08.741Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Immuno"
+  },
+  "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg": {
+    "path": "img/ref-logos/a755e82e7aec255a.svg",
+    "source": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
+    "fetched_at": "2026-09-29T15:03:08.877Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Ing"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png": {
+    "path": "img/ref-logos/27e5da4091ef7f85.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png",
+    "fetched_at": "2026-09-29T15:03:13.788Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Microbiota"
+  },
+  "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png": {
+    "path": "img/ref-logos/83ae5ea177c95650.png",
+    "source": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
+    "fetched_at": "2026-09-29T15:03:14.000Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI-MatWerk"
+  },
+  "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo": {
+    "path": "img/ref-logos/2e5a786a6186ff6e.bin",
+    "source": "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo",
+    "fetched_at": "2026-09-29T15:03:14.415Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Objects"
+  },
+  "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png": {
+    "path": "img/ref-logos/2d0b59aa31be6acd.png",
+    "source": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
+    "fetched_at": "2026-09-29T15:03:14.545Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDIxCS"
+  },
+  "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo": {
+    "path": "img/ref-logos/f0e6e264831bd0ce.bin",
+    "source": "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo",
+    "fetched_at": "2026-09-29T15:03:14.842Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "PUNCH4NFDI"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg": {
+    "path": "img/ref-logos/3bbac0e069ad4a2d.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
+    "fetched_at": "2026-09-29T15:03:15.353Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "Text+"
+  },
+  "https://eosc.eu/wp-content/uploads/2023/08/EOSCA_logo.svg": {
+    "path": "img/ref-logos/24ef9358b63d6874.svg",
+    "source": "https://eosc.eu/wp-content/uploads/2023/08/EOSCA_logo.svg",
+    "fetched_at": "2026-09-29T15:03:15.535Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "EOSC"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20German%20Research%20Foundation%20GRF.svg": {
+    "path": "img/ref-logos/8d396c7d48147489.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20German%20Research%20Foundation%20GRF.svg",
+    "fetched_at": "2026-09-29T15:03:18.071Z",
+    "nocodb_updated_at": "2026-08-04 10:48:23+00:00",
+    "name": "DFG"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Commission.svg": {
+    "path": "img/ref-logos/8bc76d3b3079988f.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/European%20Commission.svg",
+    "fetched_at": "2026-09-29T15:03:18.526Z",
+    "nocodb_updated_at": "2026-08-04 10:49:23+00:00",
+    "name": "European Commission"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Fraunhofer-logo.svg": {
+    "path": "img/ref-logos/205f2b26a6636914.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fraunhofer-logo.svg",
+    "fetched_at": "2026-09-29T15:03:18.874Z",
+    "nocodb_updated_at": "2026-08-04 10:50:25+00:00",
+    "name": "Fraunhofer Society"
+  },
+  "https://www.mpg.de/assets/responsive/logo-combined-exp-f99cfa8482bb1d0b50c6b40c9b8b21dbf1650fcf0662860a61ec8ab59793f3de.svg": {
+    "path": "img/ref-logos/c2db140531469a77.svg",
+    "source": "https://www.mpg.de/assets/responsive/logo-combined-exp-f99cfa8482bb1d0b50c6b40c9b8b21dbf1650fcf0662860a61ec8ab59793f3de.svg",
+    "fetched_at": "2026-09-29T15:03:23.317Z",
+    "nocodb_updated_at": "2026-08-04 11:07:12+00:00",
+    "name": "Max-Planck Society"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Union%20der%20deutschen%20Akademien%20der%20Wissenschaften%20Logo.svg": {
+    "path": "img/ref-logos/44c37a40f453e2ec.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Union%20der%20deutschen%20Akademien%20der%20Wissenschaften%20Logo.svg",
+    "fetched_at": "2026-09-29T15:03:25.918Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "Union of German Academies of Sciences and Humanities"
+  },
+  "https://www.dkrz.de/@@site-logo/dkrz.svg": {
+    "path": "img/ref-logos/5bd67a7ca29159d4.svg",
+    "source": "https://www.dkrz.de/@@site-logo/dkrz.svg",
+    "fetched_at": "2026-09-29T15:03:28.113Z",
+    "nocodb_updated_at": "2026-09-29 14:09:59+00:00",
+    "name": "DKRZ German Climate Computing Centre"
+  },
+  "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg": {
+    "path": "img/ref-logos/43dbc66e22aa7249.svg",
+    "source": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg",
+    "fetched_at": "2026-09-29T15:03:28.219Z",
+    "nocodb_updated_at": "2026-08-04 11:07:38+00:00",
+    "name": "Technical University and State Library Darmstadt"
+  },
+  "https://www.radar-service.eu/radar/assets/logo-radar-en-7ddd78a02329043db441e70a4b15459d.svg": {
+    "path": "img/ref-logos/0becb8c85455509f.svg",
+    "source": "https://www.radar-service.eu/radar/assets/logo-radar-en-7ddd78a02329043db441e70a4b15459d.svg",
+    "fetched_at": "2026-09-29T15:03:30.409Z",
+    "nocodb_updated_at": "2026-08-04 11:08:22+00:00",
+    "name": "RADAR"
+  },
+  "https://www.gfbio-ev.de/static/img/from_designer/Logo_Footer.84daed636cf5.svg": {
+    "path": "img/ref-logos/e9cca9642f57b8ff.svg",
+    "source": "https://www.gfbio-ev.de/static/img/from_designer/Logo_Footer.84daed636cf5.svg",
+    "fetched_at": "2026-09-29T15:03:32.897Z",
+    "nocodb_updated_at": "2026-08-04 11:09:31+00:00",
+    "name": "GFBio"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg": {
+    "path": "img/ref-logos/c9adf3d963f3a2df.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Bielefeld%20Logo.svg",
+    "fetched_at": "2026-09-29T15:03:33.374Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "Bielefeld University"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20des%20Forschungszentrums%20J%C3%BClich%20seit%202018.svg": {
+    "path": "img/ref-logos/2bf3b368edc0e5da.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20des%20Forschungszentrums%20J%C3%BClich%20seit%202018.svg",
+    "fetched_at": "2026-09-29T15:03:34.089Z",
+    "nocodb_updated_at": "2026-08-04 12:47:23+00:00",
+    "name": "Forschungszentrum Jülich"
+  },
+  "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg": {
+    "path": "img/ref-logos/53918c4e5e862bc4.svg",
+    "source": "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg",
+    "fetched_at": "2026-09-29T15:03:34.181Z",
+    "nocodb_updated_at": "2026-09-29 14:16:47+00:00",
+    "name": "HZB Helmholtz-Zentrum Berlin"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20KIT.svg": {
+    "path": "img/ref-logos/9251515171c0b209.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20KIT.svg",
+    "fetched_at": "2026-09-29T15:03:38.487Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "KIT"
+  },
+  "https://www.sub.uni-goettingen.de/_assets/51997eaae5cdc31651c07614f3ef45dd/Images/logo-sub.svg": {
+    "path": "img/ref-logos/db3d5bfa87ebc05c.svg",
+    "source": "https://www.sub.uni-goettingen.de/_assets/51997eaae5cdc31651c07614f3ef45dd/Images/logo-sub.svg",
+    "fetched_at": "2026-09-29T15:03:38.645Z",
+    "nocodb_updated_at": "2026-09-29 14:30:52+00:00",
+    "name": "SUB Göttingen"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Huberlin-logo.svg": {
+    "path": "img/ref-logos/5f03eaa64a036509.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Huberlin-logo.svg",
+    "fetched_at": "2026-09-29T15:03:43.078Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "Humbold University Berlin"
+  },
+  "https://www.hlrs.de/_assets/35e76e737fd336b01e3bbe61044635a4/dist/img/hlrs_logo_en.svg": {
+    "path": "img/ref-logos/518fafd6242e0fb0.svg",
+    "source": "https://www.hlrs.de/_assets/35e76e737fd336b01e3bbe61044635a4/dist/img/hlrs_logo_en.svg",
+    "fetched_at": "2026-09-29T15:03:43.203Z",
+    "nocodb_updated_at": "2026-09-29 14:21:30+00:00",
+    "name": "HLRS"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/RWTH%20Logo%203.svg": {
+    "path": "img/ref-logos/590a96e68a8840f1.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/RWTH%20Logo%203.svg",
+    "fetched_at": "2026-09-29T15:03:43.718Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "RWTH Aachen University"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Potsdam%20logo.svg": {
+    "path": "img/ref-logos/6520f76eeff3cc2c.svg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Potsdam%20logo.svg",
+    "fetched_at": "2026-09-29T15:03:44.226Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "University of Potsdam"
+  },
+  "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png": {
+    "path": "img/ref-logos/59759842299eed27.png",
+    "source": "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png",
+    "fetched_at": "2026-09-29T15:03:48.548Z",
+    "nocodb_updated_at": "2026-09-29 14:30:05+00:00",
+    "name": "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Gwdg-logo-neu.png": {
+    "path": "img/ref-logos/7c0c3b3ddf695961.png",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gwdg-logo-neu.png",
+    "fetched_at": "2026-09-29T15:03:48.936Z",
+    "nocodb_updated_at": "2026-08-04 12:59:30+00:00",
+    "name": "GWDG - Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen"
+  },
+  "https://www.dnb.de/SiteGlobals/Frontend/DNBWeb/Images/logo.svg?__blob=normal&v=3": {
+    "path": "img/ref-logos/5cb39ef69a271d09.svg",
+    "source": "https://www.dnb.de/SiteGlobals/Frontend/DNBWeb/Images/logo.svg?__blob=normal&v=3",
+    "fetched_at": "2026-09-29T15:03:49.021Z",
+    "nocodb_updated_at": "2026-09-29 14:11:42+00:00",
+    "name": "DNB"
+  },
+  "https://commons.wikimedia.org/wiki/Special:FilePath/Uni%20Duisburg.png": {
+    "path": "img/ref-logos/5548b754ea296f60.jpg",
+    "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Uni%20Duisburg.png",
+    "fetched_at": "2026-09-29T15:05:22.541Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "University of Duisburg-Essen"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NFDI4Memory.svg": {
+    "path": "img/ref-logos/064aab3e96c71423.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NFDI4Memory.svg",
+    "fetched_at": "2026-09-29T15:06:33.441Z",
+    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "name": "NFDI4Memory"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/3/32/BMFTR_-_Logo_%28en%29.svg": {
+    "path": "img/ref-logos/72e3cb44eb710cec.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/3/32/BMFTR_-_Logo_%28en%29.svg",
+    "fetched_at": "2026-09-29T15:06:34.225Z",
+    "nocodb_updated_at": "2026-08-04 10:13:26+00:00",
+    "name": "BMFTR"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/7/70/Helmholtz-Gemeinschaft_Logo_2019.svg": {
+    "path": "img/ref-logos/6bc10856c4eb270b.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/7/70/Helmholtz-Gemeinschaft_Logo_2019.svg",
+    "fetched_at": "2026-09-29T15:06:35.008Z",
+    "nocodb_updated_at": "2026-08-04 11:02:24+00:00",
+    "name": "Helmholtz Association"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/0/09/Leibniz_Logo_DE_Blau-Schwarz_500px.svg": {
+    "path": "img/ref-logos/0da84f3b0339fedb.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/09/Leibniz_Logo_DE_Blau-Schwarz_500px.svg",
+    "fetched_at": "2026-09-29T15:06:35.667Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "Leibniz Association"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/6/61/Fritz-Thyssen-Stiftung_Logo.svg": {
+    "path": "img/ref-logos/4ee10b593d4cfdee.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/6/61/Fritz-Thyssen-Stiftung_Logo.svg",
+    "fetched_at": "2026-09-29T15:06:36.420Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "Thyssen Foundation"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/2/21/Logo_Volkswagenstiftung.svg": {
+    "path": "img/ref-logos/8f82ba189b49d6b3.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/21/Logo_Volkswagenstiftung.svg",
+    "fetched_at": "2026-09-29T15:06:37.156Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "Volkswagen Foundation"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/e/e6/FIZ_Karlsruhe_%E2%80%93_Leibniz_Institute_for_Information_Infrastructure.png": {
+    "path": "img/ref-logos/9a4b1f3ffe73f438.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/e6/FIZ_Karlsruhe_%E2%80%93_Leibniz_Institute_for_Information_Infrastructure.png",
+    "fetched_at": "2026-09-29T15:06:38.100Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "FIZ Karlsruhe"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_Nfdi_quer.png": {
+    "path": "img/ref-logos/6cfd10ec41053f59.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Logo_Nfdi_quer.png",
+    "fetched_at": "2026-09-29T15:06:38.929Z",
+    "nocodb_updated_at": "2026-08-04 11:03:53+00:00",
+    "name": "NFDI"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/GFZLogoGer.svg": {
+    "path": "img/ref-logos/dc9d1ab86b88e825.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/9/9b/GFZLogoGer.svg",
+    "fetched_at": "2026-09-29T15:06:39.700Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "GFZ"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/e/ed/UFZ_Logo_RGB_DE.png": {
+    "path": "img/ref-logos/0fe5642aa54c9da6.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/ed/UFZ_Logo_RGB_DE.png",
+    "fetched_at": "2026-09-29T15:06:40.543Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "UFZ"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/1/1c/DSMZ-Logo-DE.jpg": {
+    "path": "img/ref-logos/555dc3f922097b20.jpg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/1c/DSMZ-Logo-DE.jpg",
+    "fetched_at": "2026-09-29T15:07:13.345Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "DSMZ"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_of_the_German_National_Library_of_Science_and_Technology%2C_or_Technische_Informationsbibliothek_%28TIB%29%2C_in_English_language.png": {
+    "path": "img/ref-logos/f636027d667fff9a.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Logo_of_the_German_National_Library_of_Science_and_Technology%2C_or_Technische_Informationsbibliothek_%28TIB%29%2C_in_English_language.png",
+    "fetched_at": "2026-09-29T15:07:13.984Z",
+    "nocodb_updated_at": "2026-09-29 14:26:43+00:00",
+    "name": "TIB"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/d/d8/GESIS-Logo_2024.svg": {
+    "path": "img/ref-logos/861b771adac494bf.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/d/d8/GESIS-Logo_2024.svg",
+    "fetched_at": "2026-09-29T15:07:14.840Z",
+    "nocodb_updated_at": "2026-08-04 12:47:14+00:00",
+    "name": "GESIS – Leibniz Institute for the Social Sciences"
+  }
+}

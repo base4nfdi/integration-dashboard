@@ -26,6 +26,8 @@ node scripts/crawl-nfdi-news.mjs --scope both
 if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
   echo "==> Fetching NocoDB data"
   node scripts/fetch-nocodb-data.mjs
+  echo "==> Syncing partner and institution logos"
+  node scripts/sync-ref-directory.mjs
 else
   echo "No NOCODB_API_TOKEN / .env — using existing static/data.json" >&2
 fi

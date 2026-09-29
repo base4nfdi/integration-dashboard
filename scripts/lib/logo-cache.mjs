@@ -253,7 +253,8 @@ export async function ensureLocalLogo(remoteUrl, options = {}) {
         {
           headers: {
             Accept: "image/*,*/*;q=0.8",
-            "User-Agent": "base4nfdi-dashboard-logo-cache/1.0",
+            "User-Agent":
+              options.userAgent ?? "base4nfdi-dashboard-logo-cache/1.0",
           },
           redirect: "follow",
         },

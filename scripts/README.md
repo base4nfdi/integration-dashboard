@@ -380,7 +380,21 @@ node scripts/patch-ref-partners-websites.mjs --apply
 
 Writes a plan to `data/parsed/ref-partners-websites.push-report.json`. Requires `NOCODB_API_TOKEN`.
 
-### 14. Crawl NFDI news & success stories for Base4NFDI buzzwords
+### 14. Sync REF logo directory
+
+**File:** `sync-ref-directory.mjs`
+
+Reads [REF_Partners](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/pf8ggs9jduxse4x/wfo9jjldqwgz5ky/ref_partners) and [REF_Entities](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/7v80fm7p5jpa7xj/9avpyay7fl9c5ar/ref_entities) and writes `static/ref-directory.json` (`name`, local `logo`, `official_website`, source URL, `updated_at`). Logos are stored under `static/img/ref-logos/`. A file is downloaded again only when the logo URL changes or NocoDB `updated_at` is newer than the stored copy. Commons `Special:FilePath` links are resolved to `upload.wikimedia.org` before download. A `projects` map holds homepages that are not partner or entity rows (Sensor Management System, also matched as SensorCV). The sync keeps that map.
+
+```bash
+node scripts/sync-ref-directory.mjs
+node scripts/sync-ref-directory.mjs --dry-run
+node scripts/sync-ref-directory.mjs --force
+```
+
+Requires `NOCODB_API_TOKEN`. Does not write back to NocoDB. `./build.sh` runs this after `fetch-nocodb-data.mjs`.
+
+### 15. Crawl NFDI news & success stories for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 

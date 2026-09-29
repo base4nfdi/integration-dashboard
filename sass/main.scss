@@ -822,6 +822,29 @@ main.container:has(.dashboard) {
   object-fit: contain;
 }
 
+.ref-logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.55rem;
+}
+
+.ref-logo-link {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.ref-logo-link:hover,
+.ref-logo-link:focus-visible {
+  opacity: 0.82;
+}
+
+.data-table td.ref-names {
+  white-space: normal;
+  min-width: 8rem;
+  max-width: 18rem;
+}
+
 /* The "-top" artwork is already a slate badge (corner radius ≈ 11% of its height),
    so style the badge itself instead of wrapping it in another plate. */
 .data-table .service-logo {
