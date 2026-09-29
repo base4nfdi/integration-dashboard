@@ -365,7 +365,22 @@ node scripts/patch-ref-partners-logos.mjs --apply
 
 Writes a plan to `data/parsed/ref-partners-logos.push-report.json`. Requires `NOCODB_API_TOKEN`. NFDI sections / circles without a named logo are left empty.
 
-### 13. Crawl NFDI news & success stories for Base4NFDI buzzwords
+### 13. Patch REF_Partners official websites
+
+**File:** `patch-ref-partners-websites.mjs`
+
+Fills blank `official_website` on [REF_Partners](https://nocodb.nfdi.de/dashboard/#/nc/m0rbyklm1wowv50/pf8ggs9jduxse4x/wfo9jjldqwgz5ky/ref_partners) from Wikidata `P856` (`wikidata_identifier`). Existing values are never overwritten. Sections, task forces, circles, and other bodies without a Q-id are left empty.
+
+A few retired hosts are rewritten to the live homepage: `nfdi4plants.de` → `https://nfdi4plants.org`, `ghga.dkfz.de` → `https://www.ghga.de/`, `eosc-hub.eu` → `https://eosc.eu/`, `nfdi4energy.de` → `https://nfdi4energy.uol.de/`.
+
+```bash
+node scripts/patch-ref-partners-websites.mjs
+node scripts/patch-ref-partners-websites.mjs --apply
+```
+
+Writes a plan to `data/parsed/ref-partners-websites.push-report.json`. Requires `NOCODB_API_TOKEN`.
+
+### 14. Crawl NFDI news & success stories for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 
