@@ -2,16 +2,106 @@
   "mode": "apply",
   "table_id": "7v80fm7p5jpa7xj",
   "backfill_only": true,
-  "planned_at": "2026-08-04T11:22:07.449Z",
+  "planned_at": "2026-09-29T14:26:43.881Z",
   "totals": {
-    "nocodb": 33,
+    "nocodb": 34,
     "missing_from_nocodb": 0,
     "will_create": 0,
-    "will_update": 0,
-    "existing_with_qid": 18,
-    "existing_resolved_from_wikidata": 18
+    "will_update": 10,
+    "existing_with_qid": 34,
+    "existing_resolved_from_wikidata": 34
   },
   "creates": [],
   "creates_truncated": false,
-  "updates": []
+  "updates": [
+    {
+      "name": "GFZ",
+      "id": 22,
+      "patch": {
+        "id": 22,
+        "official_website": "https://www.gfz.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/GFZLogoGer.svg"
+      }
+    },
+    {
+      "name": "UFZ",
+      "id": 23,
+      "patch": {
+        "id": 23,
+        "official_website": "https://www.ufz.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/UFZ%20Logo%20RGB%20DE.png"
+      }
+    },
+    {
+      "name": "KIT",
+      "id": 24,
+      "patch": {
+        "id": 24,
+        "official_website": "https://www.kit.edu/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20KIT.svg"
+      }
+    },
+    {
+      "name": "SUB Göttingen",
+      "id": 25,
+      "patch": {
+        "id": 25,
+        "official_website": "http://www.sub.uni-goettingen.de/"
+      }
+    },
+    {
+      "name": "DSMZ",
+      "id": 26,
+      "patch": {
+        "id": 26,
+        "official_website": "https://www.dsmz.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/DSMZ-Logo-DE.jpg"
+      }
+    },
+    {
+      "name": "TIB",
+      "id": 27,
+      "patch": {
+        "id": 27,
+        "official_website": "https://www.tib.eu/en/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20of%20the%20German%20National%20Library%20of%20Science%20and%20Technology%2C%20or%20Technische%20Informationsbibliothek%20%28TIB%29%2C%20in%20English%20language.png"
+      }
+    },
+    {
+      "name": "Humbold University Berlin",
+      "id": 28,
+      "patch": {
+        "id": 28,
+        "official_website": "https://www.hu-berlin.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Huberlin-logo.svg"
+      }
+    },
+    {
+      "name": "RWTH Aachen University",
+      "id": 31,
+      "patch": {
+        "id": 31,
+        "official_website": "https://www.rwth-aachen.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/RWTH%20Logo%203.svg"
+      }
+    },
+    {
+      "name": "University of Potsdam",
+      "id": 32,
+      "patch": {
+        "id": 32,
+        "official_website": "https://www.uni-potsdam.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Universit%C3%A4t%20Potsdam%20logo.svg"
+      }
+    },
+    {
+      "name": "University of Duisburg-Essen",
+      "id": 33,
+      "patch": {
+        "id": 33,
+        "official_website": "https://www.uni-due.de/",
+        "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Uni%20Duisburg.png"
+      }
+    }
+  ]
 }
