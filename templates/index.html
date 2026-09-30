@@ -65,6 +65,17 @@
 
       <div class="filter-actions">
         <button type="button" class="filter-clear" id="filter-clear" disabled>Clear filters</button>
+        <button
+          type="button"
+          class="filter-share"
+          id="filter-share"
+          hidden
+          aria-hidden="true"
+          aria-label="Copy link with current filters"
+        >
+          Copy link
+        </button>
+        <span class="visually-hidden" id="filter-share-status" aria-live="polite"></span>
         <div class="filter-search">
           <label class="visually-hidden" for="filter-search">Search table</label>
           <input
@@ -150,6 +161,8 @@
   /** Columns included in free-text search (excludes logos / non-text). */
   const searchableColumns = columns.filter((column) => column.type !== "logos");
 
+  const SHARE_BUTTON_LABEL = "Copy link";
+
   const state = {
     records: [],
     meta: null,
@@ -161,6 +174,8 @@
     consortiaQuery: "",
     consortiaHighlight: -1,
   };
+
+  let shareCopyResetTimer = null;
 
   function escapeHtml(value) {
     return String(value)
@@ -376,6 +391,102 @@
     if (state.search.trim()) return true;
     if (state.consortia.size > 0) return true;
     return filterDefs.some((def) => state.filters[def.key].size > 0);
+  }
+
+  function applyFiltersFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    state.search = params.get("q") || "";
+    for (const def of filterDefs) {
+      state.filters[def.key].clear();
+      for (const value of params.getAll(def.key)) {
+        if (value) state.filters[def.key].add(value);
+      }
+    }
+    state.consortia.clear();
+    for (const value of params.getAll(consortiaFilterKey)) {
+      if (value) state.consortia.add(value);
+    }
+  }
+
+  function buildFilterSearchParams() {
+    const params = new URLSearchParams();
+    const q = state.search.trim();
+    if (q) params.set("q", q);
+    for (const def of filterDefs) {
+      const selected = Array.from(state.filters[def.key]).sort(compareFilterValues);
+      for (const value of selected) {
+        params.append(def.key, value);
+      }
+    }
+    const consortia = Array.from(state.consortia).sort(compareFilterValues);
+    for (const value of consortia) {
+      params.append(consortiaFilterKey, value);
+    }
+    return params;
+  }
+
+  function syncUrlFromFilters() {
+    const params = buildFilterSearchParams();
+    const query = params.toString();
+    const nextSearch = query ? `?${query}` : "";
+    if (window.location.search === nextSearch) return;
+    const nextUrl = `${window.location.pathname}${nextSearch}${window.location.hash}`;
+    history.replaceState(null, "", nextUrl);
+  }
+
+  function pruneFiltersToRecords(records) {
+    for (const def of filterDefs) {
+      const valid = new Set(uniqueValues(records, def.key));
+      for (const value of state.filters[def.key]) {
+        if (!valid.has(value)) state.filters[def.key].delete(value);
+      }
+    }
+    const validPartners = new Set(uniqueListValues(records, consortiaFilterKey));
+    for (const value of state.consortia) {
+      if (!validPartners.has(value)) state.consortia.delete(value);
+    }
+  }
+
+  function updateShareButton() {
+    const shareButton = document.getElementById("filter-share");
+    const statusEl = document.getElementById("filter-share-status");
+    if (!shareButton) return;
+    const active = hasActiveFilters();
+    shareButton.hidden = !active;
+    shareButton.setAttribute("aria-hidden", active ? "false" : "true");
+    if (!active) {
+      if (shareCopyResetTimer) {
+        clearTimeout(shareCopyResetTimer);
+        shareCopyResetTimer = null;
+      }
+      shareButton.textContent = SHARE_BUTTON_LABEL;
+      if (statusEl) statusEl.textContent = "";
+    }
+  }
+
+  async function copyShareLink() {
+    const url = window.location.href;
+    const shareButton = document.getElementById("filter-share");
+    const statusEl = document.getElementById("filter-share-status");
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(url);
+      } else {
+        throw new Error("Clipboard unavailable");
+      }
+    } catch {
+      window.prompt("Copy this link:", url);
+      return;
+    }
+    if (shareButton) {
+      shareButton.textContent = "Copied!";
+      if (shareCopyResetTimer) clearTimeout(shareCopyResetTimer);
+      shareCopyResetTimer = setTimeout(() => {
+        shareButton.textContent = SHARE_BUTTON_LABEL;
+        shareCopyResetTimer = null;
+      }, 2000);
+    }
+    if (statusEl) statusEl.textContent = "Link copied to clipboard.";
   }
 
   function recordHasAnyConsortium(record, selected) {
@@ -750,12 +861,15 @@
     const filtered = filterRecords(state.records);
     renderSummary(filtered);
     renderTable(filtered, state.meta, state.records.length);
+    updateShareButton();
+    syncUrlFromFilters();
   }
 
   function bindFilterControls() {
     const searchInput = document.getElementById("filter-search");
     const filterBar = document.getElementById("filter-bar");
     const clearButton = document.getElementById("filter-clear");
+    const shareButton = document.getElementById("filter-share");
     const consortiaInput = document.getElementById("consortia-input");
     const consortiaControl = document.getElementById("consortia-control");
     const consortiaListbox = document.getElementById("consortia-listbox");
@@ -896,6 +1010,10 @@
       clearConsortiaFilter();
       applyView();
     });
+
+    shareButton.addEventListener("click", () => {
+      copyShareLink();
+    });
   }
 
   async function loadDashboard() {
@@ -922,7 +1040,10 @@
 
       state.records = records;
       state.meta = payload;
+      pruneFiltersToRecords(records);
       renderFilterBar(records);
+      const searchInput = document.getElementById("filter-search");
+      if (searchInput) searchInput.value = state.search;
       applyView();
     } catch (error) {
       document.getElementById("table-meta").textContent = "Failed to load dashboard data";
@@ -932,6 +1053,7 @@
     }
   }
 
+  applyFiltersFromUrl();
   bindFilterControls();
   loadDashboard();
 })();
