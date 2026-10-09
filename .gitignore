@@ -13,3 +13,6 @@ Thumbs.db
 node_modules/
 .env
 # .env.*
+
+audits/
+references/
