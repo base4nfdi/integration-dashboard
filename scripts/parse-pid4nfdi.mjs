@@ -12,6 +12,7 @@
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
+  applyElapsedStatus,
   assertNonEmptyRecords,
   buildParsedPayload,
   compareWithNocoDb,
@@ -48,9 +49,11 @@ function headingValue(cardHtml, label) {
   return stripHtml(m[1]).replace(/\s+/g, " ").trim();
 }
 
-function firstParagraph(cardHtml) {
-  const m = cardHtml.match(/<p>([\s\S]*?)<\/p>/i);
-  return m ? stripHtml(m[1]) : "";
+function descriptionText(cardHtml) {
+  return [...cardHtml.matchAll(/<p>([\s\S]*?)<\/p>/gi)]
+    .map((m) => stripHtml(m[1]).replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n\n");
 }
 
 function learnMoreUrl(cardHtml) {
@@ -143,37 +146,39 @@ export function parsePidHtml(html) {
       attr(attrs, "data-domain") ||
       "";
     const sourceUrl = learnMoreUrl(body);
-    const descr = firstParagraph(body);
+    const descr = descriptionText(body);
 
     records.push(
-      emptyRecord({
-        // Dashboard / Incubators-shaped aliases (matching + page gen)
-        inc_name: uc_name,
-        inc_descr: descr,
-        // User_Stories use-case columns
-        uc_name,
-        uc_descr: descr,
-        basic_service: BASIC_SERVICE,
-        related_institutions: "",
-        entities: organizations,
-        linked_entities: organizations.length || null,
-        inc_goals: goalsFromMeta({
-          labels,
-          resourceTypes,
-          pidProviders,
-          researchField,
-        }),
-        inc_results: sourceUrl ? `Learn more\n${sourceUrl}` : "",
-        partners,
-        linked_partners: partners.length,
-        source_url: sourceUrl,
-        uc_labels: labels.join(", "),
-        pid_providers: pidProviders,
-        research_field: researchField,
-        resource_types: resourceTypes,
-        source_page: SITE_PAGE,
-        integration_kind: "use-case",
-      })
+      applyElapsedStatus(
+        emptyRecord({
+          // Dashboard / Incubators-shaped aliases (matching + page gen)
+          inc_name: uc_name,
+          inc_descr: descr,
+          // User_Stories use-case columns
+          uc_name,
+          uc_descr: descr,
+          basic_service: BASIC_SERVICE,
+          related_institutions: "",
+          entities: organizations,
+          linked_entities: organizations.length || null,
+          inc_goals: goalsFromMeta({
+            labels,
+            resourceTypes,
+            pidProviders,
+            researchField,
+          }),
+          inc_results: sourceUrl ? `Learn more\n${sourceUrl}` : "",
+          partners,
+          linked_partners: partners.length,
+          source_url: sourceUrl,
+          uc_labels: labels.join(", "),
+          pid_providers: pidProviders,
+          research_field: researchField,
+          resource_types: resourceTypes,
+          source_page: SITE_PAGE,
+          integration_kind: "use-case",
+        })
+      )
     );
   }
 

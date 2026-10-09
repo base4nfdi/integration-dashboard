@@ -11,6 +11,7 @@ import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   absoluteUrl,
+  applyElapsedStatus,
   assertNonEmptyRecords,
   buildParsedPayload,
   compareWithNocoDb,
@@ -156,22 +157,25 @@ export function parseDmpMarkdown(markdown) {
     const status = inferStatus(start, end);
 
     cards.push(
-      emptyRecord({
-        inc_name,
-        basic_service: BASIC_SERVICE,
-        logo_consortia: absoluteUrl(SITE_BASE, logo),
-        inc_start: start,
-        inc_end: end,
-        inc_cycle,
-        inc_status: normalizeStatus(status),
-        // DMP pages put the narrative under "Goal"; map to inc_goals to match NocoDB.
-        inc_goals: stripHtml(goalsHtml),
-        inc_results: resultsFromHtml(resultsHtml),
-        partners,
-        linked_partners: partners.length,
-        source_service_type: service,
-        source_cycle_label: cycleRaw,
-      })
+      applyElapsedStatus(
+        emptyRecord({
+          inc_name,
+          basic_service: BASIC_SERVICE,
+          logo_consortia: absoluteUrl(SITE_BASE, logo),
+          inc_start: start,
+          inc_end: end,
+          inc_cycle,
+          inc_status: normalizeStatus(status),
+          // DMP pages put the narrative under "Goal"; map to inc_goals to match NocoDB.
+          inc_goals: stripHtml(goalsHtml),
+          inc_results: resultsFromHtml(resultsHtml),
+          inc_service_type: service,
+          partners,
+          linked_partners: partners.length,
+          source_service_type: service,
+          source_cycle_label: cycleRaw,
+        })
+      )
     );
   }
 

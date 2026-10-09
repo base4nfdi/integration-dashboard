@@ -10,11 +10,13 @@ import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   absoluteUrl,
+  applyElapsedStatus,
   assertNonEmptyRecords,
   buildParsedPayload,
   compareWithNocoDb,
   emptyRecord,
   goalsToMarkdown,
+  httpActivityUrl,
   loadNocoDbRecords,
   normalizePartnerName,
   normalizeStatus,
@@ -169,9 +171,30 @@ function extractResults(detailsHtml) {
   return stripHtml(m[1]);
 }
 
+function extractOwnership(detailsHtml) {
+  const m = detailsHtml.match(
+    /<h5>\s*Ownership\s*(?:&|&amp;)\s*Utilisation\s*<\/h5>([\s\S]*?)(?:<hr\s*\/?>|<h5>|<\/li>|$)/i
+  );
+  if (!m) return "";
+  const withoutComments = m[1].replace(/<!--[\s\S]*?-->/g, "");
+  const text = stripHtml(withoutComments).replace(/\s+/g, " ").trim();
+  if (!text || text === "-" || text === "—" || /^n\/?a$/i.test(text)) return "";
+  return text;
+}
+
+function caaiValue(meta) {
+  const values = [];
+  for (const item of meta ?? []) {
+    const match = String(item).match(/^CAAI:\s*(.+)$/i);
+    const value = match?.[1]?.trim();
+    if (value) values.push(value);
+  }
+  return values.join(", ");
+}
+
 function extractActivityPage(cardHtml) {
   const m = cardHtml.match(
-    /<a[^>]*href="([^"]+)"[^>]*>\s*Activity page\s*<\/a>/i
+    /<a\b[^>]*\bhref\s*=\s*"([^"]+)"[^>]*>[\s\S]*?Activity\s+page[\s\S]*?<\/a\s*>/i
   );
   return m ? m[1].trim() : "";
 }
@@ -217,24 +240,30 @@ export function parseIamHtml(html) {
         : partnersFromTitle(title);
 
     records.push(
-      emptyRecord({
-        inc_name: title,
-        basic_service: BASIC_SERVICE,
-        logo_consortia: absoluteUrl(SITE_BASE, logoSrc),
-        inc_start: badges.start,
-        inc_end: badges.end,
-        inc_cycle: badges.cycle,
-        inc_status: normalizeStatus(badges.status),
-        inc_descr: extractDescription(cardText),
-        inc_goals: extractGoals(cardText),
-        inc_results: extractResults(details),
-        partners,
-        linked_partners: partners.length || null,
-        source_id: sourceId,
-        source_type: badges.type,
-        source_activity_page: activityPage,
-        source_meta: badges.meta,
-      })
+      applyElapsedStatus(
+        emptyRecord({
+          inc_name: title,
+          basic_service: BASIC_SERVICE,
+          logo_consortia: absoluteUrl(SITE_BASE, logoSrc),
+          inc_start: badges.start,
+          inc_end: badges.end,
+          inc_cycle: badges.cycle,
+          inc_status: normalizeStatus(badges.status),
+          inc_descr: extractDescription(cardText),
+          inc_goals: extractGoals(cardText),
+          inc_results: extractResults(details),
+          inc_activity_type: badges.type,
+          inc_caai: caaiValue(badges.meta),
+          inc_ownership: extractOwnership(details),
+          inc_activity_page: httpActivityUrl(SITE_BASE, activityPage),
+          partners,
+          linked_partners: partners.length || null,
+          source_id: sourceId,
+          source_type: badges.type,
+          source_activity_page: activityPage,
+          source_meta: badges.meta,
+        })
+      )
     );
   }
 
