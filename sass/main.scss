@@ -413,7 +413,7 @@ main.container:has(.dashboard) {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .table-panel-header {
@@ -424,6 +424,7 @@ main.container:has(.dashboard) {
   padding: 1rem 1.25rem;
   border-bottom: 1px solid var(--border);
   background: var(--surface-raised);
+  border-radius: var(--radius) var(--radius) 0 0;
 }
 
 .table-panel-header h3 {
@@ -450,6 +451,8 @@ main.container:has(.dashboard) {
 }
 
 .filter-bar {
+  position: relative;
+  z-index: 30;
   display: grid;
   gap: 1rem;
   padding: 1rem 1.25rem;
@@ -483,11 +486,12 @@ main.container:has(.dashboard) {
 .filter-chip-groups {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
   gap: 1rem 1.5rem;
 }
 
 .filter-chip-groups {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
 }
 
 .filter-group {
@@ -516,9 +520,10 @@ main.container:has(.dashboard) {
 }
 
 .filter-consortia {
-  flex: 1 1 18rem;
-  min-width: min(100%, 16rem);
-  max-width: 36rem;
+  flex: 0 1 18rem;
+  width: 18rem;
+  min-width: min(100%, 14rem);
+  max-width: 18rem;
 }
 
 .filter-combobox {
@@ -711,10 +716,10 @@ main.container:has(.dashboard) {
 }
 
 .filter-actions .filter-search {
-  flex: 0 1 50%;
-  width: 50%;
+  flex: 1 1 12rem;
+  width: auto;
   min-width: min(100%, 12rem);
-  max-width: 50%;
+  max-width: 36rem;
 }
 
 .filter-actions .filter-search input[type="search"] {
@@ -743,21 +748,70 @@ main.container:has(.dashboard) {
   cursor: not-allowed;
 }
 
-.filter-share {
-  padding: 0.45rem 0.85rem;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface-raised);
-  color: var(--text);
-  font: inherit;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
+.filter-share[hidden] {
+  display: none;
 }
 
-.filter-share:hover {
-  border-color: var(--accent);
+.filter-share {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
   color: var(--accent);
+  font: inherit;
+  line-height: 0;
+  cursor: pointer;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.filter-share:hover,
+.filter-share:focus-visible,
+.filter-share.is-copied {
+  z-index: 60;
+  background: var(--accent);
+  color: var(--nfdi-white);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent);
+  transform: scale(1.08);
+}
+
+.filter-share:focus-visible {
+  outline: none;
+}
+
+.filter-share-tooltip {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  right: 0;
+  z-index: 60;
+  width: max-content;
+  max-width: 16.5rem;
+  padding: 0.55rem 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.filter-share:hover .filter-share-tooltip,
+.filter-share:focus-visible .filter-share-tooltip,
+.filter-share.is-copied .filter-share-tooltip {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .data-table .table-empty {
@@ -770,6 +824,7 @@ main.container:has(.dashboard) {
   overflow: auto;
   min-height: 85vh;
   max-height: min(70vh, calc(100vh - 16rem));
+  border-radius: 0 0 var(--radius) var(--radius);
   background-color: var(--surface);
   /* Cover gradients scroll with content; edge shadows stay fixed → appear when overflow scrolls. */
   background-image:
@@ -814,15 +869,130 @@ main.container:has(.dashboard) {
   box-shadow: 0 0px 6px rgba(0, 0, 0, 0.12);
 }
 
+.data-table th:has(.th-info:hover),
+.data-table th:has(.th-info:focus-within) {
+  z-index: 60;
+}
+
+.data-table .th-label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.data-table .th-info {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.data-table .th-info-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  line-height: 0;
+  cursor: default;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.data-table .th-info-btn:hover,
+.data-table .th-info-btn:focus-visible {
+  background: var(--accent);
+  color: var(--nfdi-white);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent);
+  transform: scale(1.08);
+}
+
+.data-table .th-info-btn:focus-visible {
+  outline: none;
+}
+
+.data-table .th-info-tooltip,
+.filter-share-tooltip {
+  border-radius: 10px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--surface-raised);
+  color: var(--text);
+  box-shadow:
+    0 10px 28px rgba(11, 187, 239, 0.16),
+    0 4px 12px rgba(0, 0, 0, 0.12);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  text-transform: none;
+}
+
+.data-table .th-info-tooltip {
+  position: absolute;
+  top: calc(100% + 0.55rem);
+  left: 50%;
+  z-index: 60;
+  width: max-content;
+  max-width: 16.5rem;
+  padding: 0.55rem 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-18%, 4px);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.data-table .th-info-tooltip::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 18%;
+  width: 8px;
+  height: 8px;
+  border-left: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  border-top: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+  background: var(--surface-raised);
+  transform: rotate(45deg);
+}
+
+.data-table .th-info:hover .th-info-tooltip,
+.data-table .th-info:focus-within .th-info-tooltip {
+  opacity: 1;
+  transform: translate(-18%, 0);
+}
+
 .data-table tbody tr:hover {
   background: var(--row-hover);
 }
 
-.data-table .row-logos,
-.data-table .row-service {
+.data-table .row-logos {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle;
+}
+
+/* "-top" badges share one height and a ~4:1 aspect, so this column stays compact. */
+.data-table th.col-service,
+.data-table td.row-service {
+  width: 8.75rem;
+  min-width: 8.75rem;
+  max-width: 8.75rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.data-table th.col-service {
+  white-space: normal;
 }
 
 .data-table .logo-pair {
@@ -856,10 +1026,59 @@ main.container:has(.dashboard) {
   opacity: 0.82;
 }
 
-.data-table td.ref-names {
+.data-table td.ref-names:not(.row-collaboration) {
   white-space: normal;
   min-width: 8rem;
   max-width: 18rem;
+}
+
+.data-table td.row-collaboration {
+  white-space: normal;
+  vertical-align: middle;
+  min-width: 10rem;
+  max-width: none;
+}
+
+@media (min-width: 960px) {
+  .data-table {
+    table-layout: fixed;
+  }
+
+  .data-table th:nth-child(1),
+  .data-table td:nth-child(1) {
+    width: 28%;
+  }
+
+  .data-table th:nth-child(3),
+  .data-table td:nth-child(3) {
+    width: auto;
+  }
+
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4) {
+    width: 8.5rem;
+  }
+
+  .data-table th:nth-child(5),
+  .data-table td:nth-child(5) {
+    width: 4.5rem;
+  }
+
+  .data-table td:nth-child(1) {
+    word-break: break-word;
+  }
+
+  .data-table td:nth-child(4),
+  .data-table td:nth-child(5) {
+    white-space: nowrap;
+  }
+}
+
+.data-table .collaboration-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
 }
 
 /* The "-top" artwork is already a slate badge (corner radius ≈ 11% of its height),
