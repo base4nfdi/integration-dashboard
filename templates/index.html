@@ -694,9 +694,9 @@
           !record.key_article &&
           /^https?:\/\//i.test(String(record.source_url || "").trim());
         const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-        return `<td><a href="${escapeHtml(href)}"${rel}>${text}</a></td>`;
+        return `<td class="row-name cell-link"><a class="cell-link-anchor" href="${escapeHtml(href)}"${rel}>${text}</a></td>`;
       }
-      return `<td>${text}</td>`;
+      return `<td class="row-name">${text}</td>`;
     }
 
     if (column.type === "status") {

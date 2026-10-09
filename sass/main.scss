@@ -856,6 +856,33 @@ main.container:has(.dashboard) {
   border-bottom: 1px solid var(--border);
 }
 
+.data-table td.cell-link {
+  position: relative;
+  padding: 0;
+  vertical-align: middle;
+  min-height: calc(2 * 0.85rem + 1.35em);
+}
+
+.data-table .cell-link-anchor {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.85rem 1.25rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.data-table .cell-link-anchor:hover,
+.data-table .cell-link-anchor:focus-visible {
+  color: var(--nfdi-anthrazit);
+  font-weight: 700;
+  background: var(--row-hover);
+  outline: none;
+}
+
 .data-table th {
   position: sticky;
   top: 0;
