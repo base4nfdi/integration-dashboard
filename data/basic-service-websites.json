@@ -1,0 +1,21 @@
+{
+  "description": "Official public websites for Base4NFDI basic services (e.g. dashboard logo links). Add new entries under services as more basic services go live with integrations.",
+  "services": {
+    "ts4nfdi": {
+      "basic_service": "TS",
+      "website": "https://terminology.services.base4nfdi.de/"
+    },
+    "dmp4nfdi": {
+      "basic_service": "DMP",
+      "website": "https://dmp.services.base4nfdi.de/"
+    },
+    "iam4nfdi": {
+      "basic_service": "IAM",
+      "website": "https://doc.nfdi-aai.de/"
+    },
+    "pid4nfdi": {
+      "basic_service": "PID",
+      "website": "https://pid.services.base4nfdi.de/"
+    }
+  }
+}

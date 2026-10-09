@@ -1018,6 +1018,12 @@ main.container:has(.dashboard) {
   vertical-align: middle;
 }
 
+.data-table td.row-service .ref-logo-link {
+  display: inline-block;
+  line-height: 0;
+  border-radius: calc(1.575rem * 0.111);
+}
+
 .data-table th.col-service {
   white-space: normal;
 }
@@ -1064,6 +1070,7 @@ main.container:has(.dashboard) {
   vertical-align: middle;
   min-width: 10rem;
   max-width: none;
+  overflow: hidden;
 }
 
 @media (min-width: 960px) {
@@ -1103,9 +1110,17 @@ main.container:has(.dashboard) {
 
 .data-table .collaboration-cell {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.55rem;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.data-table .collaboration-cell .ref-logo-link,
+.data-table .collaboration-cell .ref-name {
+  flex: 0 0 auto;
 }
 
 /* The "-top" artwork is already a slate badge (corner radius ≈ 11% of its height),
