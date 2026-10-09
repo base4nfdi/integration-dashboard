@@ -1,9 +1,9 @@
 {
   "source": "dmp4nfdi",
   "basic_service": "DMP",
-  "parsed_at": "2026-09-29T15:40:09.662Z",
+  "parsed_at": "2026-10-09T09:21:45.076Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/dmp4nfdi/incubator.md",
-  "record_count": 32,
+  "record_count": 33,
   "records": [
     {
       "id": null,
@@ -780,6 +780,31 @@
       ],
       "entities": [],
       "source_service_type": "RDMO Hosting, RDMO Integration",
+      "source_cycle_label": "Initialisation phase"
+    },
+    {
+      "id": null,
+      "inc_name": "RDMO Hosting — NFDI4Memory",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
+      "key_article": "dmp-rdmo-hosting-nfdi4memory",
+      "inc_start": "2024-06-01",
+      "inc_end": "2025-06-30",
+      "inc_cycle": null,
+      "inc_status": "Finished",
+      "inc_descr": "",
+      "inc_goals": "Develop and deploy an RDMO service for the NFDI4Memory consortium and support the consortium in developing a DMP template.",
+      "inc_results": "Test client ready; productive client in preparation",
+      "inc_partner_publications": 0,
+      "linked_partners": 1,
+      "linked_entities": null,
+      "partners": [
+        "NFDI4Memory"
+      ],
+      "entities": [],
+      "source_service_type": "RDMO Hosting, Template Development",
       "source_cycle_label": "Initialisation phase"
     },
     {

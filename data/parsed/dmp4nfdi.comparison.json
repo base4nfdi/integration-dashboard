@@ -1,10 +1,10 @@
 {
   "basic_service": "DMP",
   "counts": {
-    "source": 32,
+    "source": 33,
     "nocodb": 31,
     "matched": 31,
-    "only_in_source": 1,
+    "only_in_source": 2,
     "only_in_nocodb": 0
   },
   "matches": [
@@ -975,13 +975,13 @@
       }
     },
     {
-      "score": 1.92,
+      "score": 0.718,
       "source": {
-        "inc_name": "RDMO Hosting — NFDI4Earth",
+        "inc_name": "RDMO Hosting — NFDI4Memory",
         "inc_cycle": null,
         "inc_status": "Finished",
         "partners": [
-          "NFDI4Earth"
+          "NFDI4Memory"
         ]
       },
       "nocodb": {
@@ -993,8 +993,28 @@
         ]
       },
       "field_diffs": {
+        "inc_name": {
+          "source": "RDMO Hosting — NFDI4Memory",
+          "nocodb": "RDMO Hosting — NFDI4Earth"
+        },
+        "inc_goals": {
+          "source": "Develop and deploy an RDMO service for the NFDI4Memory consortium and support the consortium in developing a DMP template.",
+          "nocodb": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP."
+        },
+        "inc_results": {
+          "source": "Test client ready; productive client in preparation",
+          "nocodb": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
+        },
+        "partners": {
+          "source": [
+            "NFDI4Memory"
+          ],
+          "nocodb": [
+            "NFDI4Earth"
+          ]
+        },
         "logo_consortia": {
-          "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
+          "source": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
           "nocodb": "img/partner-logos/fb068dab27f7e96a.png"
         }
       }
@@ -1007,6 +1027,14 @@
       "inc_status": "Finished",
       "partners": [
         "Text+"
+      ]
+    },
+    {
+      "inc_name": "RDMO Hosting — NFDI4Earth",
+      "inc_cycle": null,
+      "inc_status": "Finished",
+      "partners": [
+        "NFDI4Earth"
       ]
     }
   ],

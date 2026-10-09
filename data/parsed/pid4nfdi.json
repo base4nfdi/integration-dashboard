@@ -1,7 +1,7 @@
 {
   "source": "pid4nfdi",
   "basic_service": "PID",
-  "parsed_at": "2026-09-29T15:40:09.974Z",
+  "parsed_at": "2026-10-09T09:21:45.510Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/pid4nfdi/use-cases.md",
   "record_count": 11,
   "records": [
