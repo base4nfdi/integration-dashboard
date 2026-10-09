@@ -4,14 +4,15 @@ date = 2026-09-30
 [extra]
 key_article = "ts-fairagro-terminology-service"
 basic_service = "TS"
-status = "Running"
+status = "Finished"
 inc_start = "2026-03-01"
 inc_end = "2026-09-30"
 inc_cycle = 3
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_project = "img/partner-logos/1584198a22a429d3.png"
+partners = ["FAIRagro"]
+logo_project = "https://terminology.services.base4nfdi.de/img/FAIRagro.png"
 +++
 
 The main purpose of the incubator project is a strong integration of TS4NFDI services with FAIRagro products and services. This includes the following concrete project objectives: 1)Automatic instantiation and updating of a FAIRagro Terminology Service Instance based on the FAIRagro Standards Inventory, 2) Implementation of mappings (preferably using the SciWin workflow engine developed in FAIRagro) for terminologies that are not yet available in a form directly usable for consumption by the TS4NFDI infrastructure, by map terminology distribution files in different formats to e.g. SKOS thesauri that can be used in a backend Skosmos service and 3) Demonstration of use of the TS4NFDI instance in selected FAIRagro products.
@@ -20,7 +21,7 @@ FAIRagro Terminology Service is an incubator project within the **Terminology Se
 
 ## Current status
 
-**Running** — cycle 3, started 2026-03-01.
+**Finished** — cycle 3 completed on 2026-09-30.
 
 ## Timeline
 
@@ -37,5 +38,6 @@ FAIRagro Terminology Service is an incubator project within the **Terminology Se
 
 ## Partners & entities
 
+- **NFDI consortia:** FAIRagro (1 linked)
 - **Partner publications:** 0
 

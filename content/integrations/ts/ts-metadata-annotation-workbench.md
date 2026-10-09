@@ -9,9 +9,11 @@ inc_start = ""
 inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_project = "img/partner-logos/c08cca7ca0e157bf.png"
+partners = ["NFDI4Health"]
+logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4health.png"
+inc_activity_page = "https://mda.nfdi4health.de/"
 +++
 
 The Metadata Annotation Workbench is developed in the NFDI4Health project. The service aims to assist researchers with semantic annotation of data dictionaries, questionnaires or other data collection instruments.
@@ -33,7 +35,12 @@ Metadata Annotation Workbench is an incubator project within the **Terminology S
 - Using terminologies of SemLookP as a source for annotation
 - Provide information about terms via the TSS metadata widget
 
+## Results
+
+- [https://mda.nfdi4health.de/](https://mda.nfdi4health.de/)
+
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Health (1 linked)
 - **Partner publications:** 0
 

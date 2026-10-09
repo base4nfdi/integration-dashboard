@@ -1,18 +1,19 @@
 +++
 title = "DMP template for engineering sciences"
-date = 2026-07-01
+date = 2026-12-31
 [extra]
 key_article = "dmp-nfdi4ing-engineering"
 basic_service = "DMP"
 status = "Running"
 inc_start = "2026-07-01"
-inc_end = ""
+inc_end = "2026-12-31"
 inc_cycle = 2
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Ing"]
-logo_consortia = "img/partner-logos/a755e82e7aec255a.svg"
+logo_consortia = "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+inc_service_type = "Template Development"
 +++
 
 DMP template for engineering sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -24,8 +25,9 @@ DMP template for engineering sciences is an incubator project within the **Data 
 ## Timeline
 
 - **Start:** 2026-07-01
-- **End:** —
+- **End:** 2026-12-31
 - **Cycle:** 2
+- **Service type:** Template Development
 
 ## Goals
 

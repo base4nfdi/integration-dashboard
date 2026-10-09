@@ -9,9 +9,11 @@ inc_start = "2024-09-01"
 inc_end = "2025-06-30"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/5df745c12d212b3a.png"
+partners = ["MaRDI"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/mardi_logo.png"
+inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
 RDMO Hosting — MaRDI is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — MaRDI is an incubator project within the **Data Management Plan
 - **Start:** 2024-09-01
 - **End:** 2025-06-30
 - **Cycle:** —
+- **Service type:** RDMO Hosting, RDMO Integration
 
 ## Goals
 
@@ -37,5 +40,6 @@ MaRDI RDMO Client
 
 ## Partners & entities
 
+- **NFDI consortia:** MaRDI (1 linked)
 - **Partner publications:** 0
 

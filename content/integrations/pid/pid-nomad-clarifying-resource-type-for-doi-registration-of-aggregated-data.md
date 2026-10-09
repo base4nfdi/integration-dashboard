@@ -10,9 +10,9 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["FAIRmat"]
-related_institutions = "Humboldt-Universität zu Berlin (NOMAD repository operator)"
+entities = ["Humbold University Berlin"]
 +++
 
 This use case analyses how NOMAD “Projects” (aggregations of uploaded files, directories, and derived entries) should be represented in the DataCite Metadata Schema for DOI registration. Our analysis showed that these “Projects” function as curated collections of heterogeneous research objects (nested files, heterogeneous data types, derived entries). They are not project descriptions in the sense of RAiDs, but structured aggregations of multiple items that are bundled and assigned a DOI. On that basis, the recommended resourceTypeGeneral is Collection rather than Dataset or Project. We therefore supported NOMAD in clarifying what exactly is being identified, how those aggregated objects should be described, and how the associated metadata can be enriched in a structured and interoperable way.
@@ -39,6 +39,6 @@ NOMAD – Clarifying Resource Type for DOI Registration of Aggregated Data is a 
 ## Partners & entities
 
 - **NFDI consortia:** FAIRmat (1 linked)
-- **Related institutions:** Humboldt-Universität zu Berlin (NOMAD repository operator)
+- **Participating entity:** Humbold University Berlin (1 linked)
 - **Partner publications:** 0
 

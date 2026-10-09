@@ -78,6 +78,11 @@ const WRITE_FIELDS = [
   "inc_descr",
   "inc_goals",
   "inc_results",
+  "inc_activity_type",
+  "inc_caai",
+  "inc_ownership",
+  "inc_service_type",
+  "inc_activity_page",
 ];
 
 const VALID_STATUSES = new Set(["In preparation", "Running", "Finished"]);

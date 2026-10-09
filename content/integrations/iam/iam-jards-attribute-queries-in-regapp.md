@@ -9,9 +9,13 @@ inc_start = "2024-02-01"
 inc_end = "2024-07-31"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/bf5c3bbaac4f2812.png"
+partners = ["NFDI4Ing"]
+logo_consortia = "https://incubators.nfdi-aai.de/images/nhraai_complete.png"
+inc_activity_type = "Integration"
+inc_caai = "regapp"
+inc_activity_page = "https://jards.coscine.de/"
 +++
 
 At RWTH Aachen University, the JARDS platform is used by researchers to apply for resources such as storage space or computing time. The applications are assessed in a multi-stage scientific review process. After approval, researchers must be given access to the resource and be able to manage other project members. This requires information about approved projects in RegApp. The aim of this project is to enable attribute queries via the SAML protocol in RegApp and to set up a Shibboleth-based attribute authority that returns user data from JARDS. This demonstrates how external applications can be integrated into the Community AAI as attribute authorities.
@@ -27,6 +31,11 @@ JARDS Attribute Queries in RegApp is an incubator project within the **Identity 
 - **Start:** 2024-02-01
 - **End:** 2024-07-31
 - **Cycle:** 1
+- **Activity type:** Integration
+
+## Community AAI
+
+regapp
 
 ## Results
 
@@ -36,8 +45,10 @@ a Shibboleth-based attribute authority
 Provision of an attribute authority for JARDS project data
 
 Extension of the RegApp to support SAML attribute queries
+- [https://jards.coscine.de/](https://jards.coscine.de/)
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Ing (1 linked)
 - **Partner publications:** 0
 

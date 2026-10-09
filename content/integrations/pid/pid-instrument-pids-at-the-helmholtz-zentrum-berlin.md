@@ -10,9 +10,10 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["DAPHNE4NFDI"]
-related_institutions = "HZB"
+entities = ["HZB Helmholtz-Zentrum Berlin"]
+source_url = "https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/"
 +++
 
 The Helmholtz Zentrum Berlin für Materialien und Energie (HZB) operates the BESSY II synchrotron radiation source and, until the end of 2019, operated the BER II neutron source. The synchrotron radiation of BESSY II (respectively neutrons at BER II) are directed through beamlines to experiment stations, where researchers can examine the interaction of the radiation with a sample, resulting in recorded measurements. The HZB registers DOIs via DataCite for its beamlines and experiment stations to uniquely identify these devices. Researchers can use the DOIs to link their publication data to the devices they have used to generate their measurements.
@@ -44,6 +45,6 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** DAPHNE4NFDI (1 linked)
-- **Related institutions:** HZB
+- **Participating entity:** HZB Helmholtz-Zentrum Berlin (1 linked)
 - **Partner publications:** 0
 

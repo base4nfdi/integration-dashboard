@@ -9,9 +9,11 @@ inc_start = "2024-05-29"
 inc_end = "2024-11-19"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_project = "img/partner-logos/a8573f5bcf411a39.png"
+partners = ["BERD@NFDI"]
+logo_project = "https://terminology.services.base4nfdi.de/img/berd.png"
+inc_activity_page = "https://ts.berd-nfdi.de/"
 +++
 
 BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.
@@ -36,8 +38,10 @@ BERD Terminology Service is an incubator project within the **Terminology Servic
 ## Results
 
 - [https://doi.org/10.5281/zenodo.14230727](https://doi.org/10.5281/zenodo.14230727)
+- [https://ts.berd-nfdi.de/](https://ts.berd-nfdi.de/)
 
 ## Partners & entities
 
+- **NFDI consortia:** BERD@NFDI (1 linked)
 - **Partner publications:** 0
 

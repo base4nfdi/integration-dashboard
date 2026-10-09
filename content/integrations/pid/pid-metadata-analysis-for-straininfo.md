@@ -10,9 +10,10 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["NFDI4Microbiota"]
-related_institutions = "DSMZ"
+entities = ["DSMZ"]
+source_url = "https://doi.org/10.5281/zenodo.14357800"
 +++
 
 The purpose of this analysis is a comprehensive evaluation of the metadata quality and completeness for the StrainInfo service. StrainInfo, operated by the Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures GmbH, is an integral part of the NFDI4Microbiota consortium. This analysis, conducted by DataCite, highlights the current state of metadata in StrainInfo, offering insights into its alignment with persistent identifier and metadata best practices.
@@ -44,6 +45,6 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Microbiota (1 linked)
-- **Related institutions:** DSMZ
+- **Participating entity:** DSMZ (1 linked)
 - **Partner publications:** 0
 

@@ -1,248 +1,112 @@
 {
   "mode": "apply",
   "table_id": "pf8ggs9jduxse4x",
-  "planned_at": "2026-09-29T13:59:07.152Z",
+  "planned_at": "2026-10-09T20:57:24.208Z",
   "totals": {
-    "nocodb": 46,
-    "already_filled": 2,
-    "blank": 44,
-    "to_patch": 25,
-    "will_patch": 25,
-    "skipped": 21,
+    "nocodb": 47,
+    "already_filled": 28,
+    "blank": 19,
+    "to_patch": 0,
+    "will_patch": 0,
+    "skipped": 47,
     "by_source": {
-      "wikidata": 6,
-      "dashboard": 11,
-      "zenodo": 8
+      "wikidata": 0,
+      "dashboard": 0,
+      "zenodo": 0
     }
   },
-  "updates": [
+  "updates": [],
+  "skipped": [
     {
       "id": 1,
       "name": "Base4NFDI",
-      "official_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo"
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo"
     },
     {
       "id": 2,
       "name": "BERD@NFDI",
-      "official_logo": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png"
     },
     {
       "id": 3,
       "name": "DAPHNE4NFDI",
-      "official_logo": "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo"
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo"
     },
     {
       "id": 4,
       "name": "DataPLANT",
-      "official_logo": "https://incubators.nfdi-aai.de/images/dataplant.svg",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://incubators.nfdi-aai.de/images/dataplant.svg",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://incubators.nfdi-aai.de/images/dataplant.svg"
     },
     {
       "id": 5,
       "name": "FAIRagro",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png"
     },
     {
       "id": 6,
       "name": "FAIRmat",
-      "official_logo": "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo"
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo"
     },
     {
       "id": 7,
       "name": "GHGA",
-      "official_logo": "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo"
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo"
     },
     {
       "id": 8,
       "name": "KonsortSWD",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/KonsortSWD%20-%20Logo.png",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/KonsortSWD%20-%20Logo.png",
-      "dashboard_logo": "",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/KonsortSWD%20-%20Logo.png"
     },
     {
       "id": 9,
       "name": "MaRDI",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/mardi_logo.png"
     },
     {
       "id": 10,
       "name": "NFDI4Biodiversity",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png"
     },
     {
       "id": 11,
       "name": "NFDI4BIOIMAGE",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png"
     },
     {
       "id": 12,
       "name": "NFDI4Cat",
-      "official_logo": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg"
     },
     {
       "id": 13,
       "name": "NFDI4Chem",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png"
     },
     {
       "id": 14,
       "name": "NFDI4Culture",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Culture%20Logo.png",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Culture%20Logo.png",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
-      "zenodo_logo": ""
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Culture%20Logo.png"
     },
     {
       "id": 15,
       "name": "NFDI4DataScience",
-      "official_logo": "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo"
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo"
     },
-    {
-      "id": 17,
-      "name": "NFDI4Energy",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 18,
-      "name": "NFDI4Health",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 19,
-      "name": "NFDI4Immuno",
-      "official_logo": "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo"
-    },
-    {
-      "id": 21,
-      "name": "NFDI4Memory",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 22,
-      "name": "NFDI4Microbiota",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 23,
-      "name": "NFDI-MatWerk",
-      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 24,
-      "name": "NFDI4Objects",
-      "official_logo": "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo"
-    },
-    {
-      "id": 25,
-      "name": "NFDIxCS",
-      "official_logo": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
-      "source": "dashboard",
-      "wikidata_logo": "",
-      "dashboard_logo": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
-      "zenodo_logo": ""
-    },
-    {
-      "id": 26,
-      "name": "PUNCH4NFDI",
-      "official_logo": "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo",
-      "source": "zenodo",
-      "wikidata_logo": "",
-      "dashboard_logo": "",
-      "zenodo_logo": "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo"
-    },
-    {
-      "id": 27,
-      "name": "Text+",
-      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "source": "wikidata",
-      "wikidata_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "dashboard_logo": "https://incubators.nfdi-aai.de/images/text-plus-logo.svg",
-      "zenodo_logo": ""
-    }
-  ],
-  "skipped": [
     {
       "id": 16,
       "name": "NFDI4Earth",
@@ -250,10 +114,70 @@
       "official_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
     },
     {
+      "id": 17,
+      "name": "NFDI4Energy",
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png"
+    },
+    {
+      "id": 18,
+      "name": "NFDI4Health",
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png"
+    },
+    {
+      "id": 19,
+      "name": "NFDI4Immuno",
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo"
+    },
+    {
       "id": 20,
       "name": "NFDI4Ing",
       "reason": "already_filled",
       "official_logo": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+    },
+    {
+      "id": 21,
+      "name": "NFDI4Memory",
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg"
+    },
+    {
+      "id": 22,
+      "name": "NFDI4Microbiota",
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png"
+    },
+    {
+      "id": 23,
+      "name": "NFDI-MatWerk",
+      "reason": "already_filled",
+      "official_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png"
+    },
+    {
+      "id": 24,
+      "name": "NFDI4Objects",
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo"
+    },
+    {
+      "id": 25,
+      "name": "NFDIxCS",
+      "reason": "already_filled",
+      "official_logo": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png"
+    },
+    {
+      "id": 26,
+      "name": "PUNCH4NFDI",
+      "reason": "already_filled",
+      "official_logo": "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo"
+    },
+    {
+      "id": 27,
+      "name": "Text+",
+      "reason": "already_filled",
+      "official_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg"
     },
     {
       "id": 28,
@@ -366,8 +290,14 @@
     {
       "id": 46,
       "name": "EOSC",
+      "reason": "already_filled",
+      "official_logo": "https://eosc.eu/wp-content/uploads/2023/08/EOSCA_logo.svg"
+    },
+    {
+      "id": 47,
+      "name": "",
       "reason": "no_candidate",
-      "qid": "Q29051497"
+      "qid": ""
     }
   ]
 }

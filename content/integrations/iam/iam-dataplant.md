@@ -9,9 +9,14 @@ inc_start = "2024-08-01"
 inc_end = "2025-01-31"
 inc_cycle = 3
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/053229561d547e96.svg"
+partners = ["DataPLANT"]
+logo_consortia = "https://incubators.nfdi-aai.de/images/dataplant.svg"
+inc_activity_type = "Development"
+inc_caai = "other"
+inc_ownership = "."
+inc_activity_page = "https://nfdi4plants.org"
 +++
 
 The DataPLANT consortium develops and provides a wide range of services to support FAIR data science in plant biology. In the past, we have implemented our own IAM infrastructure but as our collaborations with other consortia and institutions continue to grow, we are in need of a broader IAM integration. Our infrastructure needs to be connected to the larger IAM4NFDI system to allow users from both DataPLANT and other consortia to use our services. The DataPLANT user base needs to be integrated as a community identity provider. Authorisation decisions within the services should be derived from user attributes provided by the respective consortia identity providers.
@@ -27,12 +32,23 @@ DataPlant is an incubator project within the **Identity and Access Management (I
 - **Start:** 2024-08-01
 - **End:** 2025-01-31
 - **Cycle:** 3
+- **Activity type:** Development
+
+## Community AAI
+
+other
 
 ## Results
+
+.
+- [https://nfdi4plants.org](https://nfdi4plants.org)
+
+## Ownership & utilisation
 
 .
 
 ## Partners & entities
 
+- **NFDI consortia:** DataPLANT (1 linked)
 - **Partner publications:** 0
 

@@ -4,14 +4,16 @@ date = 2026-04-30
 [extra]
 key_article = "ts-health-study-hub"
 basic_service = "TS"
-status = "Running"
+status = "Finished"
 inc_start = "2025-08-11"
 inc_end = "2026-04-30"
 inc_cycle = 2
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_project = "img/partner-logos/c08cca7ca0e157bf.png"
+partners = ["NFDI4Health"]
+logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4health.png"
+inc_activity_page = "https://health-study-hub.de/resource/nfdi4health-108"
 +++
 
 The Health Study Hub is a central discovery platform developed within the NFDI4Health initiative. It provides structured metadata about health studies, enabling researchers, scientists, and other stakeholders to explore and understand available research data without requiring direct access to sensitive datasets. The Hub emphasizes metadata transparency, interoperability, and usability, supporting FAIR data principles and promoting responsible data reuse.
@@ -20,7 +22,7 @@ Health Study Hub is an incubator project within the **Terminology Services (TS)*
 
 ## Current status
 
-**Running** — cycle 2, started 2025-08-11.
+**Finished** — cycle 2 completed on 2026-04-30.
 
 ## Timeline
 
@@ -33,7 +35,12 @@ Health Study Hub is an incubator project within the **Terminology Services (TS)*
 - Restrict autocomplete/search to a subtree within an ontology
 - Providing additional terminologies
 
+## Results
+
+- [https://health-study-hub.de/resource/nfdi4health-108](https://health-study-hub.de/resource/nfdi4health-108)
+
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Health (1 linked)
 - **Partner publications:** 0
 

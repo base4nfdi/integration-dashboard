@@ -35,6 +35,10 @@ fetch-source-pages  →   parse-* / parse-source-pages
                         ↓                 (Incubators + User_Stories)
               push / patch / fill          generate-incubator-pages
                                            → content/integrations/{ts,dmp,iam,pid}/
+
+Already published rows are not created again. `patch-published-integrations.mjs`
+fills fields the detail page is missing and sets status to Finished when
+`inc_end` is before today. Parsers apply that same end-date rule while parsing.
 ```
 
 **Typical build path** (`./build.sh`):
@@ -218,8 +222,11 @@ node scripts/generate-incubator-pages.mjs --force
 | Flag | Effect |
 | --- | --- |
 | `--dry-run` | Report what would be written; no files created |
+| `--update` | Rewrite an existing page when generated Markdown differs |
 | `--force` | Overwrite existing Markdown files |
 | `-h`, `--help` | Show usage |
+
+`--update` is the refresh step after a published-row patch and `fetch-nocodb-data.mjs`. It is not part of `./build.sh`.
 
 ---
 
@@ -248,9 +255,72 @@ node scripts/push-source-pages-to-nocodb.mjs --local
 
 Requires `NOCODB_API_TOKEN` for live NocoDB access (not needed for `--local` dry comparison against the local export).
 
+Create payloads include `inc_activity_type`, `inc_caai`, `inc_ownership`, `inc_service_type`, and `inc_activity_page`. Run `ensure-incubators-schema.mjs` once before the first create or patch that writes those columns.
+
 ---
 
-### 8. Patch logo fields
+### 8. Ensure Incubators columns
+
+**File:** `ensure-incubators-schema.mjs`
+
+Creates the Incubators columns the detail pages need for source fields that were previously dropped:
+
+| Column | Type | Source |
+| --- | --- | --- |
+| `inc_activity_type` | single-line text | IAM activity badge |
+| `inc_caai` | single-line text | IAM `CAAI:` badge (`regapp`, …) |
+| `inc_service_type` | single-line text | DMP service list |
+| `inc_ownership` | long text | IAM ownership & utilisation |
+| `inc_activity_page` | URL | IAM / TS activity page |
+
+Idempotent. Writes unless `--dry-run`. User_Stories is unchanged.
+
+```bash
+node scripts/ensure-incubators-schema.mjs --dry-run
+node scripts/ensure-incubators-schema.mjs
+```
+
+---
+
+### 9. Patch already published integrations
+
+**File:** `patch-published-integrations.mjs`
+
+Updates matched incubator and PID use-case rows when the public source has grown. Default is dry-run. Existing wording is left alone.
+
+| Change | Rule |
+| --- | --- |
+| Dates, cycle, goals, results, activity type, CAAI, ownership, service type, activity page | Fill only when the NocoDB cell is empty |
+| Description | Fill when empty. If the stored text is a strict prefix of the source (a missing tail), replace it with the source text |
+| PID use-case fields (`uc_labels`, `pid_providers`, …) | Fill only when empty |
+| Partners | Link REF_Partners only when the row has no partners. A non-empty set is not replaced |
+| Publication count | Set only when NocoDB is 0 and the source count is greater |
+| Status | Set `Finished` when the end date (source, otherwise the stored date) is before today, even if the badge still says Running. Fill an empty status from the source. Never move Finished back to Running |
+
+Parsers apply the same finished-by-end-date rule, so a new parse already shows `Finished` when `inc_end` is in the past.
+
+```bash
+node scripts/parse-source-pages.mjs
+node scripts/patch-published-integrations.mjs --local
+node scripts/patch-published-integrations.mjs --apply
+node scripts/fetch-nocodb-data.mjs
+node scripts/generate-incubator-pages.mjs --update
+```
+
+| Flag | Effect |
+| --- | --- |
+| `--apply` | PATCH NocoDB |
+| `--dry-run` | Preview only (default) |
+| `--local` | Compare against `static/data.json` |
+| `--service <ids>` | `dmp4nfdi`, `iam4nfdi`, `ts4nfdi`, `pid4nfdi` |
+| `--limit <n>` | Cap how many row updates are applied |
+| `-h`, `--help` | Show usage |
+
+Writes `data/parsed/published-integrations.patch-report.json`. Requires `NOCODB_API_TOKEN` for a live fetch or `--apply`. Partner links need the token even in `--local` mode; without it, unresolved partner names are reported and not written.
+
+---
+
+### 10. Patch logo fields
 
 **File:** `patch-logo-consortia.mjs`
 
@@ -276,7 +346,7 @@ node scripts/patch-logo-consortia.mjs --service ts4nfdi --apply
 
 ---
 
-### 9. Fill empty key articles
+### 11. Fill empty key articles
 
 **File:** `fill-key-articles.mjs`
 
@@ -297,7 +367,7 @@ Requires `NOCODB_API_TOKEN`.
 
 ---
 
-### 10. Ensure User_Stories schema / push PID use cases
+### 12. Ensure User_Stories schema / push PID use cases
 
 **Files:** `ensure-user-stories-schema.mjs`, `push-pid-use-cases-to-nocodb.mjs`
 
@@ -310,7 +380,7 @@ node scripts/push-pid-use-cases-to-nocodb.mjs
 node scripts/push-pid-use-cases-to-nocodb.mjs --apply
 ```
 
-### 11. Sync REF_Entities from Wikidata
+### 13. Sync REF_Entities from Wikidata
 
 **File:** `push-ref-entities-to-nocodb.mjs`
 
@@ -338,7 +408,7 @@ node scripts/push-ref-entities-to-nocodb.mjs --search "DKRZ" --pick 1 --apply
 
 Writes a plan to `data/parsed/ref-entities.push-report.json`. Requires `NOCODB_API_TOKEN`. Wikidata has ~2k German research institutes — review the dry-run (or use `--backfill-only` / `--limit`) before `--apply`.
 
-### 12. Patch REF_Partners official logos
+### 14. Patch REF_Partners official logos
 
 **File:** `patch-ref-partners-logos.mjs`
 
@@ -365,7 +435,7 @@ node scripts/patch-ref-partners-logos.mjs --apply
 
 Writes a plan to `data/parsed/ref-partners-logos.push-report.json`. Requires `NOCODB_API_TOKEN`. NFDI sections / circles without a named logo are left empty.
 
-### 13. Patch REF_Partners official websites
+### 15. Patch REF_Partners official websites
 
 **File:** `patch-ref-partners-websites.mjs`
 
@@ -380,7 +450,7 @@ node scripts/patch-ref-partners-websites.mjs --apply
 
 Writes a plan to `data/parsed/ref-partners-websites.push-report.json`. Requires `NOCODB_API_TOKEN`.
 
-### 14. Sync REF logo directory
+### 16. Sync REF logo directory
 
 **File:** `sync-ref-directory.mjs`
 
@@ -394,7 +464,7 @@ node scripts/sync-ref-directory.mjs --force
 
 Requires `NOCODB_API_TOKEN`. Does not write back to NocoDB. `./build.sh` runs this after `fetch-nocodb-data.mjs`.
 
-### 15. Crawl NFDI news & success stories for Base4NFDI buzzwords
+### 17. Crawl NFDI news & success stories for Base4NFDI buzzwords
 
 **File:** `crawl-nfdi-news.mjs`
 
@@ -459,6 +529,19 @@ node scripts/parse-source-pages.mjs
 ```
 
 Inspect `data/parsed/comparison.json` for source vs NocoDB diffs.
+
+### Update already published incubators and use cases
+
+Review the dry-run before `--apply`. Columns must exist first.
+
+```bash
+node scripts/ensure-incubators-schema.mjs
+node scripts/parse-source-pages.mjs
+node scripts/patch-published-integrations.mjs
+node scripts/patch-published-integrations.mjs --apply
+node scripts/fetch-nocodb-data.mjs
+node scripts/generate-incubator-pages.mjs --update
+```
 
 ### Onboard new incubators into NocoDB
 

@@ -10,12 +10,14 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["NFDI4Cat"]
-related_institutions = "HLRS"
+entities = ["HLRS"]
 +++
 
 pid4cat is a service that is designed to assign persistent identifiers for resources generated in the catalysis research community, such as collections, samples, materials, devices, datasets, and services. The pid4cat service builds upon existing PID infrastructure, i.e., it assigns ePIC PIDs based on the Handle System while providing enhanced capabilities for metadata management and namespace delegation. pid4cat enables partner organizations to manage their own sub-namespaces while maintaining a consistent approach to identifier creation and metadata management in the overall pid4cat framework.
+
+Though pid4cat uses an ePIC prefix, everything else is set up and run by the providing institution (HLRS), such as Handle server, database and resolver. A specialized API is implemented by pid4cat for simplified PID management.
 
 PID4Cat: PIDs for digital and physical resources generated in catalysis research is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
@@ -39,6 +41,6 @@ PID4Cat: PIDs for digital and physical resources generated in catalysis research
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Cat (1 linked)
-- **Related institutions:** HLRS
+- **Participating entity:** HLRS (1 linked)
 - **Partner publications:** 0
 

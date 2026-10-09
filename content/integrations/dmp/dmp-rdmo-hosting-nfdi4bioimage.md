@@ -9,9 +9,11 @@ inc_start = "2025-10-01"
 inc_end = "2025-12-31"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/bd284640d067a489.png"
+partners = ["NFDI4BIOIMAGE"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png"
+inc_service_type = "RDMO Hosting"
 +++
 
 RDMO Hosting — NFDI4BIOIMAGE is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — NFDI4BIOIMAGE is an incubator project within the **Data Managem
 - **Start:** 2025-10-01
 - **End:** 2025-12-31
 - **Cycle:** 0
+- **Service type:** RDMO Hosting
 
 ## Goals
 
@@ -37,5 +40,6 @@ NFDI4BIOMAGE RDMO Client
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4BIOIMAGE (1 linked)
 - **Partner publications:** 0
 

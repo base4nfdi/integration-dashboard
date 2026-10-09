@@ -9,9 +9,11 @@ inc_start = "2026-07-01"
 inc_end = "2026-12-31"
 inc_cycle = 2
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
+partners = ["NFDI4Health"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png"
+inc_service_type = "Training & Outreach"
 +++
 
 Training & Outreach — NFDI4Health is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ Training & Outreach — NFDI4Health is an incubator project within the **Data Ma
 - **Start:** 2026-07-01
 - **End:** 2026-12-31
 - **Cycle:** 2
+- **Service type:** Training & Outreach
 
 ## Goals
 
@@ -32,5 +35,6 @@ The template "Research Data Management Plan - Epidemiological studies" is aimed 
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Health (1 linked)
 - **Partner publications:** 0
 

@@ -9,9 +9,14 @@ inc_start = "2025-08-01"
 inc_end = "2026-01-31"
 inc_cycle = 4
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/3202b19d32c12245.png"
+partners = ["BERD@NFDI"]
+logo_consortia = "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png"
+inc_activity_type = "Development"
+inc_caai = "na"
+inc_ownership = "CC By 4.0"
+inc_activity_page = "https://berd-nfdi.de"
 +++
 
 This incubator project focuses on applying IAM4NFDI standards within the BERD@NFDI infrastructure. We aim to adopt best practices and reference implementations (e.g., OpenID Connect, entitlement-based access) to future-proof our platform for federated, cross-consortia workflows. The project will help ensure compatibility with external services such as Galaxy, and position BERD for participation in the EOSC federated system.
@@ -27,6 +32,11 @@ Best practice AAI for BERD Data Portal is an incubator project within the **Iden
 - **Start:** 2025-08-01
 - **End:** 2026-01-31
 - **Cycle:** 4
+- **Activity type:** Development
+
+## Community AAI
+
+na
 
 ## Goals
 
@@ -38,8 +48,14 @@ Best practice AAI for BERD Data Portal is an incubator project within the **Iden
 ## Results
 
 Not yet published
+- [https://berd-nfdi.de](https://berd-nfdi.de)
+
+## Ownership & utilisation
+
+CC By 4.0
 
 ## Partners & entities
 
+- **NFDI consortia:** BERD@NFDI (1 linked)
 - **Partner publications:** 0
 

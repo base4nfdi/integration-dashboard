@@ -10,8 +10,13 @@ inc_end = "2025-07-31"
 inc_cycle = 3
 inc_partner_publications = 0
 linked_partners = 0
-linked_entities = 0
-logo_consortia = "img/partner-logos/3ed37396264f7d68.svg"
+linked_entities = 1
+entities = ["Bielefeld University"]
+logo_consortia = "https://simplevm.github.io/assets/images/SimpleVM_New.svg"
+inc_activity_type = "Development"
+inc_caai = "Infraproxy"
+inc_ownership = "MISSING, in preparation to select a suitable OpenSource license"
+inc_activity_page = "https://simplevm.github.io"
 +++
 
 Easy access to computational resources for challenging bioinformatics analyses is often difficult for researchers to obtain. SimpleVM (https://simplevm.github.io) is hosted in the de.NBI Cloud, which provides compute and storage resources for several NFDI consortia and services such as Jupyter4NFDI and TS4NFDI. SimpleVM provides VMs with browser-based virtual research environments for data-processing, development use-cases, cluster-based computing, GPU-accelerated cases, and workshop scenarios. SimpleVM is also used as a teaching application at Bielefeld University as part of the Data Science Infrastructure (DSI) initiative, integrated with the local Shibboleth IdP. The purpose of this incubator project is to allow external researchers to use the SimpleVM DSI installation and participate in teaching courses and projects. If successful, NFDI AAI will be used for de.NBI Cloud SimpleVM as well.
@@ -27,6 +32,11 @@ Opening up the SimpleVM Bielefeld University Installation for external collabora
 - **Start:** 2025-02-01
 - **End:** 2025-07-31
 - **Cycle:** 3
+- **Activity type:** Development
+
+## Community AAI
+
+Infraproxy
 
 ## Goals
 
@@ -38,8 +48,14 @@ Opening up the SimpleVM Bielefeld University Installation for external collabora
 ## Results
 
 - [https://github.com/deNBI](https://github.com/deNBI)
+- [https://simplevm.github.io](https://simplevm.github.io)
+
+## Ownership & utilisation
+
+MISSING, in preparation to select a suitable OpenSource license
 
 ## Partners & entities
 
+- **Participating entity:** Bielefeld University (1 linked)
 - **Partner publications:** 0
 

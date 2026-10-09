@@ -10,9 +10,10 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["KonsortSWD"]
-related_institutions = "GESIS"
+entities = ["GESIS – Leibniz Institute for the Social Sciences"]
+source_url = "https://doi.org/10.5281/zenodo.14327770"
 +++
 
 The purpose of this analysis is to showcase PID integration in a new PID service that is being developed within the KonsortSWD consortium. This service aims to reference elements below the dataset, study, or publication level via PID, enhancing FAIRness of low-granular dataset elements and fulfilling requirements such as handling a large number of PIDs.
@@ -44,6 +45,6 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** KonsortSWD (1 linked)
-- **Related institutions:** GESIS
+- **Participating entity:** GESIS – Leibniz Institute for the Social Sciences (1 linked)
 - **Partner publications:** 0
 

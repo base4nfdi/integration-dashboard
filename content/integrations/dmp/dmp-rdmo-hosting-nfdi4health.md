@@ -9,9 +9,11 @@ inc_start = "2025-10-01"
 inc_end = "2025-12-31"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
+partners = ["NFDI4Health"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png"
+inc_service_type = "RDMO Hosting"
 +++
 
 RDMO Hosting — NFDI4Health is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — NFDI4Health is an incubator project within the **Data Managemen
 - **Start:** 2025-10-01
 - **End:** 2025-12-31
 - **Cycle:** 0
+- **Service type:** RDMO Hosting
 
 ## Goals
 
@@ -38,5 +41,6 @@ Test client ready; productive client in preparation
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Health (1 linked)
 - **Partner publications:** 0
 

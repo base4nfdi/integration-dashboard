@@ -4,27 +4,30 @@ date = 2026-07-31
 [extra]
 key_article = "dmp-training-and-outreach-nfdi4cat"
 basic_service = "DMP"
-status = "Running"
+status = "Finished"
 inc_start = "2026-02-01"
 inc_end = "2026-07-31"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/77459895f95007f0.png"
+partners = ["NFDI4Cat"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png"
+inc_service_type = "Training & Outreach, Template Development"
 +++
 
 Training & Outreach — NFDI4Cat is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 
-**Running** — cycle 1, started 2026-02-01.
+**Finished** — cycle 1 completed on 2026-07-31.
 
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
 - **Cycle:** 1
+- **Service type:** Training & Outreach, Template Development
 
 ## Goals
 
@@ -32,5 +35,6 @@ NFDI4Cat is developing a discipline-specific DMP template that covers catalysis-
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Cat (1 linked)
 - **Partner publications:** 0
 

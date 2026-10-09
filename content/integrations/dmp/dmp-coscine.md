@@ -9,9 +9,11 @@ inc_start = "2026-01-01"
 inc_end = "2026-06-30"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/973257d523b9c266.png"
+partners = ["NFDI4Ing"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png"
+inc_service_type = "RDMO Integration"
 +++
 
 Coscine is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ Coscine is an incubator project within the **Data Management Planning (DMP)** ba
 - **Start:** 2026-01-01
 - **End:** 2026-06-30
 - **Cycle:** 1
+- **Service type:** RDMO Integration
 
 ## Goals
 
@@ -39,5 +42,6 @@ RDMO Plugin for the DFG Classification of Scientific Disciplines
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Ing (1 linked)
 - **Partner publications:** 0
 

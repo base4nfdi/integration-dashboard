@@ -2,43 +2,43 @@
   "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo": {
     "path": "img/ref-logos/5bc1fe509df73328.bin",
     "source": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-    "fetched_at": "2026-09-29T15:03:02.598Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:43.473Z",
+    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
     "name": "Base4NFDI"
   },
   "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png": {
     "path": "img/ref-logos/3202b19d32c12245.png",
     "source": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
-    "fetched_at": "2026-09-29T15:03:02.949Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:44.165Z",
+    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
     "name": "BERD@NFDI"
   },
   "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo": {
     "path": "img/ref-logos/551bf6e5598fdae4.bin",
     "source": "https://zenodo.org/api/communities/824c4c51-3b5a-4036-8204-3268fedccde6/logo",
-    "fetched_at": "2026-09-29T15:03:03.118Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:45.643Z",
+    "nocodb_updated_at": "2026-10-09 20:21:04+00:00",
     "name": "DAPHNE4NFDI"
   },
   "https://incubators.nfdi-aai.de/images/dataplant.svg": {
     "path": "img/ref-logos/053229561d547e96.svg",
     "source": "https://incubators.nfdi-aai.de/images/dataplant.svg",
-    "fetched_at": "2026-09-29T15:03:03.378Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:46.275Z",
+    "nocodb_updated_at": "2026-10-09 20:20:58+00:00",
     "name": "DataPLANT"
   },
   "https://dmp.services.base4nfdi.de/images/fairagro_logo.png": {
     "path": "img/ref-logos/2605943254a9ad2c.png",
     "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
-    "fetched_at": "2026-09-29T15:03:03.903Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:46.944Z",
+    "nocodb_updated_at": "2026-10-09 20:21:04+00:00",
     "name": "FAIRagro"
   },
   "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo": {
     "path": "img/ref-logos/8801a70ff77ee38e.bin",
     "source": "https://zenodo.org/api/communities/6c355bd6-35b6-4f64-b435-063bb1978e71/logo",
-    "fetched_at": "2026-09-29T15:03:04.097Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:48.027Z",
+    "nocodb_updated_at": "2026-10-09 20:20:57+00:00",
     "name": "FAIRmat"
   },
   "https://zenodo.org/api/communities/19929035-6a79-41db-8062-0ab40017de5a/logo": {
@@ -58,29 +58,29 @@
   "https://dmp.services.base4nfdi.de/images/mardi_logo.png": {
     "path": "img/ref-logos/5df745c12d212b3a.png",
     "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
-    "fetched_at": "2026-09-29T15:03:05.727Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:49.577Z",
+    "nocodb_updated_at": "2026-10-09 20:21:04+00:00",
     "name": "MaRDI"
   },
   "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png": {
     "path": "img/ref-logos/375d18e09586ac41.png",
     "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
-    "fetched_at": "2026-09-29T15:03:05.917Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:50.175Z",
+    "nocodb_updated_at": "2026-10-09 20:20:57+00:00",
     "name": "NFDI4Biodiversity"
   },
   "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png": {
     "path": "img/ref-logos/bd284640d067a489.png",
     "source": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
-    "fetched_at": "2026-09-29T15:03:06.057Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:50.735Z",
+    "nocodb_updated_at": "2026-10-09 20:21:02+00:00",
     "name": "NFDI4BIOIMAGE"
   },
   "https://incubators.nfdi-aai.de/images/nfdi4cat.svg": {
     "path": "img/ref-logos/172c50564a8df4be.svg",
     "source": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
-    "fetched_at": "2026-09-29T15:03:06.072Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:51.247Z",
+    "nocodb_updated_at": "2026-10-09 20:21:01+00:00",
     "name": "NFDI4Cat"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/NFDI4Chem-Logo%20mehrfarbig%20schwarz.png": {
@@ -100,29 +100,29 @@
   "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo": {
     "path": "img/ref-logos/2e6301fe17e2adc0.bin",
     "source": "https://zenodo.org/api/communities/f34dabab-f69c-42f4-825c-319a0e4e3f25/logo",
-    "fetched_at": "2026-09-29T15:03:08.025Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:53.549Z",
+    "nocodb_updated_at": "2026-10-09 20:21:00+00:00",
     "name": "NFDI4DataScience"
   },
   "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png": {
     "path": "img/ref-logos/d2899f44796b9a2d.png",
     "source": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-    "fetched_at": "2026-09-29T15:03:08.196Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:54.062Z",
+    "nocodb_updated_at": "2026-10-09 20:20:59+00:00",
     "name": "NFDI4Earth"
   },
   "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png": {
     "path": "img/ref-logos/f4255b2203c83db4.png",
     "source": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
-    "fetched_at": "2026-09-29T15:03:08.327Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:54.616Z",
+    "nocodb_updated_at": "2026-10-09 20:21:05+00:00",
     "name": "NFDI4Energy"
   },
   "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png": {
     "path": "img/ref-logos/a39dd4e2752dbcc5.png",
     "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
-    "fetched_at": "2026-09-29T15:03:08.506Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:55.158Z",
+    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
     "name": "NFDI4Health"
   },
   "https://zenodo.org/api/communities/899864bb-2a44-4434-aced-8ac032bb5f87/logo": {
@@ -135,8 +135,8 @@
   "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg": {
     "path": "img/ref-logos/a755e82e7aec255a.svg",
     "source": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
-    "fetched_at": "2026-09-29T15:03:08.877Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:55.639Z",
+    "nocodb_updated_at": "2026-10-09 20:21:01+00:00",
     "name": "NFDI4Ing"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png": {
@@ -149,29 +149,29 @@
   "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png": {
     "path": "img/ref-logos/83ae5ea177c95650.png",
     "source": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-    "fetched_at": "2026-09-29T15:03:14.000Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:56.945Z",
+    "nocodb_updated_at": "2026-10-09 15:08:19+00:00",
     "name": "NFDI-MatWerk"
   },
   "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo": {
     "path": "img/ref-logos/2e5a786a6186ff6e.bin",
     "source": "https://zenodo.org/api/communities/4da28875-c0cc-4fd5-ad99-d5ed45d51798/logo",
-    "fetched_at": "2026-09-29T15:03:14.415Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:57.811Z",
+    "nocodb_updated_at": "2026-10-09 20:21:05+00:00",
     "name": "NFDI4Objects"
   },
   "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png": {
     "path": "img/ref-logos/2d0b59aa31be6acd.png",
     "source": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
-    "fetched_at": "2026-09-29T15:03:14.545Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:58.358Z",
+    "nocodb_updated_at": "2026-10-09 20:21:04+00:00",
     "name": "NFDIxCS"
   },
   "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo": {
     "path": "img/ref-logos/f0e6e264831bd0ce.bin",
     "source": "https://zenodo.org/api/communities/ebe18ca0-5018-4df5-bf90-6931beff9152/logo",
-    "fetched_at": "2026-09-29T15:03:14.842Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:59.388Z",
+    "nocodb_updated_at": "2026-10-09 20:21:04+00:00",
     "name": "PUNCH4NFDI"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg": {
@@ -233,8 +233,8 @@
   "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg": {
     "path": "img/ref-logos/43dbc66e22aa7249.svg",
     "source": "https://www.tu-darmstadt.de/media/resources/images_1/tu_logo_web.svg",
-    "fetched_at": "2026-09-29T15:40:19.672Z",
-    "nocodb_updated_at": "2026-09-29 15:19:26+00:00",
+    "fetched_at": "2026-10-09T20:59:00.491Z",
+    "nocodb_updated_at": "2026-10-09 15:07:36+00:00",
     "name": "ULB University and State Library Darmstadt"
   },
   "https://www.radar-service.eu/radar/assets/logo-radar-en-7ddd78a02329043db441e70a4b15459d.svg": {
@@ -345,8 +345,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NFDI4Memory.svg": {
     "path": "img/ref-logos/064aab3e96c71423.svg",
     "source": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NFDI4Memory.svg",
-    "fetched_at": "2026-09-29T15:06:33.441Z",
-    "nocodb_updated_at": "2026-09-29 14:43:06+00:00",
+    "fetched_at": "2026-10-09T20:58:56.397Z",
+    "nocodb_updated_at": "2026-10-09 20:21:05+00:00",
     "name": "NFDI4Memory"
   },
   "https://upload.wikimedia.org/wikipedia/commons/3/32/BMFTR_-_Logo_%28en%29.svg": {
@@ -432,5 +432,61 @@
     "fetched_at": "2026-09-29T15:07:14.840Z",
     "nocodb_updated_at": "2026-08-04 12:47:14+00:00",
     "name": "GESIS – Leibniz Institute for the Social Sciences"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/5/5d/KonsortSWD_-_Logo.png": {
+    "path": "img/ref-logos/9ad8155b207de67e.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/KonsortSWD_-_Logo.png",
+    "fetched_at": "2026-10-09T20:58:49.028Z",
+    "nocodb_updated_at": "2026-10-09 20:20:58+00:00",
+    "name": "KonsortSWD"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/0/00/NFDI4Chem-Logo_mehrfarbig_schwarz.png": {
+    "path": "img/ref-logos/46674af36f6beb49.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/0/00/NFDI4Chem-Logo_mehrfarbig_schwarz.png",
+    "fetched_at": "2026-10-09T20:58:52.061Z",
+    "nocodb_updated_at": "2026-10-09 20:21:01+00:00",
+    "name": "NFDI4Chem"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/5/5d/NFDI4Culture_Logo.png": {
+    "path": "img/ref-logos/b3a44902d0fc40b9.png",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/5/5d/NFDI4Culture_Logo.png",
+    "fetched_at": "2026-10-09T20:58:52.810Z",
+    "nocodb_updated_at": "2026-10-09 20:21:05+00:00",
+    "name": "NFDI4Culture"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/a/a7/Textplus_logo_RGB.svg": {
+    "path": "img/ref-logos/30e009bc183841f5.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Textplus_logo_RGB.svg",
+    "fetched_at": "2026-10-09T20:59:00.005Z",
+    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
+    "name": "Text+"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/1/1e/RWTH_Logo_3.svg": {
+    "path": "img/ref-logos/c76c5e50e0f4c501.svg",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/1/1e/RWTH_Logo_3.svg",
+    "fetched_at": "2026-10-09T20:59:01.112Z",
+    "nocodb_updated_at": "2026-10-09 20:43:02+00:00",
+    "name": "RWTH Aachen University"
+  },
+  "https://www.urz.uni-leipzig.de/fileadmin/_processed_/b/1/csm_2026_URZ_Logo_C2D_Long_17c6452bc8.png": {
+    "path": "img/ref-logos/c658d7dec6a4dccc.png",
+    "source": "https://www.urz.uni-leipzig.de/fileadmin/_processed_/b/1/csm_2026_URZ_Logo_C2D_Long_17c6452bc8.png",
+    "fetched_at": "2026-10-09T20:59:01.711Z",
+    "nocodb_updated_at": "2026-10-09 14:30:56+00:00",
+    "name": "come2data - Kompetenzzentrum für interdisziplinäre Datenwissenschaften"
+  },
+  "https://commons.wikimedia.org/wiki/File:Siegel_Universit%C3%A4t_Rostock_1419.png": {
+    "path": "img/ref-logos/73129dbfff641b94.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Siegel_Universit%C3%A4t_Rostock_1419.png",
+    "fetched_at": "2026-10-09T20:59:02.584Z",
+    "nocodb_updated_at": "2026-10-09 20:55:02+00:00",
+    "name": "University of Rostock"
+  },
+  "https://www.uni-rostock.de/_assets/907c87f83a7758bda0a4fba273a558a9/Images/rostock_logo.png": {
+    "path": "img/ref-logos/b5dc2674eda9a5ec.png",
+    "source": "https://www.uni-rostock.de/_assets/907c87f83a7758bda0a4fba273a558a9/Images/rostock_logo.png",
+    "fetched_at": "2026-10-09T22:00:31.655Z",
+    "nocodb_updated_at": "2026-10-09 21:58:49+00:00",
+    "name": "University of Rostock"
   }
 }

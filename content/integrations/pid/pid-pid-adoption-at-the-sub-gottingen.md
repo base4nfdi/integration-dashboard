@@ -10,9 +10,10 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["Text+"]
-related_institutions = "SUB Göttingen"
+entities = ["SUB Göttingen"]
+source_url = "https://doi.org/10.5281/zenodo.14327691"
 +++
 
 The purpose of this analysis is to showcase PID integration within the Text+ consortium using the example of the SUB Göttingen. The report focuses on two well-integratied and long-running repositories (DARIAH-DE and TextGrid) for text-based research data from the humanities. We give details on different types of integrated PIDs, metadata quality handling, interaction with major infrastructures such as DARIAH and CLARIN, and describe new requirements and developments such as improved user input interfaces.
@@ -44,6 +45,6 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** Text+ (1 linked)
-- **Related institutions:** SUB Göttingen
+- **Participating entity:** SUB Göttingen (1 linked)
 - **Partner publications:** 0
 

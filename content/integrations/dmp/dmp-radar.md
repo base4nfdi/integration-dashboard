@@ -9,9 +9,11 @@ inc_start = "2026-07-01"
 inc_end = "2026-12-31"
 inc_cycle = 2
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 2
 linked_entities = 0
-logo_consortia = "img/partner-logos/79d79017d3100d9d.png"
+partners = ["NFDI4Chem", "NFDI4Culture"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png"
+inc_service_type = "RDMO Integration"
 +++
 
 DMP in RADAR is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ DMP in RADAR is an incubator project within the **Data Management Planning (DMP)
 - **Start:** 2026-07-01
 - **End:** 2026-12-31
 - **Cycle:** 2
+- **Service type:** RDMO Integration
 
 ## Goals
 
@@ -32,5 +35,6 @@ The incubator project aims to improve the integration of RDMO and the RADAR rese
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Chem, NFDI4Culture (2 linked)
 - **Partner publications:** 0
 

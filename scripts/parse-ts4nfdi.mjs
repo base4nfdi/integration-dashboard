@@ -10,11 +10,13 @@ import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   absoluteUrl,
+  applyElapsedStatus,
   assertNonEmptyRecords,
   buildParsedPayload,
   compareWithNocoDb,
   emptyRecord,
   goalsToMarkdown,
+  httpActivityUrl,
   loadNocoDbRecords,
   normalizeStatus,
   parseDate,
@@ -25,6 +27,7 @@ import {
 
 const SOURCE_ID = "ts4nfdi";
 const BASIC_SERVICE = "TS";
+const SITE_BASE = "https://terminology.services.base4nfdi.de/";
 const LOGO_BASE = "https://terminology.services.base4nfdi.de/img/";
 const DEFAULT_INPUT = join(repoRoot, "data/sources/ts4nfdi/projects.json");
 const DEFAULT_OUTPUT = join(repoRoot, "data/parsed/ts4nfdi.json");
@@ -51,26 +54,29 @@ export function parseTsProjects(payload) {
     const goals = Array.isArray(project.goals) ? project.goals : [];
     const logo = project.logo ? absoluteUrl(LOGO_BASE, project.logo) : "";
 
-    return emptyRecord({
-      inc_name: shortName(project.title) || String(project.title ?? ""),
-      basic_service: BASIC_SERVICE,
-      logo_project: logo,
-      inc_start: parseDate(project.start),
-      inc_end: parseDate(project.end, { endOfMonth: true }),
-      inc_cycle:
-        project.cycle == null || project.cycle === ""
-          ? null
-          : Number(project.cycle),
-      inc_status: normalizeStatus(project.status),
-      inc_descr: String(project.description ?? "").trim(),
-      inc_goals: goalsToMarkdown(goals),
-      inc_results: publications.join("\n"),
-      inc_partner_publications: publications.length,
-      partners,
-      linked_partners: partners.length,
-      source_title: String(project.title ?? ""),
-      source_activity_page: String(project.activityPage ?? ""),
-    });
+    return applyElapsedStatus(
+      emptyRecord({
+        inc_name: shortName(project.title) || String(project.title ?? ""),
+        basic_service: BASIC_SERVICE,
+        logo_project: logo,
+        inc_start: parseDate(project.start),
+        inc_end: parseDate(project.end, { endOfMonth: true }),
+        inc_cycle:
+          project.cycle == null || project.cycle === ""
+            ? null
+            : Number(project.cycle),
+        inc_status: normalizeStatus(project.status),
+        inc_descr: String(project.description ?? "").trim(),
+        inc_goals: goalsToMarkdown(goals),
+        inc_results: publications.join("\n"),
+        inc_partner_publications: publications.length,
+        inc_activity_page: httpActivityUrl(SITE_BASE, project.activityPage),
+        partners,
+        linked_partners: partners.length,
+        source_title: String(project.title ?? ""),
+        source_activity_page: String(project.activityPage ?? ""),
+      })
+    );
   });
 }
 

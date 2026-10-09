@@ -9,9 +9,11 @@ inc_start = "2025-09-01"
 inc_end = "2025-12-31"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/db773a275cb2249c.png"
+partners = ["Text+"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/text+_logo.png"
+inc_service_type = "Template Development"
 +++
 
 Template Development — Text+ is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ Template Development — Text+ is an incubator project within the **Data Managem
 - **Start:** 2025-09-01
 - **End:** 2025-12-31
 - **Cycle:** 0
+- **Service type:** Template Development
 
 ## Goals
 
@@ -37,5 +40,6 @@ Text+ RDMO Catalog
 
 ## Partners & entities
 
+- **NFDI consortia:** Text+ (1 linked)
 - **Partner publications:** 0
 

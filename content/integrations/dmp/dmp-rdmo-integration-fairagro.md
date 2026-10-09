@@ -9,9 +9,11 @@ inc_start = "2026-01-01"
 inc_end = "2026-06-30"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/2605943254a9ad2c.png"
+partners = ["FAIRagro"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/fairagro_logo.png"
+inc_service_type = "RDMO Integration, Training & Outreach"
 +++
 
 RDMO Integration — FAIRagro is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Integration — FAIRagro is an incubator project within the **Data Manageme
 - **Start:** 2026-01-01
 - **End:** 2026-06-30
 - **Cycle:** 1
+- **Service type:** RDMO Integration, Training & Outreach
 
 ## Goals
 
@@ -37,5 +40,6 @@ Workshop "RDMO in Practice: Building Data Management Plans for Agricultural Rese
 
 ## Partners & entities
 
+- **NFDI consortia:** FAIRagro (1 linked)
 - **Partner publications:** 0
 

@@ -9,9 +9,11 @@ inc_start = "2024-12-01"
 inc_end = "2025-05-31"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/2605943254a9ad2c.png"
+partners = ["FAIRagro"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/fairagro_logo.png"
+inc_service_type = "RDMO Hosting"
 +++
 
 RDMO Hosting — FAIRagro is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — FAIRagro is an incubator project within the **Data Management P
 - **Start:** 2024-12-01
 - **End:** 2025-05-31
 - **Cycle:** —
+- **Service type:** RDMO Hosting
 
 ## Goals
 
@@ -37,5 +40,6 @@ FAIRagro RDMO Client
 
 ## Partners & entities
 
+- **NFDI consortia:** FAIRagro (1 linked)
 - **Partner publications:** 0
 

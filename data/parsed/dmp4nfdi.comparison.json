@@ -33,6 +33,10 @@
           "source": "RADAR",
           "nocodb": "DMP in RADAR"
         },
+        "inc_service_type": {
+          "source": "RDMO Integration",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Culture",
@@ -68,6 +72,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
           "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
@@ -99,6 +107,10 @@
         },
         "inc_end": {
           "source": "2026-12-31",
+          "nocodb": ""
+        },
+        "inc_service_type": {
+          "source": "Template Development",
           "nocodb": ""
         },
         "logo_consortia": {
@@ -146,6 +158,10 @@
           "source": "This incubator project will finalise the discipline-specific data management plan (DMP) template and make it available as an RDMO catalogue for the operational MatWerk RDMO client. Training and outreach activities will also be developed to raise awareness and build skills among researchers and stakeholders in NFDI-MatWerk.",
           "nocodb": "The template \"Research Data Management Plan - Epidemiological studies\" is aimed at epidemiological researchers and is currently published as a fillable PDF document. The goal of this incubator project is to fully implement the template in RDMO so that researchers can use, review and adapt it to their needs. The incubator will provide the basis for the implementation of two further NFDI4Health DMP templates, one for clinical research and one shortened version that can be handed it along with a research proposal, e.g. at the DFG."
         },
+        "inc_service_type": {
+          "source": "Template Development, RDMO Hosting",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "MatWerk"
@@ -179,6 +195,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "Training & Outreach",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
           "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
@@ -212,6 +232,10 @@
           "source": "NFDI4Earth RDMO Client\nhttps://rdmo.nfdi4earth.de/\nRDMO Sensor Search option set plugin updated\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
           "nocodb": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
         },
+        "inc_service_type": {
+          "source": "RDMO Hosting, RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
           "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
@@ -241,6 +265,10 @@
           "source": "FAIRmat",
           "nocodb": "FAIRmat RDMO Client for the Physical Sciences"
         },
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png",
           "nocodb": "img/partner-logos/7613ba801eafb62e.png"
@@ -266,6 +294,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png",
           "nocodb": "img/partner-logos/973257d523b9c266.png"
@@ -291,6 +323,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Integration, Training & Outreach",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
           "nocodb": "img/partner-logos/2605943254a9ad2c.png"
@@ -316,6 +352,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "Training & Outreach",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
           "nocodb": "img/partner-logos/db773a275cb2249c.png"
@@ -344,6 +384,10 @@
         "inc_status": {
           "source": "Finished",
           "nocodb": "Running"
+        },
+        "inc_service_type": {
+          "source": "Training & Outreach, Template Development",
+          "nocodb": ""
         },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
@@ -381,6 +425,10 @@
         "inc_goals": {
           "source": "The template \"Research Data Management Plan - Epidemiological studies\" is aimed at epidemiological researchers and is currently published as a fillable PDF document. The goal of this incubator project is to fully implement the template in RDMO so that researchers can use, review and adapt it to their needs. The incubator will provide the basis for the implementation of two further NFDI4Health DMP templates, one for clinical research and one shortened version that can be handed it along with a research proposal, e.g. at the DFG.",
           "nocodb": "This project aims to develop a mathematics-specific DMP template, building on the recommendations of the MaRDI consortium’s white paper “Research Data Management Planning in Mathematics”. The project will translate discipline-specific requirements into a structured, modular template capturing the diversity of mathematical research data—proofs, algorithms, computational workflows, mathematical models, software, numerical datasets, and visualizations."
+        },
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
         },
         "partners": {
           "source": [
@@ -439,6 +487,10 @@
           "source": "",
           "nocodb": "NFDI4Culture RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture"
         },
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "MaRDI"
@@ -472,6 +524,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png",
           "nocodb": "img/partner-logos/68e3cc17e1554305.png"
@@ -497,6 +553,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
           "nocodb": "img/partner-logos/f4255b2203c83db4.png"
@@ -522,6 +582,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "MatWerk"
@@ -555,6 +619,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
           "nocodb": "img/partner-logos/bd284640d067a489.png"
@@ -580,6 +648,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
           "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
@@ -605,6 +677,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
           "nocodb": "img/partner-logos/5df745c12d212b3a.png"
@@ -651,6 +727,10 @@
           "source": "NFDI4Culture RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture",
           "nocodb": ""
         },
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Culture"
@@ -687,6 +767,10 @@
       "field_diffs": {
         "inc_results": {
           "source": "NFDI4Memory RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory",
+          "nocodb": ""
+        },
+        "inc_service_type": {
+          "source": "Template Development",
           "nocodb": ""
         },
         "logo_consortia": {
@@ -726,6 +810,10 @@
         "inc_results": {
           "source": "",
           "nocodb": "FAIRagro RDMO Catalog\nhttps://github.com/fairagro/FAIRagro_DMP_Template"
+        },
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
         },
         "partners": {
           "source": [
@@ -777,6 +865,10 @@
           "source": "FAIRagro RDMO Catalog\nhttps://github.com/fairagro/FAIRagro_DMP_Template",
           "nocodb": "Text+ RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B"
         },
+        "inc_service_type": {
+          "source": "Template Development",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "FAIRagro"
@@ -818,6 +910,10 @@
           "source": "Training Guideline – How to Plan and Run a Workshop on Data Management Plans\nhttps://doi.org/10.5281/zenodo.20529135\nOER – DMP Writing Made Easy: A Hands-on Workshop for Chemists\nhttps://doi.org/10.5281/zenodo.18349878",
           "nocodb": "Training Guide for DMP Workshops\nhttps://doi.org/10.5281/zenodo.20529135"
         },
+        "inc_service_type": {
+          "source": "Training & Outreach",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
           "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
@@ -843,6 +939,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
           "nocodb": "img/partner-logos/bfa1a3b9daa9e273.png"
@@ -868,6 +968,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
           "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
@@ -893,6 +997,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
           "nocodb": "img/partner-logos/2605943254a9ad2c.png"
@@ -918,6 +1026,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
           "nocodb": "img/partner-logos/375d18e09586ac41.png"
@@ -943,6 +1055,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting, RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
           "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
@@ -968,6 +1084,10 @@
         ]
       },
       "field_diffs": {
+        "inc_service_type": {
+          "source": "RDMO Hosting, RDMO Integration",
+          "nocodb": ""
+        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
           "nocodb": "img/partner-logos/5df745c12d212b3a.png"
@@ -1004,6 +1124,10 @@
         "inc_results": {
           "source": "Test client ready; productive client in preparation",
           "nocodb": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
+        },
+        "inc_service_type": {
+          "source": "RDMO Hosting, Template Development",
+          "nocodb": ""
         },
         "partners": {
           "source": [

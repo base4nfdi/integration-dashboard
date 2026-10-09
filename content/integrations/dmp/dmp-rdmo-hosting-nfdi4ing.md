@@ -9,9 +9,11 @@ inc_start = "2024-06-01"
 inc_end = "2025-09-30"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/bfa1a3b9daa9e273.png"
+partners = ["NFDI4Ing"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png"
+inc_service_type = "RDMO Hosting"
 +++
 
 RDMO Hosting — NFDI4Ing is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — NFDI4Ing is an incubator project within the **Data Management P
 - **Start:** 2024-06-01
 - **End:** 2025-09-30
 - **Cycle:** —
+- **Service type:** RDMO Hosting
 
 ## Goals
 
@@ -37,5 +40,6 @@ NFDI4Ing RDMO Client
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Ing (1 linked)
 - **Partner publications:** 0
 

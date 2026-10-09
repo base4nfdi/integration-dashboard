@@ -10,9 +10,10 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 0
+linked_entities = 1
 partners = ["FAIRagro"]
-related_institutions = "IPK Gatersleben"
+entities = ["IPK - Leibniz Institute of Plant Genetics and Crop Plant Research"]
+source_url = "https://doi.org/10.5281/zenodo.14506202"
 +++
 
 The purpose of this report is to provide a comprehensive evaluation of the metadata quality and completeness of the FAIRAgro consortium. This analysis, conducted by DataCite, highlights the current state of metadata, offering insights into its alignment with persistent identifier and metadata best practices.
@@ -44,6 +45,6 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** FAIRagro (1 linked)
-- **Related institutions:** IPK Gatersleben
+- **Participating entity:** IPK - Leibniz Institute of Plant Genetics and Crop Plant Research (1 linked)
 - **Partner publications:** 0
 

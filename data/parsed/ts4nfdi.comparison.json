@@ -39,6 +39,10 @@
           "source": "https://doi.org/10.5281/zenodo.17090276\nhttps://doi.org/10.5281/zenodo.16736267\nhttps://radar.products.fiz-karlsruhe.de/en/nachricht/radar-release-v123-ts4nfdi-integration-abgeschlossen",
           "nocodb": ""
         },
+        "inc_activity_page": {
+          "source": "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu",
+          "nocodb": ""
+        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
           "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
@@ -118,6 +122,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://www.ebi.ac.uk/chebi/CHEBI:27732",
+          "nocodb": ""
+        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/chebi.png",
           "nocodb": "img/partner-logos/ef0a379775ece1e4.png"
@@ -170,6 +178,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Cat"
@@ -199,6 +211,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://ts.berd-nfdi.de/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "BERD@NFDI"
@@ -228,6 +244,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://ols.plasma-mds.org/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4BIOIMAGE"
@@ -257,6 +277,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://preview.zbmed.de/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Health"
@@ -286,6 +310,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://mda.nfdi4health.de/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Health"
@@ -344,6 +372,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://openenergyplatform.org/viewer/oeo/",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Energy"
@@ -409,6 +441,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_activity_page": {
+          "source": "https://terminology.tib.eu/ts/ontologies/ohdab",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Memory",
@@ -427,7 +463,7 @@
       "source": {
         "inc_name": "Health Study Hub",
         "inc_cycle": 2,
-        "inc_status": "Running",
+        "inc_status": "Finished",
         "partners": [
           "NFDI4Health"
         ]
@@ -439,6 +475,14 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "Finished",
+          "nocodb": "Running"
+        },
+        "inc_activity_page": {
+          "source": "https://health-study-hub.de/resource/nfdi4health-108",
+          "nocodb": ""
+        },
         "partners": {
           "source": [
             "NFDI4Health"
@@ -456,7 +500,7 @@
       "source": {
         "inc_name": "DALIA Search Portal",
         "inc_cycle": 2,
-        "inc_status": "Running",
+        "inc_status": "Finished",
         "partners": []
       },
       "nocodb": {
@@ -466,6 +510,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "Finished",
+          "nocodb": "Running"
+        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/dalia.png",
           "nocodb": "img/partner-logos/39ef828eaba7a05b.png"
@@ -477,7 +525,7 @@
       "source": {
         "inc_name": "AIMS",
         "inc_cycle": 3,
-        "inc_status": "Running",
+        "inc_status": "Finished",
         "partners": [
           "NFDI4Ing"
         ]
@@ -491,6 +539,10 @@
         ]
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "Finished",
+          "nocodb": "Running"
+        },
         "inc_start": {
           "source": "2026-03-18",
           "nocodb": "2026-03-01"
@@ -559,7 +611,7 @@
       "source": {
         "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
         "inc_cycle": 3,
-        "inc_status": "Running",
+        "inc_status": "Finished",
         "partners": [
           "Base4NFDI"
         ]
@@ -571,6 +623,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "Finished",
+          "nocodb": "Running"
+        },
         "partners": {
           "source": [
             "Base4NFDI"
@@ -666,7 +722,7 @@
       "source": {
         "inc_name": "FAIRagro Terminology Service",
         "inc_cycle": 3,
-        "inc_status": "Running",
+        "inc_status": "Finished",
         "partners": [
           "FAIRagro"
         ]
@@ -678,6 +734,10 @@
         "partners": []
       },
       "field_diffs": {
+        "inc_status": {
+          "source": "Finished",
+          "nocodb": "Running"
+        },
         "partners": {
           "source": [
             "FAIRagro"

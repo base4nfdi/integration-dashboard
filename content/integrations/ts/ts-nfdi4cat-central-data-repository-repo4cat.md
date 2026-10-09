@@ -9,9 +9,11 @@ inc_start = "2025-02-12"
 inc_end = "2025-10-31"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_project = "img/partner-logos/4a8f5a62aea03e2b.png"
+partners = ["NFDI4Cat"]
+logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4cat.png"
+inc_activity_page = "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/"
 +++
 
 NFDI4Cat is a community-driven and user-oriented initiative to secure the digital future of catalysis. NFDI4Cat has set up a data repository “Repo4Cat” based on the Dataverse platform (https://repository.nfdi4cat.org/). Due to the lack of catalysis-specific vocabularies and ontologies, NFDI4Cat has also created a community-managed SKOS vocabulary “Voc4Cat” (https://nfdi4cat.github.io/voc4cat/) to provide machine readable term definitions to be used for data annotation and in metadata schemas. Together with TS4NFDI NFDI4Cat wants to provide a better vocabulary  browsing and search experience by serving Voc4Cat via Skosmos, a terminology browsing tool specifically optimized for SKOS vocabularies. Moreover, we want to integrate Voc4Cat annotation-widgets in the Repo4Cat data sharing platform in order to improve the metadata entry and interoperability.
@@ -37,8 +39,10 @@ NFDI4Cat Central Data Repository (Repo4Cat) is an incubator project within the *
 ## Results
 
 - [https://doi.org/10.5281/zenodo.16736362](https://doi.org/10.5281/zenodo.16736362)
+- [https://semanticlookup.zbmed.de/skosmos/voc4cat/en/](https://semanticlookup.zbmed.de/skosmos/voc4cat/en/)
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Cat (1 linked)
 - **Partner publications:** 0
 

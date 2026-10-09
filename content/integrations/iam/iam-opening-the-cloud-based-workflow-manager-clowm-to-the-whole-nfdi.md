@@ -11,7 +11,11 @@ inc_cycle = 3
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "img/partner-logos/2f8f0030e7abc9b2.svg"
+logo_consortia = "https://gitlab.ub.uni-bielefeld.de/cmg/clowm/clowm-ui/-/raw/main/src/assets/images/clowm.svg"
+inc_activity_type = "Integration"
+inc_caai = "Infraproxy"
+inc_ownership = "Apache v2.0"
+inc_activity_page = "https://clowm.bi.denbi.de"
 +++
 
 In the context of NFDI4Microbita we develop with the Cloud-based Workflow Manager (CloWM) an integrated platform for highly scalable workflow execution. CloWM allows the seamless integration of (1) versioned workflows, (2) robust data storage, (3) a highly scalable compute layer and (4) a user- friendly interface. Due to its generic design the platform is also used in other NFDIs (e.g. NFDI4Biodiversity) as an execution environment for community specific data analysis workflows and will be an official de.NBI service soon. With this Incubator project we want to open our service to a broader community by supporting the usage of other community AAIs for authentication. The CloWM platform currently supports LS LOGIN (Life Science Login) via OIDC as SSO solution for user authentication. If the NFDI Infra Proxy supports OIDC, we will add it as an additional login option and hence opening the platform to users of other community AAIs.
@@ -27,6 +31,11 @@ Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI is an incubat
 - **Start:** 2025-02-01
 - **End:** 2025-07-31
 - **Cycle:** 3
+- **Activity type:** Integration
+
+## Community AAI
+
+Infraproxy
 
 ## Goals
 
@@ -36,6 +45,11 @@ Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI is an incubat
 ## Results
 
 - [https://gitlab.ub.uni-bielefeld.de/cmg/clowm](https://gitlab.ub.uni-bielefeld.de/cmg/clowm)
+- [https://clowm.bi.denbi.de](https://clowm.bi.denbi.de)
+
+## Ownership & utilisation
+
+Apache v2.0
 
 ## Partners & entities
 

@@ -130,6 +130,11 @@ export function emptyRecord(overrides = {}) {
     inc_goals: "",
     inc_results: "",
     inc_partner_publications: 0,
+    inc_activity_type: "",
+    inc_caai: "",
+    inc_ownership: "",
+    inc_service_type: "",
+    inc_activity_page: "",
     linked_partners: null,
     linked_entities: null,
     partners: [],
@@ -270,6 +275,39 @@ export function normalizeStatus(status) {
     denied: "Finished",
   };
   return map[key] ?? raw;
+}
+
+/** UTC calendar day as YYYY-MM-DD. */
+export function todayIso() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+/**
+ * If inc_end is a real date before today, the incubator is finished even
+ * when the source badge still says Running. No end date leaves status as-is.
+ */
+export function applyElapsedStatus(record, today = todayIso()) {
+  const end = String(record?.inc_end ?? "").trim();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(end) && end < today) {
+    record.inc_status = "Finished";
+  }
+  return record;
+}
+
+/** Keep http(s) activity-page URLs. Ignore labels such as "provider". */
+export function httpActivityUrl(base, value) {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (
+    raw.startsWith("/") ||
+    raw.startsWith("./") ||
+    raw.startsWith("../")
+  ) {
+    const abs = absoluteUrl(base, raw);
+    return /^https?:\/\//i.test(abs) ? abs : "";
+  }
+  return "";
 }
 
 export function normalizePartnerName(value) {
@@ -505,6 +543,11 @@ const COMPARE_FIELDS = [
   "inc_descr",
   "inc_goals",
   "inc_results",
+  "inc_activity_type",
+  "inc_caai",
+  "inc_ownership",
+  "inc_service_type",
+  "inc_activity_page",
   "partners",
   "logo_project",
   "logo_consortia",

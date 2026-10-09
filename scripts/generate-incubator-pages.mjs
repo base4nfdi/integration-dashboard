@@ -7,10 +7,11 @@
  * Usage:
  *   node scripts/generate-incubator-pages.mjs
  *   node scripts/generate-incubator-pages.mjs --dry-run
+ *   node scripts/generate-incubator-pages.mjs --update
  *   node scripts/generate-incubator-pages.mjs --force
  */
 
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadNocoDbRecords, repoRoot } from "./lib/parse-utils.mjs";
 
@@ -28,10 +29,11 @@ const SERVICE_DIRS = new Set(["ts", "dmp", "iam", "pid"]);
 const KEY_ARTICLE_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 function parseArgs(argv) {
-  const args = { dryRun: false, force: false, help: false };
+  const args = { dryRun: false, force: false, update: false, help: false };
   for (const arg of argv) {
     if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--force") args.force = true;
+    else if (arg === "--update") args.update = true;
     else if (arg === "--help" || arg === "-h") args.help = true;
     else throw new Error(`Unknown argument: ${arg}`);
   }
@@ -40,11 +42,12 @@ function parseArgs(argv) {
 
 function printHelp() {
   console.log(`Usage:
-  node scripts/generate-incubator-pages.mjs [--dry-run] [--force]
+  node scripts/generate-incubator-pages.mjs [--dry-run] [--update] [--force]
 
 Creates missing integration Markdown files under
 content/integrations/{ts|dmp|iam|pid}/ from static/data.json.
 By default existing files are not overwritten.
+--update rewrites an existing page when the generated Markdown differs.
 `);
 }
 
@@ -238,6 +241,17 @@ function buildFrontMatter(record, keyArticle) {
   if (sourceUrl) lines.push(`source_url = ${tomlString(sourceUrl)}`);
   if (related) lines.push(`related_institutions = ${tomlString(related)}`);
 
+  const activityType = asInline(record.inc_activity_type);
+  const caai = asInline(record.inc_caai);
+  const ownership = asInline(record.inc_ownership);
+  const serviceType = asInline(record.inc_service_type);
+  const activityPage = asUrl(record.inc_activity_page);
+  if (activityType) lines.push(`inc_activity_type = ${tomlString(activityType)}`);
+  if (caai) lines.push(`inc_caai = ${tomlString(caai)}`);
+  if (ownership) lines.push(`inc_ownership = ${tomlString(ownership)}`);
+  if (serviceType) lines.push(`inc_service_type = ${tomlString(serviceType)}`);
+  if (activityPage) lines.push(`inc_activity_page = ${tomlString(activityPage)}`);
+
   lines.push("+++");
   return lines.join("\n");
 }
@@ -246,7 +260,17 @@ function buildBody(record, keyArticle) {
   const name = asText(record.inc_name) || keyArticle;
   const descr = cleanText(record.inc_descr);
   const goals = formatLinkishBlock(record.inc_goals);
-  const results = formatLinkishBlock(record.inc_results);
+  const activityPage = asUrl(record.inc_activity_page);
+  const resultsText = cleanText(record.inc_results);
+  const resultsSource =
+    activityPage && !resultsText.includes(activityPage)
+      ? [resultsText, activityPage].filter(Boolean).join("\n")
+      : resultsText;
+  const results = formatLinkishBlock(resultsSource);
+  const serviceType = asText(record.inc_service_type);
+  const activityType = asText(record.inc_activity_type);
+  const caai = asText(record.inc_caai);
+  const ownership = asText(record.inc_ownership);
   const service = serviceLabel(record.basic_service);
   const sections = [];
 
@@ -260,8 +284,9 @@ function buildBody(record, keyArticle) {
     asText(record.basic_service).toUpperCase() === "PID"
       ? "use case"
       : "incubator project";
+  const article = kind === "incubator project" ? "an" : "a";
   sections.push(
-    `${name} is a ${kind} within the **${service}** basic service of Base4NFDI.`
+    `${name} is ${article} ${kind} within the **${service}** basic service of Base4NFDI.`
   );
   sections.push("");
   sections.push("## Current status");
@@ -279,6 +304,15 @@ function buildBody(record, keyArticle) {
         : record.inc_cycle
     }`
   );
+  if (serviceType) sections.push(`- **Service type:** ${serviceType}`);
+  if (activityType) sections.push(`- **Activity type:** ${activityType}`);
+
+  if (caai) {
+    sections.push("");
+    sections.push("## Community AAI");
+    sections.push("");
+    sections.push(caai);
+  }
 
   if (goals) {
     sections.push("");
@@ -292,6 +326,13 @@ function buildBody(record, keyArticle) {
     sections.push("## Results");
     sections.push("");
     sections.push(results);
+  }
+
+  if (ownership) {
+    sections.push("");
+    sections.push("## Ownership & utilisation");
+    sections.push("");
+    sections.push(ownership);
   }
 
   sections.push("");
@@ -344,6 +385,8 @@ async function main() {
   }
 
   const created = [];
+  const updated = [];
+  const unchanged = [];
   const skipped = [];
   const ignored = [];
 
@@ -372,12 +415,28 @@ async function main() {
 
     const outPath = join(DEFAULT_OUT_DIR, service, `${keyArticle}.md`);
     const exists = existsSync(outPath);
-    if (exists && !args.force) {
+    const markdown = renderIncubatorMarkdown(record);
+
+    if (exists && !args.force && !args.update) {
       skipped.push(keyArticle);
       continue;
     }
 
-    const markdown = renderIncubatorMarkdown(record);
+    if (exists && args.update && !args.force) {
+      const current = readFileSync(outPath, "utf8");
+      if (current === markdown) {
+        unchanged.push(keyArticle);
+        continue;
+      }
+      if (args.dryRun) {
+        updated.push({ key_article: keyArticle, path: outPath, dryRun: true });
+        continue;
+      }
+      writeFileSync(outPath, markdown, "utf8");
+      updated.push({ key_article: keyArticle, path: outPath });
+      continue;
+    }
+
     if (args.dryRun) {
       created.push({ key_article: keyArticle, path: outPath, dryRun: true });
       continue;
@@ -390,19 +449,21 @@ async function main() {
   const action = args.force ? "Wrote/updated" : "Created";
   console.log(
     `${action} ${created.length} incubator page(s)` +
+      (args.update ? `; updated ${updated.length}; unchanged ${unchanged.length}` : "") +
       (args.dryRun ? " (dry-run)" : "") +
       `; skipped ${skipped.length} existing; ignored ${ignored.length}.`
   );
 
-  if (created.length > 0 && created.length <= 20) {
-    for (const item of created) {
+  const listed = args.force ? created : [...created, ...updated];
+  if (listed.length > 0 && listed.length <= 20) {
+    for (const item of listed) {
       console.log(`  ${item.key_article}`);
     }
-  } else if (created.length > 20) {
-    for (const item of created.slice(0, 10)) {
+  } else if (listed.length > 20) {
+    for (const item of listed.slice(0, 10)) {
       console.log(`  ${item.key_article}`);
     }
-    console.log(`  … and ${created.length - 10} more`);
+    console.log(`  … and ${listed.length - 10} more`);
   }
 }
 

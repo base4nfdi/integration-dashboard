@@ -1,7 +1,7 @@
 {
   "source": "iam4nfdi",
   "basic_service": "IAM",
-  "parsed_at": "2026-10-09T09:21:45.237Z",
+  "parsed_at": "2026-10-09T20:20:52.199Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/iam4nfdi/page.html",
   "record_count": 39,
   "records": [
@@ -16,11 +16,16 @@
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 5,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "The jupyter service is actually connected via SAML to the EDUGAIN federation. We use apache_mod_shib to provide the necessary attribute to our login application. We want to understand the architecture of NFDI AAI, the meaning of community AAIs, infrastructure proxies and virtual organisations to be able to plan and implement the necessary steps to connect our service to the NFDI AAI infrastructure. So far, we are not able to configure our service using the existing documentation. We hope to get the knowledge we need within this incubator project, learn form experiences from others and also help to ease this process for other services. In order to do so, we have to perform the following steps: - Clarification of requirements and necessary steps to connect a service to NFDI AAI (AAI4NFDI team together with project team) - Selection of the community AAI (project team) - Clarification of the process how and where to define user groups (like engineers) (AAI4NFDI team together with project team) - Implementation of integration of NFDI AAI (project team with support of NFDI4AAI team) - Plan how to migrate existing users (project team with support of NFDI4AAI team)",
       "inc_goals": "- Ease the onboarding of new institutions/user groups to our service\n- Allow users outside academia (EDUGAIN) to login into our service (like federal research organisations)\n- Allow to confine the access to the service to selected user group",
       "inc_results": "https://github.tik.uni-stuttgart.de",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "regapp",
+      "inc_ownership": "CC-BY 4.0",
+      "inc_service_type": "",
+      "inc_activity_page": "https://jupyter.nfdi4ing.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -29,7 +34,7 @@
       "entities": [],
       "source_id": "nfdi4ingjupyter",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://jupyter.nfdi4ing.de",
       "source_meta": [
         "CAAI: regapp",
         "BASE"
@@ -46,11 +51,16 @@
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 5,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "The incubator project aims to implement a Single Sign-On (SSO) solution for Terminology Services 4 NFDI (TS4NFDI), which provides cross-domain services for terminology provision, curation, development, harmonization, and mapping. The platform integrates standardized services including a centralized API Gateway, NFDI-wide Mapping Service, and Terminology Service Suite widgets, all accessible through a central Service Portal for unified collection and mapping management. The planned Authentication and Authorization Infrastructure (AAI) will support login via NFDI-AAI, ORCID, and GitHub, with compatibility for EOSC AAI. The API Gateway provides database access for all services, enabling storage of user-specific configurations and collections. Beyond current data provision, TS4NFDI will support terminology curation workflows where logged-in users can suggest extensions through graphical interfaces, automatically generating GitHub issues or pull requests with ORCID identifiers for proper curator review and contribution credits. The TS4NFDI Mapping Service, implemented using Cocoda software, will be extended from its current ORCID and GitHub authentication to include NFDI AAI login capabilities. Given discussions about integrating TS4NFDI into the NFDI EOSC node, the AAI solution is designed for EOSC AAI infrastructure compatibility.",
       "inc_goals": "- Integrate RegApp to the API Gateway as the primary authentication service\n- The following services should be connected to the authentication service: TS4NFDI Service Portal, TS4NFDI Mapping Service and the Terminology Service Suite",
       "inc_results": "https://terminology.services.base4nfdi.de/\nhttps://github.com/ts4nfdi/api-gateway\nhttps://github.com/ts4nfdi/service-portal\nhttps://github.com/ts4nfdi/terminology-service-suite\nhttps://github.com/gbv/cocoda\nhttps://github.com/gbv/login-server",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "infraproxy",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://terminology.services.base4nfdi.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -59,7 +69,7 @@
       "entities": [],
       "source_id": "ts4nfdi2",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://terminology.services.base4nfdi.de",
       "source_meta": [
         "CAAI: infraproxy",
         "GENERAL"
@@ -81,13 +91,18 @@
       "inc_goals": "",
       "inc_results": "https://zenodo.org/communities/come2data\nhttps://gitlab.hrz.tu-chemnitz.de/come2data",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "didmos",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://come2data.de",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "come2data2",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://come2data.de",
       "source_meta": [
         "CAAI: didmos",
         "EXTERNAL"
@@ -104,18 +119,23 @@
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 5,
-      "inc_status": "NoResponse",
+      "inc_status": "Finished",
       "inc_descr": "The primary objective of the incubator proposal is to implement an RDM system that can be integrated into a virtual research environment for transportation science. Authentication should be handled by Community AAI software where customisation needs to be implemented wherever applicable This approach is advantageous as it enables ease of authentication for par ticipants / users from other institutions, while also supporting the implementation of authorization and group management within our services where applicable.",
       "inc_goals": "- Testing the AAI software with a dedicated test instance connected to our Infraverse infrastructure\n- Establishing a successful integration of the AAI software login with the production instance of Infraverse\n- Utilising the RegApp features (Group management, API …) within our infrastructure to streamline group management, role assignments, and authorization processes",
       "inc_results": "Not yet available",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "regapp",
+      "inc_ownership": "CC by 4.0 + MIT",
+      "inc_service_type": "",
+      "inc_activity_page": "https://infraverse-dev.zih.tu-dresden.de",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "agimo",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://infraverse-dev.zih.tu-dresden.de",
       "source_meta": [
         "CAAI: regapp",
         "EXTERNAL"
@@ -137,6 +157,11 @@
       "inc_goals": "- Develop a generic python-django allauth plugin, that can be (re-) used in many django based projects, like LARAsuite, to grant NFDI community access\n- Authorisation information shall provide a restricted view on the research data stored in the LARA databases",
       "inc_results": "https://gitlab.com/LARAsuite",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "na",
+      "inc_ownership": "MIT Licence",
+      "inc_service_type": "",
+      "inc_activity_page": "https://github.com/pennersr/django-allauth",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -145,7 +170,7 @@
       "entities": [],
       "source_id": "lara-4",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://github.com/pennersr/django-allauth",
       "source_meta": [
         "CAAI: na"
       ]
@@ -166,6 +191,11 @@
       "inc_goals": "- The Data Ingest Service originally was designed to target architecture and civil engineering, but we will breaden the scope in the future",
       "inc_results": "https://gitlab.ulb.tu-darmstadt.de",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "regapp",
+      "inc_ownership": "MIT Licence",
+      "inc_service_type": "",
+      "inc_activity_page": "https://ingest.nfdi4ing.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -174,7 +204,7 @@
       "entities": [],
       "source_id": "data-ingest-4",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://ingest.nfdi4ing.de",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -190,11 +220,16 @@
       "inc_start": "2025-08-01",
       "inc_end": "2026-01-31",
       "inc_cycle": 4,
-      "inc_status": "NoResponse",
+      "inc_status": "Finished",
       "inc_descr": "Currently, Chaldene is not optimised for computationally intensive AI workflows. This limitation hinders its application for cutting-edge, AI-driven research within the NFDI community. To address this gap, we are working on connecting Chaldene to High-Performance Computing (HPC) infrastructures using containerised workflow execution. This approach requires a robust trust and identity framework, making the integration with the NFDI Authentication and Authorisation Infrastructure (AAI) essential for two primary functions: Secure HPC Access: The NFDI AAI is required to provide researchers with seamless and secure authenticated access to remote HPC resources. It will allow Chaldene to act on a user’s behalf, submitting containerised jobs to clusters by leveraging the user’s trusted home institution identity, thus eliminating the need for separate credentials. FAIR Workflow Sharing: To make Chaldene workflows truly shareable and reproducible according to FAIR principles, the NFDI AAI is necessary. It ensures that when a workflow is shared, a collaborator can execute it using their own verified identity, accessing the required data and compute resources they are authorized for, regardless of their institution.",
       "inc_goals": "",
       "inc_results": "https://github.com/c3di/chaldene",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "regapp",
+      "inc_ownership": "MIT or LGPL",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.google.com/search?hl=en&q=chaldene tim dahmen",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -203,7 +238,7 @@
       "entities": [],
       "source_id": "chaldene-4",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.google.com/search?hl=en&q=chaldene tim dahmen",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -219,11 +254,16 @@
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 5,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "The NFDI Association’s Office provides ICT tools that support all persons working for NFDI. Single sign on will be implemented for these NFDI internal ICT tools to increase the efficiency of on- and offboarding and improve the overall IT-security within NFDI. The office of the NFDI association provides several ICT tools that support work in NFDI. These include: Rocket.Chat: Real-time messaging 1.600 User OpenProject: Project Management 850 User NocoDB: Database Platform (currently in soft launch) Cloud Storage Service: file sharing, collaborative document editing, group calendar These services are self-hosted on premise. So far, only the internal authentication of these services is used. Accounts are created by appointed consortia admins for their respective consortium members or by the IT-Support team of the NFDI Office. Connect (OIDC) and Shibboleth. Goals - Streamline onboarding new employees, as only one central account per person needs to be set up - Allow reliable and efficient offboarding of persons leaving NFDI - Strengthen IT security - Improve monitoring of usage of the tools",
       "inc_goals": "",
       "inc_results": "Not applicable",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "na",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://all-chat.nfdi.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -232,7 +272,7 @@
       "entities": [],
       "source_id": "direktor-4",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://all-chat.nfdi.de",
       "source_meta": [
         "CAAI: na"
       ]
@@ -253,6 +293,11 @@
       "inc_goals": "- Implement OpenID Connect as the SSO protocol following IAM4NFDI recommendations\n- Apply attribute exchange mechanisms for user entitlements and roles\n- Enable future compatibility with federated identity and EOSC guidelines\n- Validate use cases with external services (e.g., Galaxy) that rely on IAM-compliant standards",
       "inc_results": "Not yet published",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "na",
+      "inc_ownership": "CC By 4.0",
+      "inc_service_type": "",
+      "inc_activity_page": "https://berd-nfdi.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -261,7 +306,7 @@
       "entities": [],
       "source_id": "berd-4",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://berd-nfdi.de",
       "source_meta": [
         "CAAI: na"
       ]
@@ -277,11 +322,16 @@
       "inc_start": "2025-02-01",
       "inc_end": "2025-07-31",
       "inc_cycle": 3,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "Wir wollen die GFBio Single-Sign-On Lösung evaluieren, ob sie als Login für die Dienste der NFDI4Biodversity geeignet ist. Außerdem soll die Kompatibilität mit dem Lifescience AAI Login geprüft und sichergestellt werden. Die GFBio Single-Sign-On Lösung ist ein dedizierter Dienst, der von der GWDG betrieben wird, um die Authentifizierung für die Dienstbetreiber des GFBio e.V. (Geschäftsstelle und Mitglieder) bereitzustellen. Der Dienst basiert auf der AcademicID, die eine der Community AAIs im IAM4NFDI ist. Das GFBio Single-Sign-On kann derzeit föderierte Anmeldungen aus der DFN-AAI und der LifescienceAAI ermöglichen und bietet darüber hinaus die Möglichkeit, dass sich jeder Nutzer selbst einen GFBio Account registrieren kann. Im Rahmen dieses Inkubators soll untersucht werden, inwieweit die GFBio Single-Sign-On Lösung für alle Bedürfnisse der NFDI4Biodiversity genutzt werden kann. Eine große Frage ist unter anderem die Autorisierung und Gruppenverwaltung in den GFBio Diensten und vor allem das Zusammenspiel mit der LifescienceAAI-Login und einem dedizierten GFBio Account, der auf der Academic Cloud basiert.",
       "inc_goals": "- Das Ziel dieses Inkubators ist es, eine klare Aussage zu machen, wie wir mit dem GFBio Single-Sign- On die Autorisierung und das Gruppenmanagement in den GFBio-Diensten weiter nutzen können und auch Nutzer/innen einbeziehen, die sich über die LifescienceAAI registriert haben",
       "inc_results": "https://kb.gfbio.org/",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "acadid",
+      "inc_ownership": "permissive open-source + CC0 / CC-BY",
+      "inc_service_type": "",
+      "inc_activity_page": "https://gfbio.org/about",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -290,7 +340,7 @@
       "entities": [],
       "source_id": "gfbio-3",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://gfbio.org/about",
       "source_meta": [
         "CAAI: acadid"
       ]
@@ -311,13 +361,18 @@
       "inc_goals": "- The SimpleVM DSI platform should be accessible to non-Bielefeld University members to enable the collaboration between members of different educational and research institutions, including NFDI consortia\n- User login/registration into SimpleVM DSI via the NFDI Infra Proxy\n- Minimal required attributes (User ID, User Name, e-Mail) are transferred to SimpleVM DSI Keycloak\n- Access access to the SimpleVM dashboard and project resources for members",
       "inc_results": "https://github.com/deNBI",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "Infraproxy",
+      "inc_ownership": "MISSING, in preparation to select a suitable OpenSource license",
+      "inc_service_type": "",
+      "inc_activity_page": "https://simplevm.github.io",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "simplevm-3",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://simplevm.github.io",
       "source_meta": [
         "CAAI: Infraproxy",
         "GENERAL"
@@ -339,13 +394,18 @@
       "inc_goals": "- The CloWM platform should provide the NFDI Infra Proxy as login/registration option to users from other consortia where LS LOGIN is not so widely used as in the life sciences. This will open the platform to a broader community\n- We expect that the results of this incubator will further open the CloWM platform to the whole NFDI community. Since CloWM is completely open source (Apache 2.0 license), the implemented login provider using the NFDI Infra Proxy might also be used as an open, blueprint implementation for other web-based services in the future",
       "inc_results": "https://gitlab.ub.uni-bielefeld.de/cmg/clowm",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "Infraproxy",
+      "inc_ownership": "Apache v2.0",
+      "inc_service_type": "",
+      "inc_activity_page": "https://clowm.bi.denbi.de",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "clowm-3",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://clowm.bi.denbi.de",
       "source_meta": [
         "CAAI: Infraproxy",
         "GENERAL"
@@ -367,13 +427,18 @@
       "inc_goals": "- Addition of an NFDI AAI login to DALIA’s search portal by integration of the NFDI Infrastructure Proxy as an OIDC provider\n- Users can login at the DALIA search portal via the NFDI AAI, in particular by using their Home-IdP\n- Become an overarching NFDI base service, thus it should connect to the NFDI AAI infrastructure via the Infrastructure Proxy",
       "inc_results": "https://git.rwth-aachen.de/dalia/backend/django",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "Infraproxy",
+      "inc_ownership": "MIT License",
+      "inc_service_type": "",
+      "inc_activity_page": "https://dalia.education",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "dalia-3",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://dalia.education",
       "source_meta": [
         "CAAI: Infraproxy",
         "GENERAL"
@@ -395,13 +460,18 @@
       "inc_goals": "",
       "inc_results": "https://github.com/arunaengine",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "Infraproxy",
+      "inc_ownership": "Apache V2.0 MIT License",
+      "inc_service_type": "",
+      "inc_activity_page": "https://aruna-engine.org",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "aruna-3",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://aruna-engine.org",
       "source_meta": [
         "CAAI: Infraproxy",
         "GENERAL"
@@ -423,13 +493,18 @@
       "inc_goals": "- Simplify access, improve user experience, and extend Jupyter’s reach to a wider audience within and beyond the NFDI\n- Extend the reach of Jupyter4NFDI so that it is usable by all community AAIs which are part of IAM4NFDI, so basically the use across all NFDI consortia is intended",
       "inc_results": "https://nfdi-jupyter.de",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "Infraproxy",
+      "inc_ownership": "BSD 3-Clause",
+      "inc_service_type": "",
+      "inc_activity_page": "https://docs.hub.nfdi-jupyter.de",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "jupyter-3",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://docs.hub.nfdi-jupyter.de",
       "source_meta": [
         "CAAI: Infraproxy",
         "GENERAL"
@@ -451,6 +526,11 @@
       "inc_goals": "",
       "inc_results": "https://github.com/biigle",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "na",
+      "inc_ownership": "GPLv3.0",
+      "inc_service_type": "",
+      "inc_activity_page": "https://biigle.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -459,7 +539,7 @@
       "entities": [],
       "source_id": "biigle-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://biigle.de",
       "source_meta": [
         "CAAI: na"
       ]
@@ -480,6 +560,11 @@
       "inc_goals": "",
       "inc_results": "Missing!!",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "didmos",
+      "inc_ownership": "Missing!!",
+      "inc_service_type": "",
+      "inc_activity_page": "https://wiss-ki.eu",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -488,7 +573,7 @@
       "entities": [],
       "source_id": "wisski-02",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://wiss-ki.eu",
       "source_meta": [
         "CAAI: didmos"
       ]
@@ -509,6 +594,11 @@
       "inc_goals": "",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "regapp",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -517,7 +607,7 @@
       "entities": [],
       "source_id": "ts+-2",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://terminology.nfdi4chem.de/ts",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -538,6 +628,11 @@
       "inc_goals": "- Integrate RegAPP on the OpenEnergyPlatform as the primary Authentication Service\n- Transfer or map existing user accounts, since we plan to maintain the legacy login as well as the RegAPP login\n- Operate the OEP and associated services under real environment conditions. As the OEP is a community service we think that a connection to the NFDI Infra proxy will not be necessary\n- The served user base will be a mix of researchers, industry partners and society. As such an authentication method that is not based on the research infrastructure needs to be supported, as well",
       "inc_results": "https://github.com/orgs/OpenEnergyPlatform/projects/40",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "regapp",
+      "inc_ownership": "AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?tab=License-1-ov-file",
+      "inc_service_type": "",
+      "inc_activity_page": "https://openenergyplatform.org",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -546,7 +641,7 @@
       "entities": [],
       "source_id": "oep-2",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://openenergyplatform.org",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -567,6 +662,11 @@
       "inc_goals": "- Integrate the NFDI AAI as an identity provider for NOMADs central Keycloak instance. This should allow users to login with their existing NFDI AAI identities. A large portion of the ~4000 existing NOMAD users are affiliated with research institutes and Universities in Germany and Europe. Therefore, many of the existing users and potential new users might already hold identities within the 4 proposed NFDI AAI solutions\n- Simplify future integrations with other (NFDI) services (within the materials science community and beyond). For this it is necessary that services rely on a shared NFDI AAI solutions\n- Evaluate the use of linking different identities belonging to the same individual user",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "unity",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://nomad-lab.eu",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -575,7 +675,7 @@
       "entities": [],
       "source_id": "fairmat-2",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://nomad-lab.eu",
       "source_meta": [
         "CAAI: unity"
       ]
@@ -596,6 +696,11 @@
       "inc_goals": "",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "regapp",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://repository.nfdi4cat.org",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -604,7 +709,7 @@
       "entities": [],
       "source_id": "nfdi4cat-2",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://repository.nfdi4cat.org",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -620,11 +725,16 @@
       "inc_start": "2024-08-01",
       "inc_end": "2025-01-31",
       "inc_cycle": 3,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "The File Transfer Service (FTS) is a Software that is developed by CERN and that specializes in easy, large scale data transfer. It allows the scheduling of transfers and results in a good utilization of the available bandwidth. We are currently setting up an FTS instance to enable users to transfer their research data between different endpoints, our research data management system, and the cluster.",
       "inc_goals": "",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "regapp",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.google.com/search?hl=en&q=FTS+MATWERK",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -633,7 +743,7 @@
       "entities": [],
       "source_id": "fts-2",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.google.com/search?hl=en&q=FTS+MATWERK",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -654,6 +764,11 @@
       "inc_goals": "- Find out if an implementation of an IAM system in the consortia is possible and act as a demonstrator within KonsortSWD\n- Connect the existing community service Forum4MICA to NFDI AAI\n- Identify which possibilities exist to connect the service\n- Evaluate the transferability of the IAM results in this incubator to additional services. E.g. institutional repositories (e.g. at GESIS) require registration but have so far not expressed interest in joining IAM4NFDI For these providers this incubator would be a demonstration of the service’s capabilities",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "na",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://forum.lifbi.de/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -662,7 +777,7 @@
       "entities": [],
       "source_id": "forum4mica-2",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://forum.lifbi.de/",
       "source_meta": [
         "CAAI: na"
       ]
@@ -683,6 +798,11 @@
       "inc_goals": "",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "na",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://fairagro.net/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -691,7 +811,7 @@
       "entities": [],
       "source_id": "fairagro-2",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://fairagro.net/",
       "source_meta": [
         "CAAI: na"
       ]
@@ -712,6 +832,11 @@
       "inc_goals": "",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "other",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://nfdi4plants.org",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -720,7 +845,7 @@
       "entities": [],
       "source_id": "dataplant-2",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://nfdi4plants.org",
       "source_meta": [
         "CAAI: other"
       ]
@@ -741,6 +866,11 @@
       "inc_goals": "- Enabling intersections in a decentralized way to get information from the Home Organisation as well as from the AAI Login about the roles which are given in Coscine\n- Analysing in which context the definition of roles in the framework of NFDI and Coscine makes sense and in how far they need to be implemented (e.g. as Reviewer for Application Profiles)",
       "inc_results": ".",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "regapp",
+      "inc_ownership": ".",
+      "inc_service_type": "",
+      "inc_activity_page": "https://about.coscine.de/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -749,7 +879,7 @@
       "entities": [],
       "source_id": "coscine-2",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://about.coscine.de/",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -770,13 +900,18 @@
       "inc_goals": "",
       "inc_results": "missing",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "didmos",
+      "inc_ownership": "missing",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.come2data.de",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
       "entities": [],
       "source_id": "come2data-2",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.come2data.de",
       "source_meta": [
         "CAAI: didmos",
         "GENERAL"
@@ -793,11 +928,16 @@
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
       "inc_cycle": 1,
-      "inc_status": "In preparation",
+      "inc_status": "Finished",
       "inc_descr": "The current startup phase of NFDIxCS is characterized to hammer out the detailed requirements for the NFDIxCS platform. A key of both areas – the platform and the RDMCs – need a profound, flexible and extensible way to use and manage identities, authentication and authorization methods for accessing the plarform and the RDMCs managed within the platform. The goal of the incubator is threfore to explore the field of identity management methods and technologies which are available and in wide use in the community – primarily in the field of platforms for management and publication of research data in Computer Science but also in related scientific areas beyond CS. The result of this will be a list of related methods and architectural requirements to use the methods in the NFDIxCS systems that are implemented in the future.",
       "inc_goals": "",
       "inc_results": "No content provided.",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "",
+      "inc_ownership": "No content provided.",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.google.com/search?hl=en&q=nfdixcs",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -806,7 +946,7 @@
       "entities": [],
       "source_id": "nfdixcs-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.google.com/search?hl=en&q=nfdixcs",
       "source_meta": [
         "CAAI:"
       ]
@@ -827,6 +967,11 @@
       "inc_goals": "",
       "inc_results": "Die Resultate werden momentan als Minutes der (ungefähr) monatlichen\nTreffen und Videokonferenzen festgehalten, samt Aufgaben und weiterem\nVorgehen. Die technischen und inhaltlichen Erörterungen zwischen den\nPartnern GWDG, DAASI, und SUB sind fortgeschritten.\n\nDie verwendeten Technologien und Dienste werden am Beispiel von\nTextGrid und DARIAH-DE Repository sowie einer für NFDI-weiten\ngenerischen Lösung evaluiert und angedacht. Sobald die Evaluation und\nPlanung angeschlossen ist, ist eine gemeinsame Implementierung der\njeweiligen Prototypen angedacht.",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Development",
+      "inc_caai": "acadid",
+      "inc_ownership": "möglicherweise EUPL-1.2",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.google.com/search?q=authorisation+on+objects",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -835,7 +980,7 @@
       "entities": [],
       "source_id": "auth-on-ojb-1",
       "source_type": "Development",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.google.com/search?q=authorisation+on+objects",
       "source_meta": [
         "CAAI: acadid"
       ]
@@ -856,6 +1001,11 @@
       "inc_goals": "",
       "inc_results": "https://apps.edutrain.nfdi4earth.de/authn/login?next=%2F\nhttps://github.com/omab/python-social-auth/tree/master\nhttps://python-social-auth.readthedocs.io/en/latest/\nhttps://git.rwth-aachen.de/nfdi4earth/architecture/nfdi_social_auth",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "acadid",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://apps.edutrain.nfdi4earth.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -864,7 +1014,7 @@
       "entities": [],
       "source_id": "open-edx-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://apps.edutrain.nfdi4earth.de",
       "source_meta": [
         "CAAI: acadid"
       ]
@@ -880,11 +1030,16 @@
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
       "inc_cycle": 1,
-      "inc_status": "Running",
+      "inc_status": "Finished",
       "inc_descr": "The goal of NFDI4Chem is to have a unified AAI solution within a single consortium, enabling users to seamlessly access and utilize all available resources. From the incubator project, we aim to integrate test instances of various services with the chosen CAAI. This will help us gather requirements that might necessitate modifications on both the services and the CAAI front, ensuring that the needs of the majority of these services are met. Following comprehensive testing across all facets, the test instances of each service will transition into production. The list of services to be connected with CAAI includes the Terminology Service (TS), Chemotion Repository, nmrXiv, COCONUT and more.",
       "inc_goals": "",
       "inc_results": "https://knowledgebase.nfdi4chem.de/knowledge_base/docs/chemotion_repository",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "na",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -893,7 +1048,7 @@
       "entities": [],
       "source_id": "terminology-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://terminology.nfdi4chem.de/ts",
       "source_meta": [
         "CAAI: na"
       ]
@@ -909,11 +1064,16 @@
       "inc_start": "2024-01-01",
       "inc_end": "2024-06-30",
       "inc_cycle": 1,
-      "inc_status": "In preparation",
+      "inc_status": "Finished",
       "inc_descr": "The current NFDI4Culture IAM plays a pivotal role as the central AAI/SSO backbone of the consortium. It accommodates approx. 400 user accounts and seven integrated services, thus contributing significantly to the consortium’s operational efficiency. Due to the implementation of DFN standards, the current IAM already exhibits a high degree of compatibility with the IAM4NFDI set of SAML attributes. The logical next step for NFDI4Culture is the integration of its IAM into the evolving CAAI architecture of IAM4NFDI. The transition is based on a two-tiered process: On tier one (not part of the incubator), NFDI4Culture is going to cooperate with DAASI to migrate the existing IAM solution to the IAM4NFDI-compatible CAAI solution didmos. On tier two (which is the focus of this incubator proposal), the consortium is planning to connect up to three exemplary services from its portfolio to the new IAM4NFDI-compatible CAAI while focusing on the conceptualisation, implementation, and operationalisation of the relevant NFDI policies and the design of a consortium-wide Incident Response Management system. The technical aspects of the integration of the services mentioned above will be done by DAASI in tier one. DAASI will also act as interface between tier one and tier two.",
       "inc_goals": "",
       "inc_results": "https://doc.nfdi-aai.de/policies/\n\nhttps://codebase.helmholtz.cloud/m-team/nfdi/nfdi-policies",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "didmos",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://nfdi4culture.de/id/E5913",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -922,7 +1082,7 @@
       "entities": [],
       "source_id": "nfdi4culture-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://nfdi4culture.de/id/E5913",
       "source_meta": [
         "CAAI: didmos"
       ]
@@ -943,6 +1103,11 @@
       "inc_goals": "",
       "inc_results": "https://github.com/medizininformatik-initiative/feasibility-gui",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "unity",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://forschen-fuer-gesundheit.de",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -951,7 +1116,7 @@
       "entities": [],
       "source_id": "fdpg-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://forschen-fuer-gesundheit.de",
       "source_meta": [
         "CAAI: unity"
       ]
@@ -972,6 +1137,11 @@
       "inc_goals": "",
       "inc_results": "https://portal.mardi4nfdi.de/wiki/Portal\nhttps://github.com/MaRDI4NFDI/portal-compose\nhttps://www.mediawiki.org/wiki/Extension:OpenID_Connect",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Consultancy",
+      "inc_caai": "didmos",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -980,7 +1150,7 @@
       "entities": [],
       "source_id": "mardi-1",
       "source_type": "Consultancy",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page",
       "source_meta": [
         "CAAI: didmos"
       ]
@@ -1001,6 +1171,11 @@
       "inc_goals": "",
       "inc_results": "https://k8scluster.zih.tu-dresden.de/argocd",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "regapp",
+      "inc_ownership": "Dont know what that mean - the service is > opensource.",
+      "inc_service_type": "",
+      "inc_activity_page": "https://www.nfdi4datascience.de/news/202402_argocd",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1009,7 +1184,7 @@
       "entities": [],
       "source_id": "argocd-1",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://www.nfdi4datascience.de/news/202402_argocd",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -1030,6 +1205,11 @@
       "inc_goals": "",
       "inc_results": "https://coscine.rwth-aachen.de/login/",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "regapp",
+      "inc_ownership": "MIT Licence",
+      "inc_service_type": "",
+      "inc_activity_page": "https://about.coscine.de/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1038,7 +1218,7 @@
       "entities": [],
       "source_id": "coscine-1",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://about.coscine.de/",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -1059,6 +1239,11 @@
       "inc_goals": "",
       "inc_results": "Implementation of a generic Docker image that can be used to set up\na Shibboleth-based attribute authority\n\nProvision of an attribute authority for JARDS project data\n\nExtension of the RegApp to support SAML attribute queries",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Integration",
+      "inc_caai": "regapp",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://jards.coscine.de/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1067,7 +1252,7 @@
       "entities": [],
       "source_id": "jards-1",
       "source_type": "Integration",
-      "source_activity_page": "",
+      "source_activity_page": "https://jards.coscine.de/",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -1088,6 +1273,11 @@
       "inc_goals": "",
       "inc_results": "https://nfdi4ing.pages.rwth-aachen.de/s-3/s-3-3/multi-store-search/#/\nhttps://git.rwth-aachen.de/nfdi4ing/s-3/s-3-3\nhttps://publications.rwth-aachen.de/record/862081",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "regapp",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://nfdi4ing.de/base-services/s-3/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1096,7 +1286,7 @@
       "entities": [],
       "source_id": "metadatahub-1",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://nfdi4ing.de/base-services/s-3/",
       "source_meta": [
         "CAAI: regapp"
       ]
@@ -1117,6 +1307,11 @@
       "inc_goals": "",
       "inc_results": "successful integration of each of the AcademicID, didmos, RegApp,\nUnity solutions as an OIDC Provider that allows for authentication into\nthe service.",
       "inc_partner_publications": 0,
+      "inc_activity_type": "Infrastructure",
+      "inc_caai": "na",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1125,7 +1320,7 @@
       "entities": [],
       "source_id": "RDMO-0",
       "source_type": "Infrastructure",
-      "source_activity_page": "",
+      "source_activity_page": "https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/",
       "source_meta": [
         "CAAI: na"
       ]

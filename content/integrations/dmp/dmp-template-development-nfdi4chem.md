@@ -9,9 +9,11 @@ inc_start = "2026-07-01"
 inc_end = "2026-12-31"
 inc_cycle = 2
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/6c311d8a04f9f7ac.png"
+partners = ["NFDI4Chem"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png"
+inc_service_type = "Template Development"
 +++
 
 Template Development — NFDI4Chem is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ Template Development — NFDI4Chem is an incubator project within the **Data Man
 - **Start:** 2026-07-01
 - **End:** 2026-12-31
 - **Cycle:** 2
+- **Service type:** Template Development
 
 ## Goals
 
@@ -32,5 +35,6 @@ A few years ago, NFDI4Chem developed a chemistry-specific DMP template. This was
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Chem (1 linked)
 - **Partner publications:** 0
 

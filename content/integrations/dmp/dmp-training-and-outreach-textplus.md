@@ -9,9 +9,11 @@ inc_start = "2026-01-01"
 inc_end = "2026-06-30"
 inc_cycle = 1
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/db773a275cb2249c.png"
+partners = ["Text+"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/text+_logo.png"
+inc_service_type = "Training & Outreach"
 +++
 
 Training & Outreach — Text+ is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ Training & Outreach — Text+ is an incubator project within the **Data Manageme
 - **Start:** 2026-01-01
 - **End:** 2026-06-30
 - **Cycle:** 1
+- **Service type:** Training & Outreach
 
 ## Goals
 
@@ -32,5 +35,6 @@ Text+ has created a DMP template in collaboration with participants of the conso
 
 ## Partners & entities
 
+- **NFDI consortia:** Text+ (1 linked)
 - **Partner publications:** 0
 

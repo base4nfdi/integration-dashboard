@@ -9,9 +9,11 @@ inc_start = "2024-06-01"
 inc_end = "2025-06-30"
 inc_cycle = 0
 inc_partner_publications = 0
-linked_partners = 0
+linked_partners = 1
 linked_entities = 0
-logo_consortia = "img/partner-logos/fb068dab27f7e96a.png"
+partners = ["NFDI4Earth"]
+logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png"
+inc_service_type = "RDMO Hosting, Template Development"
 +++
 
 RDMO Hosting — NFDI4Earth is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
@@ -25,6 +27,7 @@ RDMO Hosting — NFDI4Earth is an incubator project within the **Data Management
 - **Start:** 2024-06-01
 - **End:** 2025-06-30
 - **Cycle:** —
+- **Service type:** RDMO Hosting, Template Development
 
 ## Goals
 
@@ -37,5 +40,6 @@ RDMO Sensor Search option set plugin
 
 ## Partners & entities
 
+- **NFDI consortia:** NFDI4Earth (1 linked)
 - **Partner publications:** 0
 
