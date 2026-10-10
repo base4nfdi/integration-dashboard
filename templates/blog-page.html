@@ -124,24 +124,59 @@
           {% else %}
             {% set logo_project_src = get_url(path=logo_project_raw) %}
           {% endif %}
+          {% set_global logo_project_dark_src = "" %}
+          {% if page.extra.logo_project_dark %}
+          {% set logo_project_dark_raw = page.extra.logo_project_dark %}
+          {% if logo_project_dark_raw is starting_with(pat="http://") or logo_project_dark_raw is starting_with(pat="https://") %}
+            {% set_global logo_project_dark_src = logo_project_dark_raw %}
+          {% else %}
+            {% set_global logo_project_dark_src = get_url(path=logo_project_dark_raw) %}
+          {% endif %}
+          {% endif %}
+          {% set_global logo_project_light_class = "blog-post-logo blog-post-logo-project" %}
+          {% if logo_project_dark_src %}
+            {% set_global logo_project_light_class = "blog-post-logo blog-post-logo-project themed-logo themed-logo--light" %}
+          {% endif %}
           {% if project_href is starting_with(pat="http://") or project_href is starting_with(pat="https://") %}
           <a class="ref-logo-link" href="{{ project_href }}" target="_blank" rel="noopener noreferrer">
             <img
-              class="blog-post-logo blog-post-logo-project"
+              class="{{ logo_project_light_class }}"
               src="{{ logo_project_src | safe }}"
               alt="{{ page.title }} project logo"
               loading="lazy"
               decoding="async"
             >
+            {% if logo_project_dark_src %}
+            <img
+              class="blog-post-logo blog-post-logo-project themed-logo themed-logo--dark"
+              src="{{ logo_project_dark_src | safe }}"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            >
+            {% endif %}
           </a>
           {% else %}
+          {% if logo_project_dark_src %}<span class="themed-logo-pair">{% endif %}
           <img
-            class="blog-post-logo blog-post-logo-project"
+            class="{{ logo_project_light_class }}"
             src="{{ logo_project_src | safe }}"
             alt="{{ page.title }} project logo"
             loading="lazy"
             decoding="async"
           >
+          {% if logo_project_dark_src %}
+            <img
+              class="blog-post-logo blog-post-logo-project themed-logo themed-logo--dark"
+              src="{{ logo_project_dark_src | safe }}"
+              alt=""
+              loading="lazy"
+              decoding="async"
+              aria-hidden="true"
+            >
+          </span>
+          {% endif %}
           {% endif %}
           {% endif %}
           {% if page.extra.logo_consortia %}

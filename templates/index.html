@@ -245,6 +245,25 @@
     return `<a class="ref-logo-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${img}</a>`;
   }
 
+  /** Light/dark project pair when `logo_project_dark` is set; otherwise a single img. */
+  function renderThemedLogo(lightSrc, darkSrc, label, href, className) {
+    const light = resolveAssetUrl(lightSrc);
+    const dark = resolveAssetUrl(darkSrc);
+    if (!light && !dark) return "";
+    if (!dark || dark === light) {
+      const picked =
+        window.base4nfdiTheme && typeof window.base4nfdiTheme.themedLogoSrc === "function"
+          ? window.base4nfdiTheme.themedLogoSrc(light, dark)
+          : light || dark;
+      return renderLinkedLogo(picked, label, href, className);
+    }
+    const imgs =
+      `<img class="${className} themed-logo themed-logo--light" src="${escapeHtml(light)}" alt="${escapeHtml(label)}" title="${escapeHtml(label)}" loading="lazy" decoding="async">` +
+      `<img class="${className} themed-logo themed-logo--dark" src="${escapeHtml(dark)}" alt="" title="${escapeHtml(label)}" loading="lazy" decoding="async" aria-hidden="true">`;
+    if (!href) return `<span class="themed-logo-pair">${imgs}</span>`;
+    return `<a class="ref-logo-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${imgs}</a>`;
+  }
+
   function compactToken(value) {
     return String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   }
@@ -348,9 +367,13 @@
         const key = logoBasename(record.logo_project);
         if (!seenLogos.has(key)) {
           seenLogos.add(key);
+          if (record.logo_project_dark) {
+            seenLogos.add(logoBasename(record.logo_project_dark));
+          }
           parts.push(
-            renderLinkedLogo(
-              project,
+            renderThemedLogo(
+              record.logo_project,
+              record.logo_project_dark,
               "Project logo",
               projectWebsite(record),
               "logo-img logo-project"

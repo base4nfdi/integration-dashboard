@@ -120,6 +120,7 @@ export function emptyRecord(overrides = {}) {
     basic_service: "",
     related_institutions: "",
     logo_project: "",
+    logo_project_dark: "",
     logo_consortia: "",
     key_article: "",
     inc_start: "",
@@ -550,6 +551,7 @@ const COMPARE_FIELDS = [
   "inc_activity_page",
   "partners",
   "logo_project",
+  "logo_project_dark",
   "logo_consortia",
 ];
 

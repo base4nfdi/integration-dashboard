@@ -1180,6 +1180,13 @@ main.container:has(.dashboard) {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
+[data-theme="dark"] .data-table .logo-img.themed-logo {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .data-table .cell-markdown {
   max-width: 22rem;
   vertical-align: top;
@@ -1332,6 +1339,24 @@ main.container:has(.dashboard) {
 }
 
 [data-theme="dark"] .footer-logo--nfdi .nfdi-logo--neg {
+  display: block;
+}
+
+/* Project logos with a dark-theme variant: hide the unused asset via data-theme. */
+.themed-logo-pair {
+  display: inline-flex;
+  line-height: 0;
+}
+
+img.themed-logo.themed-logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] img.themed-logo.themed-logo--light {
+  display: none;
+}
+
+[data-theme="dark"] img.themed-logo.themed-logo--dark {
   display: block;
 }
 
@@ -1708,6 +1733,13 @@ main.container:has(.dashboard) {
   padding: 0.35rem 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] .blog-post-logo.themed-logo {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Dark mode: the service artwork is its own slate badge, so drop the surrounding plate

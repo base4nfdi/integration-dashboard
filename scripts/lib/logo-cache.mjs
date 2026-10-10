@@ -16,7 +16,7 @@ import { dirname, join } from "node:path";
 import { fetchOk } from "./http-utils.mjs";
 import { repoRoot } from "./parse-utils.mjs";
 
-export const LOGO_FIELDS = ["logo_project", "logo_consortia"];
+export const LOGO_FIELDS = ["logo_project", "logo_project_dark", "logo_consortia"];
 export const DEFAULT_LOGO_DIR = "static/img/partner-logos";
 export const DEFAULT_SITE_PREFIX = "img/partner-logos";
 
