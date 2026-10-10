@@ -17,22 +17,10 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Running** — cycle 2, started 2026-07-01.
-
-## Timeline
-
-- **Start:** 2026-07-01
-- **End:** 2026-12-31
-- **Cycle:** 2
-- **Service type:** Template Development
-
 ## Goals
 
 A few years ago, NFDI4Chem developed a chemistry-specific DMP template. This was created based on surveys and interviews with chemists to identify their needs, and it aligns with the DFG checklist. The template is available as a RDMO catalogue within the NFDI4Chem RDMO instance and is widely used by researchers. In order to enhance the standardisation and interoperability of the template, NFDI4Chem will now be adapting it to align with the NFDI Template Framework developed by DMP4NFDI. This will result in an updated, interoperable version of the chemistry-specific DMP template.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem 
-
+- **NFDI consortia:** NFDI4Chem

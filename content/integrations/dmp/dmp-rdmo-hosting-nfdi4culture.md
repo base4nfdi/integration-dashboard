@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-06-30.
-
-## Timeline
-
-- **Start:** 2025-06-01
-- **End:** 2025-06-30
-- **Cycle:** —
-- **Service type:** RDMO Hosting, RDMO Integration
-
 ## Goals
 
 Host an RDMO tenant for the NFDI4Culture consortium and integrate the consortium’s community AAI as the login mechanism for authentication and authorization. RDMO user permissions should be manageable within the NFDI4Culture community AAI. The resulting service will support researchers, cultural professionals, and cultural heritage institutions.
@@ -39,5 +28,4 @@ NFDI4Culture RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Culture 
-
+- **NFDI consortia:** NFDI4Culture

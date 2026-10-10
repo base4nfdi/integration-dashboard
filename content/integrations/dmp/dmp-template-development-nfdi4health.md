@@ -17,22 +17,10 @@ inc_service_type = "Template Development, RDMO Hosting"
 +++
 
 
-## Current status
-
-**Running** — cycle 1, started 2026-02-01.
-
-## Timeline
-
-- **Start:** 2026-02-01
-- **End:** 2026-07-31
-- **Cycle:** 1
-- **Service type:** Template Development, RDMO Hosting
-
 ## Goals
 
 The template "Research Data Management Plan - Epidemiological studies" is aimed at epidemiological researchers and is currently published as a fillable PDF document. The goal of this incubator project is to fully implement the template in RDMO so that researchers can use, review and adapt it to their needs. The incubator will provide the basis for the implementation of two further NFDI4Health DMP templates, one for clinical research and one shortened version that can be handed it along with a research proposal, e.g. at the DFG.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Health 
-
+- **NFDI consortia:** NFDI4Health

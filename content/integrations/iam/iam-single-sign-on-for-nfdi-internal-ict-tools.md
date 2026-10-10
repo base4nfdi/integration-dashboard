@@ -20,12 +20,6 @@ inc_activity_page = "https://all-chat.nfdi.de"
 
 The NFDI Association’s Office provides ICT tools that support all persons working for NFDI. Single sign on will be implemented for these NFDI internal ICT tools to increase the efficiency of on- and offboarding and improve the overall IT-security within NFDI. The office of the NFDI association provides several ICT tools that support work in NFDI. These include: Rocket.Chat: Real-time messaging 1.600 User OpenProject: Project Management 850 User NocoDB: Database Platform (currently in soft launch) Cloud Storage Service: file sharing, collaborative document editing, group calendar These services are self-hosted on premise. So far, only the internal authentication of these services is used. Accounts are created by appointed consortia admins for their respective consortium members or by the IT-Support team of the NFDI Office. Connect (OIDC) and Shibboleth. Goals - Streamline onboarding new employees, as only one central account per person needs to be set up - Allow reliable and efficient offboarding of persons leaving NFDI - Strengthen IT security - Improve monitoring of usage of the tools
 
-
-## Timeline
-
-- **Start:** 2026-02-01
-- **End:** 2026-07-31
-
 ## Results
 
 Not applicable
@@ -33,5 +27,4 @@ Not applicable
 
 ## Partners & entities
 
-- **Participating entity:** NFDI 
-
+- **Participating entity:** NFDI

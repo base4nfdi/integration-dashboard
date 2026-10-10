@@ -20,12 +20,6 @@ inc_activity_page = "https://apps.edutrain.nfdi4earth.de"
 
 This Incubator Project focuses on integrating the NFDI Authentication and Authorisation Infrastructure (AAI) with Open edX. The primary goals are to gain an initial understanding of IAM4NFDI, test the usability and features of available Community AAIs, and determine the best Community AAI to use. Three major steps Authentication Process Applied for OAuth-Client with three Community AAIs (Unity, RegApp, AcademicID), created a Flask app for testing authentication methods. Integrated three Community AAIs into Open edX using Python Social Auth, with reusable Python classes for third-party authentication. Virtual Organisations Applied for admin accounts, tested UI handling, and examined the impact on authentication attributes. Decision on CAAI Compared three AAIs using a rating matrix, recommended one within the consortium, verified by an internal group, and finalised by the steering group.
 
-
-## Timeline
-
-- **Start:** 2024-08-01
-- **End:** 2025-01-31
-
 ## Results
 
 - [https://apps.edutrain.nfdi4earth.de/authn/login?next=%2F](https://apps.edutrain.nfdi4earth.de/authn/login?next=%2F)
@@ -35,5 +29,4 @@ This Incubator Project focuses on integrating the NFDI Authentication and Author
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Earth 
-
+- **NFDI consortia:** NFDI4Earth

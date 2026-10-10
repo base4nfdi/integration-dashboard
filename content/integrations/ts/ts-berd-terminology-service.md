@@ -18,17 +18,6 @@ inc_activity_page = "https://ts.berd-nfdi.de/"
 
 BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.
 
-
-## Current status
-
-**Finished** — cycle 0 completed on 2024-11-19.
-
-## Timeline
-
-- **Start:** 2024-05-29
-- **End:** 2024-11-19
-- **Cycle:** 0
-
 ## Goals
 
 - Setting up a terminology service for BERD@NFDI using the Terminology Service Suite (TSS)
@@ -41,5 +30,4 @@ BERD@NFDI is dedicated to establishing a research data infrastructure transformi
 
 ## Partners & entities
 
-- **NFDI consortia:** BERD@NFDI 
-
+- **NFDI consortia:** BERD@NFDI

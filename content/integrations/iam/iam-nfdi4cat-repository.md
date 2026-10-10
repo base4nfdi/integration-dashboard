@@ -21,12 +21,6 @@ inc_activity_page = "https://repository.nfdi4cat.org"
 
 The NFDI4CAT community requires a central solution for the storage and exchange of experimental and simulation data to streamline research activities and support collaboration. To address this need, NFDI4CAT propose the deployment of a central repository using Dataverse. This repository will facilitate organisation, sharing, and archiving of research data within the community, ensuring efficient data management and accessibility. We would like to explore the possibility to use the NFDI Authentication and Authorisation Infrastructure Framework for the NFDI4Cat Dataverse repository. This will enable our repository users with seamless and secure access to their data.
 
-
-## Timeline
-
-- **Start:** 2025-02-01
-- **End:** 2025-07-31
-
 ## Results
 
 .
@@ -38,5 +32,4 @@ The NFDI4CAT community requires a central solution for the storage and exchange 
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat 
-
+- **NFDI consortia:** NFDI4Cat

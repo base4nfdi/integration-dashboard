@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-09-30.
-
-## Timeline
-
-- **Start:** 2024-06-01
-- **End:** 2025-09-30
-- **Cycle:** —
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Host and operate the RDMO client for the NFDI4Chem consortium within the DMP4NFDI service and bring it into productive operation.
@@ -39,5 +28,4 @@ NFDI4Chem RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem 
-
+- **NFDI consortia:** NFDI4Chem

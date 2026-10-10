@@ -17,22 +17,10 @@ inc_service_type = "Training & Outreach, Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 1 completed on 2026-07-31.
-
-## Timeline
-
-- **Start:** 2026-02-01
-- **End:** 2026-07-31
-- **Cycle:** 1
-- **Service type:** Training & Outreach, Template Development
-
 ## Goals
 
 NFDI4Cat is developing a discipline-specific DMP template that covers catalysis-related aspects like complex analysis, catalyst testing workflows and cooperation with industry. The important aspects of RDM in catalysis at the status quo, based on requirement analysis, will be addressed by the DMP template. The DMP template will be released to collect further community feedback and update the template based on this iterative workflow and further ongoing developments in RDM.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat 
-
+- **NFDI consortia:** NFDI4Cat

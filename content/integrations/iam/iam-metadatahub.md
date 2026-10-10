@@ -20,12 +20,6 @@ inc_activity_page = "https://nfdi4ing.de/base-services/s-3/"
 
 MetadataHub allows access to various metadata stores developed in the NFDI. All operations from "Create" to "Search" can be performed on the metadata stores. There are two demonstrators for this, one showing the interfaces and the other providing a search across all metadata stores.
 
-
-## Timeline
-
-- **Start:** 2024-01-01
-- **End:** 2024-07-31
-
 ## Results
 
 - [https://nfdi4ing.pages.rwth-aachen.de/s-3/s-3-3/multi-store-search/#/](https://nfdi4ing.pages.rwth-aachen.de/s-3/s-3-3/multi-store-search/#/)
@@ -35,5 +29,4 @@ MetadataHub allows access to various metadata stores developed in the NFDI. All 
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-
+- **NFDI consortia:** NFDI4Ing

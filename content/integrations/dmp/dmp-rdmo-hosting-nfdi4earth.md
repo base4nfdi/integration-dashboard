@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting, Template Development"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-06-30.
-
-## Timeline
-
-- **Start:** 2024-06-01
-- **End:** 2025-06-30
-- **Cycle:** —
-- **Service type:** RDMO Hosting, Template Development
-
 ## Goals
 
 Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.
@@ -39,5 +28,4 @@ RDMO Sensor Search option set plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Earth 
-
+- **NFDI consortia:** NFDI4Earth

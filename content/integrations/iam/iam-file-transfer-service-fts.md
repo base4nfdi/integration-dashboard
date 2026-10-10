@@ -21,12 +21,6 @@ inc_activity_page = "https://www.google.com/search?hl=en&q=FTS+MATWERK"
 
 The File Transfer Service (FTS) is a Software that is developed by CERN and that specializes in easy, large scale data transfer. It allows the scheduling of transfers and results in a good utilization of the available bandwidth. We are currently setting up an FTS instance to enable users to transfer their research data between different endpoints, our research data management system, and the cluster.
 
-
-## Timeline
-
-- **Start:** 2024-08-01
-- **End:** 2025-01-31
-
 ## Results
 
 .
@@ -38,5 +32,4 @@ The File Transfer Service (FTS) is a Software that is developed by CERN and that
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-
+- **NFDI consortia:** NFDI4Ing

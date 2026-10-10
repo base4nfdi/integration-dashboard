@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-09-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Implementing an RDMO client to serve the consortium’s research data management activities. A pilot version will be launched for internal testing. A productive instance is foreseen after validation of the pilot.
@@ -40,5 +29,4 @@ Test client ready; productive client in preparation
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI-MatWerk 
-
+- **NFDI consortia:** NFDI-MatWerk

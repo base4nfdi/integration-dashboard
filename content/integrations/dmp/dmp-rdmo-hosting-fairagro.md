@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-05-31.
-
-## Timeline
-
-- **Start:** 2024-12-01
-- **End:** 2025-05-31
-- **Cycle:** —
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Set up an RDMO client for the FAIRagro consortium that is ready to provide DMP templates to the community.
@@ -39,5 +28,4 @@ FAIRagro RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro 
-
+- **NFDI consortia:** FAIRagro

@@ -21,12 +21,6 @@ inc_activity_page = "https://forum.lifbi.de/"
 
 The idea of the incubator proposal is to use the Forum4MICA as a pilot project to connect the consortium KonsortSWD to Community AAI. Forum4MICA is a publicly accessible exchange and information platform on topics related to the data collections of the participating Research Data Centers (RDC). The online forum gives RDCs (currently 18) an additional option for communicating with their data users and interested persons. It enables the provision of specifically requested information on the research data provided. As submissions and interactions are only possible for registered users, logins via NFDI-AAI would substantially improve the user experience and reduce effort.
 
-
-## Timeline
-
-- **Start:** 2025-02-01
-- **End:** 2025-07-31
-
 ## Goals
 
 - Find out if an implementation of an IAM system in the consortia is possible and act as a demonstrator within KonsortSWD
@@ -45,5 +39,4 @@ The idea of the incubator proposal is to use the Forum4MICA as a pilot project t
 
 ## Partners & entities
 
-- **NFDI consortia:** KonsortSWD 
-
+- **NFDI consortia:** KonsortSWD

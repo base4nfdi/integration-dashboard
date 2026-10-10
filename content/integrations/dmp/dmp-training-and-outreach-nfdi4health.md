@@ -17,22 +17,10 @@ inc_service_type = "Training & Outreach"
 +++
 
 
-## Current status
-
-**Running** — cycle 2, started 2026-07-01.
-
-## Timeline
-
-- **Start:** 2026-07-01
-- **End:** 2026-12-31
-- **Cycle:** 2
-- **Service type:** Training & Outreach
-
 ## Goals
 
 The template "Research Data Management Plan - Epidemiological studies" is aimed at epidemiological researchers and has been implemented fully in RDMO. The incubator will help develop a training/tutorial for using this template while also providing an overview of DMPs and their relevance. The developed training/tutorial will provide a basis for further trainings/tutorials on the other NFDI4Health templates (one for clinical research and one shortened version that can be handed in along with a research proposal e.g. at the DFG) that will be implemented in RDMO.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Health 
-
+- **NFDI consortia:** NFDI4Health

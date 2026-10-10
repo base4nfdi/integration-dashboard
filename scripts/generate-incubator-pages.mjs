@@ -100,42 +100,6 @@ function serviceDir(basicService) {
   return code;
 }
 
-function displayDate(value) {
-  const text = asText(value);
-  return text || "—";
-}
-
-function formatStatusLine(record) {
-  const status = asText(record.inc_status) || "Unknown";
-  const cycle =
-    record.inc_cycle != null && record.inc_cycle !== ""
-      ? `cycle ${record.inc_cycle}`
-      : "";
-  const start = asText(record.inc_start);
-  const end = asText(record.inc_end);
-
-  if (/^finished$/i.test(status)) {
-    if (cycle && end) return `**${status}** — ${cycle} completed on ${end}.`;
-    if (cycle) return `**${status}** — ${cycle}.`;
-    if (end) return `**${status}** — completed on ${end}.`;
-    return `**${status}**.`;
-  }
-
-  if (/^in preparation$/i.test(status)) {
-    if (cycle && start) {
-      return `**${status}** — ${cycle}, planned start ${start}.`;
-    }
-    if (cycle) return `**${status}** — ${cycle}.`;
-    if (start) return `**${status}** — planned start ${start}.`;
-    return `**${status}**.`;
-  }
-
-  if (cycle && start) return `**${status}** — ${cycle}, started ${start}.`;
-  if (cycle) return `**${status}** — ${cycle}.`;
-  if (start) return `**${status}** — started ${start}.`;
-  return `**${status}**.`;
-}
-
 function formatLinkishBlock(text) {
   const cleaned = cleanText(text);
   if (!cleaned) return "";
@@ -272,50 +236,12 @@ function buildBody(record, keyArticle) {
       ? [resultsText, activityPage].filter(Boolean).join("\n")
       : resultsText;
   const results = formatLinkishBlock(resultsSource);
-  const serviceType = asText(record.inc_service_type);
-  const activityType = asText(record.inc_activity_type);
-  const caai = asText(record.inc_caai);
   const ownership = asText(record.inc_ownership);
   const sections = [];
 
   if (descr) {
     sections.push(descr);
     sections.push("");
-  }
-
-  const isIam = asText(record.basic_service).toUpperCase() === "IAM";
-
-  if (!isIam) {
-    sections.push("## Current status");
-    sections.push("");
-    sections.push(formatStatusLine(record));
-    sections.push("");
-  }
-
-  sections.push("## Timeline");
-  sections.push("");
-  sections.push(`- **Start:** ${displayDate(record.inc_start)}`);
-  sections.push(`- **End:** ${displayDate(record.inc_end)}`);
-
-  if (!isIam) {
-    sections.push(
-      `- **Cycle:** ${
-        record.inc_cycle == null || record.inc_cycle === ""
-          ? "—"
-          : record.inc_cycle
-      }`
-    );
-    if (serviceType) sections.push(`- **Service type:** ${serviceType}`);
-    if (activityType) sections.push(`- **Activity type:** ${activityType}`);
-  } else if (serviceType) {
-    sections.push(`- **Service type:** ${serviceType}`);
-  }
-
-  if (caai && !isIam) {
-    sections.push("");
-    sections.push("## Community AAI");
-    sections.push("");
-    sections.push(caai);
   }
 
   if (goals) {

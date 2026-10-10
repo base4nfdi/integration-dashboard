@@ -17,17 +17,6 @@ logo_project = "img/partner-logos/1584198a22a429d3.png"
 
 The main purpose of the incubator project is a strong integration of TS4NFDI services with FAIRagro products and services. This includes the following concrete project objectives: 1)Automatic instantiation and updating of a FAIRagro Terminology Service Instance based on the FAIRagro Standards Inventory, 2) Implementation of mappings (preferably using the SciWin workflow engine developed in FAIRagro) for terminologies that are not yet available in a form directly usable for consumption by the TS4NFDI infrastructure, by map terminology distribution files in different formats to e.g. SKOS thesauri that can be used in a backend Skosmos service and 3) Demonstration of use of the TS4NFDI instance in selected FAIRagro products.
 
-
-## Current status
-
-**Finished** — cycle 3 completed on 2026-09-30.
-
-## Timeline
-
-- **Start:** 2026-03-01
-- **End:** 2026-09-30
-- **Cycle:** 3
-
 ## Goals
 
 - Provision of terminologies in a Terminlogy Service
@@ -37,5 +26,4 @@ The main purpose of the incubator project is a strong integration of TS4NFDI ser
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro 
-
+- **NFDI consortia:** FAIRagro

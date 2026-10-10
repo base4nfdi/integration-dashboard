@@ -18,17 +18,6 @@ source_url = "https://doi.org/10.5281/zenodo.14327770"
 
 The purpose of this analysis is to showcase PID integration in a new PID service that is being developed within the KonsortSWD consortium. This service aims to reference elements below the dataset, study, or publication level via PID, enhancing FAIRness of low-granular dataset elements and fulfilling requirements such as handling a large number of PIDs.
 
-
-## Current status
-
-**Unknown**.
-
-## Timeline
-
-- **Start:** —
-- **End:** —
-- **Cycle:** —
-
 ## Goals
 
 - **Labels:** Large numbers of PIDs, High-granular data
@@ -44,5 +33,4 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** KonsortSWD 
-- **Participating entity:** GESIS – Leibniz Institute for the Social Sciences 
-
+- **Participating entity:** GESIS – Leibniz Institute for the Social Sciences

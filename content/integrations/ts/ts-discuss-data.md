@@ -17,17 +17,6 @@ logo_project = "img/partner-logos/1933602a07f6ab9e.svg"
 
 Discuss Data (www.discuss-data.net) is an open repository for storing, sharing and discussing research data on Eastern Europe, South Caucasus and Central Asia and is currently building further Community Spaces, for example for the Digital Humanities .The platform, launched in September 2020, is funded by the German Research Foundation (DFG, Project number 493011772) and operated by the Research Centre for East European Studies at the University of Bremen (FSO) and the Göttingen State and University Library (SUB). Discuss Data goes beyond ordinary repositories and offers an interactive online platform for the discussion and quality assessment of research data and creates a space for academic communication and for the community-specific publication, curation, annotation and discussion of research data.
 
-
-## Current status
-
-**Finished** — cycle 1 completed on 2025-10-31.
-
-## Timeline
-
-- **Start:** 2025-02-20
-- **End:** 2025-10-31
-- **Cycle:** 1
-
 ## Goals
 
 - Setting up a selfhosted terminology service based on OLS
@@ -37,5 +26,4 @@ Discuss Data (www.discuss-data.net) is an open repository for storing, sharing a
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ 
-
+- **NFDI consortia:** Text+

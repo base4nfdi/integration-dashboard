@@ -21,12 +21,6 @@ inc_activity_page = "https://github.com/pennersr/django-allauth"
 
 LARA is an AI driven, next generation open-source Research Data Management / LIMS / ELN System. It supports natural scientist of all disciplines to generate highly interlinked, semantically annotated data and metadata knowledge graphs. With its lab-automation capabilities it can capture semantically annotated (measurement) data from the moment of creation. (Local) AI systems assist to structure the research data and build a query-able knowledge graph, making them as FAIR as possible. Experimental results can be seamlessly synchronised with different project partners or public repositories (like NFDI dataverses, e.g. NFDI4Cat, Zenodo, EOSC cloud). This project shall develop a generic django-allauth (https://github.com/pennersr/django-allauth) based plugin to grant the NFDI community access to a LARA service.
 
-
-## Timeline
-
-- **Start:** 2025-08-01
-- **End:** 2026-01-31
-
 ## Goals
 
 - Develop a generic python-django allauth plugin, that can be (re-) used in many django based projects, like LARAsuite, to grant NFDI community access
@@ -43,5 +37,4 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat 
-
+- **NFDI consortia:** NFDI4Cat

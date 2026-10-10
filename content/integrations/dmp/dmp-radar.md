@@ -17,22 +17,10 @@ inc_service_type = "RDMO Integration"
 +++
 
 
-## Current status
-
-**Running** — cycle 2, started 2026-07-01.
-
-## Timeline
-
-- **Start:** 2026-07-01
-- **End:** 2026-12-31
-- **Cycle:** 2
-- **Service type:** RDMO Integration
-
 ## Goals
 
 The incubator project aims to improve the integration of RDMO and the RADAR research data repository within the NFDI context. This integration enables researchers to smoothly and reliably transfer metadata already entered in data management plans directly into the repository, reducing redundant data entry and minimizing errors. While a basic metadata transfer between the two services is already implemented, the underlying mappings require continuous optimization. This project will refine these mappings and optimize the plugins based on the generic NFDI DMP template and further enhance metadata transfer for the consortia-specific RDMO instances of NFDI4Chem and NFDI4Culture, including their tailored questionnaires, if available.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem, NFDI4Culture 
-
+- **NFDI consortia:** NFDI4Chem, NFDI4Culture

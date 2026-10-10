@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-09-30.
-
-## Timeline
-
-- **Start:** 2024-06-01
-- **End:** 2025-09-30
-- **Cycle:** —
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Use the NFDI4ING RDMO service as the reference implementation for RDMO hosting in DMP4NFDI and as a foundation for onboarding further clients to the DMP4NFDI service.
@@ -39,5 +28,4 @@ NFDI4Ing RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-
+- **NFDI consortia:** NFDI4Ing

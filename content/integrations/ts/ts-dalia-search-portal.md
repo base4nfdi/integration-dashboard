@@ -16,17 +16,6 @@ logo_project = "img/partner-logos/39ef828eaba7a05b.png"
 
 DALIA stands for the “Data Literacy Alliance” which develops a user-centric search platform according to the FAIR principles in order to offer high quality search results for educational resources from and for the RDM and data literacy community. Knowledge graph and semantic technologies are used to offer “FAIR data usage and supply” including offers for best practices, open educational resources, and learning paths.
 
-
-## Current status
-
-**Finished** — cycle 2 completed on 2026-02-28.
-
-## Timeline
-
-- **Start:** 2025-08-08
-- **End:** 2026-02-28
-- **Cycle:** 2
-
 ## Goals
 
 - Hosting of the MoDALIA Ontology
@@ -34,5 +23,3 @@ DALIA stands for the “Data Literacy Alliance” which develops a user-centric 
 - Integration of terminology data to DALIA curation form
 
 ## Partners & entities
-
-

@@ -17,17 +17,6 @@ entities = ["RWTH Aachen University"]
 
 Cosine is a web-based research data management (RDM) platform developed at RWTH Aachen University in collaboration with NFDI4Ing/NFDI-MatWerk. It can be used to store, manage and archive any kinds of general research data that arise from research projects. The platform focuses on making warm/active data FAIR by collecting rich, customizable metadata and assigning PIDs as early as possible, whereas the final publication of research results is not part of Coscine. The RDM platform assigns ePIC PIDs in the form of FAIR digital objects (FDOs) to enhance FAIRness and interoperability across systems.
 
-
-## Current status
-
-**Unknown**.
-
-## Timeline
-
-- **Start:** —
-- **End:** —
-- **Cycle:** —
-
 ## Goals
 
 - **Labels:** Warm data, FAIR digital objects
@@ -38,5 +27,4 @@ Cosine is a web-based research data management (RDM) platform developed at RWTH 
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Ing, NFDI-MatWerk 
-- **Participating entity:** RWTH Aachen University 
-
+- **Participating entity:** RWTH Aachen University

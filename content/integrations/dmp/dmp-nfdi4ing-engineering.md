@@ -17,22 +17,10 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Running** — cycle 2, started 2026-07-01.
-
-## Timeline
-
-- **Start:** 2026-07-01
-- **End:** 2026-12-31
-- **Cycle:** 2
-- **Service type:** Template Development
-
 ## Goals
 
 The Incubator Project aims to optimise the DMP template for engineering sciences. The goal is to significantly enhance the practical applicability of the template within the RDMO tool for engineering research. To this end, feedback gathered during live operation from the community is being incorporated into the revision process. The technical and content-related development involves aligning the questionnaire with the NFDI DMP Template Framework to ensure NFDI-wide standards. To enable the exchange of metadata between RDMO and Coscine, the Coscine query is also being adjusted.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-
+- **NFDI consortia:** NFDI4Ing

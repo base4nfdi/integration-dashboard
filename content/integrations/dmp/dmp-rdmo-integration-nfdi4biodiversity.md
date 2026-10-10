@@ -17,17 +17,6 @@ inc_service_type = "RDMO Integration"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-06-30.
-
-## Timeline
-
-- **Start:** 2024-06-01
-- **End:** 2025-06-30
-- **Cycle:** —
-- **Service type:** RDMO Integration
-
 ## Goals
 
 Develop an RDMO plugin that connects the DMP tool to Zenodo, enabling users to publish DMPs as PDFs directly from RDMO.
@@ -39,5 +28,4 @@ RDMO Zenodo Plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Biodiversity 
-
+- **NFDI consortia:** NFDI4Biodiversity

@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-07-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Establishing an RDMO environment tailored to the consortium’s needs. During the incubator project, a test client will be set up, followed shortly by a productive system to enable early evaluation within the community by utilising existing RDMO catalogs and templates, e.g. by NFDI4ING. User access will be managed through the NFDI-AAI login, providing federated authentication based on institutional accounts.
@@ -39,5 +28,4 @@ NFDI4Energy RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Energy 
-
+- **NFDI consortia:** NFDI4Energy

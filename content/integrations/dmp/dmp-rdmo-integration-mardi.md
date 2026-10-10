@@ -17,17 +17,6 @@ inc_service_type = "RDMO Integration"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-09-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** RDMO Integration
-
 ## Goals
 
 MaRDI offers its MaRDMO service to all researchers using mathematical methods in their research, regardless of discipline background. In this incubator project, the MaRDMO plugin collection for RDMO is further enhanced to include instrument data bases. The plugin will be able to query different instrument databases across NFDI consortia, and to store instrument metadata inside the MaRDMO template.
@@ -39,5 +28,4 @@ Generic Search RDMO Plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI 
-
+- **NFDI consortia:** MaRDI

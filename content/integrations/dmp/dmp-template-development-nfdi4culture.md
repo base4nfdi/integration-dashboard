@@ -17,17 +17,6 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-09-30.
-
-## Timeline
-
-- **Start:** 2024-12-01
-- **End:** 2025-09-30
-- **Cycle:** 0
-- **Service type:** Template Development
-
 ## Goals
 
 The aim of this incubator project was to help cultural heritage institutions find the right software solution for organising and presenting their artefacts. To this end, we have developed a decision-making aid comprising two complementary DMP templates. One template is designed from the user's perspective (i.e. collections) to help clarify their requirements and assist in selecting suitable software for collection management. The other template enables collection management products to be described in detail from the provider's perspective, making them comparable for users. This facilitates a matching between software products and users.
@@ -39,5 +28,4 @@ NFDI4Culture RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Culture 
-
+- **NFDI consortia:** NFDI4Culture

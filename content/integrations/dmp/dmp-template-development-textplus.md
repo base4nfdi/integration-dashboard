@@ -17,17 +17,6 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-09-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** Template Development
-
 ## Goals
 
 The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.
@@ -39,5 +28,4 @@ Text+ RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ 
-
+- **NFDI consortia:** Text+

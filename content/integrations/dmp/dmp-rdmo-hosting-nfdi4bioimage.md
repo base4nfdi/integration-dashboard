@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-10-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** RDMO Hosting
-
 ## Goals
 
 Setting up an RDMO client to explore integration with existing data workflows and to develop initial catalog structures. Create familiarity with the template system and build up Know-How to enable guidance and teaching of users. Integration with the NFDI-AAI Didmos login is planned to provide seamless and secure user authentication.
@@ -39,5 +28,4 @@ NFDI4BIOMAGE RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4BIOIMAGE 
-
+- **NFDI consortia:** NFDI4BIOIMAGE

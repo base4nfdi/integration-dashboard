@@ -17,22 +17,10 @@ inc_service_type = "Training & Outreach"
 +++
 
 
-## Current status
-
-**Finished** — cycle 1 completed on 2026-06-30.
-
-## Timeline
-
-- **Start:** 2026-01-01
-- **End:** 2026-06-30
-- **Cycle:** 1
-- **Service type:** Training & Outreach
-
 ## Goals
 
 Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback.
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ 
-
+- **NFDI consortia:** Text+

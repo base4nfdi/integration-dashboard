@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
 
-## Current status
-
-**Finished** — cycle 1 completed on 2026-06-30.
-
-## Timeline
-
-- **Start:** 2026-01-01
-- **End:** 2026-06-30
-- **Cycle:** 1
-- **Service type:** RDMO Hosting, RDMO Integration
-
 ## Goals
 
 Provision of an operational RDMO for the Earth System Science community to create DMPs for sensor-heavy research projects as well as for monitoring activities. The RDMO will be linked to existing sensor- and data management systems such as SMS, O2A. This will allow the direct and seamless integration of sensor metadata in RDMO-based data management plans, ensuring metadata consistency between the linked systems. During the incubator project, a productive client will be set up and evaluated by the community in a user workshop.
@@ -39,5 +28,4 @@ Provision of an operational RDMO for the Earth System Science community to creat
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Earth 
-
+- **NFDI consortia:** NFDI4Earth

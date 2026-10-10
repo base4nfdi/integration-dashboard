@@ -17,17 +17,6 @@ inc_service_type = "Training & Outreach"
 +++
 
 
-## Current status
-
-**Finished** — cycle 1 completed on 2026-05-31.
-
-## Timeline
-
-- **Start:** 2025-07-01
-- **End:** 2026-05-31
-- **Cycle:** 1
-- **Service type:** Training & Outreach
-
 ## Goals
 
 NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.
@@ -39,5 +28,4 @@ Training Guide for DMP Workshops
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem 
-
+- **NFDI consortia:** NFDI4Chem

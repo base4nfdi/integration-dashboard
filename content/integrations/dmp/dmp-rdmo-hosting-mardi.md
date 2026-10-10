@@ -17,17 +17,6 @@ inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
 
-## Current status
-
-**Finished** — completed on 2025-06-30.
-
-## Timeline
-
-- **Start:** 2024-09-01
-- **End:** 2025-06-30
-- **Cycle:** —
-- **Service type:** RDMO Hosting, RDMO Integration
-
 ## Goals
 
 Set up an RDMO client for the MaRDI consortium and integrate the existing MaRDMO plugin, which connects RDMO with the MaRDI knowledge graph infrastructure.
@@ -39,5 +28,4 @@ MaRDI RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI 
-
+- **NFDI consortia:** MaRDI

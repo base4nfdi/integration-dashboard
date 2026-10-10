@@ -17,17 +17,6 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-07-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** Template Development
-
 ## Goals
 
 FAIRagro customises DMP templates of funding agencies based on the needs of the agrosystem community for efficient and straight forward usage. The close cooperation with DMP4NFDI will ensure the compatibility and reusability of the developments. During the incubator project, a customised DMP template for the agrosystem sciences will be created and made available, based on community feedback (e.g. through workshops) and aligned with the existing NFDI DMP Template Framework.
@@ -39,5 +28,4 @@ FAIRagro RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro 
-
+- **NFDI consortia:** FAIRagro

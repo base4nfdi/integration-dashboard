@@ -17,17 +17,6 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 0 completed on 2025-12-31.
-
-## Timeline
-
-- **Start:** 2025-07-01
-- **End:** 2025-12-31
-- **Cycle:** 0
-- **Service type:** Template Development
-
 ## Goals
 
 NFDI4Memory is developing a discipline-specific DMP template to support the historical research community in their application process. The questionnaire is being continually refined in close collaboration with the community. In this incubator project, the template is developed based on the existing NFDI DMP Template Framework, while adapting and extending results from the community. The project also includes the integration of the new template into the NFDI4Memory RDMO client.
@@ -39,5 +28,4 @@ NFDI4Memory RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Memory 
-
+- **NFDI consortia:** NFDI4Memory

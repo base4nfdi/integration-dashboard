@@ -17,18 +17,6 @@ logo_project = "img/partner-logos/fa6ecd87e11ec9e1.png"
 
 OstData is a research data repository and research data service designed specifically for scholars working on Eastern, East Central, and Southeast European Studies. The OstData Research Data Types are a controlled vocabulary used to classify the research data holdings in the OstData research data repository according to overarching formal and conceptual characteristics. Next to the OstData vocabulary the incubator will focus on the Metadatenschema für NFDI4Memory (4MMS).
 
-
-## Current status
-
-**In preparation** — cycle 4.
-
-## Timeline
-
-- **Start:** —
-- **End:** —
-- **Cycle:** 4
-
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Memory 
-
+- **NFDI consortia:** NFDI4Memory

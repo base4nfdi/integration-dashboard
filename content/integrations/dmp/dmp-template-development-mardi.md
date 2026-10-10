@@ -17,22 +17,10 @@ inc_service_type = "Template Development"
 +++
 
 
-## Current status
-
-**Finished** — cycle 1 completed on 2026-07-31.
-
-## Timeline
-
-- **Start:** 2026-02-01
-- **End:** 2026-07-31
-- **Cycle:** 1
-- **Service type:** Template Development
-
 ## Goals
 
 This project aims to develop a mathematics-specific DMP template, building on the recommendations of the MaRDI consortium’s white paper “Research Data Management Planning in Mathematics”. The project will translate discipline-specific requirements into a structured, modular template capturing the diversity of mathematical research data—proofs, algorithms, computational workflows, mathematical models, software, numerical datasets, and visualizations.
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI 
-
+- **NFDI consortia:** MaRDI

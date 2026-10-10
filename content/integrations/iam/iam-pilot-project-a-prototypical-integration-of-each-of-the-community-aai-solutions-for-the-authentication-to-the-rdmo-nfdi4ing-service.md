@@ -20,12 +20,6 @@ inc_activity_page = "https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/"
 
 This a pilot to the IAM4NFDI incubator projects. It will serve as a proof-of-principle for the implementation of the Community AAI (CAAI) solutions into an existing web service. Each of the CAAIs will be integrated in parallel as an OpenID Connect (OIDC) provider to the test instance of the [RDMO NFDI4ING servic] (https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/). The RDMO software provides a straightforward way to integrate a wide-range of OIDC providers since it is built upon the Django Web Framework which can leverage the related django-allauth package for this purpose. A simple login via the website will show that the integration with the CAAI was successful.
 
-
-## Timeline
-
-- **Start:** 2023-07-31
-- **End:** 2023-02-28
-
 ## Results
 
 successful integration of each of the AcademicID, didmos, RegApp,
@@ -35,5 +29,4 @@ the service.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-
+- **NFDI consortia:** NFDI4Ing
