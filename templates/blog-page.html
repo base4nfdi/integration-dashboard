@@ -211,61 +211,65 @@
       </div>
       {% endif %}
     </div>
-    {% if page.extra.basic_service == "IAM" %}
-    {% set iam_status = page.extra.status | default(value="") %}
-    {% set iam_start = page.extra.inc_start | default(value="") %}
-    {% set iam_end = page.extra.inc_end | default(value="") %}
-    {% set iam_cycle = page.extra.inc_cycle | default(value=0) %}
-    {% set iam_activity = page.extra.inc_activity_type | default(value="") %}
-    {% set iam_caai = page.extra.inc_caai | default(value="") %}
-    {% if iam_status or iam_cycle or iam_activity or iam_caai %}
-    <div class="blog-post-overview blog-post-overview--iam">
-      {% if iam_status %}
+    {% set inc_status = page.extra.status | default(value="") %}
+    {% set inc_start = page.extra.inc_start | default(value="") %}
+    {% set inc_end = page.extra.inc_end | default(value="") %}
+    {% set inc_cycle = page.extra.inc_cycle | default(value=0) %}
+    {% set inc_activity = page.extra.inc_activity_type | default(value="") %}
+    {% set inc_caai = page.extra.inc_caai | default(value="") %}
+    {% set inc_service_type = page.extra.inc_service_type | default(value="") %}
+    {% if inc_status or (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
+    <div class="blog-post-overview">
+      {% if inc_status %}
       <div class="blog-post-overview-status">
-        <span class="status-badge status-{{ iam_status | lower | replace(from=' ', to='-') }}">{{ iam_status }}</span>
-        {% if iam_status == "Finished" and iam_end %}
-        <span class="blog-post-overview-detail">Completed {{ iam_end }}</span>
-        {% elif iam_status == "In preparation" and iam_start %}
-        <span class="blog-post-overview-detail">Planned start {{ iam_start }}</span>
-        {% elif iam_status == "Running" and iam_start %}
-        <span class="blog-post-overview-detail">Started {{ iam_start }}</span>
+        <span class="status-badge status-{{ inc_status | lower | replace(from=' ', to='-') }}">{{ inc_status }}</span>
+        {% if inc_status == "Finished" and inc_end %}
+        <span class="blog-post-overview-detail">Completed {{ inc_end }}</span>
+        {% if inc_start %}
+        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
+        {% endif %}
+        {% elif inc_status == "In preparation" and inc_start %}
+        <span class="blog-post-overview-detail">Planned start {{ inc_start }}</span>
+        {% elif inc_status == "Running" and inc_start %}
+        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
+        {% if inc_end %}
+        <span class="blog-post-overview-detail">Ends {{ inc_end }}</span>
+        {% endif %}
         {% endif %}
         {% if page.extra.last_check %}
         <span class="blog-post-checked">Last check: {{ page.extra.last_check }}</span>
         {% endif %}
       </div>
       {% endif %}
-      {% if iam_cycle or iam_activity or iam_caai %}
+      {% if (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
       <ul class="blog-post-overview-meta" aria-label="Incubator details">
-        {% if iam_cycle and iam_cycle > 0 %}
+        {% if inc_cycle and inc_cycle > 0 %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Cycle</span>
-          <span class="blog-post-overview-chip-value">{{ iam_cycle }}</span>
+          <span class="blog-post-overview-chip-value">{{ inc_cycle }}</span>
         </li>
         {% endif %}
-        {% if iam_activity %}
+        {% if inc_activity %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Activity type</span>
-          <span class="blog-post-overview-chip-value">{{ iam_activity }}</span>
+          <span class="blog-post-overview-chip-value">{{ inc_activity }}</span>
         </li>
         {% endif %}
-        {% if iam_caai %}
+        {% if inc_caai %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Community AAI</span>
-          <span class="blog-post-overview-chip-value">{{ iam_caai }}</span>
+          <span class="blog-post-overview-chip-value">{{ inc_caai }}</span>
+        </li>
+        {% endif %}
+        {% if inc_service_type %}
+        <li class="blog-post-overview-chip">
+          <span class="blog-post-overview-chip-label">Service type</span>
+          <span class="blog-post-overview-chip-value">{{ inc_service_type }}</span>
         </li>
         {% endif %}
       </ul>
       {% endif %}
     </div>
-    {% endif %}
-    {% elif page.extra.status %}
-    <p class="blog-post-status">
-      <span class="status-badge status-{{ page.extra.status | lower | replace(from=' ', to='-') }}">{{ page.extra.status }}</span>
-      {% if page.extra.last_check %}
-      <span class="blog-post-checked">Last check: {{ page.extra.last_check }}</span>
-      {% endif %}
-    </p>
     {% endif %}
   </header>
 
