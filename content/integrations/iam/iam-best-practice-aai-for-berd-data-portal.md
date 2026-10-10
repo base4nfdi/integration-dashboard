@@ -45,5 +45,5 @@ CC By 4.0
 
 ## Partners & entities
 
-- **NFDI consortia:** BERD@NFDI (1 linked)
+- **NFDI consortia:** BERD@NFDI 
 

@@ -43,6 +43,6 @@ Learn more
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Microbiota (1 linked)
-- **Participating entity:** DSMZ (1 linked)
+- **NFDI consortia:** NFDI4Microbiota 
+- **Participating entity:** DSMZ 
 

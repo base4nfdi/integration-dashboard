@@ -37,6 +37,6 @@ This use case analyses how NOMAD “Projects” (aggregations of uploaded files,
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRmat (1 linked)
-- **Participating entity:** Humbold University Berlin (1 linked)
+- **NFDI consortia:** FAIRmat 
+- **Participating entity:** Humbold University Berlin 
 

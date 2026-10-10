@@ -34,5 +34,5 @@ DMP4NFDI provides the DMP tool RDMO for NFDI consortia and develops the DMP Temp
 
 ## Partners & entities
 
-- **NFDI consortia:** Base4NFDI (1 linked)
+- **NFDI consortia:** Base4NFDI 
 

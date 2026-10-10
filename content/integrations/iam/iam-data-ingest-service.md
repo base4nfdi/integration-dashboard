@@ -43,6 +43,6 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
-- **Participating entity:** ULB University and State Library Darmstadt (1 linked)
+- **NFDI consortia:** NFDI4Ing 
+- **Participating entity:** ULB University and State Library Darmstadt 
 

@@ -40,5 +40,5 @@ For users who are not affiliated with any community providing an AAI-service, an
 
 ## Partners & entities
 
-- **Participating entity:** come2data - Kompetenzzentrum für interdisziplinäre Datenwissenschaften (1 linked)
+- **Participating entity:** come2data - Kompetenzzentrum für interdisziplinäre Datenwissenschaften 
 

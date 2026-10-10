@@ -40,5 +40,5 @@ Test client ready; productive client in preparation
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI-MatWerk (1 linked)
+- **NFDI consortia:** NFDI-MatWerk 
 

@@ -38,5 +38,5 @@ FAIRagro is the NFDI consortium focussing on agrosystems research. FAIRagro will
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro (1 linked)
+- **NFDI consortia:** FAIRagro 
 

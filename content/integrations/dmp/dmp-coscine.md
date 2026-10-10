@@ -41,5 +41,5 @@ RDMO Plugin for the DFG Classification of Scientific Disciplines
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
+- **NFDI consortia:** NFDI4Ing 
 

@@ -40,5 +40,5 @@ NFDI4Energy is developing a platform that integrates key services to support res
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Energy (1 linked)
+- **NFDI consortia:** NFDI4Energy 
 

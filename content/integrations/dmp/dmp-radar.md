@@ -34,5 +34,5 @@ The incubator project aims to improve the integration of RDMO and the RADAR rese
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem, NFDI4Culture (2 linked)
+- **NFDI consortia:** NFDI4Chem, NFDI4Culture 
 

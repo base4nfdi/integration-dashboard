@@ -35,5 +35,5 @@ This incubator project aims to host the DataCite metadata model and controlled v
 
 ## Partners & entities
 
-- **NFDI consortia:** Base4NFDI (1 linked)
+- **NFDI consortia:** Base4NFDI 
 

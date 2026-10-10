@@ -40,5 +40,5 @@ The plasma ontology (Plasma-O) is a domain-specific ontology for low-temperature
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4BIOIMAGE (1 linked)
+- **NFDI consortia:** NFDI4BIOIMAGE 
 

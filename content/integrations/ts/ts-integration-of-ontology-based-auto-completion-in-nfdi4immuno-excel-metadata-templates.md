@@ -30,5 +30,5 @@ NFDI4Immuno works with various standardized terminologies and ontologies to desc
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Immuno (1 linked)
+- **NFDI consortia:** NFDI4Immuno 
 

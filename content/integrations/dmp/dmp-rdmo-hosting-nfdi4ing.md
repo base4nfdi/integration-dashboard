@@ -39,5 +39,5 @@ NFDI4Ing RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
+- **NFDI consortia:** NFDI4Ing 
 

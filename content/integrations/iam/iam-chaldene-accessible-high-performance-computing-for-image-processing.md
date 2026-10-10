@@ -38,5 +38,5 @@ MIT or LGPL
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI-MatWerk (1 linked)
+- **NFDI consortia:** NFDI-MatWerk 
 

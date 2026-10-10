@@ -43,5 +43,5 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat (1 linked)
+- **NFDI consortia:** NFDI4Cat 
 

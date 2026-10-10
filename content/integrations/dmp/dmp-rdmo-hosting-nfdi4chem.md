@@ -39,5 +39,5 @@ NFDI4Chem RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem (1 linked)
+- **NFDI consortia:** NFDI4Chem 
 

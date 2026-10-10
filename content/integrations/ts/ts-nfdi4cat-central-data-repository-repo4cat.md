@@ -42,5 +42,5 @@ NFDI4Cat is a community-driven and user-oriented initiative to secure the digita
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat (1 linked)
+- **NFDI consortia:** NFDI4Cat 
 

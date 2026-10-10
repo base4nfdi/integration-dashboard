@@ -41,5 +41,5 @@ During the current COVID-19 pandemic, the rapid availability of profound informa
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Health (1 linked)
+- **NFDI consortia:** NFDI4Health 
 

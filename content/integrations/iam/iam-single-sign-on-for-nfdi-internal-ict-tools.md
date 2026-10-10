@@ -33,5 +33,5 @@ Not applicable
 
 ## Partners & entities
 
-- **Participating entity:** NFDI (1 linked)
+- **Participating entity:** NFDI 
 

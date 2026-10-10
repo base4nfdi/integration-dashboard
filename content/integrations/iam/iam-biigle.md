@@ -38,5 +38,5 @@ GPLv3.0
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Biodiversity (1 linked)
+- **NFDI consortia:** NFDI4Biodiversity 
 

@@ -44,5 +44,5 @@ We want to link NOMAD to the NFDI AAI. NOMAD is a web-based research data manage
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRmat (1 linked)
+- **NFDI consortia:** FAIRmat 
 

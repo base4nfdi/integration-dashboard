@@ -39,5 +39,5 @@ Text+ RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ (1 linked)
+- **NFDI consortia:** Text+ 
 

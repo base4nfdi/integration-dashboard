@@ -43,6 +43,6 @@ Learn more
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ (1 linked)
-- **Participating entity:** SUB Göttingen (1 linked)
+- **NFDI consortia:** Text+ 
+- **Participating entity:** SUB Göttingen 
 
