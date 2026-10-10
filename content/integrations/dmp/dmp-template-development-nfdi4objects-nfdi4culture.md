@@ -40,5 +40,4 @@ NFDI4Culture RDMO Catalog
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Culture, NFDI4Objects (2 linked)
-- **Partner publications:** 0
 

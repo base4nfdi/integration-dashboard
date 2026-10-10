@@ -40,5 +40,4 @@ NFDI4Memory RDMO Catalog
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Memory (1 linked)
-- **Partner publications:** 0
 

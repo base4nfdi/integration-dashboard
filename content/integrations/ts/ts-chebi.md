@@ -40,5 +40,4 @@ Chemical Entities of Biological Interest (ChEBI) is a freely available dictionar
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

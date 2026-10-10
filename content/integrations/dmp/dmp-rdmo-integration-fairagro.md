@@ -40,5 +40,4 @@ Workshop "RDMO in Practice: Building Data Management Plans for Agricultural Rese
 ## Partners & entities
 
 - **NFDI consortia:** FAIRagro (1 linked)
-- **Partner publications:** 0
 

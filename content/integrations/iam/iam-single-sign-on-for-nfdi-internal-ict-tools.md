@@ -34,5 +34,4 @@ Not applicable
 ## Partners & entities
 
 - **Participating entity:** NFDI (1 linked)
-- **Partner publications:** 0
 

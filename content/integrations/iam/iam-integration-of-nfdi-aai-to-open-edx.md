@@ -36,5 +36,4 @@ This Incubator Project focuses on integrating the NFDI Authentication and Author
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Earth (1 linked)
-- **Partner publications:** 0
 

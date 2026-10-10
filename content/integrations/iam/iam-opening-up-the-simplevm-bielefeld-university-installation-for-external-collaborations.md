@@ -46,5 +46,4 @@ MISSING, in preparation to select a suitable OpenSource license
 ## Partners & entities
 
 - **Participating entity:** Bielefeld University (1 linked)
-- **Partner publications:** 0
 

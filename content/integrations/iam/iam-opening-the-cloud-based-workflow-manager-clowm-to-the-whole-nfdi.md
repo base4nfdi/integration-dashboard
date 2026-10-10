@@ -42,5 +42,4 @@ Apache v2.0
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

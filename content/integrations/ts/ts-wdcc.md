@@ -38,5 +38,4 @@ The WDCC has the mission to archive, disseminate and publish Earth System model 
 
 - **NFDI consortia:** NFDI4Earth (1 linked)
 - **Participating entity:** DKRZ German Climate Computing Centre (1 linked)
-- **Partner publications:** 0
 

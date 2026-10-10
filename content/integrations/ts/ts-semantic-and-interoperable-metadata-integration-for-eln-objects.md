@@ -29,5 +29,4 @@ This incubator integrates the DataCite metadata properties and controlled vocabu
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

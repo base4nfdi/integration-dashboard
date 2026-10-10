@@ -48,5 +48,4 @@ möglicherweise EUPL-1.2
 ## Partners & entities
 
 - **NFDI consortia:** Text+ (1 linked)
-- **Partner publications:** 0
 

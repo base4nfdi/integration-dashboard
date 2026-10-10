@@ -39,5 +39,4 @@ The purpose of this work is to evaluate how Base4NFDI basic services (e.g. PID4N
 
 - **NFDI consortia:** Base4NFDI (1 linked)
 - **Participating entity:** TIB (1 linked)
-- **Partner publications:** 0
 

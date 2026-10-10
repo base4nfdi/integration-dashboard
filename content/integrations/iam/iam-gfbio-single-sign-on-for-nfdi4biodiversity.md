@@ -45,5 +45,4 @@ permissive open-source + CC0 / CC-BY
 
 - **NFDI consortia:** NFDI4Biodiversity (1 linked)
 - **Participating entity:** GFBio (1 linked)
-- **Partner publications:** 0
 

@@ -38,5 +38,4 @@ No content provided.
 ## Partners & entities
 
 - **NFDI consortia:** NFDIxCS (1 linked)
-- **Partner publications:** 0
 

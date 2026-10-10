@@ -40,5 +40,4 @@ NFDI4BIOMAGE RDMO Client
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4BIOIMAGE (1 linked)
-- **Partner publications:** 0
 

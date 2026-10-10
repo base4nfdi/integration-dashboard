@@ -35,5 +35,4 @@ The template "Research Data Management Plan - Epidemiological studies" is aimed 
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Health (1 linked)
-- **Partner publications:** 0
 

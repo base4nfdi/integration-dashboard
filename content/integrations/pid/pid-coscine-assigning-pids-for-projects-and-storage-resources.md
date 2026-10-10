@@ -39,5 +39,4 @@ Cosine is a web-based research data management (RDM) platform developed at RWTH 
 
 - **NFDI consortia:** NFDI4Ing, NFDI-MatWerk (2 linked)
 - **Participating entity:** RWTH Aachen University (1 linked)
-- **Partner publications:** 0
 

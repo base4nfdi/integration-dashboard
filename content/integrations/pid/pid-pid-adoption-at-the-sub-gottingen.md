@@ -45,5 +45,4 @@ Learn more
 
 - **NFDI consortia:** Text+ (1 linked)
 - **Participating entity:** SUB Göttingen (1 linked)
-- **Partner publications:** 0
 

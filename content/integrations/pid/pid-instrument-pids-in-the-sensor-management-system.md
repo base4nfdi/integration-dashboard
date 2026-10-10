@@ -45,5 +45,4 @@ Learn more
 
 - **NFDI consortia:** NFDI4Earth (1 linked)
 - **Participating entities:** Forschungszentrum Jülich, GFZ, UFZ, KIT (4 linked)
-- **Partner publications:** 0
 

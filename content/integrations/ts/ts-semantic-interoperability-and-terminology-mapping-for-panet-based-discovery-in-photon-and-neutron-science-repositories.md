@@ -35,5 +35,4 @@ DAPHNE4NFDI represents the Photon and Neutron (PaN) research community in the Ge
 ## Partners & entities
 
 - **NFDI consortia:** DAPHNE4NFDI (1 linked)
-- **Partner publications:** 0
 

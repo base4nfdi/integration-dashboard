@@ -40,5 +40,4 @@ Provision of an operational RDMO for the Earth System Science community to creat
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Earth (1 linked)
-- **Partner publications:** 0
 

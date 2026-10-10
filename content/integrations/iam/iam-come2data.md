@@ -37,5 +37,4 @@ missing
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

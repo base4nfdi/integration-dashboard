@@ -40,5 +40,4 @@ AIMS (Applying Interoperable Metadata Standards) is developing a platform for cr
 - **NFDI consortia:** NFDI4Ing (1 linked)
 - **Participating entities:** ULB University and State Library Darmstadt, RWTH Aachen University, University of Rostock (3 linked)
 - **Related institutions:** Fraunhofer IWM, and University of Freiburg
-- **Partner publications:** 0
 

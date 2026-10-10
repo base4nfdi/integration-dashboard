@@ -39,5 +39,4 @@ MIT Licence
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Ing (1 linked)
-- **Partner publications:** 0
 

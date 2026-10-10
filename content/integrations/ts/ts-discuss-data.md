@@ -38,5 +38,4 @@ Discuss Data (www.discuss-data.net) is an open repository for storing, sharing a
 ## Partners & entities
 
 - **NFDI consortia:** Text+ (1 linked)
-- **Partner publications:** 0
 

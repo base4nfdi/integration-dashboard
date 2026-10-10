@@ -38,5 +38,4 @@ The main purpose of the incubator project is a strong integration of TS4NFDI ser
 ## Partners & entities
 
 - **NFDI consortia:** FAIRagro (1 linked)
-- **Partner publications:** 0
 

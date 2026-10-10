@@ -45,5 +45,4 @@ Learn more
 
 - **NFDI consortia:** FAIRagro (1 linked)
 - **Participating entity:** IPK - Leibniz Institute of Plant Genetics and Crop Plant Research (1 linked)
-- **Partner publications:** 0
 

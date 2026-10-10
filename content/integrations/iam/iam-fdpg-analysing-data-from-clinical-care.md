@@ -34,5 +34,4 @@ The German Portal for Medical Research Data (FDPG) is the central point of admin
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Health (1 linked)
-- **Partner publications:** 0
 

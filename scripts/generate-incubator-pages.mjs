@@ -186,7 +186,10 @@ function formatPartnersSection(record) {
     lines.push(`- **Related institutions:** ${related}`);
   }
 
-  lines.push(`- **Partner publications:** ${pubs}`);
+  const pubCount = Number(pubs) || 0;
+  if (pubCount > 0) {
+    lines.push(`- **Partner publications:** ${pubCount}`);
+  }
   return lines.join("\n");
 }
 

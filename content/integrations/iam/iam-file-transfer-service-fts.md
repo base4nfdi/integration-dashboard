@@ -39,5 +39,4 @@ The File Transfer Service (FTS) is a Software that is developed by CERN and that
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Ing (1 linked)
-- **Partner publications:** 0
 

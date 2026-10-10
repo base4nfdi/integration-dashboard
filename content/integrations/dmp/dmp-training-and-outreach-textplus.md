@@ -35,5 +35,4 @@ Text+ has created a DMP template in collaboration with participants of the conso
 ## Partners & entities
 
 - **NFDI consortia:** Text+ (1 linked)
-- **Partner publications:** 0
 

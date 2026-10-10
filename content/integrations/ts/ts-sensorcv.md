@@ -33,5 +33,4 @@ The Sensor Management System (SMS) serves as a central infrastructure for collec
 
 - **NFDI consortia:** NFDI4Earth (1 linked)
 - **Participating entity:** Helmholtz Association (1 linked)
-- **Partner publications:** 0
 

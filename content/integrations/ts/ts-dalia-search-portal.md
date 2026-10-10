@@ -35,5 +35,4 @@ DALIA stands for the “Data Literacy Alliance” which develops a user-centric 
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

@@ -43,5 +43,4 @@ MIT License
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

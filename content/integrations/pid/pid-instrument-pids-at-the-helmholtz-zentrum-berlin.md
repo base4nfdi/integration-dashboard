@@ -45,5 +45,4 @@ Learn more
 
 - **NFDI consortia:** DAPHNE4NFDI (1 linked)
 - **Participating entity:** HZB Helmholtz-Zentrum Berlin (1 linked)
-- **Partner publications:** 0
 

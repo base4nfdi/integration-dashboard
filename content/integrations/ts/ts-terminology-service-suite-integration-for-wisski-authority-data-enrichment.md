@@ -37,5 +37,4 @@ SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deployin
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Culture, NFDI4Memory, NFDI4Objects (3 linked)
-- **Partner publications:** 0
 

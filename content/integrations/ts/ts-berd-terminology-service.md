@@ -42,5 +42,4 @@ BERD@NFDI is dedicated to establishing a research data infrastructure transformi
 ## Partners & entities
 
 - **NFDI consortia:** BERD@NFDI (1 linked)
-- **Partner publications:** 0
 

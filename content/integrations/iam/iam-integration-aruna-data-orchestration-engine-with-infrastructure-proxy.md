@@ -39,5 +39,4 @@ Apache V2.0 MIT License
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

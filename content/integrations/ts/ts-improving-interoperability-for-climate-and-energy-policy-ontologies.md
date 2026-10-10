@@ -31,5 +31,4 @@ The Climate and Energy Policy Ontology (CEPO) is an ontology built within NFDI4E
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Energy (1 linked)
-- **Partner publications:** 0
 

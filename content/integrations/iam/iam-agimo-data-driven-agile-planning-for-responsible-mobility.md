@@ -44,5 +44,4 @@ CC by 4.0 + MIT
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

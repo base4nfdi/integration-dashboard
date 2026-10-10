@@ -42,5 +42,4 @@ BSD 3-Clause
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

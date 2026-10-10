@@ -35,5 +35,4 @@ A comprehensive platform facilitating natural product research by providing data
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Chem (1 linked)
-- **Partner publications:** 0
 

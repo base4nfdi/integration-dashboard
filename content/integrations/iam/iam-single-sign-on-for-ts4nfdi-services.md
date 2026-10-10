@@ -41,5 +41,4 @@ The incubator project aims to implement a Single Sign-On (SSO) solution for Term
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

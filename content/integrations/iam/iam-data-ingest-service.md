@@ -45,5 +45,4 @@ MIT Licence
 
 - **NFDI consortia:** NFDI4Ing (1 linked)
 - **Participating entity:** ULB University and State Library Darmstadt (1 linked)
-- **Partner publications:** 0
 

@@ -41,5 +41,4 @@ The Metadata Annotation Workbench is developed in the NFDI4Health project. The s
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Health (1 linked)
-- **Partner publications:** 0
 

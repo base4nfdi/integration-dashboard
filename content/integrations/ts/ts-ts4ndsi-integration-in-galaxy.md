@@ -29,5 +29,4 @@ To strengthen FAIR data practices and semantic interoperability within research 
 
 ## Partners & entities
 
-- **Partner publications:** 0
 

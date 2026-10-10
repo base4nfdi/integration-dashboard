@@ -39,5 +39,4 @@ Missing!!
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Objects (1 linked)
-- **Partner publications:** 0
 

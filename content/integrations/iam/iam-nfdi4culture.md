@@ -36,5 +36,4 @@ The current NFDI4Culture IAM plays a pivotal role as the central AAI/SSO backbon
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Culture (1 linked)
-- **Partner publications:** 0
 

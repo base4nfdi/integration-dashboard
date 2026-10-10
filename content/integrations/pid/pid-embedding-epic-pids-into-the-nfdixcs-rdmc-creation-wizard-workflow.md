@@ -39,5 +39,4 @@ The RDMC creation wizard leads a user through the publication process of a resea
 
 - **NFDI consortia:** NFDIxCS (1 linked)
 - **Participating entities:** KIT, University of Potsdam, University of Duisburg-Essen, GWDG - Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (4 linked)
-- **Partner publications:** 0
 

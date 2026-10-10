@@ -39,5 +39,4 @@ While our initial incubator proposal focused solely on the Terminology Service (
 ## Partners & entities
 
 - **NFDI consortia:** NFDI4Chem (1 linked)
-- **Partner publications:** 0
 
