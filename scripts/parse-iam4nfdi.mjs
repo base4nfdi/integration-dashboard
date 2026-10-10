@@ -34,6 +34,31 @@ const SITE_BASE = "https://incubators.nfdi-aai.de/";
 const DEFAULT_INPUT = join(repoRoot, "data/sources/iam4nfdi/page.html");
 const DEFAULT_OUTPUT = join(repoRoot, "data/parsed/iam4nfdi.json");
 
+/** Card image is a project logo, not NFDI consortia branding (upstream may use missing.jpg). */
+const IAM_PROJECT_OVERRIDES = {
+  agimo: {
+    logo_project:
+      "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
+    source_url: "https://agimo-trr408.de/",
+  },
+};
+
+function isPlaceholderCardLogo(logoSrc) {
+  const base = String(logoSrc || "").split(/[?#]/)[0];
+  return /(?:^|\/)missing\.jpe?g$/i.test(base);
+}
+
+function logosFromIamCard(sourceId, logoSrc) {
+  const projectOverride = IAM_PROJECT_OVERRIDES[sourceId]?.logo_project ?? "";
+  if (projectOverride) {
+    return { logo_project: projectOverride, logo_consortia: "" };
+  }
+  if (!logoSrc || isPlaceholderCardLogo(logoSrc)) {
+    return { logo_project: "", logo_consortia: "" };
+  }
+  return { logo_project: "", logo_consortia: absoluteUrl(SITE_BASE, logoSrc) };
+}
+
 const NON_PARTNER_TAGS = new Set([
   "base",
   "general",
@@ -239,12 +264,17 @@ export function parseIamHtml(html) {
         ? badges.partners
         : partnersFromTitle(title);
 
+    const { logo_project, logo_consortia } = logosFromIamCard(sourceId, logoSrc);
+    const source_url = IAM_PROJECT_OVERRIDES[sourceId]?.source_url ?? "";
+
     records.push(
       applyElapsedStatus(
         emptyRecord({
           inc_name: title,
           basic_service: BASIC_SERVICE,
-          logo_consortia: absoluteUrl(SITE_BASE, logoSrc),
+          logo_project,
+          logo_consortia,
+          source_url,
           inc_start: badges.start,
           inc_end: badges.end,
           inc_cycle: badges.cycle,

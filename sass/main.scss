@@ -1776,6 +1776,61 @@ main.container:has(.dashboard) {
   margin: 0;
 }
 
+.blog-post-overview--iam {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin: 0.35rem 0 0;
+}
+
+.blog-post-overview-status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.blog-post-overview-detail {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.blog-post-overview-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-post-overview-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.blog-post-overview-chip-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.blog-post-overview-chip-value {
+  font-weight: 600;
+  color: var(--text);
+}
+
 .blog-post-checked {
   color: var(--text-muted);
   font-size: 0.9rem;

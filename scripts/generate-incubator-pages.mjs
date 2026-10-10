@@ -289,25 +289,36 @@ function buildBody(record, keyArticle) {
     `${name} is ${article} ${kind} within the **${service}** basic service of Base4NFDI.`
   );
   sections.push("");
-  sections.push("## Current status");
-  sections.push("");
-  sections.push(formatStatusLine(record));
-  sections.push("");
+
+  const isIam = asText(record.basic_service).toUpperCase() === "IAM";
+
+  if (!isIam) {
+    sections.push("## Current status");
+    sections.push("");
+    sections.push(formatStatusLine(record));
+    sections.push("");
+  }
+
   sections.push("## Timeline");
   sections.push("");
   sections.push(`- **Start:** ${displayDate(record.inc_start)}`);
   sections.push(`- **End:** ${displayDate(record.inc_end)}`);
-  sections.push(
-    `- **Cycle:** ${
-      record.inc_cycle == null || record.inc_cycle === ""
-        ? "—"
-        : record.inc_cycle
-    }`
-  );
-  if (serviceType) sections.push(`- **Service type:** ${serviceType}`);
-  if (activityType) sections.push(`- **Activity type:** ${activityType}`);
 
-  if (caai) {
+  if (!isIam) {
+    sections.push(
+      `- **Cycle:** ${
+        record.inc_cycle == null || record.inc_cycle === ""
+          ? "—"
+          : record.inc_cycle
+      }`
+    );
+    if (serviceType) sections.push(`- **Service type:** ${serviceType}`);
+    if (activityType) sections.push(`- **Activity type:** ${activityType}`);
+  } else if (serviceType) {
+    sections.push(`- **Service type:** ${serviceType}`);
+  }
+
+  if (caai && !isIam) {
     sections.push("");
     sections.push("## Community AAI");
     sections.push("");
