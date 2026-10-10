@@ -18,7 +18,7 @@ Helmholtzstraße 10
 ### Technical administrator
 
 Daniel Henzen  
-Phone: (+49) 351 463 33576  
+Phone: (+49) 351 463 39275  
 Email: Daniel.Henzen (at) tu-dresden (dot) de
 
 ### Content Management
