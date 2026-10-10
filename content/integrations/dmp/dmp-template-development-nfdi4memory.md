@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/e8e523c5867ae478.png"
 inc_service_type = "Template Development"
 +++
 
-Template Development — NFDI4Memory is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

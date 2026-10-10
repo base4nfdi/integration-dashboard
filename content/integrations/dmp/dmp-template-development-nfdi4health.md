@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
 inc_service_type = "Template Development, RDMO Hosting"
 +++
 
-Template Development — NFDI4Health is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

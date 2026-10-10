@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/800a8c236b604f34.png"
 inc_service_type = "Template Development"
 +++
 
-Template Development — NFDI4Objects, NFDI4Culture is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

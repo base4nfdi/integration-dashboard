@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/375d18e09586ac41.png"
 inc_service_type = "RDMO Integration"
 +++
 
-RDMO Integration — NFDI4Biodiversity is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -17,7 +17,6 @@ logo_project = "img/partner-logos/7da39823e90b3deb.png"
 
 MathModDB is a database of mathematical models, developed by the Mathematical Research Data Initiative (MaRDI) as an ontology and knowledge graph. Its aim is to store information of mathematical models in a structured way, describing a mathematical model as a semantic object. A model consists, for example, of mathematical expressions and quantities, and can be linked with a specific computational task. Moreover, a mathematical model is used to model a specific research problem, embedded in an academic discipline.
 
-MathModDB is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
 
 ## Current status
 

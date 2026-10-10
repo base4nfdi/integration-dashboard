@@ -273,24 +273,12 @@ function buildBody(record, keyArticle) {
   const activityType = asText(record.inc_activity_type);
   const caai = asText(record.inc_caai);
   const ownership = asText(record.inc_ownership);
-  const service = serviceLabel(record.basic_service);
   const sections = [];
 
   if (descr) {
     sections.push(descr);
     sections.push("");
   }
-
-  const kind =
-    asText(record.integration_kind) === "use-case" ||
-    asText(record.basic_service).toUpperCase() === "PID"
-      ? "use case"
-      : "incubator project";
-  const article = kind === "incubator project" ? "an" : "a";
-  sections.push(
-    `${name} is ${article} ${kind} within the **${service}** basic service of Base4NFDI.`
-  );
-  sections.push("");
 
   const isIam = asText(record.basic_service).toUpperCase() === "IAM";
 

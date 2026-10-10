@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/a755e82e7aec255a.svg"
 inc_service_type = "Template Development"
 +++
 
-DMP template for engineering sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

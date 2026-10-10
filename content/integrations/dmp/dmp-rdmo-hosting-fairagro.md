@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/2605943254a9ad2c.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — FAIRagro is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

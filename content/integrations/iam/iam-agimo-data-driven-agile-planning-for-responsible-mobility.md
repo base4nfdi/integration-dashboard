@@ -21,7 +21,6 @@ inc_activity_page = "https://infraverse-dev.zih.tu-dresden.de"
 
 The primary objective of the incubator proposal is to implement an RDM system that can be integrated into a virtual research environment for transportation science. Authentication should be handled by Community AAI software where customisation needs to be implemented wherever applicable This approach is advantageous as it enables ease of authentication for par ticipants / users from other institutions, while also supporting the implementation of authorization and group management within our services where applicable.
 
-AgiMo: Data - driven agile planning for responsible mobility is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

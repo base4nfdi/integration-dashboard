@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/7613ba801eafb62e.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-FAIRmat RDMO Client for the Physical Sciences is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

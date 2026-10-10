@@ -19,7 +19,6 @@ pid4cat is a service that is designed to assign persistent identifiers for resou
 
 Though pid4cat uses an ePIC prefix, everything else is set up and run by the providing institution (HLRS), such as Handle server, database and resolver. A specialized API is implemented by pid4cat for simplified PID management.
 
-PID4Cat: PIDs for digital and physical resources generated in catalysis research is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
 ## Current status
 

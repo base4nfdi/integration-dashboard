@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/bfa1a3b9daa9e273.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — NFDI4Ing is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

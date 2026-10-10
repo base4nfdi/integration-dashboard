@@ -20,7 +20,6 @@ inc_activity_page = "https://come2data.de"
 
 External visitors should be able to use teaching resources published on our website like learning paths curated by the Come2Data team. They should be able to track and save their state of completion of such learning paths and be able to continue at a later point in time. To reach that goal, external visitors need to have a way to log into the website and create an account, also without having an institutional affiliation, for instance with their ORCID-ID. We would like to give virtual organisations (VO), such as members of a specific NFDI consortium, access to our resources and IT systems with one of their accounts like ORCID-ID. Therefore we need to be able to register a vo in our IT components
 
-Come2Data - Competence Center for Interdisciplinary Data Science is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

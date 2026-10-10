@@ -21,7 +21,6 @@ inc_activity_page = "https://biigle.de"
 
 We want to support authentication via the NFDI Infra Proxy in our BIIGLE service for image and video annotation (biigle.de). The service is part of the NFDI4Biodiversity service catalogue and also participates as a pilot project in NFDI4Earth. BIIGLE should provide the NFDI Infra Proxy as a login/registration option so users from different consortia (currently NFDI4Biodiversity and NFDI4Earth) can easily use the service.
 
-BIIGLE is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

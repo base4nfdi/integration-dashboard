@@ -18,7 +18,6 @@ source_url = "https://doi.org/10.5281/zenodo.14327770"
 
 The purpose of this analysis is to showcase PID integration in a new PID service that is being developed within the KonsortSWD consortium. This service aims to reference elements below the dataset, study, or publication level via PID, enhancing FAIRness of low-granular dataset elements and fulfilling requirements such as handling a large number of PIDs.
 
-PID Service for Dataset Elements is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
 ## Current status
 

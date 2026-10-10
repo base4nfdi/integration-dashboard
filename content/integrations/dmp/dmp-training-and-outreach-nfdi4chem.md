@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/6c311d8a04f9f7ac.png"
 inc_service_type = "Training & Outreach"
 +++
 
-Training & Outreach — NFDI4Chem is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -17,7 +17,6 @@ entities = ["KIT", "University of Potsdam", "University of Duisburg-Essen", "GWD
 
 The RDMC creation wizard leads a user through the publication process of a research data management container (RDMC). At the end of this workflow, an ePIC PID is assigned to the container, turning it into a FAIR Digital Object (FDO) with RDMC-specific metadata. The workflow uses existing repositories to publish the RDMC. Hence, additionally, other PIDs may be registered as well, depending on the repository in use (e.g., Zenodo, GRO.Data, or Coscine).
 
-Embedding ePIC PIDs into the NFDIxCS RDMC Creation Wizard workflow is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
 ## Current status
 

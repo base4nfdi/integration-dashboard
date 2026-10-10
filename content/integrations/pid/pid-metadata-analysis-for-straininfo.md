@@ -18,7 +18,6 @@ source_url = "https://doi.org/10.5281/zenodo.14357800"
 
 The purpose of this analysis is a comprehensive evaluation of the metadata quality and completeness for the StrainInfo service. StrainInfo, operated by the Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures GmbH, is an integral part of the NFDI4Microbiota consortium. This analysis, conducted by DataCite, highlights the current state of metadata in StrainInfo, offering insights into its alignment with persistent identifier and metadata best practices.
 
-Metadata Analysis for StrainInfo is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
 ## Current status
 

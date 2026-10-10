@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/5df745c12d212b3a.png"
 inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
-RDMO Hosting — MaRDI is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

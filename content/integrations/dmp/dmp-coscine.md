@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/973257d523b9c266.png"
 inc_service_type = "RDMO Integration"
 +++
 
-Coscine is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/bd284640d067a489.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — NFDI4BIOIMAGE is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

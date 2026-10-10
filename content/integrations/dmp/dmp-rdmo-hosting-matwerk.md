@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/83ae5ea177c95650.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — MatWerk is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

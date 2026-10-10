@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/79d79017d3100d9d.png"
 inc_service_type = "RDMO Integration"
 +++
 
-DMP in RADAR is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

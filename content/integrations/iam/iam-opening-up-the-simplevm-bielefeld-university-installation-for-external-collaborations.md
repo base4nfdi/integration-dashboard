@@ -21,7 +21,6 @@ inc_activity_page = "https://simplevm.github.io"
 
 Easy access to computational resources for challenging bioinformatics analyses is often difficult for researchers to obtain. SimpleVM (https://simplevm.github.io) is hosted in the de.NBI Cloud, which provides compute and storage resources for several NFDI consortia and services such as Jupyter4NFDI and TS4NFDI. SimpleVM provides VMs with browser-based virtual research environments for data-processing, development use-cases, cluster-based computing, GPU-accelerated cases, and workshop scenarios. SimpleVM is also used as a teaching application at Bielefeld University as part of the Data Science Infrastructure (DSI) initiative, integrated with the local Shibboleth IdP. The purpose of this incubator project is to allow external researchers to use the SimpleVM DSI installation and participate in teaching courses and projects. If successful, NFDI AAI will be used for de.NBI Cloud SimpleVM as well.
 
-Opening up the SimpleVM Bielefeld University Installation for external collaborations is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

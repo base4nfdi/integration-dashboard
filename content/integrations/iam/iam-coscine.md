@@ -21,7 +21,6 @@ inc_activity_page = "https://about.coscine.de/"
 
 Coscine is a platform for research data management. Coscine offers researchers: Storage space: access to free storage space (depending on organisational affiliation) Integration: Access to project-related data sources (e.g. research data repository, linked files, archived data) Collaboration: Access for all project members Metadata: Automatically linked to project data Individuality: Project-specific metadata can be created as application profiles Archiving: Archive research data on site The metadata for research projects can be shared publicly on Coscine, made searchable and, in the long term, findable at national level. Coscine thus contributes to the goals of the National Research Data Infrastructure NFDI by making valuable scientific and research data accessible to the entire German scientific system.
 
-Coscine is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

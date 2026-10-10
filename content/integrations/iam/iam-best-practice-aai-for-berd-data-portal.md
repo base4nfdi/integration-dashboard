@@ -21,7 +21,6 @@ inc_activity_page = "https://berd-nfdi.de"
 
 This incubator project focuses on applying IAM4NFDI standards within the BERD@NFDI infrastructure. We aim to adopt best practices and reference implementations (e.g., OpenID Connect, entitlement-based access) to future-proof our platform for federated, cross-consortia workflows. The project will help ensure compatibility with external services such as Galaxy, and position BERD for participation in the EOSC federated system.
 
-Best practice AAI for BERD Data Portal is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

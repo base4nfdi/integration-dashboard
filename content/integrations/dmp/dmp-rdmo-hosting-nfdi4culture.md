@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/67e627866c4ac8d4.png"
 inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
-RDMO Hosting — NFDI4Culture is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

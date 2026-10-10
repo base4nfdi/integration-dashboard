@@ -18,7 +18,6 @@ source_url = "https://doi.org/10.5281/zenodo.14506202"
 
 The purpose of this report is to provide a comprehensive evaluation of the metadata quality and completeness of the FAIRAgro consortium. This analysis, conducted by DataCite, highlights the current state of metadata, offering insights into its alignment with persistent identifier and metadata best practices.
 
-Metadata Analysis for the Genebank Information System is a use case within the **Persistent Identifiers (PID)** basic service of Base4NFDI.
 
 ## Current status
 

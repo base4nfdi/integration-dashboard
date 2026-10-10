@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/fb068dab27f7e96a.png"
 inc_service_type = "RDMO Hosting, Template Development"
 +++
 
-RDMO Hosting — NFDI4Earth is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -21,7 +21,6 @@ inc_activity_page = "https://openenergyplatform.org"
 
 With this incubator process, we (NFDI4Energy) want to commit to a specific CAAI solution, namely Reg-APP, and integrate it on the OpenEnergyPlatform (OEP). NFDI4Energy is committed in reusing already existing solutions and platforms. As a result, the OEP will serve as one of the main bases for further developments in Research Data Management in the Energy domain and will be a linking and collection point for further NFDI4Energy services. The OEP currently consists of a simple local login (E-Mail and Password) based on basic services available through the python package Django with a PostgreSQL database and simple fronted technology (HTML, JavaScript, CSS). To add Reg-APP support we plan to use the django-allauth module, which supports SAML as well as OpenID Connect.
 
-Open Energy Platform is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

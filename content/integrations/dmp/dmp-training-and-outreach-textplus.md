@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/db773a275cb2249c.png"
 inc_service_type = "Training & Outreach"
 +++
 
-Training & Outreach — Text+ is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

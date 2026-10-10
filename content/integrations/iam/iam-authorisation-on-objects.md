@@ -21,7 +21,6 @@ inc_activity_page = "https://www.google.com/search?q=authorisation+on+objects"
 
 Repositories in general need certain authentication and authorization functionalities for controlling import and export of data. It would be desirable, that an NFDI-wide IAM solution supports such AAI functions, as they are required by potentially all research data repositories across all disciplines. We acceppt this challenge and use the TextGrid and DARIAH-DE Repositories as examples to implement such AAI functions, if as extension, integration or even overall management shall be subject to decision of the IAM4NFDI group.
 
-Authorisation on Objects is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

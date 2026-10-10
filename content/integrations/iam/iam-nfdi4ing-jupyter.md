@@ -21,7 +21,6 @@ inc_activity_page = "https://jupyter.nfdi4ing.de"
 
 The jupyter service is actually connected via SAML to the EDUGAIN federation. We use apache_mod_shib to provide the necessary attribute to our login application. We want to understand the architecture of NFDI AAI, the meaning of community AAIs, infrastructure proxies and virtual organisations to be able to plan and implement the necessary steps to connect our service to the NFDI AAI infrastructure. So far, we are not able to configure our service using the existing documentation. We hope to get the knowledge we need within this incubator project, learn form experiences from others and also help to ease this process for other services. In order to do so, we have to perform the following steps: - Clarification of requirements and necessary steps to connect a service to NFDI AAI (AAI4NFDI team together with project team) - Selection of the community AAI (project team) - Clarification of the process how and where to define user groups (like engineers) (AAI4NFDI team together with project team) - Implementation of integration of NFDI AAI (project team with support of NFDI4AAI team) - Plan how to migrate existing users (project team with support of NFDI4AAI team)
 
-NFDI AAI for the NFDI4ING Jupyter Service is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

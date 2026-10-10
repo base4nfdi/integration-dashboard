@@ -16,7 +16,6 @@ logo_project = "img/partner-logos/39ef828eaba7a05b.png"
 
 DALIA stands for the “Data Literacy Alliance” which develops a user-centric search platform according to the FAIR principles in order to offer high quality search results for educational resources from and for the RDM and data literacy community. Knowledge graph and semantic technologies are used to offer “FAIR data usage and supply” including offers for best practices, open educational resources, and learning paths.
 
-DALIA Search Portal is an incubator project within the **Terminology Services (TS)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -20,7 +20,6 @@ inc_activity_page = "https://clowm.bi.denbi.de"
 
 In the context of NFDI4Microbita we develop with the Cloud-based Workflow Manager (CloWM) an integrated platform for highly scalable workflow execution. CloWM allows the seamless integration of (1) versioned workflows, (2) robust data storage, (3) a highly scalable compute layer and (4) a user- friendly interface. Due to its generic design the platform is also used in other NFDIs (e.g. NFDI4Biodiversity) as an execution environment for community specific data analysis workflows and will be an official de.NBI service soon. With this Incubator project we want to open our service to a broader community by supporting the usage of other community AAIs for authentication. The CloWM platform currently supports LS LOGIN (Life Science Login) via OIDC as SSO solution for user authentication. If the NFDI Infra Proxy supports OIDC, we will add it as an additional login option and hence opening the platform to users of other community AAIs.
 
-Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

@@ -20,7 +20,6 @@ inc_activity_page = "https://nfdi4ing.de/base-services/s-3/"
 
 MetadataHub allows access to various metadata stores developed in the NFDI. All operations from "Create" to "Search" can be performed on the metadata stores. There are two demonstrators for this, one showing the interfaces and the other providing a search across all metadata stores.
 
-MetadataHub is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

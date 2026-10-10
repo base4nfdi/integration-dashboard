@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/d2899f44796b9a2d.png"
 inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 
-Operational RDMO for the Earth System Science community is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -19,7 +19,6 @@ inc_activity_page = "https://terminology.services.base4nfdi.de"
 
 The incubator project aims to implement a Single Sign-On (SSO) solution for Terminology Services 4 NFDI (TS4NFDI), which provides cross-domain services for terminology provision, curation, development, harmonization, and mapping. The platform integrates standardized services including a centralized API Gateway, NFDI-wide Mapping Service, and Terminology Service Suite widgets, all accessible through a central Service Portal for unified collection and mapping management. The planned Authentication and Authorization Infrastructure (AAI) will support login via NFDI-AAI, ORCID, and GitHub, with compatibility for EOSC AAI. The API Gateway provides database access for all services, enabling storage of user-specific configurations and collections. Beyond current data provision, TS4NFDI will support terminology curation workflows where logged-in users can suggest extensions through graphical interfaces, automatically generating GitHub issues or pull requests with ORCID identifiers for proper curator review and contribution credits. The TS4NFDI Mapping Service, implemented using Cocoda software, will be extended from its current ORCID and GitHub authentication to include NFDI AAI login capabilities. Given discussions about integrating TS4NFDI into the NFDI EOSC node, the AAI solution is designed for EOSC AAI infrastructure compatibility.
 
-Single-Sign-On for TS4NFDI services is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
 ## Timeline
 

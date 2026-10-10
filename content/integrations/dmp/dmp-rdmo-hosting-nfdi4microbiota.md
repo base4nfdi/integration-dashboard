@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/68e3cc17e1554305.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — NFDI4Microbiota is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/f4255b2203c83db4.png"
 inc_service_type = "RDMO Hosting"
 +++
 
-RDMO Hosting — NFDI4Energy is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 

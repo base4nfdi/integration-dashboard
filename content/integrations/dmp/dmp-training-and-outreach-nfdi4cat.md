@@ -16,7 +16,6 @@ logo_consortia = "img/partner-logos/77459895f95007f0.png"
 inc_service_type = "Training & Outreach, Template Development"
 +++
 
-Training & Outreach — NFDI4Cat is an incubator project within the **Data Management Planning (DMP)** basic service of Base4NFDI.
 
 ## Current status
 
