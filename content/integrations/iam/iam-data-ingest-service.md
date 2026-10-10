@@ -24,20 +24,10 @@ The NFDI4ING Data Ingest Service (https://ingest.nfdi4ing.de) uses OpenID connec
 
 Data Ingest Service is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 4 completed on 2026-01-31.
-
 ## Timeline
 
 - **Start:** 2025-08-01
 - **End:** 2026-01-31
-- **Cycle:** 4
-- **Activity type:** Integration
-
-## Community AAI
-
-regapp
 
 ## Goals
 

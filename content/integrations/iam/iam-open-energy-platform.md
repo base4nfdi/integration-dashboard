@@ -23,20 +23,10 @@ With this incubator process, we (NFDI4Energy) want to commit to a specific CAAI 
 
 Open Energy Platform is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 3 completed on 2025-07-31.
-
 ## Timeline
 
 - **Start:** 2025-02-01
 - **End:** 2025-07-31
-- **Cycle:** 3
-- **Activity type:** Development
-
-## Community AAI
-
-regapp
 
 ## Goals
 

@@ -22,20 +22,10 @@ External visitors should be able to use teaching resources published on our webs
 
 Come2Data - Competence Center for Interdisciplinary Data Science is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 5 completed on 2026-07-31.
-
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
-- **Cycle:** 5
-- **Activity type:** Development
-
-## Community AAI
-
-didmos
 
 ## Goals
 

@@ -11,7 +11,8 @@ inc_cycle = 5
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://incubators.nfdi-aai.de/images/missing.jpg"
+logo_project = "img/partner-logos/894cc9cc2ce3e8e2.jpg"
+source_url = "https://agimo-trr408.de/"
 inc_activity_type = "Development"
 inc_caai = "regapp"
 inc_ownership = "CC by 4.0 + MIT"
@@ -22,20 +23,10 @@ The primary objective of the incubator proposal is to implement an RDM system th
 
 AgiMo: Data - driven agile planning for responsible mobility is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 5 completed on 2026-07-31.
-
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
-- **Cycle:** 5
-- **Activity type:** Development
-
-## Community AAI
-
-regapp
 
 ## Goals
 

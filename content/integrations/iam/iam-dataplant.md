@@ -23,20 +23,10 @@ The DataPLANT consortium develops and provides a wide range of services to suppo
 
 DataPlant is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 3 completed on 2025-01-31.
-
 ## Timeline
 
 - **Start:** 2024-08-01
 - **End:** 2025-01-31
-- **Cycle:** 3
-- **Activity type:** Development
-
-## Community AAI
-
-other
 
 ## Results
 

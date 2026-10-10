@@ -23,20 +23,10 @@ LARA is an AI driven, next generation open-source Research Data Management / LIM
 
 AAI service integration into LARA is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 4 completed on 2026-01-31.
-
 ## Timeline
 
 - **Start:** 2025-08-01
 - **End:** 2026-01-31
-- **Cycle:** 4
-- **Activity type:** Development
-
-## Community AAI
-
-na
 
 ## Goals
 

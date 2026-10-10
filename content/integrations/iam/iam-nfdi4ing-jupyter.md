@@ -23,20 +23,10 @@ The jupyter service is actually connected via SAML to the EDUGAIN federation. We
 
 NFDI AAI for the NFDI4ING Jupyter Service is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 5 completed on 2026-07-31.
-
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
-- **Cycle:** 5
-- **Activity type:** Development
-
-## Community AAI
-
-regapp
 
 ## Goals
 

@@ -22,20 +22,10 @@ The current NFDI4Culture IAM plays a pivotal role as the central AAI/SSO backbon
 
 NFDI4Culture is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 1 completed on 2024-06-30.
-
 ## Timeline
 
 - **Start:** 2024-01-01
 - **End:** 2024-06-30
-- **Cycle:** 1
-- **Activity type:** Consultancy
-
-## Community AAI
-
-didmos
 
 ## Results
 

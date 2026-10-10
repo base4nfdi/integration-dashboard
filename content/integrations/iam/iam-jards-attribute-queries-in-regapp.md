@@ -22,20 +22,10 @@ At RWTH Aachen University, the JARDS platform is used by researchers to apply fo
 
 JARDS Attribute Queries in RegApp is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 1 completed on 2024-07-31.
-
 ## Timeline
 
 - **Start:** 2024-02-01
 - **End:** 2024-07-31
-- **Cycle:** 1
-- **Activity type:** Integration
-
-## Community AAI
-
-regapp
 
 ## Results
 

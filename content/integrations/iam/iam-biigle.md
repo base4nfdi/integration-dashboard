@@ -23,20 +23,10 @@ We want to support authentication via the NFDI Infra Proxy in our BIIGLE service
 
 BIIGLE is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 3 completed on 2025-07-31.
-
 ## Timeline
 
 - **Start:** 2025-01-01
 - **End:** 2025-07-31
-- **Cycle:** 3
-- **Activity type:** Consultancy
-
-## Community AAI
-
-na
 
 ## Results
 

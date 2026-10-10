@@ -22,20 +22,10 @@ This a pilot to the IAM4NFDI incubator projects. It will serve as a proof-of-pri
 
 Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 0 completed on 2023-02-28.
-
 ## Timeline
 
 - **Start:** 2023-07-31
 - **End:** 2023-02-28
-- **Cycle:** 0
-- **Activity type:** Infrastructure
-
-## Community AAI
-
-na
 
 ## Results
 

@@ -22,20 +22,10 @@ DALIA is a search platform for teaching and learning resources on RDM and data l
 
 NFDI AAI for DALIA is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 3 completed on 2025-07-31.
-
 ## Timeline
 
 - **Start:** 2025-02-01
 - **End:** 2025-07-31
-- **Cycle:** 3
-- **Activity type:** Development
-
-## Community AAI
-
-Infraproxy
 
 ## Goals
 

@@ -23,20 +23,10 @@ Coscine is an open-source platform for research data management (RDM) and can be
 
 Coscine-2 is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 2 completed on 2025-01-31.
-
 ## Timeline
 
 - **Start:** 2024-08-01
 - **End:** 2025-01-31
-- **Cycle:** 2
-- **Activity type:** Infrastructure
-
-## Community AAI
-
-regapp
 
 ## Goals
 

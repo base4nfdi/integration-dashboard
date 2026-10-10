@@ -23,20 +23,10 @@ This incubator project focuses on applying IAM4NFDI standards within the BERD@NF
 
 Best practice AAI for BERD Data Portal is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 4 completed on 2026-01-31.
-
 ## Timeline
 
 - **Start:** 2025-08-01
 - **End:** 2026-01-31
-- **Cycle:** 4
-- **Activity type:** Development
-
-## Community AAI
-
-na
 
 ## Goals
 

@@ -23,20 +23,10 @@ Repositories in general need certain authentication and authorization functional
 
 Authorisation on Objects is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 2 completed on 2024-06-30.
-
 ## Timeline
 
 - **Start:** 2024-01-01
 - **End:** 2024-06-30
-- **Cycle:** 2
-- **Activity type:** Development
-
-## Community AAI
-
-acadid
 
 ## Results
 

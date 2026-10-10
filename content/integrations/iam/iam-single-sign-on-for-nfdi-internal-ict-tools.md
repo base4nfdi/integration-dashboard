@@ -22,20 +22,10 @@ The NFDI Association’s Office provides ICT tools that support all persons work
 
 Single Sign-On for NFDI internal ICT tools is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 5 completed on 2026-07-31.
-
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
-- **Cycle:** 5
-- **Activity type:** Integration
-
-## Community AAI
-
-na
 
 ## Results
 

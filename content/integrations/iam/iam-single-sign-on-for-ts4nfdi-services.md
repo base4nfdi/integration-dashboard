@@ -21,20 +21,10 @@ The incubator project aims to implement a Single Sign-On (SSO) solution for Term
 
 Single-Sign-On for TS4NFDI services is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 5 completed on 2026-07-31.
-
 ## Timeline
 
 - **Start:** 2026-02-01
 - **End:** 2026-07-31
-- **Cycle:** 5
-- **Activity type:** Development
-
-## Community AAI
-
-infraproxy
 
 ## Goals
 

@@ -22,20 +22,10 @@ As part of the incubator project, the Aruna Data Orchestration Engine is to enab
 
 Integration: Aruna Data Orchestration Engine with Infrastructure Proxy is an incubator project within the **Identity and Access Management (IAM)** basic service of Base4NFDI.
 
-## Current status
-
-**Finished** — cycle 3 completed on 2025-07-31.
-
 ## Timeline
 
 - **Start:** 2025-02-01
 - **End:** 2025-07-31
-- **Cycle:** 3
-- **Activity type:** Integration
-
-## Community AAI
-
-Infraproxy
 
 ## Results
 

@@ -433,5 +433,10 @@
     "path": "img/partner-logos/e83a727a08cc1255.png",
     "source": "https://github.com/c3di/chaldene/blob/master/docs/assets/logo_128x128.png",
     "fetched_at": "2026-07-24T19:02:28.684Z"
+  },
+  "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg": {
+    "path": "img/partner-logos/894cc9cc2ce3e8e2.jpg",
+    "source": "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
+    "fetched_at": "2026-10-10T06:30:44.357Z"
   }
 }
