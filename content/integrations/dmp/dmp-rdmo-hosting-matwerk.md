@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI-MatWerk"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png"
+logo_consortia = "img/partner-logos/83ae5ea177c95650.png"
 inc_service_type = "RDMO Hosting"
 +++
 

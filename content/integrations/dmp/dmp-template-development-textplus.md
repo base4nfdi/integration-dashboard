@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["Text+"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/text+_logo.png"
+logo_consortia = "img/partner-logos/db773a275cb2249c.png"
 inc_service_type = "Template Development"
 +++
 

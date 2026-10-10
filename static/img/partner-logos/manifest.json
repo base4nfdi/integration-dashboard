@@ -438,5 +438,15 @@
     "path": "img/partner-logos/894cc9cc2ce3e8e2.jpg",
     "source": "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
     "fetched_at": "2026-10-10T06:30:44.357Z"
+  },
+  "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_dark.png": {
+    "path": "img/partner-logos/bee5ca03af1f45cc.png",
+    "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_dark.png",
+    "fetched_at": "2026-10-10T07:33:30.629Z"
+  },
+  "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png": {
+    "path": "img/partner-logos/b8d87f0070351cee.png",
+    "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png",
+    "fetched_at": "2026-10-10T07:33:30.758Z"
   }
 }

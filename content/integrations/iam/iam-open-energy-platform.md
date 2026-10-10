@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Energy"]
-logo_consortia = "https://incubators.nfdi-aai.de/images/open-energy-platform.png"
+logo_consortia = "img/partner-logos/6d20ebd08f1e9754.png"
 inc_activity_type = "Development"
 inc_caai = "regapp"
 inc_ownership = "AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?tab=License-1-ov-file"

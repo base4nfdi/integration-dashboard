@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["FAIRmat"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png"
+logo_consortia = "img/partner-logos/7613ba801eafb62e.png"
 inc_service_type = "RDMO Hosting"
 +++
 

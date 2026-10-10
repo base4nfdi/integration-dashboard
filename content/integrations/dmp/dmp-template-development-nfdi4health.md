@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Health"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png"
+logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
 inc_service_type = "Template Development, RDMO Hosting"
 +++
 

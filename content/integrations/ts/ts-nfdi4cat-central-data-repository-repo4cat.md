@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Cat"]
-logo_project = "https://terminology.services.base4nfdi.de/img/nfdi4cat.png"
+logo_project = "img/partner-logos/4a8f5a62aea03e2b.png"
 inc_activity_page = "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/"
 +++
 

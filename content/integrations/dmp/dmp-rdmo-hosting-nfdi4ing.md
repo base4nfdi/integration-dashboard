@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Ing"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png"
+logo_consortia = "img/partner-logos/bfa1a3b9daa9e273.png"
 inc_service_type = "RDMO Hosting"
 +++
 

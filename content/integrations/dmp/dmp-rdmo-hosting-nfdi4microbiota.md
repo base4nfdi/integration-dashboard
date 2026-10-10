@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Microbiota"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png"
+logo_consortia = "img/partner-logos/68e3cc17e1554305.png"
 inc_service_type = "RDMO Hosting"
 +++
 

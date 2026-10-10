@@ -233,9 +233,11 @@ function buildFrontMatter(record, keyArticle) {
   if (entities.length > 0) lines.push(`entities = ${tomlArray(entities)}`);
 
   const logoProject = asUrl(record.logo_project);
+  const logoProjectDark = asUrl(record.logo_project_dark);
   const logoConsortia = asUrl(record.logo_consortia);
   const related = asInline(record.related_institutions);
   if (logoProject) lines.push(`logo_project = ${tomlString(logoProject)}`);
+  if (logoProjectDark) lines.push(`logo_project_dark = ${tomlString(logoProjectDark)}`);
   if (logoConsortia) lines.push(`logo_consortia = ${tomlString(logoConsortia)}`);
   const sourceUrl = asUrl(record.source_url);
   if (sourceUrl) lines.push(`source_url = ${tomlString(sourceUrl)}`);

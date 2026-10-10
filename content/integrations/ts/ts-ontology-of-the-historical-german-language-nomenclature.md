@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 2
 linked_entities = 0
 partners = ["BERD@NFDI", "NFDI4Memory"]
-logo_project = "https://terminology.services.base4nfdi.de/img/ohdab.png"
+logo_project = "img/partner-logos/567f987e1dd0014a.png"
 inc_activity_page = "https://terminology.tib.eu/ts/ontologies/ohdab"
 +++
 

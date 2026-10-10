@@ -41,6 +41,13 @@ const IAM_PROJECT_OVERRIDES = {
       "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
     source_url: "https://agimo-trr408.de/",
   },
+  "aruna-3": {
+    logo_project:
+      "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_dark.png",
+    logo_project_dark:
+      "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png",
+    source_url: "https://aruna-engine.org",
+  },
 };
 
 function isPlaceholderCardLogo(logoSrc) {
@@ -49,14 +56,23 @@ function isPlaceholderCardLogo(logoSrc) {
 }
 
 function logosFromIamCard(sourceId, logoSrc) {
-  const projectOverride = IAM_PROJECT_OVERRIDES[sourceId]?.logo_project ?? "";
+  const override = IAM_PROJECT_OVERRIDES[sourceId];
+  const projectOverride = override?.logo_project ?? "";
   if (projectOverride) {
-    return { logo_project: projectOverride, logo_consortia: "" };
+    return {
+      logo_project: projectOverride,
+      logo_project_dark: override?.logo_project_dark ?? "",
+      logo_consortia: "",
+    };
   }
   if (!logoSrc || isPlaceholderCardLogo(logoSrc)) {
-    return { logo_project: "", logo_consortia: "" };
+    return { logo_project: "", logo_project_dark: "", logo_consortia: "" };
   }
-  return { logo_project: "", logo_consortia: absoluteUrl(SITE_BASE, logoSrc) };
+  return {
+    logo_project: "",
+    logo_project_dark: "",
+    logo_consortia: absoluteUrl(SITE_BASE, logoSrc),
+  };
 }
 
 const NON_PARTNER_TAGS = new Set([
@@ -264,7 +280,10 @@ export function parseIamHtml(html) {
         ? badges.partners
         : partnersFromTitle(title);
 
-    const { logo_project, logo_consortia } = logosFromIamCard(sourceId, logoSrc);
+    const { logo_project, logo_project_dark, logo_consortia } = logosFromIamCard(
+      sourceId,
+      logoSrc
+    );
     const source_url = IAM_PROJECT_OVERRIDES[sourceId]?.source_url ?? "";
 
     records.push(
@@ -273,6 +292,7 @@ export function parseIamHtml(html) {
           inc_name: title,
           basic_service: BASIC_SERVICE,
           logo_project,
+          logo_project_dark,
           logo_consortia,
           source_url,
           inc_start: badges.start,

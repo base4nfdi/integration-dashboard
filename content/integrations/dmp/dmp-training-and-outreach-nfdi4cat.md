@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Cat"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png"
+logo_consortia = "img/partner-logos/77459895f95007f0.png"
 inc_service_type = "Training & Outreach, Template Development"
 +++
 

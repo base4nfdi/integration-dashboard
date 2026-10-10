@@ -15,6 +15,21 @@
     }
   }
 
+  function currentTheme() {
+    return document.documentElement.getAttribute("data-theme") === "dark"
+      ? "dark"
+      : "light";
+  }
+
+  /** Pick light-theme artwork vs dark-theme artwork from `data-theme`. */
+  function themedLogoSrc(lightSrc, darkSrc) {
+    const light = lightSrc || darkSrc || "";
+    const dark = darkSrc || lightSrc || "";
+    return currentTheme() === "dark" ? dark : light;
+  }
+
+  window.base4nfdiTheme = { currentTheme, themedLogoSrc };
+
   function applyPref(pref) {
     const theme = pref === "system" ? getSystemTheme() : pref;
     const root = document.documentElement;

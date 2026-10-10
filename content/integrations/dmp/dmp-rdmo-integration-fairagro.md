@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["FAIRagro"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/fairagro_logo.png"
+logo_consortia = "img/partner-logos/2605943254a9ad2c.png"
 inc_service_type = "RDMO Integration, Training & Outreach"
 +++
 

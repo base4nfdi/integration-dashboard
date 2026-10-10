@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Chem"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png"
+logo_consortia = "img/partner-logos/6c311d8a04f9f7ac.png"
 inc_service_type = "Training & Outreach"
 +++
 

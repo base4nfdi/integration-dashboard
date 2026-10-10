@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Health"]
-logo_project = "https://terminology.services.base4nfdi.de/img/preVIEW.svg"
+logo_project = "img/partner-logos/ee3199b54476df4d.svg"
 inc_activity_page = "https://preview.zbmed.de/"
 +++
 

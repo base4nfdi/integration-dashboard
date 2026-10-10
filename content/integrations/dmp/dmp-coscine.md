@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Ing"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png"
+logo_consortia = "img/partner-logos/973257d523b9c266.png"
 inc_service_type = "RDMO Integration"
 +++
 

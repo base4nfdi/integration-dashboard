@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Cache remote logo_project / logo_consortia images under static/img/partner-logos/
+ * Cache remote logo_project / logo_project_dark / logo_consortia images under static/img/partner-logos/
  * and rewrite static/data.json (+ incubator Markdown frontmatter) to local paths.
  *
  * Existing logo files are reused (no re-download) unless --force is passed.
@@ -49,7 +49,7 @@ function printHelp() {
 
 Downloads remote partner logos referenced by static/data.json into
 static/img/partner-logos/ (skipped when the file already exists), then rewrites
-logo_project / logo_consortia to site-relative paths in data.json and incubator
+logo_project / logo_project_dark / logo_consortia to site-relative paths in data.json and incubator
 Markdown frontmatter.
 `);
 }

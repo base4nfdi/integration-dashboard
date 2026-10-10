@@ -11,7 +11,9 @@ inc_cycle = 3
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_consortia = "https://github.com/arunaengine/.github/blob/main/profile/img/aruna_white_font.png?raw=true"
+logo_project = "img/partner-logos/bee5ca03af1f45cc.png"
+logo_project_dark = "img/partner-logos/b8d87f0070351cee.png"
+source_url = "https://aruna-engine.org"
 inc_activity_type = "Integration"
 inc_caai = "Infraproxy"
 inc_ownership = "Apache V2.0 MIT License"

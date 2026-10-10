@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4BIOIMAGE"]
-logo_project = "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.svg"
+logo_project = "img/partner-logos/2f46b3090c3dd5f8.svg"
 inc_activity_page = "https://ols.plasma-mds.org/"
 +++
 

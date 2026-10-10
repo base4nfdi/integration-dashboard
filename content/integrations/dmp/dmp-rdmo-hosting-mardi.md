@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["MaRDI"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/mardi_logo.png"
+logo_consortia = "img/partner-logos/5df745c12d212b3a.png"
 inc_service_type = "RDMO Hosting, RDMO Integration"
 +++
 

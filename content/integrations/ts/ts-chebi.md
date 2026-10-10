@@ -11,7 +11,7 @@ inc_cycle = 1
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
-logo_project = "https://terminology.services.base4nfdi.de/img/chebi.png"
+logo_project = "img/partner-logos/ef0a379775ece1e4.png"
 inc_activity_page = "https://www.ebi.ac.uk/chebi/CHEBI:27732"
 +++
 

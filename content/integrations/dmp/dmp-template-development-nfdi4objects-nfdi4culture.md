@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 2
 linked_entities = 0
 partners = ["NFDI4Culture", "NFDI4Objects"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png"
+logo_consortia = "img/partner-logos/800a8c236b604f34.png"
 inc_service_type = "Template Development"
 +++
 

@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Biodiversity"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png"
+logo_consortia = "img/partner-logos/375d18e09586ac41.png"
 inc_service_type = "RDMO Integration"
 +++
 

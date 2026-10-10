@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["BERD@NFDI"]
-logo_project = "https://terminology.services.base4nfdi.de/img/berd.png"
+logo_project = "img/partner-logos/a8573f5bcf411a39.png"
 inc_activity_page = "https://ts.berd-nfdi.de/"
 +++
 

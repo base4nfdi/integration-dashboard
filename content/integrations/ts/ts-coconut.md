@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Chem"]
-logo_project = "https://terminology.services.base4nfdi.de/img/coconut.png"
+logo_project = "img/partner-logos/4b05f3d3cef46b2e.png"
 +++
 
 A comprehensive platform facilitating natural product research by providing data, tools, and services for deposition, curation, and reuse. It aims to provide researchers, scientists, and enthusiasts with comprehensive and easily accessible data on a wide variety of natural compounds. The database includes detailed information on the chemical structures, literature references and sources of these compounds, facilitating research and discovery in natural products.

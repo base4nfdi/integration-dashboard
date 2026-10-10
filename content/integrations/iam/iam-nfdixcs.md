@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDIxCS"]
-logo_consortia = "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png"
+logo_consortia = "img/partner-logos/2d0b59aa31be6acd.png"
 inc_activity_type = "Consultancy"
 inc_ownership = "No content provided."
 inc_activity_page = "https://www.google.com/search?hl=en&q=nfdixcs"

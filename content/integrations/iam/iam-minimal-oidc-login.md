@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["MaRDI"]
-logo_consortia = "https://incubators.nfdi-aai.de/images/mardi-logo.png"
+logo_consortia = "img/partner-logos/2520b12f7fbf8544.png"
 inc_activity_type = "Consultancy"
 inc_caai = "didmos"
 inc_activity_page = "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page"

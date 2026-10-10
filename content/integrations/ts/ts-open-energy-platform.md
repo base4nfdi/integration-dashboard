@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Energy"]
-logo_project = "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png"
+logo_project = "img/partner-logos/420b1ab6f7242fa5.png"
 inc_activity_page = "https://openenergyplatform.org/viewer/oeo/"
 +++
 

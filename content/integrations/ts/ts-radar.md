@@ -13,7 +13,7 @@ linked_partners = 3
 linked_entities = 1
 partners = ["NFDI4Chem", "NFDI4Culture", "NFDI4Memory"]
 entities = ["FIZ Karlsruhe"]
-logo_project = "https://terminology.services.base4nfdi.de/img/radar.svg"
+logo_project = "img/partner-logos/f42d933cd392bd27.svg"
 inc_activity_page = "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu"
 +++
 

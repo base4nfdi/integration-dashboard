@@ -12,7 +12,7 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Memory"]
-logo_consortia = "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png"
+logo_consortia = "img/partner-logos/e8e523c5867ae478.png"
 inc_service_type = "Template Development"
 +++
 
