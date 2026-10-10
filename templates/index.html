@@ -106,8 +106,12 @@
 </section>
 
 {% set basic_service_websites = load_data(path="data/basic-service-websites.json") %}
+{% set partner_logo_manifest = load_data(path="static/img/partner-logos/manifest.json") %}
 <script type="application/json" id="basic-service-websites-json">
 {{ basic_service_websites.services | json_encode() | safe }}
+</script>
+<script type="application/json" id="partner-logo-manifest-json">
+{{ partner_logo_manifest | json_encode() | safe }}
 </script>
 <script>
 (function () {
@@ -115,6 +119,14 @@
   const refDirectoryUrl = "{{ get_url(path='ref-directory.json') | safe }}";
   const incubatorBaseUrl = "{{ get_url(path='@/integrations/_index.md') | safe }}";
   const staticRootUrl = "{{ get_url(path='/') | safe }}";
+  const partnerLogoManifest = JSON.parse(
+    document.getElementById("partner-logo-manifest-json").textContent
+  );
+  const logoSourceByPath = {};
+  Object.entries(partnerLogoManifest || {}).forEach(([sourceUrl, meta]) => {
+    const cached = meta && meta.path;
+    if (cached) logoSourceByPath[cached] = sourceUrl;
+  });
 
   /** Resolve remote or site-relative logo paths for <img src>. */
   function resolveAssetUrl(path) {
@@ -272,29 +284,61 @@
     return String(path || "").split(/[\\/]/).pop().split("?")[0].toLowerCase();
   }
 
-  /** Prefer official img/ref-logos over the record's logo_consortia copy. */
-  function shouldShowConsortiaFallback(record) {
-    if (!record.logo_consortia) return false;
-    const names = Array.isArray(record.partners) ? record.partners : [];
-    return !names.some((name) => directoryEntry(state.directory.partners, name)?.logo);
+  function collaboratorDirectoryEntries(record) {
+    const found = [];
+    const seen = new Set();
+    const groups = [
+      [record.partners, state.directory.partners],
+      [record.entities, state.directory.entities],
+      [splitFurtherInstitutions(record.related_institutions), state.directory.entities],
+    ];
+    for (const [items, bucket] of groups) {
+      if (!Array.isArray(items)) continue;
+      for (const name of items) {
+        const entry = directoryEntry(bucket, name);
+        if (!entry?.logo) continue;
+        const key = logoBasename(entry.logo) || compactToken(entry.name || name);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        found.push({ name, entry });
+      }
+    }
+    return found;
   }
 
-  /** Skip project image when the same consortium is already shown via ref-directory partners. */
+  function logoOriginFilename(path) {
+    const source = logoSourceByPath[path] || path || "";
+    return logoBasename(source).replace(/\.[a-z0-9]+$/i, "");
+  }
+
+  /** Prefer official website-directory logos over the record's logo_consortia copy. */
+  function shouldShowConsortiaFallback(record) {
+    if (!record.logo_consortia) return false;
+    return collaboratorDirectoryEntries(record).length === 0;
+  }
+
+  /** Skip project image when it is the same org already shown via a website-directory logo. */
   function shouldShowProjectLogo(record) {
     if (!record.logo_project) return false;
-    const partners = Array.isArray(record.partners) ? record.partners : [];
-    if (partners.length === 0) return true;
+    const collaborators = collaboratorDirectoryEntries(record);
+    if (collaborators.length === 0) return true;
 
-    const projectPath = String(record.logo_project).toLowerCase();
+    const projectPath = String(record.logo_project);
+    const projectBase = logoBasename(projectPath);
+    const originCompact = compactToken(logoOriginFilename(projectPath));
     const incCompact = compactToken(record.inc_name || record.uc_name || "");
 
-    for (const name of partners) {
-      const entry = directoryEntry(state.directory.partners, name);
-      if (!entry?.logo) continue;
+    for (const { name, entry } of collaborators) {
       const partnerCompact = compactToken(name);
-      if (
+      if (projectBase && projectBase === logoBasename(entry.logo)) return false;
+      const nameOverlapsOrigin =
         partnerCompact.length >= 4 &&
-        (incCompact.includes(partnerCompact) || projectPath.includes(partnerCompact))
+        originCompact.length >= 4 &&
+        (originCompact.includes(partnerCompact) || partnerCompact.includes(originCompact));
+      if (
+        nameOverlapsOrigin ||
+        (partnerCompact.length >= 4 &&
+          (incCompact.includes(partnerCompact) || compactToken(projectPath).includes(partnerCompact)))
       ) {
         return false;
       }

@@ -1808,12 +1808,20 @@ img.themed-logo.themed-logo--dark {
   margin: 0;
 }
 
+.blog-post-header:has(.blog-post-overview) .blog-post-title-row {
+  margin-bottom: 0;
+}
+
 .blog-post-overview {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
-  margin: 0.35rem 0 0;
+  margin: 1.25rem 0;
+}
+
+.blog-post-header:has(.blog-post-overview) + .blog-metrics {
+  margin-top: 1.25rem;
 }
 
 .blog-post-overview-status {
