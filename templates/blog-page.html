@@ -220,29 +220,14 @@
     {% set inc_service_type = page.extra.inc_service_type | default(value="") %}
     {% if inc_status or (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
     <div class="blog-post-overview">
-      {% if inc_status %}
-      <div class="blog-post-overview-status">
-        <span class="status-badge status-{{ inc_status | lower | replace(from=' ', to='-') }}">{{ inc_status }}</span>
-        {% if inc_status == "Finished" and inc_end %}
-        <span class="blog-post-overview-detail">Completed {{ inc_end }}</span>
-        {% if inc_start %}
-        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
+      <div class="blog-post-overview-top">
+        {% if inc_status %}
+        <div class="blog-post-overview-status">
+          <span class="status-badge status-{{ inc_status | lower | replace(from=' ', to='-') }}">{{ inc_status }}</span>
+        </div>
         {% endif %}
-        {% elif inc_status == "In preparation" and inc_start %}
-        <span class="blog-post-overview-detail">Planned start {{ inc_start }}</span>
-        {% elif inc_status == "Running" and inc_start %}
-        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
-        {% if inc_end %}
-        <span class="blog-post-overview-detail">Ends {{ inc_end }}</span>
-        {% endif %}
-        {% endif %}
-        {% if page.extra.last_check %}
-        <span class="blog-post-checked">Last check: {{ page.extra.last_check }}</span>
-        {% endif %}
-      </div>
-      {% endif %}
-      {% if (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
-      <ul class="blog-post-overview-meta" aria-label="Incubator details">
+        {% if (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
+        <ul class="blog-post-overview-meta" aria-label="Incubator details">
         {% if inc_cycle and inc_cycle > 0 %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Cycle</span>
@@ -267,7 +252,28 @@
           <span class="blog-post-overview-chip-value">{{ inc_service_type }}</span>
         </li>
         {% endif %}
-      </ul>
+        </ul>
+        {% endif %}
+      </div>
+      {% if inc_status and ((inc_status == "Finished" and inc_end) or (inc_status == "In preparation" and inc_start) or (inc_status == "Running" and inc_start) or page.extra.last_check) %}
+      <div class="blog-post-overview-details">
+        {% if inc_status == "Finished" and inc_end %}
+        <span class="blog-post-overview-detail">Completed {{ inc_end }}</span>
+        {% if inc_start %}
+        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
+        {% endif %}
+        {% elif inc_status == "In preparation" and inc_start %}
+        <span class="blog-post-overview-detail">Planned start {{ inc_start }}</span>
+        {% elif inc_status == "Running" and inc_start %}
+        <span class="blog-post-overview-detail">Started {{ inc_start }}</span>
+        {% if inc_end %}
+        <span class="blog-post-overview-detail">Ends {{ inc_end }}</span>
+        {% endif %}
+        {% endif %}
+        {% if page.extra.last_check %}
+        <span class="blog-post-checked">Last check: {{ page.extra.last_check }}</span>
+        {% endif %}
+      </div>
       {% endif %}
     </div>
     {% endif %}
