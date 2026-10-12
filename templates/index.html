@@ -855,9 +855,11 @@
           !record.key_article &&
           /^https?:\/\//i.test(String(record.source_url || "").trim());
         const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-        return `<td class="row-name"><div class="name-cell">${logoBlock}<a class="name-cell-title" href="${escapeHtml(href)}"${rel}>${text}</a></div></td>`;
+        const arrowPath = external ? "M7 17 17 7M9 7h8v8" : "M5 12h14M13 6l6 6-6 6";
+        const arrow = `<svg class="name-cell-arrow" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" d="${arrowPath}"/></svg>`;
+        return `<td class="row-name row-name--link"><div class="name-cell"><a class="name-cell-title" href="${escapeHtml(href)}"${rel}><span class="name-cell-text">${text}</span>${arrow}</a>${logoBlock}</div></td>`;
       }
-      return `<td class="row-name"><div class="name-cell">${logoBlock}<span class="name-cell-title name-cell-title--plain">${text}</span></div></td>`;
+      return `<td class="row-name"><div class="name-cell"><span class="name-cell-title name-cell-title--plain">${text}</span>${logoBlock}</div></td>`;
     }
 
     if (column.type === "status") {
