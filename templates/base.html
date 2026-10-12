@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ config.title | default(value="Dashboard") }}{% endblock %}</title>
   <link rel="icon" href="{{ get_url(path='favicon.ico') | safe }}" type="image/x-icon">
+  {% if config.extra.preview %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
   <script>
     (function () {
       var stored = localStorage.getItem("base4nfdi-theme");
@@ -33,7 +36,20 @@
         >
       </a>
       <div class="site-heading">
-        <h1 class="site-title">{{ config.title | default(value="Dashboard") }}</h1>
+        <div class="site-title-row">
+          <h1 class="site-title">{{ config.title | default(value="Dashboard") }}</h1>
+          {% if config.extra.preview %}
+          <span class="site-status">
+            <button type="button" class="site-status-btn" aria-describedby="site-status-tooltip">
+              <span class="site-status-dot" aria-hidden="true"></span>
+              Preview
+            </button>
+            <span class="site-status-tooltip" id="site-status-tooltip" role="tooltip">
+              Review version — this site is not yet officially published.
+            </span>
+          </span>
+          {% endif %}
+        </div>
         {% if config.description %}
         <!-- <p class="site-description">{{ config.description }}</p> -->
         {% endif %}

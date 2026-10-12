@@ -170,18 +170,26 @@
   })();
 
   const columns = [
-    { key: "inc_name", label: "INCUBATOR/USE-CASE", type: "name" },
     { key: "basic_service", label: "Basic service", type: "service" },
+    { key: "inc_name", label: "INCUBATOR/USE-CASE", type: "name" },
     {
-      key: "logos",
-      label: "Collaboration",
+      key: "consortia_logos",
+      label: "Involved Consortia",
       type: "logos",
-      headerTitle: "Involved project partners, NFDI consortia or institutions",
+      logosScope: "consortia",
+      headerTitle: "NFDI consortia involved in this integration",
+    },
+    {
+      key: "institutions_logos",
+      label: "Involved Institutions",
+      type: "logos",
+      logosScope: "institutions",
+      headerTitle: "Research institutions and other partners involved",
     },
     { key: "inc_status", label: "Status", type: "status" },
     // { key: "inc_start", label: "Start", type: "date" },
     // { key: "inc_end", label: "End", type: "date" },
-    { key: "inc_cycle", label: "Cycle" },
+    // { key: "inc_cycle", label: "Cycle" },
     // { key: "inc_descr", label: "Description", type: "markdown" },
     // { key: "inc_goals", label: "Goals", type: "markdown" },
     // { key: "inc_results", label: "Results", type: "markdown" },
@@ -190,7 +198,7 @@
     // { key: "linked_entities", label: "# Entities" },
   ];
 
-  /** Merged into Collaboration column; kept for search indexing. */
+  /** Partner/entity text for free-text search (no dedicated table columns). */
   const collaborationSearchFields = [
     { key: "partners", type: "list" },
     { key: "entities", type: "list" },
@@ -373,59 +381,44 @@
     return `<span class="ref-logo-row">${inner}</span>`;
   }
 
-  function renderCollaborationNameFragments(record, seenLogos) {
+  function renderLogoFragmentsForNames(items, bucket, seenLogos) {
     const chunks = [];
-    const buckets = [
-      { items: record.partners, bucket: state.directory.partners },
-      { items: record.entities, bucket: state.directory.entities },
-      {
-        items: splitFurtherInstitutions(record.related_institutions),
-        bucket: state.directory.entities,
-      },
-    ];
-
-    for (const { items, bucket } of buckets) {
-      if (!Array.isArray(items) || items.length === 0) continue;
-      for (const name of items) {
-        const entry = directoryEntry(bucket, name);
-        if (entry?.logo) {
-          const key = logoBasename(entry.logo);
-          if (seenLogos.has(key)) continue;
-          seenLogos.add(key);
-          chunks.push(renderDirectoryLogo(entry));
-        } else {
-          chunks.push(`<span class="ref-name">${escapeHtml(name)}</span>`);
-        }
+    if (!Array.isArray(items) || items.length === 0) return chunks;
+    for (const name of items) {
+      const entry = directoryEntry(bucket, name);
+      if (entry?.logo) {
+        const key = logoBasename(entry.logo);
+        if (seenLogos.has(key)) continue;
+        seenLogos.add(key);
+        chunks.push(renderDirectoryLogo(entry));
+      } else {
+        chunks.push(`<span class="ref-name">${escapeHtml(name)}</span>`);
       }
     }
     return chunks;
   }
 
-  function collaborationCellHtml(record) {
+  function wrapLogosCell(parts) {
+    if (parts.length === 0) return "";
+    return `<div class="logos-cell ref-logo-row">${parts.join("")}</div>`;
+  }
+
+  function renderProjectLogoHtml(record) {
+    if (!shouldShowProjectLogo(record)) return "";
+    const project = resolveAssetUrl(record.logo_project);
+    if (!project) return "";
+    return renderThemedLogo(
+      record.logo_project,
+      record.logo_project_dark,
+      "Project logo",
+      projectWebsite(record),
+      "logo-img logo-project name-cell-logo-img"
+    );
+  }
+
+  function consortiaCellHtml(record) {
     const seenLogos = new Set();
     const parts = [];
-
-    if (shouldShowProjectLogo(record)) {
-      const project = resolveAssetUrl(record.logo_project);
-      if (project) {
-        const key = logoBasename(record.logo_project);
-        if (!seenLogos.has(key)) {
-          seenLogos.add(key);
-          if (record.logo_project_dark) {
-            seenLogos.add(logoBasename(record.logo_project_dark));
-          }
-          parts.push(
-            renderThemedLogo(
-              record.logo_project,
-              record.logo_project_dark,
-              "Project logo",
-              projectWebsite(record),
-              "logo-img logo-project"
-            )
-          );
-        }
-      }
-    }
 
     if (shouldShowConsortiaFallback(record)) {
       const consortia = resolveAssetUrl(record.logo_consortia);
@@ -445,9 +438,23 @@
       }
     }
 
-    parts.push(...renderCollaborationNameFragments(record, seenLogos));
-    if (parts.length === 0) return "";
-    return `<div class="collaboration-cell ref-logo-row">${parts.join("")}</div>`;
+    parts.push(
+      ...renderLogoFragmentsForNames(record.partners, state.directory.partners, seenLogos)
+    );
+    return wrapLogosCell(parts);
+  }
+
+  function institutionsCellHtml(record) {
+    const seenLogos = new Set();
+    const parts = [
+      ...renderLogoFragmentsForNames(record.entities, state.directory.entities, seenLogos),
+      ...renderLogoFragmentsForNames(
+        splitFurtherInstitutions(record.related_institutions),
+        state.directory.entities,
+        seenLogos
+      ),
+    ];
+    return wrapLogosCell(parts);
   }
 
   function splitFurtherInstitutions(value) {
@@ -820,15 +827,26 @@
     }
 
     if (column.type === "logos") {
-      const cellHtml = collaborationCellHtml(record);
+      const cellHtml =
+        column.logosScope === "institutions"
+          ? institutionsCellHtml(record)
+          : consortiaCellHtml(record);
+      const rowClass =
+        column.logosScope === "institutions"
+          ? "row-logos row-institutions ref-names"
+          : "row-logos row-consortia ref-names";
       if (!cellHtml) {
-        return `<td class="row-collaboration ref-names">—</td>`;
+        return `<td class="${rowClass}">—</td>`;
       }
-      return `<td class="row-collaboration ref-names">${cellHtml}</td>`;
+      return `<td class="${rowClass}">${cellHtml}</td>`;
     }
 
     if (column.type === "name") {
       const text = escapeHtml(value || "—");
+      const logoHtml = renderProjectLogoHtml(record);
+      const logoBlock = logoHtml
+        ? `<span class="name-cell-logo">${logoHtml}</span>`
+        : "";
       const href = incubatorUrl(record);
       if (record.key_article || record.source_url) {
         // Report pages use absolute get_url() hrefs (same site) — only true
@@ -837,9 +855,9 @@
           !record.key_article &&
           /^https?:\/\//i.test(String(record.source_url || "").trim());
         const rel = external ? ' target="_blank" rel="noopener noreferrer"' : "";
-        return `<td class="row-name cell-link"><a class="cell-link-anchor" href="${escapeHtml(href)}"${rel}>${text}</a></td>`;
+        return `<td class="row-name"><div class="name-cell">${logoBlock}<a class="name-cell-title" href="${escapeHtml(href)}"${rel}>${text}</a></div></td>`;
       }
-      return `<td class="row-name">${text}</td>`;
+      return `<td class="row-name"><div class="name-cell">${logoBlock}<span class="name-cell-title name-cell-title--plain">${text}</span></div></td>`;
     }
 
     if (column.type === "status") {
