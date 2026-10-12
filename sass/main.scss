@@ -2055,10 +2055,24 @@ img.themed-logo.themed-logo--dark {
 
 .blog-post-overview {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+}
+
+.blog-post-overview-top {
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.75rem 1.25rem;
-  margin: 1.25rem 0;
+}
+
+.blog-post-overview-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
 }
 
 .blog-post-header:has(.blog-post-overview) + .blog-metrics {
