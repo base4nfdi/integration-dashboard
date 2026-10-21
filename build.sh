@@ -23,11 +23,19 @@ node scripts/parse-source-pages.mjs
 echo "==> Crawling NFDI news and success stories"
 node scripts/crawl-nfdi-news.mjs --scope both
 
+INTEGRATION_PAGES_UPDATE=0
 if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
+  echo "==> Ensuring Incubators schema columns"
+  node scripts/ensure-incubators-schema.mjs
+
+  echo "==> Patching published integrations from public sources"
+  node scripts/patch-published-integrations.mjs --apply
+
   echo "==> Fetching NocoDB data"
   node scripts/fetch-nocodb-data.mjs
   echo "==> Syncing partner and institution logos"
   node scripts/sync-ref-directory.mjs
+  INTEGRATION_PAGES_UPDATE=1
 else
   echo "No NOCODB_API_TOKEN / .env — using existing static/data.json" >&2
 fi
@@ -38,8 +46,12 @@ node scripts/cache-partner-logos.mjs
 echo "==> Caching project fonts into static/"
 node scripts/cache-fonts.mjs
 
-echo "==> Generating missing integration pages"
-node scripts/generate-incubator-pages.mjs
+echo "==> Generating integration pages"
+if [[ "${INTEGRATION_PAGES_UPDATE}" -eq 1 ]]; then
+  node scripts/generate-incubator-pages.mjs --update
+else
+  node scripts/generate-incubator-pages.mjs
+fi
 
 echo "==> Building site with Zola"
 zola build "$@"

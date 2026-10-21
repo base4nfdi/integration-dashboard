@@ -36,9 +36,10 @@ fetch-source-pages  →   parse-* / parse-source-pages
               push / patch / fill          generate-incubator-pages
                                            → content/integrations/{ts,dmp,iam,pid}/
 
-Already published rows are not created again. `patch-published-integrations.mjs`
-fills fields the detail page is missing and sets status to Finished when
-`inc_end` is before today. Parsers apply that same end-date rule while parsing.
+Already published rows are not created again. During `./build.sh` (when NocoDB
+credentials are available), `patch-published-integrations.mjs --apply` fills
+fields the detail page is missing and sets status to Finished when `inc_end` is
+before today. Parsers apply that same end-date rule while parsing.
 ```
 
 **Typical build path** (`./build.sh`):
@@ -46,11 +47,14 @@ fills fields the detail page is missing and sets status to Finished when
 1. `fetch-source-pages.mjs` — download source pages  
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
 3. `crawl-nfdi-news.mjs --scope both` — collect English NFDI news and success stories, then write `data/parsed/nfdi-news.json`  
-4. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
-5. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
-6. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
-7. `generate-incubator-pages.mjs` — create missing Markdown report pages  
-8. `zola build`
+4. `ensure-incubators-schema.mjs` — ensure Incubator columns used by detail pages (skipped if no token)  
+5. `patch-published-integrations.mjs --apply` — backfill published rows when public sources have grown (skipped if no token)  
+6. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
+7. `sync-ref-directory.mjs` — sync partner and institution logos (skipped if no token)  
+8. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
+9. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
+10. `generate-incubator-pages.mjs` — create missing Markdown pages; `--update` when NocoDB was refreshed  
+11. `zola build`
 
 ---
 
@@ -226,7 +230,8 @@ node scripts/generate-incubator-pages.mjs --force
 | `--force` | Overwrite existing Markdown files |
 | `-h`, `--help` | Show usage |
 
-`--update` is the refresh step after a published-row patch and `fetch-nocodb-data.mjs`. It is not part of `./build.sh`.
+`--update` rewrites an existing page when generated Markdown differs. `./build.sh`
+runs it automatically after a NocoDB refresh (patch + `fetch-nocodb-data.mjs`).
 
 ---
 
@@ -532,13 +537,13 @@ Inspect `data/parsed/comparison.json` for source vs NocoDB diffs.
 
 ### Update already published incubators and use cases
 
-Review the dry-run before `--apply`. Columns must exist first.
+`./build.sh` runs ensure-schema, `--apply`, fetch, and `--update` when NocoDB
+credentials are present. To preview changes without writing:
 
 ```bash
-node scripts/ensure-incubators-schema.mjs
 node scripts/parse-source-pages.mjs
 node scripts/patch-published-integrations.mjs
-node scripts/patch-published-integrations.mjs --apply
+node scripts/patch-published-integrations.mjs --apply   # after review
 node scripts/fetch-nocodb-data.mjs
 node scripts/generate-incubator-pages.mjs --update
 ```
