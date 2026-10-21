@@ -97,11 +97,11 @@ Reviewers may update rows in the NocoDB UI (Incubators, User_Stories, REF_Partne
 docker compose up -d --build
 ```
 
-With `NOCODB_API_TOKEN` in `.env`, the image build runs `fetch-nocodb-data`, `sync-ref-directory`, `cache-partner-logos`, and related steps—so the dashboard and `static/data.json` match NocoDB without running scripts on the host.
+With `NOCODB_API_TOKEN` in `.env`, the image build runs `patch-published-integrations --apply` (when public sources have grown), `fetch-nocodb-data`, `sync-ref-directory`, `cache-partner-logos`, `generate-incubator-pages --update`, and related steps—so the dashboard, NocoDB backfill columns, and `static/data.json` stay aligned without running scripts on the host.
 
 ### When detail integration pages must match NocoDB
 
-The build generates **new** integration Markdown pages but does not overwrite existing ones. If reviewers changed fields that appear on individual integration articles (description, goals, dates, status, …), run the maintenance sequence from [scripts/README.md](scripts/README.md) (`fetch-nocodb-data` → optional logo/ref steps → `generate-incubator-pages.mjs --update`) in a environment where those scripts are run, then deploy:
+With a NocoDB token at build time, `./build.sh` already runs `generate-incubator-pages.mjs --update` after refreshing `static/data.json`. If you changed NocoDB **without** rebuilding, or you need a dry-run review of patches first, use the maintenance sequence in [scripts/README.md](scripts/README.md), then deploy:
 
 ```bash
 docker compose up -d --build
@@ -111,7 +111,7 @@ docker compose up -d --build
 
 - New incubators that exist only on DMP/IAM/TS public sites → push workflows in [scripts/README.md](scripts/README.md).  
 - PID use cases from upstream markdown → `push-pid-use-cases-to-nocodb.mjs`.  
-- Backfilling published rows from public sources → `patch-published-integrations.mjs` (dry-run, then `--apply`), then redeploy with Compose.
+- Reviewing patches before they hit NocoDB → `patch-published-integrations.mjs` (default dry-run) outside `./build.sh`.
 
 ---
 
