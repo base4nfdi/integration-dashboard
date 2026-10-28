@@ -28,4 +28,5 @@ FAIRagro RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro
+- **NFDI consortia:** FAIRagro (1 linked)
+

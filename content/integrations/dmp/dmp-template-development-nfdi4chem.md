@@ -23,4 +23,5 @@ A few years ago, NFDI4Chem developed a chemistry-specific DMP template. This was
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem
+- **NFDI consortia:** NFDI4Chem (1 linked)
+

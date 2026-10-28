@@ -17,6 +17,7 @@ entities = ["TIB"]
 
 The purpose of this work is to evaluate how Base4NFDI basic services (e.g. PID4NFDI, TS4NFDI, DMP4NFDI) can be assigned DOIs using the DataCite Metadata Schema. The analysis maps Base4NFDI portfolio requirements to DataCite’s metadata properties, identifies gaps and ambiguities, and formulates governance, workflow, and landing page recommendations for compliant DOI registration of services. The goal is to increase FAIRness, citation stability, discoverability, provenance tracking, and impact measurement of NFDI basic services.
 
+
 ## Goals
 
 - **Labels:** Metadata mapping, Implementation concept
@@ -26,5 +27,6 @@ The purpose of this work is to evaluate how Base4NFDI basic services (e.g. PID4N
 
 ## Partners & entities
 
-- **NFDI consortia:** Base4NFDI 
-- **Participating entity:** TIB
+- **NFDI consortia:** Base4NFDI (1 linked)
+- **Participating entity:** TIB (1 linked)
+

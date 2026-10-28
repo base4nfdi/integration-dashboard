@@ -28,4 +28,5 @@ NFDI4Memory RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Memory
+- **NFDI consortia:** NFDI4Memory (1 linked)
+

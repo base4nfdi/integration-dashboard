@@ -28,4 +28,5 @@ Training Guide for DMP Workshops
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem
+- **NFDI consortia:** NFDI4Chem (1 linked)
+

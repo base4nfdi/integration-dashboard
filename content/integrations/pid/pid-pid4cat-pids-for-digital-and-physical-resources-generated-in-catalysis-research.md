@@ -19,6 +19,7 @@ pid4cat is a service that is designed to assign persistent identifiers for resou
 
 Though pid4cat uses an ePIC prefix, everything else is set up and run by the providing institution (HLRS), such as Handle server, database and resolver. A specialized API is implemented by pid4cat for simplified PID management.
 
+
 ## Goals
 
 - **Labels:** Implementation concept
@@ -28,5 +29,6 @@ Though pid4cat uses an ePIC prefix, everything else is set up and run by the pro
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat 
-- **Participating entity:** HLRS
+- **NFDI consortia:** NFDI4Cat (1 linked)
+- **Participating entity:** HLRS (1 linked)
+

@@ -23,4 +23,5 @@ This project aims to develop a mathematics-specific DMP template, building on th
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI
+- **NFDI consortia:** MaRDI (1 linked)
+

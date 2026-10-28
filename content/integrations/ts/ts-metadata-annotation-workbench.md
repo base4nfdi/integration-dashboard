@@ -18,6 +18,7 @@ inc_activity_page = "https://mda.nfdi4health.de/"
 
 The Metadata Annotation Workbench is developed in the NFDI4Health project. The service aims to assist researchers with semantic annotation of data dictionaries, questionnaires or other data collection instruments.
 
+
 ## Goals
 
 - Using terminologies of SemLookP as a source for annotation
@@ -29,4 +30,5 @@ The Metadata Annotation Workbench is developed in the NFDI4Health project. The s
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Health
+- **NFDI consortia:** NFDI4Health (1 linked)
+

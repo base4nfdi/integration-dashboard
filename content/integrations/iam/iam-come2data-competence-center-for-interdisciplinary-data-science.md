@@ -20,6 +20,7 @@ inc_activity_page = "https://come2data.de"
 
 External visitors should be able to use teaching resources published on our website like learning paths curated by the Come2Data team. They should be able to track and save their state of completion of such learning paths and be able to continue at a later point in time. To reach that goal, external visitors need to have a way to log into the website and create an account, also without having an institutional affiliation, for instance with their ORCID-ID. We would like to give virtual organisations (VO), such as members of a specific NFDI consortium, access to our resources and IT systems with one of their accounts like ORCID-ID. Therefore we need to be able to register a vo in our IT components
 
+
 ## Goals
 
 We aim for a broadly available authorisation process to gain access to our services that implements the use of existing AAI-solutions.
@@ -34,4 +35,5 @@ For users who are not affiliated with any community providing an AAI-service, an
 
 ## Partners & entities
 
-- **Participating entity:** come2data - Kompetenzzentrum für interdisziplinäre Datenwissenschaften
+- **Participating entity:** come2data - Kompetenzzentrum für interdisziplinäre Datenwissenschaften (1 linked)
+

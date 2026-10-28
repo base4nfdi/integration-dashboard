@@ -17,6 +17,7 @@ entities = ["KIT", "University of Potsdam", "University of Duisburg-Essen", "GWD
 
 The RDMC creation wizard leads a user through the publication process of a research data management container (RDMC). At the end of this workflow, an ePIC PID is assigned to the container, turning it into a FAIR Digital Object (FDO) with RDMC-specific metadata. The workflow uses existing repositories to publish the RDMC. Hence, additionally, other PIDs may be registered as well, depending on the repository in use (e.g., Zenodo, GRO.Data, or Coscine).
 
+
 ## Goals
 
 - **Labels:** FAIR digital objects
@@ -26,5 +27,6 @@ The RDMC creation wizard leads a user through the publication process of a resea
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDIxCS 
-- **Participating entities:** KIT, University of Potsdam, University of Duisburg-Essen, GWDG - Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen
+- **NFDI consortia:** NFDIxCS (1 linked)
+- **Participating entities:** KIT, University of Potsdam, University of Duisburg-Essen, GWDG - Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen (4 linked)
+

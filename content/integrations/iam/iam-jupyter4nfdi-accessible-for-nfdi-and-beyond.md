@@ -20,6 +20,7 @@ inc_activity_page = "https://docs.hub.nfdi-jupyter.de"
 
 Jupyter4NFDI aims to address the fragmented deployment of Jupyter Notebooks across NFDI consortia by offering a centralised service. Jupyter4NFDI project is a central service that integrates resources from participating institutions and enables users to run Jupyter notebooks on infrastructure (Jupyterhubs) The incubator provides the framework for preparing and eventually realising the integration with the NFDI Infra Proxy, which will effectively make the service accessible to all community AAIs. The aim of this incubator cycle is the integration of the Jupyter4NFDI hub with the NFDI Infra Proxy and with the community AAIs. While the central hub of Jupyter4NFDI already is in place and accessible via the Helmholtz AAI – one of the IAM4NFDI community AAIs –, the aim is to provide wider access to it by integrating the proxy as soon as this becomes available. At a technical level, the communication required to delegate work to the Jupyterhubs available is realized by Jupyterhub Outpost, a Python software created specifically for the use case of this project. At a conceptual level, the work will consist in translating the AAI concepts in appropriate options for the service, in formulating requirements of the service for the AAI, in helping to harmonize the options of the central service and the existing Jupyterhubs and their AAIs.
 
+
 ## Goals
 
 - Simplify access, improve user experience, and extend Jupyter’s reach to a wider audience within and beyond the NFDI
@@ -35,3 +36,6 @@ Jupyter4NFDI aims to address the fragmented deployment of Jupyter Notebooks acro
 BSD 3-Clause
 
 ## Partners & entities
+
+
+

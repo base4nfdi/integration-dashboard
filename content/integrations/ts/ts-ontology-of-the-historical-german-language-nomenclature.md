@@ -18,6 +18,7 @@ inc_activity_page = "https://terminology.tib.eu/ts/ontologies/ohdab"
 
 The Ontology of the historical German-language nomenclature for offices and professions (OhdAB) provides classifications according to job profiles and requirement levels based on the "Classification of Occupations 2010/2020" (KldB 2010) for historical professions. The OhdAB is maintained and curated within FactGrid. FactGrid is an instance of Wikibase.
 
+
 ## Goals
 
 - Provision of the OhdAB in a terminology service
@@ -29,4 +30,5 @@ The Ontology of the historical German-language nomenclature for offices and prof
 
 ## Partners & entities
 
-- **NFDI consortia:** BERD@NFDI, NFDI4Memory
+- **NFDI consortia:** BERD@NFDI, NFDI4Memory (2 linked)
+

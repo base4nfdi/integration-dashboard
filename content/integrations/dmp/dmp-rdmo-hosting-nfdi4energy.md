@@ -28,4 +28,5 @@ NFDI4Energy RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Energy
+- **NFDI consortia:** NFDI4Energy (1 linked)
+

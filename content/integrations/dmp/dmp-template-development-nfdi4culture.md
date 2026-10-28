@@ -28,4 +28,5 @@ NFDI4Culture RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Culture
+- **NFDI consortia:** NFDI4Culture (1 linked)
+

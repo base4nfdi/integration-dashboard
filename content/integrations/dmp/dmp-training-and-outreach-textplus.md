@@ -21,6 +21,12 @@ inc_service_type = "Training & Outreach"
 
 Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback.
 
+## Results
+
+Survey results: DMPs – What are our community’s needs? (in German)
+- [https://doi.org/10.58079/16u2t](https://doi.org/10.58079/16u2t)
+
 ## Partners & entities
 
-- **NFDI consortia:** Text+
+- **NFDI consortia:** Text+ (1 linked)
+

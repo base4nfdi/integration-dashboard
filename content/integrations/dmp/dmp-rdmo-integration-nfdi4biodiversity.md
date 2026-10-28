@@ -28,4 +28,5 @@ RDMO Zenodo Plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Biodiversity
+- **NFDI consortia:** NFDI4Biodiversity (1 linked)
+

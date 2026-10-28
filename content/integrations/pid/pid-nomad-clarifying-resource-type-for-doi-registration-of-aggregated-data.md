@@ -17,6 +17,7 @@ entities = ["Humbold University Berlin"]
 
 This use case analyses how NOMAD “Projects” (aggregations of uploaded files, directories, and derived entries) should be represented in the DataCite Metadata Schema for DOI registration. Our analysis showed that these “Projects” function as curated collections of heterogeneous research objects (nested files, heterogeneous data types, derived entries). They are not project descriptions in the sense of RAiDs, but structured aggregations of multiple items that are bundled and assigned a DOI. On that basis, the recommended resourceTypeGeneral is Collection rather than Dataset or Project. We therefore supported NOMAD in clarifying what exactly is being identified, how those aggregated objects should be described, and how the associated metadata can be enriched in a structured and interoperable way.
 
+
 ## Goals
 
 - **Labels:** Metadata analysis, Resource type clarification
@@ -26,5 +27,6 @@ This use case analyses how NOMAD “Projects” (aggregations of uploaded files,
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRmat 
-- **Participating entity:** Humbold University Berlin
+- **NFDI consortia:** FAIRmat (1 linked)
+- **Participating entity:** Humbold University Berlin (1 linked)
+

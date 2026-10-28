@@ -20,6 +20,7 @@ inc_activity_page = "https://jards.coscine.de/"
 
 At RWTH Aachen University, the JARDS platform is used by researchers to apply for resources such as storage space or computing time. The applications are assessed in a multi-stage scientific review process. After approval, researchers must be given access to the resource and be able to manage other project members. This requires information about approved projects in RegApp. The aim of this project is to enable attribute queries via the SAML protocol in RegApp and to set up a Shibboleth-based attribute authority that returns user data from JARDS. This demonstrates how external applications can be integrated into the Community AAI as attribute authorities.
 
+
 ## Results
 
 Implementation of a generic Docker image that can be used to set up
@@ -32,4 +33,5 @@ Extension of the RegApp to support SAML attribute queries
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4Ing (1 linked)
+

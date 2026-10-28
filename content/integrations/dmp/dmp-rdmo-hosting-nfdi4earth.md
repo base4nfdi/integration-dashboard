@@ -28,4 +28,5 @@ RDMO Sensor Search option set plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Earth
+- **NFDI consortia:** NFDI4Earth (1 linked)
+

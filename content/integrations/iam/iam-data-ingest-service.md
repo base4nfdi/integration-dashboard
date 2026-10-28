@@ -22,6 +22,7 @@ inc_activity_page = "https://ingest.nfdi4ing.de"
 
 The NFDI4ING Data Ingest Service (https://ingest.nfdi4ing.de) uses OpenID connect for authentication and authorisation. Currently it is using a custom keycloak installation for DFN federation or ORCID login. We would like to connect it to the NFDI AAI.
 
+
 ## Goals
 
 - The Data Ingest Service originally was designed to target architecture and civil engineering, but we will breaden the scope in the future
@@ -37,5 +38,6 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing 
-- **Participating entity:** ULB University and State Library Darmstadt
+- **NFDI consortia:** NFDI4Ing (1 linked)
+- **Participating entity:** ULB University and State Library Darmstadt (1 linked)
+

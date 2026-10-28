@@ -17,6 +17,8 @@ logo_project = "img/partner-logos/ba427dc06317d8ac.png"
 
 NFDI4Immuno works with various standardized terminologies and ontologies to describe immunological data and its metadata. Currently, future users of the NFDI4Immuno Excel template are required to manually enter relevant terminologies and ontology terms into the corresponding metadata fields.
 
+
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Immuno
+- **NFDI consortia:** NFDI4Immuno (1 linked)
+
