@@ -42,6 +42,33 @@ fields the detail page is missing and sets status to Finished when `inc_end` is
 before today. Parsers apply that same end-date rule while parsing.
 ```
 
+## What the basic services get back
+
+Traffic is one way. IAM4NFDI, TS4NFDI, DMP4NFDI, and PID4NFDI publish public pages. This repository reads those pages and the NocoDB tables. It does not write comments, status, or corrections back to the service sites.
+
+What a service gets is a public Integration Dashboard entry: an overview row in `static/data.json` and, once a page exists, a detail page under `content/integrations/`. That only happens for rows that are already in NocoDB. A new incubator on a service site stays off the dashboard until someone reviews `push-source-pages-to-nocodb.mjs` (or `push-pid-use-cases-to-nocodb.mjs` for PID) and passes `--apply`. `./build.sh` does not create those rows.
+
+NocoDB remains the record the site publishes. Editors can correct wording, partners, and status there. The next build will not replace a filled cell with the public-source text (see below).
+
+## When the dashboard updates
+
+There is no cron job in this repository. `static/data.json` and the generated pages change only when someone runs `./build.sh` (or the same scripts) with `NOCODB_API_TOKEN` or a root `.env`. Without credentials the build keeps the `static/data.json` already in the tree and still rebuilds the site from it.
+
+A build does not rewrite every NocoDB row. `patch-published-integrations.mjs` matches parsed records to existing rows and then:
+
+| Situation | What the build does |
+| --- | --- |
+| Cell is empty and the public source has a value | Fills that cell |
+| Description is a strict prefix of the newer source text | Replaces the description with the full source text |
+| Description, dates, partners, or other filled cells differ from the source | Leaves the NocoDB value |
+| End date is before today | Sets status to `Finished`. Does not move `Finished` back to `Running` |
+| Source has a row that is not in NocoDB | Leaves it out. Onboarding is a separate `--apply` push |
+| NocoDB has a row the public source no longer lists | Leaves the row, its partners, and its Markdown page |
+
+So a withdrawn or never-started incubator (workflow change, incubator that did not begin) stays on the dashboard until someone deletes or archives that row in NocoDB. The scripts do not delete rows, and `generate-incubator-pages.mjs` does not remove Markdown for rows that disappeared. `fetch-nocodb-data.mjs` also refuses to replace `static/data.json` when the Incubators API returns zero records, so an empty API response cannot wipe the export.
+
+Compare a fresh parse with the current export in `data/parsed/comparison.json` before pushing or patching. Patch and push default to dry-run outside `./build.sh`.
+
 **Typical build path** (`./build.sh`):
 
 1. `fetch-source-pages.mjs` — download source pages  
