@@ -219,11 +219,12 @@
     {% set inc_status = page.extra.status | default(value="") %}
     {% set inc_start = page.extra.inc_start | default(value="") %}
     {% set inc_end = page.extra.inc_end | default(value="") %}
-    {% set inc_cycle = page.extra.inc_cycle | default(value=0) %}
+    {% set has_cycle = page.extra.inc_cycle is defined %}
+    {% set inc_cycle = page.extra.inc_cycle %}
     {% set inc_activity = page.extra.inc_activity_type | default(value="") %}
     {% set inc_caai = page.extra.inc_caai | default(value="") %}
     {% set inc_service_type = page.extra.inc_service_type | default(value="") %}
-    {% if inc_status or (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
+    {% if inc_status or has_cycle or inc_activity or inc_caai or inc_service_type %}
     <div class="blog-post-overview">
       <div class="blog-post-overview-top">
         {% if inc_status %}
@@ -231,9 +232,9 @@
           <span class="status-badge status-{{ inc_status | lower | replace(from=' ', to='-') }}">{{ inc_status }}</span>
         </div>
         {% endif %}
-        {% if (inc_cycle and inc_cycle > 0) or inc_activity or inc_caai or inc_service_type %}
+        {% if has_cycle or inc_activity or inc_caai or inc_service_type %}
         <ul class="blog-post-overview-meta" aria-label="Incubator details">
-        {% if inc_cycle and inc_cycle > 0 %}
+        {% if has_cycle %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Cycle</span>
           <span class="blog-post-overview-chip-value">{{ inc_cycle }}</span>
