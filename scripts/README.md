@@ -36,19 +36,20 @@ fetch-source-pages  →   parse-* / parse-source-pages
               push / patch / fill          generate-incubator-pages
                                            → content/integrations/{ts,dmp,iam,pid}/
 
-Already published rows are not created again. During `./build.sh` (when NocoDB
-credentials are available), `patch-published-integrations.mjs --apply` fills
-fields the detail page is missing and sets status to Finished when `inc_end` is
-before today. Parsers apply that same end-date rule while parsing.
+During `./build.sh` (when NocoDB credentials are available) missing incubator
+and PID use-case rows are created (`--apply`), then
+`patch-published-integrations.mjs --apply` fills empty fields, copies a changed
+`inc_status` from the public source, and sets status to Finished when `inc_end`
+is before today. Parsers apply that same end-date rule while parsing.
 ```
 
 ## What the basic services get back
 
 Traffic is one way. IAM4NFDI, TS4NFDI, DMP4NFDI, and PID4NFDI publish public pages. This repository reads those pages and the NocoDB tables. It does not write comments, status, or corrections back to the service sites.
 
-What a service gets is a public Integration Dashboard entry: an overview row in `static/data.json` and, once a page exists, a detail page under `content/integrations/`. That only happens for rows that are already in NocoDB. A new incubator on a service site stays off the dashboard until someone reviews `push-source-pages-to-nocodb.mjs` (or `push-pid-use-cases-to-nocodb.mjs` for PID) and passes `--apply`. `./build.sh` does not create those rows.
+What a service gets is a public Integration Dashboard entry: an overview row in `static/data.json` and a detail page under `content/integrations/`. With NocoDB credentials, `./build.sh` creates rows that are on the public pages but not yet in NocoDB, then refreshes the site from those tables.
 
-NocoDB remains the record the site publishes. Editors can correct wording, partners, and status there. The next build will not replace a filled cell with the public-source text (see below).
+NocoDB remains the record the site publishes. Editors can correct wording and partners there. The next build will not replace a filled cell with the public-source text, except `inc_status`, which follows the source (see below).
 
 ## When the dashboard updates
 
@@ -61,8 +62,8 @@ A build does not rewrite every NocoDB row. `patch-published-integrations.mjs` ma
 | Cell is empty and the public source has a value | Fills that cell |
 | Description is a strict prefix of the newer source text | Replaces the description with the full source text |
 | Description, dates, partners, or other filled cells differ from the source | Leaves the NocoDB value |
-| End date is before today | Sets status to `Finished`. Does not move `Finished` back to `Running` |
-| Source has a row that is not in NocoDB | Leaves it out. Onboarding is a separate `--apply` push |
+| `inc_status` on the source differs (`In preparation`, `Running`, `Finished`) | Writes the source status. A past end date still forces `Finished`, even when the source badge says `Running` |
+| Source has a row that is not in NocoDB | Creates it (`push-source-pages-to-nocodb.mjs --apply`, and the PID push for use cases) |
 | NocoDB has a row the public source no longer lists | Leaves the row, its partners, and its Markdown page |
 
 So a withdrawn or never-started incubator (workflow change, incubator that did not begin) stays on the dashboard until someone deletes or archives that row in NocoDB. The scripts do not delete rows, and `generate-incubator-pages.mjs` does not remove Markdown for rows that disappeared. `fetch-nocodb-data.mjs` also refuses to replace `static/data.json` when the Incubators API returns zero records, so an empty API response cannot wipe the export.
@@ -75,13 +76,15 @@ Compare a fresh parse with the current export in `data/parsed/comparison.json` b
 2. `parse-source-pages.mjs` — parse all services + write comparison summary  
 3. `crawl-nfdi-news.mjs --scope both` — collect English NFDI news and success stories, then write `data/parsed/nfdi-news.json`  
 4. `ensure-incubators-schema.mjs` — ensure Incubator columns used by detail pages (skipped if no token)  
-5. `patch-published-integrations.mjs --apply` — backfill published rows when public sources have grown (skipped if no token)  
-6. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
-7. `sync-ref-directory.mjs` — sync partner and institution logos (skipped if no token)  
-8. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
-9. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
-10. `generate-incubator-pages.mjs` — create missing Markdown pages; `--update` when NocoDB was refreshed  
-11. `zola build`
+5. `push-source-pages-to-nocodb.mjs --apply` — create incubator rows missing from NocoDB (skipped if no token)  
+6. `push-pid-use-cases-to-nocodb.mjs --apply` — create PID use-case rows missing from User_Stories (skipped if no token)  
+7. `patch-published-integrations.mjs --apply` — backfill published rows and copy status changes (skipped if no token)  
+8. `fetch-nocodb-data.mjs` — refresh `static/data.json` from Incubators + User_Stories (skipped if no token)  
+9. `sync-ref-directory.mjs` — sync partner and institution logos (skipped if no token)  
+10. `cache-partner-logos.mjs` — download partner logos into `static/img/partner-logos/` (skip if already present) and rewrite local paths  
+11. `cache-fonts.mjs` — download Base4NFDI `fonts.css` + `.woff2` files into `static/fonts/` (skip if already present)  
+12. `generate-incubator-pages.mjs` — create missing Markdown pages; `--update` when NocoDB was refreshed  
+13. `zola build`
 
 ---
 
@@ -327,7 +330,7 @@ Updates matched incubator and PID use-case rows when the public source has grown
 | PID use-case fields (`uc_labels`, `pid_providers`, …) | Fill only when empty |
 | Partners | Link REF_Partners only when the row has no partners. A non-empty set is not replaced |
 | Publication count | Set only when NocoDB is 0 and the source count is greater |
-| Status | Set `Finished` when the end date (source, otherwise the stored date) is before today, even if the badge still says Running. Fill an empty status from the source. Never move Finished back to Running |
+| Status | Write `inc_status` when the source value is `In preparation`, `Running`, or `Finished` and differs from NocoDB, including a move from Finished back to Running. Set `Finished` when the end date (source, otherwise the stored date) is before today, even if the badge still says Running |
 
 Parsers apply the same finished-by-end-date rule, so a new parse already shows `Finished` when `inc_end` is in the past.
 
@@ -564,7 +567,8 @@ Inspect `data/parsed/comparison.json` for source vs NocoDB diffs.
 
 ### Update already published incubators and use cases
 
-`./build.sh` runs ensure-schema, `--apply`, fetch, and `--update` when NocoDB
+`./build.sh` runs ensure-schema, both pushes with `--apply`, the patch with
+`--apply` (including status changes), fetch, and `--update` when NocoDB
 credentials are present. To preview changes without writing:
 
 ```bash

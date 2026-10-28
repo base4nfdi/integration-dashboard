@@ -5,8 +5,9 @@
  *
  * Fills empty cells that the audit flags as "Missing on detail page",
  * extends a description only when the stored text is a strict prefix of
- * the source, links partners when a row has none, and sets status to
- * Finished once the end date is in the past.
+ * the source, links partners when a row has none, copies inc_status from
+ * the source when it changes, and sets status to Finished once the end
+ * date is in the past.
  *
  * Does not rewrite wording differences or replace an existing partner set.
  *
@@ -192,8 +193,9 @@ Options:
   -h, --help           Show this help
 
 Fills empty source-backed fields, extends descriptions that are a prefix
-of the source text, links partners only when the row has none, and sets
-inc_status to Finished when the end date is before today.
+of the source text, links partners only when the row has none, copies
+inc_status when the source status differs, and sets inc_status to
+Finished when the end date is before today.
 `);
 }
 
@@ -255,8 +257,11 @@ function statusUpdate(source, noco) {
     if (current === "Finished") return null;
     return { value: "Finished", reason: "end_date_elapsed" };
   }
-  if (!current && VALID_STATUSES.has(sourceStatus)) {
-    return { value: sourceStatus, reason: "fill_empty" };
+  if (VALID_STATUSES.has(sourceStatus) && sourceStatus !== current) {
+    return {
+      value: sourceStatus,
+      reason: current ? "source_changed" : "fill_empty",
+    };
   }
   return null;
 }
@@ -749,6 +754,8 @@ async function main() {
       to_patch: planned.length,
       will_patch: limited.length,
       status_finished: countReasons(limited, "status:end_date_elapsed"),
+      status_changed: countReasons(limited, "status:source_changed") +
+        countReasons(limited, "status:fill_empty"),
       descriptions_extended: countReasons(limited, "extend:"),
       partner_links: limited.filter((row) => row.partner_ids.length > 0).length,
     },
@@ -761,6 +768,9 @@ async function main() {
             to_patch: planned.filter((row) => row.source === s.id).length,
             will_patch: rows.length,
             status_finished: countReasons(rows, "status:end_date_elapsed"),
+            status_changed:
+              countReasons(rows, "status:source_changed") +
+              countReasons(rows, "status:fill_empty"),
             partner_links: rows.filter((row) => row.partner_ids.length > 0).length,
           },
         ];
@@ -789,12 +799,12 @@ async function main() {
   for (const [id, counts] of Object.entries(report.by_source)) {
     console.log(
       `${id}: to_patch=${counts.to_patch} will_patch=${counts.will_patch} ` +
-        `finished=${counts.status_finished} partner_links=${counts.partner_links}`
+        `finished=${counts.status_finished} status=${counts.status_changed} partner_links=${counts.partner_links}`
     );
   }
   console.log(
     `\nTotal to_patch=${report.totals.to_patch} will_patch=${report.totals.will_patch} ` +
-      `finished=${report.totals.status_finished} mode=${report.mode}`
+      `finished=${report.totals.status_finished} status=${report.totals.status_changed} mode=${report.mode}`
   );
   console.log(`Wrote plan to ${reportPath}`);
 
