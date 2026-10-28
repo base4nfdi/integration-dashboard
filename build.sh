@@ -28,6 +28,12 @@ if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
   echo "==> Ensuring Incubators schema columns"
   node scripts/ensure-incubators-schema.mjs
 
+  echo "==> Creating incubators missing from NocoDB"
+  node scripts/push-source-pages-to-nocodb.mjs --apply
+
+  echo "==> Creating PID use cases missing from NocoDB"
+  node scripts/push-pid-use-cases-to-nocodb.mjs --apply
+
   echo "==> Patching published integrations from public sources"
   node scripts/patch-published-integrations.mjs --apply
 
