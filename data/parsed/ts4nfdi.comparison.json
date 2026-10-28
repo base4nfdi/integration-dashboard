@@ -687,16 +687,12 @@
       "nocodb": {
         "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
         "inc_cycle": 4,
-        "inc_status": "In preparation",
+        "inc_status": "Running",
         "partners": [
           "DAPHNE4NFDI"
         ]
       },
       "field_diffs": {
-        "inc_status": {
-          "source": "Running",
-          "nocodb": "In preparation"
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/DAPHNE4NFDI_logo.png",
           "nocodb": "img/partner-logos/9f445863db409d4f.png"

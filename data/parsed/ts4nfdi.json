@@ -1,7 +1,7 @@
 {
   "source": "ts4nfdi",
   "basic_service": "TS",
-  "parsed_at": "2026-10-28T15:04:24.351Z",
+  "parsed_at": "2026-10-28T15:10:53.583Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/ts4nfdi/projects.json",
   "record_count": 31,
   "records": [

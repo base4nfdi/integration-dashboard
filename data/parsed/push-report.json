@@ -1,17 +1,17 @@
 {
   "mode": "apply",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-10-28T15:04:36.920Z",
+  "planned_at": "2026-10-28T15:11:06.093Z",
   "totals": {
-    "missing_from_nocodb": 1,
-    "will_push": 1,
-    "skipped_already_matched": 102
+    "missing_from_nocodb": 0,
+    "will_push": 0,
+    "skipped_already_matched": 103
   },
   "by_source": {
     "dmp4nfdi": {
-      "missing": 1,
-      "pushing": 1,
-      "already_matched": 32
+      "missing": 0,
+      "pushing": 0,
+      "already_matched": 33
     },
     "iam4nfdi": {
       "missing": 0,
@@ -24,34 +24,5 @@
       "already_matched": 31
     }
   },
-  "records": [
-    {
-      "source": "dmp4nfdi",
-      "inc_name": "RDMO Hosting — NFDI4Earth",
-      "unresolved_partners": [],
-      "payload": {
-        "inc_name": "RDMO Hosting — NFDI4Earth",
-        "basic_service": "DMP",
-        "related_institutions": null,
-        "logo_project": null,
-        "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
-        "inc_start": "2024-06-01",
-        "inc_end": "2025-06-30",
-        "inc_cycle": 0,
-        "inc_status": "Finished",
-        "inc_descr": null,
-        "inc_goals": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.",
-        "inc_results": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
-        "inc_activity_type": null,
-        "inc_caai": null,
-        "inc_ownership": null,
-        "inc_service_type": "RDMO Hosting, Template Development, RDMO Integration",
-        "inc_activity_page": null,
-        "key_article": "dmp-rdmo-hosting-nfdi4earth-3",
-        "linked_partners": [
-          16
-        ]
-      }
-    }
-  ]
+  "records": []
 }

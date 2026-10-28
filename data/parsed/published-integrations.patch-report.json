@@ -1,22 +1,22 @@
 {
   "mode": "apply",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-10-28T15:04:40.942Z",
+  "planned_at": "2026-10-28T15:11:09.760Z",
   "totals": {
-    "to_patch": 8,
-    "will_patch": 8,
+    "to_patch": 7,
+    "will_patch": 7,
     "status_finished": 0,
     "status_changed": 0,
     "descriptions_extended": 0,
-    "partner_links": 1
+    "partner_links": 0
   },
   "by_source": {
     "dmp4nfdi": {
-      "to_patch": 1,
-      "will_patch": 1,
+      "to_patch": 0,
+      "will_patch": 0,
       "status_finished": 0,
       "status_changed": 0,
-      "partner_links": 1
+      "partner_links": 0
     },
     "iam4nfdi": {
       "to_patch": 2,
@@ -41,21 +41,6 @@
     }
   },
   "records": [
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 108,
-      "inc_name": "RDMO Hosting — NFDI4Earth",
-      "key_article": "dmp-rdmo-hosting-nfdi4earth-3",
-      "reasons": [
-        "link:partners"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [
-        16
-      ],
-      "patch": {}
-    },
     {
       "source": "iam4nfdi",
       "table": "incubators",

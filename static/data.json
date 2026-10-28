@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-10-28T15:04:43.520Z",
+  "fetched_at": "2026-10-28T15:11:12.220Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
@@ -3678,5 +3678,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-10-28T15:04:49.665Z"
+  "logos_localized_at": "2026-10-28T15:11:14.115Z"
 }
