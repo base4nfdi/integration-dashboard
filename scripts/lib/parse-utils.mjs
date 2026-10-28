@@ -246,11 +246,16 @@ export function parseDuration(value) {
   };
 }
 
+/**
+ * Normalize incubator cycle labels to a number (0, 1, 2, …).
+ * TS4NFDI uses numeric 0 for first-wave incubators; DMP labels the same era
+ * "Initialisation phase" — treat that as cycle 0 for NocoDB alignment.
+ */
 export function parseCycle(value) {
   if (value == null || value === "") return null;
   if (typeof value === "number" && Number.isFinite(value)) return value;
   const raw = String(value).trim();
-  if (/^initial/i.test(raw)) return null;
+  if (/^initial/i.test(raw)) return 0;
   const m = raw.match(/cycle\s*(\d+)/i) || raw.match(/^(\d+)$/);
   if (!m) return null;
   return Number(m[1]);
