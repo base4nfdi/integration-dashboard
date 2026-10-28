@@ -119,7 +119,8 @@
         <div class="blog-post-logo-partners">
           {% if page.extra.logo_project %}
           {% set logo_project_raw = page.extra.logo_project %}
-          {% if logo_project_raw is starting_with(pat="http://") or logo_project_raw is starting_with(pat="https://") %}
+          {% set logo_project_scheme = logo_project_raw | split(pat="://") | first %}
+          {% if logo_project_scheme == "http" or logo_project_scheme == "https" %}
             {% set logo_project_src = logo_project_raw %}
           {% else %}
             {% set logo_project_src = get_url(path=logo_project_raw) %}
@@ -127,7 +128,8 @@
           {% set_global logo_project_dark_src = "" %}
           {% if page.extra.logo_project_dark %}
           {% set logo_project_dark_raw = page.extra.logo_project_dark %}
-          {% if logo_project_dark_raw is starting_with(pat="http://") or logo_project_dark_raw is starting_with(pat="https://") %}
+          {% set logo_project_dark_scheme = logo_project_dark_raw | split(pat="://") | first %}
+          {% if logo_project_dark_scheme == "http" or logo_project_dark_scheme == "https" %}
             {% set_global logo_project_dark_src = logo_project_dark_raw %}
           {% else %}
             {% set_global logo_project_dark_src = get_url(path=logo_project_dark_raw) %}
@@ -137,7 +139,8 @@
           {% if logo_project_dark_src %}
             {% set_global logo_project_light_class = "blog-post-logo blog-post-logo-project themed-logo themed-logo--light" %}
           {% endif %}
-          {% if project_href is starting_with(pat="http://") or project_href is starting_with(pat="https://") %}
+          {% set project_href_scheme = project_href | split(pat="://") | first %}
+          {% if project_href_scheme == "http" or project_href_scheme == "https" %}
           <a class="ref-logo-link" href="{{ project_href }}" target="_blank" rel="noopener noreferrer">
             <img
               class="{{ logo_project_light_class }}"
@@ -181,12 +184,14 @@
           {% endif %}
           {% if page.extra.logo_consortia %}
           {% set logo_consortia_raw = page.extra.logo_consortia %}
-          {% if logo_consortia_raw is starting_with(pat="http://") or logo_consortia_raw is starting_with(pat="https://") %}
+          {% set logo_consortia_scheme = logo_consortia_raw | split(pat="://") | first %}
+          {% if logo_consortia_scheme == "http" or logo_consortia_scheme == "https" %}
             {% set logo_consortia_src = logo_consortia_raw %}
           {% else %}
             {% set logo_consortia_src = get_url(path=logo_consortia_raw) %}
           {% endif %}
-          {% if partner_website is starting_with(pat="http://") or partner_website is starting_with(pat="https://") %}
+          {% set partner_website_scheme = partner_website | split(pat="://") | first %}
+          {% if partner_website_scheme == "http" or partner_website_scheme == "https" %}
           <a class="ref-logo-link" href="{{ partner_website }}" target="_blank" rel="noopener noreferrer">
             <img
               class="blog-post-logo blog-post-logo-consortia"
