@@ -9,7 +9,7 @@
   },
   "matches": [
     {
-      "score": 2.11,
+      "score": 2.36,
       "source": {
         "inc_name": "RADAR",
         "inc_cycle": 1,
@@ -21,7 +21,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "TS in RADAR",
+        "inc_name": "RADAR",
         "inc_cycle": 1,
         "inc_status": "Finished",
         "partners": [
@@ -31,10 +31,6 @@
         ]
       },
       "field_diffs": {
-        "inc_name": {
-          "source": "RADAR",
-          "nocodb": "TS in RADAR"
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
           "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
@@ -42,7 +38,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 1.87,
       "source": {
         "inc_name": "WDCC",
         "inc_cycle": 1,
@@ -52,7 +48,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "WDCC",
+        "inc_name": "WDCC  - World Data Center for Climate",
         "inc_cycle": 1,
         "inc_status": "Finished",
         "partners": [
@@ -60,6 +56,10 @@
         ]
       },
       "field_diffs": {
+        "inc_name": {
+          "source": "WDCC",
+          "nocodb": "WDCC  - World Data Center for Climate"
+        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/wdcc.png",
           "nocodb": "img/partner-logos/8ca946e929cc27bc.png"
@@ -772,7 +772,7 @@
       "nocodb": {
         "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
         "inc_cycle": 4,
-        "inc_status": "In preparation",
+        "inc_status": "Running",
         "partners": [
           "NFDI4Culture",
           "NFDI4Memory",
@@ -780,10 +780,6 @@
         ]
       },
       "field_diffs": {
-        "inc_status": {
-          "source": "Running",
-          "nocodb": "In preparation"
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
           "nocodb": "img/partner-logos/db311bd7628d7af5.png"
