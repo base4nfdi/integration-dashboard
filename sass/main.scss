@@ -1318,6 +1318,14 @@ main.container:has(.dashboard) {
   overflow: hidden;
 }
 
+.data-table td.row-consortia {
+  text-align: center;
+}
+
+.data-table td.row-consortia .logos-cell {
+  justify-content: center;
+}
+
 @media (min-width: 960px) {
   .data-table {
     table-layout: fixed;
