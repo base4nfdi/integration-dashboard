@@ -10,9 +10,9 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 1
+linked_entities = 0
 partners = ["DAPHNE4NFDI"]
-entities = ["HZB Helmholtz-Zentrum Berlin"]
+entities = ["HZB"]
 source_url = "https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/"
 +++
 
@@ -34,5 +34,5 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** DAPHNE4NFDI (1 linked)
-- **Participating entity:** HZB Helmholtz-Zentrum Berlin (1 linked)
+- **Participating entity:** HZB (0 linked)
 

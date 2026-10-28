@@ -10,9 +10,9 @@ inc_end = ""
 inc_cycle = 0
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 1
+linked_entities = 0
 partners = ["FAIRagro"]
-entities = ["IPK - Leibniz Institute of Plant Genetics and Crop Plant Research"]
+entities = ["IPK Gatersleben"]
 source_url = "https://doi.org/10.5281/zenodo.14506202"
 +++
 
@@ -34,5 +34,5 @@ Learn more
 ## Partners & entities
 
 - **NFDI consortia:** FAIRagro (1 linked)
-- **Participating entity:** IPK - Leibniz Institute of Plant Genetics and Crop Plant Research (1 linked)
+- **Participating entity:** IPK Gatersleben (0 linked)
 

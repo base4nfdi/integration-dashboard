@@ -107,8 +107,8 @@
   "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png": {
     "path": "img/ref-logos/d2899f44796b9a2d.png",
     "source": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-    "fetched_at": "2026-10-09T20:58:54.062Z",
-    "nocodb_updated_at": "2026-10-09 20:20:59+00:00",
+    "fetched_at": "2026-10-28T15:04:45.909Z",
+    "nocodb_updated_at": "2026-10-28 15:04:41+00:00",
     "name": "NFDI4Earth"
   },
   "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png": {
@@ -268,8 +268,8 @@
   "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg": {
     "path": "img/ref-logos/53918c4e5e862bc4.svg",
     "source": "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg",
-    "fetched_at": "2026-09-29T15:03:34.181Z",
-    "nocodb_updated_at": "2026-09-29 14:16:47+00:00",
+    "fetched_at": "2026-10-28T15:04:48.504Z",
+    "nocodb_updated_at": "2026-10-28 10:50:08+00:00",
     "name": "HZB Helmholtz-Zentrum Berlin"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20KIT.svg": {
@@ -317,8 +317,8 @@
   "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png": {
     "path": "img/ref-logos/59759842299eed27.png",
     "source": "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png",
-    "fetched_at": "2026-09-29T15:03:48.548Z",
-    "nocodb_updated_at": "2026-09-29 14:30:05+00:00",
+    "fetched_at": "2026-10-28T15:04:49.563Z",
+    "nocodb_updated_at": "2026-10-28 10:50:08+00:00",
     "name": "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/Gwdg-logo-neu.png": {
@@ -457,8 +457,8 @@
   "https://upload.wikimedia.org/wikipedia/commons/a/a7/Textplus_logo_RGB.svg": {
     "path": "img/ref-logos/30e009bc183841f5.svg",
     "source": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Textplus_logo_RGB.svg",
-    "fetched_at": "2026-10-09T20:59:00.005Z",
-    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
+    "fetched_at": "2026-10-28T15:04:47.603Z",
+    "nocodb_updated_at": "2026-10-28 10:50:09+00:00",
     "name": "Text+"
   },
   "https://upload.wikimedia.org/wikipedia/commons/1/1e/RWTH_Logo_3.svg": {

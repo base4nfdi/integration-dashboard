@@ -105,6 +105,10 @@
         "logo_project": {
           "source": "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
           "nocodb": "img/partner-logos/894cc9cc2ce3e8e2.jpg"
+        },
+        "logo_consortia": {
+          "source": "",
+          "nocodb": "img/partner-logos/b1d11b7ba8108d39.jpg"
         }
       }
     },
@@ -354,7 +358,11 @@
         },
         "logo_project_dark": {
           "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png",
-          "nocodb": "img/partner-logos/b8d87f0070351cee.png"
+          "nocodb": ""
+        },
+        "logo_consortia": {
+          "source": "",
+          "nocodb": "img/partner-logos/d0d61fcba352ef3f.png"
         }
       }
     },

@@ -4,7 +4,7 @@ date = 1970-01-01
 [extra]
 key_article = "ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories"
 basic_service = "TS"
-status = "In preparation"
+status = "Running"
 inc_start = ""
 inc_end = ""
 inc_cycle = 4

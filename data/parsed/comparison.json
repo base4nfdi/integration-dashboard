@@ -1,5 +1,5 @@
 {
-  "compared_at": "2026-10-28T10:23:05.679Z",
+  "compared_at": "2026-10-28T15:04:24.455Z",
   "nocodb_file": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/static/data.json",
   "services": {
     "dmp4nfdi": {
@@ -353,10 +353,6 @@
             "inc_goals": {
               "source": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”. It will also conduct a survey to ask the community about their wishes and needs regarding DMPs and RDMO.",
               "nocodb": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback."
-            },
-            "inc_results": {
-              "source": "Survey results: DMPs – What are our community’s needs? (in German)\n https://doi.org/10.58079/16u2t",
-              "nocodb": ""
             },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
@@ -854,7 +850,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Ing",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "NFDI4Ing"
@@ -869,6 +865,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
               "nocodb": "img/partner-logos/bfa1a3b9daa9e273.png"
@@ -879,7 +879,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Chem",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "NFDI4Chem"
@@ -894,6 +894,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
               "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
@@ -904,7 +908,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — FAIRagro",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "FAIRagro"
@@ -919,6 +923,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
               "nocodb": "img/partner-logos/2605943254a9ad2c.png"
@@ -929,7 +937,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Integration — NFDI4Biodiversity",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "NFDI4Biodiversity"
@@ -944,6 +952,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
               "nocodb": "img/partner-logos/375d18e09586ac41.png"
@@ -954,7 +966,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Culture",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "NFDI4Culture"
@@ -969,6 +981,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
               "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
@@ -979,7 +995,7 @@
           "score": 1.92,
           "source": {
             "inc_name": "RDMO Hosting — MaRDI",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "MaRDI"
@@ -994,6 +1010,10 @@
             ]
           },
           "field_diffs": {
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
+            },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
               "nocodb": "img/partner-logos/5df745c12d212b3a.png"
@@ -1004,7 +1024,7 @@
           "score": 0.718,
           "source": {
             "inc_name": "RDMO Hosting — NFDI4Memory",
-            "inc_cycle": null,
+            "inc_cycle": 0,
             "inc_status": "Finished",
             "partners": [
               "NFDI4Memory"
@@ -1022,6 +1042,10 @@
             "inc_name": {
               "source": "RDMO Hosting — NFDI4Memory",
               "nocodb": "RDMO Hosting — NFDI4Earth"
+            },
+            "inc_cycle": {
+              "source": 0,
+              "nocodb": ""
             },
             "inc_goals": {
               "source": "Develop and deploy an RDMO service for the NFDI4Memory consortium and support the consortium in developing a DMP template.",
@@ -1057,7 +1081,7 @@
         },
         {
           "inc_name": "RDMO Hosting — NFDI4Earth",
-          "inc_cycle": null,
+          "inc_cycle": 0,
           "inc_status": "Finished",
           "partners": [
             "NFDI4Earth"
@@ -1173,6 +1197,10 @@
             "logo_project": {
               "source": "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
               "nocodb": "img/partner-logos/894cc9cc2ce3e8e2.jpg"
+            },
+            "logo_consortia": {
+              "source": "",
+              "nocodb": "img/partner-logos/b1d11b7ba8108d39.jpg"
             }
           }
         },
@@ -1422,7 +1450,11 @@
             },
             "logo_project_dark": {
               "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png",
-              "nocodb": "img/partner-logos/b8d87f0070351cee.png"
+              "nocodb": ""
+            },
+            "logo_consortia": {
+              "source": "",
+              "nocodb": "img/partner-logos/d0d61fcba352ef3f.png"
             }
           }
         },
@@ -2058,7 +2090,7 @@
       },
       "matches": [
         {
-          "score": 2.11,
+          "score": 2.36,
           "source": {
             "inc_name": "RADAR",
             "inc_cycle": 1,
@@ -2070,7 +2102,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "TS in RADAR",
+            "inc_name": "RADAR",
             "inc_cycle": 1,
             "inc_status": "Finished",
             "partners": [
@@ -2080,10 +2112,6 @@
             ]
           },
           "field_diffs": {
-            "inc_name": {
-              "source": "RADAR",
-              "nocodb": "TS in RADAR"
-            },
             "logo_project": {
               "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
               "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
@@ -2091,7 +2119,7 @@
           }
         },
         {
-          "score": 2.12,
+          "score": 1.87,
           "source": {
             "inc_name": "WDCC",
             "inc_cycle": 1,
@@ -2101,7 +2129,7 @@
             ]
           },
           "nocodb": {
-            "inc_name": "WDCC",
+            "inc_name": "WDCC  - World Data Center for Climate",
             "inc_cycle": 1,
             "inc_status": "Finished",
             "partners": [
@@ -2109,6 +2137,10 @@
             ]
           },
           "field_diffs": {
+            "inc_name": {
+              "source": "WDCC",
+              "nocodb": "WDCC  - World Data Center for Climate"
+            },
             "logo_project": {
               "source": "https://terminology.services.base4nfdi.de/img/wdcc.png",
               "nocodb": "img/partner-logos/8ca946e929cc27bc.png"
@@ -2821,7 +2853,7 @@
           "nocodb": {
             "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
             "inc_cycle": 4,
-            "inc_status": "In preparation",
+            "inc_status": "Running",
             "partners": [
               "NFDI4Culture",
               "NFDI4Memory",
@@ -2829,10 +2861,6 @@
             ]
           },
           "field_diffs": {
-            "inc_status": {
-              "source": "Running",
-              "nocodb": "In preparation"
-            },
             "logo_project": {
               "source": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
               "nocodb": "img/partner-logos/db311bd7628d7af5.png"

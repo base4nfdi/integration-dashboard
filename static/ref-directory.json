@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T10:23:21.047Z",
+  "fetched_at": "2026-10-28T15:04:49.564Z",
   "projects": {
     "Sensor Management System": {
       "name": "Sensor Management System",
@@ -435,21 +435,21 @@
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-09 20:20:59+00:00"
+      "updated_at": "2026-10-28 15:04:41+00:00"
     },
     "4earth": {
       "name": "NFDI4Earth",
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-09 20:20:59+00:00"
+      "updated_at": "2026-10-28 15:04:41+00:00"
     },
     "NFDI4Earth": {
       "name": "NFDI4Earth",
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-09 20:20:59+00:00"
+      "updated_at": "2026-10-28 15:04:41+00:00"
     },
     "nfdi4energy": {
       "name": "NFDI4Energy",
@@ -680,28 +680,28 @@
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-10-28 10:50:09+00:00"
     },
     "nfdi-text+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-10-28 10:50:09+00:00"
     },
     "nfditext+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-10-28 10:50:09+00:00"
     },
     "Text+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-10-28 10:50:09+00:00"
     },
     "nfdi consortia at large": {
       "name": "NFDI consortia at large",
@@ -1585,21 +1585,21 @@
       "logo": "img/ref-logos/53918c4e5e862bc4.svg",
       "website": "http://www.helmholtz-berlin.de/",
       "source_logo": "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg",
-      "updated_at": "2026-09-29 14:16:47+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "hzbhelmholtzzentrumberlin": {
       "name": "HZB Helmholtz-Zentrum Berlin",
       "logo": "img/ref-logos/53918c4e5e862bc4.svg",
       "website": "http://www.helmholtz-berlin.de/",
       "source_logo": "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg",
-      "updated_at": "2026-09-29 14:16:47+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "HZB Helmholtz-Zentrum Berlin": {
       "name": "HZB Helmholtz-Zentrum Berlin",
       "logo": "img/ref-logos/53918c4e5e862bc4.svg",
       "website": "http://www.helmholtz-berlin.de/",
       "source_logo": "https://www.helmholtz-berlin.de/media/design/logo/hzb-logo.svg",
-      "updated_at": "2026-09-29 14:16:47+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "gfz": {
       "name": "GFZ",
@@ -1816,21 +1816,21 @@
       "logo": "img/ref-logos/59759842299eed27.png",
       "website": "https://www.ipk-gatersleben.de/en/",
       "source_logo": "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png",
-      "updated_at": "2026-09-29 14:30:05+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "ipkleibnizinstituteofplantgeneticsandcropplantresearch": {
       "name": "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research",
       "logo": "img/ref-logos/59759842299eed27.png",
       "website": "https://www.ipk-gatersleben.de/en/",
       "source_logo": "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png",
-      "updated_at": "2026-09-29 14:30:05+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research": {
       "name": "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research",
       "logo": "img/ref-logos/59759842299eed27.png",
       "website": "https://www.ipk-gatersleben.de/en/",
       "source_logo": "https://www.ipk-gatersleben.de/typo3conf/ext/ipk_gatersleben/Resources/Public/Icons/ipk_logo_en.png",
-      "updated_at": "2026-09-29 14:30:05+00:00"
+      "updated_at": "2026-10-28 10:50:08+00:00"
     },
     "gwdg - gesellschaft für wissenschaftliche datenverarbeitung mbh göttingen": {
       "name": "GWDG - Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen",

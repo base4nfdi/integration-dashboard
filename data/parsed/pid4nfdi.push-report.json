@@ -1,8 +1,8 @@
 {
-  "mode": "dry-run",
+  "mode": "apply",
   "table_id": "mtq40pxpo5p0jmx",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-08-04T12:48:34.158Z",
+  "planned_at": "2026-10-28T15:04:38.111Z",
   "totals": {
     "source": 11,
     "nocodb": 11,

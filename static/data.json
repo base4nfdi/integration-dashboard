@@ -1,11 +1,11 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-10-28T10:23:19.735Z",
+  "fetched_at": "2026-10-28T15:04:43.520Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
       "view_id": null,
-      "count": 101
+      "count": 104
     },
     "user_stories": {
       "table_id": "mtq40pxpo5p0jmx",
@@ -938,7 +938,7 @@
       "key_article": "dmp-rdmo-hosting-nfdi4ing",
       "inc_start": "2024-06-01",
       "inc_end": "2025-09-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Use the NFDI4ING RDMO service as the reference implementation for RDMO hosting in DMP4NFDI and as a foundation for onboarding further clients to the DMP4NFDI service.",
@@ -969,7 +969,7 @@
       "key_article": "dmp-rdmo-hosting-nfdi4chem",
       "inc_start": "2024-06-01",
       "inc_end": "2025-09-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Host and operate the RDMO client for the NFDI4Chem consortium within the DMP4NFDI service and bring it into productive operation.",
@@ -1000,7 +1000,7 @@
       "key_article": "dmp-rdmo-hosting-fairagro",
       "inc_start": "2024-12-01",
       "inc_end": "2025-05-31",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Set up an RDMO client for the FAIRagro consortium that is ready to provide DMP templates to the community.",
@@ -1031,7 +1031,7 @@
       "key_article": "dmp-rdmo-integration-nfdi4biodiversity",
       "inc_start": "2024-06-01",
       "inc_end": "2025-06-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Develop an RDMO plugin that connects the DMP tool to Zenodo, enabling users to publish DMPs as PDFs directly from RDMO.",
@@ -1062,7 +1062,7 @@
       "key_article": "dmp-rdmo-hosting-nfdi4culture",
       "inc_start": "2025-06-01",
       "inc_end": "2025-06-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Host an RDMO tenant for the NFDI4Culture consortium and integrate the consortium’s community AAI as the login mechanism for authentication and authorization. RDMO user permissions should be manageable within the NFDI4Culture community AAI. The resulting service will support researchers, cultural professionals, and cultural heritage institutions.",
@@ -1093,7 +1093,7 @@
       "key_article": "dmp-rdmo-hosting-mardi",
       "inc_start": "2024-09-01",
       "inc_end": "2025-06-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Set up an RDMO client for the MaRDI consortium and integrate the existing MaRDMO plugin, which connects RDMO with the MaRDI knowledge graph infrastructure.",
@@ -1124,7 +1124,7 @@
       "key_article": "dmp-rdmo-hosting-nfdi4earth",
       "inc_start": "2024-06-01",
       "inc_end": "2025-06-30",
-      "inc_cycle": null,
+      "inc_cycle": 0,
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.",
@@ -2974,7 +2974,7 @@
       "inc_start": "",
       "inc_end": "",
       "inc_cycle": 4,
-      "inc_status": "In preparation",
+      "inc_status": "Running",
       "inc_descr": "DAPHNE4NFDI represents the Photon and Neutron (PaN) research community in the German National Research Data Infrastructure (NFDI). The community has developed and maintains the PaNET ontology, a domain ontology that systematises experimental techniques used at e.g. photon and neutron research infrastructure. The PaN community requires a sustainable approach for managing and using terminology mappings while preserving the integrity and governance of the PaNET ontology itself.",
       "inc_goals": "- Separation of mappings from the ontology",
       "inc_results": "",
@@ -3149,6 +3149,99 @@
       "integration_kind": "incubator"
     },
     {
+      "id": 106,
+      "inc_name": "Template Development — Text+",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_project_dark": "",
+      "logo_consortia": "img/partner-logos/db773a275cb2249c.png",
+      "key_article": "dmp-template-development-textplus-2",
+      "inc_start": "2025-09-01",
+      "inc_end": "2025-12-31",
+      "inc_cycle": 0,
+      "inc_status": "Finished",
+      "inc_descr": "",
+      "inc_goals": "The institutions involved in Text+ advise researchers on all steps of the systematic organisation of their research data. Thus, Text+ offers its community a question catalogue for structured planning, which is provided by the eResearch Alliance of the University of Göttingen (access via GRO.Plan, access with Academic ID). Based on the RDMO standard catalogue and the question catalogue of the Max Weber Foundation, the Text+ catalogue was adapted accordingly in collaboration with participants of the consortium, based on the removal of irrelevant questions, the enrichment with subject-specific examples and the integration of suitable plugins. In this incubator project, the compatibility between the Text+ catalogue and the NFDI question catalogue will be ensured, specifying and adjusting the places where the Text+ catalogue is still too generic.",
+      "inc_results": "Text+ RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B\nText+ & DMP4NFDI – FDM als Joint Effort\nhttps://textplus.hypotheses.org/19076",
+      "inc_partner_publications": 0,
+      "inc_activity_type": "",
+      "inc_caai": "",
+      "inc_ownership": "",
+      "inc_service_type": "Template Development",
+      "inc_activity_page": "",
+      "linked_partners": 1,
+      "linked_entities": 0,
+      "partners": [
+        "Text+"
+      ],
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
+    },
+    {
+      "id": 107,
+      "inc_name": "RDMO Hosting — NFDI4Earth",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_project_dark": "",
+      "logo_consortia": "img/partner-logos/fb068dab27f7e96a.png",
+      "key_article": "dmp-rdmo-hosting-nfdi4earth-2",
+      "inc_start": "2024-06-01",
+      "inc_end": "2025-06-30",
+      "inc_cycle": 0,
+      "inc_status": "Finished",
+      "inc_descr": "",
+      "inc_goals": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.",
+      "inc_results": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
+      "inc_partner_publications": 0,
+      "inc_activity_type": "",
+      "inc_caai": "",
+      "inc_ownership": "",
+      "inc_service_type": "RDMO Hosting, Template Development, RDMO Integration",
+      "inc_activity_page": "",
+      "linked_partners": 1,
+      "linked_entities": 0,
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
+    },
+    {
+      "id": 108,
+      "inc_name": "RDMO Hosting — NFDI4Earth",
+      "basic_service": "DMP",
+      "related_institutions": "",
+      "logo_project": "",
+      "logo_project_dark": "",
+      "logo_consortia": "img/partner-logos/fb068dab27f7e96a.png",
+      "key_article": "dmp-rdmo-hosting-nfdi4earth-3",
+      "inc_start": "2024-06-01",
+      "inc_end": "2025-06-30",
+      "inc_cycle": 0,
+      "inc_status": "Finished",
+      "inc_descr": "",
+      "inc_goals": "Set up an RDMO test client for the NFDI4Earth consortium to support the conversion of a community-specific DMP template (MOSES project) into an RDMO catalog. Additionally, support the consortium in developing a plugin that allows users to search sensor databases from within RDMO and import retrieved metadata directly into the DMP.",
+      "inc_results": "RDMO Sensor Search option set plugin\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
+      "inc_partner_publications": 0,
+      "inc_activity_type": "",
+      "inc_caai": "",
+      "inc_ownership": "",
+      "inc_service_type": "RDMO Hosting, Template Development, RDMO Integration",
+      "inc_activity_page": "",
+      "linked_partners": 1,
+      "linked_entities": 0,
+      "partners": [
+        "NFDI4Earth"
+      ],
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
+    },
+    {
       "id": 12,
       "inc_name": "PID Service for Dataset Elements",
       "uc_name": "PID Service for Dataset Elements",
@@ -3212,12 +3305,12 @@
       "inc_service_type": "",
       "inc_activity_page": "",
       "linked_partners": 1,
-      "linked_entities": 1,
+      "linked_entities": 0,
       "partners": [
         "DAPHNE4NFDI"
       ],
       "entities": [
-        "HZB Helmholtz-Zentrum Berlin"
+        "HZB"
       ],
       "source_url": "https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/",
       "uc_labels": "Connection metadata",
@@ -3293,12 +3386,12 @@
       "inc_service_type": "",
       "inc_activity_page": "",
       "linked_partners": 1,
-      "linked_entities": 1,
+      "linked_entities": 0,
       "partners": [
         "FAIRagro"
       ],
       "entities": [
-        "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research"
+        "IPK Gatersleben"
       ],
       "source_url": "https://doi.org/10.5281/zenodo.14506202",
       "uc_labels": "Metadata analysis",
@@ -3585,5 +3678,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-10-28T10:23:21.161Z"
+  "logos_localized_at": "2026-10-28T15:04:49.665Z"
 }

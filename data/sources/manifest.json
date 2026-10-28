@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T10:23:05.226Z",
+  "fetched_at": "2026-10-28T15:04:24.011Z",
   "output_dir": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources",
   "sources": [
     {
@@ -13,7 +13,7 @@
       "content_type": "text/html",
       "status": 200,
       "filename": "page.html",
-      "fetched_at": "2026-10-28T10:23:03.689Z",
+      "fetched_at": "2026-10-28T15:04:22.443Z",
       "bytes": 149388
     },
     {
@@ -27,7 +27,7 @@
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "projects.json",
-      "fetched_at": "2026-10-28T10:23:04.293Z",
+      "fetched_at": "2026-10-28T15:04:23.198Z",
       "bytes": 34348
     },
     {
@@ -41,7 +41,7 @@
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "incubator.md",
-      "fetched_at": "2026-10-28T10:23:04.716Z",
+      "fetched_at": "2026-10-28T15:04:23.680Z",
       "bytes": 46174
     },
     {
@@ -55,7 +55,7 @@
       "content_type": "text/plain; charset=utf-8",
       "status": 200,
       "filename": "use-cases.md",
-      "fetched_at": "2026-10-28T10:23:05.210Z",
+      "fetched_at": "2026-10-28T15:04:24.002Z",
       "bytes": 23269
     }
   ]
