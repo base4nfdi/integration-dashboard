@@ -19,6 +19,7 @@ import {
   httpActivityUrl,
   loadNocoDbRecords,
   normalizeStatus,
+  parseCycle,
   parseDate,
   readJson,
   repoRoot,
@@ -61,10 +62,7 @@ export function parseTsProjects(payload) {
         logo_project: logo,
         inc_start: parseDate(project.start),
         inc_end: parseDate(project.end, { endOfMonth: true }),
-        inc_cycle:
-          project.cycle == null || project.cycle === ""
-            ? null
-            : Number(project.cycle),
+        inc_cycle: parseCycle(project.cycle),
         inc_status: normalizeStatus(project.status),
         inc_descr: String(project.description ?? "").trim(),
         inc_goals: goalsToMarkdown(goals),
