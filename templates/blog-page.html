@@ -46,7 +46,7 @@
         {% endif %}
         {% if service_logo_path %}
         {% set manifest = load_data(path="data/sources/manifest.json") %}
-        {% set source_id = service_code | lower ~ "4nfdi" %}
+        {% set source_id = service_slug ~ "4nfdi" %}
         {% set source_url = "" %}
         {% set source_kind = "" %}
         {% for source in manifest.sources %}
