@@ -16,6 +16,7 @@ import {
   buildParsedPayload,
   compareWithNocoDb,
   emptyRecord,
+  formatCycleLabel,
   loadNocoDbRecords,
   normalizeStatus,
   parseCycle,
@@ -50,7 +51,10 @@ function sectionHtml(cardHtml, heading) {
 
 function resultsFromHtml(html) {
   if (!html) return "";
-  const links = [...html.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
+  const cleaned = String(html)
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<!--[\s\S]*$/g, "");
+  const links = [...cleaned.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/gi)];
   if (links.length) {
     return links
       .map((m) => {
@@ -59,7 +63,7 @@ function resultsFromHtml(html) {
       })
       .join("\n");
   }
-  return stripHtml(html);
+  return stripHtml(cleaned);
 }
 
 function deriveName({ alt, partners, service, goals }) {
@@ -165,6 +169,7 @@ export function parseDmpMarkdown(markdown) {
           inc_start: start,
           inc_end: end,
           inc_cycle,
+          inc_cycle_label: formatCycleLabel(cycleRaw, inc_cycle),
           inc_status: normalizeStatus(status),
           // DMP pages put the narrative under "Goal"; map to inc_goals to match NocoDB.
           inc_goals: stripHtml(goalsHtml),
@@ -172,8 +177,6 @@ export function parseDmpMarkdown(markdown) {
           inc_service_type: service,
           partners,
           linked_partners: partners.length,
-          source_service_type: service,
-          source_cycle_label: cycleRaw,
         })
       )
     );

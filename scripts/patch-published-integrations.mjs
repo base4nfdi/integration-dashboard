@@ -91,6 +91,7 @@ const INCUBATOR_BLANK_FIELDS = [
   "inc_start",
   "inc_end",
   "inc_cycle",
+  "inc_cycle_label",
   "inc_goals",
   "inc_results",
   "inc_activity_type",
@@ -248,6 +249,36 @@ function descriptionUpdate(sourceText, storedText) {
   return null;
 }
 
+/**
+ * Fill empty results or replace when the source adds links the stored text lacks.
+ */
+function resultsUpdate(sourceText, storedText) {
+  const source = String(sourceText ?? "").trim();
+  const stored = String(storedText ?? "").trim();
+  if (!source) return null;
+  if (!stored) return source;
+  if (source === stored) return null;
+
+  if (stored.includes("<!--") && compact(stored).startsWith(compact(source))) {
+    return source;
+  }
+
+  const prefix = descriptionUpdate(source, stored);
+  if (prefix) return prefix;
+
+  const urlRe = /https?:\/\/[^\s]+/gi;
+  const sourceUrls = new Set([...source.matchAll(urlRe)].map((m) => m[0]));
+  const storedUrls = [...stored.matchAll(urlRe)].map((m) => m[0]);
+  if (
+    storedUrls.length > 0 &&
+    storedUrls.every((url) => sourceUrls.has(url)) &&
+    sourceUrls.size > storedUrls.length
+  ) {
+    return source;
+  }
+  return null;
+}
+
 function statusUpdate(source, noco) {
   const current = asString(noco.inc_status).trim();
   const sourceStatus = asString(source.inc_status).trim();
@@ -348,6 +379,7 @@ function normalizeIncubator(raw) {
     inc_start: asString(raw.inc_start),
     inc_end: asString(raw.inc_end),
     inc_cycle: raw.inc_cycle ?? null,
+    inc_cycle_label: asString(raw.inc_cycle_label),
     inc_status: asString(raw.inc_status),
     inc_descr: asString(raw.inc_descr),
     uc_descr: "",
@@ -457,6 +489,17 @@ function buildRowPatch(source, noco, table, partnerIndex) {
     if (patch.inc_descr || patch.uc_descr) {
       reasons.push(isBlank(displayed) ? "fill:inc_descr" : "extend:inc_descr");
     }
+  }
+
+  const nextResults = resultsUpdate(
+    asString(source.inc_results),
+    asString(noco.inc_results)
+  );
+  if (nextResults && compact(asString(noco.inc_results)) !== compact(nextResults)) {
+    patch.inc_results = nextResults;
+    reasons.push(
+      isBlank(noco.inc_results) ? "fill:inc_results" : "extend:inc_results"
+    );
   }
 
   if (table === INCUBATORS_TABLE) {

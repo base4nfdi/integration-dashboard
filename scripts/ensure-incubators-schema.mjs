@@ -45,6 +45,11 @@ const DESIRED_COLUMNS = [
     title: "inc_activity_page",
     uidt: "URL",
   },
+  {
+    column_name: "inc_cycle_label",
+    title: "inc_cycle_label",
+    uidt: "SingleLineText",
+  },
 ];
 
 function loadDotEnv() {

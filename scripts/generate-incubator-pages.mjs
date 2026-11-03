@@ -13,7 +13,11 @@
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { loadNocoDbRecords, repoRoot } from "./lib/parse-utils.mjs";
+import {
+  formatCycleLabel,
+  loadNocoDbRecords,
+  repoRoot,
+} from "./lib/parse-utils.mjs";
 
 const DEFAULT_DATA = join(repoRoot, "static/data.json");
 const DEFAULT_OUT_DIR = join(repoRoot, "content/integrations");
@@ -78,6 +82,7 @@ function asUrl(value) {
 function cleanText(value) {
   return asText(value)
     .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<!--[\s\S]*$/g, "")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
@@ -168,11 +173,20 @@ function buildFrontMatter(record, keyArticle) {
     `status = ${tomlString(asInline(record.inc_status))}`,
     `inc_start = ${tomlString(asInline(record.inc_start))}`,
     `inc_end = ${tomlString(asInline(record.inc_end))}`,
-    `inc_cycle = ${
-      record.inc_cycle == null || record.inc_cycle === ""
-        ? "0"
-        : Number(record.inc_cycle)
-    }`,
+  ];
+
+  if (record.inc_cycle != null && record.inc_cycle !== "") {
+    lines.push(`inc_cycle = ${Number(record.inc_cycle)}`);
+  }
+  const cycleLabel = formatCycleLabel(
+    record.inc_cycle_label,
+    record.inc_cycle
+  );
+  if (cycleLabel) {
+    lines.push(`inc_cycle_label = ${tomlString(asInline(cycleLabel))}`);
+  }
+
+  lines.push(
     `inc_partner_publications = ${
       Number.isFinite(Number(record.inc_partner_publications))
         ? Number(record.inc_partner_publications)
@@ -187,8 +201,8 @@ function buildFrontMatter(record, keyArticle) {
       record.linked_entities == null || record.linked_entities === ""
         ? 0
         : Number(record.linked_entities)
-    }`,
-  ];
+    }`
+  );
 
   const partners = (Array.isArray(record.partners) ? record.partners : [])
     .map((p) => asInline(p))
