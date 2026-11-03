@@ -219,8 +219,11 @@
     {% set inc_status = page.extra.status | default(value="") %}
     {% set inc_start = page.extra.inc_start | default(value="") %}
     {% set inc_end = page.extra.inc_end | default(value="") %}
-    {% set has_cycle = page.extra.inc_cycle is defined %}
-    {% set inc_cycle = page.extra.inc_cycle %}
+    {% set cycle_label = page.extra.inc_cycle_label | default(value="") %}
+    {% if not cycle_label and page.extra.inc_cycle is defined and page.extra.basic_service != "PID" %}
+      {% set cycle_label = "Cycle " ~ page.extra.inc_cycle %}
+    {% endif %}
+    {% set has_cycle = cycle_label %}
     {% set inc_activity = page.extra.inc_activity_type | default(value="") %}
     {% set inc_caai = page.extra.inc_caai | default(value="") %}
     {% set inc_service_type = page.extra.inc_service_type | default(value="") %}
@@ -237,7 +240,7 @@
         {% if has_cycle %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Cycle</span>
-          <span class="blog-post-overview-chip-value">{{ inc_cycle }}</span>
+          <span class="blog-post-overview-chip-value">{{ cycle_label }}</span>
         </li>
         {% endif %}
         {% if inc_activity %}

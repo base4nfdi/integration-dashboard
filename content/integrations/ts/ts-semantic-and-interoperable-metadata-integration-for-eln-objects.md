@@ -8,6 +8,7 @@ status = "In preparation"
 inc_start = ""
 inc_end = ""
 inc_cycle = 5
+inc_cycle_label = "Cycle 5"
 inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0

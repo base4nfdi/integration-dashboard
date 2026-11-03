@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-28T15:11:13.998Z",
+  "fetched_at": "2026-10-29T13:32:34.205Z",
   "projects": {
     "Sensor Management System": {
       "name": "Sensor Management System",
@@ -435,21 +435,21 @@
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-28 15:04:41+00:00"
+      "updated_at": "2026-10-29 13:22:57+00:00"
     },
     "4earth": {
       "name": "NFDI4Earth",
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-28 15:04:41+00:00"
+      "updated_at": "2026-10-29 13:22:57+00:00"
     },
     "NFDI4Earth": {
       "name": "NFDI4Earth",
       "logo": "img/ref-logos/d2899f44796b9a2d.png",
       "website": "https://www.nfdi4earth.de",
       "source_logo": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png",
-      "updated_at": "2026-10-28 15:04:41+00:00"
+      "updated_at": "2026-10-29 13:22:57+00:00"
     },
     "nfdi4energy": {
       "name": "NFDI4Energy",
@@ -540,21 +540,21 @@
       "logo": "img/ref-logos/064aab3e96c71423.svg",
       "website": "https://4memory.de/",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg",
-      "updated_at": "2026-10-09 20:21:05+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "4memory": {
       "name": "NFDI4Memory",
       "logo": "img/ref-logos/064aab3e96c71423.svg",
       "website": "https://4memory.de/",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg",
-      "updated_at": "2026-10-09 20:21:05+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "NFDI4Memory": {
       "name": "NFDI4Memory",
       "logo": "img/ref-logos/064aab3e96c71423.svg",
       "website": "https://4memory.de/",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo%20NFDI4Memory.svg",
-      "updated_at": "2026-10-09 20:21:05+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "nfdi4microbiota": {
       "name": "NFDI4Microbiota",
@@ -582,28 +582,28 @@
       "logo": "img/ref-logos/83ae5ea177c95650.png",
       "website": "https://nfdi-matwerk.de",
       "source_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "updated_at": "2026-10-09 15:08:19+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "matwerk": {
       "name": "NFDI-MatWerk",
       "logo": "img/ref-logos/83ae5ea177c95650.png",
       "website": "https://nfdi-matwerk.de",
       "source_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "updated_at": "2026-10-09 15:08:19+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "nfdimatwerk": {
       "name": "NFDI-MatWerk",
       "logo": "img/ref-logos/83ae5ea177c95650.png",
       "website": "https://nfdi-matwerk.de",
       "source_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "updated_at": "2026-10-09 15:08:19+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "NFDI-MatWerk": {
       "name": "NFDI-MatWerk",
       "logo": "img/ref-logos/83ae5ea177c95650.png",
       "website": "https://nfdi-matwerk.de",
       "source_logo": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
-      "updated_at": "2026-10-09 15:08:19+00:00"
+      "updated_at": "2026-10-29 13:32:23+00:00"
     },
     "nfdi4objects": {
       "name": "NFDI4Objects",
@@ -680,28 +680,28 @@
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-28 10:50:09+00:00"
+      "updated_at": "2026-10-29 13:20:06+00:00"
     },
     "nfdi-text+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-28 10:50:09+00:00"
+      "updated_at": "2026-10-29 13:20:06+00:00"
     },
     "nfditext+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-28 10:50:09+00:00"
+      "updated_at": "2026-10-29 13:20:06+00:00"
     },
     "Text+": {
       "name": "Text+",
       "logo": "img/ref-logos/30e009bc183841f5.svg",
       "website": "https://www.text-plus.org",
       "source_logo": "https://commons.wikimedia.org/wiki/Special:FilePath/Textplus%20logo%20RGB.svg",
-      "updated_at": "2026-10-28 10:50:09+00:00"
+      "updated_at": "2026-10-29 13:20:06+00:00"
     },
     "nfdi consortia at large": {
       "name": "NFDI consortia at large",

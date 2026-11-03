@@ -126,6 +126,7 @@ export function emptyRecord(overrides = {}) {
     inc_start: "",
     inc_end: "",
     inc_cycle: null,
+    inc_cycle_label: "",
     inc_status: "",
     inc_descr: "",
     inc_goals: "",
@@ -153,6 +154,8 @@ export function emptyRecord(overrides = {}) {
 
 export function stripHtml(html) {
   return String(html ?? "")
+    .replace(/<!--[\s\S]*?-->/g, "")
+    .replace(/<!--[\s\S]*$/g, "")
     .replace(/<br\s*\/?>/gi, "\n")
     .replace(/<\/(p|div|li|h[1-6]|tr)>/gi, "\n")
     .replace(/<[^>]+>/g, "")
@@ -259,6 +262,19 @@ export function parseCycle(value) {
   const m = raw.match(/cycle\s*(\d+)/i) || raw.match(/^(\d+)$/);
   if (!m) return null;
   return Number(m[1]);
+}
+
+/**
+ * Human-readable cycle label for detail pages (from source text or numeric cycle).
+ * DMP uses "Initialisation phase" for the pre–Cycle 0 era; IAM/TS use "Cycle N".
+ */
+export function formatCycleLabel(sourceCycleLabel, incCycle) {
+  const raw = String(sourceCycleLabel ?? "").trim();
+  if (raw) return raw;
+  if (incCycle == null || incCycle === "") return "";
+  const n = Number(incCycle);
+  if (!Number.isFinite(n)) return "";
+  return `Cycle ${n}`;
 }
 
 /** Map source-specific status labels onto NocoDB vocabulary where possible. */
@@ -440,36 +456,61 @@ export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
     for (let i = 0; i < nocos.length; i++) {
       if (usedNoco.has(i)) continue;
       const noco = nocos[i];
-      let score = jaccard(srcTokens, tokenSet(noco.inc_name));
-      if (normName(src.inc_name) === normName(noco.inc_name)) score = 1;
-      else if (
-        normName(src.inc_name).includes(normName(noco.inc_name)) ||
-        normName(noco.inc_name).includes(normName(src.inc_name))
-      ) {
-        score = Math.max(score, 0.75);
-      }
-
       const nocoPartners = new Set(
         (noco.partners ?? []).map((p) => String(p).toLowerCase())
       );
       const partnerOverlap = [...srcPartners].filter((p) =>
         nocoPartners.has(p)
       ).length;
-      if (partnerOverlap > 0) score += 0.12 * partnerOverlap;
+      const exactName = normName(src.inc_name) === normName(noco.inc_name);
+      const partnerOk = partnerOverlap > 0 || exactName;
 
-      if (
-        src.inc_cycle != null &&
-        noco.inc_cycle != null &&
-        Number(src.inc_cycle) === Number(noco.inc_cycle)
+      let score = jaccard(srcTokens, tokenSet(noco.inc_name));
+      if (exactName) score = 1;
+      else if (
+        partnerOk &&
+        (normName(src.inc_name).includes(normName(noco.inc_name)) ||
+          normName(noco.inc_name).includes(normName(src.inc_name)))
       ) {
-        score += 0.2;
+        score = Math.max(score, 0.75);
       }
 
-      const nocoGoals = tokenSet(
-        `${noco.inc_goals ?? ""} ${noco.inc_descr ?? ""}`
-      );
-      const goalScore = jaccard(srcGoals, nocoGoals);
-      if (goalScore >= 0.25) score += goalScore * 0.8;
+      if (partnerOverlap > 0) score += 0.12 * partnerOverlap;
+      else if (!exactName) score = Math.min(score, 0.35);
+
+      if (partnerOk) {
+        if (
+          src.inc_cycle != null &&
+          noco.inc_cycle != null &&
+          Number(src.inc_cycle) === Number(noco.inc_cycle)
+        ) {
+          score += 0.2;
+        }
+
+        if (
+          src.inc_start &&
+          noco.inc_start &&
+          String(src.inc_start).trim() === String(noco.inc_start).trim()
+        ) {
+          score += 0.35;
+        }
+
+        const srcService = String(src.inc_service_type ?? "")
+          .trim()
+          .toLowerCase();
+        const nocoService = String(noco.inc_service_type ?? "")
+          .trim()
+          .toLowerCase();
+        if (srcService && nocoService && srcService === nocoService) {
+          score += 0.25;
+        }
+
+        const nocoGoals = tokenSet(
+          `${noco.inc_goals ?? ""} ${noco.inc_descr ?? ""}`
+        );
+        const goalScore = jaccard(srcGoals, nocoGoals);
+        if (goalScore >= 0.25) score += goalScore * 0.8;
+      }
 
       // Partner + cycle alone can identify hand-named NocoDB rows.
       if (
@@ -544,6 +585,7 @@ const COMPARE_FIELDS = [
   "inc_name",
   "inc_status",
   "inc_cycle",
+  "inc_cycle_label",
   "inc_start",
   "inc_end",
   "inc_descr",

@@ -8,6 +8,7 @@ status = "Finished"
 inc_start = "2025-07-01"
 inc_end = "2026-05-31"
 inc_cycle = 1
+inc_cycle_label = "Cycle 0, Cycle 1"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
@@ -23,8 +24,10 @@ NFDI4Chem has a productive RDMO client with a DMP template that has been optimis
 
 ## Results
 
-Training Guide for DMP Workshops
+Training Guideline – How to Plan and Run a Workshop on Data Management Plans
 - [https://doi.org/10.5281/zenodo.20529135](https://doi.org/10.5281/zenodo.20529135)
+OER – DMP Writing Made Easy: A Hands-on Workshop for Chemists
+- [https://doi.org/10.5281/zenodo.18349878](https://doi.org/10.5281/zenodo.18349878)
 
 ## Partners & entities
 

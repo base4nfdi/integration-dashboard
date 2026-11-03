@@ -8,6 +8,7 @@ status = "Finished"
 inc_start = "2025-09-01"
 inc_end = "2025-12-31"
 inc_cycle = 0
+inc_cycle_label = "Cycle 0"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
@@ -25,6 +26,8 @@ The institutions involved in Text+ advise researchers on all steps of the system
 
 Text+ RDMO Catalog
 - [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B)
+Text+ & DMP4NFDI – FDM als Joint Effort
+- [https://textplus.hypotheses.org/19076](https://textplus.hypotheses.org/19076)
 
 ## Partners & entities
 

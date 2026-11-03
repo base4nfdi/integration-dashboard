@@ -8,6 +8,7 @@ status = "Finished"
 inc_start = "2025-09-01"
 inc_end = "2025-12-31"
 inc_cycle = 0
+inc_cycle_label = "Cycle 0"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
@@ -24,8 +25,6 @@ Implementing an RDMO client to serve the consortium’s research data management
 ## Results
 
 Test client ready; productive client in preparation
-
-              <!--
 
 ## Partners & entities
 

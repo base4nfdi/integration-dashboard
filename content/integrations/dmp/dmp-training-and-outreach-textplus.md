@@ -8,6 +8,7 @@ status = "Finished"
 inc_start = "2026-01-01"
 inc_end = "2026-06-30"
 inc_cycle = 1
+inc_cycle_label = "Cycle 1"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0

@@ -74,6 +74,7 @@ const WRITE_FIELDS = [
   "inc_start",
   "inc_end",
   "inc_cycle",
+  "inc_cycle_label",
   "inc_status",
   "inc_descr",
   "inc_goals",

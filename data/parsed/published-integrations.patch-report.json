@@ -1,22 +1,22 @@
 {
   "mode": "apply",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-10-28T15:11:09.760Z",
+  "planned_at": "2026-10-29T13:32:22.915Z",
   "totals": {
-    "to_patch": 7,
-    "will_patch": 7,
+    "to_patch": 9,
+    "will_patch": 9,
     "status_finished": 0,
     "status_changed": 0,
     "descriptions_extended": 0,
-    "partner_links": 0
+    "partner_links": 2
   },
   "by_source": {
     "dmp4nfdi": {
-      "to_patch": 0,
-      "will_patch": 0,
+      "to_patch": 2,
+      "will_patch": 2,
       "status_finished": 0,
       "status_changed": 0,
-      "partner_links": 0
+      "partner_links": 2
     },
     "iam4nfdi": {
       "to_patch": 2,
@@ -41,6 +41,36 @@
     }
   },
   "records": [
+    {
+      "source": "dmp4nfdi",
+      "table": "incubators",
+      "id": 109,
+      "inc_name": "Template Development — MatWerk",
+      "key_article": "dmp-template-development-matwerk",
+      "reasons": [
+        "link:partners"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [
+        23
+      ],
+      "patch": {}
+    },
+    {
+      "source": "dmp4nfdi",
+      "table": "incubators",
+      "id": 110,
+      "inc_name": "RDMO Hosting — NFDI4Memory",
+      "key_article": "dmp-rdmo-hosting-nfdi4memory",
+      "reasons": [
+        "link:partners"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [
+        21
+      ],
+      "patch": {}
+    },
     {
       "source": "iam4nfdi",
       "table": "incubators",
