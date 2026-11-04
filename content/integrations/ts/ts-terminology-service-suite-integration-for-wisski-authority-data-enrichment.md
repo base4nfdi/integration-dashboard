@@ -1,11 +1,11 @@
 +++
 title = "Terminology Service Suite integration for WissKI authority data enrichment"
-date = 1970-01-01
+date = 2026-09-09
 [extra]
 key_article = "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment"
 basic_service = "TS"
 status = "Running"
-inc_start = ""
+inc_start = "2026-09-09"
 inc_end = ""
 inc_cycle = 4
 inc_cycle_label = "Cycle 4"

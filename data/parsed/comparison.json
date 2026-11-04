@@ -1,12 +1,12 @@
 {
-  "compared_at": "2026-10-29T13:32:01.681Z",
+  "compared_at": "2026-11-04T00:25:02.538Z",
   "nocodb_file": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/static/data.json",
   "services": {
     "dmp4nfdi": {
       "source": 33,
-      "nocodb": 31,
-      "matched": 31,
-      "only_in_source": 2,
+      "nocodb": 33,
+      "matched": 33,
+      "only_in_source": 0,
       "only_in_nocodb": 0
     },
     "iam4nfdi": {
@@ -19,9 +19,9 @@
     "ts4nfdi": {
       "source": 31,
       "nocodb": 31,
-      "matched": 31,
-      "only_in_source": 0,
-      "only_in_nocodb": 0
+      "matched": 30,
+      "only_in_source": 1,
+      "only_in_nocodb": 1
     },
     "pid4nfdi": {
       "source": 11,
@@ -36,9 +36,9 @@
       "basic_service": "DMP",
       "counts": {
         "source": 33,
-        "nocodb": 31,
-        "matched": 31,
-        "only_in_source": 2,
+        "nocodb": 33,
+        "matched": 33,
+        "only_in_source": 0,
         "only_in_nocodb": 0
       },
       "matches": [
@@ -76,6 +76,10 @@
                 "NFDI4Chem",
                 "NFDI4Culture"
               ]
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/radar-4chem-4culture_logo.png",
+              "nocodb": "img/partner-logos/79d79017d3100d9d.png"
             }
           }
         },
@@ -97,7 +101,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+              "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
+            }
+          }
         },
         {
           "score": 1.863,
@@ -124,7 +133,40 @@
             },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
-              "nocodb": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg"
+              "nocodb": "img/partner-logos/a755e82e7aec255a.svg"
+            }
+          }
+        },
+        {
+          "score": 2.6,
+          "source": {
+            "inc_name": "Template Development — MatWerk",
+            "inc_cycle": 2,
+            "inc_status": "Running",
+            "partners": [
+              "MatWerk"
+            ]
+          },
+          "nocodb": {
+            "inc_name": "Template Development — MatWerk",
+            "inc_cycle": 2,
+            "inc_status": "Running",
+            "partners": [
+              "NFDI-MatWerk"
+            ]
+          },
+          "field_diffs": {
+            "partners": {
+              "source": [
+                "MatWerk"
+              ],
+              "nocodb": [
+                "NFDI-MatWerk"
+              ]
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
+              "nocodb": "img/partner-logos/83ae5ea177c95650.png"
             }
           }
         },
@@ -146,7 +188,12 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+              "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
+            }
+          }
         },
         {
           "score": 1.82,
@@ -177,7 +224,7 @@
             },
             "logo_consortia": {
               "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
-              "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+              "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
             }
           }
         },
@@ -203,6 +250,10 @@
             "inc_name": {
               "source": "FAIRmat",
               "nocodb": "FAIRmat RDMO Client for the Physical Sciences"
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/psinnfdi_logo.png",
+              "nocodb": "img/partner-logos/7613ba801eafb62e.png"
             }
           }
         },
@@ -224,7 +275,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/coscine-4ing_logo.png",
+              "nocodb": "img/partner-logos/973257d523b9c266.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -244,7 +300,12 @@
               "FAIRagro"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+              "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+            }
+          }
         },
         {
           "score": 2.52,
@@ -268,13 +329,17 @@
             "inc_goals": {
               "source": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”. It will also conduct a survey to ask the community about their wishes and needs regarding DMPs and RDMO.",
               "nocodb": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback."
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
+              "nocodb": "img/partner-logos/db773a275cb2249c.png"
             }
           }
         },
         {
-          "score": 2.72,
+          "score": 1.67,
           "source": {
-            "inc_name": "Training & Outreach — NFDI4Cat",
+            "inc_name": "Template Development — NFDI4Cat",
             "inc_cycle": 1,
             "inc_status": "Finished",
             "partners": [
@@ -289,7 +354,20 @@
               "NFDI4Cat"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_name": {
+              "source": "Template Development — NFDI4Cat",
+              "nocodb": "Training & Outreach — NFDI4Cat"
+            },
+            "inc_service_type": {
+              "source": "Template Development",
+              "nocodb": "Training & Outreach, Template Development"
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
+              "nocodb": "img/partner-logos/77459895f95007f0.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -313,6 +391,10 @@
             "inc_service_type": {
               "source": "Template Development",
               "nocodb": "Template Development, RDMO Hosting"
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+              "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
             }
           }
         },
@@ -334,7 +416,12 @@
               "MaRDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+              "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -354,7 +441,12 @@
               "NFDI4Microbiota"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4microbiota_logo.png",
+              "nocodb": "img/partner-logos/68e3cc17e1554305.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -374,7 +466,12 @@
               "NFDI4Energy"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4energy_logo.png",
+              "nocodb": "img/partner-logos/f4255b2203c83db4.png"
+            }
+          }
         },
         {
           "score": 2.6,
@@ -402,6 +499,10 @@
               "nocodb": [
                 "NFDI-MatWerk"
               ]
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi-matwerk_logo.png",
+              "nocodb": "img/partner-logos/83ae5ea177c95650.png"
             }
           }
         },
@@ -423,7 +524,12 @@
               "NFDI4BIOIMAGE"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4bioimage_logo.png",
+              "nocodb": "img/partner-logos/bd284640d067a489.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -443,7 +549,12 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
+              "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -463,7 +574,12 @@
               "MaRDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+              "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -483,7 +599,12 @@
               "NFDI4Culture"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
+              "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -503,7 +624,12 @@
               "NFDI4Memory"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
+              "nocodb": "img/partner-logos/e8e523c5867ae478.png"
+            }
+          }
         },
         {
           "score": 2.84,
@@ -539,6 +665,10 @@
                 "NFDI4Culture",
                 "NFDI4Objects"
               ]
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4objects_nfdi4culture_logo.png",
+              "nocodb": "img/partner-logos/800a8c236b604f34.png"
             }
           }
         },
@@ -560,7 +690,12 @@
               "FAIRagro"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+              "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -580,7 +715,12 @@
               "Text+"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
+              "nocodb": "img/partner-logos/db773a275cb2249c.png"
+            }
+          }
         },
         {
           "score": 2.606,
@@ -604,6 +744,10 @@
             "inc_goals": {
               "source": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI will support the consortium by providing training materials and a training guide for data stewards. Based on the Train-the-Trainer concept for DMPs and RDMO, the guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
               "nocodb": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO."
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+              "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
             }
           }
         },
@@ -625,7 +769,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4ing_logo.png",
+              "nocodb": "img/partner-logos/bfa1a3b9daa9e273.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -645,7 +794,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
+              "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -665,7 +819,12 @@
               "FAIRagro"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/fairagro_logo.png",
+              "nocodb": "img/partner-logos/2605943254a9ad2c.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -685,7 +844,12 @@
               "NFDI4Biodiversity"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4biodiversity_logo.png",
+              "nocodb": "img/partner-logos/375d18e09586ac41.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -705,7 +869,12 @@
               "NFDI4Culture"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4culture_logo.png",
+              "nocodb": "img/partner-logos/67e627866c4ac8d4.png"
+            }
+          }
         },
         {
           "score": 2.72,
@@ -725,7 +894,37 @@
               "MaRDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/mardi_logo.png",
+              "nocodb": "img/partner-logos/5df745c12d212b3a.png"
+            }
+          }
+        },
+        {
+          "score": 2.72,
+          "source": {
+            "inc_name": "RDMO Hosting — NFDI4Memory",
+            "inc_cycle": 0,
+            "inc_status": "Finished",
+            "partners": [
+              "NFDI4Memory"
+            ]
+          },
+          "nocodb": {
+            "inc_name": "RDMO Hosting — NFDI4Memory",
+            "inc_cycle": 0,
+            "inc_status": "Finished",
+            "partners": [
+              "NFDI4Memory"
+            ]
+          },
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4memory_logo.png",
+              "nocodb": "img/partner-logos/e8e523c5867ae478.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -749,28 +948,15 @@
             "inc_service_type": {
               "source": "RDMO Hosting, Template Development, RDMO Integration",
               "nocodb": "RDMO Hosting, Template Development"
+            },
+            "logo_consortia": {
+              "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
+              "nocodb": "img/partner-logos/fb068dab27f7e96a.png"
             }
           }
         }
       ],
-      "only_in_source": [
-        {
-          "inc_name": "Template Development — MatWerk",
-          "inc_cycle": 2,
-          "inc_status": "Running",
-          "partners": [
-            "MatWerk"
-          ]
-        },
-        {
-          "inc_name": "RDMO Hosting — NFDI4Memory",
-          "inc_cycle": 0,
-          "inc_status": "Finished",
-          "partners": [
-            "NFDI4Memory"
-          ]
-        }
-      ],
+      "only_in_source": [],
       "only_in_nocodb": []
     },
     "iam4nfdi": {
@@ -801,7 +987,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
+              "nocodb": "img/partner-logos/a755e82e7aec255a.svg"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -825,6 +1016,10 @@
                 "TS4NFDI"
               ],
               "nocodb": []
+            },
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/TS4NFDI-small-grey.svg",
+              "nocodb": "img/partner-logos/7066e8efa3e09180.svg"
             }
           }
         },
@@ -846,6 +1041,10 @@
             "inc_goals": {
               "source": "",
               "nocodb": "We aim for a broadly available authorisation process to gain access to our services that implements the use of existing AAI-solutions.\n\nFor users who are not affiliated with any community providing an AAI-service, an alternative solution is required, e.g. to register for our trainings and gain access to course material. The overarching goal is to make our services available to a broad range of users from both academic and non-academic (e.g. industrial, general public) backgrounds."
+            },
+            "logo_consortia": {
+              "source": "https://come2data.de/wp-content/uploads/2025/07/theme-logo.svg",
+              "nocodb": "img/partner-logos/1ab32a56f53adec2.svg"
             }
           }
         },
@@ -864,9 +1063,13 @@
             "partners": []
           },
           "field_diffs": {
+            "logo_project": {
+              "source": "https://agimo-trr408.de/files/medien/01_Logo/AgiMo_Tagline_Full_Version.jpg",
+              "nocodb": "img/partner-logos/894cc9cc2ce3e8e2.jpg"
+            },
             "logo_consortia": {
               "source": "",
-              "nocodb": "https://incubators.nfdi-aai.de/images/missing.jpg"
+              "nocodb": "img/partner-logos/b1d11b7ba8108d39.jpg"
             }
           }
         },
@@ -888,7 +1091,12 @@
               "NFDI4Cat"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://gitlab.com/LARAsuite/lara/-/raw/master/docs/images/lara/LARA_logo.svg",
+              "nocodb": "img/partner-logos/0138f0aa96f01d85.svg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -908,7 +1116,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4ing.jpg",
+              "nocodb": "img/partner-logos/8c7cff3511f4a43e.jpg"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -936,6 +1149,10 @@
               "nocodb": [
                 "NFDI-MatWerk"
               ]
+            },
+            "logo_consortia": {
+              "source": "https://github.com/c3di/chaldene/blob/master/logo_128x128.png?raw=true",
+              "nocodb": "img/partner-logos/e83a727a08cc1255.png"
             }
           }
         },
@@ -961,6 +1178,10 @@
                 "NFDIDIREKTORAT"
               ],
               "nocodb": []
+            },
+            "logo_consortia": {
+              "source": "https://www.nfdi.de/wp-content/uploads/2022/02/nfdi_rgb_Wortmarke.png",
+              "nocodb": "img/partner-logos/f83b03fb95b50002.png"
             }
           }
         },
@@ -982,7 +1203,12 @@
               "BERD@NFDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png",
+              "nocodb": "img/partner-logos/3202b19d32c12245.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1002,7 +1228,12 @@
               "NFDI4Biodiversity"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/gfbio_logo.svg",
+              "nocodb": "img/partner-logos/f61f8959c019299f.svg"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1018,7 +1249,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://simplevm.github.io/assets/images/SimpleVM_New.svg",
+              "nocodb": "img/partner-logos/3ed37396264f7d68.svg"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1034,7 +1270,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://gitlab.ub.uni-bielefeld.de/cmg/clowm/clowm-ui/-\n/raw/main/src/assets/images/clowm.svg",
+              "nocodb": "img/partner-logos/2f8f0030e7abc9b2.svg"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1050,7 +1291,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/dalia-logo.png",
+              "nocodb": "img/partner-logos/764ee5bf54a00a8d.png"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1067,13 +1313,17 @@
             "partners": []
           },
           "field_diffs": {
+            "logo_project": {
+              "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_dark.png",
+              "nocodb": "img/partner-logos/bee5ca03af1f45cc.png"
+            },
             "logo_project_dark": {
               "source": "https://raw.githubusercontent.com/arunaengine/aruna/main/img/logo_white.png",
               "nocodb": ""
             },
             "logo_consortia": {
               "source": "",
-              "nocodb": "https://github.com/arunaengine/.github/blob/main/profile/img/aruna_white_font.png?raw=true"
+              "nocodb": "img/partner-logos/d0d61fcba352ef3f.png"
             }
           }
         },
@@ -1091,7 +1341,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://base4nfdi.de/images/nicepage-images/Jupyter4NFDI.png",
+              "nocodb": "img/partner-logos/aa41a5de474f8b31.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1111,7 +1366,12 @@
               "NFDI4Biodiversity"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/biigle-logo.png",
+              "nocodb": "img/partner-logos/9398849c5f7f7a6a.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1131,7 +1391,12 @@
               "NFDI4Objects"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/wisski-logo.png",
+              "nocodb": "img/partner-logos/8f12974d9657557b.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1151,7 +1416,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4chem-logo.png",
+              "nocodb": "img/partner-logos/05ec8f1cfadfe6cb.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1171,7 +1441,12 @@
               "NFDI4Energy"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/open-energy-platform.png",
+              "nocodb": "img/partner-logos/6d20ebd08f1e9754.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1191,7 +1466,12 @@
               "FAIRmat"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nomad-logo.jpg",
+              "nocodb": "img/partner-logos/f800628bef34deca.jpg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1211,7 +1491,12 @@
               "NFDI4Cat"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4cat.svg",
+              "nocodb": "img/partner-logos/172c50564a8df4be.svg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1231,7 +1516,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4ing.jpg",
+              "nocodb": "img/partner-logos/8c7cff3511f4a43e.jpg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1251,7 +1541,12 @@
               "KonsortSWD"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/forum4mica.png",
+              "nocodb": "img/partner-logos/452aa84a3edd4de7.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1271,7 +1566,12 @@
               "FAIRagro"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/fairagro.png",
+              "nocodb": "img/partner-logos/eaa9eef35f5d5b47.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1291,7 +1591,12 @@
               "DataPLANT"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/dataplant.svg",
+              "nocodb": "img/partner-logos/053229561d547e96.svg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1311,7 +1616,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png",
+              "nocodb": "img/partner-logos/852580d0427f2d03.png"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1327,7 +1637,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/come2data.jpg",
+              "nocodb": "img/partner-logos/67cd4a7cc7c23242.jpg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1347,7 +1662,12 @@
               "NFDIxCS"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdixcs-logo.png",
+              "nocodb": "img/partner-logos/2d0b59aa31be6acd.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1367,7 +1687,12 @@
               "Text+"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/text-plus-logo.svg",
+              "nocodb": "img/partner-logos/795258ea8776a192.svg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1387,7 +1712,12 @@
               "NFDI4Earth"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4earth-logo.png",
+              "nocodb": "img/partner-logos/863bac0ead893c90.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1407,7 +1737,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/NFDI4Chem-Logo_mehrfarbig_schwarz.png",
+              "nocodb": "img/partner-logos/2e4910e1462d407d.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1427,7 +1762,12 @@
               "NFDI4Culture"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nfdi4culture.jpg",
+              "nocodb": "img/partner-logos/5cf60a24b427860d.jpg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1447,7 +1787,12 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/FD_Plattform_engl_rgb.jpg",
+              "nocodb": "img/partner-logos/d739ed2271eb725f.jpg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1467,7 +1812,12 @@
               "MaRDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/mardi-logo.png",
+              "nocodb": "img/partner-logos/2520b12f7fbf8544.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1487,7 +1837,12 @@
               "NFDI4DataScience"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/argocd.png",
+              "nocodb": "img/partner-logos/de660bf847514a1b.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1507,7 +1862,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/rwth_coscine_rgb.png",
+              "nocodb": "img/partner-logos/852580d0427f2d03.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1527,7 +1887,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/nhraai_complete.png",
+              "nocodb": "img/partner-logos/bf5c3bbaac4f2812.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1547,7 +1912,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://i.imgur.com/8gBPS5a.png",
+              "nocodb": "img/partner-logos/0b0f4686d8056801.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1567,7 +1937,12 @@
               "NFDI4Ing"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_consortia": {
+              "source": "https://incubators.nfdi-aai.de/images/RDMO-logo.png",
+              "nocodb": "img/partner-logos/1cc2c59e43fe5ef1.png"
+            }
+          }
         }
       ],
       "only_in_source": [],
@@ -1578,9 +1953,9 @@
       "counts": {
         "source": 31,
         "nocodb": 31,
-        "matched": 31,
-        "only_in_source": 0,
-        "only_in_nocodb": 0
+        "matched": 30,
+        "only_in_source": 1,
+        "only_in_nocodb": 1
       },
       "matches": [
         {
@@ -1605,7 +1980,12 @@
               "NFDI4Memory"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
+              "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
+            }
+          }
         },
         {
           "score": 2.22,
@@ -1630,9 +2010,17 @@
               "source": "WDCC",
               "nocodb": "WDCC  - World Data Center for Climate"
             },
+            "inc_end": {
+              "source": "2025-10-30",
+              "nocodb": "2025-10-31"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/wdcc.png",
+              "nocodb": "img/partner-logos/8ca946e929cc27bc.png"
+            },
             "logo_consortia": {
               "source": "",
-              "nocodb": "https://www.nfdi4earth.de/templates/nfdi4earth/images/NFDI4Earth_logo.png"
+              "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
             }
           }
         },
@@ -1654,7 +2042,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/nmrxiv_repository.png",
+              "nocodb": "img/partner-logos/8e52852b66788d11.png"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1670,7 +2063,16 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_end": {
+              "source": "2025-10-15",
+              "nocodb": "2025-11-30"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/chebi.png",
+              "nocodb": "img/partner-logos/ef0a379775ece1e4.png"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -1690,7 +2092,12 @@
               "NFDI4Chem"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/coconut.png",
+              "nocodb": "img/partner-logos/4b05f3d3cef46b2e.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1710,7 +2117,16 @@
               "NFDI4Cat"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_end": {
+              "source": "2025-08-14",
+              "nocodb": "2025-10-31"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/nfdi4cat.png",
+              "nocodb": "img/partner-logos/4a8f5a62aea03e2b.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1730,7 +2146,12 @@
               "BERD@NFDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/berd.png",
+              "nocodb": "img/partner-logos/a8573f5bcf411a39.png"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -1750,7 +2171,12 @@
               "NFDI4BIOIMAGE"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.svg",
+              "nocodb": "img/partner-logos/2f46b3090c3dd5f8.svg"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -1770,7 +2196,12 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/preVIEW.svg",
+              "nocodb": "img/partner-logos/ee3199b54476df4d.svg"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -1790,7 +2221,12 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
+              "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1810,7 +2246,16 @@
               "Text+"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_end": {
+              "source": "2025-10-30",
+              "nocodb": "2025-10-31"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/discuss-data.svg",
+              "nocodb": "img/partner-logos/1933602a07f6ab9e.svg"
+            }
+          }
         },
         {
           "score": 2.47,
@@ -1830,7 +2275,12 @@
               "NFDI4Energy"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png",
+              "nocodb": "img/partner-logos/420b1ab6f7242fa5.png"
+            }
+          }
         },
         {
           "score": 2.83,
@@ -1870,6 +2320,10 @@
                 "NFDI4Objects",
                 "Text+"
               ]
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/ICONCLASS.png",
+              "nocodb": "img/partner-logos/a0257f1df118d653.png"
             }
           }
         },
@@ -1894,6 +2348,10 @@
             ]
           },
           "field_diffs": {
+            "inc_end": {
+              "source": "2026-03-19",
+              "nocodb": "2026-02-28"
+            },
             "partners": {
               "source": [
                 "NFDI4Memory",
@@ -1903,6 +2361,10 @@
                 "BERD@NFDI",
                 "NFDI4Memory"
               ]
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/ohdab.png",
+              "nocodb": "img/partner-logos/567f987e1dd0014a.png"
             }
           }
         },
@@ -1924,7 +2386,16 @@
               "NFDI4Health"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_end": {
+              "source": "2026-03-05",
+              "nocodb": "2026-04-30"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
+              "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
+            }
+          }
         },
         {
           "score": 2.35,
@@ -1940,7 +2411,12 @@
             "inc_status": "Finished",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/dalia.png",
+              "nocodb": "img/partner-logos/39ef828eaba7a05b.png"
+            }
+          }
         },
         {
           "score": 2.007,
@@ -1968,6 +2444,14 @@
             "inc_goals": {
               "source": "- Replace current terminology providers with a unified terminology service\n- Develop of Vue.js-based components for enhanced terminology browsing and navigation",
               "nocodb": "- Replace current terminology providers with TS4NFDI API Gateway as unified terminology service\n- Integrate TS4NFDI Service Suite widgets to AIMS"
+            },
+            "inc_activity_page": {
+              "source": "https://profiles.nfdi4ing.de/",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png",
+              "nocodb": "img/partner-logos/b0faf7bb2f1d9ce6.png"
             }
           }
         },
@@ -2001,15 +2485,23 @@
             "inc_goals": {
               "source": "- Integration of terminology data to RDMO via TS4NFDI API Gateway\n- Provision of terminologies preselection for RDMO specified by subjects/topics/domains",
               "nocodb": "- Integrate TS4NFDI Service Suite widgets into the RDMO"
+            },
+            "inc_activity_page": {
+              "source": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/DMP4NFDI.png",
+              "nocodb": "img/partner-logos/c20f374664866ba7.png"
             }
           }
         },
         {
-          "score": 2.47,
+          "score": 2.12,
           "source": {
             "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
             "inc_cycle": 3,
-            "inc_status": "Finished",
+            "inc_status": "Running",
             "partners": [
               "Base4NFDI"
             ]
@@ -2022,10 +2514,31 @@
               "Base4NFDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_status": {
+              "source": "Running",
+              "nocodb": "Finished"
+            },
+            "inc_start": {
+              "source": "2026-02-26",
+              "nocodb": "2026-03-01"
+            },
+            "inc_end": {
+              "source": "2026-11-30",
+              "nocodb": "2026-09-30"
+            },
+            "inc_activity_page": {
+              "source": "https://tibhannover.github.io/datacite/mappings/",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/PID4NFDI.png",
+              "nocodb": "img/partner-logos/42230e20b86baef5.png"
+            }
+          }
         },
         {
-          "score": 2.12,
+          "score": 2.107,
           "source": {
             "inc_name": "Metabase",
             "inc_cycle": 3,
@@ -2050,11 +2563,23 @@
             "inc_end": {
               "source": "2026-08-06",
               "nocodb": "2026-09-30"
+            },
+            "inc_descr": {
+              "source": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontologies, and connects to external systems such as the open research knowledge graph (ORKG).",
+              "nocodb": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontolgogies, and connects to external systems such as the open research knowledge graph (ORKG)."
+            },
+            "inc_activity_page": {
+              "source": "https://api.nfdixcs.org/metabase/swagger-ui/index.html",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/metabase-logo.svg",
+              "nocodb": "img/partner-logos/9d80b706f0cc1f85.svg"
             }
           }
         },
         {
-          "score": 2.47,
+          "score": 2.12,
           "source": {
             "inc_name": "MathModDB",
             "inc_cycle": 3,
@@ -2072,14 +2597,26 @@
             ]
           },
           "field_diffs": {
+            "inc_start": {
+              "source": "2026-03-04",
+              "nocodb": "2026-03-01"
+            },
             "inc_end": {
               "source": "2026-09-10",
               "nocodb": "2026-09-30"
+            },
+            "inc_activity_page": {
+              "source": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/MathModDBLogo.png",
+              "nocodb": "img/partner-logos/7da39823e90b3deb.png"
             }
           }
         },
         {
-          "score": 2.47,
+          "score": 2.11,
           "source": {
             "inc_name": "FAIRagro Terminology Service",
             "inc_cycle": 3,
@@ -2096,23 +2633,28 @@
               "FAIRagro"
             ]
           },
-          "field_diffs": {}
-        },
-        {
-          "score": 2,
-          "source": {
-            "inc_name": "TS4NDSI integration in Galaxy",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": []
-          },
-          "nocodb": {
-            "inc_name": "TS4NDSI integration in Galaxy",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": []
-          },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_start": {
+              "source": "2026-03-13",
+              "nocodb": "2026-03-01"
+            },
+            "inc_end": {
+              "source": "2026-10-19",
+              "nocodb": "2026-09-30"
+            },
+            "inc_goals": {
+              "source": "- Provision of terminologies in a Terminology Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products",
+              "nocodb": "- Provision of terminologies in a Terminlogy Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products"
+            },
+            "inc_activity_page": {
+              "source": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/FAIRagro.png",
+              "nocodb": "img/partner-logos/1584198a22a429d3.png"
+            }
+          }
         },
         {
           "score": 2.24,
@@ -2134,7 +2676,12 @@
               "PUNCH4NFDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/tess-logo.svg",
+              "nocodb": "img/partner-logos/cf6d4cf72d711cd7.svg"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -2154,7 +2701,127 @@
               "DAPHNE4NFDI"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "inc_start": {
+              "source": "2026-09-16",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/DAPHNE4NFDI_logo.png",
+              "nocodb": "img/partner-logos/9f445863db409d4f.png"
+            }
+          }
+        },
+        {
+          "score": 2.035,
+          "source": {
+            "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+            "inc_cycle": 4,
+            "inc_status": "Running",
+            "partners": [
+              "NFDI4Energy"
+            ]
+          },
+          "nocodb": {
+            "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+            "inc_cycle": 4,
+            "inc_status": "In preparation",
+            "partners": [
+              "NFDI4Energy"
+            ]
+          },
+          "field_diffs": {
+            "inc_status": {
+              "source": "Running",
+              "nocodb": "In preparation"
+            },
+            "inc_start": {
+              "source": "2026-09-29",
+              "nocodb": ""
+            },
+            "inc_goals": {
+              "source": "- CEPO is in the terminology service\n- use the mapping service to formalize CEPO interoperability with other actors",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/CEPO-logo.png",
+              "nocodb": "img/partner-logos/c2ec2fab9b3ea704.png"
+            }
+          }
+        },
+        {
+          "score": 2.34,
+          "source": {
+            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+            "inc_cycle": 4,
+            "inc_status": "Running",
+            "partners": [
+              "NFDI4Culture",
+              "NFDI4Memory",
+              "NFDI4Objects"
+            ]
+          },
+          "nocodb": {
+            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
+            "inc_cycle": 4,
+            "inc_status": "Running",
+            "partners": [
+              "NFDI4Culture",
+              "NFDI4Memory",
+              "NFDI4Objects"
+            ]
+          },
+          "field_diffs": {
+            "inc_start": {
+              "source": "2026-09-09",
+              "nocodb": ""
+            },
+            "inc_descr": {
+              "source": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific research environments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
+              "nocodb": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway."
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
+              "nocodb": "img/partner-logos/db311bd7628d7af5.png"
+            }
+          }
+        },
+        {
+          "score": 1.938,
+          "source": {
+            "inc_name": "OstData & 4MMS",
+            "inc_cycle": 4,
+            "inc_status": "Running",
+            "partners": [
+              "NFDI4Memory"
+            ]
+          },
+          "nocodb": {
+            "inc_name": "OstData & 4MMS",
+            "inc_cycle": 4,
+            "inc_status": "In preparation",
+            "partners": [
+              "NFDI4Memory"
+            ]
+          },
+          "field_diffs": {
+            "inc_status": {
+              "source": "Running",
+              "nocodb": "In preparation"
+            },
+            "inc_start": {
+              "source": "2026-10-07",
+              "nocodb": ""
+            },
+            "inc_goals": {
+              "source": "- indexing of terminologies (OstData Research data type, 4MMS content notes)\n- integration/usage of them via the TSS in the Ostdata Radar instance",
+              "nocodb": ""
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/ostdata.png",
+              "nocodb": "img/partner-logos/fa6ecd87e11ec9e1.png"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -2178,72 +2845,12 @@
             "inc_start": {
               "source": "",
               "nocodb": "2026-07-15"
+            },
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/sms.png",
+              "nocodb": "img/partner-logos/21dc354f7bdfca6e.png"
             }
           }
-        },
-        {
-          "score": 2.12,
-          "source": {
-            "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": [
-              "NFDI4Energy"
-            ]
-          },
-          "nocodb": {
-            "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": [
-              "NFDI4Energy"
-            ]
-          },
-          "field_diffs": {}
-        },
-        {
-          "score": 2.36,
-          "source": {
-            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
-            "inc_cycle": 4,
-            "inc_status": "Running",
-            "partners": [
-              "NFDI4Culture",
-              "NFDI4Memory",
-              "NFDI4Objects"
-            ]
-          },
-          "nocodb": {
-            "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
-            "inc_cycle": 4,
-            "inc_status": "Running",
-            "partners": [
-              "NFDI4Culture",
-              "NFDI4Memory",
-              "NFDI4Objects"
-            ]
-          },
-          "field_diffs": {}
-        },
-        {
-          "score": 2.12,
-          "source": {
-            "inc_name": "OstData & 4MMS",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": [
-              "NFDI4Memory"
-            ]
-          },
-          "nocodb": {
-            "inc_name": "OstData & 4MMS",
-            "inc_cycle": 4,
-            "inc_status": "In preparation",
-            "partners": [
-              "NFDI4Memory"
-            ]
-          },
-          "field_diffs": {}
         },
         {
           "score": 2,
@@ -2259,7 +2866,12 @@
             "inc_status": "In preparation",
             "partners": []
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/rspace_logo.svg",
+              "nocodb": "img/partner-logos/07de910f2aad00e7.svg"
+            }
+          }
         },
         {
           "score": 2.12,
@@ -2279,11 +2891,30 @@
               "NFDI4Immuno"
             ]
           },
-          "field_diffs": {}
+          "field_diffs": {
+            "logo_project": {
+              "source": "https://terminology.services.base4nfdi.de/img/nfdi4immuno.png",
+              "nocodb": "img/partner-logos/ba427dc06317d8ac.png"
+            }
+          }
         }
       ],
-      "only_in_source": [],
-      "only_in_nocodb": []
+      "only_in_source": [
+        {
+          "inc_name": "TS4NFDI integration in Galaxy",
+          "inc_cycle": 4,
+          "inc_status": "In preparation",
+          "partners": []
+        }
+      ],
+      "only_in_nocodb": [
+        {
+          "inc_name": "TS4NDSI integration in Galaxy",
+          "inc_cycle": 4,
+          "inc_status": "In preparation",
+          "partners": []
+        }
+      ]
     },
     "pid4nfdi": {
       "basic_service": "PID",

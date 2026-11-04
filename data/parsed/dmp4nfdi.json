@@ -1,7 +1,7 @@
 {
   "source": "dmp4nfdi",
   "basic_service": "DMP",
-  "parsed_at": "2026-10-29T13:32:01.313Z",
+  "parsed_at": "2026-11-04T00:25:02.111Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/dmp4nfdi/incubator.md",
   "record_count": 33,
   "records": [
@@ -308,13 +308,13 @@
     },
     {
       "id": null,
-      "inc_name": "Training & Outreach — NFDI4Cat",
+      "inc_name": "Template Development — NFDI4Cat",
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
       "logo_project_dark": "",
       "logo_consortia": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
-      "key_article": "dmp-training-and-outreach-nfdi4cat",
+      "key_article": "dmp-template-development-nfdi4cat",
       "inc_start": "2026-02-01",
       "inc_end": "2026-07-31",
       "inc_cycle": 1,
@@ -327,7 +327,7 @@
       "inc_activity_type": "",
       "inc_caai": "",
       "inc_ownership": "",
-      "inc_service_type": "Training & Outreach, Template Development",
+      "inc_service_type": "Template Development",
       "inc_activity_page": "",
       "linked_partners": 1,
       "linked_entities": null,

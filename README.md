@@ -70,9 +70,9 @@ The full list of steps is in [scripts/README.md](scripts/README.md#when-the-dash
 | `ensure-incubators-schema` | Adds missing columns to the Incubators table |
 | `push-source-pages-to-nocodb` | Creates incubators listed on public pages but missing in NocoDB |
 | `push-pid-use-cases-to-nocodb` | Creates missing PID use cases in User_Stories |
-| `patch-published-integrations` | Fills **empty** cells from public sources, copies `inc_status`, sets *Finished* after `inc_end` |
+| `patch-published-integrations` | Overwrites cells that **differ** from the public source, copies `inc_status`, sets *Finished* after `inc_end` |
 
-A build **never deletes rows** and **never overwrites a filled cell**, with one exception: `inc_status` always follows the source. To preview the patch before it runs, use the dry-run workflow in [scripts/README.md](scripts/README.md#update-already-published-incubators-and-use-cases).
+The dashboard mirrors the service websites: a build **overwrites source-backed cells** (dates, cycle, description, goals, results, service type, status, …) with the published values. It **never deletes rows**, and keeps cells the source leaves empty, titles written in NocoDB, page slugs (`key_article`), and existing partner sets. To preview the patch before it runs, use the dry-run workflow in [scripts/README.md](scripts/README.md#update-already-published-incubators-and-use-cases).
 
 ## Quick start
 
@@ -166,10 +166,10 @@ Reviewers maintain content directly in the NocoDB UI, in the **Incubators**, **U
 
 | Task | Handled by the build? | How |
 | --- | :---: | --- |
-| Reviewer edits a row | ✅ | [Refresh](#refresh-the-data) |
+| Reviewer edits a row | ✅ | [Refresh](#refresh-the-data). Source-backed fields are reset to the public page on the next build, so fix those on the service website |
 | A new incubator appears on a DMP, IAM or TS public page | ✅ | Created in NocoDB automatically on the next build |
 | A new PID use case appears upstream | ✅ | Created in User_Stories automatically on the next build |
-| An empty cell has a value on the public page | ✅ | Filled automatically; filled cells are kept |
+| A value changes or appears on the public page | ✅ | Written to NocoDB automatically on the next build |
 | Review patches **before** they reach NocoDB | ❌ | Dry-run workflow in [scripts/README.md](scripts/README.md#update-already-published-incubators-and-use-cases), **before** the next build |
 | An incubator was withdrawn or never started | ❌ | Delete or archive the row in NocoDB, and remove its page under `content/integrations/` |
 | Backfill partner logos and websites, or sync REF_Entities from Wikidata | ❌ | Maintenance scripts in [scripts/README.md](scripts/README.md#scripts) |

@@ -1,7 +1,7 @@
 {
   "source": "iam4nfdi",
   "basic_service": "IAM",
-  "parsed_at": "2026-10-29T13:32:01.442Z",
+  "parsed_at": "2026-11-04T00:25:02.258Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/iam4nfdi/page.html",
   "record_count": 39,
   "records": [

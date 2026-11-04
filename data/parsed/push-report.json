@@ -1,27 +1,17 @@
 {
-  "mode": "apply",
+  "mode": "dry-run",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-10-29T13:32:14.951Z",
+  "planned_at": "2026-11-04T00:31:42.710Z",
   "totals": {
     "missing_from_nocodb": 0,
     "will_push": 0,
-    "skipped_already_matched": 103
+    "skipped_already_matched": 33
   },
   "by_source": {
     "dmp4nfdi": {
       "missing": 0,
       "pushing": 0,
       "already_matched": 33
-    },
-    "iam4nfdi": {
-      "missing": 0,
-      "pushing": 0,
-      "already_matched": 39
-    },
-    "ts4nfdi": {
-      "missing": 0,
-      "pushing": 0,
-      "already_matched": 31
     }
   },
   "records": []

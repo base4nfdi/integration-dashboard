@@ -1,11 +1,11 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-10-29T13:32:26.573Z",
+  "fetched_at": "2026-11-04T00:25:16.819Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
       "view_id": null,
-      "count": 103
+      "count": 104
     },
     "user_stories": {
       "table_id": "mtq40pxpo5p0jmx",
@@ -106,7 +106,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "https://profiles.nfdi4ing.de/",
       "linked_partners": 1,
       "linked_entities": 3,
       "partners": [
@@ -2856,7 +2856,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2879,7 +2879,7 @@
       "inc_end": "2026-09-30",
       "inc_cycle": 3,
       "inc_cycle_label": "",
-      "inc_status": "Finished",
+      "inc_status": "Running",
       "inc_descr": "This incubator project aims to host the DataCite metadata model and controlled vocabularies within the TIB Terminology Services (TS) infrastructure and expose them through the TS4NFDI API Gateway. The goal is to provide a canonical, machine-actionable representation of DataCite terms, including stable URIs, labels, definitions, and versioning, that can be reused consistently across NFDI services and beyond. Rather than introducing a new ontology for metadata, the project operationalises an existing, widely adopted metadata standard inside the TS ecosystem, enabling downstream propagation to TS4NFDI services and client applications. In this way other services such as ELNs, DMPs or other data repositories could use the well-established DataCite terms through the API Gateway and the widgets of the Terminology Service Suite. In addition, the project will establish and maintain curated mappings between DataCite vocabularies and related schemas such as schema.org and DCAT, using the TS4NFDI mapping service. These centrally managed mappings will be provided via the mapping service to support semantic interoperability without requiring hard-coded, system-specific alignments across different knowledge domains.",
       "inc_goals": "- host a canonical, machine-actionable representation of DataCite terms\n- provision of mappings in the mapping service",
       "inc_results": "",
@@ -2888,7 +2888,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "https://tibhannover.github.io/datacite/mappings/",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2920,7 +2920,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "https://api.nfdixcs.org/metabase/swagger-ui/index.html",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2952,7 +2952,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2984,7 +2984,7 @@
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "",
-      "inc_activity_page": "",
+      "inc_activity_page": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3066,7 +3066,7 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories",
-      "inc_start": "",
+      "inc_start": "2026-09-16",
       "inc_end": "",
       "inc_cycle": 4,
       "inc_cycle_label": "",
@@ -3098,13 +3098,13 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-improving-interoperability-for-climate-and-energy-policy-ontologies",
-      "inc_start": "",
+      "inc_start": "2026-09-29",
       "inc_end": "",
       "inc_cycle": 4,
       "inc_cycle_label": "",
-      "inc_status": "In preparation",
+      "inc_status": "Running",
       "inc_descr": "The Climate and Energy Policy Ontology (CEPO) is an ontology built within NFDI4Energy which provides explicit definitions, classifications, and relationships among climate policy instruments. It was developed by practitioners at the FAU in close collaboration with climate data providers (Climate Policy Radar, Climate Policy Database, and the Organization for Economic Cooperation and Development) and aims for interoperability with them in order to harmonize the climate policy data space. The ontology was also co-designed with experts from the OEO and is certified by the Energy-related reference ontologies Foundry (ENERO).",
-      "inc_goals": "",
+      "inc_goals": "- CEPO is in the terminology service\n- use the mapping service to formalize CEPO interoperability with other actors",
       "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -3130,7 +3130,7 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment",
-      "inc_start": "",
+      "inc_start": "2026-09-09",
       "inc_end": "",
       "inc_cycle": 4,
       "inc_cycle_label": "",
@@ -3164,13 +3164,13 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-ostdata-and-4mms",
-      "inc_start": "",
+      "inc_start": "2026-10-07",
       "inc_end": "",
       "inc_cycle": 4,
       "inc_cycle_label": "",
-      "inc_status": "In preparation",
+      "inc_status": "Running",
       "inc_descr": "OstData is a research data repository and research data service designed specifically for scholars working on Eastern, East Central, and Southeast European Studies. The OstData Research Data Types are a controlled vocabulary used to classify the research data holdings in the OstData research data repository according to overarching formal and conceptual characteristics. Next to the OstData vocabulary the incubator will focus on the Metadatenschema für NFDI4Memory (4MMS).",
-      "inc_goals": "",
+      "inc_goals": "- indexing of terminologies (OstData Research data type, 4MMS content notes)\n- integration/usage of them via the TSS in the Ostdata Radar instance",
       "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -3309,6 +3309,36 @@
       "partners": [
         "NFDI4Memory"
       ],
+      "entities": [],
+      "source_url": "",
+      "integration_kind": "incubator"
+    },
+    {
+      "id": 111,
+      "inc_name": "TS4NFDI integration in Galaxy",
+      "basic_service": "TS",
+      "related_institutions": "",
+      "logo_project": "img/partner-logos/452248d3416df5d7.svg",
+      "logo_project_dark": "",
+      "logo_consortia": "",
+      "key_article": "ts-ts4nfdi-integration-in-galaxy",
+      "inc_start": "",
+      "inc_end": "",
+      "inc_cycle": 4,
+      "inc_cycle_label": "",
+      "inc_status": "In preparation",
+      "inc_descr": "To strengthen FAIR data practices and semantic interoperability within research tools and workflows, we propose to integrate Galaxy with the TS4NFDI Terminology Service. This integration will allow Galaxy datatype definitions to be annotated with standardized concepts from the EDAM ontology, accessed dynamically through TS4NFDI. By linking Galaxy datatypes to persistent ontology identifiers, researchers will be supported in selecting, interpreting, and reusing data in a more transparent and interoperable way. As a demonstrator, we will extend a subset of Galaxy datatype descriptors with references to EDAM terms served via TS4NFDI. When users interact with these datatypes in Galaxy, they will be able to view the corresponding ontology concepts and their definitions directly within the platform via the TS4nfdi widgets. Workflows and outputs will then carry these semantic annotations forward, enabling improved provenance tracking, automated metadata enrichment, and easier integration with NFDI services. This work will demonstrate how Galaxy can adopt shared terminology infrastructures to lower barriers to FAIR data compliance and enable consistent, domain-appropriate semantic annotation across research communities.",
+      "inc_goals": "",
+      "inc_results": "",
+      "inc_partner_publications": 0,
+      "inc_activity_type": "",
+      "inc_caai": "",
+      "inc_ownership": "",
+      "inc_service_type": "",
+      "inc_activity_page": "",
+      "linked_partners": 0,
+      "linked_entities": 0,
+      "partners": [],
       "entities": [],
       "source_url": "",
       "integration_kind": "incubator"
@@ -3761,5 +3791,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-10-29T13:32:34.530Z"
+  "logos_localized_at": "2026-11-04T00:25:18.252Z"
 }

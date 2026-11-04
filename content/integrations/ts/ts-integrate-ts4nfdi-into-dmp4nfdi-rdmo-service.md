@@ -14,6 +14,7 @@ linked_partners = 1
 linked_entities = 0
 partners = ["Base4NFDI"]
 logo_project = "img/partner-logos/c20f374664866ba7.png"
+inc_activity_page = "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/"
 +++
 
 DMP4NFDI provides the DMP tool RDMO for NFDI consortia and develops the DMP Template Framework to ensure interoperability across different DMP services in NFDI. Vocabularies, terminologies and ontologies already play an important role in the data management planning process. Our goal for this project is to integrate the TS4NFDI service into the RDMO interview section, allowing users to choose items from predefined vocabularies. We are collaborating with the FAIRagro consortium to make community standards available within their templates.
@@ -22,6 +23,10 @@ DMP4NFDI provides the DMP tool RDMO for NFDI consortia and develops the DMP Temp
 ## Goals
 
 - Integrate TS4NFDI Service Suite widgets into the RDMO
+
+## Results
+
+- [https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/](https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/)
 
 ## Partners & entities
 
