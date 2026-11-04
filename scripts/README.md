@@ -53,7 +53,7 @@ NocoDB remains the record the site publishes. Editors can correct wording and pa
 
 ## When the dashboard updates
 
-There is no cron job in this repository. `static/data.json` and the generated pages change only when someone runs `./build.sh` (or the same scripts) with `NOCODB_API_TOKEN` or a root `.env`. Without credentials the build keeps the `static/data.json` already in the tree and still rebuilds the site from it.
+There is no cron job in this repository. `static/data.json` and the generated pages change only when someone runs `./build.sh` (or the same scripts) with `NOCODB_API_TOKEN` set in the environment or in the root `.env`. Without a token the build keeps the `static/data.json` already in the tree and still rebuilds the site from it.
 
 A build does not rewrite every NocoDB row. `patch-published-integrations.mjs` matches parsed records to existing rows and then:
 

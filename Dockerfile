@@ -16,6 +16,14 @@ ARG NOCODB_BASE_URL=
 ARG NOCODB_TABLE_ID=
 ARG NOCODB_VIEW_ID=
 ARG NOCODB_PAGE_SIZE=
+ARG NOCODB_USER_STORIES_TABLE_ID=
+ARG NOCODB_USER_STORIES_VIEW_ID=
+ARG NOCODB_REF_ENTITIES_TABLE_ID=
+ARG NOCODB_REF_ENTITIES_VIEW_ID=
+ARG NOCODB_PARTNERS_TABLE_ID=
+ARG NOCODB_PARTNERS_VIEW_ID=
+ARG FETCH_TIMEOUT_MS=
+ARG FETCH_RETRIES=
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl \
@@ -34,9 +42,19 @@ RUN case "${TARGETARCH}" in \
 WORKDIR /app
 COPY . .
 
+# The pipeline pulls live data, so an unchanged repo would otherwise hit the
+# layer cache and ship stale data. Pass a new value (e.g. a timestamp) to force
+# a fresh pipeline run without rebuilding the toolchain layers above.
+ARG CACHE_BUST=
+
 # Empty Compose build args must not override script defaults (?? ignores only null/undefined).
 RUN set -eu; \
-    for var in NOCODB_API_TOKEN NOCODB_BASE_URL NOCODB_TABLE_ID NOCODB_VIEW_ID NOCODB_PAGE_SIZE; do \
+    echo "pipeline run: ${CACHE_BUST:-cached}"; \
+    for var in NOCODB_API_TOKEN NOCODB_BASE_URL NOCODB_TABLE_ID NOCODB_VIEW_ID NOCODB_PAGE_SIZE \
+               NOCODB_USER_STORIES_TABLE_ID NOCODB_USER_STORIES_VIEW_ID \
+               NOCODB_REF_ENTITIES_TABLE_ID NOCODB_REF_ENTITIES_VIEW_ID \
+               NOCODB_PARTNERS_TABLE_ID NOCODB_PARTNERS_VIEW_ID \
+               FETCH_TIMEOUT_MS FETCH_RETRIES; do \
       eval "val=\${$var:-}"; \
       if [ -n "$val" ]; then export "$var=$val"; else unset "$var"; fi; \
     done; \
