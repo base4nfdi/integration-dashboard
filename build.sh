@@ -23,8 +23,16 @@ node scripts/parse-source-pages.mjs
 echo "==> Crawling NFDI news and success stories"
 node scripts/crawl-nfdi-news.mjs --scope both
 
+if [[ -z "${NOCODB_API_TOKEN:-}" && -f .env ]]; then
+  dotenv_token="$(sed -n 's/^[[:space:]]*NOCODB_API_TOKEN[[:space:]]*=[[:space:]]*//p' .env | tail -n 1 | tr -d "\"'\r")"
+  if [[ -n "${dotenv_token}" ]]; then
+    export NOCODB_API_TOKEN="${dotenv_token}"
+  fi
+  unset dotenv_token
+fi
+
 INTEGRATION_PAGES_UPDATE=0
-if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
+if [[ -n "${NOCODB_API_TOKEN:-}" ]]; then
   echo "==> Ensuring Incubators schema columns"
   node scripts/ensure-incubators-schema.mjs
 
@@ -43,7 +51,7 @@ if [[ -n "${NOCODB_API_TOKEN:-}" ]] || [[ -f .env ]]; then
   node scripts/sync-ref-directory.mjs
   INTEGRATION_PAGES_UPDATE=1
 else
-  echo "No NOCODB_API_TOKEN / .env — using existing static/data.json" >&2
+  echo "No NOCODB_API_TOKEN (env or .env) — using existing static/data.json" >&2
 fi
 
 echo "==> Caching partner logos into static/"
