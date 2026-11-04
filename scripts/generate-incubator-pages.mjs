@@ -129,26 +129,16 @@ function formatPartnersSection(record) {
   const partners = Array.isArray(record.partners) ? record.partners : [];
   const entities = Array.isArray(record.entities) ? record.entities : [];
   const related = asText(record.related_institutions);
-  const linkedPartners = record.linked_partners;
-  const linkedEntities = record.linked_entities;
   const pubs = record.inc_partner_publications ?? 0;
 
   if (partners.length > 0) {
-    const count =
-      linkedPartners != null && linkedPartners !== ""
-        ? ` (${linkedPartners} linked)`
-        : "";
-    lines.push(`- **NFDI consortia:** ${partners.join(", ")}${count}`);
+    lines.push(`- **NFDI consortia:** ${partners.join(", ")}`);
   }
 
   if (entities.length > 0) {
     const label =
       entities.length === 1 ? "Participating entity" : "Participating entities";
-    const count =
-      linkedEntities != null && linkedEntities !== ""
-        ? ` (${linkedEntities} linked)`
-        : "";
-    lines.push(`- **${label}:** ${entities.join(", ")}${count}`);
+    lines.push(`- **${label}:** ${entities.join(", ")}`);
   }
 
   if (related) {

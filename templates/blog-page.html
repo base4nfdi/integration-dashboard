@@ -240,7 +240,7 @@
         {% if has_cycle %}
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Cycle</span>
-          <span class="blog-post-overview-chip-value">{{ cycle_label }}</span>
+          <span class="blog-post-overview-chip-value">{{ cycle_label | replace(from="Cycle ", to="") }}</span>
         </li>
         {% endif %}
         {% if inc_activity %}
