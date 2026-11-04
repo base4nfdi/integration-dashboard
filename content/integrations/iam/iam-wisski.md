@@ -34,5 +34,5 @@ Missing!!
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Objects (1 linked)
+- **NFDI consortia:** NFDI4Objects
 

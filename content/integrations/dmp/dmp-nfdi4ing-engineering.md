@@ -24,5 +24,5 @@ The Incubator Project aims to optimise the DMP template for engineering sciences
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
+- **NFDI consortia:** NFDI4Ing
 

@@ -32,6 +32,6 @@ Learn more
 
 ## Partners & entities
 
-- **NFDI consortia:** KonsortSWD (1 linked)
-- **Participating entity:** GESIS – Leibniz Institute for the Social Sciences (1 linked)
+- **NFDI consortia:** KonsortSWD
+- **Participating entity:** GESIS – Leibniz Institute for the Social Sciences
 

@@ -21,5 +21,5 @@ TeSS is a platform that was developed to provide a one-stop shop for trainers an
 
 ## Partners & entities
 
-- **NFDI consortia:** DAPHNE4NFDI, PUNCH4NFDI (2 linked)
+- **NFDI consortia:** DAPHNE4NFDI, PUNCH4NFDI
 

@@ -29,5 +29,5 @@ FAIRagro RDMO Catalog
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro (1 linked)
+- **NFDI consortia:** FAIRagro
 

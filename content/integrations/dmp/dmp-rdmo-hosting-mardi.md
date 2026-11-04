@@ -29,5 +29,5 @@ MaRDI RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI (1 linked)
+- **NFDI consortia:** MaRDI
 

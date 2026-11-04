@@ -29,5 +29,5 @@ RDMO Client for the Physical Sciences
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRmat (1 linked)
+- **NFDI consortia:** FAIRmat
 

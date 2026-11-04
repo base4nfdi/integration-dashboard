@@ -29,5 +29,5 @@ Generic Search RDMO Plugin
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI (1 linked)
+- **NFDI consortia:** MaRDI
 

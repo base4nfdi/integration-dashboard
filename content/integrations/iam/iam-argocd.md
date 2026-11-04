@@ -34,5 +34,5 @@ Dont know what that mean - the service is > opensource.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4DataScience (1 linked)
+- **NFDI consortia:** NFDI4DataScience
 

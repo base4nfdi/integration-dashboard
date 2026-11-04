@@ -24,5 +24,5 @@ This incubator project will finalise the discipline-specific data management pla
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI-MatWerk (1 linked)
+- **NFDI consortia:** NFDI-MatWerk
 

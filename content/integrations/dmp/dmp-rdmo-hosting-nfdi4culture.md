@@ -29,5 +29,5 @@ NFDI4Culture RDMO Client
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Culture (1 linked)
+- **NFDI consortia:** NFDI4Culture
 

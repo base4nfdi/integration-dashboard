@@ -31,5 +31,5 @@ Numerous web platforms, such as MediaWiki, support the OpenID Connect (OIDC) pro
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI (1 linked)
+- **NFDI consortia:** MaRDI
 

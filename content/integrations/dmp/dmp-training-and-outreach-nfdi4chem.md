@@ -31,5 +31,5 @@ OER – DMP Writing Made Easy: A Hands-on Workshop for Chemists
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem (1 linked)
+- **NFDI consortia:** NFDI4Chem
 

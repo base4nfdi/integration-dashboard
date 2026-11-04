@@ -31,5 +31,5 @@ Text+ & DMP4NFDI – FDM als Joint Effort
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ (1 linked)
+- **NFDI consortia:** Text+
 

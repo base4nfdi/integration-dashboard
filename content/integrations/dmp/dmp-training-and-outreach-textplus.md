@@ -29,5 +29,5 @@ Survey results: DMPs – What are our community’s needs? (in German)
 
 ## Partners & entities
 
-- **NFDI consortia:** Text+ (1 linked)
+- **NFDI consortia:** Text+
 

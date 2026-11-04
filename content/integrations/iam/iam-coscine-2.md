@@ -39,5 +39,5 @@ Coscine is an open-source platform for research data management (RDM) and can be
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
+- **NFDI consortia:** NFDI4Ing
 

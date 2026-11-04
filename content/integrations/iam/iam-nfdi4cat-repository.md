@@ -34,5 +34,5 @@ The NFDI4CAT community requires a central solution for the storage and exchange 
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat (1 linked)
+- **NFDI consortia:** NFDI4Cat
 

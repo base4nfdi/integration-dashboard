@@ -32,6 +32,6 @@ Learn more
 
 ## Partners & entities
 
-- **NFDI consortia:** DAPHNE4NFDI (1 linked)
-- **Participating entity:** HZB (0 linked)
+- **NFDI consortia:** DAPHNE4NFDI
+- **Participating entity:** HZB
 

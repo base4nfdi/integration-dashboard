@@ -34,5 +34,5 @@ The DataPLANT consortium develops and provides a wide range of services to suppo
 
 ## Partners & entities
 
-- **NFDI consortia:** DataPLANT (1 linked)
+- **NFDI consortia:** DataPLANT
 

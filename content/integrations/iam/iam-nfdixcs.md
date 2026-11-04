@@ -33,5 +33,5 @@ No content provided.
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDIxCS (1 linked)
+- **NFDI consortia:** NFDIxCS
 

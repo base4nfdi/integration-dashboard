@@ -28,6 +28,6 @@ Though pid4cat uses an ePIC prefix, everything else is set up and run by the pro
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Cat (1 linked)
-- **Participating entity:** HLRS (1 linked)
+- **NFDI consortia:** NFDI4Cat
+- **Participating entity:** HLRS
 

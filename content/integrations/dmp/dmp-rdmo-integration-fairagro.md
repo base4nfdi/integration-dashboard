@@ -31,5 +31,5 @@ RDMO Plugin integrating Terminology Services 4 NFDI (TS4NFDI) API Gateway with R
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro (1 linked)
+- **NFDI consortia:** FAIRagro
 

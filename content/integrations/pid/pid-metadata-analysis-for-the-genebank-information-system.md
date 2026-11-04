@@ -32,6 +32,6 @@ Learn more
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro (1 linked)
-- **Participating entity:** IPK Gatersleben (0 linked)
+- **NFDI consortia:** FAIRagro
+- **Participating entity:** IPK Gatersleben
 

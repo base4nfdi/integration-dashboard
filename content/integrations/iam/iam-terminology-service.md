@@ -29,5 +29,5 @@ The goal of NFDI4Chem is to have a unified AAI solution within a single consorti
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem (1 linked)
+- **NFDI consortia:** NFDI4Chem
 

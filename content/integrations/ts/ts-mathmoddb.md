@@ -26,5 +26,5 @@ MathModDB is a database of mathematical models, developed by the Mathematical Re
 
 ## Partners & entities
 
-- **NFDI consortia:** MaRDI (1 linked)
+- **NFDI consortia:** MaRDI
 

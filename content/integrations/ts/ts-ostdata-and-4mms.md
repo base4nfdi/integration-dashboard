@@ -21,5 +21,5 @@ OstData is a research data repository and research data service designed specifi
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Memory (1 linked)
+- **NFDI consortia:** NFDI4Memory
 

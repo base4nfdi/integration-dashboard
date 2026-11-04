@@ -31,5 +31,5 @@ The Ontology of the historical German-language nomenclature for offices and prof
 
 ## Partners & entities
 
-- **NFDI consortia:** BERD@NFDI, NFDI4Memory (2 linked)
+- **NFDI consortia:** BERD@NFDI, NFDI4Memory
 

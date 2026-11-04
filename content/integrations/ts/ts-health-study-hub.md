@@ -31,5 +31,5 @@ The Health Study Hub is a central discovery platform developed within the NFDI4H
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Health (1 linked)
+- **NFDI consortia:** NFDI4Health
 

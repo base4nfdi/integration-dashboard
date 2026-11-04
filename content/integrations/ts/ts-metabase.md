@@ -26,5 +26,5 @@ Metabase is the metadata service for research data management container (RDMC) i
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDIxCS (1 linked)
+- **NFDI consortia:** NFDIxCS
 

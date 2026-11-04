@@ -31,5 +31,5 @@ MetadataHub allows access to various metadata stores developed in the NFDI. All 
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing (1 linked)
+- **NFDI consortia:** NFDI4Ing
 

@@ -26,5 +26,5 @@ Adding support for the globally used cultural heritage subject classification sy
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Culture, NFDI4Memory, NFDI4Objects, Text+ (4 linked)
+- **NFDI consortia:** NFDI4Culture, NFDI4Memory, NFDI4Objects, Text+
 

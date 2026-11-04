@@ -25,5 +25,5 @@ While several attempts have been made recently to create NMR databases from lite
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem (1 linked)
+- **NFDI consortia:** NFDI4Chem
 

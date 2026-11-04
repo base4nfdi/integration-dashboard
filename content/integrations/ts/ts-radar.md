@@ -36,6 +36,6 @@ RADAR is a multidisciplinary research data repository operated by FIZ Karlsruhe,
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Chem, NFDI4Culture, NFDI4Memory (3 linked)
-- **Participating entity:** FIZ Karlsruhe (1 linked)
+- **NFDI consortia:** NFDI4Chem, NFDI4Culture, NFDI4Memory
+- **Participating entity:** FIZ Karlsruhe
 

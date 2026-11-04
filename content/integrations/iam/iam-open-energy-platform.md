@@ -41,5 +41,5 @@ AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?t
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Energy (1 linked)
+- **NFDI consortia:** NFDI4Energy
 

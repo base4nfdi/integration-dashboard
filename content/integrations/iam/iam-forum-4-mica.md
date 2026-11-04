@@ -41,5 +41,5 @@ The idea of the incubator proposal is to use the Forum4MICA as a pilot project t
 
 ## Partners & entities
 
-- **NFDI consortia:** KonsortSWD (1 linked)
+- **NFDI consortia:** KonsortSWD
 

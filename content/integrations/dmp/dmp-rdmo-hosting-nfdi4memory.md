@@ -28,5 +28,5 @@ Test client ready; productive client in preparation
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Memory (1 linked)
+- **NFDI consortia:** NFDI4Memory
 
