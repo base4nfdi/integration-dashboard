@@ -15,6 +15,7 @@ linked_entities = 0
 partners = ["BERD@NFDI"]
 logo_project = "img/partner-logos/a8573f5bcf411a39.png"
 inc_activity_page = "https://ts.berd-nfdi.de/"
+source_ref = "incubator-7"
 +++
 
 BERD@NFDI is dedicated to establishing a research data infrastructure transforming the management of Business, Economic, and Related Data. Our mission is to empower researchers of the social sciences with the tools and services needed to harness the full potential of unstructured data, such as images, videos, audio, and text files. BERD Terminology Service provides a single point of access to terminologies and ontologies from Business, Economics and Related fields.

@@ -1,12 +1,12 @@
 +++
 title = "WDCC - World Data Center for Climate"
-date = 2025-10-31
+date = 2025-10-30
 [extra]
 key_article = "ts-wdcc"
 basic_service = "TS"
 status = "Finished"
 inc_start = "2025-02-26"
-inc_end = "2025-10-31"
+inc_end = "2025-10-30"
 inc_cycle = 1
 inc_cycle_label = "Cycle 1"
 inc_partner_publications = 0
@@ -16,6 +16,7 @@ partners = ["NFDI4Earth"]
 entities = ["DKRZ German Climate Computing Centre"]
 logo_project = "img/partner-logos/8ca946e929cc27bc.png"
 logo_consortia = "img/partner-logos/d2899f44796b9a2d.png"
+source_ref = "incubator-2"
 +++
 
 The WDCC has the mission to archive, disseminate and publish Earth System model data and related data products to support the international climate research community. The WDCC is a discipline specific repository providing active preservation for research only. Therefore WDCC is using common metadata standards and is recommending the usage of community data standards like the Climate Forecast (CF) Conventions. The WDCC is certified by Core Trust Seal (CTS) and an accredited regular member of the World Data System. WDCC is following the FAIR principles - all metadata is openly accessible, the access to the data is free of charge. The WDCC is hosted by the German Climate Computing Center (Deutsches Klimarechenzentrum - DKRZ) in Hamburg.

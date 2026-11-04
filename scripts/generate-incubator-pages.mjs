@@ -224,6 +224,8 @@ function buildFrontMatter(record, keyArticle) {
   if (ownership) lines.push(`inc_ownership = ${tomlString(ownership)}`);
   if (serviceType) lines.push(`inc_service_type = ${tomlString(serviceType)}`);
   if (activityPage) lines.push(`inc_activity_page = ${tomlString(activityPage)}`);
+  const sourceRef = asUrl(record.inc_source_ref);
+  if (sourceRef) lines.push(`source_ref = ${tomlString(sourceRef)}`);
 
   lines.push("+++");
   return lines.join("\n");

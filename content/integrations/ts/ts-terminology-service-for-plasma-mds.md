@@ -15,6 +15,7 @@ linked_entities = 0
 partners = ["NFDI4BIOIMAGE"]
 logo_project = "img/partner-logos/2f46b3090c3dd5f8.svg"
 inc_activity_page = "https://ols.plasma-mds.org/"
+source_ref = "incubator-8"
 +++
 
 The plasma ontology (Plasma-O) is a domain-specific ontology for low-temperature plasma science and technology. It aims to support the standardized documentation and annotation of data and information in this field. The ontology contains classes and properties for the entities which are relevant in typical plasma studies, such as plasma generating devices, media, materials and diagnostic methods.

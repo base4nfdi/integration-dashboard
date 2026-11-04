@@ -84,6 +84,7 @@ const WRITE_FIELDS = [
   "inc_ownership",
   "inc_service_type",
   "inc_activity_page",
+  "inc_source_ref",
 ];
 
 const VALID_STATUSES = new Set(["In preparation", "Running", "Finished"]);
@@ -195,6 +196,7 @@ function normalizeRecord(raw) {
     inc_goals: asString(raw.inc_goals),
     inc_results: asString(raw.inc_results),
     inc_partner_publications: asNumber(raw.inc_partner_publications) ?? 0,
+    inc_source_ref: asString(raw.inc_source_ref),
     linked_partners: asNumber(raw.linked_partners),
     linked_entities: asNumber(raw.linked_entities),
     partners: asStringList(raw[PARTNERS_FIELD]),

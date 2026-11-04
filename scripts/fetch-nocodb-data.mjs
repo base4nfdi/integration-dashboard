@@ -107,6 +107,7 @@ function normalizeIncubatorRecord(raw) {
     inc_ownership: asString(raw.inc_ownership),
     inc_service_type: asString(raw.inc_service_type),
     inc_activity_page: asString(raw.inc_activity_page),
+    inc_source_ref: asString(raw.inc_source_ref),
     linked_partners: asNumber(raw.linked_partners),
     linked_entities: asNumber(raw.linked_entities),
     partners: asStringList(raw[PARTNERS_FIELD]),

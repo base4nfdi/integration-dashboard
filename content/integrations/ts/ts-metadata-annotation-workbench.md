@@ -15,6 +15,7 @@ linked_entities = 0
 partners = ["NFDI4Health"]
 logo_project = "img/partner-logos/c08cca7ca0e157bf.png"
 inc_activity_page = "https://mda.nfdi4health.de/"
+source_ref = "incubator-10"
 +++
 
 The Metadata Annotation Workbench is developed in the NFDI4Health project. The service aims to assist researchers with semantic annotation of data dictionaries, questionnaires or other data collection instruments.

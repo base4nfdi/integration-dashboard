@@ -2,7 +2,7 @@
 /**
  * Ensure the NocoDB Incubators table has columns for source fields that
  * detail pages were missing (activity type, CAAI, ownership, service type,
- * activity page). Idempotent.
+ * activity page, cycle label, source-page card id). Idempotent.
  *
  * Required env:
  *   NOCODB_API_TOKEN
@@ -50,6 +50,11 @@ const DESIRED_COLUMNS = [
     title: "inc_cycle_label",
     uidt: "SingleLineText",
   },
+  {
+    column_name: "inc_source_ref",
+    title: "inc_source_ref",
+    uidt: "SingleLineText",
+  },
 ];
 
 function loadDotEnv() {
@@ -93,7 +98,8 @@ function printHelp() {
   node scripts/ensure-incubators-schema.mjs [--dry-run]
 
 Creates missing Incubators columns:
-  inc_activity_type, inc_caai, inc_service_type, inc_ownership, inc_activity_page
+  inc_activity_type, inc_caai, inc_service_type, inc_ownership,
+  inc_activity_page, inc_cycle_label, inc_source_ref
 `);
 }
 

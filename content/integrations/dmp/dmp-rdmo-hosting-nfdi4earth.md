@@ -14,7 +14,7 @@ linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Earth"]
 logo_consortia = "img/partner-logos/fb068dab27f7e96a.png"
-inc_service_type = "RDMO Hosting, Template Development"
+inc_service_type = "RDMO Hosting, Template Development, RDMO Integration"
 +++
 
 

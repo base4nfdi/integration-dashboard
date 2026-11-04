@@ -1,12 +1,12 @@
 {
-  "mode": "dry-run",
+  "mode": "apply",
   "strategy": "source-wins",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-11-04T00:34:05.203Z",
+  "planned_at": "2026-11-04T01:07:43.642Z",
   "totals": {
-    "to_patch": 24,
-    "will_patch": 24,
-    "synced": 19,
+    "to_patch": 33,
+    "will_patch": 33,
+    "synced": 0,
     "status_finished": 0,
     "status_changed": 0,
     "descriptions_extended": 0,
@@ -14,9 +14,9 @@
   },
   "by_source": {
     "dmp4nfdi": {
-      "to_patch": 6,
-      "will_patch": 6,
-      "synced": 6,
+      "to_patch": 0,
+      "will_patch": 0,
+      "synced": 0,
       "status_finished": 0,
       "status_changed": 0,
       "partner_links": 0
@@ -30,9 +30,9 @@
       "partner_links": 0
     },
     "ts4nfdi": {
-      "to_patch": 16,
-      "will_patch": 16,
-      "synced": 13,
+      "to_patch": 31,
+      "will_patch": 31,
+      "synced": 0,
       "status_finished": 0,
       "status_changed": 0,
       "partner_links": 0
@@ -47,98 +47,6 @@
     }
   },
   "records": [
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 6,
-      "inc_name": "RDMO Hosting — NFDI4Earth",
-      "key_article": "dmp-nfdi4earth-rdmo",
-      "reasons": [
-        "sync:inc_results"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_results": "NFDI4Earth RDMO Client\nhttps://rdmo.nfdi4earth.de/\nRDMO Sensor Search option set plugin updated\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
-      }
-    },
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 17,
-      "inc_name": "Training & Outreach — Text+",
-      "key_article": "dmp-training-and-outreach-textplus",
-      "reasons": [
-        "sync:inc_goals"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_goals": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”. It will also conduct a survey to ask the community about their wishes and needs regarding DMPs and RDMO."
-      }
-    },
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 18,
-      "inc_name": "Template Development — NFDI4Cat",
-      "key_article": "dmp-training-and-outreach-nfdi4cat",
-      "reasons": [
-        "sync:inc_name",
-        "sync:inc_service_type"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_name": "Template Development — NFDI4Cat",
-        "inc_service_type": "Template Development"
-      }
-    },
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 19,
-      "inc_name": "Template Development — NFDI4Health",
-      "key_article": "dmp-template-development-nfdi4health",
-      "reasons": [
-        "sync:inc_service_type"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_service_type": "Template Development"
-      }
-    },
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 32,
-      "inc_name": "Training & Outreach — NFDI4Chem",
-      "key_article": "dmp-training-and-outreach-nfdi4chem",
-      "reasons": [
-        "sync:inc_goals"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI will support the consortium by providing training materials and a training guide for data stewards. Based on the Train-the-Trainer concept for DMPs and RDMO, the guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO."
-      }
-    },
-    {
-      "source": "dmp4nfdi",
-      "table": "incubators",
-      "id": 39,
-      "inc_name": "RDMO Hosting — NFDI4Earth",
-      "key_article": "dmp-rdmo-hosting-nfdi4earth",
-      "reasons": [
-        "sync:inc_service_type"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_service_type": "RDMO Hosting, Template Development, RDMO Integration"
-      }
-    },
     {
       "source": "iam4nfdi",
       "table": "incubators",
@@ -176,11 +84,13 @@
       "inc_name": "RADAR",
       "key_article": "ts-radar",
       "reasons": [
+        "fill:inc_source_ref",
         "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
+        "inc_source_ref": "incubator-1",
         "inc_partner_publications": 3
       }
     },
@@ -191,12 +101,27 @@
       "inc_name": "WDCC",
       "key_article": "ts-wdcc",
       "reasons": [
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2025-10-30"
+        "inc_source_ref": "incubator-2"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 78,
+      "inc_name": "nmrXiv",
+      "key_article": "ts-nmrxiv",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-3"
       }
     },
     {
@@ -206,14 +131,29 @@
       "inc_name": "ChEBI",
       "key_article": "ts-chebi",
       "reasons": [
-        "sync:inc_end",
+        "fill:inc_source_ref",
         "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2025-10-15",
+        "inc_source_ref": "incubator-4",
         "inc_partner_publications": 1
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 80,
+      "inc_name": "Coconut",
+      "key_article": "ts-coconut",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-5"
       }
     },
     {
@@ -223,13 +163,13 @@
       "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
       "key_article": "ts-nfdi4cat-central-data-repository-repo4cat",
       "reasons": [
-        "sync:inc_end",
+        "fill:inc_source_ref",
         "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2025-08-14",
+        "inc_source_ref": "incubator-6",
         "inc_partner_publications": 1
       }
     },
@@ -240,11 +180,13 @@
       "inc_name": "BERD Terminology Service",
       "key_article": "ts-berd-terminology-service",
       "reasons": [
+        "fill:inc_source_ref",
         "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
+        "inc_source_ref": "incubator-7",
         "inc_partner_publications": 1
       }
     },
@@ -255,12 +197,44 @@
       "inc_name": "Terminology service for Plasma-MDS",
       "key_article": "ts-terminology-service-for-plasma-mds",
       "reasons": [
+        "fill:inc_source_ref",
         "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
+        "inc_source_ref": "incubator-8",
         "inc_partner_publications": 1
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 84,
+      "inc_name": "preVIEW",
+      "key_article": "ts-preview",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-9"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 85,
+      "inc_name": "Metadata Annotation Workbench",
+      "key_article": "ts-metadata-annotation-workbench",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-10"
       }
     },
     {
@@ -270,12 +244,42 @@
       "inc_name": "Discuss Data",
       "key_article": "ts-discuss-data",
       "reasons": [
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2025-10-30"
+        "inc_source_ref": "incubator-11"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 87,
+      "inc_name": "Open Energy Platform",
+      "key_article": "ts-open-energy-platform",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-12"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 88,
+      "inc_name": "ICONCLASS",
+      "key_article": "ts-iconclass",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-13"
       }
     },
     {
@@ -285,12 +289,12 @@
       "inc_name": "Ontology of the historical German-language nomenclature",
       "key_article": "ts-ontology-of-the-historical-german-language-nomenclature",
       "reasons": [
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2026-03-19"
+        "inc_source_ref": "incubator-14"
       }
     },
     {
@@ -300,12 +304,27 @@
       "inc_name": "Health Study Hub",
       "key_article": "ts-health-study-hub",
       "reasons": [
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_end": "2026-03-05"
+        "inc_source_ref": "incubator-15"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 91,
+      "inc_name": "DALIA Search Portal",
+      "key_article": "ts-dalia-search-portal",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-16"
       }
     },
     {
@@ -315,14 +334,12 @@
       "inc_name": "AIMS",
       "key_article": "ts-aims",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_goals"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-03-18",
-        "inc_goals": "- Replace current terminology providers with a unified terminology service\n- Develop of Vue.js-based components for enhanced terminology browsing and navigation"
+        "inc_source_ref": "incubator-17"
       }
     },
     {
@@ -332,16 +349,12 @@
       "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
       "key_article": "ts-integrate-ts4nfdi-into-dmp4nfdi-rdmo-service",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_end",
-        "sync:inc_goals"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-03-17",
-        "inc_end": "2026-09-08",
-        "inc_goals": "- Integration of terminology data to RDMO via TS4NFDI API Gateway\n- Provision of terminologies preselection for RDMO specified by subjects/topics/domains"
+        "inc_source_ref": "incubator-18"
       }
     },
     {
@@ -351,14 +364,12 @@
       "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
       "key_article": "ts-enabling-semantic-interoperability-via-datacite-terminologies",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-02-26",
-        "inc_end": "2026-11-30"
+        "inc_source_ref": "incubator-19"
       }
     },
     {
@@ -368,16 +379,12 @@
       "inc_name": "Metabase",
       "key_article": "ts-metabase",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_end",
-        "sync:inc_descr"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-02-26",
-        "inc_end": "2026-08-06",
-        "inc_descr": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontologies, and connects to external systems such as the open research knowledge graph (ORKG)."
+        "inc_source_ref": "incubator-20"
       }
     },
     {
@@ -387,14 +394,12 @@
       "inc_name": "MathModDB",
       "key_article": "ts-mathmoddb",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_end"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-03-04",
-        "inc_end": "2026-09-10"
+        "inc_source_ref": "incubator-21"
       }
     },
     {
@@ -404,16 +409,72 @@
       "inc_name": "FAIRagro Terminology Service",
       "key_article": "ts-fairagro-terminology-service",
       "reasons": [
-        "sync:inc_start",
-        "sync:inc_end",
-        "sync:inc_goals"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_start": "2026-03-13",
-        "inc_end": "2026-10-19",
-        "inc_goals": "- Provision of terminologies in a Terminology Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products"
+        "inc_source_ref": "incubator-22"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 111,
+      "inc_name": "TS4NFDI integration in Galaxy",
+      "key_article": "ts-ts4nfdi-integration-in-galaxy",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-23"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 98,
+      "inc_name": "TeSS",
+      "key_article": "ts-tess",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-24"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 99,
+      "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
+      "key_article": "ts-semantic-interoperability-and-terminology-mapping-for-panet-based-discovery-in-photon-and-neutron-science-repositories",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-25"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 100,
+      "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
+      "key_article": "ts-improving-interoperability-for-climate-and-energy-policy-ontologies",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-26"
       }
     },
     {
@@ -423,12 +484,72 @@
       "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
       "key_article": "ts-terminology-service-suite-integration-for-wisski-authority-data-enrichment",
       "reasons": [
-        "sync:inc_descr"
+        "fill:inc_source_ref"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_descr": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific research environments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway."
+        "inc_source_ref": "incubator-27"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 102,
+      "inc_name": "OstData & 4MMS",
+      "key_article": "ts-ostdata-and-4mms",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-28"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 8,
+      "inc_name": "SensorCV",
+      "key_article": "ts-sensorcv",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-29"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 103,
+      "inc_name": "Semantic and Interoperable Metadata Integration for ELN Objects",
+      "key_article": "ts-semantic-and-interoperable-metadata-integration-for-eln-objects",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-30"
+      }
+    },
+    {
+      "source": "ts4nfdi",
+      "table": "incubators",
+      "id": 104,
+      "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
+      "key_article": "ts-integration-of-ontology-based-auto-completion-in-nfdi4immuno-excel-metadata-templates",
+      "reasons": [
+        "fill:inc_source_ref"
+      ],
+      "unresolved_partners": [],
+      "partner_ids": [],
+      "patch": {
+        "inc_source_ref": "incubator-31"
       }
     }
   ]

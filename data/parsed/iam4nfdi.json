@@ -1,7 +1,7 @@
 {
   "source": "iam4nfdi",
   "basic_service": "IAM",
-  "parsed_at": "2026-11-04T00:25:02.258Z",
+  "parsed_at": "2026-11-04T01:07:31.779Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/iam4nfdi/page.html",
   "record_count": 39,
   "records": [
@@ -28,6 +28,7 @@
       "inc_ownership": "CC-BY 4.0",
       "inc_service_type": "",
       "inc_activity_page": "https://jupyter.nfdi4ing.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -66,6 +67,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.services.base4nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -104,6 +106,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://come2data.de",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -140,6 +143,7 @@
       "inc_ownership": "CC by 4.0 + MIT",
       "inc_service_type": "",
       "inc_activity_page": "https://infraverse-dev.zih.tu-dresden.de",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -176,6 +180,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://github.com/pennersr/django-allauth",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -213,6 +218,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://ingest.nfdi4ing.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -250,6 +256,7 @@
       "inc_ownership": "MIT or LGPL",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=chaldene tim dahmen",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -287,6 +294,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://all-chat.nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -324,6 +332,7 @@
       "inc_ownership": "CC By 4.0",
       "inc_service_type": "",
       "inc_activity_page": "https://berd-nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -361,6 +370,7 @@
       "inc_ownership": "permissive open-source + CC0 / CC-BY",
       "inc_service_type": "",
       "inc_activity_page": "https://gfbio.org/about",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -398,6 +408,7 @@
       "inc_ownership": "MISSING, in preparation to select a suitable OpenSource license",
       "inc_service_type": "",
       "inc_activity_page": "https://simplevm.github.io",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -434,6 +445,7 @@
       "inc_ownership": "Apache v2.0",
       "inc_service_type": "",
       "inc_activity_page": "https://clowm.bi.denbi.de",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -470,6 +482,7 @@
       "inc_ownership": "MIT License",
       "inc_service_type": "",
       "inc_activity_page": "https://dalia.education",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -506,6 +519,7 @@
       "inc_ownership": "Apache V2.0 MIT License",
       "inc_service_type": "",
       "inc_activity_page": "https://aruna-engine.org",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -542,6 +556,7 @@
       "inc_ownership": "BSD 3-Clause",
       "inc_service_type": "",
       "inc_activity_page": "https://docs.hub.nfdi-jupyter.de",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -578,6 +593,7 @@
       "inc_ownership": "GPLv3.0",
       "inc_service_type": "",
       "inc_activity_page": "https://biigle.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -615,6 +631,7 @@
       "inc_ownership": "Missing!!",
       "inc_service_type": "",
       "inc_activity_page": "https://wiss-ki.eu",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -652,6 +669,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -689,6 +707,7 @@
       "inc_ownership": "AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?tab=License-1-ov-file",
       "inc_service_type": "",
       "inc_activity_page": "https://openenergyplatform.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -726,6 +745,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://nomad-lab.eu",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -763,6 +783,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://repository.nfdi4cat.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -800,6 +821,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=FTS+MATWERK",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -837,6 +859,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://forum.lifbi.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -874,6 +897,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://fairagro.net/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -911,6 +935,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4plants.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -948,6 +973,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://about.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -985,6 +1011,7 @@
       "inc_ownership": "missing",
       "inc_service_type": "",
       "inc_activity_page": "https://www.come2data.de",
+      "inc_source_ref": "",
       "linked_partners": null,
       "linked_entities": null,
       "partners": [],
@@ -1021,6 +1048,7 @@
       "inc_ownership": "No content provided.",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=nfdixcs",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1058,6 +1086,7 @@
       "inc_ownership": "möglicherweise EUPL-1.2",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?q=authorisation+on+objects",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1095,6 +1124,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://apps.edutrain.nfdi4earth.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1132,6 +1162,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1169,6 +1200,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4culture.de/id/E5913",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1206,6 +1238,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://forschen-fuer-gesundheit.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1243,6 +1276,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1280,6 +1314,7 @@
       "inc_ownership": "Dont know what that mean - the service is > opensource.",
       "inc_service_type": "",
       "inc_activity_page": "https://www.nfdi4datascience.de/news/202402_argocd",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1317,6 +1352,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://about.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1354,6 +1390,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://jards.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1391,6 +1428,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4ing.de/base-services/s-3/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -1428,6 +1466,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [

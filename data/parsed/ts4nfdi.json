@@ -1,7 +1,7 @@
 {
   "source": "ts4nfdi",
   "basic_service": "TS",
-  "parsed_at": "2026-11-04T00:25:02.391Z",
+  "parsed_at": "2026-11-04T01:07:31.916Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/ts4nfdi/projects.json",
   "record_count": 31,
   "records": [
@@ -28,6 +28,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu",
+      "inc_source_ref": "incubator-1",
       "linked_partners": 3,
       "linked_entities": null,
       "partners": [
@@ -62,6 +63,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-2",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -94,6 +96,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-3",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -126,6 +129,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://www.ebi.ac.uk/chebi/CHEBI:27732",
+      "inc_source_ref": "incubator-4",
       "linked_partners": 0,
       "linked_entities": null,
       "partners": [],
@@ -156,6 +160,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-5",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -188,6 +193,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/",
+      "inc_source_ref": "incubator-6",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -220,6 +226,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://ts.berd-nfdi.de/",
+      "inc_source_ref": "incubator-7",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -252,6 +259,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://ols.plasma-mds.org/",
+      "inc_source_ref": "incubator-8",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -284,6 +292,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://preview.zbmed.de/",
+      "inc_source_ref": "incubator-9",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -316,6 +325,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://mda.nfdi4health.de/",
+      "inc_source_ref": "incubator-10",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -348,6 +358,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-11",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -380,6 +391,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://openenergyplatform.org/viewer/oeo/",
+      "inc_source_ref": "incubator-12",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -412,6 +424,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-13",
       "linked_partners": 4,
       "linked_entities": null,
       "partners": [
@@ -447,6 +460,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.tib.eu/ts/ontologies/ohdab",
+      "inc_source_ref": "incubator-14",
       "linked_partners": 2,
       "linked_entities": null,
       "partners": [
@@ -480,6 +494,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://health-study-hub.de/resource/nfdi4health-108",
+      "inc_source_ref": "incubator-15",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -512,6 +527,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-16",
       "linked_partners": 0,
       "linked_entities": null,
       "partners": [],
@@ -542,6 +558,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://profiles.nfdi4ing.de/",
+      "inc_source_ref": "incubator-17",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -574,6 +591,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/",
+      "inc_source_ref": "incubator-18",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -606,6 +624,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://tibhannover.github.io/datacite/mappings/",
+      "inc_source_ref": "incubator-19",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -638,6 +657,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://api.nfdixcs.org/metabase/swagger-ui/index.html",
+      "inc_source_ref": "incubator-20",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -670,6 +690,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation",
+      "inc_source_ref": "incubator-21",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -702,6 +723,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/",
+      "inc_source_ref": "incubator-22",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -734,6 +756,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-23",
       "linked_partners": 0,
       "linked_entities": null,
       "partners": [],
@@ -764,6 +787,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-24",
       "linked_partners": 2,
       "linked_entities": null,
       "partners": [
@@ -797,6 +821,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-25",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -829,6 +854,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-26",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -861,6 +887,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-27",
       "linked_partners": 3,
       "linked_entities": null,
       "partners": [
@@ -895,6 +922,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-28",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -927,6 +955,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-29",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [
@@ -959,6 +988,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-30",
       "linked_partners": 0,
       "linked_entities": null,
       "partners": [],
@@ -989,6 +1019,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-31",
       "linked_partners": 1,
       "linked_entities": null,
       "partners": [

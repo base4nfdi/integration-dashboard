@@ -14,9 +14,10 @@ linked_partners = 3
 linked_entities = 0
 partners = ["NFDI4Culture", "NFDI4Memory", "NFDI4Objects"]
 logo_project = "img/partner-logos/db311bd7628d7af5.png"
+source_ref = "incubator-27"
 +++
 
-SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.
+SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific research environments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.
 
 
 ## Goals

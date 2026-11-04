@@ -137,6 +137,7 @@ export function emptyRecord(overrides = {}) {
     inc_ownership: "",
     inc_service_type: "",
     inc_activity_page: "",
+    inc_source_ref: "",
     linked_partners: null,
     linked_entities: null,
     partners: [],
@@ -431,8 +432,18 @@ function jaccard(a, b) {
 }
 
 /**
+ * Anchor id of the record's card on the public source page (e.g. TS
+ * "incubator-6" → https://terminology.services.base4nfdi.de/incubators#incubator-6).
+ */
+export function sourceRef(record) {
+  return String(record?.inc_source_ref ?? "").trim();
+}
+
+/**
  * Match parsed source records against NocoDB rows for one basic_service.
- * Matching is best-effort by name similarity, goals overlap, partners, and cycle.
+ * When both sides carry an inc_source_ref, that id decides the match.
+ * Otherwise matching is best-effort by name similarity, goals overlap,
+ * partners, and cycle.
  * Returns full records (not summaries).
  */
 export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
@@ -452,10 +463,18 @@ export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
       (src.partners ?? []).map((p) => String(p).toLowerCase())
     );
     const srcGoals = tokenSet(`${src.inc_goals ?? ""} ${src.inc_descr ?? ""}`);
+    const srcRef = sourceRef(src);
 
     for (let i = 0; i < nocos.length; i++) {
       if (usedNoco.has(i)) continue;
       const noco = nocos[i];
+      const nocoRef = sourceRef(noco);
+      if (srcRef && nocoRef) {
+        if (srcRef !== nocoRef) continue;
+        best = { index: i, noco };
+        bestScore = 2;
+        break;
+      }
       const nocoPartners = new Set(
         (noco.partners ?? []).map((p) => String(p).toLowerCase())
       );
@@ -596,6 +615,7 @@ const COMPARE_FIELDS = [
   "inc_ownership",
   "inc_service_type",
   "inc_activity_page",
+  "inc_source_ref",
   "partners",
   "logo_project",
   "logo_project_dark",

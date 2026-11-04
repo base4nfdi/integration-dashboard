@@ -14,6 +14,7 @@ linked_partners = 1
 linked_entities = 0
 partners = ["DAPHNE4NFDI"]
 logo_project = "img/partner-logos/9f445863db409d4f.png"
+source_ref = "incubator-25"
 +++
 
 DAPHNE4NFDI represents the Photon and Neutron (PaN) research community in the German National Research Data Infrastructure (NFDI). The community has developed and maintains the PaNET ontology, a domain ontology that systematises experimental techniques used at e.g. photon and neutron research infrastructure. The PaN community requires a sustainable approach for managing and using terminology mappings while preserving the integrity and governance of the PaNET ontology itself.

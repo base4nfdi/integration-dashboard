@@ -1,5 +1,5 @@
 +++
-title = "Training & Outreach — NFDI4Cat"
+title = "Template Development — NFDI4Cat"
 date = 2026-07-31
 [extra]
 key_article = "dmp-training-and-outreach-nfdi4cat"
@@ -14,7 +14,7 @@ linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Cat"]
 logo_consortia = "img/partner-logos/77459895f95007f0.png"
-inc_service_type = "Training & Outreach, Template Development"
+inc_service_type = "Template Development"
 +++
 
 

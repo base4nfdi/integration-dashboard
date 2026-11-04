@@ -14,7 +14,7 @@ linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Health"]
 logo_consortia = "img/partner-logos/a39dd4e2752dbcc5.png"
-inc_service_type = "Template Development, RDMO Hosting"
+inc_service_type = "Template Development"
 +++
 
 

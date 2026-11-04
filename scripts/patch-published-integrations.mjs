@@ -104,6 +104,7 @@ const INCUBATOR_BLANK_FIELDS = [
   "inc_ownership",
   "inc_service_type",
   "inc_activity_page",
+  "inc_source_ref",
 ];
 
 /** Source-backed use-case cells. Descriptions and results are separate. */
@@ -399,6 +400,7 @@ function normalizeIncubator(raw) {
     inc_ownership: asString(raw.inc_ownership),
     inc_service_type: asString(raw.inc_service_type),
     inc_activity_page: asString(raw.inc_activity_page),
+    inc_source_ref: asString(raw.inc_source_ref),
     linked_partners: asNumber(raw.linked_partners),
     partners: asStringList(raw[PARTNERS_FIELD] ?? raw.partners),
     entities: asStringList(raw[ENTITIES_FIELD] ?? raw.entities),

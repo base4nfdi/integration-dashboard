@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-11-04T00:25:16.819Z",
+  "fetched_at": "2026-11-04T01:07:44.781Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
@@ -37,6 +37,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu",
+      "inc_source_ref": "incubator-1",
       "linked_partners": 3,
       "linked_entities": 1,
       "partners": [
@@ -60,7 +61,7 @@
       "logo_consortia": "img/partner-logos/d2899f44796b9a2d.png",
       "key_article": "ts-wdcc",
       "inc_start": "2025-02-26",
-      "inc_end": "2025-10-31",
+      "inc_end": "2025-10-30",
       "inc_cycle": 1,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -73,6 +74,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-2",
       "linked_partners": 1,
       "linked_entities": 1,
       "partners": [
@@ -93,13 +95,13 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-aims",
-      "inc_start": "2026-03-01",
+      "inc_start": "2026-03-18",
       "inc_end": "2026-09-15",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Finished",
       "inc_descr": "AIMS (Applying Interoperable Metadata Standards) is developing a platform for creating, sharing, and reusing interoperable and machine-readable metadata profiles based on SHACL shapes. The project addresses key challenges in research data management by enabling researchers to model semantic metadata schemas in a modular and hierarchical fashion using elements from established controlled terminologies. AIMS provides a central web-UI for managing profiles, backed by repositories for storing validated metadata sets and integrating with electronic lab notebooks (ELNs) like eLabFTW and openBIS. The project consortium includes ULB Darmstadt, RWTH Aachen IT Center, University of Rostock, Fraunhofer IWM, and University of Freiburg.",
-      "inc_goals": "- Replace current terminology providers with TS4NFDI API Gateway as unified terminology service\n- Integrate TS4NFDI Service Suite widgets to AIMS",
+      "inc_goals": "- Replace current terminology providers with a unified terminology service\n- Develop of Vue.js-based components for enhanced terminology browsing and navigation",
       "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -107,6 +109,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://profiles.nfdi4ing.de/",
+      "inc_source_ref": "incubator-17",
       "linked_partners": 1,
       "linked_entities": 3,
       "partners": [
@@ -143,6 +146,7 @@
       "inc_ownership": "CC-BY 4.0",
       "inc_service_type": "",
       "inc_activity_page": "https://jupyter.nfdi4ing.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -175,6 +179,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -200,13 +205,14 @@
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "Provision of an operational RDMO for the Earth System Science community to create DMPs for sensor-heavy research projects as well as for monitoring activities. The RDMO will be linked to existing sensor- and data management systems such as SMS, O2A. This will allow the direct and seamless integration of sensor metadata in RDMO-based data management plans, ensuring metadata consistency between the linked systems. During the incubator project, a productive client will be set up and evaluated by the community in a user workshop.",
-      "inc_results": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
+      "inc_results": "NFDI4Earth RDMO Client\nhttps://rdmo.nfdi4earth.de/\nRDMO Sensor Search option set plugin updated\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
       "inc_caai": "",
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting, RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -239,6 +245,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-29",
       "linked_partners": 1,
       "linked_entities": 1,
       "partners": [
@@ -273,6 +280,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 2,
       "linked_entities": 0,
       "partners": [
@@ -306,6 +314,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -338,6 +347,7 @@
       "inc_ownership": "",
       "inc_service_type": "Training & Outreach",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -370,6 +380,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -402,6 +413,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -434,6 +446,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Integration, Training & Outreach",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -458,7 +471,7 @@
       "inc_cycle_label": "Cycle 1",
       "inc_status": "Finished",
       "inc_descr": "",
-      "inc_goals": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback.",
+      "inc_goals": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”. It will also conduct a survey to ask the community about their wishes and needs regarding DMPs and RDMO.",
       "inc_results": "Survey results: DMPs – What are our community’s needs? (in German)\n https://doi.org/10.58079/16u2t",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -466,6 +479,7 @@
       "inc_ownership": "",
       "inc_service_type": "Training & Outreach",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -477,7 +491,7 @@
     },
     {
       "id": 18,
-      "inc_name": "Training & Outreach — NFDI4Cat",
+      "inc_name": "Template Development — NFDI4Cat",
       "basic_service": "DMP",
       "related_institutions": "",
       "logo_project": "",
@@ -496,8 +510,9 @@
       "inc_activity_type": "",
       "inc_caai": "",
       "inc_ownership": "",
-      "inc_service_type": "Training & Outreach, Template Development",
+      "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -528,8 +543,9 @@
       "inc_activity_type": "",
       "inc_caai": "",
       "inc_ownership": "",
-      "inc_service_type": "Template Development, RDMO Hosting",
+      "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -562,6 +578,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -594,6 +611,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -626,6 +644,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -658,6 +677,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -690,6 +710,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -722,6 +743,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -754,6 +776,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -786,6 +809,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -818,6 +842,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -850,6 +875,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 2,
       "linked_entities": 0,
       "partners": [
@@ -883,6 +909,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -915,6 +942,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -939,7 +967,7 @@
       "inc_cycle_label": "Cycle 0, Cycle 1",
       "inc_status": "Finished",
       "inc_descr": "",
-      "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
+      "inc_goals": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI will support the consortium by providing training materials and a training guide for data stewards. Based on the Train-the-Trainer concept for DMPs and RDMO, the guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
       "inc_results": "Training Guideline – How to Plan and Run a Workshop on Data Management Plans\nhttps://doi.org/10.5281/zenodo.20529135\nOER – DMP Writing Made Easy: A Hands-on Workshop for Chemists\nhttps://doi.org/10.5281/zenodo.18349878",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -947,6 +975,7 @@
       "inc_ownership": "",
       "inc_service_type": "Training & Outreach",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -979,6 +1008,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1011,6 +1041,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1043,6 +1074,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1075,6 +1107,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1107,6 +1140,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting, RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1139,6 +1173,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting, RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1169,8 +1204,9 @@
       "inc_activity_type": "",
       "inc_caai": "",
       "inc_ownership": "",
-      "inc_service_type": "RDMO Hosting, Template Development",
+      "inc_service_type": "RDMO Hosting, Template Development, RDMO Integration",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1203,6 +1239,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.services.base4nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1233,6 +1270,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://come2data.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 1,
       "partners": [],
@@ -1265,6 +1303,7 @@
       "inc_ownership": "CC by 4.0 + MIT",
       "inc_service_type": "",
       "inc_activity_page": "https://infraverse-dev.zih.tu-dresden.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1295,6 +1334,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://github.com/pennersr/django-allauth",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1327,6 +1367,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://ingest.nfdi4ing.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 1,
       "partners": [
@@ -1361,6 +1402,7 @@
       "inc_ownership": "MIT or LGPL",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=chaldene tim dahmen",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1393,6 +1435,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://all-chat.nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 1,
       "partners": [],
@@ -1425,6 +1468,7 @@
       "inc_ownership": "CC By 4.0",
       "inc_service_type": "",
       "inc_activity_page": "https://berd-nfdi.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1457,6 +1501,7 @@
       "inc_ownership": "permissive open-source + CC0 / CC-BY",
       "inc_service_type": "",
       "inc_activity_page": "https://gfbio.org/about",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 1,
       "partners": [
@@ -1491,6 +1536,7 @@
       "inc_ownership": "MISSING, in preparation to select a suitable OpenSource license",
       "inc_service_type": "",
       "inc_activity_page": "https://simplevm.github.io",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 1,
       "partners": [],
@@ -1523,6 +1569,7 @@
       "inc_ownership": "Apache v2.0",
       "inc_service_type": "",
       "inc_activity_page": "https://clowm.bi.denbi.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1553,6 +1600,7 @@
       "inc_ownership": "MIT License",
       "inc_service_type": "",
       "inc_activity_page": "https://dalia.education",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1583,6 +1631,7 @@
       "inc_ownership": "Apache V2.0 MIT License",
       "inc_service_type": "",
       "inc_activity_page": "https://aruna-engine.org",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1613,6 +1662,7 @@
       "inc_ownership": "BSD 3-Clause",
       "inc_service_type": "",
       "inc_activity_page": "https://docs.hub.nfdi-jupyter.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -1643,6 +1693,7 @@
       "inc_ownership": "GPLv3.0",
       "inc_service_type": "",
       "inc_activity_page": "https://biigle.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1675,6 +1726,7 @@
       "inc_ownership": "Missing!!",
       "inc_service_type": "",
       "inc_activity_page": "https://wiss-ki.eu",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1707,6 +1759,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1739,6 +1792,7 @@
       "inc_ownership": "AGPL-3.0-or-later https://github.com/OpenEnergyPlatform/oeplatform/tree/master?tab=License-1-ov-file",
       "inc_service_type": "",
       "inc_activity_page": "https://openenergyplatform.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1771,6 +1825,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://nomad-lab.eu",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1803,6 +1858,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://repository.nfdi4cat.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1835,6 +1891,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=FTS+MATWERK",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1867,6 +1924,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://forum.lifbi.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1899,6 +1957,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://fairagro.net/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1931,6 +1990,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4plants.org",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1963,6 +2023,7 @@
       "inc_ownership": ".",
       "inc_service_type": "",
       "inc_activity_page": "https://about.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -1995,6 +2056,7 @@
       "inc_ownership": "missing",
       "inc_service_type": "",
       "inc_activity_page": "https://www.come2data.de",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -2025,6 +2087,7 @@
       "inc_ownership": "No content provided.",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=nfdixcs",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2057,6 +2120,7 @@
       "inc_ownership": "möglicherweise EUPL-1.2",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?q=authorisation+on+objects",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2089,6 +2153,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://apps.edutrain.nfdi4earth.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2121,6 +2186,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.nfdi4chem.de/ts",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2153,6 +2219,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4culture.de/id/E5913",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2185,6 +2252,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://forschen-fuer-gesundheit.de",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2217,6 +2285,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2249,6 +2318,7 @@
       "inc_ownership": "Dont know what that mean - the service is > opensource.",
       "inc_service_type": "",
       "inc_activity_page": "https://www.nfdi4datascience.de/news/202402_argocd",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2281,6 +2351,7 @@
       "inc_ownership": "MIT Licence",
       "inc_service_type": "",
       "inc_activity_page": "https://about.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2313,6 +2384,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://jards.coscine.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2345,6 +2417,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://nfdi4ing.de/base-services/s-3/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2377,6 +2450,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2409,6 +2483,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-3",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2428,7 +2503,7 @@
       "logo_consortia": "",
       "key_article": "ts-chebi",
       "inc_start": "2025-02-10",
-      "inc_end": "2025-11-30",
+      "inc_end": "2025-10-15",
       "inc_cycle": 1,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2441,6 +2516,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://www.ebi.ac.uk/chebi/CHEBI:27732",
+      "inc_source_ref": "incubator-4",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -2471,6 +2547,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-5",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2490,7 +2567,7 @@
       "logo_consortia": "",
       "key_article": "ts-nfdi4cat-central-data-repository-repo4cat",
       "inc_start": "2025-02-12",
-      "inc_end": "2025-10-31",
+      "inc_end": "2025-08-14",
       "inc_cycle": 1,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2503,6 +2580,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/",
+      "inc_source_ref": "incubator-6",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2535,6 +2613,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://ts.berd-nfdi.de/",
+      "inc_source_ref": "incubator-7",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2567,6 +2646,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://ols.plasma-mds.org/",
+      "inc_source_ref": "incubator-8",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2599,6 +2679,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://preview.zbmed.de/",
+      "inc_source_ref": "incubator-9",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2631,6 +2712,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://mda.nfdi4health.de/",
+      "inc_source_ref": "incubator-10",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2650,7 +2732,7 @@
       "logo_consortia": "",
       "key_article": "ts-discuss-data",
       "inc_start": "2025-02-20",
-      "inc_end": "2025-10-31",
+      "inc_end": "2025-10-30",
       "inc_cycle": 1,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2663,6 +2745,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-11",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2695,6 +2778,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://openenergyplatform.org/viewer/oeo/",
+      "inc_source_ref": "incubator-12",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2727,6 +2811,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-13",
       "linked_partners": 4,
       "linked_entities": 0,
       "partners": [
@@ -2749,7 +2834,7 @@
       "logo_consortia": "",
       "key_article": "ts-ontology-of-the-historical-german-language-nomenclature",
       "inc_start": "2025-08-14",
-      "inc_end": "2026-02-28",
+      "inc_end": "2026-03-19",
       "inc_cycle": 2,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2762,6 +2847,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.tib.eu/ts/ontologies/ohdab",
+      "inc_source_ref": "incubator-14",
       "linked_partners": 2,
       "linked_entities": 0,
       "partners": [
@@ -2782,7 +2868,7 @@
       "logo_consortia": "",
       "key_article": "ts-health-study-hub",
       "inc_start": "2025-08-11",
-      "inc_end": "2026-04-30",
+      "inc_end": "2026-03-05",
       "inc_cycle": 2,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2795,6 +2881,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://health-study-hub.de/resource/nfdi4health-108",
+      "inc_source_ref": "incubator-15",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2827,6 +2914,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-16",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -2843,13 +2931,13 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-integrate-ts4nfdi-into-dmp4nfdi-rdmo-service",
-      "inc_start": "2026-03-01",
-      "inc_end": "2026-09-30",
+      "inc_start": "2026-03-17",
+      "inc_end": "2026-09-08",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Finished",
       "inc_descr": "DMP4NFDI provides the DMP tool RDMO for NFDI consortia and develops the DMP Template Framework to ensure interoperability across different DMP services in NFDI. Vocabularies, terminologies and ontologies already play an important role in the data management planning process. Our goal for this project is to integrate the TS4NFDI service into the RDMO interview section, allowing users to choose items from predefined vocabularies. We are collaborating with the FAIRagro consortium to make community standards available within their templates.",
-      "inc_goals": "- Integrate TS4NFDI Service Suite widgets into the RDMO",
+      "inc_goals": "- Integration of terminology data to RDMO via TS4NFDI API Gateway\n- Provision of terminologies preselection for RDMO specified by subjects/topics/domains",
       "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -2857,6 +2945,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/",
+      "inc_source_ref": "incubator-18",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2875,8 +2964,8 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-enabling-semantic-interoperability-via-datacite-terminologies",
-      "inc_start": "2026-03-01",
-      "inc_end": "2026-09-30",
+      "inc_start": "2026-02-26",
+      "inc_end": "2026-11-30",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Running",
@@ -2889,6 +2978,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://tibhannover.github.io/datacite/mappings/",
+      "inc_source_ref": "incubator-19",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2907,12 +2997,12 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-metabase",
-      "inc_start": "2026-03-01",
-      "inc_end": "2026-09-30",
+      "inc_start": "2026-02-26",
+      "inc_end": "2026-08-06",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Finished",
-      "inc_descr": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontolgogies, and connects to external systems such as the open research knowledge graph (ORKG).",
+      "inc_descr": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontologies, and connects to external systems such as the open research knowledge graph (ORKG).",
       "inc_goals": "- Hosting terminologies for Metabase in a terminology service\n- Connect TIB TS to Metabase",
       "inc_results": "",
       "inc_partner_publications": 0,
@@ -2921,6 +3011,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://api.nfdixcs.org/metabase/swagger-ui/index.html",
+      "inc_source_ref": "incubator-20",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2939,8 +3030,8 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-mathmoddb",
-      "inc_start": "2026-03-01",
-      "inc_end": "2026-09-30",
+      "inc_start": "2026-03-04",
+      "inc_end": "2026-09-10",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Finished",
@@ -2953,6 +3044,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation",
+      "inc_source_ref": "incubator-21",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -2971,13 +3063,13 @@
       "logo_project_dark": "",
       "logo_consortia": "",
       "key_article": "ts-fairagro-terminology-service",
-      "inc_start": "2026-03-01",
-      "inc_end": "2026-09-30",
+      "inc_start": "2026-03-13",
+      "inc_end": "2026-10-19",
       "inc_cycle": 3,
       "inc_cycle_label": "",
       "inc_status": "Finished",
       "inc_descr": "The main purpose of the incubator project is a strong integration of TS4NFDI services with FAIRagro products and services. This includes the following concrete project objectives: 1)Automatic instantiation and updating of a FAIRagro Terminology Service Instance based on the FAIRagro Standards Inventory, 2) Implementation of mappings (preferably using the SciWin workflow engine developed in FAIRagro) for terminologies that are not yet available in a form directly usable for consumption by the TS4NFDI infrastructure, by map terminology distribution files in different formats to e.g. SKOS thesauri that can be used in a backend Skosmos service and 3) Demonstration of use of the TS4NFDI instance in selected FAIRagro products.",
-      "inc_goals": "- Provision of terminologies in a Terminlogy Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products",
+      "inc_goals": "- Provision of terminologies in a Terminology Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products",
       "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
@@ -2985,6 +3077,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/",
+      "inc_source_ref": "incubator-22",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3017,6 +3110,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -3047,6 +3141,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-24",
       "linked_partners": 2,
       "linked_entities": 0,
       "partners": [
@@ -3080,6 +3175,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-25",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3112,6 +3208,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-26",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3135,7 +3232,7 @@
       "inc_cycle": 4,
       "inc_cycle_label": "",
       "inc_status": "Running",
-      "inc_descr": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
+      "inc_descr": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific research environments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
       "inc_goals": "- Provision of collection(s)\n- retrieve data via API Gateway\n- Integration of Terminology Service Suite (TSS) widgets",
       "inc_results": "",
       "inc_partner_publications": 0,
@@ -3144,6 +3241,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-27",
       "linked_partners": 3,
       "linked_entities": 0,
       "partners": [
@@ -3178,6 +3276,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-28",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3210,6 +3309,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-30",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -3240,6 +3340,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-31",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3272,6 +3373,7 @@
       "inc_ownership": "",
       "inc_service_type": "Template Development, RDMO Hosting",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3304,6 +3406,7 @@
       "inc_ownership": "",
       "inc_service_type": "RDMO Hosting, Template Development",
       "inc_activity_page": "",
+      "inc_source_ref": "",
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
@@ -3336,6 +3439,7 @@
       "inc_ownership": "",
       "inc_service_type": "",
       "inc_activity_page": "",
+      "inc_source_ref": "incubator-23",
       "linked_partners": 0,
       "linked_entities": 0,
       "partners": [],
@@ -3791,5 +3895,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-11-04T00:25:18.252Z"
+  "logos_localized_at": "2026-11-04T01:07:45.867Z"
 }
