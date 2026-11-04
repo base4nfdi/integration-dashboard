@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 /**
- * Update incubators and use cases that are already in NocoDB when the
- * public source has grown.
+ * Mirror the public service sources into incubators and use cases that are
+ * already in NocoDB.
  *
- * Fills empty cells that the audit flags as "Missing on detail page",
- * extends a description only when the stored text is a strict prefix of
- * the source, links partners when a row has none, copies inc_status from
- * the source when it changes, and sets status to Finished once the end
- * date is in the past.
+ * By default the source wins: any source-backed cell (dates, cycle,
+ * description, goals, results, service type, …) that differs from NocoDB is
+ * overwritten with the source value. Cells the source leaves empty are kept,
+ * and so are inc_name titles written in NocoDB (see canSyncName).
+ * Copies inc_status from the source when it changes and sets status to
+ * Finished once the end date is in the past. Links partners when a row has
+ * none; an existing partner set is not replaced.
  *
- * Does not rewrite wording differences or replace an existing partner set.
+ * --fill-only restores the conservative mode: fill empty cells, extend a
+ * description only when the stored text is a strict prefix of the source,
+ * and keep differing wording.
  *
  * Reads:
  *   data/parsed/{dmp,iam,ts,pid}4nfdi.json
@@ -30,6 +34,7 @@
  *   node scripts/patch-published-integrations.mjs --local
  *   node scripts/patch-published-integrations.mjs --service iam4nfdi,dmp4nfdi
  *   node scripts/patch-published-integrations.mjs --limit 5 --apply
+ *   node scripts/patch-published-integrations.mjs --fill-only --apply
  */
 
 import { readFileSync } from "node:fs";
@@ -86,14 +91,14 @@ const SOURCES = [
   },
 ];
 
-/** Blank incubator cells filled from the source. Descriptions are separate. */
+/** Source-backed incubator cells. Descriptions and results are separate. */
 const INCUBATOR_BLANK_FIELDS = [
+  "inc_name",
   "inc_start",
   "inc_end",
   "inc_cycle",
   "inc_cycle_label",
   "inc_goals",
-  "inc_results",
   "inc_activity_type",
   "inc_caai",
   "inc_ownership",
@@ -101,13 +106,12 @@ const INCUBATOR_BLANK_FIELDS = [
   "inc_activity_page",
 ];
 
-/** Blank use-case cells. uc_descr / inc_descr use the prefix rule instead. */
+/** Source-backed use-case cells. Descriptions and results are separate. */
 const USE_CASE_BLANK_FIELDS = [
   "inc_start",
   "inc_end",
   "inc_cycle",
   "inc_goals",
-  "inc_results",
   "uc_name",
   "inc_name",
   "basic_service",
@@ -151,6 +155,7 @@ function parseArgs(argv) {
   const args = {
     apply: false,
     local: false,
+    fillOnly: false,
     services: null,
     limit: null,
     help: false,
@@ -160,6 +165,7 @@ function parseArgs(argv) {
     if (arg === "--apply") args.apply = true;
     else if (arg === "--dry-run") args.apply = false;
     else if (arg === "--local") args.local = true;
+    else if (arg === "--fill-only") args.fillOnly = true;
     else if (arg === "--limit") {
       args.limit = Number(argv[++i]);
       if (!Number.isFinite(args.limit) || args.limit < 0) {
@@ -189,14 +195,16 @@ Options:
   --apply              PATCH matched rows (default is dry-run)
   --dry-run            Preview only (default)
   --local              Compare against static/data.json instead of live NocoDB
+  --fill-only          Only fill empty cells / extend prefix descriptions;
+                       keep NocoDB values that differ from the source
   --service <ids>      Comma-separated: dmp4nfdi,iam4nfdi,ts4nfdi,pid4nfdi
   --limit <n>          Cap how many row updates are applied
   -h, --help           Show this help
 
-Fills empty source-backed fields, extends descriptions that are a prefix
-of the source text, links partners only when the row has none, copies
-inc_status when the source status differs, and sets inc_status to
-Finished when the end date is before today.
+Overwrites source-backed fields that differ from the public source (cells
+the source leaves empty are kept), links partners only when the row has
+none, copies inc_status when the source status differs, and sets
+inc_status to Finished when the end date is before today.
 `);
 }
 
@@ -452,62 +460,73 @@ function blankValue(field, source) {
   return text || null;
 }
 
-function buildRowPatch(source, noco, table, partnerIndex) {
+/**
+ * DMP sources have no titles; the parser names untitled entries
+ * "<Primary service> — <Consortia>". Such names follow the source, while a
+ * title an editor wrote in NocoDB is kept.
+ */
+const DERIVED_NAME_RE = /^[^—]+ — [^—]+$/;
+
+function canSyncName(stored, next) {
+  return DERIVED_NAME_RE.test(compact(stored)) && DERIVED_NAME_RE.test(compact(next));
+}
+
+function sameValue(field, stored, next) {
+  if (field === "inc_cycle") return asNumber(stored) === asNumber(next);
+  return compact(stored) === compact(next);
+}
+
+/** Source text replaces stored text whenever the two differ. */
+function syncTextFields(source, noco, table, patch, reasons) {
+  const sourceDescr = asString(source.uc_descr || source.inc_descr).trim();
+  const descrField = table === USE_CASES_TABLE ? "uc_descr" : "inc_descr";
+  if (sourceDescr && !sameValue(descrField, noco[descrField], sourceDescr)) {
+    patch[descrField] = sourceDescr;
+    reasons.push(`${isBlank(noco[descrField]) ? "fill" : "sync"}:${descrField}`);
+  }
+
+  const sourceResults = asString(source.inc_results).trim();
+  if (sourceResults && !sameValue("inc_results", noco.inc_results, sourceResults)) {
+    patch.inc_results = sourceResults;
+    reasons.push(`${isBlank(noco.inc_results) ? "fill" : "sync"}:inc_results`);
+  }
+}
+
+function buildRowPatch(source, noco, table, partnerIndex, { fillOnly = false } = {}) {
   const patch = {};
   const reasons = [];
   const blankFields =
     table === USE_CASES_TABLE ? USE_CASE_BLANK_FIELDS : INCUBATOR_BLANK_FIELDS;
 
   for (const field of blankFields) {
-    if (!isBlank(noco[field])) continue;
     const value = blankValue(field, source);
     if (value == null) continue;
-    patch[field] = value;
-    reasons.push(`fill:${field}`);
-  }
-
-  const sourceDescr = asString(source.uc_descr || source.inc_descr).trim();
-  const displayed = asString(noco.inc_descr);
-  const nextDescr = descriptionUpdate(sourceDescr, displayed);
-  if (nextDescr) {
-    const storedColumn = asString(noco.inc_descr_column ?? noco.inc_descr);
-    if (descriptionUpdate(nextDescr, storedColumn) || isBlank(storedColumn)) {
-      if (compact(storedColumn) !== compact(nextDescr)) {
-        patch.inc_descr = nextDescr;
-      }
-    } else if (isBlank(displayed)) {
-      patch.inc_descr = nextDescr;
-    }
-    if (table === USE_CASES_TABLE) {
-      const storedUc = asString(noco.uc_descr);
-      if (isBlank(storedUc) || descriptionUpdate(nextDescr, storedUc)) {
-        if (compact(storedUc) !== compact(nextDescr)) patch.uc_descr = nextDescr;
-      }
-    } else if (compact(displayed) !== compact(nextDescr)) {
-      patch.inc_descr = nextDescr;
-    }
-    if (patch.inc_descr || patch.uc_descr) {
-      reasons.push(isBlank(displayed) ? "fill:inc_descr" : "extend:inc_descr");
+    if (isBlank(noco[field])) {
+      patch[field] = value;
+      reasons.push(`fill:${field}`);
+    } else if (
+      !fillOnly &&
+      !sameValue(field, noco[field], value) &&
+      (field !== "inc_name" || canSyncName(noco[field], value))
+    ) {
+      patch[field] = value;
+      reasons.push(`sync:${field}`);
     }
   }
 
-  const nextResults = resultsUpdate(
-    asString(source.inc_results),
-    asString(noco.inc_results)
-  );
-  if (nextResults && compact(asString(noco.inc_results)) !== compact(nextResults)) {
-    patch.inc_results = nextResults;
-    reasons.push(
-      isBlank(noco.inc_results) ? "fill:inc_results" : "extend:inc_results"
-    );
+  if (!fillOnly) {
+    syncTextFields(source, noco, table, patch, reasons);
+  } else {
+    fillOnlyTextFields(source, noco, table, patch, reasons);
   }
 
   if (table === INCUBATORS_TABLE) {
     const nocoCount = Number(noco.inc_partner_publications) || 0;
     const sourceCount = Number(source.inc_partner_publications) || 0;
-    if (nocoCount === 0 && sourceCount > 0) {
+    const replace = fillOnly ? nocoCount === 0 : nocoCount !== sourceCount;
+    if (sourceCount > 0 && replace) {
       patch.inc_partner_publications = sourceCount;
-      reasons.push("fill:inc_partner_publications");
+      reasons.push(`${nocoCount === 0 ? "fill" : "sync"}:inc_partner_publications`);
     }
   }
 
@@ -548,6 +567,48 @@ function buildRowPatch(source, noco, table, partnerIndex) {
     unresolved_partners: unresolvedPartners,
     reasons,
   };
+}
+
+/**
+ * Blank text is filled; a stored description that is a strict prefix of the
+ * source is extended; results gain new source links. Divergent wording stays.
+ */
+function fillOnlyTextFields(source, noco, table, patch, reasons) {
+  const sourceDescr = asString(source.uc_descr || source.inc_descr).trim();
+  const displayed = asString(noco.inc_descr);
+  const nextDescr = descriptionUpdate(sourceDescr, displayed);
+  if (nextDescr) {
+    const storedColumn = asString(noco.inc_descr_column ?? noco.inc_descr);
+    if (descriptionUpdate(nextDescr, storedColumn) || isBlank(storedColumn)) {
+      if (compact(storedColumn) !== compact(nextDescr)) {
+        patch.inc_descr = nextDescr;
+      }
+    } else if (isBlank(displayed)) {
+      patch.inc_descr = nextDescr;
+    }
+    if (table === USE_CASES_TABLE) {
+      const storedUc = asString(noco.uc_descr);
+      if (isBlank(storedUc) || descriptionUpdate(nextDescr, storedUc)) {
+        if (compact(storedUc) !== compact(nextDescr)) patch.uc_descr = nextDescr;
+      }
+    } else if (compact(displayed) !== compact(nextDescr)) {
+      patch.inc_descr = nextDescr;
+    }
+    if (patch.inc_descr || patch.uc_descr) {
+      reasons.push(isBlank(displayed) ? "fill:inc_descr" : "extend:inc_descr");
+    }
+  }
+
+  const nextResults = resultsUpdate(
+    asString(source.inc_results),
+    asString(noco.inc_results)
+  );
+  if (nextResults && compact(asString(noco.inc_results)) !== compact(nextResults)) {
+    patch.inc_results = nextResults;
+    reasons.push(
+      isBlank(noco.inc_results) ? "fill:inc_results" : "extend:inc_results"
+    );
+  }
 }
 
 async function updateRecords({ baseUrl, tableId, token, records, timeoutMs }) {
@@ -772,7 +833,8 @@ async function main() {
         pair.source,
         pair.nocodb,
         source.table,
-        partnerIndex
+        partnerIndex,
+        { fillOnly: args.fillOnly }
       );
       if (!row) continue;
       planned.push({
@@ -791,11 +853,13 @@ async function main() {
 
   const report = {
     mode: args.apply ? "apply" : "dry-run",
+    strategy: args.fillOnly ? "fill-only" : "source-wins",
     compared_against: args.local || !token ? "static/data.json" : "live-nocodb",
     planned_at: new Date().toISOString(),
     totals: {
       to_patch: planned.length,
       will_patch: limited.length,
+      synced: countReasons(limited, "sync:"),
       status_finished: countReasons(limited, "status:end_date_elapsed"),
       status_changed: countReasons(limited, "status:source_changed") +
         countReasons(limited, "status:fill_empty"),
@@ -810,6 +874,7 @@ async function main() {
           {
             to_patch: planned.filter((row) => row.source === s.id).length,
             will_patch: rows.length,
+            synced: countReasons(rows, "sync:"),
             status_finished: countReasons(rows, "status:end_date_elapsed"),
             status_changed:
               countReasons(rows, "status:source_changed") +
@@ -841,13 +906,14 @@ async function main() {
   console.log("\n=== Published integrations patch ===");
   for (const [id, counts] of Object.entries(report.by_source)) {
     console.log(
-      `${id}: to_patch=${counts.to_patch} will_patch=${counts.will_patch} ` +
+      `${id}: to_patch=${counts.to_patch} will_patch=${counts.will_patch} synced=${counts.synced} ` +
         `finished=${counts.status_finished} status=${counts.status_changed} partner_links=${counts.partner_links}`
     );
   }
   console.log(
     `\nTotal to_patch=${report.totals.to_patch} will_patch=${report.totals.will_patch} ` +
-      `finished=${report.totals.status_finished} status=${report.totals.status_changed} mode=${report.mode}`
+      `synced=${report.totals.synced} finished=${report.totals.status_finished} ` +
+      `status=${report.totals.status_changed} mode=${report.mode} strategy=${report.strategy}`
   );
   console.log(`Wrote plan to ${reportPath}`);
 

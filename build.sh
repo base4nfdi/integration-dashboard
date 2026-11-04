@@ -42,7 +42,7 @@ if [[ -n "${NOCODB_API_TOKEN:-}" ]]; then
   echo "==> Creating PID use cases missing from NocoDB"
   node scripts/push-pid-use-cases-to-nocodb.mjs --apply
 
-  echo "==> Patching published integrations from public sources"
+  echo "==> Syncing published integrations from public sources (source wins)"
   node scripts/patch-published-integrations.mjs --apply
 
   echo "==> Fetching NocoDB data"
