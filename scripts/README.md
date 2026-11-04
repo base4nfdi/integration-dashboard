@@ -180,6 +180,17 @@ node scripts/parse-pid4nfdi.mjs
 
 Override paths with the `*_INPUT` / `*_OUTPUT` variables listed above when needed.
 
+#### Source-page card ids (`inc_source_ref`)
+
+Detail pages link to the exact card on the service's public page, so readers (and auditors) can see where every value comes from. A parser sets `inc_source_ref` to the card's anchor id on the source page. The value is stored in NocoDB and written into the page front matter as `source_ref`. The template then links to `page_url#source_ref` from `data/sources/manifest.json`.
+
+| Service | Source field | Example link |
+| --- | --- | --- |
+| TS | `incubatorID` in `projects.json` | `https://terminology.services.base4nfdi.de/incubators#incubator-6` |
+| DMP, IAM, PID | not published yet | the listing page without an anchor |
+
+When a service starts publishing card ids, set `inc_source_ref` in its parser. No other script needs changes. When both the parsed record and the NocoDB row carry an `inc_source_ref`, matching uses the id alone and skips name similarity.
+
 ---
 
 ### 3. Fetch NocoDB data
@@ -293,7 +304,7 @@ node scripts/push-source-pages-to-nocodb.mjs --local
 
 Requires `NOCODB_API_TOKEN` for live NocoDB access (not needed for `--local` dry comparison against the local export).
 
-Create payloads include `inc_activity_type`, `inc_caai`, `inc_ownership`, `inc_service_type`, and `inc_activity_page`. Run `ensure-incubators-schema.mjs` once before the first create or patch that writes those columns.
+Create payloads include `inc_activity_type`, `inc_caai`, `inc_ownership`, `inc_service_type`, `inc_activity_page`, and `inc_source_ref`. Run `ensure-incubators-schema.mjs` once before the first create or patch that writes those columns.
 
 ---
 
@@ -310,6 +321,8 @@ Creates the Incubators columns the detail pages need for source fields that were
 | `inc_service_type` | single-line text | DMP service list |
 | `inc_ownership` | long text | IAM ownership & utilisation |
 | `inc_activity_page` | URL | IAM / TS activity page |
+| `inc_cycle_label` | single-line text | Source cycle label (`Initialisation phase`, …) |
+| `inc_source_ref` | single-line text | Card anchor id on the source page (TS `incubatorID`) |
 
 Idempotent. Writes unless `--dry-run`. User_Stories is unchanged.
 

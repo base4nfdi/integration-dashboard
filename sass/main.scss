@@ -1872,15 +1872,27 @@ img.themed-logo.themed-logo--dark {
   opacity: 0.85;
 }
 
+/* Citation card: logo + "Original source" + record id + domain + sync date. */
 .source-mark {
+  /* NFDI blue fails small-text contrast on white; darker shade in light mode. */
+  --source-accent: #0372a0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.7rem;
+  padding: 0.5rem 0.85rem 0.5rem 0.55rem;
   color: var(--text-muted);
   font-weight: 500;
   text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--source-accent);
   border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(69, 84, 107, 0.08);
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+[data-theme="dark"] .source-mark {
+  --source-accent: var(--accent);
 }
 
 .source-mark:hover,
@@ -1888,76 +1900,87 @@ img.themed-logo.themed-logo--dark {
   color: var(--text);
   font-weight: 500;
   text-decoration: none;
+  transform: translateY(-1px);
+  border-color: var(--source-accent);
+  box-shadow: 0 6px 16px rgba(11, 187, 239, 0.18);
 }
 
 .source-mark:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
 .source-mark-plate {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem 0.65rem;
-  border-radius: 0.7rem;
+  padding: 0.3rem 0.45rem;
+  border-radius: 0.55rem;
   background: #fff;
   border: 1px solid var(--border);
-  box-shadow: 0 1px 2px rgba(69, 84, 107, 0.08);
-  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
-}
-
-.source-mark:hover .source-mark-plate,
-.source-mark:focus-visible .source-mark-plate {
-  transform: translateY(-1px);
-  border-color: var(--accent);
-  box-shadow: 0 6px 16px rgba(11, 187, 239, 0.18);
-}
-
-.source-mark-out {
-  position: absolute;
-  top: -0.4rem;
-  right: -0.4rem;
-  display: grid;
-  place-items: center;
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #041820;
-  box-shadow: 0 0 0 2px var(--bg);
 }
 
 .source-mark-copy {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.05rem;
+  align-items: flex-start;
+  gap: 0.12rem;
   min-width: 0;
-  text-align: center;
+  text-align: left;
+  line-height: 1.2;
 }
 
 .source-mark-kicker {
-  color: var(--accent);
-  font-size: 0.62rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--source-accent);
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  line-height: 1.2;
   text-transform: uppercase;
+}
+
+.source-mark-out {
+  flex-shrink: 0;
+  transition: transform 0.16s ease;
+}
+
+.source-mark:hover .source-mark-out,
+.source-mark:focus-visible .source-mark-out {
+  transform: translate(1px, -1px);
+}
+
+.source-mark-record {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.source-mark-ref {
+  padding: 0.05rem 0.42rem;
+  border-radius: 999px;
+  background: rgba(11, 187, 239, 0.14);
+  color: var(--source-accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .source-mark-where {
   color: var(--text-muted);
   font-size: 0.68rem;
   font-weight: 600;
-  line-height: 1.25;
   white-space: nowrap;
 }
 
-.source-mark:hover .source-mark-where,
-.source-mark:focus-visible .source-mark-where {
-  color: var(--text);
+.source-mark-synced {
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  font-weight: 500;
 }
 
 .blog-post-logo {
@@ -2046,6 +2069,21 @@ img.themed-logo.themed-logo--dark {
 
   .source-mark-where {
     font-size: 0.64rem;
+  }
+
+  .blog-post-logos {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .source-mark {
+    flex: 1 1 100%;
+  }
+
+  .blog-post-logo-partners:not(:only-child) {
+    padding-left: 0;
+    border-left: 0;
   }
 }
 
@@ -2171,6 +2209,15 @@ img.themed-logo.themed-logo--dark {
 .blog-post-content ol,
 .blog-post-content ul {
   padding-left: 1.25rem;
+}
+
+.blog-post-source {
+  margin: 1.5rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
 }
 
 .summary-value--text {

@@ -69,6 +69,7 @@ export function parseTsProjects(payload) {
         inc_results: publications.join("\n"),
         inc_partner_publications: publications.length,
         inc_activity_page: httpActivityUrl(SITE_BASE, project.activityPage),
+        inc_source_ref: String(project.incubatorID ?? "").trim(),
         partners,
         linked_partners: partners.length,
         source_title: String(project.title ?? ""),

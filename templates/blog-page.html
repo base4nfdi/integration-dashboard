@@ -3,6 +3,39 @@
 {% block title %}{{ page.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
 
 {% block content %}
+{% set source_url = "" %}
+{% set source_kind = "" %}
+{% set source_owner = "" %}
+{% set source_fetched = "" %}
+{% set source_record = "" %}
+{% if page.extra.basic_service %}
+  {% set manifest = load_data(path="data/sources/manifest.json") %}
+  {% set source_id = page.extra.basic_service | lower ~ "4nfdi" %}
+  {% set source_owner = page.extra.basic_service ~ "4NFDI" %}
+  {% for source in manifest.sources %}
+    {% if source.id == source_id %}
+      {% set_global source_url = source.page_url | default(value=source.source_url) %}
+      {% set_global source_kind = source.page_kind | default(value="Source") %}
+      {% set_global source_fetched = source.fetched_at | default(value="") %}
+    {% endif %}
+  {% endfor %}
+  {% if source_url and page.extra.source_ref %}
+    {% set_global source_url = source_url ~ "#" ~ page.extra.source_ref %}
+    {% set ref_parts = page.extra.source_ref | split(pat="-") %}
+    {% if ref_parts | length > 1 %}
+      {% set_global source_record = ref_parts | first | capitalize ~ " #" ~ ref_parts | last %}
+    {% else %}
+      {% set_global source_record = page.extra.source_ref %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+{% if source_fetched %}
+  {% set source_synced = source_fetched | date(format="%-d %b %Y") %}
+{% else %}
+  {% set source_synced = "" %}
+{% endif %}
+{% set source_where = source_url | replace(from="https://", to="") | replace(from="http://", to="") | split(pat="/") | first %}
+{% set source_display = source_url | replace(from="https://", to="") | replace(from="http://", to="") %}
 <article class="blog-post">
   <header class="blog-post-header">
     <p class="breadcrumb">
@@ -45,25 +78,19 @@
           {% set service_logo_label = "nfdi.software" %}
         {% endif %}
         {% if service_logo_path %}
-        {% set manifest = load_data(path="data/sources/manifest.json") %}
-        {% set source_id = service_slug ~ "4nfdi" %}
-        {% set source_url = "" %}
-        {% set source_kind = "" %}
-        {% for source in manifest.sources %}
-          {% if source.id == source_id %}
-            {% set_global source_url = source.page_url | default(value=source.source_url) %}
-            {% set_global source_kind = source.page_kind | default(value="Source") %}
-          {% endif %}
-        {% endfor %}
         {% if source_url %}
-          {% set source_where = source_url | replace(from="https://", to="") | replace(from="http://", to="") | split(pat="/") | first %}
+        {% if source_record %}
+          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ source_record | lower ~ " entry" %}
+        {% else %}
+          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ source_kind | lower ~ " overview" %}
+        {% endif %}
         <a
-          class="source-mark"
+          class="source-mark{% if source_record %} source-mark--direct{% endif %}"
           href="{{ source_url | safe }}"
           target="_blank"
           rel="noopener noreferrer"
-          title="{{ service_logo_label }} {{ source_kind | lower }} — {{ source_url }}"
-          aria-label="{{ service_logo_label }} {{ source_kind | lower }} (opens {{ source_where }})"
+          title="{{ source_url }}"
+          aria-label="Original source: {{ source_mark_target }} on {{ source_where }}{% if source_synced %}, synced {{ source_synced }}{% endif %} (opens in a new tab)"
         >
           <span class="source-mark-plate">
             <img
@@ -73,15 +100,28 @@
               loading="lazy"
               decoding="async"
             >
-            <span class="source-mark-out" aria-hidden="true">
-              <svg viewBox="0 0 16 16" width="10" height="10">
+          </span>
+          <span class="source-mark-copy" aria-hidden="true">
+            <span class="source-mark-kicker">
+              Original source
+              <svg class="source-mark-out" viewBox="0 0 16 16" width="9" height="9">
                 <path fill="currentColor" d="M4.2 3.2h8.6v8.6h-2.1V7.3L4.5 13.5 3 12l6.2-6.2H4.2V3.2z"/>
               </svg>
             </span>
-          </span>
-          <span class="source-mark-copy">
-            <span class="source-mark-kicker">{{ source_kind }}</span>
+            {% if " #" in source_record %}
+            <span class="source-mark-record">
+              {{ source_record | split(pat=" #") | first }}
+              <span class="source-mark-ref">#{{ source_record | split(pat=" #") | last }}</span>
+            </span>
+            {% elif source_record %}
+            <span class="source-mark-record">{{ source_record }}</span>
+            {% else %}
+            <span class="source-mark-record">{{ source_kind }} overview</span>
+            {% endif %}
             <span class="source-mark-where">{{ source_where }}</span>
+            {% if source_synced %}
+            <span class="source-mark-synced">Synced {{ source_synced }}</span>
+            {% endif %}
           </span>
         </a>
         {% else %}
@@ -319,6 +359,13 @@
     <div class="blog-post-content">
       {{ page.content | safe }}
     </div>
+    {% if source_url %}
+    <p class="blog-post-source">
+      Data source: {{ source_owner }} {% if source_record %}{{ source_record | lower }}{% else %}{{ source_kind | lower }}{% endif %} —
+      <a href="{{ source_url | safe }}" target="_blank" rel="noopener noreferrer">{{ source_display }}</a>{% if source_synced %}
+      · synced {{ source_synced }}{% endif %}
+    </p>
+    {% endif %}
   </div>
 </article>
 {% endblock %}
