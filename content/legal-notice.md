@@ -27,4 +27,8 @@ Base4NFDI Office
 
 ---
 
-Content on this site is licensed under a [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) license.
+### Copyright notice
+
+Content on this site is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license, unless otherwise noted. You may use, share, and adapt it under the terms of that license.
+
+Some content comes from third parties, such as partner and project logos, and is not covered by this license. Names and logos of organisations, products, and services are trademarks of their respective owners and are shown for information only. If you notice a potential copyright issue, please contact us and we will address it promptly.
