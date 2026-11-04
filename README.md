@@ -215,3 +215,9 @@ zola serve                   # live-reloading preview at http://127.0.0.1:1111
 - 🔑 Keep `NOCODB_API_TOKEN` in `.env` or in deployment secrets, **never in git**.
 - ✍️ Builds with a token write to NocoDB ([details](#what-a-build-writes-to-nocodb)). Maintenance scripts run by hand default to **dry-run**; pass `--apply` only after reviewing their output.
 - 🛡️ `fetch-nocodb-data` refuses to overwrite `static/data.json` when NocoDB returns zero incubators, so an empty API response cannot wipe the site.
+
+## License
+
+This repository and the website content are licensed under Creative Commons [CC-BY-SA-4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/). See [LICENSE.md](LICENSE.md) for the full text.
+
+Third-party material, such as partner and project logos under `static/img/`, remains under the terms of its respective owners.
