@@ -1157,6 +1157,70 @@ main.container:has(.dashboard) {
   gap: 0.4rem;
 }
 
+.data-table .th-sort {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: -0.2rem -0.35rem;
+  padding: 0.2rem 0.35rem;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  text-transform: inherit;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.data-table .th-sort:hover {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+}
+
+.data-table .th-sort:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.data-table .th-sort.is-sorted {
+  color: var(--accent);
+}
+
+.data-table .th-sort-icon {
+  flex-shrink: 0;
+}
+
+.data-table .th-sort-icon path {
+  opacity: 0.35;
+  transition: opacity 160ms ease;
+}
+
+.data-table .th-sort:hover .th-sort-icon path {
+  opacity: 0.6;
+}
+
+.data-table .th-sort.is-asc .th-sort-up,
+.data-table .th-sort.is-desc .th-sort-down {
+  opacity: 1;
+}
+
+.data-table .th-sort.is-asc .th-sort-down,
+.data-table .th-sort.is-desc .th-sort-up {
+  opacity: 0.15;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .data-table .th-sort,
+  .data-table .th-sort-icon path {
+    transition: none;
+  }
+}
+
 .data-table .th-info {
   position: relative;
   display: inline-flex;
@@ -1308,6 +1372,57 @@ main.container:has(.dashboard) {
   white-space: normal;
   min-width: 8rem;
   max-width: 18rem;
+}
+
+.data-table td.row-institutions {
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.data-table .inst-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 18rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.data-table .inst-list li {
+  position: relative;
+  padding-left: 0.85rem;
+  overflow-wrap: anywhere;
+}
+
+.data-table .inst-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 70%, transparent);
+}
+
+.data-table .inst-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  text-underline-offset: 0.18em;
+}
+
+.data-table .inst-link:hover,
+.data-table .inst-link:focus-visible {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.data-table .cell-empty {
+  color: var(--text-muted);
 }
 
 .data-table td.row-logos {

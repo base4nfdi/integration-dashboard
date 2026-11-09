@@ -21,12 +21,7 @@
   {% endfor %}
   {% if source_url and page.extra.source_ref %}
     {% set_global source_url = source_url ~ "#" ~ page.extra.source_ref %}
-    {% set ref_parts = page.extra.source_ref | split(pat="-") %}
-    {% if ref_parts | length > 1 %}
-      {% set_global source_record = ref_parts | first | capitalize ~ " #" ~ ref_parts | last %}
-    {% else %}
-      {% set_global source_record = page.extra.source_ref %}
-    {% endif %}
+    {% set_global source_record = "Incubator #" ~ page.extra.source_ref | replace(from="incubator-", to="") %}
   {% endif %}
 {% endif %}
 {% if source_fetched %}
@@ -185,7 +180,7 @@
             <img
               class="{{ logo_project_light_class }}"
               src="{{ logo_project_src | safe }}"
-              alt="{{ page.title }} project logo"
+              alt="{{ page.title }}"
               loading="lazy"
               decoding="async"
             >
@@ -205,7 +200,7 @@
           <img
             class="{{ logo_project_light_class }}"
             src="{{ logo_project_src | safe }}"
-            alt="{{ page.title }} project logo"
+            alt="{{ page.title }}"
             loading="lazy"
             decoding="async"
           >

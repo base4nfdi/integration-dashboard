@@ -187,7 +187,8 @@ Detail pages link to the exact card on the service's public page, so readers (an
 | Service | Source field | Example link |
 | --- | --- | --- |
 | TS | `incubatorID` in `projects.json` | `https://terminology.services.base4nfdi.de/incubators#incubator-6` |
-| DMP, IAM, PID | not published yet | the listing page without an anchor |
+| IAM | card `id` in `page.html` (`<div class="card" id="…">`) | `https://incubators.nfdi-aai.de/#wisski-02` |
+| DMP, PID | not published yet | the listing page without an anchor |
 
 When a service starts publishing card ids, set `inc_source_ref` in its parser. No other script needs changes. When both the parsed record and the NocoDB row carry an `inc_source_ref`, matching uses the id alone and skips name similarity.
 
@@ -322,7 +323,7 @@ Creates the Incubators columns the detail pages need for source fields that were
 | `inc_ownership` | long text | IAM ownership & utilisation |
 | `inc_activity_page` | URL | IAM / TS activity page |
 | `inc_cycle_label` | single-line text | Source cycle label (`Initialisation phase`, …) |
-| `inc_source_ref` | single-line text | Card anchor id on the source page (TS `incubatorID`) |
+| `inc_source_ref` | single-line text | Card anchor id on the source page (TS `incubatorID`, IAM card `id`) |
 
 Idempotent. Writes unless `--dry-run`. User_Stories is unchanged.
 

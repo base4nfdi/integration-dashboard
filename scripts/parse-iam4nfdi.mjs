@@ -34,7 +34,7 @@ const SITE_BASE = "https://incubators.nfdi-aai.de/";
 const DEFAULT_INPUT = join(repoRoot, "data/sources/iam4nfdi/page.html");
 const DEFAULT_OUTPUT = join(repoRoot, "data/parsed/iam4nfdi.json");
 
-/** Card image is a project logo, not NFDI consortia branding (upstream may use missing.jpg). */
+/** Project logo and website not usable from the card itself (upstream may use missing.jpg). */
 const IAM_PROJECT_OVERRIDES = {
   agimo: {
     logo_project:
@@ -50,9 +50,39 @@ const IAM_PROJECT_OVERRIDES = {
   },
 };
 
+/**
+ * Card images that show consortium or organisation branding. Every other
+ * card image is the project's own logo.
+ */
+const IAM_CONSORTIUM_CARD_LOGOS = new Set(
+  [
+    "nfdi4ing.jpg",
+    "Logo_24.svg",
+    "nfdi4chem-logo.png",
+    "NFDI4Chem-Logo_mehrfarbig_schwarz.png",
+    "nfdi4earth-logo.png",
+    "text-plus-logo.svg",
+    "nfdi4culture.jpg",
+    "fairagro.png",
+    "dataplant.svg",
+    "nfdi4cat.svg",
+    "mardi-logo.png",
+    "nfdixcs-logo.png",
+    "Logo_BERD-NFDI_transparent.png",
+    "nfdi_rgb_Wortmarke.png",
+  ].map((name) => name.toLowerCase())
+);
+
+function cardLogoBasename(logoSrc) {
+  return String(logoSrc || "")
+    .split(/[?#]/)[0]
+    .split("/")
+    .pop()
+    .toLowerCase();
+}
+
 function isPlaceholderCardLogo(logoSrc) {
-  const base = String(logoSrc || "").split(/[?#]/)[0];
-  return /(?:^|\/)missing\.jpe?g$/i.test(base);
+  return /^missing\.jpe?g$/i.test(cardLogoBasename(logoSrc));
 }
 
 function logosFromIamCard(sourceId, logoSrc) {
@@ -68,11 +98,11 @@ function logosFromIamCard(sourceId, logoSrc) {
   if (!logoSrc || isPlaceholderCardLogo(logoSrc)) {
     return { logo_project: "", logo_project_dark: "", logo_consortia: "" };
   }
-  return {
-    logo_project: "",
-    logo_project_dark: "",
-    logo_consortia: absoluteUrl(SITE_BASE, logoSrc),
-  };
+  const url = absoluteUrl(SITE_BASE, logoSrc);
+  if (IAM_CONSORTIUM_CARD_LOGOS.has(cardLogoBasename(logoSrc))) {
+    return { logo_project: "", logo_project_dark: "", logo_consortia: url };
+  }
+  return { logo_project: url, logo_project_dark: "", logo_consortia: "" };
 }
 
 const NON_PARTNER_TAGS = new Set([
@@ -306,6 +336,7 @@ export function parseIamHtml(html) {
           inc_caai: caaiValue(badges.meta),
           inc_ownership: extractOwnership(details),
           inc_activity_page: httpActivityUrl(SITE_BASE, activityPage),
+          inc_source_ref: sourceId,
           partners,
           linked_partners: partners.length || null,
           source_id: sourceId,

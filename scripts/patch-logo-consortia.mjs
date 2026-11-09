@@ -50,6 +50,9 @@ const SOURCES = [
     id: "iam4nfdi",
     basic_service: "IAM",
     parsed: join(repoRoot, "data/parsed/iam4nfdi.json"),
+    // One image per card: when it is classified as a project logo, any
+    // logo_consortia in NocoDB is stale and must be cleared.
+    clearsStaleConsortia: true,
   },
   {
     id: "ts4nfdi",
@@ -192,7 +195,9 @@ function printHelp() {
   node scripts/patch-logo-consortia.mjs [options]
 
 Sync logo_consortia and logo_project from parsed source JSON onto matched
-NocoDB rows. Default is dry-run; pass --apply to PATCH.
+NocoDB rows. A logo_consortia that the source now reports as logo_project is
+cleared (for IAM, any logo_consortia on a row whose card image is a project
+logo is cleared). Default is dry-run; pass --apply to PATCH.
 
 Options:
   --apply                 PATCH NocoDB (default is dry-run)
@@ -290,7 +295,18 @@ async function main() {
       }
 
       const fields = {};
+      const prevConsortia = asString(nocodb.logo_consortia);
+      const srcProject = asString(src.logo_project);
+      const staleConsortia =
+        !asString(src.logo_consortia) &&
+        prevConsortia !== "" &&
+        srcProject !== "" &&
+        (prevConsortia === srcProject || source.clearsStaleConsortia);
+      if (staleConsortia) {
+        fields.logo_consortia = { from: prevConsortia, to: "" };
+      }
       for (const field of LOGO_FIELDS) {
+        if (fields[field]) continue;
         const decision = planFieldUpdate(
           field,
           asString(src[field]),
@@ -385,7 +401,7 @@ async function main() {
     for (const [field, change] of Object.entries(u.fields)) {
       console.log(`    ${field}:`);
       console.log(`      - ${change.from || "(empty)"}`);
-      console.log(`      + ${change.to}`);
+      console.log(`      + ${change.to || "(cleared)"}`);
     }
   }
   if (limited.length > 15) {
