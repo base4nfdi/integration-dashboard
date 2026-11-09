@@ -10,7 +10,7 @@
 {% set source_record = "" %}
 {% if page.extra.basic_service %}
   {% set manifest = load_data(path="data/sources/manifest.json") %}
-  {% set source_id = page.extra.basic_service | lower ~ "4nfdi" %}
+  {% set source_id = (page.extra.basic_service | lower) ~ "4nfdi" %}
   {% set source_owner = page.extra.basic_service ~ "4NFDI" %}
   {% for source in manifest.sources %}
     {% if source.id == source_id %}
@@ -75,9 +75,9 @@
         {% if service_logo_path %}
         {% if source_url %}
         {% if source_record %}
-          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ source_record | lower ~ " entry" %}
+          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ (source_record | lower) ~ " entry" %}
         {% else %}
-          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ source_kind | lower ~ " overview" %}
+          {% set source_mark_target = "the " ~ service_logo_label ~ " " ~ (source_kind | lower) ~ " overview" %}
         {% endif %}
         <a
           class="source-mark{% if source_record %} source-mark--direct{% endif %}"
