@@ -13,10 +13,11 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Health"]
-logo_consortia = "img/partner-logos/d739ed2271eb725f.jpg"
+logo_project = "img/partner-logos/d739ed2271eb725f.jpg"
 inc_activity_type = "Consultancy"
 inc_caai = "unity"
 inc_activity_page = "https://forschen-fuer-gesundheit.de"
+source_ref = "fdpg-1"
 +++
 
 The German Portal for Medical Research Data (FDPG) is the central point of administration for scientists conducting research projects with routine medical data from German universities. The Medical Informatics Initiative (MII), which is funded by the Federal Ministry of Education and Research (BMBF), collects patient data and biosamples taken during routine care for medical research and processes them at data integration centres based in university hospitals. The data are then made available in accordance with data protection regulations. The FDPG offers: An overview of databases for cross-centre research the opportunity To evaluate the feasibility of specific research questions using Feasibility inquiries a standardised process for requesting data and Biosamples an established contractual framework for simple data use The central coordination of data provision the transparent Presentation of research projects in the project registry

@@ -17,6 +17,7 @@ logo_consortia = "img/partner-logos/2520b12f7fbf8544.png"
 inc_activity_type = "Consultancy"
 inc_caai = "didmos"
 inc_activity_page = "https://www.google.com/search?hl=en&q=mardi%20incubator%20activity%20page"
+source_ref = "mardi-1"
 +++
 
 Numerous web platforms, such as MediaWiki, support the OpenID Connect (OIDC) protocol, allowing users to sign in using their existing accounts. While Google or ORCID accounts were previously used for logging in, this incubator project aims to facilitate logging in using accounts from NFDI institutions with minimal effort for users and administrators while ensuring maximum privacy. The Germany National Mathematical Research Data Initiative (MaRDI, mardi4nfdi.de) utilizes MediaWiki as its software to establish a comprehensive portal for research data in mathematics and related fields. This platform shares general-purpose technology with the Wikimedia Foundation and extends its functionality to cater to the specific needs of the MaRDI consortium. A fundamental requirement voiced by mathematicians contributing their research data is to avoid the maintenance of additional accounts, making the reuse of their institutional accounts a practical choice. Furthermore, this approach effectively mitigates the risk of spam by disallowing anonymous editing.

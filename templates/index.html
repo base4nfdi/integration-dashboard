@@ -176,14 +176,12 @@
       key: "consortia_logos",
       label: "Involved Consortia",
       type: "logos",
-      logosScope: "consortia",
       headerTitle: "NFDI consortia involved in this integration",
     },
     {
-      key: "institutions_logos",
+      key: "institutions",
       label: "Involved Institutions",
-      type: "logos",
-      logosScope: "institutions",
+      type: "institutions",
       headerTitle: "Research institutions and other partners involved",
     },
     { key: "inc_status", label: "Status", type: "status" },
@@ -231,6 +229,7 @@
     consortiaOptions: [],
     consortiaQuery: "",
     consortiaHighlight: -1,
+    sort: { key: null, dir: "asc" },
   };
 
   let shareCopyResetTimer = null;
@@ -292,24 +291,18 @@
     return String(path || "").split(/[\\/]/).pop().split("?")[0].toLowerCase();
   }
 
+  /** Consortia whose directory logo is shown in the Consortia column (institutions are text-only). */
   function collaboratorDirectoryEntries(record) {
     const found = [];
     const seen = new Set();
-    const groups = [
-      [record.partners, state.directory.partners],
-      [record.entities, state.directory.entities],
-      [splitFurtherInstitutions(record.related_institutions), state.directory.entities],
-    ];
-    for (const [items, bucket] of groups) {
-      if (!Array.isArray(items)) continue;
-      for (const name of items) {
-        const entry = directoryEntry(bucket, name);
-        if (!entry?.logo) continue;
-        const key = logoBasename(entry.logo) || compactToken(entry.name || name);
-        if (seen.has(key)) continue;
-        seen.add(key);
-        found.push({ name, entry });
-      }
+    if (!Array.isArray(record.partners)) return found;
+    for (const name of record.partners) {
+      const entry = directoryEntry(state.directory.partners, name);
+      if (!entry?.logo) continue;
+      const key = logoBasename(entry.logo) || compactToken(entry.name || name);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      found.push({ name, entry });
     }
     return found;
   }
@@ -334,7 +327,6 @@
     const projectPath = String(record.logo_project);
     const projectBase = logoBasename(projectPath);
     const originCompact = compactToken(logoOriginFilename(projectPath));
-    const incCompact = compactToken(record.inc_name || record.uc_name || "");
 
     for (const { name, entry } of collaborators) {
       const partnerCompact = compactToken(name);
@@ -345,8 +337,7 @@
         (originCompact.includes(partnerCompact) || partnerCompact.includes(originCompact));
       if (
         nameOverlapsOrigin ||
-        (partnerCompact.length >= 4 &&
-          (incCompact.includes(partnerCompact) || compactToken(projectPath).includes(partnerCompact)))
+        (partnerCompact.length >= 4 && compactToken(projectPath).includes(partnerCompact))
       ) {
         return false;
       }
@@ -410,7 +401,7 @@
     return renderThemedLogo(
       record.logo_project,
       record.logo_project_dark,
-      "Project logo",
+      record.inc_name || record.uc_name || "",
       projectWebsite(record),
       "logo-img logo-project name-cell-logo-img"
     );
@@ -445,16 +436,17 @@
   }
 
   function institutionsCellHtml(record) {
-    const seenLogos = new Set();
-    const parts = [
-      ...renderLogoFragmentsForNames(record.entities, state.directory.entities, seenLogos),
-      ...renderLogoFragmentsForNames(
-        splitFurtherInstitutions(record.related_institutions),
-        state.directory.entities,
-        seenLogos
-      ),
-    ];
-    return wrapLogosCell(parts);
+    const names = institutionNames(record);
+    if (names.length === 0) return "";
+    const items = names.map((name) => {
+      const href = externalHref(directoryEntry(state.directory.entities, name)?.website);
+      const text = escapeHtml(name);
+      const inner = href
+        ? `<a class="inst-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${text}</a>`
+        : text;
+      return `<li>${inner}</li>`;
+    });
+    return `<ul class="inst-list">${items.join("")}</ul>`;
   }
 
   function splitFurtherInstitutions(value) {
@@ -462,8 +454,95 @@
       .replace(/\r/g, "")
       .split(/\s*,\s*/)
       .flatMap((part) => part.split(/\s+and\s+/i))
-      .map((part) => part.trim())
+      .map((part) => part.trim().replace(/^and\s+/i, ""))
       .filter(Boolean);
+  }
+
+  /** Participating entities plus related institutions, de-duplicated case-insensitively. */
+  function institutionNames(record) {
+    const names = [];
+    const seen = new Set();
+    const all = [
+      ...(Array.isArray(record.entities) ? record.entities : []),
+      ...splitFurtherInstitutions(record.related_institutions),
+    ];
+    for (const raw of all) {
+      const name = normalizeListItem(raw);
+      const key = name.toLowerCase();
+      if (!name || seen.has(key)) continue;
+      seen.add(key);
+      names.push(name);
+    }
+    return names;
+  }
+
+  function sortValue(column, record) {
+    switch (column.type) {
+      case "service":
+        return serviceLabel(record.basic_service);
+      case "name":
+        return String(record.inc_name || record.uc_name || "").trim();
+      case "logos":
+        return (Array.isArray(record.partners) ? record.partners : [])
+          .map(normalizeListItem)
+          .filter(Boolean)
+          .sort(compareSortText)
+          .join(", ");
+      case "institutions":
+        return institutionNames(record).join(", ");
+      default:
+        return String(record[column.key] ?? "").trim();
+    }
+  }
+
+  function compareSortText(a, b) {
+    return a.localeCompare(b, undefined, { sensitivity: "base", numeric: true });
+  }
+
+  /** Empty values sort last in either direction. */
+  function compareSortValues(a, b, dir) {
+    if (!a && !b) return 0;
+    if (!a) return 1;
+    if (!b) return -1;
+    const result = compareSortText(a, b);
+    return dir === "desc" ? -result : result;
+  }
+
+  const serviceColumn = columns.find((column) => column.type === "service");
+  const nameColumn = columns.find((column) => column.type === "name");
+
+  function sortRecords(records) {
+    const active = columns.find((column) => column.key === state.sort.key);
+    const keys = [];
+    if (active) keys.push({ column: active, dir: state.sort.dir });
+    for (const column of [serviceColumn, nameColumn]) {
+      if (column && column !== active) keys.push({ column, dir: "asc" });
+    }
+    return records
+      .map((record) => ({
+        record,
+        values: keys.map(({ column }) => sortValue(column, record)),
+      }))
+      .sort((a, b) => {
+        for (let i = 0; i < keys.length; i++) {
+          const result = compareSortValues(a.values[i], b.values[i], keys[i].dir);
+          if (result !== 0) return result;
+        }
+        return 0;
+      })
+      .map(({ record }) => record);
+  }
+
+  function parseSortParam(value) {
+    const [key, dir] = String(value || "").split(":");
+    if (!columns.some((column) => column.key === key)) return { key: null, dir: "asc" };
+    return { key, dir: dir === "desc" ? "desc" : "asc" };
+  }
+
+  function nextSort(key) {
+    if (state.sort.key !== key) return { key, dir: "asc" };
+    if (state.sort.dir === "asc") return { key, dir: "desc" };
+    return { key: null, dir: "asc" };
   }
 
   function singlePartnerWebsite(record) {
@@ -480,6 +559,18 @@
       if (href) return href;
     }
     return "";
+  }
+
+  const serviceLabels = {
+    Software: "nfdi.software",
+    RDMT: "RDMTraining4NFDI",
+    RDMTraining: "RDMTraining4NFDI",
+  };
+
+  function serviceLabel(code) {
+    const value = String(code || "").trim();
+    if (!value) return "";
+    return serviceLabels[value] || `${value}4NFDI`;
   }
 
   function statusClass(status) {
@@ -566,6 +657,9 @@
     if (column.type === "further") {
       return splitFurtherInstitutions(value).join(" ");
     }
+    if (column.type === "institutions") {
+      return institutionNames(record).join(" ");
+    }
     if (column.type === "date") {
       return value ? formatDate(value) : "";
     }
@@ -639,6 +733,7 @@
     for (const value of params.getAll(consortiaFilterKey)) {
       if (value) state.consortia.add(value);
     }
+    state.sort = parseSortParam(params.get("sort"));
   }
 
   function buildFilterSearchParams() {
@@ -655,6 +750,7 @@
     for (const value of consortia) {
       params.append(consortiaFilterKey, value);
     }
+    if (state.sort.key) params.set("sort", `${state.sort.key}:${state.sort.dir}`);
     return params;
   }
 
@@ -815,30 +911,25 @@
       if (!code) return "<td>—</td>";
       const src = basicServiceLogos[code];
       if (!src) return `<td>${escapeHtml(code)}</td>`;
-      const serviceLabels = {
-        Software: "nfdi.software",
-        RDMT: "RDMTraining4NFDI",
-        RDMTraining: "RDMTraining4NFDI",
-      };
-      const label = serviceLabels[code] || `${code}4NFDI`;
+      const label = serviceLabel(code);
       const website = basicServiceWebsites[code] || "";
       const logo = renderLinkedLogo(src, label, website, "service-logo");
       return `<td class="row-service">${logo}</td>`;
     }
 
     if (column.type === "logos") {
-      const cellHtml =
-        column.logosScope === "institutions"
-          ? institutionsCellHtml(record)
-          : consortiaCellHtml(record);
-      const rowClass =
-        column.logosScope === "institutions"
-          ? "row-logos row-institutions ref-names"
-          : "row-logos row-consortia ref-names";
+      const cellHtml = consortiaCellHtml(record);
+      const rowClass = "row-logos row-consortia ref-names";
       if (!cellHtml) {
         return `<td class="${rowClass}">—</td>`;
       }
       return `<td class="${rowClass}">${cellHtml}</td>`;
+    }
+
+    if (column.type === "institutions") {
+      const cellHtml = institutionsCellHtml(record);
+      if (!cellHtml) return `<td class="row-institutions"><span class="cell-empty">—</span></td>`;
+      return `<td class="row-institutions">${cellHtml}</td>`;
     }
 
     if (column.type === "name") {
@@ -1044,14 +1135,33 @@
     renderConsortiaCombobox();
   }
 
+  function renderSortButton(column) {
+    const active = state.sort.key === column.key;
+    const dir = active ? state.sort.dir : "";
+    const next = !active ? "ascending" : dir === "asc" ? "descending" : "default order";
+    return `<button type="button" class="th-sort${active ? ` is-sorted is-${dir}` : ""}" data-sort-key="${escapeHtml(column.key)}" aria-label="${escapeHtml(column.label)}: sort ${next}">
+      <span class="th-label">${escapeHtml(column.label)}</span>
+      <svg class="th-sort-icon" viewBox="0 0 12 16" width="9" height="12" aria-hidden="true" focusable="false">
+        <path class="th-sort-up" fill="currentColor" d="M6 1 11 6.5H1z"/>
+        <path class="th-sort-down" fill="currentColor" d="M6 15 1 9.5h10z"/>
+      </svg>
+    </button>`;
+  }
+
   function renderColumnHeader(column) {
-    const label = escapeHtml(column.label);
     const thClass = column.type === "service" ? ' class="col-service"' : "";
-    if (!column.headerTitle) return `<th scope="col"${thClass}>${label}</th>`;
+    const ariaSort =
+      state.sort.key === column.key
+        ? state.sort.dir === "desc" ? "descending" : "ascending"
+        : "none";
+    const sortButton = renderSortButton(column);
+    if (!column.headerTitle) {
+      return `<th scope="col"${thClass} aria-sort="${ariaSort}">${sortButton}</th>`;
+    }
     const tip = escapeHtml(column.headerTitle);
-    return `<th scope="col"${thClass}>
+    return `<th scope="col"${thClass} aria-sort="${ariaSort}">
       <span class="th-label-row">
-        <span class="th-label">${label}</span>
+        ${sortButton}
         <span class="th-info">
           <button type="button" class="th-info-btn" aria-label="${tip}" aria-describedby="th-info-${escapeHtml(column.key)}">
             <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" focusable="false">
@@ -1103,7 +1213,7 @@
   }
 
   function applyView() {
-    const filtered = filterRecords(state.records);
+    const filtered = sortRecords(filterRecords(state.records));
     renderSummary(filtered);
     renderTable(filtered, state.meta, state.records.length);
     updateShareButton();
@@ -1258,6 +1368,15 @@
 
     shareButton.addEventListener("click", () => {
       copyShareLink();
+    });
+
+    document.getElementById("table-head").addEventListener("click", (event) => {
+      const button = event.target.closest(".th-sort");
+      if (!button) return;
+      const key = button.dataset.sortKey;
+      state.sort = nextSort(key);
+      applyView();
+      document.querySelector(`#table-head .th-sort[data-sort-key="${CSS.escape(key)}"]`)?.focus();
     });
   }
 

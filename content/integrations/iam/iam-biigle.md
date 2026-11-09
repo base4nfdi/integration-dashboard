@@ -13,11 +13,12 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Biodiversity"]
-logo_consortia = "img/partner-logos/9398849c5f7f7a6a.png"
+logo_project = "img/partner-logos/9398849c5f7f7a6a.png"
 inc_activity_type = "Consultancy"
 inc_caai = "na"
 inc_ownership = "GPLv3.0"
 inc_activity_page = "https://biigle.de"
+source_ref = "biigle-1"
 +++
 
 We want to support authentication via the NFDI Infra Proxy in our BIIGLE service for image and video annotation (biigle.de). The service is part of the NFDI4Biodiversity service catalogue and also participates as a pilot project in NFDI4Earth. BIIGLE should provide the NFDI Infra Proxy as a login/registration option so users from different consortia (currently NFDI4Biodiversity and NFDI4Earth) can easily use the service.

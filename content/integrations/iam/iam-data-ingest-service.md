@@ -19,6 +19,7 @@ inc_activity_type = "Integration"
 inc_caai = "regapp"
 inc_ownership = "MIT Licence"
 inc_activity_page = "https://ingest.nfdi4ing.de"
+source_ref = "data-ingest-4"
 +++
 
 The NFDI4ING Data Ingest Service (https://ingest.nfdi4ing.de) uses OpenID connect for authentication and authorisation. Currently it is using a custom keycloak installation for DFN federation or ORCID login. We would like to connect it to the NFDI AAI.

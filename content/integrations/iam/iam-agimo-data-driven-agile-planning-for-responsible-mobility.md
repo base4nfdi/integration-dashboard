@@ -13,11 +13,11 @@ inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
 logo_project = "img/partner-logos/894cc9cc2ce3e8e2.jpg"
-logo_consortia = "img/partner-logos/b1d11b7ba8108d39.jpg"
 inc_activity_type = "Development"
 inc_caai = "regapp"
 inc_ownership = "CC by 4.0 + MIT"
 inc_activity_page = "https://infraverse-dev.zih.tu-dresden.de"
+source_ref = "agimo"
 +++
 
 The primary objective of the incubator proposal is to implement an RDM system that can be integrated into a virtual research environment for transportation science. Authentication should be handled by Community AAI software where customisation needs to be implemented wherever applicable This approach is advantageous as it enables ease of authentication for par ticipants / users from other institutions, while also supporting the implementation of authorization and group management within our services where applicable.

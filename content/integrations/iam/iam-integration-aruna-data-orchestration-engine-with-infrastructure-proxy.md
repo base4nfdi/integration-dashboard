@@ -13,11 +13,11 @@ inc_partner_publications = 0
 linked_partners = 0
 linked_entities = 0
 logo_project = "img/partner-logos/bee5ca03af1f45cc.png"
-logo_consortia = "img/partner-logos/d0d61fcba352ef3f.png"
 inc_activity_type = "Integration"
 inc_caai = "Infraproxy"
 inc_ownership = "Apache V2.0 MIT License"
 inc_activity_page = "https://aruna-engine.org"
+source_ref = "aruna-3"
 +++
 
 As part of the incubator project, the Aruna Data Orchestration Engine is to enable authentication against the Infrastructure Proxy Infrastructure Service of IAM4NFDI. This allows easy access to all community AAIs involved in IAM4NFDI without having to integrate each AAI individually. We want to support authentication via the Infrastructure Proxy Infrastructure Service in our Aruna Data Orchestration service. The service is developed inside the NFDI4Microbiota and NFDI4Biodiversity consortia. Currently, we support Life Science Login and GFBio SSO (via OIDC). If the IAM4NFDI Infrastructure Proxy Infrastructure Service supports OIDC, adding it as a login option should be straight forward. Our Aruna Data Orchestration service already supports multiple OIDC identity provider for individual users. Goal: Enabling the user authentication via the Infrastructure Proxy Infrastructure Service provided by

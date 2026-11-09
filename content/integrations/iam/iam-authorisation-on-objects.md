@@ -18,6 +18,7 @@ inc_activity_type = "Development"
 inc_caai = "acadid"
 inc_ownership = "möglicherweise EUPL-1.2"
 inc_activity_page = "https://www.google.com/search?q=authorisation+on+objects"
+source_ref = "auth-on-ojb-1"
 +++
 
 Repositories in general need certain authentication and authorization functionalities for controlling import and export of data. It would be desirable, that an NFDI-wide IAM solution supports such AAI functions, as they are required by potentially all research data repositories across all disciplines. We acceppt this challenge and use the TextGrid and DARIAH-DE Repositories as examples to implement such AAI functions, if as extension, integration or even overall management shall be subject to decision of the IAM4NFDI group.

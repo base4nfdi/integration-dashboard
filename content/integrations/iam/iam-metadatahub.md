@@ -13,10 +13,11 @@ inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
 partners = ["NFDI4Ing"]
-logo_consortia = "img/partner-logos/0b0f4686d8056801.png"
+logo_project = "img/partner-logos/0b0f4686d8056801.png"
 inc_activity_type = "Infrastructure"
 inc_caai = "regapp"
 inc_activity_page = "https://nfdi4ing.de/base-services/s-3/"
+source_ref = "metadatahub-1"
 +++
 
 MetadataHub allows access to various metadata stores developed in the NFDI. All operations from "Create" to "Search" can be performed on the metadata stores. There are two demonstrators for this, one showing the interfaces and the other providing a search across all metadata stores.

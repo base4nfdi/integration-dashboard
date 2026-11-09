@@ -17,6 +17,7 @@ logo_consortia = "img/partner-logos/2e4910e1462d407d.png"
 inc_activity_type = "Consultancy"
 inc_caai = "na"
 inc_activity_page = "https://terminology.nfdi4chem.de/ts"
+source_ref = "terminology-1"
 +++
 
 The goal of NFDI4Chem is to have a unified AAI solution within a single consortium, enabling users to seamlessly access and utilize all available resources. From the incubator project, we aim to integrate test instances of various services with the chosen CAAI. This will help us gather requirements that might necessitate modifications on both the services and the CAAI front, ensuring that the needs of the majority of these services are met. Following comprehensive testing across all facets, the test instances of each service will transition into production. The list of services to be connected with CAAI includes the Terminology Service (TS), Chemotion Repository, nmrXiv, COCONUT and more.

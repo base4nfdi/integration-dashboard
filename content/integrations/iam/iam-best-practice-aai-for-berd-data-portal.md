@@ -18,6 +18,7 @@ inc_activity_type = "Development"
 inc_caai = "na"
 inc_ownership = "CC By 4.0"
 inc_activity_page = "https://berd-nfdi.de"
+source_ref = "berd-4"
 +++
 
 This incubator project focuses on applying IAM4NFDI standards within the BERD@NFDI infrastructure. We aim to adopt best practices and reference implementations (e.g., OpenID Connect, entitlement-based access) to future-proof our platform for federated, cross-consortia workflows. The project will help ensure compatibility with external services such as Galaxy, and position BERD for participation in the EOSC federated system.

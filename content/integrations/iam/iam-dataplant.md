@@ -18,6 +18,7 @@ inc_activity_type = "Development"
 inc_caai = "other"
 inc_ownership = "."
 inc_activity_page = "https://nfdi4plants.org"
+source_ref = "dataplant-2"
 +++
 
 The DataPLANT consortium develops and provides a wide range of services to support FAIR data science in plant biology. In the past, we have implemented our own IAM infrastructure but as our collaborations with other consortia and institutions continue to grow, we are in need of a broader IAM integration. Our infrastructure needs to be connected to the larger IAM4NFDI system to allow users from both DataPLANT and other consortia to use our services. The DataPLANT user base needs to be integrated as a community identity provider. Authorisation decisions within the services should be derived from user attributes provided by the respective consortia identity providers.

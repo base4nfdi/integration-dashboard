@@ -18,6 +18,7 @@ inc_activity_type = "Consultancy"
 inc_caai = "na"
 inc_ownership = "."
 inc_activity_page = "https://fairagro.net/"
+source_ref = "fairagro-2"
 +++
 
 FAIRagro is the NFDI consortium focussing on agrosystems research. FAIRagro will offer various services, such as a Nextcloud system, a Zammad-based helpdesk system, and the FAIRagro Search Portal. These services will be integrated with an Authentication and Authorisation Infrastructure (AAI) based on NFDI recommendations to facilitate usage. Further services will be connected to the CAAI, including consortium-internal services and community services.

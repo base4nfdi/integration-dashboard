@@ -18,6 +18,7 @@ inc_activity_type = "Infrastructure"
 inc_caai = "regapp"
 inc_ownership = "."
 inc_activity_page = "https://www.google.com/search?hl=en&q=FTS+MATWERK"
+source_ref = "fts-2"
 +++
 
 The File Transfer Service (FTS) is a Software that is developed by CERN and that specializes in easy, large scale data transfer. It allows the scheduling of transfers and results in a good utilization of the available bandwidth. We are currently setting up an FTS instance to enable users to transfer their research data between different endpoints, our research data management system, and the cluster.
