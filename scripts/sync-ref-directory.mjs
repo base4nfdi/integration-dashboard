@@ -36,6 +36,10 @@ const DIRECTORY_PATH = join(repoRoot, "static/ref-directory.json");
 /** Project homepages that are not REF_Partners or REF_Entities rows. */
 const PROJECT_SITES = [
   {
+    name: "AIMS",
+    website: "https://www.aims-projekt.de/",
+  },
+  {
     name: "Sensor Management System",
     website: "https://helmholtz.software/software/sensor-management-system",
     aliases: ["SensorCV", "SMS"],

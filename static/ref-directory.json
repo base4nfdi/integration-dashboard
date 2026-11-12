@@ -1,6 +1,20 @@
 {
   "fetched_at": "2026-11-04T01:07:45.571Z",
   "projects": {
+    "AIMS": {
+      "name": "AIMS",
+      "logo": "",
+      "website": "https://www.aims-projekt.de/",
+      "source_logo": "",
+      "updated_at": ""
+    },
+    "aims": {
+      "name": "AIMS",
+      "logo": "",
+      "website": "https://www.aims-projekt.de/",
+      "source_logo": "",
+      "updated_at": ""
+    },
     "Sensor Management System": {
       "name": "Sensor Management System",
       "logo": "",
