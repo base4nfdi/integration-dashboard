@@ -1,7 +1,7 @@
 {
   "source": "ts4nfdi",
   "basic_service": "TS",
-  "parsed_at": "2026-11-04T01:07:31.916Z",
+  "parsed_at": "2026-11-12T11:03:18.888Z",
   "input": "/home/farmer/Workspace/NFDI/Base4NFDI/zola-ssg/dashboard/data/sources/ts4nfdi/projects.json",
   "record_count": 31,
   "records": [
@@ -38,7 +38,9 @@
       ],
       "entities": [],
       "source_title": "RADAR",
-      "source_activity_page": "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu"
+      "source_activity_page": "https://dx.doi.org/10.22000/35t5h4hmfjx1ugbu",
+      "source_slug": "radar_incubator_1",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/radar_incubator_1"
     },
     {
       "id": null,
@@ -71,7 +73,9 @@
       ],
       "entities": [],
       "source_title": "WDCC - World Data Center for Climate",
-      "source_activity_page": "provider"
+      "source_activity_page": "provider",
+      "source_slug": "wdcc_world_data_center_for_climate_incubator_2",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/wdcc_world_data_center_for_climate_incubator_2"
     },
     {
       "id": null,
@@ -104,7 +108,9 @@
       ],
       "entities": [],
       "source_title": "nmrXiv",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "nmrxiv_incubator_3",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/nmrxiv_incubator_3"
     },
     {
       "id": null,
@@ -135,7 +141,9 @@
       "partners": [],
       "entities": [],
       "source_title": "ChEBI - Chemical Entities of Biological Interest",
-      "source_activity_page": "https://www.ebi.ac.uk/chebi/CHEBI:27732"
+      "source_activity_page": "https://www.ebi.ac.uk/chebi/CHEBI:27732",
+      "source_slug": "chebi_chemical_entities_of_biological_interest_incubator_4",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/chebi_chemical_entities_of_biological_interest_incubator_4"
     },
     {
       "id": null,
@@ -168,7 +176,9 @@
       ],
       "entities": [],
       "source_title": "Coconut",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "coconut_incubator_5",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/coconut_incubator_5"
     },
     {
       "id": null,
@@ -201,7 +211,9 @@
       ],
       "entities": [],
       "source_title": "NFDI4Cat Central Data Repository (Repo4Cat)",
-      "source_activity_page": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/"
+      "source_activity_page": "https://semanticlookup.zbmed.de/skosmos/voc4cat/en/",
+      "source_slug": "nfdi4cat_central_data_repository_repo4cat_incubator_6",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/nfdi4cat_central_data_repository_repo4cat_incubator_6"
     },
     {
       "id": null,
@@ -234,7 +246,9 @@
       ],
       "entities": [],
       "source_title": "BERD Terminology Service",
-      "source_activity_page": "https://ts.berd-nfdi.de/"
+      "source_activity_page": "https://ts.berd-nfdi.de/",
+      "source_slug": "berd_terminology_service_incubator_7",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/berd_terminology_service_incubator_7"
     },
     {
       "id": null,
@@ -267,7 +281,9 @@
       ],
       "entities": [],
       "source_title": "Terminology service for Plasma-MDS",
-      "source_activity_page": "https://ols.plasma-mds.org/"
+      "source_activity_page": "https://ols.plasma-mds.org/",
+      "source_slug": "terminology_service_for_plasma_mds_incubator_8",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/terminology_service_for_plasma_mds_incubator_8"
     },
     {
       "id": null,
@@ -300,7 +316,9 @@
       ],
       "entities": [],
       "source_title": "preVIEW",
-      "source_activity_page": "https://preview.zbmed.de/"
+      "source_activity_page": "https://preview.zbmed.de/",
+      "source_slug": "preview_incubator_9",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/preview_incubator_9"
     },
     {
       "id": null,
@@ -333,7 +351,9 @@
       ],
       "entities": [],
       "source_title": "Metadata Annotation Workbench",
-      "source_activity_page": "https://mda.nfdi4health.de/"
+      "source_activity_page": "https://mda.nfdi4health.de/",
+      "source_slug": "metadata_annotation_workbench_incubator_10",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/metadata_annotation_workbench_incubator_10"
     },
     {
       "id": null,
@@ -366,7 +386,9 @@
       ],
       "entities": [],
       "source_title": "Discuss Data",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "discuss_data_incubator_11",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/discuss_data_incubator_11"
     },
     {
       "id": null,
@@ -399,7 +421,9 @@
       ],
       "entities": [],
       "source_title": "Open Energy Platform",
-      "source_activity_page": "https://openenergyplatform.org/viewer/oeo/"
+      "source_activity_page": "https://openenergyplatform.org/viewer/oeo/",
+      "source_slug": "open_energy_platform_incubator_12",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/open_energy_platform_incubator_12"
     },
     {
       "id": null,
@@ -435,7 +459,9 @@
       ],
       "entities": [],
       "source_title": "ICONCLASS",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "iconclass_incubator_13",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/iconclass_incubator_13"
     },
     {
       "id": null,
@@ -469,7 +495,9 @@
       ],
       "entities": [],
       "source_title": "Ontology of the historical German-language nomenclature",
-      "source_activity_page": "https://terminology.tib.eu/ts/ontologies/ohdab"
+      "source_activity_page": "https://terminology.tib.eu/ts/ontologies/ohdab",
+      "source_slug": "ontology_of_the_historical_german_language_nomenclature_incubator_14",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/ontology_of_the_historical_german_language_nomenclature_incubator_14"
     },
     {
       "id": null,
@@ -502,7 +530,9 @@
       ],
       "entities": [],
       "source_title": "Health Study Hub",
-      "source_activity_page": "https://health-study-hub.de/resource/nfdi4health-108"
+      "source_activity_page": "https://health-study-hub.de/resource/nfdi4health-108",
+      "source_slug": "health_study_hub_incubator_15",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/health_study_hub_incubator_15"
     },
     {
       "id": null,
@@ -533,7 +563,9 @@
       "partners": [],
       "entities": [],
       "source_title": "DALIA Search Portal",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "dalia_search_portal_incubator_16",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/dalia_search_portal_incubator_16"
     },
     {
       "id": null,
@@ -566,7 +598,9 @@
       ],
       "entities": [],
       "source_title": "AIMS",
-      "source_activity_page": "https://profiles.nfdi4ing.de/"
+      "source_activity_page": "https://profiles.nfdi4ing.de/",
+      "source_slug": "aims_incubator_17",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/aims_incubator_17"
     },
     {
       "id": null,
@@ -599,7 +633,9 @@
       ],
       "entities": [],
       "source_title": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
-      "source_activity_page": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/"
+      "source_activity_page": "https://rdmo-test.fairagro.ulb.tu-darmstadt.de/management/optionsets/2442/",
+      "source_slug": "integrate_ts4nfdi_into_dmp4nfdi_rdmo_service_incubator_18",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/integrate_ts4nfdi_into_dmp4nfdi_rdmo_service_incubator_18"
     },
     {
       "id": null,
@@ -632,7 +668,9 @@
       ],
       "entities": [],
       "source_title": "Enabling Semantic Interoperability via DataCite Terminologies",
-      "source_activity_page": "https://tibhannover.github.io/datacite/mappings/"
+      "source_activity_page": "https://tibhannover.github.io/datacite/mappings/",
+      "source_slug": "enabling_semantic_interoperability_via_datacite_terminologies_incubator_19",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/enabling_semantic_interoperability_via_datacite_terminologies_incubator_19"
     },
     {
       "id": null,
@@ -665,7 +703,9 @@
       ],
       "entities": [],
       "source_title": "Metabase",
-      "source_activity_page": "https://api.nfdixcs.org/metabase/swagger-ui/index.html"
+      "source_activity_page": "https://api.nfdixcs.org/metabase/swagger-ui/index.html",
+      "source_slug": "metabase_incubator_20",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/metabase_incubator_20"
     },
     {
       "id": null,
@@ -698,7 +738,9 @@
       ],
       "entities": [],
       "source_title": "MathModDB",
-      "source_activity_page": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation"
+      "source_activity_page": "https://terminology.services.base4nfdi.de/tss/comp/latest/?path=/story/react_additional-entity-metadata-entityinfowidget--math-formular-representation",
+      "source_slug": "mathmoddb_incubator_21",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/mathmoddb_incubator_21"
     },
     {
       "id": null,
@@ -731,7 +773,9 @@
       ],
       "entities": [],
       "source_title": "FAIRagro Terminology Service",
-      "source_activity_page": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/"
+      "source_activity_page": "http://semlookp-ui-fairagro.qa.km.k8s.zbmed.de/",
+      "source_slug": "fairagro_terminology_service_incubator_22",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/fairagro_terminology_service_incubator_22"
     },
     {
       "id": null,
@@ -762,7 +806,9 @@
       "partners": [],
       "entities": [],
       "source_title": "TS4NFDI integration in Galaxy",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "ts4nfdi_integration_in_galaxy_incubator_23",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/ts4nfdi_integration_in_galaxy_incubator_23"
     },
     {
       "id": null,
@@ -796,7 +842,9 @@
       ],
       "entities": [],
       "source_title": "TeSS - Training eSupport System",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "tess_training_esupport_system_incubator_24",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/tess_training_esupport_system_incubator_24"
     },
     {
       "id": null,
@@ -829,7 +877,9 @@
       ],
       "entities": [],
       "source_title": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "semantic_interoperability_and_terminology_mapping_for_panet_based_discovery_in_photon_and_neutron_science_repositories_incubator_25",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/semantic_interoperability_and_terminology_mapping_for_panet_based_discovery_in_photon_and_neutron_science_repositories_incubator_25"
     },
     {
       "id": null,
@@ -862,7 +912,9 @@
       ],
       "entities": [],
       "source_title": "Improving Interoperability for Climate and Energy Policy Ontologies",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "improving_interoperability_for_climate_and_energy_policy_ontologies_incubator_26",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/improving_interoperability_for_climate_and_energy_policy_ontologies_incubator_26"
     },
     {
       "id": null,
@@ -897,7 +949,9 @@
       ],
       "entities": [],
       "source_title": "Terminology Service Suite integration for WissKI authority data enrichment",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "terminology_service_suite_integration_for_wisski_authority_data_enrichment_incubator_27",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/terminology_service_suite_integration_for_wisski_authority_data_enrichment_incubator_27"
     },
     {
       "id": null,
@@ -930,7 +984,9 @@
       ],
       "entities": [],
       "source_title": "OstData & 4MMS",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "ostdata_4mms_incubator_28",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/ostdata_4mms_incubator_28"
     },
     {
       "id": null,
@@ -963,7 +1019,9 @@
       ],
       "entities": [],
       "source_title": "SensorCV",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "sensorcv_incubator_29",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/sensorcv_incubator_29"
     },
     {
       "id": null,
@@ -994,7 +1052,9 @@
       "partners": [],
       "entities": [],
       "source_title": "Semantic and Interoperable Metadata Integration for ELN Objects",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "semantic_and_interoperable_metadata_integration_for_eln_objects_incubator_30",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/semantic_and_interoperable_metadata_integration_for_eln_objects_incubator_30"
     },
     {
       "id": null,
@@ -1027,12 +1087,18 @@
       ],
       "entities": [],
       "source_title": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
-      "source_activity_page": ""
+      "source_activity_page": "",
+      "source_slug": "integration_of_ontology_based_auto_completion_in_nfdi4immuno_excel_metadata_templates_incubator_31",
+      "source_page_url": "https://terminology.services.base4nfdi.de/incubators/integration_of_ontology_based_auto_completion_in_nfdi4immuno_excel_metadata_templates_incubator_31"
     }
   ],
   "stats": {
     "In preparation": 5,
     "Running": 7,
     "Finished": 19
+  },
+  "license": {
+    "link": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "description": "The incubator dashboard data is licensed under the following terms: CC BY 4.0."
   }
 }

@@ -9,7 +9,7 @@
   },
   "matches": [
     {
-      "score": 2.71,
+      "score": 2,
       "source": {
         "inc_name": "RADAR",
         "inc_cycle": 1,
@@ -31,10 +31,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-1",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/radar.svg",
           "nocodb": "img/partner-logos/f42d933cd392bd27.svg"
@@ -42,7 +38,7 @@
       }
     },
     {
-      "score": 2.22,
+      "score": 2,
       "source": {
         "inc_name": "WDCC",
         "inc_cycle": 1,
@@ -64,14 +60,6 @@
           "source": "WDCC",
           "nocodb": "WDCC  - World Data Center for Climate"
         },
-        "inc_end": {
-          "source": "2025-10-30",
-          "nocodb": "2025-10-31"
-        },
-        "inc_source_ref": {
-          "source": "incubator-2",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/wdcc.png",
           "nocodb": "img/partner-logos/8ca946e929cc27bc.png"
@@ -83,7 +71,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "nmrXiv",
         "inc_cycle": 0,
@@ -101,10 +89,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-3",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nmrxiv_repository.png",
           "nocodb": "img/partner-logos/8e52852b66788d11.png"
@@ -112,7 +96,7 @@
       }
     },
     {
-      "score": 2.35,
+      "score": 2,
       "source": {
         "inc_name": "ChEBI",
         "inc_cycle": 1,
@@ -126,14 +110,6 @@
         "partners": []
       },
       "field_diffs": {
-        "inc_end": {
-          "source": "2025-10-15",
-          "nocodb": "2025-11-30"
-        },
-        "inc_source_ref": {
-          "source": "incubator-4",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/chebi.png",
           "nocodb": "img/partner-logos/ef0a379775ece1e4.png"
@@ -141,7 +117,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "Coconut",
         "inc_cycle": 0,
@@ -159,10 +135,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-5",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/coconut.png",
           "nocodb": "img/partner-logos/4b05f3d3cef46b2e.png"
@@ -170,7 +142,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
         "inc_cycle": 1,
@@ -188,14 +160,6 @@
         ]
       },
       "field_diffs": {
-        "inc_end": {
-          "source": "2025-08-14",
-          "nocodb": "2025-10-31"
-        },
-        "inc_source_ref": {
-          "source": "incubator-6",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nfdi4cat.png",
           "nocodb": "img/partner-logos/4a8f5a62aea03e2b.png"
@@ -203,7 +167,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "BERD Terminology Service",
         "inc_cycle": 0,
@@ -221,10 +185,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-7",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/berd.png",
           "nocodb": "img/partner-logos/a8573f5bcf411a39.png"
@@ -232,7 +192,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "Terminology service for Plasma-MDS",
         "inc_cycle": 0,
@@ -250,10 +210,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-8",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/plasma-mds_logo.svg",
           "nocodb": "img/partner-logos/2f46b3090c3dd5f8.svg"
@@ -261,7 +217,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "preVIEW",
         "inc_cycle": 0,
@@ -279,10 +235,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-9",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/preVIEW.svg",
           "nocodb": "img/partner-logos/ee3199b54476df4d.svg"
@@ -290,7 +242,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "Metadata Annotation Workbench",
         "inc_cycle": 0,
@@ -308,10 +260,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-10",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
           "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
@@ -319,7 +267,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "Discuss Data",
         "inc_cycle": 1,
@@ -337,14 +285,6 @@
         ]
       },
       "field_diffs": {
-        "inc_end": {
-          "source": "2025-10-30",
-          "nocodb": "2025-10-31"
-        },
-        "inc_source_ref": {
-          "source": "incubator-11",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/discuss-data.svg",
           "nocodb": "img/partner-logos/1933602a07f6ab9e.svg"
@@ -352,7 +292,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "Open Energy Platform",
         "inc_cycle": 2,
@@ -370,10 +310,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-12",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/OpenEnergyFamily_Logo_OpenEnergyPlatform_OEP.png",
           "nocodb": "img/partner-logos/420b1ab6f7242fa5.png"
@@ -381,7 +317,7 @@
       }
     },
     {
-      "score": 2.83,
+      "score": 2,
       "source": {
         "inc_name": "ICONCLASS",
         "inc_cycle": 2,
@@ -405,10 +341,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-13",
-          "nocodb": ""
-        },
         "partners": {
           "source": [
             "NFDI4Culture",
@@ -430,7 +362,7 @@
       }
     },
     {
-      "score": 2.59,
+      "score": 2,
       "source": {
         "inc_name": "Ontology of the historical German-language nomenclature",
         "inc_cycle": 2,
@@ -450,14 +382,6 @@
         ]
       },
       "field_diffs": {
-        "inc_end": {
-          "source": "2026-03-19",
-          "nocodb": "2026-02-28"
-        },
-        "inc_source_ref": {
-          "source": "incubator-14",
-          "nocodb": ""
-        },
         "partners": {
           "source": [
             "NFDI4Memory",
@@ -475,7 +399,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "Health Study Hub",
         "inc_cycle": 2,
@@ -493,14 +417,6 @@
         ]
       },
       "field_diffs": {
-        "inc_end": {
-          "source": "2026-03-05",
-          "nocodb": "2026-04-30"
-        },
-        "inc_source_ref": {
-          "source": "incubator-15",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nfdi4health.png",
           "nocodb": "img/partner-logos/c08cca7ca0e157bf.png"
@@ -508,7 +424,7 @@
       }
     },
     {
-      "score": 2.35,
+      "score": 2,
       "source": {
         "inc_name": "DALIA Search Portal",
         "inc_cycle": 2,
@@ -522,10 +438,6 @@
         "partners": []
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-16",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/dalia.png",
           "nocodb": "img/partner-logos/39ef828eaba7a05b.png"
@@ -533,7 +445,7 @@
       }
     },
     {
-      "score": 2.007,
+      "score": 2,
       "source": {
         "inc_name": "AIMS",
         "inc_cycle": 3,
@@ -551,18 +463,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-03-18",
-          "nocodb": "2026-03-01"
-        },
-        "inc_goals": {
-          "source": "- Replace current terminology providers with a unified terminology service\n- Develop of Vue.js-based components for enhanced terminology browsing and navigation",
-          "nocodb": "- Replace current terminology providers with TS4NFDI API Gateway as unified terminology service\n- Integrate TS4NFDI Service Suite widgets to AIMS"
-        },
-        "inc_source_ref": {
-          "source": "incubator-17",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/AIMS-Logo.png",
           "nocodb": "img/partner-logos/b0faf7bb2f1d9ce6.png"
@@ -570,7 +470,7 @@
       }
     },
     {
-      "score": 1.964,
+      "score": 2,
       "source": {
         "inc_name": "Integrate TS4NFDI into DMP4NFDI RDMO Service",
         "inc_cycle": 3,
@@ -588,22 +488,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-03-17",
-          "nocodb": "2026-03-01"
-        },
-        "inc_end": {
-          "source": "2026-09-08",
-          "nocodb": "2026-09-30"
-        },
-        "inc_goals": {
-          "source": "- Integration of terminology data to RDMO via TS4NFDI API Gateway\n- Provision of terminologies preselection for RDMO specified by subjects/topics/domains",
-          "nocodb": "- Integrate TS4NFDI Service Suite widgets into the RDMO"
-        },
-        "inc_source_ref": {
-          "source": "incubator-18",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/DMP4NFDI.png",
           "nocodb": "img/partner-logos/c20f374664866ba7.png"
@@ -611,7 +495,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "Enabling Semantic Interoperability via DataCite Terminologies",
         "inc_cycle": 3,
@@ -629,18 +513,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-02-26",
-          "nocodb": "2026-03-01"
-        },
-        "inc_end": {
-          "source": "2026-11-30",
-          "nocodb": "2026-09-30"
-        },
-        "inc_source_ref": {
-          "source": "incubator-19",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/PID4NFDI.png",
           "nocodb": "img/partner-logos/42230e20b86baef5.png"
@@ -648,7 +520,7 @@
       }
     },
     {
-      "score": 2.107,
+      "score": 2,
       "source": {
         "inc_name": "Metabase",
         "inc_cycle": 3,
@@ -666,22 +538,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-02-26",
-          "nocodb": "2026-03-01"
-        },
-        "inc_end": {
-          "source": "2026-08-06",
-          "nocodb": "2026-09-30"
-        },
-        "inc_descr": {
-          "source": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontologies, and connects to external systems such as the open research knowledge graph (ORKG).",
-          "nocodb": "Metabase is the metadata service for research data management container (RDMC) in NFDIxCS. It incorporates community-specific metadata schemas via OWL2 ontologies to support the heterogeneity  of computer science. This semantic foundation allows Metabase to automatically check for inconsistencies in the metadata and to enrich metadata sets with derived facts. The service also allows to define morphisms to translate between different schemas and ontolgogies, and connects to external systems such as the open research knowledge graph (ORKG)."
-        },
-        "inc_source_ref": {
-          "source": "incubator-20",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/metabase-logo.svg",
           "nocodb": "img/partner-logos/9d80b706f0cc1f85.svg"
@@ -689,7 +545,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "MathModDB",
         "inc_cycle": 3,
@@ -707,18 +563,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-03-04",
-          "nocodb": "2026-03-01"
-        },
-        "inc_end": {
-          "source": "2026-09-10",
-          "nocodb": "2026-09-30"
-        },
-        "inc_source_ref": {
-          "source": "incubator-21",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/MathModDBLogo.png",
           "nocodb": "img/partner-logos/7da39823e90b3deb.png"
@@ -726,7 +570,7 @@
       }
     },
     {
-      "score": 2.11,
+      "score": 2,
       "source": {
         "inc_name": "FAIRagro Terminology Service",
         "inc_cycle": 3,
@@ -744,22 +588,6 @@
         ]
       },
       "field_diffs": {
-        "inc_start": {
-          "source": "2026-03-13",
-          "nocodb": "2026-03-01"
-        },
-        "inc_end": {
-          "source": "2026-10-19",
-          "nocodb": "2026-09-30"
-        },
-        "inc_goals": {
-          "source": "- Provision of terminologies in a Terminology Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products",
-          "nocodb": "- Provision of terminologies in a Terminlogy Service\n- Establishing workflow of alignment integration\n- Establishing transformation workflow for the integration in TS systems\n- Demonstration of use of the TS4NFDI instance in selected FAIRagro products"
-        },
-        "inc_source_ref": {
-          "source": "incubator-22",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/FAIRagro.png",
           "nocodb": "img/partner-logos/1584198a22a429d3.png"
@@ -781,10 +609,6 @@
         "partners": []
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-23",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/galaxy-eu.svg",
           "nocodb": "img/partner-logos/452248d3416df5d7.svg"
@@ -792,7 +616,7 @@
       }
     },
     {
-      "score": 2.24,
+      "score": 2,
       "source": {
         "inc_name": "TeSS",
         "inc_cycle": 4,
@@ -812,10 +636,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-24",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/tess-logo.svg",
           "nocodb": "img/partner-logos/cf6d4cf72d711cd7.svg"
@@ -823,7 +643,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "Semantic Interoperability and Terminology Mapping for PaNET-based Discovery in Photon and Neutron Science Repositories",
         "inc_cycle": 4,
@@ -841,10 +661,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-25",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/DAPHNE4NFDI_logo.png",
           "nocodb": "img/partner-logos/9f445863db409d4f.png"
@@ -852,7 +668,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "Improving Interoperability for Climate and Energy Policy Ontologies",
         "inc_cycle": 4,
@@ -870,10 +686,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-26",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/CEPO-logo.png",
           "nocodb": "img/partner-logos/c2ec2fab9b3ea704.png"
@@ -881,7 +693,7 @@
       }
     },
     {
-      "score": 2.69,
+      "score": 2,
       "source": {
         "inc_name": "Terminology Service Suite integration for WissKI authority data enrichment",
         "inc_cycle": 4,
@@ -903,14 +715,6 @@
         ]
       },
       "field_diffs": {
-        "inc_descr": {
-          "source": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific research environments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway.",
-          "nocodb": "SODa's Semantic Co-Working Space (SCS) provides a cloud environment for deploying WissKI-based research applications. WissKI Barrels are containerised, domain-specific researchenvironments built on WissKI and CIDOC-CRM. Today, each Barrel manages terminology lookups independently – with fragmented provider integrations (GND, Getty, GeoNames, Wikidata) and bespoke UI components. This incubator integrates the TS4NFDI Terminology Service Suite into WissKI's Authority Document module and publishes SODa-maintained controlled vocabularies (e.g. provenance event types, conservation treatment categories) via the API Gateway."
-        },
-        "inc_source_ref": {
-          "source": "incubator-27",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/WissKI_logo_2026.png",
           "nocodb": "img/partner-logos/db311bd7628d7af5.png"
@@ -918,7 +722,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2,
       "source": {
         "inc_name": "OstData & 4MMS",
         "inc_cycle": 4,
@@ -936,10 +740,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-28",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/ostdata.png",
           "nocodb": "img/partner-logos/fa6ecd87e11ec9e1.png"
@@ -947,7 +747,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "SensorCV",
         "inc_cycle": 4,
@@ -968,10 +768,6 @@
         "inc_start": {
           "source": "",
           "nocodb": "2026-07-15"
-        },
-        "inc_source_ref": {
-          "source": "incubator-29",
-          "nocodb": ""
         },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/sms.png",
@@ -994,10 +790,6 @@
         "partners": []
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-30",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/rspace_logo.svg",
           "nocodb": "img/partner-logos/07de910f2aad00e7.svg"
@@ -1005,7 +797,7 @@
       }
     },
     {
-      "score": 2.12,
+      "score": 2,
       "source": {
         "inc_name": "Integration of ontology-based auto-completion in NFDI4Immuno Excel metadata templates",
         "inc_cycle": 5,
@@ -1023,10 +815,6 @@
         ]
       },
       "field_diffs": {
-        "inc_source_ref": {
-          "source": "incubator-31",
-          "nocodb": ""
-        },
         "logo_project": {
           "source": "https://terminology.services.base4nfdi.de/img/nfdi4immuno.png",
           "nocodb": "img/partner-logos/ba427dc06317d8ac.png"

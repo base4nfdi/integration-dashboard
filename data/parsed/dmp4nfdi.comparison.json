@@ -184,10 +184,6 @@
           "source": "RDMO Hosting — NFDI4Earth",
           "nocodb": "Operational RDMO for the Earth System Science community"
         },
-        "inc_results": {
-          "source": "NFDI4Earth RDMO Client\nhttps://rdmo.nfdi4earth.de/\nRDMO Sensor Search option set plugin updated\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch",
-          "nocodb": "https://rdmo.nfdi4earth.de\nhttps://github.com/rdmorganiser/rdmo-plugins-sensorsearch"
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
           "nocodb": "img/partner-logos/d2899f44796b9a2d.png"
@@ -274,7 +270,7 @@
       }
     },
     {
-      "score": 2.52,
+      "score": 2.72,
       "source": {
         "inc_name": "Training & Outreach — Text+",
         "inc_cycle": 1,
@@ -292,10 +288,6 @@
         ]
       },
       "field_diffs": {
-        "inc_goals": {
-          "source": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”. It will also conduct a survey to ask the community about their wishes and needs regarding DMPs and RDMO.",
-          "nocodb": "Text+ has created a DMP template in collaboration with participants of the consortium that has been expanded with discipline-specific examples. The compatibility between the Text+ template and the NFDI DMP template on RDMO has been also ensured. The aim of this new incubator project is to raise awareness of the added value of the DMP template in RDMO and to showcase it through the Text+ event series, “Show and Tell: Tools, Services, Projects”, as well as through a workshop to gather feedback."
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/text+_logo.png",
           "nocodb": "img/partner-logos/db773a275cb2249c.png"
@@ -303,7 +295,7 @@
       }
     },
     {
-      "score": 1.67,
+      "score": 2.72,
       "source": {
         "inc_name": "Template Development — NFDI4Cat",
         "inc_cycle": 1,
@@ -313,7 +305,7 @@
         ]
       },
       "nocodb": {
-        "inc_name": "Training & Outreach — NFDI4Cat",
+        "inc_name": "Template Development — NFDI4Cat",
         "inc_cycle": 1,
         "inc_status": "Finished",
         "partners": [
@@ -321,14 +313,6 @@
         ]
       },
       "field_diffs": {
-        "inc_name": {
-          "source": "Template Development — NFDI4Cat",
-          "nocodb": "Training & Outreach — NFDI4Cat"
-        },
-        "inc_service_type": {
-          "source": "Template Development",
-          "nocodb": "Training & Outreach, Template Development"
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4cat_logo.png",
           "nocodb": "img/partner-logos/77459895f95007f0.png"
@@ -336,7 +320,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2.72,
       "source": {
         "inc_name": "Template Development — NFDI4Health",
         "inc_cycle": 1,
@@ -354,10 +338,6 @@
         ]
       },
       "field_diffs": {
-        "inc_service_type": {
-          "source": "Template Development",
-          "nocodb": "Template Development, RDMO Hosting"
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4health_logo.png",
           "nocodb": "img/partner-logos/a39dd4e2752dbcc5.png"
@@ -689,7 +669,7 @@
       }
     },
     {
-      "score": 2.606,
+      "score": 2.72,
       "source": {
         "inc_name": "Training & Outreach — NFDI4Chem",
         "inc_cycle": 1,
@@ -707,10 +687,6 @@
         ]
       },
       "field_diffs": {
-        "inc_goals": {
-          "source": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI will support the consortium by providing training materials and a training guide for data stewards. Based on the Train-the-Trainer concept for DMPs and RDMO, the guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO.",
-          "nocodb": "NFDI4Chem has a productive RDMO client with a DMP template that has been optimised for the special requirements of chemists and can be used by everyone. The consortium is organising training activities for its community to showcase the use of RDMO for creating and managing DMPs based on the developed template. In this incubator project, DMP4NFDI supports the consortium by providing available Open Educational Resources (OERs) and other training materials, as well as a training guide for data stewards based on the Train-the-Trainer concept for DMPs and RDMO. This guide will highlight key considerations for delivering introductory workshops on DMPs and the use of RDMO."
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4chem_logo.png",
           "nocodb": "img/partner-logos/6c311d8a04f9f7ac.png"
@@ -893,7 +869,7 @@
       }
     },
     {
-      "score": 2.47,
+      "score": 2.72,
       "source": {
         "inc_name": "RDMO Hosting — NFDI4Earth",
         "inc_cycle": 0,
@@ -911,10 +887,6 @@
         ]
       },
       "field_diffs": {
-        "inc_service_type": {
-          "source": "RDMO Hosting, Template Development, RDMO Integration",
-          "nocodb": "RDMO Hosting, Template Development"
-        },
         "logo_consortia": {
           "source": "https://dmp.services.base4nfdi.de/images/nfdi4earth_logo.png",
           "nocodb": "img/partner-logos/fb068dab27f7e96a.png"

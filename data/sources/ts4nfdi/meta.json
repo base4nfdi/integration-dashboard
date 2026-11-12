@@ -1,14 +1,19 @@
 {
   "id": "ts4nfdi",
-  "label": "TS4NFDI Service Portal projects",
-  "source_url": "https://github.com/ts4nfdi/service-portal/blob/main/app/ui/incubators/projects.json",
+  "label": "TS4NFDI API Gateway incubators",
+  "source_url": "https://terminology.services.base4nfdi.de/api-gateway/incubators",
   "page_url": "https://terminology.services.base4nfdi.de/incubators",
   "page_kind": "Incubators",
-  "fetch_url": "https://raw.githubusercontent.com/ts4nfdi/service-portal/main/app/ui/incubators/projects.json",
+  "fetch_url": "https://terminology.services.base4nfdi.de/api-gateway/incubators",
   "type": "json",
-  "content_type": "text/plain; charset=utf-8",
+  "content_type": "application/json",
   "status": 200,
   "filename": "projects.json",
-  "fetched_at": "2026-11-04T01:07:30.973Z",
-  "bytes": 36578
+  "fetched_at": "2026-11-12T11:03:17.925Z",
+  "bytes": 38502,
+  "license": {
+    "name": "CC BY 4.0",
+    "link": "https://creativecommons.org/licenses/by/4.0/deed.en",
+    "description": "The incubator dashboard data is licensed under the following terms: CC BY 4.0."
+  }
 }

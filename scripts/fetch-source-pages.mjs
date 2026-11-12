@@ -38,8 +38,8 @@ const SOURCES = [
   },
   {
     id: "ts4nfdi",
-    label: "TS4NFDI Service Portal projects",
-    url: "https://github.com/ts4nfdi/service-portal/blob/main/app/ui/incubators/projects.json",
+    label: "TS4NFDI API Gateway incubators",
+    url: "https://terminology.services.base4nfdi.de/api-gateway/incubators",
     page_url: "https://terminology.services.base4nfdi.de/incubators",
     page_kind: "Incubators",
     type: "json",
@@ -203,6 +203,35 @@ function serializeBody(type, body, raw) {
 }
 
 /**
+ * License the source owner declares for the published data
+ * (`{ license: { link, description } }` in a JSON body), or null.
+ */
+export function sourceLicense(type, body) {
+  if (type !== "json" || !body || typeof body !== "object") return null;
+  const license = body.license;
+  if (!license || typeof license !== "object") return null;
+  const link = String(license.link ?? "").trim();
+  const description = String(license.description ?? "").trim();
+  if (!link && !description) return null;
+  return { name: licenseName(link, description), link, description };
+}
+
+/** Short license label, e.g. creativecommons.org/licenses/by-sa/4.0/ → "CC BY-SA 4.0". */
+export function licenseName(link, description) {
+  const cc = String(link ?? "").match(
+    /creativecommons\.org\/licenses\/([a-z-]+)\/(\d+(?:\.\d+)?)/i
+  );
+  if (cc) return `CC ${cc[1].toUpperCase()} ${cc[2]}`;
+  if (/creativecommons\.org\/publicdomain\/zero\//i.test(link ?? "")) {
+    return "CC0 1.0";
+  }
+  const named = String(description ?? "").match(
+    /\b(CC0(?:\s+\d\.\d)?|CC[\s-]BY(?:-[A-Z]{2})*(?:\s+\d\.\d)?)\b/i
+  );
+  return named ? named[1].toUpperCase() : "";
+}
+
+/**
  * Fetch one configured source (in memory; caller writes).
  */
 export async function fetchSource(source, { timeoutMs, retries } = {}) {
@@ -229,6 +258,8 @@ export async function fetchSource(source, { timeoutMs, retries } = {}) {
         ? Buffer.byteLength(payload, "utf8")
         : payload.length,
   };
+  const license = sourceLicense(result.type, result.body);
+  if (license) meta.license = license;
   return { source, result, payload, meta };
 }
 

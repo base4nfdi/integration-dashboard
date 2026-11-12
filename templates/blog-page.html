@@ -8,6 +8,8 @@
 {% set source_owner = "" %}
 {% set source_fetched = "" %}
 {% set source_record = "" %}
+{% set license_name = "" %}
+{% set license_link = "" %}
 {% if page.extra.basic_service %}
   {% set manifest = load_data(path="data/sources/manifest.json") %}
   {% set source_id = [page.extra.basic_service | lower, "4nfdi"] | join(sep="") %}
@@ -17,10 +19,30 @@
       {% set_global source_url = source.page_url | default(value=source.source_url) %}
       {% set_global source_kind = source.page_kind | default(value="Source") %}
       {% set_global source_fetched = source.fetched_at | default(value="") %}
+      {% if source.license %}
+        {% set_global license_name = source.license.name | default(value="") %}
+        {% if not license_name %}
+          {% set_global license_name = source.license.description | default(value="") %}
+        {% endif %}
+        {% set_global license_link = source.license.link | default(value="") %}
+      {% endif %}
     {% endif %}
   {% endfor %}
   {% if source_url and page.extra.source_ref %}
-    {% set_global source_url = [source_url, "#", page.extra.source_ref] | join(sep="") %}
+    {% set_global source_page_url = "" %}
+    {% set parsed_source = load_data(path=["data/parsed/", source_id, ".json"] | join(sep=""), required=false) %}
+    {% if parsed_source and parsed_source.records %}
+      {% for record in parsed_source.records %}
+        {% if record.inc_source_ref == page.extra.source_ref and record.source_page_url %}
+          {% set_global source_page_url = record.source_page_url %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if source_page_url %}
+      {% set_global source_url = source_page_url %}
+    {% else %}
+      {% set_global source_url = [source_url, "#", page.extra.source_ref] | join(sep="") %}
+    {% endif %}
     {% set_global source_record = ["Incubator #", page.extra.source_ref | replace(from="incubator-", to="")] | join(sep="") %}
   {% endif %}
 {% endif %}
@@ -84,8 +106,8 @@
           href="{{ source_url | safe }}"
           target="_blank"
           rel="noopener noreferrer"
-          title="{{ source_url }}"
-          aria-label="Original source: {{ source_mark_target }} on {{ source_where }}{% if source_synced %}, synced {{ source_synced }}{% endif %} (opens in a new tab)"
+          title="{{ source_url }}{% if license_name %} · licensed {{ license_name }}{% endif %}"
+          aria-label="Original source: {{ source_mark_target }} on {{ source_where }}{% if source_synced %}, synced {{ source_synced }}{% endif %}{% if license_name %}, licensed {{ license_name }}{% endif %} (opens in a new tab)"
         >
           <span class="source-mark-plate">
             <img
@@ -358,7 +380,8 @@
     <p class="blog-post-source">
       Data source: {{ source_owner }} {% if source_record %}{{ source_record | lower }}{% else %}{{ source_kind | lower }}{% endif %} —
       <a href="{{ source_url | safe }}" target="_blank" rel="noopener noreferrer">{{ source_display }}</a>{% if source_synced %}
-      · synced {{ source_synced }}{% endif %}
+      · synced {{ source_synced }}{% endif %}{% if license_name %}
+      · licensed {% if license_link %}<a href="{{ license_link | safe }}" target="_blank" rel="license noopener noreferrer">{{ license_name }}</a>{% else %}{{ license_name }}{% endif %}{% endif %}
     </p>
     {% endif %}
   </div>
