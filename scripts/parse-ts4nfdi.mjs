@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 /**
- * Parse TS4NFDI projects.json into a NocoDB-aligned record list.
+ * Parse the TS4NFDI API gateway incubator list
+ * (https://terminology.services.base4nfdi.de/api-gateway/incubators,
+ * stored as data/sources/ts4nfdi/projects.json) into a NocoDB-aligned
+ * record list.
  *
  * Usage:
  *   node scripts/parse-ts4nfdi.mjs
@@ -23,6 +26,7 @@ import {
   parseDate,
   readJson,
   repoRoot,
+  sourceRef,
   writeJson,
 } from "./lib/parse-utils.mjs";
 
@@ -40,6 +44,43 @@ function shortName(title) {
   const dash = raw.match(/^([^-–—]+)\s*[-–—]\s+/);
   if (dash && dash[1].length <= 40) return dash[1].trim();
   return raw;
+}
+
+const INCUBATOR_ID_RE = /^incubator-\d+$/;
+
+/** Per-incubator detail page on the TS portal, e.g. /incubators/radar_incubator_1. */
+function detailPageUrl(slug) {
+  const raw = String(slug ?? "").trim().replace(/^\/+|\/+$/g, "");
+  if (!raw) return "";
+  if (/^https?:\/\//i.test(raw)) return raw;
+  return `${SITE_BASE}incubators/${encodeURIComponent(raw)}`;
+}
+
+/**
+ * Throw on duplicate incubatorIDs (they are the NocoDB match key);
+ * return warnings for missing or unexpected ids.
+ */
+export function checkIncubatorIds(projects) {
+  const warnings = [];
+  const seen = new Map();
+  projects.forEach((project, index) => {
+    const id = String(project?.incubatorID ?? "").trim();
+    const label = String(project?.title ?? `#${index}`);
+    if (!id) {
+      warnings.push(`missing incubatorID for "${label}"`);
+      return;
+    }
+    if (!INCUBATOR_ID_RE.test(id)) {
+      warnings.push(`unexpected incubatorID format "${id}" for "${label}"`);
+    }
+    if (seen.has(id)) {
+      throw new Error(
+        `ts4nfdi: duplicate incubatorID "${id}" ("${seen.get(id)}" and "${label}")`
+      );
+    }
+    seen.set(id, label);
+  });
+  return warnings;
 }
 
 export function parseTsProjects(payload) {
@@ -74,6 +115,8 @@ export function parseTsProjects(payload) {
         linked_partners: partners.length,
         source_title: String(project.title ?? ""),
         source_activity_page: String(project.activityPage ?? ""),
+        source_slug: String(project.url ?? "").trim(),
+        source_page_url: detailPageUrl(project.url),
       })
     );
   });
@@ -90,6 +133,9 @@ async function main() {
       `ts4nfdi: expected a "projects" array in ${inputPath}`
     );
   }
+  for (const warning of checkIncubatorIds(payload.projects)) {
+    console.warn(`ts4nfdi: ${warning}`);
+  }
   const records = parseTsProjects(payload);
   assertNonEmptyRecords(records, "ts4nfdi");
 
@@ -98,16 +144,31 @@ async function main() {
     basicService: BASIC_SERVICE,
     inputFile: inputPath,
     records,
-    extra: { stats: payload.stats ?? null },
+    extra: { stats: payload.stats ?? null, license: payload.license ?? null },
   });
   writeJson(outputPath, out);
 
-  const comparison = compareWithNocoDb(
-    records,
-    loadNocoDbRecords(),
-    BASIC_SERVICE
-  );
+  const nocoRecords = loadNocoDbRecords();
+  const comparison = compareWithNocoDb(records, nocoRecords, BASIC_SERVICE);
   writeJson(join(repoRoot, "data/parsed/ts4nfdi.comparison.json"), comparison);
+
+  const nocoRefs = new Set(
+    nocoRecords
+      .filter((r) => String(r.basic_service).toUpperCase() === BASIC_SERVICE)
+      .map(sourceRef)
+      .filter(Boolean)
+  );
+  const srcRefs = new Set(records.map(sourceRef).filter(Boolean));
+  const newRefs = [...srcRefs].filter((ref) => !nocoRefs.has(ref));
+  const vanishedRefs = [...nocoRefs].filter((ref) => !srcRefs.has(ref));
+  if (newRefs.length > 0) {
+    console.log(`New incubator id(s) not yet in NocoDB: ${newRefs.join(", ")}`);
+  }
+  if (vanishedRefs.length > 0) {
+    console.warn(
+      `NocoDB incubator id(s) no longer in the source: ${vanishedRefs.join(", ")}`
+    );
+  }
 
   console.log(`Parsed ${records.length} TS incubator(s) → ${outputPath}`);
   console.log(

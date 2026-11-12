@@ -441,9 +441,10 @@ export function sourceRef(record) {
 
 /**
  * Match parsed source records against NocoDB rows for one basic_service.
- * When both sides carry an inc_source_ref, that id decides the match.
- * Otherwise matching is best-effort by name similarity, goals overlap,
- * partners, and cycle.
+ * When both sides carry an inc_source_ref and the NocoDB ref still exists in
+ * the source, that id decides the match. Otherwise (no ref, or a NocoDB ref
+ * the source no longer publishes, e.g. a renamed id) matching is best-effort
+ * by name similarity, goals overlap, partners, and cycle.
  * Returns full records (not summaries).
  */
 export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
@@ -453,6 +454,7 @@ export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
   const usedNoco = new Set();
   const usedSource = new Set();
   const matches = [];
+  const liveRefs = new Set(parsedRecords.map(sourceRef).filter(Boolean));
 
   for (let s = 0; s < parsedRecords.length; s++) {
     const src = parsedRecords[s];
@@ -469,7 +471,7 @@ export function matchAgainstNocoDb(parsedRecords, nocoRecords, basicService) {
       if (usedNoco.has(i)) continue;
       const noco = nocos[i];
       const nocoRef = sourceRef(noco);
-      if (srcRef && nocoRef) {
+      if (srcRef && nocoRef && liveRefs.has(nocoRef)) {
         if (srcRef !== nocoRef) continue;
         best = { index: i, noco };
         bestScore = 2;

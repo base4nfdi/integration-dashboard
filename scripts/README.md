@@ -138,11 +138,13 @@ Downloads the public incubator sources used by the parsers and stores them under
 | Source | Type | Stored as |
 | --- | --- | --- |
 | IAM4NFDI incubator dashboard | HTML | `data/sources/iam4nfdi/page.html` |
-| TS4NFDI projects | JSON | `data/sources/ts4nfdi/projects.json` |
+| TS4NFDI API gateway (`https://terminology.services.base4nfdi.de/api-gateway/incubators`) | JSON | `data/sources/ts4nfdi/projects.json` |
 | DMP4NFDI incubator content | Markdown | `data/sources/dmp4nfdi/incubator.md` |
 | PID4NFDI use cases | Markdown | `data/sources/pid4nfdi/use-cases.md` |
 
 Also writes per-source `meta.json` and a top-level `manifest.json`. All sources must succeed; a partial failure aborts without writing a mixed set.
+
+When a JSON source declares a data license (`{ "license": { "link", "description" } }`, as the TS4NFDI API does), it is copied into that source's `meta.json` / `manifest.json` entry as `license: { name, link, description }`. `name` is a short label derived from the link or description (e.g. `CC BY 4.0`). Integration pages of that service show it in the "Data source" line and in the "Original source" tooltip.
 
 ```bash
 node scripts/fetch-source-pages.mjs
@@ -182,15 +184,22 @@ Override paths with the `*_INPUT` / `*_OUTPUT` variables listed above when neede
 
 #### Source-page card ids (`inc_source_ref`)
 
-Detail pages link to the exact card on the service's public page, so readers (and auditors) can see where every value comes from. A parser sets `inc_source_ref` to the card's anchor id on the source page. The value is stored in NocoDB and written into the page front matter as `source_ref`. The template then links to `page_url#source_ref` from `data/sources/manifest.json`.
+Detail pages link to the exact card on the service's public page, so readers (and auditors) can see where every value comes from. A parser sets `inc_source_ref` to the card's anchor id on the source page. The value is stored in NocoDB and written into the page front matter as `source_ref`. The template then looks the ref up in `data/parsed/<source>.json`: when that record carries a `source_page_url` (a per-record detail page), the page links there; otherwise it links to `page_url#source_ref` from `data/sources/manifest.json`.
 
 | Service | Source field | Example link |
 | --- | --- | --- |
-| TS | `incubatorID` in `projects.json` | `https://terminology.services.base4nfdi.de/incubators#incubator-6` |
+| TS | `incubatorID` in `projects.json`; detail page from the project's `url` slug | `https://terminology.services.base4nfdi.de/incubators/radar_incubator_1` (fallback `…/incubators#incubator-1`) |
 | IAM | card `id` in `page.html` (`<div class="card" id="…">`) | `https://incubators.nfdi-aai.de/#wisski-02` |
 | DMP, PID | not published yet | the listing page without an anchor |
 
-When a service starts publishing card ids, set `inc_source_ref` in its parser. No other script needs changes. When both the parsed record and the NocoDB row carry an `inc_source_ref`, matching uses the id alone and skips name similarity.
+When a service starts publishing card ids, set `inc_source_ref` in its parser. No other script needs changes. For TS the `incubatorID` stays the match key; the `url` slug is only used for the link, because it contains the title and changes on renames.
+
+When the parsed record and the NocoDB row both carry an `inc_source_ref`, and the NocoDB ref still exists in the source, matching uses the id alone and skips name similarity. Changing ids are handled like this:
+
+- **New id** (e.g. `incubator-32`): it lands in the comparison's `only_in_source`. `push-source-pages-to-nocodb.mjs` then creates the row with that ref.
+- **Renamed or removed id**: a NocoDB ref the source no longer publishes falls back to name, partner and cycle matching. `patch-published-integrations.mjs` then writes the new id back ("source wins").
+
+`parse-ts4nfdi.mjs` fails on duplicate `incubatorID`s and warns on missing ids or ids outside the `incubator-<n>` pattern. It also logs ids that are new to NocoDB and NocoDB ids that have vanished from the source.
 
 ---
 
