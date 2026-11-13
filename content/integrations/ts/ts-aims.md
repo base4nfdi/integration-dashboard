@@ -11,11 +11,10 @@ inc_cycle = 3
 inc_cycle_label = "Cycle 3"
 inc_partner_publications = 0
 linked_partners = 1
-linked_entities = 3
-partners = ["NFDI4Ing"]
-entities = ["ULB University and State Library Darmstadt", "RWTH Aachen University", "University of Rostock"]
+linked_entities = 5
+partners = ["NFDI4ING"]
+entities = ["ULB University and State Library Darmstadt", "RWTH Aachen University", "University of Rostock", "Fraunhofer IWM", "University of Freiburg"]
 logo_project = "img/partner-logos/b0faf7bb2f1d9ce6.png"
-related_institutions = "Fraunhofer IWM, and University of Freiburg"
 inc_activity_page = "https://profiles.nfdi4ing.de/"
 source_ref = "incubator-17"
 +++
@@ -34,7 +33,6 @@ AIMS (Applying Interoperable Metadata Standards) is developing a platform for cr
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
-- **Participating entities:** ULB University and State Library Darmstadt, RWTH Aachen University, University of Rostock
-- **Related institutions:** Fraunhofer IWM, and University of Freiburg
+- **NFDI consortia:** NFDI4ING
+- **Participating entities:** ULB University and State Library Darmstadt, RWTH Aachen University, University of Rostock, Fraunhofer IWM, University of Freiburg
 

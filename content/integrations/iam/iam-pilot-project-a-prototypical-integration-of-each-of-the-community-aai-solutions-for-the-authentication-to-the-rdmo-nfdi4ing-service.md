@@ -12,7 +12,7 @@ inc_cycle_label = "Cycle 0"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
-partners = ["NFDI4Ing"]
+partners = ["NFDI4ING"]
 logo_project = "img/partner-logos/1cc2c59e43fe5ef1.png"
 inc_activity_type = "Infrastructure"
 inc_caai = "na"
@@ -31,5 +31,5 @@ Unity solutions as an OIDC Provider that allows for authentication into
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4ING
 

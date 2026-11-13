@@ -10,7 +10,7 @@ inc_end = ""
 inc_partner_publications = 0
 linked_partners = 2
 linked_entities = 1
-partners = ["NFDI4Ing", "NFDI-MatWerk"]
+partners = ["NFDI4ING", "NFDI-MatWerk"]
 entities = ["RWTH Aachen University"]
 +++
 
@@ -26,6 +26,6 @@ Cosine is a web-based research data management (RDM) platform developed at RWTH 
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing, NFDI-MatWerk
+- **NFDI consortia:** NFDI4ING, NFDI-MatWerk
 - **Participating entity:** RWTH Aachen University
 

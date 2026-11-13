@@ -2,8 +2,8 @@
   "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo": {
     "path": "img/ref-logos/5bc1fe509df73328.bin",
     "source": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-    "fetched_at": "2026-10-09T20:58:43.473Z",
-    "nocodb_updated_at": "2026-10-09 20:21:03+00:00",
+    "fetched_at": "2026-11-13T09:24:35.017Z",
+    "nocodb_updated_at": "2026-11-13 09:10:53+00:00",
     "name": "Base4NFDI"
   },
   "https://berd-platform.de/static/images/Logo_BERD-NFDI_transparent.png": {
@@ -135,9 +135,9 @@
   "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg": {
     "path": "img/ref-logos/a755e82e7aec255a.svg",
     "source": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
-    "fetched_at": "2026-10-09T20:58:55.639Z",
-    "nocodb_updated_at": "2026-10-09 20:21:01+00:00",
-    "name": "NFDI4Ing"
+    "fetched_at": "2026-11-13T09:24:35.528Z",
+    "nocodb_updated_at": "2026-11-13 08:38:08+00:00",
+    "name": "NFDI4ING"
   },
   "https://commons.wikimedia.org/wiki/Special:FilePath/Nfdi4microbiota%20Logo%20new.png": {
     "path": "img/ref-logos/27e5da4091ef7f85.png",
@@ -488,5 +488,19 @@
     "fetched_at": "2026-10-09T22:00:31.655Z",
     "nocodb_updated_at": "2026-10-09 21:58:49+00:00",
     "name": "University of Rostock"
+  },
+  "https://www.iwm.fraunhofer.de/content/dam/iwm/de/iwm_85mm_p334___1.jpg": {
+    "path": "img/ref-logos/14d67aabc870302f.jpg",
+    "source": "https://www.iwm.fraunhofer.de/content/dam/iwm/de/iwm_85mm_p334___1.jpg",
+    "fetched_at": "2026-11-13T09:24:36.083Z",
+    "nocodb_updated_at": "2026-11-13 08:55:44+00:00",
+    "name": "Fraunhofer IWM"
+  },
+  "https://commons.wikimedia.org/wiki/File:Wortmarke-grundform-universitaet_freiburg_blau_rgb.png": {
+    "path": "img/ref-logos/710a914a243afac3.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Wortmarke-grundform-universitaet_freiburg_blau_rgb.png",
+    "fetched_at": "2026-11-13T09:24:36.911Z",
+    "nocodb_updated_at": "2026-11-13 08:55:50+00:00",
+    "name": "University of Freiburg"
   }
 }

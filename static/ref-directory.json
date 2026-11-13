@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-13T08:18:53.939Z",
+  "fetched_at": "2026-11-13T09:24:36.911Z",
   "projects": {
     "AIMS": {
       "name": "AIMS",
@@ -71,28 +71,28 @@
       "logo": "img/ref-logos/5bc1fe509df73328.bin",
       "website": "https://base4nfdi.de/",
       "source_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-11-13 09:10:53+00:00"
     },
     "nfdi-base4nfdi": {
       "name": "Base4NFDI",
       "logo": "img/ref-logos/5bc1fe509df73328.bin",
       "website": "https://base4nfdi.de/",
       "source_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-11-13 09:10:53+00:00"
     },
     "nfdibase4nfdi": {
       "name": "Base4NFDI",
       "logo": "img/ref-logos/5bc1fe509df73328.bin",
       "website": "https://base4nfdi.de/",
       "source_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-11-13 09:10:53+00:00"
     },
     "Base4NFDI": {
       "name": "Base4NFDI",
       "logo": "img/ref-logos/5bc1fe509df73328.bin",
       "website": "https://base4nfdi.de/",
       "source_logo": "https://zenodo.org/api/communities/71de9ebc-fec3-4ca1-8f87-b4aacc837d07/logo",
-      "updated_at": "2026-10-09 20:21:03+00:00"
+      "updated_at": "2026-11-13 09:10:53+00:00"
     },
     "berd@nfdi": {
       "name": "BERD@NFDI",
@@ -529,25 +529,25 @@
       "updated_at": "2026-09-29 14:43:06+00:00"
     },
     "nfdi4ing": {
-      "name": "NFDI4Ing",
+      "name": "NFDI4ING",
       "logo": "img/ref-logos/a755e82e7aec255a.svg",
       "website": "https://nfdi4ing.de",
       "source_logo": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
-      "updated_at": "2026-10-09 20:21:01+00:00"
+      "updated_at": "2026-11-13 08:38:08+00:00"
     },
     "4ing": {
-      "name": "NFDI4Ing",
+      "name": "NFDI4ING",
       "logo": "img/ref-logos/a755e82e7aec255a.svg",
       "website": "https://nfdi4ing.de",
       "source_logo": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
-      "updated_at": "2026-10-09 20:21:01+00:00"
+      "updated_at": "2026-11-13 08:38:08+00:00"
     },
-    "NFDI4Ing": {
-      "name": "NFDI4Ing",
+    "NFDI4ING": {
+      "name": "NFDI4ING",
       "logo": "img/ref-logos/a755e82e7aec255a.svg",
       "website": "https://nfdi4ing.de",
       "source_logo": "https://nfdi4ing.de/wp-content/uploads/2024/09/Logo_24.svg",
-      "updated_at": "2026-10-09 20:21:01+00:00"
+      "updated_at": "2026-11-13 08:38:08+00:00"
     },
     "nfdi4memory": {
       "name": "NFDI4Memory",
@@ -1922,6 +1922,48 @@
       "website": "https://www.uni-rostock.de/",
       "source_logo": "https://www.uni-rostock.de/_assets/907c87f83a7758bda0a4fba273a558a9/Images/rostock_logo.png",
       "updated_at": "2026-10-09 21:58:49+00:00"
+    },
+    "fraunhofer iwm": {
+      "name": "Fraunhofer IWM",
+      "logo": "img/ref-logos/14d67aabc870302f.jpg",
+      "website": "https://www.iwm.fraunhofer.de/",
+      "source_logo": "https://www.iwm.fraunhofer.de/content/dam/iwm/de/iwm_85mm_p334___1.jpg",
+      "updated_at": "2026-11-13 08:55:44+00:00"
+    },
+    "fraunhoferiwm": {
+      "name": "Fraunhofer IWM",
+      "logo": "img/ref-logos/14d67aabc870302f.jpg",
+      "website": "https://www.iwm.fraunhofer.de/",
+      "source_logo": "https://www.iwm.fraunhofer.de/content/dam/iwm/de/iwm_85mm_p334___1.jpg",
+      "updated_at": "2026-11-13 08:55:44+00:00"
+    },
+    "Fraunhofer IWM": {
+      "name": "Fraunhofer IWM",
+      "logo": "img/ref-logos/14d67aabc870302f.jpg",
+      "website": "https://www.iwm.fraunhofer.de/",
+      "source_logo": "https://www.iwm.fraunhofer.de/content/dam/iwm/de/iwm_85mm_p334___1.jpg",
+      "updated_at": "2026-11-13 08:55:44+00:00"
+    },
+    "university of freiburg": {
+      "name": "University of Freiburg",
+      "logo": "img/ref-logos/710a914a243afac3.png",
+      "website": "https://uni-freiburg.de/",
+      "source_logo": "https://commons.wikimedia.org/wiki/File:Wortmarke-grundform-universitaet_freiburg_blau_rgb.png",
+      "updated_at": "2026-11-13 08:55:50+00:00"
+    },
+    "universityoffreiburg": {
+      "name": "University of Freiburg",
+      "logo": "img/ref-logos/710a914a243afac3.png",
+      "website": "https://uni-freiburg.de/",
+      "source_logo": "https://commons.wikimedia.org/wiki/File:Wortmarke-grundform-universitaet_freiburg_blau_rgb.png",
+      "updated_at": "2026-11-13 08:55:50+00:00"
+    },
+    "University of Freiburg": {
+      "name": "University of Freiburg",
+      "logo": "img/ref-logos/710a914a243afac3.png",
+      "website": "https://uni-freiburg.de/",
+      "source_logo": "https://commons.wikimedia.org/wiki/File:Wortmarke-grundform-universitaet_freiburg_blau_rgb.png",
+      "updated_at": "2026-11-13 08:55:50+00:00"
     }
   }
 }

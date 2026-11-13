@@ -12,7 +12,7 @@ inc_cycle_label = "Cycle 1"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
-partners = ["NFDI4Ing"]
+partners = ["NFDI4ING"]
 logo_project = "img/partner-logos/852580d0427f2d03.png"
 inc_activity_type = "Infrastructure"
 inc_caai = "regapp"
@@ -35,5 +35,5 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4ING
 

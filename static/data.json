@@ -1,6 +1,6 @@
 {
   "source": "nocodb",
-  "fetched_at": "2026-11-13T08:18:53.327Z",
+  "fetched_at": "2026-11-13T09:24:33.837Z",
   "tables": {
     "incubators": {
       "table_id": "m3zt5vqlyja927x",
@@ -90,7 +90,7 @@
       "id": 3,
       "inc_name": "AIMS",
       "basic_service": "TS",
-      "related_institutions": "Fraunhofer IWM, and University of Freiburg",
+      "related_institutions": "",
       "logo_project": "img/partner-logos/b0faf7bb2f1d9ce6.png",
       "logo_project_dark": "",
       "logo_consortia": "",
@@ -111,14 +111,16 @@
       "inc_activity_page": "https://profiles.nfdi4ing.de/",
       "inc_source_ref": "incubator-17",
       "linked_partners": 1,
-      "linked_entities": 3,
+      "linked_entities": 5,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [
         "ULB University and State Library Darmstadt",
         "RWTH Aachen University",
-        "University of Rostock"
+        "University of Rostock",
+        "Fraunhofer IWM",
+        "University of Freiburg"
       ],
       "source_url": "",
       "integration_kind": "incubator"
@@ -150,7 +152,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -183,7 +185,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -417,7 +419,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -447,9 +449,10 @@
       "inc_service_type": "RDMO Integration, Training & Outreach",
       "inc_activity_page": "",
       "inc_source_ref": "",
-      "linked_partners": 1,
+      "linked_partners": 2,
       "linked_entities": 0,
       "partners": [
+        "Base4NFDI",
         "FAIRagro"
       ],
       "entities": [],
@@ -868,7 +871,7 @@
       "inc_status": "Finished",
       "inc_descr": "",
       "inc_goals": "The product of this incubator project is a DMP template to help museums and collections implement the FAIR principles. The template provides an accessible option for assessing the FAIR quality of collection data. The questions are categorised according to four typical processing phases: digitisation, documentation, publication and storage/archiving. Most of the questions within these categories are assigned to indicators from the FAIR Data Maturity Model. The template includes answer options, some recommendations for action, help texts, notes and links to useful materials. The aim is to create a template that illustrates the different levels of FAIR implementation, while also providing institutions with a roadmap to improve the quality of their data.",
-      "inc_results": "NFDI4Culture RDMO Catalog\nhttps://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture",
+      "inc_results": "",
       "inc_partner_publications": 0,
       "inc_activity_type": "",
       "inc_caai": "",
@@ -1012,7 +1015,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -1371,7 +1374,7 @@
       "linked_partners": 1,
       "linked_entities": 1,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [
         "ULB University and State Library Darmstadt"
@@ -1895,7 +1898,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -2027,7 +2030,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -2355,7 +2358,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -2388,7 +2391,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -2421,7 +2424,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -2454,7 +2457,7 @@
       "linked_partners": 1,
       "linked_entities": 0,
       "partners": [
-        "NFDI4Ing"
+        "NFDI4ING"
       ],
       "entities": [],
       "source_url": "",
@@ -3798,7 +3801,7 @@
       "linked_partners": 2,
       "linked_entities": 1,
       "partners": [
-        "NFDI4Ing",
+        "NFDI4ING",
         "NFDI-MatWerk"
       ],
       "entities": [
@@ -3895,5 +3898,5 @@
       "integration_kind": "use-case"
     }
   ],
-  "logos_localized_at": "2026-11-13T08:18:54.087Z"
+  "logos_localized_at": "2026-11-13T09:24:36.999Z"
 }

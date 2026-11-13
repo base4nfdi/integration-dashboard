@@ -12,7 +12,7 @@ inc_cycle_label = "Cycle 1"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
-partners = ["NFDI4Ing"]
+partners = ["NFDI4ING"]
 logo_project = "img/partner-logos/bf5c3bbaac4f2812.png"
 inc_activity_type = "Integration"
 inc_caai = "regapp"
@@ -34,5 +34,5 @@ Provision of an attribute authority for JARDS project data
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4ING
 

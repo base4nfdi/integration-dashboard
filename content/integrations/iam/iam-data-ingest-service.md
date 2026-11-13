@@ -12,7 +12,7 @@ inc_cycle_label = "Cycle 4"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 1
-partners = ["NFDI4Ing"]
+partners = ["NFDI4ING"]
 entities = ["ULB University and State Library Darmstadt"]
 logo_consortia = "img/partner-logos/8c7cff3511f4a43e.jpg"
 inc_activity_type = "Integration"
@@ -40,6 +40,6 @@ MIT Licence
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4ING
 - **Participating entity:** ULB University and State Library Darmstadt
 

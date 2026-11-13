@@ -10,9 +10,9 @@ inc_end = "2026-06-30"
 inc_cycle = 1
 inc_cycle_label = "Cycle 1"
 inc_partner_publications = 0
-linked_partners = 1
+linked_partners = 2
 linked_entities = 0
-partners = ["FAIRagro"]
+partners = ["Base4NFDI", "FAIRagro"]
 logo_consortia = "img/partner-logos/2605943254a9ad2c.png"
 inc_service_type = "RDMO Integration, Training & Outreach"
 +++
@@ -29,5 +29,5 @@ This incubator project focuses on community outreach and promoting FAIRagro’s 
 
 ## Partners & entities
 
-- **NFDI consortia:** FAIRagro
+- **NFDI consortia:** Base4NFDI, FAIRagro
 

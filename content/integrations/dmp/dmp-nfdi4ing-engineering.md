@@ -12,7 +12,7 @@ inc_cycle_label = "Cycle 2"
 inc_partner_publications = 0
 linked_partners = 1
 linked_entities = 0
-partners = ["NFDI4Ing"]
+partners = ["NFDI4ING"]
 logo_consortia = "img/partner-logos/a755e82e7aec255a.svg"
 inc_service_type = "Template Development"
 +++
@@ -24,5 +24,5 @@ The Incubator Project aims to optimise the DMP template for engineering sciences
 
 ## Partners & entities
 
-- **NFDI consortia:** NFDI4Ing
+- **NFDI consortia:** NFDI4ING
 
