@@ -25,8 +25,7 @@ The current startup phase of NFDIxCS is characterized to hammer out the detailed
 
 ## Results
 
-No content provided.
-- [https://www.google.com/search?hl=en&q=nfdixcs](https://www.google.com/search?hl=en&q=nfdixcs)
+- [No content provided.](https://www.google.com/search?hl=en&q=nfdixcs)
 
 ## Ownership & utilisation
 

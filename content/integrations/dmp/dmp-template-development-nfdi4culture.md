@@ -24,8 +24,7 @@ The aim of this incubator project was to help cultural heritage institutions fin
 
 ## Results
 
-NFDI4Culture RDMO Catalog
-- [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture)
+- [NFDI4Culture RDMO Catalog](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture)
 
 ## Partners & entities
 

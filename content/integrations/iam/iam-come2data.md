@@ -25,8 +25,7 @@ Come2Data aims to close a currently existing gap in support regarding a large ra
 
 ## Results
 
-missing
-- [https://www.come2data.de](https://www.come2data.de)
+- [missing](https://www.come2data.de)
 
 ## Ownership & utilisation
 

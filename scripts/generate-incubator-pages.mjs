@@ -105,23 +105,44 @@ function serviceDir(basicService) {
   return code;
 }
 
+const URL_LINE_RE = /^https?:\/\/\S+$/i;
+
+function isUrlLine(line) {
+  return URL_LINE_RE.test(String(line ?? "").trim());
+}
+
 function formatLinkishBlock(text) {
   const cleaned = cleanText(text);
   if (!cleaned) return "";
 
-  return cleaned
-    .split("\n")
-    .map((line) => {
-      const trimmed = line.trim();
-      if (!trimmed) return "";
-      if (/^https?:\/\/\S+$/i.test(trimmed)) {
-        return `- [${trimmed}](${trimmed})`;
-      }
-      return line.trimEnd();
-    })
-    .filter((line, index, arr) => line !== "" || (index > 0 && arr[index - 1] !== ""))
-    .join("\n")
-    .trim();
+  const lines = cleaned.split("\n");
+  const out = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const trimmed = lines[i].trim();
+    if (!trimmed) {
+      out.push("");
+      continue;
+    }
+
+    if (isUrlLine(trimmed)) {
+      out.push(`- [${trimmed}](${trimmed})`);
+      continue;
+    }
+
+    let j = i + 1;
+    while (j < lines.length && !lines[j].trim()) j += 1;
+    if (j < lines.length && isUrlLine(lines[j])) {
+      const url = lines[j].trim();
+      out.push(`- [${trimmed}](${url})`);
+      i = j;
+      continue;
+    }
+
+    out.push(lines[i].trimEnd());
+  }
+
+  return out.join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
 
 function formatPartnersSection(record) {

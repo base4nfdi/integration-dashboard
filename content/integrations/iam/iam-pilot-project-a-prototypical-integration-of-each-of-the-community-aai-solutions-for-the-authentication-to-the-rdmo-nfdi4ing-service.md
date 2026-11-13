@@ -27,8 +27,7 @@ This a pilot to the IAM4NFDI incubator projects. It will serve as a proof-of-pri
 
 successful integration of each of the AcademicID, didmos, RegApp,
 Unity solutions as an OIDC Provider that allows for authentication into
-the service.
-- [https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/](https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/)
+- [the service.](https://rdmo-test.nfdi4ing.ulb.tu-darmstadt.de/)
 
 ## Partners & entities
 

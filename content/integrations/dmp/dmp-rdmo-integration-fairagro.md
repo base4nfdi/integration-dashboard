@@ -24,10 +24,8 @@ This incubator project focuses on community outreach and promoting FAIRagro’s 
 
 ## Results
 
-Workshop "RDMO in Practice: Building Data Management Plans for Agricultural Research"
-- [https://doi.org/10.5281/zenodo.21393038](https://doi.org/10.5281/zenodo.21393038)
-RDMO Plugin integrating Terminology Services 4 NFDI (TS4NFDI) API Gateway with RDMO.
-- [https://github.com/rdmorganiser/rdmo-plugins-ts4nfdi](https://github.com/rdmorganiser/rdmo-plugins-ts4nfdi)
+- [Workshop "RDMO in Practice: Building Data Management Plans for Agricultural Research"](https://doi.org/10.5281/zenodo.21393038)
+- [RDMO Plugin integrating Terminology Services 4 NFDI (TS4NFDI) API Gateway with RDMO.](https://github.com/rdmorganiser/rdmo-plugins-ts4nfdi)
 
 ## Partners & entities
 

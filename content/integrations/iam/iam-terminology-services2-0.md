@@ -26,8 +26,7 @@ While our initial incubator proposal focused solely on the Terminology Service (
 
 ## Results
 
-.
-- [https://terminology.nfdi4chem.de/ts](https://terminology.nfdi4chem.de/ts)
+- [.](https://terminology.nfdi4chem.de/ts)
 
 ## Ownership & utilisation
 

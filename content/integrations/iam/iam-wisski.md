@@ -26,8 +26,7 @@ For the Scientific Communication Infrastructure (WissKI), the joint initiative o
 
 ## Results
 
-Missing!!
-- [https://wiss-ki.eu](https://wiss-ki.eu)
+- [Missing!!](https://wiss-ki.eu)
 
 ## Ownership & utilisation
 

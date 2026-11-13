@@ -24,8 +24,7 @@ Establishing an RDMO environment tailored to the consortium’s needs. During th
 
 ## Results
 
-NFDI4Energy RDMO Client
-- [https://rdmo.nfdi4energy.org/](https://rdmo.nfdi4energy.org/)
+- [NFDI4Energy RDMO Client](https://rdmo.nfdi4energy.org/)
 
 ## Partners & entities
 

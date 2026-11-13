@@ -24,8 +24,7 @@ Set up an RDMO client for the MaRDI consortium and integrate the existing MaRDMO
 
 ## Results
 
-MaRDI RDMO Client
-- [https://rdmo.mardi4nfdi.de](https://rdmo.mardi4nfdi.de)
+- [MaRDI RDMO Client](https://rdmo.mardi4nfdi.de)
 
 ## Partners & entities
 

@@ -26,8 +26,7 @@ The DataPLANT consortium develops and provides a wide range of services to suppo
 
 ## Results
 
-.
-- [https://nfdi4plants.org](https://nfdi4plants.org)
+- [.](https://nfdi4plants.org)
 
 ## Ownership & utilisation
 

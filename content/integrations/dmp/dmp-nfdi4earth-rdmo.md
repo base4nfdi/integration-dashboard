@@ -24,10 +24,8 @@ Provision of an operational RDMO for the Earth System Science community to creat
 
 ## Results
 
-NFDI4Earth RDMO Client
-- [https://rdmo.nfdi4earth.de/](https://rdmo.nfdi4earth.de/)
-RDMO Sensor Search option set plugin updated
-- [https://github.com/rdmorganiser/rdmo-plugins-sensorsearch](https://github.com/rdmorganiser/rdmo-plugins-sensorsearch)
+- [NFDI4Earth RDMO Client](https://rdmo.nfdi4earth.de/)
+- [RDMO Sensor Search option set plugin updated](https://github.com/rdmorganiser/rdmo-plugins-sensorsearch)
 
 ## Partners & entities
 

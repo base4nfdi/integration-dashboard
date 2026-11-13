@@ -24,8 +24,7 @@ Establishing an RDMO client that provides high-quality, user-friendly DMP templa
 
 ## Results
 
-RDMO Client for the Physical Sciences
-- [https://dmp4ps.fairmat-nfdi.eu/](https://dmp4ps.fairmat-nfdi.eu/)
+- [RDMO Client for the Physical Sciences](https://dmp4ps.fairmat-nfdi.eu/)
 
 ## Partners & entities
 

@@ -27,8 +27,7 @@ The purpose of this analysis is to showcase PID integration in a new PID service
 
 ## Results
 
-Learn more
-- [https://doi.org/10.5281/zenodo.14327770](https://doi.org/10.5281/zenodo.14327770)
+- [Learn more](https://doi.org/10.5281/zenodo.14327770)
 
 ## Partners & entities
 

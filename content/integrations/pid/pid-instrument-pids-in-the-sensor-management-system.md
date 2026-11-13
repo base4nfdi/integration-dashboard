@@ -27,8 +27,7 @@ This analysis describes the integration of B2INST into the Sensor Management Sys
 
 ## Results
 
-Learn more
-- [https://zenodo.org/records/17733707](https://zenodo.org/records/17733707)
+- [Learn more](https://zenodo.org/records/17733707)
 
 ## Partners & entities
 

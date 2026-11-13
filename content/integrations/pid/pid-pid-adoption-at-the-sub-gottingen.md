@@ -27,8 +27,7 @@ The purpose of this analysis is to showcase PID integration within the Text+ con
 
 ## Results
 
-Learn more
-- [https://doi.org/10.5281/zenodo.14327691](https://doi.org/10.5281/zenodo.14327691)
+- [Learn more](https://doi.org/10.5281/zenodo.14327691)
 
 ## Partners & entities
 

@@ -33,8 +33,7 @@ This incubator project focuses on applying IAM4NFDI standards within the BERD@NF
 
 ## Results
 
-Not yet published
-- [https://berd-nfdi.de](https://berd-nfdi.de)
+- [Not yet published](https://berd-nfdi.de)
 
 ## Ownership & utilisation
 

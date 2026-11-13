@@ -24,10 +24,8 @@ NFDI4Chem has a productive RDMO client with a DMP template that has been optimis
 
 ## Results
 
-Training Guideline – How to Plan and Run a Workshop on Data Management Plans
-- [https://doi.org/10.5281/zenodo.20529135](https://doi.org/10.5281/zenodo.20529135)
-OER – DMP Writing Made Easy: A Hands-on Workshop for Chemists
-- [https://doi.org/10.5281/zenodo.18349878](https://doi.org/10.5281/zenodo.18349878)
+- [Training Guideline – How to Plan and Run a Workshop on Data Management Plans](https://doi.org/10.5281/zenodo.20529135)
+- [OER – DMP Writing Made Easy: A Hands-on Workshop for Chemists](https://doi.org/10.5281/zenodo.18349878)
 
 ## Partners & entities
 

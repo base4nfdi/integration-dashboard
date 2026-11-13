@@ -24,8 +24,7 @@ The product of this incubator project is a DMP template to help museums and coll
 
 ## Results
 
-NFDI4Culture RDMO Catalog
-- [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture)
+- [NFDI4Culture RDMO Catalog](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI4Culture)
 
 ## Partners & entities
 

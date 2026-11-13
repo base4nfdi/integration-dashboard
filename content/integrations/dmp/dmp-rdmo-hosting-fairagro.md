@@ -24,8 +24,7 @@ Set up an RDMO client for the FAIRagro consortium that is ready to provide DMP t
 
 ## Results
 
-FAIRagro RDMO Client
-- [https://rdmo.fairagro.net/](https://rdmo.fairagro.net/)
+- [FAIRagro RDMO Client](https://rdmo.fairagro.net/)
 
 ## Partners & entities
 

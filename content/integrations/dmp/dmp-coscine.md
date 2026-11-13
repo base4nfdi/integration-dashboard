@@ -24,10 +24,8 @@ The incubator project aims to enhance the integration between two services suppo
 
 ## Results
 
-RDMO Coscine Plugin
-- [https://github.com/rdmorganiser/rdmo-plugins-coscine](https://github.com/rdmorganiser/rdmo-plugins-coscine)
-RDMO Plugin for the DFG Classification of Scientific Disciplines
-- [https://github.com/rdmorganiser/rdmo-plugins-dfg](https://github.com/rdmorganiser/rdmo-plugins-dfg)
+- [RDMO Coscine Plugin](https://github.com/rdmorganiser/rdmo-plugins-coscine)
+- [RDMO Plugin for the DFG Classification of Scientific Disciplines](https://github.com/rdmorganiser/rdmo-plugins-dfg)
 
 ## Partners & entities
 

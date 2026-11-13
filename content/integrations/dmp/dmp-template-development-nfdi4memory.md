@@ -24,8 +24,7 @@ NFDI4Memory is developing a discipline-specific DMP template to support the hist
 
 ## Results
 
-NFDI4Memory RDMO Catalog
-- [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory)
+- [NFDI4Memory RDMO Catalog](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/NFDI_catalogs/NFDI4Memory)
 
 ## Partners & entities
 

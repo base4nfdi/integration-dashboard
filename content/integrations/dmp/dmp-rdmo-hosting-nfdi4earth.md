@@ -24,8 +24,7 @@ Set up an RDMO test client for the NFDI4Earth consortium to support the conversi
 
 ## Results
 
-RDMO Sensor Search option set plugin
-- [https://github.com/rdmorganiser/rdmo-plugins-sensorsearch](https://github.com/rdmorganiser/rdmo-plugins-sensorsearch)
+- [RDMO Sensor Search option set plugin](https://github.com/rdmorganiser/rdmo-plugins-sensorsearch)
 
 ## Partners & entities
 

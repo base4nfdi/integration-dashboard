@@ -24,8 +24,7 @@ MaRDI offers its MaRDMO service to all researchers using mathematical methods in
 
 ## Results
 
-Generic Search RDMO Plugin
-- [https://github.com/rdmorganiser/rdmo-plugins-generic-search](https://github.com/rdmorganiser/rdmo-plugins-generic-search)
+- [Generic Search RDMO Plugin](https://github.com/rdmorganiser/rdmo-plugins-generic-search)
 
 ## Partners & entities
 

@@ -24,8 +24,7 @@ Use the NFDI4ING RDMO service as the reference implementation for RDMO hosting i
 
 ## Results
 
-NFDI4Ing RDMO Client
-- [https://rdmo.nfdi4ing.de](https://rdmo.nfdi4ing.de)
+- [NFDI4Ing RDMO Client](https://rdmo.nfdi4ing.de)
 
 ## Partners & entities
 

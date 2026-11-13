@@ -31,8 +31,7 @@ The primary objective of the incubator proposal is to implement an RDM system th
 
 ## Results
 
-Not yet available
-- [https://infraverse-dev.zih.tu-dresden.de](https://infraverse-dev.zih.tu-dresden.de)
+- [Not yet available](https://infraverse-dev.zih.tu-dresden.de)
 
 ## Ownership & utilisation
 

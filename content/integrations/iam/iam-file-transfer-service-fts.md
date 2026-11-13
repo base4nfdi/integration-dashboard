@@ -26,8 +26,7 @@ The File Transfer Service (FTS) is a Software that is developed by CERN and that
 
 ## Results
 
-.
-- [https://www.google.com/search?hl=en&q=FTS+MATWERK](https://www.google.com/search?hl=en&q=FTS+MATWERK)
+- [.](https://www.google.com/search?hl=en&q=FTS+MATWERK)
 
 ## Ownership & utilisation
 

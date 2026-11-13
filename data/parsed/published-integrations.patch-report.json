@@ -2,10 +2,10 @@
   "mode": "apply",
   "strategy": "source-wins",
   "compared_against": "live-nocodb",
-  "planned_at": "2026-11-06T11:47:51.794Z",
+  "planned_at": "2026-11-13T08:18:52.431Z",
   "totals": {
-    "to_patch": 39,
-    "will_patch": 39,
+    "to_patch": 7,
+    "will_patch": 7,
     "synced": 0,
     "status_finished": 0,
     "status_changed": 0,
@@ -13,9 +13,33 @@
     "partner_links": 0
   },
   "by_source": {
+    "dmp4nfdi": {
+      "to_patch": 0,
+      "will_patch": 0,
+      "synced": 0,
+      "status_finished": 0,
+      "status_changed": 0,
+      "partner_links": 0
+    },
     "iam4nfdi": {
-      "to_patch": 39,
-      "will_patch": 39,
+      "to_patch": 2,
+      "will_patch": 2,
+      "synced": 0,
+      "status_finished": 0,
+      "status_changed": 0,
+      "partner_links": 0
+    },
+    "ts4nfdi": {
+      "to_patch": 5,
+      "will_patch": 5,
+      "synced": 0,
+      "status_finished": 0,
+      "status_changed": 0,
+      "partner_links": 0
+    },
+    "pid4nfdi": {
+      "to_patch": 0,
+      "will_patch": 0,
       "synced": 0,
       "status_finished": 0,
       "status_changed": 0,
@@ -26,110 +50,17 @@
     {
       "source": "iam4nfdi",
       "table": "incubators",
-      "id": 4,
-      "inc_name": "NFDI AAI for the NFDI4ING Jupyter Service",
-      "key_article": "iam-nfdi4ing-jupyter",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "nfdi4ingjupyter"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
       "id": 40,
       "inc_name": "Single-Sign-On for TS4NFDI services",
       "key_article": "iam-single-sign-on-for-ts4nfdi-services",
       "reasons": [
-        "fill:inc_source_ref",
         "unresolved:partners"
       ],
       "unresolved_partners": [
         "TS4NFDI"
       ],
       "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "ts4nfdi2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 41,
-      "inc_name": "Come2Data - Competence Center for Interdisciplinary Data Science",
-      "key_article": "iam-come2data-competence-center-for-interdisciplinary-data-science",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "come2data2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 42,
-      "inc_name": "AgiMo: Data - driven agile planning for responsible mobility",
-      "key_article": "iam-agimo-data-driven-agile-planning-for-responsible-mobility",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "agimo"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 43,
-      "inc_name": "AAI service integration into LARA",
-      "key_article": "iam-aai-service-integration-into-lara",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "lara-4"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 44,
-      "inc_name": "Data Ingest Service",
-      "key_article": "iam-data-ingest-service",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "data-ingest-4"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 45,
-      "inc_name": "Chaldene: Accessible High-Performance Computing for Image Processing",
-      "key_article": "iam-chaldene-accessible-high-performance-computing-for-image-processing",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "chaldene-4"
-      }
+      "patch": {}
     },
     {
       "source": "iam4nfdi",
@@ -138,480 +69,87 @@
       "inc_name": "Single Sign-On for NFDI internal ICT tools",
       "key_article": "iam-single-sign-on-for-nfdi-internal-ict-tools",
       "reasons": [
-        "fill:inc_source_ref",
         "unresolved:partners"
       ],
       "unresolved_partners": [
         "NFDIDIREKTORAT"
       ],
       "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "direktor-4"
-      }
+      "patch": {}
     },
     {
-      "source": "iam4nfdi",
+      "source": "ts4nfdi",
       "table": "incubators",
-      "id": 47,
-      "inc_name": "Best practice AAI for BERD Data Portal",
-      "key_article": "iam-best-practice-aai-for-berd-data-portal",
+      "id": 1,
+      "inc_name": "RADAR",
+      "key_article": "ts-radar",
       "reasons": [
-        "fill:inc_source_ref"
+        "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_source_ref": "berd-4"
+        "inc_partner_publications": 3
       }
     },
     {
-      "source": "iam4nfdi",
+      "source": "ts4nfdi",
       "table": "incubators",
-      "id": 48,
-      "inc_name": "GFBio Single-Sign-On for NFDI4Biodiversity",
-      "key_article": "iam-gfbio-single-sign-on-for-nfdi4biodiversity",
+      "id": 79,
+      "inc_name": "ChEBI",
+      "key_article": "ts-chebi",
       "reasons": [
-        "fill:inc_source_ref"
+        "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_source_ref": "gfbio-3"
+        "inc_partner_publications": 1
       }
     },
     {
-      "source": "iam4nfdi",
+      "source": "ts4nfdi",
       "table": "incubators",
-      "id": 49,
-      "inc_name": "Opening up the SimpleVM Bielefeld University Installation for external collaborations",
-      "key_article": "iam-opening-up-the-simplevm-bielefeld-university-installation-for-external-collaborations",
+      "id": 81,
+      "inc_name": "NFDI4Cat Central Data Repository (Repo4Cat)",
+      "key_article": "ts-nfdi4cat-central-data-repository-repo4cat",
       "reasons": [
-        "fill:inc_source_ref"
+        "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_source_ref": "simplevm-3"
+        "inc_partner_publications": 1
       }
     },
     {
-      "source": "iam4nfdi",
+      "source": "ts4nfdi",
       "table": "incubators",
-      "id": 50,
-      "inc_name": "Opening the Cloud-based Workflow Manager (CloWM) to the whole NFDI",
-      "key_article": "iam-opening-the-cloud-based-workflow-manager-clowm-to-the-whole-nfdi",
+      "id": 82,
+      "inc_name": "BERD Terminology Service",
+      "key_article": "ts-berd-terminology-service",
       "reasons": [
-        "fill:inc_source_ref"
+        "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_source_ref": "clowm-3"
+        "inc_partner_publications": 1
       }
     },
     {
-      "source": "iam4nfdi",
+      "source": "ts4nfdi",
       "table": "incubators",
-      "id": 51,
-      "inc_name": "NFDI AAI for DALIA",
-      "key_article": "iam-nfdi-aai-for-dalia",
+      "id": 83,
+      "inc_name": "Terminology service for Plasma-MDS",
+      "key_article": "ts-terminology-service-for-plasma-mds",
       "reasons": [
-        "fill:inc_source_ref"
+        "fill:inc_partner_publications"
       ],
       "unresolved_partners": [],
       "partner_ids": [],
       "patch": {
-        "inc_source_ref": "dalia-3"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 52,
-      "inc_name": "Integration: Aruna Data Orchestration Engine with Infrastructure Proxy",
-      "key_article": "iam-integration-aruna-data-orchestration-engine-with-infrastructure-proxy",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "aruna-3"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 53,
-      "inc_name": "Jupyter4NFDI accessible for NFDI and beyond",
-      "key_article": "iam-jupyter4nfdi-accessible-for-nfdi-and-beyond",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "jupyter-3"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 54,
-      "inc_name": "BIIGLE",
-      "key_article": "iam-biigle",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "biigle-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 55,
-      "inc_name": "WissKI",
-      "key_article": "iam-wisski",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "wisski-02"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 56,
-      "inc_name": "Terminology Services2.0",
-      "key_article": "iam-terminology-services2-0",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "ts+-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 57,
-      "inc_name": "Open Energy Platform",
-      "key_article": "iam-open-energy-platform",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "oep-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 58,
-      "inc_name": "NOMAD Integration",
-      "key_article": "iam-nomad-integration",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "fairmat-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 59,
-      "inc_name": "NFDI4CAT Repository",
-      "key_article": "iam-nfdi4cat-repository",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "nfdi4cat-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 60,
-      "inc_name": "File Transfer Service FTS",
-      "key_article": "iam-file-transfer-service-fts",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "fts-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 61,
-      "inc_name": "Forum 4 MICA",
-      "key_article": "iam-forum-4-mica",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "forum4mica-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 62,
-      "inc_name": "FairAgro",
-      "key_article": "iam-fairagro",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "fairagro-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 63,
-      "inc_name": "DataPlant",
-      "key_article": "iam-dataplant",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "dataplant-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 64,
-      "inc_name": "Coscine-2",
-      "key_article": "iam-coscine-2",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "coscine-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 65,
-      "inc_name": "Come2Data",
-      "key_article": "iam-come2data",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "come2data-2"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 66,
-      "inc_name": "NFDIxCS",
-      "key_article": "iam-nfdixcs",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "nfdixcs-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 67,
-      "inc_name": "Authorisation on Objects",
-      "key_article": "iam-authorisation-on-objects",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "auth-on-ojb-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 68,
-      "inc_name": "Integration of NFDI AAI to Open edX",
-      "key_article": "iam-integration-of-nfdi-aai-to-open-edx",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "open-edx-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 69,
-      "inc_name": "Terminology Service",
-      "key_article": "iam-terminology-service",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "terminology-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 70,
-      "inc_name": "NFDI4Culture",
-      "key_article": "iam-nfdi4culture",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "nfdi4culture-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 71,
-      "inc_name": "FDPG - Analysing data from clinical care",
-      "key_article": "iam-fdpg-analysing-data-from-clinical-care",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "fdpg-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 72,
-      "inc_name": "Minimal OIDC login",
-      "key_article": "iam-minimal-oidc-login",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "mardi-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 73,
-      "inc_name": "ArgoCD",
-      "key_article": "iam-argocd",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "argocd-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 74,
-      "inc_name": "Coscine",
-      "key_article": "iam-coscine",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "coscine-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 75,
-      "inc_name": "JARDS Attribute Queries in RegApp",
-      "key_article": "iam-jards-attribute-queries-in-regapp",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "jards-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 76,
-      "inc_name": "MetadataHub",
-      "key_article": "iam-metadatahub",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "metadatahub-1"
-      }
-    },
-    {
-      "source": "iam4nfdi",
-      "table": "incubators",
-      "id": 77,
-      "inc_name": "Pilot project: a prototypical integration of each of the Community AAI solutions for the authentication to the RDMO NFDI4ING service",
-      "key_article": "iam-pilot-project-a-prototypical-integration-of-each-of-the-community-aai-solutions-for-the-authentication-to-the-rdmo-nfdi4ing-service",
-      "reasons": [
-        "fill:inc_source_ref"
-      ],
-      "unresolved_partners": [],
-      "partner_ids": [],
-      "patch": {
-        "inc_source_ref": "RDMO-0"
+        "inc_partner_publications": 1
       }
     }
   ]

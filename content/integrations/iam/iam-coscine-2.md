@@ -31,8 +31,7 @@ Coscine is an open-source platform for research data management (RDM) and can be
 
 ## Results
 
-.
-- [https://about.coscine.de/](https://about.coscine.de/)
+- [.](https://about.coscine.de/)
 
 ## Ownership & utilisation
 

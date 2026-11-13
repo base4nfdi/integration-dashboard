@@ -25,8 +25,7 @@ The NFDI Association’s Office provides ICT tools that support all persons work
 
 ## Results
 
-Not applicable
-- [https://all-chat.nfdi.de](https://all-chat.nfdi.de)
+- [Not applicable](https://all-chat.nfdi.de)
 
 ## Partners & entities
 

@@ -33,8 +33,7 @@ The idea of the incubator proposal is to use the Forum4MICA as a pilot project t
 
 ## Results
 
-.
-- [https://forum.lifbi.de/](https://forum.lifbi.de/)
+- [.](https://forum.lifbi.de/)
 
 ## Ownership & utilisation
 

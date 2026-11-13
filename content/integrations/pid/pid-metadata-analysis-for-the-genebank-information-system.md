@@ -27,8 +27,7 @@ The purpose of this report is to provide a comprehensive evaluation of the metad
 
 ## Results
 
-Learn more
-- [https://doi.org/10.5281/zenodo.14506202](https://doi.org/10.5281/zenodo.14506202)
+- [Learn more](https://doi.org/10.5281/zenodo.14506202)
 
 ## Partners & entities
 

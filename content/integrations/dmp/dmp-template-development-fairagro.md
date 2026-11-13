@@ -24,8 +24,7 @@ FAIRagro customises DMP templates of funding agencies based on the needs of the 
 
 ## Results
 
-FAIRagro RDMO Catalog
-- [https://github.com/fairagro/FAIRagro_DMP_Template](https://github.com/fairagro/FAIRagro_DMP_Template)
+- [FAIRagro RDMO Catalog](https://github.com/fairagro/FAIRagro_DMP_Template)
 
 ## Partners & entities
 

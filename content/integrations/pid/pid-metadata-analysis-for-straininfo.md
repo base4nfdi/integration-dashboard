@@ -27,8 +27,7 @@ The purpose of this analysis is a comprehensive evaluation of the metadata quali
 
 ## Results
 
-Learn more
-- [https://doi.org/10.5281/zenodo.14357800](https://doi.org/10.5281/zenodo.14357800)
+- [Learn more](https://doi.org/10.5281/zenodo.14357800)
 
 ## Partners & entities
 

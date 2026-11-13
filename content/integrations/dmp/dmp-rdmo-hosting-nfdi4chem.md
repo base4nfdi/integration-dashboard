@@ -24,8 +24,7 @@ Host and operate the RDMO client for the NFDI4Chem consortium within the DMP4NFD
 
 ## Results
 
-NFDI4Chem RDMO Client
-- [https://rdmo.nfdi4chem.de](https://rdmo.nfdi4chem.de)
+- [NFDI4Chem RDMO Client](https://rdmo.nfdi4chem.de)
 
 ## Partners & entities
 

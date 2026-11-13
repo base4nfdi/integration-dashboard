@@ -32,8 +32,7 @@ We want to link NOMAD to the NFDI AAI. NOMAD is a web-based research data manage
 
 ## Results
 
-.
-- [https://nomad-lab.eu](https://nomad-lab.eu)
+- [.](https://nomad-lab.eu)
 
 ## Ownership & utilisation
 

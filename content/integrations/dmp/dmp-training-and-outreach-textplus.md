@@ -24,8 +24,7 @@ Text+ has created a DMP template in collaboration with participants of the conso
 
 ## Results
 
-Survey results: DMPs – What are our community’s needs? (in German)
-- [https://doi.org/10.58079/16u2t](https://doi.org/10.58079/16u2t)
+- [Survey results: DMPs – What are our community’s needs? (in German)](https://doi.org/10.58079/16u2t)
 
 ## Partners & entities
 

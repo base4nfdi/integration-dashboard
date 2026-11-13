@@ -24,10 +24,8 @@ The institutions involved in Text+ advise researchers on all steps of the system
 
 ## Results
 
-Text+ RDMO Catalog
-- [https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B)
-Text+ & DMP4NFDI – FDM als Joint Effort
-- [https://textplus.hypotheses.org/19076](https://textplus.hypotheses.org/19076)
+- [Text+ RDMO Catalog](https://github.com/rdmorganiser/rdmo-catalog/tree/main/shared/Text%2B)
+- [Text+ & DMP4NFDI – FDM als Joint Effort](https://textplus.hypotheses.org/19076)
 
 ## Partners & entities
 

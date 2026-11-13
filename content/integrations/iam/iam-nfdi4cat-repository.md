@@ -26,8 +26,7 @@ The NFDI4CAT community requires a central solution for the storage and exchange 
 
 ## Results
 
-.
-- [https://repository.nfdi4cat.org](https://repository.nfdi4cat.org)
+- [.](https://repository.nfdi4cat.org)
 
 ## Ownership & utilisation
 

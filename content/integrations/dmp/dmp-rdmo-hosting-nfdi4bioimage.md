@@ -24,8 +24,7 @@ Setting up an RDMO client to explore integration with existing data workflows an
 
 ## Results
 
-NFDI4BIOMAGE RDMO Client
-- [https://rdmo.nfdi4bioimage.de/](https://rdmo.nfdi4bioimage.de/)
+- [NFDI4BIOMAGE RDMO Client](https://rdmo.nfdi4bioimage.de/)
 
 ## Partners & entities
 

@@ -24,8 +24,7 @@ Develop an RDMO plugin that connects the DMP tool to Zenodo, enabling users to p
 
 ## Results
 
-RDMO Zenodo Plugin
-- [https://github.com/rdmorganiser/rdmo-plugins-zenodo](https://github.com/rdmorganiser/rdmo-plugins-zenodo)
+- [RDMO Zenodo Plugin](https://github.com/rdmorganiser/rdmo-plugins-zenodo)
 
 ## Partners & entities
 

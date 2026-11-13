@@ -35,8 +35,7 @@ Die verwendeten Technologien und Dienste werden am Beispiel von
 TextGrid und DARIAH-DE Repository sowie einer für NFDI-weiten
 generischen Lösung evaluiert und angedacht. Sobald die Evaluation und
 Planung angeschlossen ist, ist eine gemeinsame Implementierung der
-jeweiligen Prototypen angedacht.
-- [https://www.google.com/search?q=authorisation+on+objects](https://www.google.com/search?q=authorisation+on+objects)
+- [jeweiligen Prototypen angedacht.](https://www.google.com/search?q=authorisation+on+objects)
 
 ## Ownership & utilisation
 

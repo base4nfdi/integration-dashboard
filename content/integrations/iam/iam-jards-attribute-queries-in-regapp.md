@@ -30,8 +30,7 @@ a Shibboleth-based attribute authority
 
 Provision of an attribute authority for JARDS project data
 
-Extension of the RegApp to support SAML attribute queries
-- [https://jards.coscine.de/](https://jards.coscine.de/)
+- [Extension of the RegApp to support SAML attribute queries](https://jards.coscine.de/)
 
 ## Partners & entities
 

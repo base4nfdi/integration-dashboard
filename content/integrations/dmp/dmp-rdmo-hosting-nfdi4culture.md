@@ -24,8 +24,7 @@ Host an RDMO tenant for the NFDI4Culture consortium and integrate the consortium
 
 ## Results
 
-NFDI4Culture RDMO Client
-- [https://rdmo.nfdi4culture.de](https://rdmo.nfdi4culture.de)
+- [NFDI4Culture RDMO Client](https://rdmo.nfdi4culture.de)
 
 ## Partners & entities
 

@@ -27,8 +27,7 @@ The Helmholtz Zentrum Berlin für Materialien und Energie (HZB) operates the BES
 
 ## Results
 
-Learn more
-- [https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/](https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/)
+- [Learn more](https://pid.services.base4nfdi.de/community/use-cases/instruments-at-hzb/)
 
 ## Partners & entities
 
