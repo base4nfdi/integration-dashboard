@@ -39,7 +39,8 @@ fetch-source-pages  →   parse-* / parse-source-pages
 During `./build.sh` (when NocoDB credentials are available) missing incubator
 and PID use-case rows are created (`--apply`), then
 `patch-published-integrations.mjs --apply` overwrites NocoDB cells that differ
-from the public source, copies a changed `inc_status`, and sets status to
+from the public source, clears `inc_results` when the source no longer publishes
+results, copies a changed `inc_status`, and sets status to
 Finished when `inc_end` is before today. Parsers apply that same end-date rule
 while parsing.
 ```
@@ -50,7 +51,7 @@ Traffic is one way. IAM4NFDI, TS4NFDI, DMP4NFDI, and PID4NFDI publish public pag
 
 What a service gets is a public Integration Dashboard entry: an overview row in `static/data.json` and a detail page under `content/integrations/`. With NocoDB credentials, `./build.sh` creates rows that are on the public pages but not yet in NocoDB, then refreshes the site from those tables.
 
-The dashboard mirrors what the services publish. NocoDB is the store the site is built from, but the public source wins: on every build, a source-backed cell that differs from the source is overwritten with the source value. Corrections belong on the service website; an edit made only in NocoDB is reverted by the next build. Exceptions: cells the source leaves empty, titles written in NocoDB (only DMP names derived as "Service — Consortium" follow the source), `key_article` (page URL), and an existing partner set are kept.
+The dashboard mirrors what the services publish. NocoDB is the store the site is built from, but the public source wins: on every build, a source-backed cell that differs from the source is overwritten with the source value. Corrections belong on the service website; an edit made only in NocoDB is reverted by the next build. Exceptions: cells the source leaves empty are kept, except `inc_results`, which is cleared when the source no longer publishes results. Titles written in NocoDB are kept (only DMP names derived as "Service — Consortium" follow the source), as are `key_article` (page URL) and an existing partner set.
 
 ## When the dashboard updates
 
@@ -61,8 +62,9 @@ A build does not rewrite every NocoDB row. `patch-published-integrations.mjs` ma
 | Situation | What the build does |
 | --- | --- |
 | Cell is empty and the public source has a value | Fills that cell |
-| Description, results, goals, dates, cycle, service type, or other source-backed cells differ from the source | Writes the source value |
-| Source leaves a field empty | Leaves the NocoDB value |
+| Description, goals, dates, cycle, service type, or other source-backed cells differ from the source | Writes the source value |
+| Results differ, including a source that no longer publishes any | Writes the source text, or clears `inc_results` when the source result is empty |
+| Source leaves another field empty | Leaves the NocoDB value |
 | Title differs | Keeps a NocoDB title; a derived DMP name (`Template Development — NFDI4Cat`) follows the source |
 | Partners differ | Leaves an existing partner set; links source partners only when the row has none |
 | `inc_status` on the source differs (`In preparation`, `Running`, `Finished`) | Writes the source status. A past end date still forces `Finished`, even when the source badge says `Running` |
@@ -351,7 +353,8 @@ Syncs matched incubator and PID use-case rows to the public source. Default is d
 
 | Change | Default (source wins) | `--fill-only` |
 | --- | --- | --- |
-| Dates, cycle, cycle label, goals, results, activity type, CAAI, ownership, service type, activity page | Write the source value when it differs (empty source values are skipped) | Fill only when the NocoDB cell is empty |
+| Dates, cycle, cycle label, goals, activity type, CAAI, ownership, service type, activity page | Write the source value when it differs (empty source values are skipped) | Fill only when the NocoDB cell is empty |
+| Results (`inc_results`) | Write the source text when it differs, and clear the cell when the source no longer publishes results | Fill when empty; replace when the source adds links the stored text lacks. A blank source is left as stored |
 | Description (`inc_descr`, `uc_descr` for use cases) | Write the source text when it differs | Fill when empty; replace when the stored text is a strict prefix of the source |
 | PID use-case fields (`uc_labels`, `pid_providers`, …) | Write the source value when it differs | Fill only when empty |
 | Title (`inc_name`) | Fill when empty; overwrite only a derived DMP name (`Service — Consortium`) | Fill only when empty |
