@@ -6,7 +6,8 @@
  * By default the source wins: any source-backed cell (dates, cycle,
  * description, goals, results, service type, …) that differs from NocoDB is
  * overwritten with the source value. Cells the source leaves empty are kept,
- * and so are inc_name titles written in NocoDB (see canSyncName).
+ * except inc_results, which is cleared when the source no longer publishes
+ * results. inc_name titles written in NocoDB are kept (see canSyncName).
  * Copies inc_status from the source when it changes and sets status to
  * Finished once the end date is in the past. Links partners when a row has
  * none; an existing partner set is not replaced.
@@ -203,9 +204,10 @@ Options:
   -h, --help           Show this help
 
 Overwrites source-backed fields that differ from the public source (cells
-the source leaves empty are kept), links partners only when the row has
-none, copies inc_status when the source status differs, and sets
-inc_status to Finished when the end date is before today.
+the source leaves empty are kept, except inc_results, which is cleared),
+links partners only when the row has none, copies inc_status when the
+source status differs, and sets inc_status to Finished when the end date
+is before today.
 `);
 }
 
@@ -488,9 +490,14 @@ function syncTextFields(source, noco, table, patch, reasons) {
   }
 
   const sourceResults = asString(source.inc_results).trim();
-  if (sourceResults && !sameValue("inc_results", noco.inc_results, sourceResults)) {
-    patch.inc_results = sourceResults;
-    reasons.push(`${isBlank(noco.inc_results) ? "fill" : "sync"}:inc_results`);
+  if (!sameValue("inc_results", noco.inc_results, sourceResults)) {
+    if (sourceResults) {
+      patch.inc_results = sourceResults;
+      reasons.push(`${isBlank(noco.inc_results) ? "fill" : "sync"}:inc_results`);
+    } else if (!isBlank(noco.inc_results)) {
+      patch.inc_results = "";
+      reasons.push("clear:inc_results");
+    }
   }
 }
 
