@@ -609,7 +609,7 @@ main.container:has(.dashboard) {
 .filter-chip-groups {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 1rem 1.5rem;
 }
 
@@ -658,8 +658,8 @@ main.container:has(.dashboard) {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.35rem;
-  min-height: 2.5rem;
-  padding: 0.35rem 0.45rem 0.35rem 0.55rem;
+  min-height: 0;
+  padding: 0.3rem 0.45rem 0.3rem 0.55rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface-raised);
