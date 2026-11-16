@@ -25,6 +25,8 @@ ARG NOCODB_PARTNERS_TABLE_ID=
 ARG NOCODB_PARTNERS_VIEW_ID=
 ARG FETCH_TIMEOUT_MS=
 ARG FETCH_RETRIES=
+# Set to 1 to re-download all partner and institution logos (default: reuse cache).
+ARG REFRESH_LOGOS=
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends ca-certificates curl \
@@ -49,17 +51,40 @@ COPY . .
 ARG CACHE_BUST=
 
 # Empty Compose build args must not override script defaults (?? ignores only null/undefined).
-RUN set -eu; \
+# Logo bytes persist in a BuildKit cache mount (not in git / .dockerignore); restore before
+# the pipeline and write back after so CACHE_BUST rebuilds do not re-fetch every logo.
+RUN --mount=type=cache,target=/logo-cache \
+    set -eu; \
     echo "pipeline run: ${CACHE_BUST:-cached}"; \
     for var in NOCODB_API_TOKEN NOCODB_BASE_URL NOCODB_TABLE_ID NOCODB_VIEW_ID NOCODB_PAGE_SIZE \
                NOCODB_USER_STORIES_TABLE_ID NOCODB_USER_STORIES_VIEW_ID \
                NOCODB_REF_ENTITIES_TABLE_ID NOCODB_REF_ENTITIES_VIEW_ID \
                NOCODB_PARTNERS_TABLE_ID NOCODB_PARTNERS_VIEW_ID \
-               FETCH_TIMEOUT_MS FETCH_RETRIES; do \
+               FETCH_TIMEOUT_MS FETCH_RETRIES REFRESH_LOGOS; do \
       eval "val=\${$var:-}"; \
       if [ -n "$val" ]; then export "$var=$val"; else unset "$var"; fi; \
     done; \
-    ./build.sh --base-url "${BASE_URL}"
+    mkdir -p static/img/ref-logos static/img/partner-logos; \
+    if [ -f /logo-cache/ref-directory.json ]; then \
+      cp /logo-cache/ref-directory.json static/ref-directory.json; \
+    fi; \
+    if [ -d /logo-cache/ref-logos ] && [ -n "$(ls -A /logo-cache/ref-logos 2>/dev/null || true)" ]; then \
+      cp -a /logo-cache/ref-logos/. static/img/ref-logos/; \
+    fi; \
+    if [ -d /logo-cache/partner-logos ] && [ -n "$(ls -A /logo-cache/partner-logos 2>/dev/null || true)" ]; then \
+      cp -a /logo-cache/partner-logos/. static/img/partner-logos/; \
+    fi; \
+    ./build.sh --base-url "${BASE_URL}"; \
+    mkdir -p /logo-cache/ref-logos /logo-cache/partner-logos; \
+    if [ -f static/ref-directory.json ]; then \
+      cp static/ref-directory.json /logo-cache/ref-directory.json; \
+    fi; \
+    if [ -d static/img/ref-logos ]; then \
+      cp -a static/img/ref-logos/. /logo-cache/ref-logos/; \
+    fi; \
+    if [ -d static/img/partner-logos ]; then \
+      cp -a static/img/partner-logos/. /logo-cache/partner-logos/; \
+    fi
 
 # ---------------------------------------------------------------------------
 # Runtime: nginx serves the static site

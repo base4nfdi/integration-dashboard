@@ -19,6 +19,7 @@ services:
         NOCODB_PARTNERS_VIEW_ID: ${NOCODB_PARTNERS_VIEW_ID:-}
         FETCH_TIMEOUT_MS: ${FETCH_TIMEOUT_MS:-}
         FETCH_RETRIES: ${FETCH_RETRIES:-}
+        REFRESH_LOGOS: ${REFRESH_LOGOS:-}
     image: base4nfdi-dashboard:latest
     ports:
       - "${PORT:-8080}:80"

@@ -48,7 +48,11 @@ if [[ -n "${NOCODB_API_TOKEN:-}" ]]; then
   echo "==> Fetching NocoDB data"
   node scripts/fetch-nocodb-data.mjs
   echo "==> Syncing partner and institution logos"
-  node scripts/sync-ref-directory.mjs
+  if [[ "${REFRESH_LOGOS:-}" == "1" ]]; then
+    node scripts/sync-ref-directory.mjs --force
+  else
+    node scripts/sync-ref-directory.mjs
+  fi
   INTEGRATION_PAGES_UPDATE=1
 else
   if [[ -f static/data.json ]]; then

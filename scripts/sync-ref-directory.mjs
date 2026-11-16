@@ -4,8 +4,8 @@
  *
  * Writes static/ref-directory.json (name → local logo path + official_website)
  * and downloads images into static/img/ref-logos/. A logo is downloaded again
- * only when its URL changes or the NocoDB updated_at is newer than the copy
- * already recorded in the directory.
+ * only when its URL changes, the local file is missing, or you pass --force
+ * (or REFRESH_LOGOS=1 in ./build.sh).
  *
  * Required env:
  *   NOCODB_API_TOKEN
@@ -101,7 +101,7 @@ function printHelp() {
 
 Fetch REF_Partners and REF_Entities official_logo / official_website values,
 cache logos under static/img/ref-logos/, and write static/ref-directory.json.
-Re-downloads a logo when its URL or NocoDB updated_at changed.
+Re-downloads a logo when its URL changed, the file is missing, or --force is set.
 `);
 }
 
@@ -269,12 +269,11 @@ function previousFor(table, name, previous) {
   return null;
 }
 
-function needsRefresh(previousEntry, sourceLogo, updatedAt, force) {
+function needsRefresh(previousEntry, sourceLogo, force) {
   if (force) return true;
   if (!sourceLogo) return false;
   if (!previousEntry?.logo) return true;
   if (asString(previousEntry.source_logo) !== sourceLogo) return true;
-  if (asString(previousEntry.updated_at) !== asString(updatedAt)) return true;
   const abs = join(repoRoot, "static", previousEntry.logo);
   return !existsSync(abs);
 }
@@ -303,7 +302,7 @@ async function cacheLogoUrl(sourceUrl, {
     timeoutMs,
     retries,
     dryRun,
-    force: refresh || !logo,
+    force: refresh,
     manifest,
     userAgent: "Base4NFDI-dashboard/1.0 (ref logo cache; https://base4nfdi.de)",
   });
@@ -331,7 +330,7 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
     const website = asString(raw.official_website);
     const updatedAt = asString(raw.updated_at);
     const prior = previousFor(table, name, previous);
-    const refresh = needsRefresh(prior, sourceLogo, updatedAt, force);
+    const refresh = needsRefresh(prior, sourceLogo, force);
 
     const sourceLogoLight = table === "partners" ? partnerLogoLightUrl(name) : "";
     const refreshLight =
