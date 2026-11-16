@@ -48,6 +48,16 @@ const PROJECT_SITES = [
 const LOGO_DIR = join(repoRoot, "static/img/ref-logos");
 const SITE_PREFIX = "img/ref-logos";
 
+/** Light-theme artwork when `official_logo` is meant for dark backgrounds (e.g. white wordmark). */
+const REF_PARTNER_LOGO_LIGHT = {
+  "BERD@NFDI": "https://berd-platform.de/static/images/logo-berd-green.png",
+};
+
+function partnerLogoLightUrl(name) {
+  const normalized = normalizePartnerName(name);
+  return REF_PARTNER_LOGO_LIGHT[normalized] ?? "";
+}
+
 function loadDotEnv() {
   const envPath = join(repoRoot, ".env");
   try {
@@ -172,6 +182,8 @@ function projectDirectory(previousProjects) {
         logo: asString(entry.logo),
         website: asString(entry.website),
         source_logo: asString(entry.source_logo),
+        source_logo_light: asString(entry.source_logo_light),
+        logo_light: asString(entry.logo_light),
         updated_at: asString(entry.updated_at),
       },
       []
@@ -267,6 +279,46 @@ function needsRefresh(previousEntry, sourceLogo, updatedAt, force) {
   return !existsSync(abs);
 }
 
+async function cacheLogoUrl(sourceUrl, {
+  name,
+  priorPath,
+  priorSource,
+  refresh,
+  timeoutMs,
+  retries,
+  dryRun,
+  manifest,
+  updatedAt,
+  stats,
+}) {
+  if (!sourceUrl) return "";
+  let logo = priorPath && asString(priorSource) === sourceUrl ? priorPath : "";
+  if (!refresh && logo) return logo;
+
+  await new Promise((resolve) => setTimeout(resolve, 400));
+  const fetchUrl = await resolveFetchUrl(sourceUrl, timeoutMs);
+  const result = await ensureLocalLogo(fetchUrl, {
+    logoDir: LOGO_DIR,
+    sitePrefix: SITE_PREFIX,
+    timeoutMs,
+    retries,
+    dryRun,
+    force: refresh || !logo,
+    manifest,
+    userAgent: "Base4NFDI-dashboard/1.0 (ref logo cache; https://base4nfdi.de)",
+  });
+  if (result.path) logo = result.path;
+  stats[result.status] = (stats[result.status] ?? 0) + 1;
+  if (result.status === "failed") {
+    console.warn(`  logo failed for ${name}: ${result.error}`);
+  }
+  if (manifest[result.url]) {
+    manifest[result.url].nocodb_updated_at = updatedAt || null;
+    manifest[result.url].name = name;
+  }
+  return logo;
+}
+
 async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, dryRun, force }) {
   /** @type {Record<string, object>} */
   const byKey = {};
@@ -281,32 +333,47 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
     const prior = previousFor(table, name, previous);
     const refresh = needsRefresh(prior, sourceLogo, updatedAt, force);
 
-    let logo = prior?.logo && asString(prior.source_logo) === sourceLogo ? prior.logo : "";
-    if (sourceLogo && (refresh || !logo)) {
-      await new Promise((resolve) => setTimeout(resolve, 400));
-      const fetchUrl = await resolveFetchUrl(sourceLogo, timeoutMs);
-      const result = await ensureLocalLogo(fetchUrl, {
-        logoDir: LOGO_DIR,
-        sitePrefix: SITE_PREFIX,
+    const sourceLogoLight = table === "partners" ? partnerLogoLightUrl(name) : "";
+    const refreshLight =
+      force ||
+      !asString(prior?.logo_light) ||
+      asString(prior?.source_logo_light) !== sourceLogoLight;
+
+    let logo = "";
+    if (sourceLogo && (refresh || !prior?.logo)) {
+      logo = await cacheLogoUrl(sourceLogo, {
+        name,
+        priorPath: prior?.logo,
+        priorSource: prior?.source_logo,
+        refresh,
         timeoutMs,
         retries,
         dryRun,
-        force: refresh,
         manifest,
-        userAgent:
-          "Base4NFDI-dashboard/1.0 (ref logo cache; https://base4nfdi.de)",
+        updatedAt,
+        stats,
       });
-      if (result.path) logo = result.path;
-      stats[result.status] = (stats[result.status] ?? 0) + 1;
-      if (result.status === "failed") {
-        console.warn(`  logo failed for ${name}: ${result.error}`);
-      }
-      if (manifest[result.url]) {
-        manifest[result.url].nocodb_updated_at = updatedAt || null;
-        manifest[result.url].name = name;
-      }
+    } else if (prior?.logo && asString(prior.source_logo) === sourceLogo) {
+      logo = asString(prior.logo);
+      stats.skipped += 1;
     } else {
       stats.skipped += 1;
+    }
+
+    let logoLight = "";
+    if (sourceLogoLight) {
+      logoLight = await cacheLogoUrl(sourceLogoLight, {
+        name: `${name} (light)`,
+        priorPath: prior?.logo_light,
+        priorSource: prior?.source_logo_light,
+        refresh: refreshLight,
+        timeoutMs,
+        retries,
+        dryRun,
+        manifest,
+        updatedAt,
+        stats,
+      });
     }
 
     const entry = {
@@ -316,6 +383,10 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
       source_logo: sourceLogo,
       updated_at: updatedAt,
     };
+    if (sourceLogoLight) {
+      entry.logo_light = logoLight || "";
+      entry.source_logo_light = sourceLogoLight;
+    }
     const keys = table === "partners" ? partnerLookupKeys(name) : entityLookupKeys(name);
     keys.push(name);
     for (const key of keys) {

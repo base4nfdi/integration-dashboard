@@ -346,9 +346,20 @@
   }
 
   function renderDirectoryLogo(entry) {
-    if (!entry?.logo) return "";
+    if (!entry?.logo && !entry?.logo_light) return "";
+    if (entry.logo_light && entry.logo) {
+      return renderThemedLogo(
+        entry.logo_light,
+        entry.logo,
+        entry.name || "",
+        externalHref(entry.website),
+        "logo-img ref-logo"
+      );
+    }
+    const src = resolveAssetUrl(entry.logo || entry.logo_light);
+    if (!src) return "";
     return renderLinkedLogo(
-      resolveAssetUrl(entry.logo),
+      src,
       entry.name || "",
       externalHref(entry.website),
       "logo-img ref-logo"
