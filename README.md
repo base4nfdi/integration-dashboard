@@ -56,7 +56,7 @@ flowchart LR
     B5 --> WEB
 ```
 
-Without a NocoDB token, the NocoDB step is skipped and the site is built from the `static/data.json` committed in the repository. Either way, the build needs **outbound internet access** to fetch source pages, news, logos and fonts.
+Without a NocoDB token, the NocoDB step is skipped. If `static/data.json` is already present locally, the site is built from it. If it is missing, incubator pages and partner logos are skipped; set `NOCODB_API_TOKEN` to fill them. Either way, the build needs **outbound internet access** to fetch source pages, news, logos and fonts.
 
 The full list of steps is in [scripts/README.md](scripts/README.md#when-the-dashboard-updates).
 
@@ -184,7 +184,7 @@ zola serve                   # live-reloading preview at http://127.0.0.1:1111
 ```
 
 - `./build.sh` reads `NOCODB_API_TOKEN` from the environment or from `.env`. **If a token is found, the [NocoDB writes](#what-a-build-writes-to-nocodb) happen locally too.** If you only want to work on templates or styles, leave the token empty.
-- Running the pipeline locally updates tracked files: `static/data.json`, `static/ref-directory.json`, `data/parsed/` and `content/integrations/`. Review them with `git diff` before you commit.
+- Pipeline output under `data/sources/`, `data/parsed/`, `static/data.json`, `static/ref-directory.json`, `static/img/partner-logos/`, `static/img/ref-logos/`, and generated pages in `content/integrations/` (except the section indexes) is local build output. It is gitignored and must not be committed.
 - Extra arguments are passed to Zola, for example `./build.sh --base-url https://dashboard.example.org`.
 
 <details>
@@ -192,11 +192,11 @@ zola serve                   # live-reloading preview at http://127.0.0.1:1111
 
 | Path | Contents |
 | --- | --- |
-| `content/` | Zola pages. `content/integrations/{dmp,iam,pid,ts}/` is generated, other pages are written by hand |
+| `content/` | Zola pages. Generated pages under `content/integrations/{dmp,iam,pid,ts}/` are local build output and are not tracked; other pages are written by hand |
 | `templates/`, `sass/` | Zola templates and styles |
-| `static/` | `data.json` (dashboard export), `ref-directory.json`, cached logos and fonts, `theme.js` |
+| `static/` | Fonts, site marks, and `theme.js`. `data.json`, `ref-directory.json`, and cached partner and reference logos are local pipeline output and are not tracked |
 | `scripts/` | Data pipeline and NocoDB maintenance tools; see [scripts/README.md](scripts/README.md) |
-| `data/sources/`, `data/parsed/` | Downloaded source pages, parsed JSON, and comparison and patch reports |
+| `data/sources/`, `data/parsed/` | Local pipeline output: downloaded source pages, parsed JSON, and comparison and patch reports. Not tracked |
 | `docker/nginx.conf` | nginx config for the runtime image |
 | `build.sh` | The pipeline entry point, used by Docker and locally |
 | `zola.toml` | Site configuration, including the `preview` flag |
@@ -218,6 +218,6 @@ zola serve                   # live-reloading preview at http://127.0.0.1:1111
 
 ## License
 
-This repository and the website content are licensed under Creative Commons [CC-BY-SA-4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/). See [LICENSE.md](LICENSE.md) for the full text.
+The code, templates, styles, and hand-written pages in this repository are licensed under Creative Commons [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [LICENSE.md](LICENSE.md) for the full text.
 
-Third-party material, such as partner and project logos under `static/img/`, remains under the terms of its respective owners.
+Incubator descriptions, downloaded source pages, parsed records, and third-party logos are not covered by this licence. They are produced locally by the pipeline, are not tracked in git, and remain with their respective owners. Names and logos of organisations, products, and services are trademarks of their respective owners.

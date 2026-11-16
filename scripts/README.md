@@ -55,7 +55,7 @@ The dashboard mirrors what the services publish. NocoDB is the store the site is
 
 ## When the dashboard updates
 
-There is no cron job in this repository. `static/data.json` and the generated pages change only when someone runs `./build.sh` (or the same scripts) with `NOCODB_API_TOKEN` set in the environment or in the root `.env`. Without a token the build keeps the `static/data.json` already in the tree and still rebuilds the site from it.
+There is no cron job in this repository. `static/data.json` and the generated pages change only when someone runs `./build.sh` (or the same scripts) with `NOCODB_API_TOKEN` set in the environment or in the root `.env`. Without a token, a build uses `static/data.json` if it is already on disk. If that file is missing, incubator pages and partner logos are skipped. Those outputs are gitignored and must not be committed.
 
 A build does not rewrite every NocoDB row. `patch-published-integrations.mjs` matches parsed records to existing rows and then:
 

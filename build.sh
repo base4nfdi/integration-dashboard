@@ -51,20 +51,35 @@ if [[ -n "${NOCODB_API_TOKEN:-}" ]]; then
   node scripts/sync-ref-directory.mjs
   INTEGRATION_PAGES_UPDATE=1
 else
-  echo "No NOCODB_API_TOKEN (env or .env) — using existing static/data.json" >&2
+  if [[ -f static/data.json ]]; then
+    echo "No NOCODB_API_TOKEN (env or .env) — using existing static/data.json" >&2
+  else
+    echo "No NOCODB_API_TOKEN (env or .env) and no static/data.json." >&2
+    echo "Set NOCODB_API_TOKEN to fill incubator pages and logos." >&2
+  fi
 fi
 
-echo "==> Caching partner logos into static/"
-node scripts/cache-partner-logos.mjs
+if [[ -f static/data.json ]]; then
+  echo "==> Caching partner logos into static/"
+  node scripts/cache-partner-logos.mjs
+else
+  echo "==> No static/data.json — skipping partner logos." >&2
+  echo "Set NOCODB_API_TOKEN to fill incubator pages and logos." >&2
+fi
 
 echo "==> Caching project fonts into static/"
 node scripts/cache-fonts.mjs
 
-echo "==> Generating integration pages"
-if [[ "${INTEGRATION_PAGES_UPDATE}" -eq 1 ]]; then
-  node scripts/generate-incubator-pages.mjs --update
+if [[ -f static/data.json ]]; then
+  echo "==> Generating integration pages"
+  if [[ "${INTEGRATION_PAGES_UPDATE}" -eq 1 ]]; then
+    node scripts/generate-incubator-pages.mjs --update
+  else
+    node scripts/generate-incubator-pages.mjs
+  fi
 else
-  node scripts/generate-incubator-pages.mjs
+  echo "==> No static/data.json — skipping integration pages." >&2
+  echo "Set NOCODB_API_TOKEN to fill incubator pages and logos." >&2
 fi
 
 echo "==> Building site with Zola"

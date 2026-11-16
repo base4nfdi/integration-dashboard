@@ -106,7 +106,7 @@
 </section>
 
 {% set basic_service_websites = load_data(path="data/basic-service-websites.json") %}
-{% set partner_logo_manifest = load_data(path="static/img/partner-logos/manifest.json") %}
+{% set partner_logo_manifest = load_data(path="static/img/partner-logos/manifest.json", required=false) | default(value={}) %}
 <script type="application/json" id="basic-service-websites-json">
 {{ basic_service_websites.services | json_encode() | safe }}
 </script>

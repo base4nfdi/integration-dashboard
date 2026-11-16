@@ -10,7 +10,8 @@ FROM node:22-bookworm-slim AS builder
 ARG ZOLA_VERSION
 ARG TARGETARCH
 ARG BASE_URL=http://localhost:8080
-# Optional at build time; omit token to ship committed static/data.json
+# Optional at build time. A token is required to fill incubator pages and logos.
+# Without it, the image still builds, and those pages stay empty.
 ARG NOCODB_API_TOKEN=
 ARG NOCODB_BASE_URL=
 ARG NOCODB_TABLE_ID=

@@ -16,3 +16,13 @@ node_modules/
 
 audits/
 references/
+
+# Pipeline output: third-party source material, not part of this licence
+data/sources/
+data/parsed/
+static/data.json
+static/ref-directory.json
+static/img/partner-logos/
+static/img/ref-logos/
+content/integrations/*/*.md
+!content/integrations/*/_index.md

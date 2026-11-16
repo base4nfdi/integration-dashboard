@@ -3,7 +3,7 @@
 {% block title %}{{ page.title }} · {{ config.title | default(value="Dashboard") }}{% endblock %}
 
 {% block content %}
-{% set news = load_data(path="data/parsed/nfdi-news.json") %}
+{% set news = load_data(path="data/parsed/nfdi-news.json", required=false) | default(value={}) %}
 {% set matches = news.matches | default(value=[]) %}
 {% set buzzwords = news.buzzwords | default(value=[]) %}
 {% set term_counts = news.term_counts %}
