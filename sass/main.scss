@@ -1755,6 +1755,16 @@ img.themed-logo.themed-logo--dark {
   color: var(--accent);
 }
 
+.footer-github {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.footer-github svg {
+  display: block;
+}
+
 .footer-sep {
   width: 0.28rem;
   height: 0.28rem;
