@@ -5,7 +5,8 @@
  * Writes static/ref-directory.json (name → local logo path + official_website)
  * and downloads images into static/img/ref-logos/. A logo is downloaded again
  * only when its URL changes, the local file is missing, or you pass --force
- * (or REFRESH_LOGOS=1 in ./build.sh).
+ * (or REFRESH_LOGOS=1 in ./build.sh). Docker builds seed these files from
+ * the previous base4nfdi-dashboard image before this script runs.
  *
  * Required env:
  *   NOCODB_API_TOKEN
@@ -102,6 +103,7 @@ function printHelp() {
 Fetch REF_Partners and REF_Entities official_logo / official_website values,
 cache logos under static/img/ref-logos/, and write static/ref-directory.json.
 Re-downloads a logo when its URL changed, the file is missing, or --force is set.
+Leaves an existing file in place when the URL is unchanged.
 `);
 }
 
@@ -283,6 +285,7 @@ async function cacheLogoUrl(sourceUrl, {
   priorPath,
   priorSource,
   refresh,
+  force,
   timeoutMs,
   retries,
   dryRun,
@@ -291,8 +294,14 @@ async function cacheLogoUrl(sourceUrl, {
   stats,
 }) {
   if (!sourceUrl) return "";
-  let logo = priorPath && asString(priorSource) === sourceUrl ? priorPath : "";
-  if (!refresh && logo) return logo;
+  const priorLogo = priorPath && asString(priorSource) === sourceUrl ? priorPath : "";
+  if (!force) {
+    const knownPath = manifest[sourceUrl]?.path || priorLogo;
+    if (knownPath && existsSync(join(repoRoot, "static", knownPath))) {
+      stats.cached += 1;
+      return knownPath;
+    }
+  }
 
   await new Promise((resolve) => setTimeout(resolve, 400));
   const fetchUrl = await resolveFetchUrl(sourceUrl, timeoutMs);
@@ -302,12 +311,15 @@ async function cacheLogoUrl(sourceUrl, {
     timeoutMs,
     retries,
     dryRun,
-    force: refresh,
+    force: force === true,
     manifest,
     userAgent: "Base4NFDI-dashboard/1.0 (ref logo cache; https://base4nfdi.de)",
   });
-  if (result.path) logo = result.path;
+  let logo = result.path || "";
   stats[result.status] = (stats[result.status] ?? 0) + 1;
+  if (result.status === "downloaded") {
+    console.log(`  ${name} downloaded`);
+  }
   if (result.status === "failed") {
     console.warn(`  logo failed for ${name}: ${result.error}`);
   }
@@ -345,6 +357,7 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
         priorPath: prior?.logo,
         priorSource: prior?.source_logo,
         refresh,
+        force,
         timeoutMs,
         retries,
         dryRun,
@@ -366,6 +379,7 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
         priorPath: prior?.logo_light,
         priorSource: prior?.source_logo_light,
         refresh: refreshLight,
+        force,
         timeoutMs,
         retries,
         dryRun,
@@ -391,12 +405,6 @@ async function cacheRows(rows, { table, previous, manifest, timeoutMs, retries, 
     for (const key of keys) {
       if (!byKey[key]) byKey[key] = entry;
     }
-    console.log(
-      `  ${name}` +
-        (logo ? ` logo` : "") +
-        (website ? ` site` : "") +
-        (refresh && sourceLogo ? " [refresh]" : "")
-    );
   }
 
   return { byKey, stats };
@@ -446,9 +454,7 @@ async function main() {
   );
 
   const shared = { previous, manifest, timeoutMs, retries, dryRun: args.dryRun, force: args.force };
-  console.log("Partners:");
   const partners = await cacheRows(partnerRows, { ...shared, table: "partners" });
-  console.log("Entities:");
   const entities = await cacheRows(entityRows, { ...shared, table: "entities" });
 
   const directory = {
@@ -466,11 +472,12 @@ async function main() {
     console.log(`Dry-run. Would write ${DIRECTORY_PATH}`);
   }
 
+  const reused = (stats) => stats.cached + stats.skipped;
   console.log(
-    `partners cached=${partners.stats.cached} downloaded=${partners.stats.downloaded} failed=${partners.stats.failed}`
+    `partners reused=${reused(partners.stats)} downloaded=${partners.stats.downloaded} failed=${partners.stats.failed}`
   );
   console.log(
-    `entities cached=${entities.stats.cached} downloaded=${entities.stats.downloaded} failed=${entities.stats.failed}`
+    `entities reused=${reused(entities.stats)} downloaded=${entities.stats.downloaded} failed=${entities.stats.failed}`
   );
 }
 

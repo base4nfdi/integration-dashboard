@@ -51,6 +51,7 @@ const KNOWN_EXTS = new Set([
   ".webp",
   ".svg",
   ".ico",
+  ".bin",
 ]);
 
 /**

@@ -3,6 +3,31 @@
 ARG ZOLA_VERSION=0.23.6
 
 # ---------------------------------------------------------------------------
+# Logos already published in an image on this machine.
+# Production rebuilds copy them out instead of downloading again.
+# A machine with no image yet: PREV_IMAGE=empty-prev docker compose up -d --build
+# ---------------------------------------------------------------------------
+FROM busybox:1.36 AS empty-prev
+RUN mkdir -p /usr/share/nginx/html/img/ref-logos /usr/share/nginx/html/img/partner-logos \
+    && printf '%s\n' '{"partners":{},"entities":{},"projects":{}}' > /usr/share/nginx/html/ref-directory.json
+
+ARG PREV_IMAGE=empty-prev
+FROM ${PREV_IMAGE} AS prev
+RUN set -eu; \
+    mkdir -p /seed/img/ref-logos /seed/img/partner-logos; \
+    if [ -f /usr/share/nginx/html/ref-directory.json ]; then \
+      cp /usr/share/nginx/html/ref-directory.json /seed/ref-directory.json; \
+    else \
+      printf '%s\n' '{"partners":{},"entities":{},"projects":{}}' > /seed/ref-directory.json; \
+    fi; \
+    if [ -d /usr/share/nginx/html/img/ref-logos ] && [ -n "$(ls -A /usr/share/nginx/html/img/ref-logos 2>/dev/null || true)" ]; then \
+      cp -a /usr/share/nginx/html/img/ref-logos/. /seed/img/ref-logos/; \
+    fi; \
+    if [ -d /usr/share/nginx/html/img/partner-logos ] && [ -n "$(ls -A /usr/share/nginx/html/img/partner-logos 2>/dev/null || true)" ]; then \
+      cp -a /usr/share/nginx/html/img/partner-logos/. /seed/img/partner-logos/; \
+    fi
+
+# ---------------------------------------------------------------------------
 # Build: fetch NocoDB data (optional) + zola build → public/
 # ---------------------------------------------------------------------------
 FROM node:22-bookworm-slim AS builder
@@ -44,6 +69,8 @@ RUN case "${TARGETARCH}" in \
 
 WORKDIR /app
 COPY . .
+# Previous image's logos. Kept outside /app so COPY . . cannot drop them.
+COPY --from=prev /seed/ /logo-seed/
 
 # The pipeline pulls live data, so an unchanged repo would otherwise hit the
 # layer cache and ship stale data. Pass a new value (e.g. a timestamp) to force
@@ -51,9 +78,9 @@ COPY . .
 ARG CACHE_BUST=
 
 # Empty Compose build args must not override script defaults (?? ignores only null/undefined).
-# Logo bytes persist in a BuildKit cache mount (not in git / .dockerignore); restore before
-# the pipeline and write back after so CACHE_BUST rebuilds do not re-fetch every logo.
-RUN --mount=type=cache,target=/logo-cache \
+# Logo bytes are not in git. Start from the previous image (survives builder prune),
+# then overlay the BuildKit cache. Write the cache back after a successful build.
+RUN --mount=type=cache,id=base4nfdi-logos,target=/logo-cache,sharing=locked \
     set -eu; \
     echo "pipeline run: ${CACHE_BUST:-cached}"; \
     for var in NOCODB_API_TOKEN NOCODB_BASE_URL NOCODB_TABLE_ID NOCODB_VIEW_ID NOCODB_PAGE_SIZE \
@@ -65,6 +92,15 @@ RUN --mount=type=cache,target=/logo-cache \
       if [ -n "$val" ]; then export "$var=$val"; else unset "$var"; fi; \
     done; \
     mkdir -p static/img/ref-logos static/img/partner-logos; \
+    if [ -f /logo-seed/ref-directory.json ]; then \
+      cp /logo-seed/ref-directory.json static/ref-directory.json; \
+    fi; \
+    if [ -d /logo-seed/img/ref-logos ] && [ -n "$(ls -A /logo-seed/img/ref-logos 2>/dev/null || true)" ]; then \
+      cp -a /logo-seed/img/ref-logos/. static/img/ref-logos/; \
+    fi; \
+    if [ -d /logo-seed/img/partner-logos ] && [ -n "$(ls -A /logo-seed/img/partner-logos 2>/dev/null || true)" ]; then \
+      cp -a /logo-seed/img/partner-logos/. static/img/partner-logos/; \
+    fi; \
     if [ -f /logo-cache/ref-directory.json ]; then \
       cp /logo-cache/ref-directory.json static/ref-directory.json; \
     fi; \
@@ -74,6 +110,7 @@ RUN --mount=type=cache,target=/logo-cache \
     if [ -d /logo-cache/partner-logos ] && [ -n "$(ls -A /logo-cache/partner-logos 2>/dev/null || true)" ]; then \
       cp -a /logo-cache/partner-logos/. static/img/partner-logos/; \
     fi; \
+    echo "logo files ready: $(find static/img/ref-logos static/img/partner-logos -type f 2>/dev/null | wc -l)"; \
     ./build.sh --base-url "${BASE_URL}"; \
     mkdir -p /logo-cache/ref-logos /logo-cache/partner-logos; \
     if [ -f static/ref-directory.json ]; then \

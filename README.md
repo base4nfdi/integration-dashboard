@@ -80,7 +80,10 @@ The dashboard mirrors the service websites: a build **overwrites source-backed c
 
 ```bash
 cp .env.example .env               # then set NOCODB_API_TOKEN, BASE_URL, PORT
-docker compose up -d --build       # build the image and start nginx
+# First build on this machine (no base4nfdi-dashboard image yet):
+PREV_IMAGE=empty-prev docker compose up -d --build
+# Later rebuilds, including on the production server:
+docker compose up -d --build
 docker compose ps                  # wait for "healthy"
 ```
 
@@ -97,7 +100,8 @@ All settings live in `.env` in the repository root. Start from [`.env.example`](
 | `PORT` | — | ❌ | Host port for nginx (default `8080`). `docker compose up -d` is enough after changing it |
 | `NOCODB_*_TABLE_ID`, `NOCODB_*_VIEW_ID`, `NOCODB_BASE_URL`, `NOCODB_PAGE_SIZE` | — | ✅ | Point the build at other tables or views. The defaults match the dashboard tables |
 | `FETCH_TIMEOUT_MS`, `FETCH_RETRIES` | — | ✅ | Network tuning for downloads during the build |
-| `REFRESH_LOGOS` | — | ✅ | Set to `1` on rebuild to re-download every partner and institution logo. Default: reuse logos already cached on the build host |
+| `REFRESH_LOGOS` | — | ✅ | Set to `1` on rebuild to re-download every partner and institution logo. Default: reuse logos already in the current image |
+| `PREV_IMAGE` | — | ✅ | Image to copy logos from. Default `base4nfdi-dashboard:latest`. On a machine with no image yet, set `empty-prev` |
 
 Variables in the *Host-only* block of `.env.example` (such as `ZENODO_COMMUNITIES_CSV`) only apply when you run maintenance scripts directly with `node scripts/…`. They are not passed to the Docker build.
 
@@ -120,7 +124,7 @@ CACHE_BUST=$(date +%s) docker compose up -d --build
 > **Why `CACHE_BUST`?** Docker caches each build step. If no file in the repository changed, a plain `--build` reuses the previous pipeline run and ships **stale data**. A new `CACHE_BUST` value forces the pipeline to run again, while the Node and Zola toolchain layers stay cached. Check the build output for `pipeline run: <timestamp>`; if you see `CACHED` there instead, the data was not refreshed.
 
 > [!TIP]
-> **Logo downloads.** A `CACHE_BUST` rebuild still fetches NocoDB and source data, but partner and institution logo **files** are reused from a BuildKit cache on the machine unless the logo URL changed or the file is missing. To force a full logo re-download (e.g. the image at the same URL was replaced), run `CACHE_BUST=$(date +%s) REFRESH_LOGOS=1 docker compose up -d --build`. Locally, the same flag applies to `./build.sh`, or pass `--force` to `node scripts/sync-ref-directory.mjs`.
+> **Logo downloads.** A `CACHE_BUST` rebuild still fetches NocoDB and source data. Partner and institution logo **files** are copied out of the image already on the machine (`base4nfdi-dashboard:latest`) and reused. A logo is downloaded when its URL is new, the file is missing, or you set `REFRESH_LOGOS=1`. The build log should show `downloaded=0` and no per-logo `[refresh]` lines. To force a full logo re-download (the image at the same URL was replaced), run `CACHE_BUST=$(date +%s) REFRESH_LOGOS=1 docker compose up -d --build`.
 
 ### Which command when
 

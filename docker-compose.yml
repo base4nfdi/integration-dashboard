@@ -20,6 +20,9 @@ services:
         FETCH_TIMEOUT_MS: ${FETCH_TIMEOUT_MS:-}
         FETCH_RETRIES: ${FETCH_RETRIES:-}
         REFRESH_LOGOS: ${REFRESH_LOGOS:-}
+        # Logos are copied out of this image. First build on a new machine has
+        # no image yet: PREV_IMAGE=empty-prev docker compose up -d --build
+        PREV_IMAGE: ${PREV_IMAGE:-base4nfdi-dashboard:latest}
     image: base4nfdi-dashboard:latest
     ports:
       - "${PORT:-8080}:80"
