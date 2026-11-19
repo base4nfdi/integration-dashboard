@@ -19,6 +19,7 @@ import {
   emptyRecord,
   loadNocoDbRecords,
   normalizePartnerName,
+  normalizeStatus,
   readTextFile,
   repoRoot,
   splitPartners,
@@ -96,6 +97,33 @@ function extractCards(html) {
   });
 }
 
+/** Per-use-case status from dashboard/NocoDB when the public cards omit it. */
+const PID_USE_CASE_STATUS_BY_NAME = new Map(
+  Object.entries({
+    "Coscine: Assigning PIDs for Projects and Storage Resources": "running",
+    "Embedding ePIC PIDs into the NFDIxCS RDMC Creation Wizard workflow":
+      "running",
+    "NOMAD – Clarifying Resource Type for DOI Registration of Aggregated Data":
+      "running",
+    "PID4Cat: PIDs for digital and physical resources generated in catalysis research":
+      "running",
+    "Instrument PIDs at the Helmholtz-Zentrum Berlin": "finished",
+    "Instrument PIDs in the Sensor Management System": "finished",
+    "Metadata Analysis for StrainInfo": "finished",
+    "Metadata Analysis for the Genebank Information System": "finished",
+    "PID Adoption at the SUB Göttingen": "finished",
+    "PID Service for Dataset Elements": "finished",
+    "PIDs for Services – Mapping Base4NFDI Requirements to DataCite Metadata":
+      "finished",
+  })
+);
+
+function pidUseCaseStatus(ucName) {
+  const key = String(ucName ?? "").trim();
+  const raw = PID_USE_CASE_STATUS_BY_NAME.get(key);
+  return raw ? normalizeStatus(raw) : "";
+}
+
 function goalsFromMeta({ labels, resourceTypes, pidProviders, researchField }) {
   const lines = [];
   if (labels.length) lines.push(`- **Labels:** ${labels.join(", ")}`);
@@ -158,8 +186,7 @@ export function parsePidHtml(html) {
           uc_name,
           uc_descr: descr,
           basic_service: BASIC_SERVICE,
-          // Published use cases are completed work, not incubator cycles.
-          inc_status: "Finished",
+          inc_status: pidUseCaseStatus(uc_name),
           related_institutions: "",
           entities: organizations,
           linked_entities: organizations.length || null,

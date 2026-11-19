@@ -169,11 +169,7 @@ function normalizeUseCaseRecord(raw) {
     inc_end: asString(raw.inc_end),
     inc_cycle: raw.inc_cycle ?? null,
     inc_cycle_label: asString(raw.inc_cycle_label),
-    inc_status:
-      asString(raw.inc_status) ||
-      ((asString(raw.basic_service) || "PID").toUpperCase() === "PID"
-        ? "Finished"
-        : ""),
+    inc_status: asString(raw.inc_status),
     inc_descr: descr,
     uc_descr: descr,
     inc_goals: asString(raw.inc_goals),

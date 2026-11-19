@@ -97,6 +97,9 @@ const VALID_STATUSES = new Set(["In preparation", "Running", "Finished"]);
 
 /** Map PID card organization labels onto REF_Entities.name values. */
 const ENTITY_ALIASES = {
+  hzb: "HZB Helmholtz-Zentrum Berlin",
+  "ipk gatersleben":
+    "IPK - Leibniz Institute of Plant Genetics and Crop Plant Research",
   fzj: "Forschungszentrum Jülich",
   gesis: "GESIS – Leibniz Institute for the Social Sciences",
   "humboldt-universität zu berlin": "Humbold University Berlin",

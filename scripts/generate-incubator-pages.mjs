@@ -92,12 +92,8 @@ function pageDate(record) {
   return asText(record.inc_end) || asText(record.inc_start) || "1970-01-01";
 }
 
-/** PID use cases are published work, so a blank status is Finished. */
 function pageStatus(record) {
-  const status = asInline(record.inc_status);
-  if (status) return status;
-  if (asInline(record.basic_service).toUpperCase() === "PID") return "Finished";
-  return "";
+  return asInline(record.inc_status);
 }
 
 /** PID "goals" are facet lines, shown as detail chips rather than a Goals section. */
