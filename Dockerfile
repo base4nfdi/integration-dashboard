@@ -1,6 +1,8 @@
 # syntax=docker/dockerfile:1
 
 ARG ZOLA_VERSION=0.23.6
+# Must be declared before the first FROM so the prev stage can use FROM ${PREV_IMAGE}.
+ARG PREV_IMAGE=empty-prev
 
 # ---------------------------------------------------------------------------
 # Logos already published in an image on this machine.
@@ -11,7 +13,6 @@ FROM busybox:1.36 AS empty-prev
 RUN mkdir -p /usr/share/nginx/html/img/ref-logos /usr/share/nginx/html/img/partner-logos \
     && printf '%s\n' '{"partners":{},"entities":{},"projects":{}}' > /usr/share/nginx/html/ref-directory.json
 
-ARG PREV_IMAGE=empty-prev
 FROM ${PREV_IMAGE} AS prev
 RUN set -eu; \
     mkdir -p /seed/img/ref-logos /seed/img/partner-logos; \
