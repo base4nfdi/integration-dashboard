@@ -223,6 +223,8 @@ zola serve                   # live-reloading preview at http://127.0.0.1:1111
 
 ## License
 
-The code, templates, styles, and hand-written pages in this repository are licensed under Creative Commons [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). See [LICENSE.md](LICENSE.md) for the full text.
+The code in this repository — scripts, templates, styles, and the build and runtime configuration — is licensed under the [MIT License](LICENSE.md). Copyright (c) 2026 Base4NFDI.
 
-Incubator descriptions, downloaded source pages, parsed records, and third-party logos are not covered by this licence. They are produced locally by the pipeline, are not tracked in git, and remain with their respective owners. Names and logos of organisations, products, and services are trademarks of their respective owners.
+Hand-written pages are licensed under Creative Commons [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+Incubator descriptions, downloaded source pages, parsed records, and third-party logos are not covered by either licence. They are produced locally by the pipeline, are not tracked in git, and remain with their respective owners. Names and logos of organisations, products, and services are trademarks of their respective owners.

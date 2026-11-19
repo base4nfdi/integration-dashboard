@@ -29,6 +29,8 @@ Base4NFDI Office
 
 ### Copyright notice
 
-Original content of this site — pages written for the dashboard, its layout, and its code — is licensed under a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. You may use, share, and adapt that material under the terms of that license.
+The code of this site — its templates, styles, and scripts — is licensed under the [MIT License](https://github.com/base4nfdi/integration-dashboard/blob/main/LICENSE.md). Copyright (c) 2026 Base4NFDI.
 
-Incubator descriptions, source excerpts, and third-party logos are shown for information and are not covered by this licence. They remain with their respective owners. Names and logos of organisations, products, and services are trademarks of their respective owners. If you notice a potential copyright issue, please contact us and we will address it promptly.
+Pages written for the dashboard are licensed under a [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) license. You may use, share, and adapt that material under the terms of that license.
+
+Incubator descriptions, source excerpts, and third-party logos are shown for information and are not covered by these licences. They remain with their respective owners. Names and logos of organisations, products, and services are trademarks of their respective owners. If you notice a potential copyright issue, please contact us and we will address it promptly.
