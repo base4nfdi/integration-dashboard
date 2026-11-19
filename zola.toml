@@ -1,5 +1,5 @@
 #:tombi schema.strict = false
-title = "Integration Dashboard - Base4NFDI"
+title = "Base4NFDI - Integration Dashboard"
 description = "General overview of status of incubators and use cases related to Basic Services within NFDI."
 
 # The URL the site will be built for
