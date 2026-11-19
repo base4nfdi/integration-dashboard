@@ -286,7 +286,12 @@
     {% set inc_activity = page.extra.inc_activity_type | default(value="") %}
     {% set inc_caai = page.extra.inc_caai | default(value="") %}
     {% set inc_service_type = page.extra.inc_service_type | default(value="") %}
-    {% if inc_status or has_cycle or inc_activity or inc_caai or inc_service_type %}
+    {% set uc_labels = page.extra.uc_labels | default(value="") %}
+    {% set resource_types = page.extra.resource_types | default(value="") %}
+    {% set pid_providers = page.extra.pid_providers | default(value="") %}
+    {% set research_field = page.extra.research_field | default(value="") %}
+    {% set has_pid_categories = uc_labels or resource_types or pid_providers or research_field %}
+    {% if inc_status or has_cycle or inc_activity or inc_caai or inc_service_type or has_pid_categories %}
     <div class="blog-post-overview">
       <div class="blog-post-overview-top">
         {% if inc_status %}
@@ -294,7 +299,7 @@
           <span class="status-badge status-{{ inc_status | lower | replace(from=' ', to='-') }}">{{ inc_status }}</span>
         </div>
         {% endif %}
-        {% if has_cycle or inc_activity or inc_caai or inc_service_type %}
+        {% if has_cycle or inc_activity or inc_caai or inc_service_type or has_pid_categories %}
         <ul class="blog-post-overview-meta" aria-label="Incubator details">
         {% if has_cycle %}
         <li class="blog-post-overview-chip">
@@ -318,6 +323,30 @@
         <li class="blog-post-overview-chip">
           <span class="blog-post-overview-chip-label">Service type</span>
           <span class="blog-post-overview-chip-value">{{ inc_service_type }}</span>
+        </li>
+        {% endif %}
+        {% if uc_labels %}
+        <li class="blog-post-overview-chip">
+          <span class="blog-post-overview-chip-label">Labels</span>
+          <span class="blog-post-overview-chip-value">{{ uc_labels }}</span>
+        </li>
+        {% endif %}
+        {% if resource_types %}
+        <li class="blog-post-overview-chip">
+          <span class="blog-post-overview-chip-label">Resource types</span>
+          <span class="blog-post-overview-chip-value">{{ resource_types }}</span>
+        </li>
+        {% endif %}
+        {% if pid_providers %}
+        <li class="blog-post-overview-chip">
+          <span class="blog-post-overview-chip-label">PID providers</span>
+          <span class="blog-post-overview-chip-value">{{ pid_providers }}</span>
+        </li>
+        {% endif %}
+        {% if research_field %}
+        <li class="blog-post-overview-chip">
+          <span class="blog-post-overview-chip-label">Research field</span>
+          <span class="blog-post-overview-chip-value">{{ research_field }}</span>
         </li>
         {% endif %}
         </ul>

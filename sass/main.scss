@@ -2353,7 +2353,9 @@ img.themed-logo.themed-logo--dark {
 .blog-post-overview-chip {
   display: inline-flex;
   align-items: baseline;
+  flex-wrap: wrap;
   gap: 0.4rem;
+  max-width: 100%;
   padding: 0.28rem 0.7rem;
   border-radius: 999px;
   border: 1px solid var(--border);

@@ -92,6 +92,47 @@ function pageDate(record) {
   return asText(record.inc_end) || asText(record.inc_start) || "1970-01-01";
 }
 
+/** PID "goals" are facet lines, shown as detail chips rather than a Goals section. */
+const PID_CATEGORY_LINE =
+  /^-\s+\*\*(Labels|Resource types|PID providers|Research field):\*\*\s+(.+)$/;
+
+function pidCategories(record) {
+  const categories = {
+    labels: asInline(record.uc_labels),
+    resourceTypes: asInline(record.resource_types),
+    pidProviders: asInline(record.pid_providers),
+    researchField: asInline(record.research_field),
+  };
+  if (
+    categories.labels ||
+    categories.resourceTypes ||
+    categories.pidProviders ||
+    categories.researchField
+  ) {
+    return categories;
+  }
+
+  for (const line of asText(record.inc_goals).split("\n")) {
+    const match = line.trim().match(PID_CATEGORY_LINE);
+    if (!match) continue;
+    const value = match[2].trim();
+    if (match[1] === "Labels") categories.labels = value;
+    else if (match[1] === "Resource types") categories.resourceTypes = value;
+    else if (match[1] === "PID providers") categories.pidProviders = value;
+    else if (match[1] === "Research field") categories.researchField = value;
+  }
+  return categories;
+}
+
+/** True when every goals line is one of the four PID facet lines. */
+function goalsArePidCategories(text) {
+  const lines = asText(text)
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean);
+  return lines.length > 0 && lines.every((line) => PID_CATEGORY_LINE.test(line));
+}
+
 function serviceLabel(basicService) {
   const code = asText(basicService).toUpperCase();
   return SERVICE_LABELS[code] ?? (code || "Unknown");
@@ -248,6 +289,18 @@ function buildFrontMatter(record, keyArticle) {
   const sourceRef = asUrl(record.inc_source_ref);
   if (sourceRef) lines.push(`source_ref = ${tomlString(sourceRef)}`);
 
+  const categories = pidCategories(record);
+  if (categories.labels) lines.push(`uc_labels = ${tomlString(categories.labels)}`);
+  if (categories.resourceTypes) {
+    lines.push(`resource_types = ${tomlString(categories.resourceTypes)}`);
+  }
+  if (categories.pidProviders) {
+    lines.push(`pid_providers = ${tomlString(categories.pidProviders)}`);
+  }
+  if (categories.researchField) {
+    lines.push(`research_field = ${tomlString(categories.researchField)}`);
+  }
+
   lines.push("+++");
   return lines.join("\n");
 }
@@ -271,7 +324,9 @@ function buildBody(record, keyArticle) {
     sections.push("");
   }
 
-  if (goals) {
+  // PID facet lines (Labels, Resource types, PID providers, Research field)
+  // are written to front matter and rendered as overview chips.
+  if (goals && !goalsArePidCategories(record.inc_goals)) {
     sections.push("");
     sections.push("## Goals");
     sections.push("");
