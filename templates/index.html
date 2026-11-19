@@ -10,10 +10,25 @@
 
   <div class="summary-cards" id="summary-cards" aria-live="polite"></div>
 
+  <aside class="dashboard-note" aria-label="About this data">
+    <p>
+      Entries are taken from the public pages of the basic services in Integration or Ramp-up:
+      <a href="https://doc.nfdi-aai.de/" target="_blank" rel="noopener noreferrer">IAM4NFDI</a>,
+      <a href="https://terminology.services.base4nfdi.de/" target="_blank" rel="noopener noreferrer">TS4NFDI</a>,
+      <a href="https://dmp.services.base4nfdi.de/" target="_blank" rel="noopener noreferrer">DMP4NFDI</a>,
+      and
+      <a href="https://pid.services.base4nfdi.de/" target="_blank" rel="noopener noreferrer">PID4NFDI</a>.
+    </p>
+    <p>
+      Suggestions and questions are welcome. Please email our
+      <a href="mailto:base4nfdi-servicestewards@lists.nfdi.de">team</a>.
+    </p>
+  </aside>
+
   <div class="table-panel">
     <div class="table-panel-header">
       <h3>Integrations</h3>
-      <p class="table-meta" id="table-meta">Loading data…</p>
+      <div class="table-meta" id="table-meta">Loading data…</div>
     </div>
 
     <form class="filter-bar" id="filter-bar" hidden aria-label="Filter integrations">
@@ -597,6 +612,38 @@
       month: "short",
       day: "numeric",
     });
+  }
+
+  function tableMetaDateIso(meta) {
+    const raw = meta?.fetched_at;
+    if (!raw) return "";
+    const iso = String(raw).slice(0, 10);
+    return /^\d{4}-\d{2}-\d{2}$/.test(iso) ? iso : "";
+  }
+
+  const TABLE_META_REFRESH_LABEL = "Refreshed every Monday";
+
+  function renderTableMeta(countLabel, meta) {
+    const iso = tableMetaDateIso(meta);
+    const updatedHtml = iso
+      ? `<time class="table-meta-time" datetime="${escapeHtml(iso)}">${escapeHtml(formatDate(iso))}</time>`
+      : `<span class="table-meta-time table-meta-time--pending">—</span>`;
+    const calendarIcon = `<svg class="table-meta-chip-icon" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" focusable="false">
+      <rect x="3" y="4.5" width="18" height="16.5" rx="2" fill="none" stroke="currentColor" stroke-width="1.75"/>
+      <path fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" d="M3 10h18M8 2.5v4M16 2.5v4"/>
+    </svg>`;
+    return `
+      <!-- <p class="table-meta-count">${escapeHtml(countLabel)}</p> -->
+      <div class="table-meta-refresh" role="group" aria-label="Refresh schedule">
+        <span class="table-meta-chip" title="${escapeHtml(TABLE_META_REFRESH_LABEL)}">
+          ${calendarIcon}
+          <span>${escapeHtml(TABLE_META_REFRESH_LABEL)}</span>
+        </span>
+        <span class="table-meta-updated">
+          Updated <span class="table-meta-updated-label">${updatedHtml}</span>
+        </span>
+      </div>
+    `;
   }
 
   function renderInlineMarkdown(text) {
@@ -1209,16 +1256,11 @@
         .join("");
     }
 
-    const source = meta?.source === "nocodb" ? "NocoDB" : "dashboard data";
-    const fetched = meta?.fetched_at
-      ? ` · updated ${String(meta.fetched_at).slice(0, 10)}`
-      : "";
     const countLabel =
       records.length === totalCount
         ? `${records.length} row${records.length === 1 ? "" : "s"}`
         : `${records.length} of ${totalCount} rows`;
-    document.getElementById("table-meta").textContent =
-      `${countLabel} from ${source}${fetched}`;
+    document.getElementById("table-meta").innerHTML = renderTableMeta(countLabel, meta);
 
     document.getElementById("filter-clear").disabled = !hasActiveFilters();
   }

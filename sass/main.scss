@@ -458,7 +458,29 @@ main.container:has(.dashboard) {
 
 .dashboard-intro {
   color: var(--text-muted);
-  width: calc(100% - 3.5rem);
+}
+
+.dashboard .dashboard-intro p {
+  margin: 0;
+}
+
+.dashboard-note {
+  width: 100%;
+  max-width: none;
+  margin: 0.35rem 0 1.15rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.dashboard-note p {
+  margin: 0;
+}
+
+.dashboard-note p + p {
+  margin-top: 0.45rem;
 }
 
 .summary-cards {
@@ -556,9 +578,65 @@ main.container:has(.dashboard) {
 }
 
 .table-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
   margin: 0;
   color: var(--text-muted);
   font-size: 0.85rem;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.table-meta-count {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.table-meta-refresh {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+}
+
+.table-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.18rem 0.6rem 0.18rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--accent) 42%, var(--border));
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface));
+  color: var(--text);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.table-meta-chip-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.table-meta-updated {
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.table-meta-updated-label .table-meta-time {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.table-meta-time--pending {
+  font-weight: 500;
+  color: var(--text-muted);
 }
 
 .visually-hidden {
