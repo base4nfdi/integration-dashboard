@@ -92,6 +92,14 @@ function pageDate(record) {
   return asText(record.inc_end) || asText(record.inc_start) || "1970-01-01";
 }
 
+/** PID use cases are published work, so a blank status is Finished. */
+function pageStatus(record) {
+  const status = asInline(record.inc_status);
+  if (status) return status;
+  if (asInline(record.basic_service).toUpperCase() === "PID") return "Finished";
+  return "";
+}
+
 /** PID "goals" are facet lines, shown as detail chips rather than a Goals section. */
 const PID_CATEGORY_LINE =
   /^-\s+\*\*(Labels|Resource types|PID providers|Research field):\*\*\s+(.+)$/;
@@ -222,7 +230,7 @@ function buildFrontMatter(record, keyArticle) {
     "[extra]",
     `key_article = ${tomlString(keyArticle)}`,
     `basic_service = ${tomlString(asInline(record.basic_service))}`,
-    `status = ${tomlString(asInline(record.inc_status))}`,
+    `status = ${tomlString(pageStatus(record))}`,
     `inc_start = ${tomlString(asInline(record.inc_start))}`,
     `inc_end = ${tomlString(asInline(record.inc_end))}`,
   ];

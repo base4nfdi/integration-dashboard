@@ -158,6 +158,8 @@ export function parsePidHtml(html) {
           uc_name,
           uc_descr: descr,
           basic_service: BASIC_SERVICE,
+          // Published use cases are completed work, not incubator cycles.
+          inc_status: "Finished",
           related_institutions: "",
           entities: organizations,
           linked_entities: organizations.length || null,
