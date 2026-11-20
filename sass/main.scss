@@ -176,10 +176,10 @@ a:hover {
   gap: 0.4rem;
   margin: 0;
   padding: 0.2rem 0.6rem 0.2rem 0.5rem;
-  border: 1px solid color-mix(in srgb, var(--danger) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--degraded) 55%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--danger) 14%, transparent);
-  color: var(--danger);
+  background: color-mix(in srgb, var(--degraded) 14%, transparent);
+  color: var(--degraded);
   font-family: var(--font-sans);
   font-size: 0.7rem;
   font-weight: 600;
@@ -199,7 +199,7 @@ a:hover {
 .site-status-btn:focus-visible {
   background: var(--danger);
   color: var(--nfdi-white);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--danger) 28%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--degraded) 28%, transparent);
   transform: scale(1.04);
 }
 
