@@ -1943,7 +1943,12 @@ img.themed-logo.themed-logo--dark {
 }
 
 .service-shortcut--logo {
-  gap: 0.75rem;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: center;
+  gap: 0;
+  min-height: 10rem;
   padding: 0;
   overflow: hidden;
   background: var(--nfdi-anthrazit);
@@ -1964,6 +1969,11 @@ img.themed-logo.themed-logo--dark {
   aspect-ratio: 1;
   object-fit: cover;
   background: var(--nfdi-anthrazit);
+}
+
+.service-shortcut--logo .service-shortcut-logo {
+  align-self: center;
+  justify-self: center;
 }
 
 .service-shortcut-code {
@@ -1987,8 +1997,11 @@ img.themed-logo.themed-logo--dark {
 }
 
 .service-shortcut--logo .service-shortcut-count {
+  justify-self: stretch;
+  width: 100%;
   margin: 0;
   padding: 0 1.1rem 1rem;
+  text-align: center;
   color: rgba(255, 255, 255, 0.78);
 }
 
