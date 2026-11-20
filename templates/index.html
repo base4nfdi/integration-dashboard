@@ -21,9 +21,20 @@
     </p>
     <p>
       Suggestions and questions are welcome. Please email our
-      <a href="mailto:base4nfdi-servicestewards@lists.nfdi.de">team</a>.
+      <a class="js-mail" data-codes="98,97,115,101,52,110,102,100,105,45,115,101,114,118,105,99,101,115,116,101,119,97,114,100,115,64,108,105,115,116,115,46,110,102,100,105,46,100,101">team</a>.
     </p>
   </aside>
+  <script>
+    document.querySelectorAll("a.js-mail").forEach(function (link) {
+      var raw = link.getAttribute("data-codes") || "";
+      var address = raw.split(",").map(function (code) {
+        return String.fromCharCode(Number(code));
+      }).join("");
+      if (address.indexOf("@") === -1) return;
+      link.href = "mailto:" + address;
+      link.removeAttribute("data-codes");
+    });
+  </script>
 
   <div class="table-panel">
     <div class="table-panel-header">
